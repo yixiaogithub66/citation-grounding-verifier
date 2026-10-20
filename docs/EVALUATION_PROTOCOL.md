@@ -23,14 +23,18 @@ Citation metrics are separated:
 - Exact-source validity: valid index and literal nonempty substring.
 - Passage coverage: predicted indices cover an acceptable annotated evidence set.
 - Required-passage coverage: all passages annotated as necessary to a multi-source claim are cited.
-- Gold-anchor containment: a quote or union of quotes from the same passage contains the annotated quote text.
+- Gold-anchor containment: at least one literal quote from the same passage contains the annotated quote text.
 - Gold exact span match: reported only as a strict diagnostic, since longer correct quotations are valid.
 
 The scorer's containment metric operates on individual quoted spans; adjacent pieces are not implicitly reassembled. Thus splitting a gold span into several shorter adequate quotations can still be flagged for review. None of these syntactic metrics proves semantic entailment. All citation recall denominators include unmatched gold evidence-bearing claims.
 
+Passage and gold-anchor recall receive credit only for aligned claims whose verdict is correct; exact-source substring validity is measured separately regardless of semantic correctness.
+
+The annotation convention permits coordinated subjects with a single shared predicate as one joint claim; every subject must be supported for a SUPPORTED verdict. This can be coarser than a decomposition that emits one claim per subject. Such granularity differences require review, rather than being automatically interpreted as semantic mistakes.
+
 ## Runtime and cost
 
-Measure wall time around each complete verification call, including all stages and retries. Report mean, median and nearest-rank P95. Requests execute sequentially in a fixed baseline/minimal/optimized order per case. This is reproducible, but prompt caching and network conditions can advantage later calls; the table is not a randomized latency experiment.
+Measure wall time around each complete verification call, including all stages and retries. Report mean and nearest-rank P50/P95 (for an even-sized sample, this P50 is the lower middle observation, not the arithmetic median). Requests execute sequentially in a fixed baseline/minimal/optimized order per case. This is reproducible, but prompt caching and network conditions can advantage later calls; the table is not a randomized latency experiment.
 
 Record each upstream call's final JSON text, usage, returned model/fingerprint, finish reason and error. Do not record keys or provider chain-of-thought text. Sum all reported usage, including failed validation calls and corrections. Missing counts remain unknown. The standardized price convention is in `reports/PRICING.md`; these estimates are not billing records.
 

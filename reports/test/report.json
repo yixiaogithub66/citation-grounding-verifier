@@ -1,0 +1,6208 @@
+{
+  "schema_version": "1.0",
+  "run_id": "test",
+  "created_at": "2026-10-20T10:10:47.096068+00:00",
+  "updated_at": "2026-10-20T10:13:34.896368+00:00",
+  "status": "complete",
+  "config": {
+    "created_at": "2026-10-20T10:10:47.096068+00:00",
+    "split": "test",
+    "backends": [
+      "baseline",
+      "minimal",
+      "optimized"
+    ],
+    "limit": null,
+    "selected_case_ids": [
+      "cphos28-q2-01",
+      "cphos28-q2-02",
+      "cphos28-q2-03",
+      "cphos28-q2-04",
+      "cphos28-q2-05",
+      "cphos28-q2-06",
+      "cphos28-q5-01",
+      "cphos28-q5-02",
+      "cphos28-q5-03",
+      "cphos28-q5-04",
+      "cphos28-q5-05",
+      "cphos28-q5-06",
+      "cphos28-q6-01",
+      "cphos28-q6-02",
+      "cphos28-q6-03",
+      "cphos28-q6-04",
+      "cphos28-q6-05",
+      "cphos28-q6-06",
+      "cphos28-q7-01",
+      "cphos28-q7-02",
+      "cphos28-q7-03",
+      "cphos28-q7-04",
+      "cphos28-q7-05",
+      "cphos28-q7-06"
+    ],
+    "settings": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "timeout": 180.0,
+      "max_output_tokens": 16384,
+      "json_mode": true,
+      "thinking": "enabled",
+      "temperature": null,
+      "repair_attempts": 1,
+      "upstream_retries": 1,
+      "max_claims": 64,
+      "api_key_configured": true
+    },
+    "prices": {
+      "input_per_million": 0.3,
+      "cached_input_per_million": 0.006,
+      "output_per_million": 1.2,
+      "currency": "USD"
+    }
+  },
+  "provenance": {
+    "dataset_path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\cases.jsonl",
+    "dataset_sha256": "8f053e69982901852bd6f15382c15ba325a459aac9d2f8b37e5aac55a0ad71eb",
+    "sources_path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\sources.json",
+    "sources_sha256": "77599c2b0229ad11f392e86816116c81ec49642cb11be3118a072de853fa8c35",
+    "source_documents": [
+      {
+        "id": "exam",
+        "sha256": "849dd23db1d251c85f1c6f37b55c94d3482e1cbc53f2cb0f7ed11120965ed5b3"
+      },
+      {
+        "id": "solutions",
+        "sha256": "dd8c5bbc2f46180d39b7736731cc630048b5cb6ec07937a41da45d1c67c78c80"
+      }
+    ],
+    "local_source_hashes_rechecked": false,
+    "code_and_prompt_files_sha256": {
+      "grounding/__init__.py": "734d223c4bd015a4d1d11de949414369649cb3613510c9df3a082593fe7cbdfc",
+      "grounding/baseline.py": "8e6423a0551cfd9eca6c7e4e406a02039c6d3979c4b0362206ce3bc3bef5fd78",
+      "grounding/client.py": "32a1ca2d005c5e91812ff6fab8362cc040d21bd71d6e09ba4f48a20ce869b7d0",
+      "grounding/config.py": "8f87a8c49d893ff2ecb12db0759aad6ac3ecba67e9ca6ed378599370cd5bc238",
+      "grounding/contracts.py": "8ceb5d93e5482c67a79343914489ab79992fa9a51ae85d4819f3f9cedd881435",
+      "grounding/factory.py": "8fddc060c4e80baad0865492ec67f14b46eab05102e9eb46f0fc0ebf6bf88099",
+      "grounding/prompts.py": "7106603e029635f14238861f05881e8482f944ce1bc6aa56f9d60243a4667769",
+      "grounding/scoring.py": "f32a4e821d444f27c2a2815cdab2ca7c0394e2a21ffdd46c3a8dca9b2d22a2be",
+      "grounding/server.py": "a130f4537a7274f629b66a1ec46b74bd4d29798f9416a7e27c31d5132852f55a",
+      "grounding/verifiers.py": "2ce4a59a256d4380195275bacfbf03102a2ae52aab4f835533e0c640349a5f2b",
+      "scripts/benchmark.py": "956b4a80685391cd221d933bfe2c0fc3aa4df8d9d63303c3755eb6a6bdfeb49a",
+      "scripts/validate_dataset.py": "b202e627be4b7af80f2f78addf1495ee73bcddd978e42a7c3214f74665fceb9d"
+    },
+    "implementation_sha256": "8f81865f5178f99e281a4d9fd2158942498c220340f16efd0c375502d26eb931",
+    "python_version": "3.12.5"
+  },
+  "selected_case_ids": [
+    "cphos28-q2-01",
+    "cphos28-q2-02",
+    "cphos28-q2-03",
+    "cphos28-q2-04",
+    "cphos28-q2-05",
+    "cphos28-q2-06",
+    "cphos28-q5-01",
+    "cphos28-q5-02",
+    "cphos28-q5-03",
+    "cphos28-q5-04",
+    "cphos28-q5-05",
+    "cphos28-q5-06",
+    "cphos28-q6-01",
+    "cphos28-q6-02",
+    "cphos28-q6-03",
+    "cphos28-q6-04",
+    "cphos28-q6-05",
+    "cphos28-q6-06",
+    "cphos28-q7-01",
+    "cphos28-q7-02",
+    "cphos28-q7-03",
+    "cphos28-q7-04",
+    "cphos28-q7-05",
+    "cphos28-q7-06"
+  ],
+  "planned_records": 72,
+  "completed_records": 72,
+  "backends": {
+    "baseline": {
+      "case_count": 24,
+      "success_rate": {
+        "numerator": 24,
+        "denominator": 24,
+        "value": 1.0
+      },
+      "error_count": 0,
+      "strict": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 33,
+        "matched_claim_count": 31,
+        "correct_claim_count": 10,
+        "missing_claim_count": 1,
+        "extra_claim_count": 2,
+        "claim_precision": {
+          "numerator": 10,
+          "denominator": 33,
+          "value": 0.30303030303030304
+        },
+        "claim_recall": {
+          "numerator": 10,
+          "denominator": 32,
+          "value": 0.3125
+        },
+        "claim_f1": {
+          "numerator": 20,
+          "denominator": 65,
+          "value": 0.3076923076923077
+        },
+        "extraction_precision": {
+          "numerator": 31,
+          "denominator": 33,
+          "value": 0.9393939393939394
+        },
+        "extraction_recall": {
+          "numerator": 31,
+          "denominator": 32,
+          "value": 0.96875
+        },
+        "macro_f1": {
+          "numerator": 0.6959706959706959,
+          "denominator": 3,
+          "value": 0.23199023199023197
+        },
+        "case_accuracy": {
+          "numerator": 5,
+          "denominator": 24,
+          "value": 0.20833333333333334
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 10,
+            "support": 12,
+            "precision": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 2,
+              "denominator": 12,
+              "value": 0.16666666666666666
+            },
+            "f1": {
+              "numerator": 4,
+              "denominator": 14,
+              "value": 0.2857142857142857
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "support": 12,
+            "precision": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "recall": {
+              "numerator": 0,
+              "denominator": 12,
+              "value": 0.0
+            },
+            "f1": {
+              "numerator": 0,
+              "denominator": 12,
+              "value": 0.0
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 23,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 31,
+              "value": 0.25806451612903225
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 39,
+              "value": 0.41025641025641024
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 2,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 10,
+            "MISSING": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 11,
+            "MISSING": 1
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 2,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 1,
+        "nonexact_alignment_count": 0
+      },
+      "approximate": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 33,
+        "matched_claim_count": 31,
+        "correct_claim_count": 10,
+        "missing_claim_count": 1,
+        "extra_claim_count": 2,
+        "claim_precision": {
+          "numerator": 10,
+          "denominator": 33,
+          "value": 0.30303030303030304
+        },
+        "claim_recall": {
+          "numerator": 10,
+          "denominator": 32,
+          "value": 0.3125
+        },
+        "claim_f1": {
+          "numerator": 20,
+          "denominator": 65,
+          "value": 0.3076923076923077
+        },
+        "extraction_precision": {
+          "numerator": 31,
+          "denominator": 33,
+          "value": 0.9393939393939394
+        },
+        "extraction_recall": {
+          "numerator": 31,
+          "denominator": 32,
+          "value": 0.96875
+        },
+        "macro_f1": {
+          "numerator": 0.6959706959706959,
+          "denominator": 3,
+          "value": 0.23199023199023197
+        },
+        "case_accuracy": {
+          "numerator": 5,
+          "denominator": 24,
+          "value": 0.20833333333333334
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 10,
+            "support": 12,
+            "precision": {
+              "numerator": 2,
+              "denominator": 2,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 2,
+              "denominator": 12,
+              "value": 0.16666666666666666
+            },
+            "f1": {
+              "numerator": 4,
+              "denominator": 14,
+              "value": 0.2857142857142857
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "support": 12,
+            "precision": {
+              "numerator": 0,
+              "denominator": 0,
+              "value": null
+            },
+            "recall": {
+              "numerator": 0,
+              "denominator": 12,
+              "value": 0.0
+            },
+            "f1": {
+              "numerator": 0,
+              "denominator": 12,
+              "value": 0.0
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 23,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 31,
+              "value": 0.25806451612903225
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 39,
+              "value": 0.41025641025641024
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 2,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 10,
+            "MISSING": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 11,
+            "MISSING": 1
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 2,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 1,
+        "nonexact_alignment_count": 0
+      },
+      "citations": {
+        "exact_substring_rate": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 1.0
+        },
+        "strict": {
+          "passage_coverage": {
+            "numerator": 2,
+            "denominator": 24,
+            "value": 0.08333333333333333
+          },
+          "required_passage_coverage": {
+            "numerator": 0,
+            "denominator": 4,
+            "value": 0.0
+          },
+          "gold_quote_containment": {
+            "numerator": 2,
+            "denominator": 29,
+            "value": 0.06896551724137931
+          },
+          "gold_quote_exact_match": {
+            "numerator": 0,
+            "denominator": 29,
+            "value": 0.0
+          }
+        },
+        "approximate": {
+          "passage_coverage": {
+            "numerator": 2,
+            "denominator": 24,
+            "value": 0.08333333333333333
+          },
+          "required_passage_coverage": {
+            "numerator": 0,
+            "denominator": 4,
+            "value": 0.0
+          },
+          "gold_quote_containment": {
+            "numerator": 2,
+            "denominator": 29,
+            "value": 0.06896551724137931
+          },
+          "gold_quote_exact_match": {
+            "numerator": 0,
+            "denominator": 29,
+            "value": 0.0
+          }
+        }
+      },
+      "latency": {
+        "mean_seconds": 0.0006954749963673142,
+        "p50_seconds": 0.0003893999964930117,
+        "p95_seconds": 0.0014865999692119658,
+        "total_seconds": 0.01669139991281554
+      },
+      "usage": {
+        "calls": 0,
+        "calls_with_usage": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_accounted_calls": 0,
+        "reasoning_accounted_calls": 0,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": true
+      },
+      "cost": {
+        "estimated_amount": 0.0,
+        "known_usage_amount": 0.0,
+        "currency": "USD",
+        "complete": true,
+        "prices": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.006,
+          "output_per_million": 1.2,
+          "currency": "USD"
+        },
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate."
+      },
+      "failures": [
+        {
+          "id": "cphos28-q2-01",
+          "category": "supported",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q2-02",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q2-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q2-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q2-06",
+          "category": "mixed",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 1,
+                "predicted_index": 1,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 2,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-02",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-06",
+          "category": "mixed",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 1,
+                "predicted_index": 1,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 2,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q6-01",
+          "category": "supported",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q6-02",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q6-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q6-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q6-06",
+          "category": "mixed",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "unresolved_alignment",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 3,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [
+              1
+            ],
+            "unmatched_predicted_indices": [
+              1,
+              2
+            ],
+            "review_required": true,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-01",
+          "category": "supported",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-02",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-06",
+          "category": "mixed",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "aligned_verdict_error",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 1,
+                "predicted_index": 1,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 2,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        }
+      ],
+      "by_category": {
+        "extrinsic_hallucination": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "mixed": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 13,
+            "matched_claim_count": 11,
+            "correct_claim_count": 5,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 5,
+              "denominator": 13,
+              "value": 0.38461538461538464
+            },
+            "claim_recall": {
+              "numerator": 5,
+              "denominator": 12,
+              "value": 0.4166666666666667
+            },
+            "claim_f1": {
+              "numerator": 10,
+              "denominator": 25,
+              "value": 0.4
+            },
+            "extraction_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "extraction_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "macro_f1": {
+              "numerator": 0.9,
+              "denominator": 3,
+              "value": 0.3
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 3,
+                "support": 4,
+                "precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 1,
+                  "denominator": 4,
+                  "value": 0.25
+                },
+                "f1": {
+                  "numerator": 2,
+                  "denominator": 5,
+                  "value": 0.4
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "support": 4,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 8,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 12,
+                  "value": 0.3333333333333333
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 16,
+                  "value": 0.5
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 1,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 2,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 13,
+            "matched_claim_count": 11,
+            "correct_claim_count": 5,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 5,
+              "denominator": 13,
+              "value": 0.38461538461538464
+            },
+            "claim_recall": {
+              "numerator": 5,
+              "denominator": 12,
+              "value": 0.4166666666666667
+            },
+            "claim_f1": {
+              "numerator": 10,
+              "denominator": 25,
+              "value": 0.4
+            },
+            "extraction_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "extraction_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "macro_f1": {
+              "numerator": 0.9,
+              "denominator": 3,
+              "value": 0.3
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 3,
+                "support": 4,
+                "precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 1,
+                  "denominator": 4,
+                  "value": 0.25
+                },
+                "f1": {
+                  "numerator": 2,
+                  "denominator": 5,
+                  "value": 0.4
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "support": 4,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 8,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 12,
+                  "value": 0.3333333333333333
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 16,
+                  "value": 0.5
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 1,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 2,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "multi_passage_synthesis": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 0,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "claim_recall": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "claim_f1": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.0,
+              "denominator": 2,
+              "value": 0.0
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "support": 4,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 4,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 0,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "claim_recall": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "claim_f1": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.0,
+              "denominator": 2,
+              "value": 0.0
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 4,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 4,
+                "support": 4,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 4,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 4,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "subtle_distortion": {
+          "case_count": 8,
+          "strict": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 8,
+            "matched_claim_count": 8,
+            "correct_claim_count": 0,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "claim_recall": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "claim_f1": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "extraction_precision": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.0,
+              "denominator": 2,
+              "value": 0.0
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 8,
+                "support": 8,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 8,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 8,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 8,
+            "matched_claim_count": 8,
+            "correct_claim_count": 0,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "claim_recall": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "claim_f1": {
+              "numerator": 0,
+              "denominator": 16,
+              "value": 0.0
+            },
+            "extraction_precision": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.0,
+              "denominator": 2,
+              "value": 0.0
+            },
+            "case_accuracy": {
+              "numerator": 0,
+              "denominator": 8,
+              "value": 0.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 8,
+                "support": 8,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 8,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 8,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 8,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "supported": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 1,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "claim_recall": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "claim_f1": {
+              "numerator": 2,
+              "denominator": 8,
+              "value": 0.25
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.4,
+              "denominator": 2,
+              "value": 0.2
+            },
+            "case_accuracy": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 3,
+                "support": 4,
+                "precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 1,
+                  "denominator": 4,
+                  "value": 0.25
+                },
+                "f1": {
+                  "numerator": 2,
+                  "denominator": 5,
+                  "value": 0.4
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 3,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 3,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 1,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 1,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "claim_recall": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "claim_f1": {
+              "numerator": 2,
+              "denominator": 8,
+              "value": 0.25
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 0.4,
+              "denominator": 2,
+              "value": 0.2
+            },
+            "case_accuracy": {
+              "numerator": 1,
+              "denominator": 4,
+              "value": 0.25
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 3,
+                "support": 4,
+                "precision": {
+                  "numerator": 1,
+                  "denominator": 1,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 1,
+                  "denominator": 4,
+                  "value": 0.25
+                },
+                "f1": {
+                  "numerator": 2,
+                  "denominator": 5,
+                  "value": 0.4
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 3,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 3,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 3,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 1,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 3,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        }
+      }
+    },
+    "minimal": {
+      "case_count": 24,
+      "success_rate": {
+        "numerator": 24,
+        "denominator": 24,
+        "value": 1.0
+      },
+      "error_count": 0,
+      "strict": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 33,
+        "matched_claim_count": 29,
+        "correct_claim_count": 29,
+        "missing_claim_count": 3,
+        "extra_claim_count": 4,
+        "claim_precision": {
+          "numerator": 29,
+          "denominator": 33,
+          "value": 0.8787878787878788
+        },
+        "claim_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "claim_f1": {
+          "numerator": 58,
+          "denominator": 65,
+          "value": 0.8923076923076924
+        },
+        "extraction_precision": {
+          "numerator": 29,
+          "denominator": 33,
+          "value": 0.8787878787878788
+        },
+        "extraction_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "macro_f1": {
+          "numerator": 2.7133333333333334,
+          "denominator": 3,
+          "value": 0.9044444444444445
+        },
+        "case_accuracy": {
+          "numerator": 21,
+          "denominator": 24,
+          "value": 0.875
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 10,
+            "fp": 2,
+            "fn": 2,
+            "support": 12,
+            "precision": {
+              "numerator": 10,
+              "denominator": 12,
+              "value": 0.8333333333333334
+            },
+            "recall": {
+              "numerator": 10,
+              "denominator": 12,
+              "value": 0.8333333333333334
+            },
+            "f1": {
+              "numerator": 20,
+              "denominator": 24,
+              "value": 0.8333333333333334
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 11,
+            "fp": 2,
+            "fn": 1,
+            "support": 12,
+            "precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "f1": {
+              "numerator": 22,
+              "denominator": 25,
+              "value": 0.88
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 16,
+              "value": 1.0
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 10,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 0,
+            "MISSING": 2
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 11,
+            "UNSUPPORTED": 0,
+            "MISSING": 1
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 2,
+            "CONTRADICTED": 2,
+            "UNSUPPORTED": 0,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 3,
+        "nonexact_alignment_count": 0
+      },
+      "approximate": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 33,
+        "matched_claim_count": 31,
+        "correct_claim_count": 31,
+        "missing_claim_count": 1,
+        "extra_claim_count": 2,
+        "claim_precision": {
+          "numerator": 31,
+          "denominator": 33,
+          "value": 0.9393939393939394
+        },
+        "claim_recall": {
+          "numerator": 31,
+          "denominator": 32,
+          "value": 0.96875
+        },
+        "claim_f1": {
+          "numerator": 62,
+          "denominator": 65,
+          "value": 0.9538461538461539
+        },
+        "extraction_precision": {
+          "numerator": 31,
+          "denominator": 33,
+          "value": 0.9393939393939394
+        },
+        "extraction_recall": {
+          "numerator": 31,
+          "denominator": 32,
+          "value": 0.96875
+        },
+        "macro_f1": {
+          "numerator": 2.88,
+          "denominator": 3,
+          "value": 0.96
+        },
+        "case_accuracy": {
+          "numerator": 23,
+          "denominator": 24,
+          "value": 0.9583333333333334
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "support": 12,
+            "precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 24,
+              "denominator": 24,
+              "value": 1.0
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 11,
+            "fp": 2,
+            "fn": 1,
+            "support": 12,
+            "precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "f1": {
+              "numerator": 22,
+              "denominator": 25,
+              "value": 0.88
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 16,
+              "value": 1.0
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 12,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 0,
+            "MISSING": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 11,
+            "UNSUPPORTED": 0,
+            "MISSING": 1
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 2,
+            "UNSUPPORTED": 0,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 3,
+        "nonexact_alignment_count": 2
+      },
+      "citations": {
+        "exact_substring_rate": {
+          "numerator": 30,
+          "denominator": 30,
+          "value": 1.0
+        },
+        "strict": {
+          "passage_coverage": {
+            "numerator": 21,
+            "denominator": 24,
+            "value": 0.875
+          },
+          "required_passage_coverage": {
+            "numerator": 2,
+            "denominator": 4,
+            "value": 0.5
+          },
+          "gold_quote_containment": {
+            "numerator": 20,
+            "denominator": 29,
+            "value": 0.6896551724137931
+          },
+          "gold_quote_exact_match": {
+            "numerator": 14,
+            "denominator": 29,
+            "value": 0.4827586206896552
+          }
+        },
+        "approximate": {
+          "passage_coverage": {
+            "numerator": 23,
+            "denominator": 24,
+            "value": 0.9583333333333334
+          },
+          "required_passage_coverage": {
+            "numerator": 4,
+            "denominator": 4,
+            "value": 1.0
+          },
+          "gold_quote_containment": {
+            "numerator": 24,
+            "denominator": 29,
+            "value": 0.8275862068965517
+          },
+          "gold_quote_exact_match": {
+            "numerator": 18,
+            "denominator": 29,
+            "value": 0.6206896551724138
+          }
+        }
+      },
+      "latency": {
+        "mean_seconds": 1.997675308334389,
+        "p50_seconds": 1.746480900037568,
+        "p95_seconds": 2.9109817999997176,
+        "total_seconds": 47.944207400025334
+      },
+      "usage": {
+        "calls": 24,
+        "calls_with_usage": 24,
+        "prompt_tokens": 8058,
+        "completion_tokens": 8552,
+        "total_tokens": 16610,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 6650,
+        "reasoning_tokens": 5594,
+        "cache_accounted_calls": 24,
+        "reasoning_accounted_calls": 24,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": true
+      },
+      "cost": {
+        "estimated_amount": 0.012265848,
+        "known_usage_amount": 0.012265848,
+        "currency": "USD",
+        "complete": true,
+        "prices": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.006,
+          "output_per_million": 1.2,
+          "currency": "USD"
+        },
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate."
+      },
+      "failures": [
+        {
+          "id": "cphos28-q2-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": true,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "high_text_similarity",
+                "similarity": 0.9032258064516129,
+                "span_overlap": 0.0,
+                "confidence": 0.9032258064516129
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": true,
+            "candidate_pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "high_text_similarity",
+                "similarity": 0.9032258064516129,
+                "span_overlap": 0.0,
+                "confidence": 0.9032258064516129
+              }
+            ]
+          }
+        },
+        {
+          "id": "cphos28-q2-06",
+          "category": "mixed",
+          "reasons": [
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": true,
+          "approximate_case_correct": true,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 1,
+                "predicted_index": 1,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 2,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "unresolved_alignment",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [],
+            "unmatched_gold_indices": [
+              0
+            ],
+            "unmatched_predicted_indices": [
+              0,
+              1
+            ],
+            "review_required": true,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-06",
+          "category": "mixed",
+          "reasons": [
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": true,
+          "approximate_case_correct": true,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 1,
+                "predicted_index": 1,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 2,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": false,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q7-05",
+          "category": "multi_passage_synthesis",
+          "reasons": [
+            "strict_text_or_verdict_mismatch"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": true,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "answer_span_overlap",
+                "similarity": 0.8888888888888888,
+                "span_overlap": 0.8,
+                "confidence": 0.8888888888888888
+              }
+            ],
+            "unmatched_gold_indices": [],
+            "unmatched_predicted_indices": [],
+            "review_required": true,
+            "candidate_pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "answer_span_overlap",
+                "similarity": 0.8888888888888888,
+                "span_overlap": 0.8,
+                "confidence": 0.8888888888888888
+              }
+            ]
+          }
+        }
+      ],
+      "by_category": {
+        "extrinsic_hallucination": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "mixed": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 12,
+            "matched_claim_count": 12,
+            "correct_claim_count": 12,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 24,
+              "denominator": 24,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 3.0,
+              "denominator": 3,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 4,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 12,
+            "matched_claim_count": 12,
+            "correct_claim_count": 12,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 24,
+              "denominator": 24,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 3.0,
+              "denominator": 3,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 4,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "multi_passage_synthesis": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 2,
+            "correct_claim_count": 2,
+            "missing_claim_count": 2,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 2,
+              "denominator": 4,
+              "value": 0.5
+            },
+            "claim_recall": {
+              "numerator": 2,
+              "denominator": 4,
+              "value": 0.5
+            },
+            "claim_f1": {
+              "numerator": 4,
+              "denominator": 8,
+              "value": 0.5
+            },
+            "extraction_precision": {
+              "numerator": 2,
+              "denominator": 4,
+              "value": 0.5
+            },
+            "extraction_recall": {
+              "numerator": 2,
+              "denominator": 4,
+              "value": 0.5
+            },
+            "macro_f1": {
+              "numerator": 0.5,
+              "denominator": 1,
+              "value": 0.5
+            },
+            "case_accuracy": {
+              "numerator": 2,
+              "denominator": 4,
+              "value": 0.5
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 2,
+                "fp": 2,
+                "fn": 2,
+                "support": 4,
+                "precision": {
+                  "numerator": 2,
+                  "denominator": 4,
+                  "value": 0.5
+                },
+                "recall": {
+                  "numerator": 2,
+                  "denominator": 4,
+                  "value": 0.5
+                },
+                "f1": {
+                  "numerator": 4,
+                  "denominator": 8,
+                  "value": 0.5
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 2,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 2
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 2,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 2,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 2,
+            "nonexact_alignment_count": 2
+          }
+        },
+        "subtle_distortion": {
+          "case_count": 8,
+          "strict": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 9,
+            "matched_claim_count": 7,
+            "correct_claim_count": 7,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 7,
+              "denominator": 9,
+              "value": 0.7777777777777778
+            },
+            "claim_recall": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "claim_f1": {
+              "numerator": 14,
+              "denominator": 17,
+              "value": 0.8235294117647058
+            },
+            "extraction_precision": {
+              "numerator": 7,
+              "denominator": 9,
+              "value": 0.7777777777777778
+            },
+            "extraction_recall": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "macro_f1": {
+              "numerator": 0.8235294117647058,
+              "denominator": 1,
+              "value": 0.8235294117647058
+            },
+            "case_accuracy": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 1,
+                "support": 8,
+                "precision": {
+                  "numerator": 7,
+                  "denominator": 9,
+                  "value": 0.7777777777777778
+                },
+                "recall": {
+                  "numerator": 7,
+                  "denominator": 8,
+                  "value": 0.875
+                },
+                "f1": {
+                  "numerator": 14,
+                  "denominator": 17,
+                  "value": 0.8235294117647058
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 7,
+                "UNSUPPORTED": 0,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 2,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 9,
+            "matched_claim_count": 7,
+            "correct_claim_count": 7,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 7,
+              "denominator": 9,
+              "value": 0.7777777777777778
+            },
+            "claim_recall": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "claim_f1": {
+              "numerator": 14,
+              "denominator": 17,
+              "value": 0.8235294117647058
+            },
+            "extraction_precision": {
+              "numerator": 7,
+              "denominator": 9,
+              "value": 0.7777777777777778
+            },
+            "extraction_recall": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "macro_f1": {
+              "numerator": 0.8235294117647058,
+              "denominator": 1,
+              "value": 0.8235294117647058
+            },
+            "case_accuracy": {
+              "numerator": 7,
+              "denominator": 8,
+              "value": 0.875
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 1,
+                "support": 8,
+                "precision": {
+                  "numerator": 7,
+                  "denominator": 9,
+                  "value": 0.7777777777777778
+                },
+                "recall": {
+                  "numerator": 7,
+                  "denominator": 8,
+                  "value": 0.875
+                },
+                "f1": {
+                  "numerator": 14,
+                  "denominator": 17,
+                  "value": 0.8235294117647058
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 7,
+                "UNSUPPORTED": 0,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 2,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "supported": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        }
+      }
+    },
+    "optimized": {
+      "case_count": 24,
+      "success_rate": {
+        "numerator": 24,
+        "denominator": 24,
+        "value": 1.0
+      },
+      "error_count": 0,
+      "strict": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 35,
+        "matched_claim_count": 29,
+        "correct_claim_count": 29,
+        "missing_claim_count": 3,
+        "extra_claim_count": 6,
+        "claim_precision": {
+          "numerator": 29,
+          "denominator": 35,
+          "value": 0.8285714285714286
+        },
+        "claim_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "claim_f1": {
+          "numerator": 58,
+          "denominator": 67,
+          "value": 0.8656716417910447
+        },
+        "extraction_precision": {
+          "numerator": 29,
+          "denominator": 35,
+          "value": 0.8285714285714286
+        },
+        "extraction_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "macro_f1": {
+          "numerator": 2.6334841628959276,
+          "denominator": 3,
+          "value": 0.8778280542986425
+        },
+        "case_accuracy": {
+          "numerator": 21,
+          "denominator": 24,
+          "value": 0.875
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "support": 12,
+            "precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 24,
+              "denominator": 24,
+              "value": 1.0
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 9,
+            "fp": 5,
+            "fn": 3,
+            "support": 12,
+            "precision": {
+              "numerator": 9,
+              "denominator": 14,
+              "value": 0.6428571428571429
+            },
+            "recall": {
+              "numerator": 9,
+              "denominator": 12,
+              "value": 0.75
+            },
+            "f1": {
+              "numerator": 18,
+              "denominator": 26,
+              "value": 0.6923076923076923
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 1,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 9,
+              "value": 0.8888888888888888
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 17,
+              "value": 0.9411764705882353
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 12,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 0,
+            "MISSING": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 9,
+            "UNSUPPORTED": 0,
+            "MISSING": 3
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 5,
+            "UNSUPPORTED": 1,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 3,
+        "nonexact_alignment_count": 0
+      },
+      "approximate": {
+        "gold_claim_count": 32,
+        "predicted_claim_count": 35,
+        "matched_claim_count": 29,
+        "correct_claim_count": 29,
+        "missing_claim_count": 3,
+        "extra_claim_count": 6,
+        "claim_precision": {
+          "numerator": 29,
+          "denominator": 35,
+          "value": 0.8285714285714286
+        },
+        "claim_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "claim_f1": {
+          "numerator": 58,
+          "denominator": 67,
+          "value": 0.8656716417910447
+        },
+        "extraction_precision": {
+          "numerator": 29,
+          "denominator": 35,
+          "value": 0.8285714285714286
+        },
+        "extraction_recall": {
+          "numerator": 29,
+          "denominator": 32,
+          "value": 0.90625
+        },
+        "macro_f1": {
+          "numerator": 2.6334841628959276,
+          "denominator": 3,
+          "value": 0.8778280542986425
+        },
+        "case_accuracy": {
+          "numerator": 21,
+          "denominator": 24,
+          "value": 0.875
+        },
+        "per_label": {
+          "SUPPORTED": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "support": 12,
+            "precision": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "recall": {
+              "numerator": 12,
+              "denominator": 12,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 24,
+              "denominator": 24,
+              "value": 1.0
+            }
+          },
+          "CONTRADICTED": {
+            "tp": 9,
+            "fp": 5,
+            "fn": 3,
+            "support": 12,
+            "precision": {
+              "numerator": 9,
+              "denominator": 14,
+              "value": 0.6428571428571429
+            },
+            "recall": {
+              "numerator": 9,
+              "denominator": 12,
+              "value": 0.75
+            },
+            "f1": {
+              "numerator": 18,
+              "denominator": 26,
+              "value": 0.6923076923076923
+            }
+          },
+          "UNSUPPORTED": {
+            "tp": 8,
+            "fp": 1,
+            "fn": 0,
+            "support": 8,
+            "precision": {
+              "numerator": 8,
+              "denominator": 9,
+              "value": 0.8888888888888888
+            },
+            "recall": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "f1": {
+              "numerator": 16,
+              "denominator": 17,
+              "value": 0.9411764705882353
+            }
+          }
+        },
+        "confusion_matrix": {
+          "SUPPORTED": {
+            "SUPPORTED": 12,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 0,
+            "MISSING": 0
+          },
+          "CONTRADICTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 9,
+            "UNSUPPORTED": 0,
+            "MISSING": 3
+          },
+          "UNSUPPORTED": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 0,
+            "UNSUPPORTED": 8,
+            "MISSING": 0
+          },
+          "EXTRA": {
+            "SUPPORTED": 0,
+            "CONTRADICTED": 5,
+            "UNSUPPORTED": 1,
+            "MISSING": 0
+          }
+        },
+        "alignment_review_case_count": 3,
+        "nonexact_alignment_count": 0
+      },
+      "citations": {
+        "exact_substring_rate": {
+          "numerator": 31,
+          "denominator": 31,
+          "value": 1.0
+        },
+        "strict": {
+          "passage_coverage": {
+            "numerator": 21,
+            "denominator": 24,
+            "value": 0.875
+          },
+          "required_passage_coverage": {
+            "numerator": 4,
+            "denominator": 4,
+            "value": 1.0
+          },
+          "gold_quote_containment": {
+            "numerator": 26,
+            "denominator": 29,
+            "value": 0.896551724137931
+          },
+          "gold_quote_exact_match": {
+            "numerator": 9,
+            "denominator": 29,
+            "value": 0.3103448275862069
+          }
+        },
+        "approximate": {
+          "passage_coverage": {
+            "numerator": 21,
+            "denominator": 24,
+            "value": 0.875
+          },
+          "required_passage_coverage": {
+            "numerator": 4,
+            "denominator": 4,
+            "value": 1.0
+          },
+          "gold_quote_containment": {
+            "numerator": 26,
+            "denominator": 29,
+            "value": 0.896551724137931
+          },
+          "gold_quote_exact_match": {
+            "numerator": 9,
+            "denominator": 29,
+            "value": 0.3103448275862069
+          }
+        }
+      },
+      "latency": {
+        "mean_seconds": 4.94983785416601,
+        "p50_seconds": 4.107137699960731,
+        "p95_seconds": 10.102106300008018,
+        "total_seconds": 118.79610849998426
+      },
+      "usage": {
+        "calls": 48,
+        "calls_with_usage": 48,
+        "prompt_tokens": 31478,
+        "completion_tokens": 21271,
+        "total_tokens": 52749,
+        "prompt_cache_hit_tokens": 20992,
+        "prompt_cache_miss_tokens": 10486,
+        "reasoning_tokens": 15522,
+        "cache_accounted_calls": 48,
+        "reasoning_accounted_calls": 48,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": true
+      },
+      "cost": {
+        "estimated_amount": 0.028796952,
+        "known_usage_amount": 0.028796952,
+        "currency": "USD",
+        "complete": true,
+        "prices": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.006,
+          "output_per_million": 1.2,
+          "currency": "USD"
+        },
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate."
+      },
+      "failures": [
+        {
+          "id": "cphos28-q5-02",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "unresolved_alignment",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [],
+            "unmatched_gold_indices": [
+              0
+            ],
+            "unmatched_predicted_indices": [
+              0,
+              1
+            ],
+            "review_required": true,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-03",
+          "category": "subtle_distortion",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "unresolved_alignment",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [],
+            "unmatched_gold_indices": [
+              0
+            ],
+            "unmatched_predicted_indices": [
+              0,
+              1
+            ],
+            "review_required": true,
+            "candidate_pairs": []
+          }
+        },
+        {
+          "id": "cphos28-q5-06",
+          "category": "mixed",
+          "reasons": [
+            "strict_text_or_verdict_mismatch",
+            "unresolved_alignment",
+            "missing_passage_or_unaligned_claim",
+            "gold_quote_anchor_not_covered_review_needed"
+          ],
+          "error": null,
+          "strict_case_correct": false,
+          "approximate_case_correct": false,
+          "alignment": {
+            "pairs": [
+              {
+                "gold_index": 0,
+                "predicted_index": 0,
+                "method": "exact_text",
+                "similarity": 1.0
+              },
+              {
+                "gold_index": 2,
+                "predicted_index": 3,
+                "method": "exact_text",
+                "similarity": 1.0
+              }
+            ],
+            "unmatched_gold_indices": [
+              1
+            ],
+            "unmatched_predicted_indices": [
+              1,
+              2
+            ],
+            "review_required": true,
+            "candidate_pairs": []
+          }
+        }
+      ],
+      "by_category": {
+        "extrinsic_hallucination": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "mixed": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 13,
+            "matched_claim_count": 11,
+            "correct_claim_count": 11,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "claim_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "claim_f1": {
+              "numerator": 22,
+              "denominator": 25,
+              "value": 0.88
+            },
+            "extraction_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "extraction_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "macro_f1": {
+              "numerator": 2.6666666666666665,
+              "denominator": 3,
+              "value": 0.8888888888888888
+            },
+            "case_accuracy": {
+              "numerator": 3,
+              "denominator": 4,
+              "value": 0.75
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 3,
+                "fp": 2,
+                "fn": 1,
+                "support": 4,
+                "precision": {
+                  "numerator": 3,
+                  "denominator": 5,
+                  "value": 0.6
+                },
+                "recall": {
+                  "numerator": 3,
+                  "denominator": 4,
+                  "value": 0.75
+                },
+                "f1": {
+                  "numerator": 6,
+                  "denominator": 9,
+                  "value": 0.6666666666666666
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 3,
+                "UNSUPPORTED": 0,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 2,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 12,
+            "predicted_claim_count": 13,
+            "matched_claim_count": 11,
+            "correct_claim_count": 11,
+            "missing_claim_count": 1,
+            "extra_claim_count": 2,
+            "claim_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "claim_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "claim_f1": {
+              "numerator": 22,
+              "denominator": 25,
+              "value": 0.88
+            },
+            "extraction_precision": {
+              "numerator": 11,
+              "denominator": 13,
+              "value": 0.8461538461538461
+            },
+            "extraction_recall": {
+              "numerator": 11,
+              "denominator": 12,
+              "value": 0.9166666666666666
+            },
+            "macro_f1": {
+              "numerator": 2.6666666666666665,
+              "denominator": 3,
+              "value": 0.8888888888888888
+            },
+            "case_accuracy": {
+              "numerator": 3,
+              "denominator": 4,
+              "value": 0.75
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 3,
+                "fp": 2,
+                "fn": 1,
+                "support": 4,
+                "precision": {
+                  "numerator": 3,
+                  "denominator": 5,
+                  "value": 0.6
+                },
+                "recall": {
+                  "numerator": 3,
+                  "denominator": 4,
+                  "value": 0.75
+                },
+                "f1": {
+                  "numerator": 6,
+                  "denominator": 9,
+                  "value": 0.6666666666666666
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 3,
+                "UNSUPPORTED": 0,
+                "MISSING": 1
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 4,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 2,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 1,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "multi_passage_synthesis": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "subtle_distortion": {
+          "case_count": 8,
+          "strict": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 10,
+            "matched_claim_count": 6,
+            "correct_claim_count": 6,
+            "missing_claim_count": 2,
+            "extra_claim_count": 4,
+            "claim_precision": {
+              "numerator": 6,
+              "denominator": 10,
+              "value": 0.6
+            },
+            "claim_recall": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "claim_f1": {
+              "numerator": 12,
+              "denominator": 18,
+              "value": 0.6666666666666666
+            },
+            "extraction_precision": {
+              "numerator": 6,
+              "denominator": 10,
+              "value": 0.6
+            },
+            "extraction_recall": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "macro_f1": {
+              "numerator": 0.7058823529411765,
+              "denominator": 2,
+              "value": 0.35294117647058826
+            },
+            "case_accuracy": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 6,
+                "fp": 3,
+                "fn": 2,
+                "support": 8,
+                "precision": {
+                  "numerator": 6,
+                  "denominator": 9,
+                  "value": 0.6666666666666666
+                },
+                "recall": {
+                  "numerator": 6,
+                  "denominator": 8,
+                  "value": 0.75
+                },
+                "f1": {
+                  "numerator": 12,
+                  "denominator": 17,
+                  "value": 0.7058823529411765
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 1,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 1,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 6,
+                "UNSUPPORTED": 0,
+                "MISSING": 2
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 3,
+                "UNSUPPORTED": 1,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 2,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 8,
+            "predicted_claim_count": 10,
+            "matched_claim_count": 6,
+            "correct_claim_count": 6,
+            "missing_claim_count": 2,
+            "extra_claim_count": 4,
+            "claim_precision": {
+              "numerator": 6,
+              "denominator": 10,
+              "value": 0.6
+            },
+            "claim_recall": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "claim_f1": {
+              "numerator": 12,
+              "denominator": 18,
+              "value": 0.6666666666666666
+            },
+            "extraction_precision": {
+              "numerator": 6,
+              "denominator": 10,
+              "value": 0.6
+            },
+            "extraction_recall": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "macro_f1": {
+              "numerator": 0.7058823529411765,
+              "denominator": 2,
+              "value": 0.35294117647058826
+            },
+            "case_accuracy": {
+              "numerator": 6,
+              "denominator": 8,
+              "value": 0.75
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 6,
+                "fp": 3,
+                "fn": 2,
+                "support": 8,
+                "precision": {
+                  "numerator": 6,
+                  "denominator": 9,
+                  "value": 0.6666666666666666
+                },
+                "recall": {
+                  "numerator": 6,
+                  "denominator": 8,
+                  "value": 0.75
+                },
+                "f1": {
+                  "numerator": 12,
+                  "denominator": 17,
+                  "value": 0.7058823529411765
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 1,
+                  "value": 0.0
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 1,
+                  "value": 0.0
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 6,
+                "UNSUPPORTED": 0,
+                "MISSING": 2
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 3,
+                "UNSUPPORTED": 1,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 2,
+            "nonexact_alignment_count": 0
+          }
+        },
+        "supported": {
+          "case_count": 4,
+          "strict": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          },
+          "approximate": {
+            "gold_claim_count": 4,
+            "predicted_claim_count": 4,
+            "matched_claim_count": 4,
+            "correct_claim_count": 4,
+            "missing_claim_count": 0,
+            "extra_claim_count": 0,
+            "claim_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "claim_f1": {
+              "numerator": 8,
+              "denominator": 8,
+              "value": 1.0
+            },
+            "extraction_precision": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "extraction_recall": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "macro_f1": {
+              "numerator": 1.0,
+              "denominator": 1,
+              "value": 1.0
+            },
+            "case_accuracy": {
+              "numerator": 4,
+              "denominator": 4,
+              "value": 1.0
+            },
+            "per_label": {
+              "SUPPORTED": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "support": 4,
+                "precision": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "recall": {
+                  "numerator": 4,
+                  "denominator": 4,
+                  "value": 1.0
+                },
+                "f1": {
+                  "numerator": 8,
+                  "denominator": 8,
+                  "value": 1.0
+                }
+              },
+              "CONTRADICTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              },
+              "UNSUPPORTED": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "support": 0,
+                "precision": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "recall": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                },
+                "f1": {
+                  "numerator": 0,
+                  "denominator": 0,
+                  "value": null
+                }
+              }
+            },
+            "confusion_matrix": {
+              "SUPPORTED": {
+                "SUPPORTED": 4,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "CONTRADICTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "UNSUPPORTED": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              },
+              "EXTRA": {
+                "SUPPORTED": 0,
+                "CONTRADICTED": 0,
+                "UNSUPPORTED": 0,
+                "MISSING": 0
+              }
+            },
+            "alignment_review_case_count": 0,
+            "nonexact_alignment_count": 0
+          }
+        }
+      }
+    }
+  },
+  "alignment_policy": {
+    "strict": "NFC plus collapsed whitespace; otherwise exact case-sensitive claim text",
+    "approximate": "strict first, then gold answer span, span overlap, or high SequenceMatcher similarity; mutual-best margin; matching ignores verdict",
+    "similarity_threshold": 0.88,
+    "span_overlap_threshold": 0.8,
+    "ambiguity_margin": 0.04,
+    "critical_tokens": "Numeric, negation, and ordered mathematical token mismatch prevents approximate alignment; identifiers and operators remain case-sensitive."
+  },
+  "limitations": [
+    "Strict metrics require NFC/whitespace-normalized claim text equality. They penalize missing claims and extra predictions, including failures.",
+    "Approximate metrics are deterministic alignment diagnostics, not semantic accuracy. Alignment ignores verdicts and rejects ambiguous or low-similarity candidates; inspect per-case audits.",
+    "Exact substring validity does not establish that a citation entails a claim. Evidence-set coverage and gold-quote containment measure annotated evidence recall, not semantic citation precision.",
+    "Gold labels and transcriptions are AI-assisted and await user review. Formula equivalence, legitimate alternate decomposition, and paraphrase identity can require human adjudication.",
+    "Latency includes every stage and retry. Backends run sequentially in fixed order per case; provider caching and network conditions can affect comparisons.",
+    "Token counts include every recorded upstream attempt. Missing upstream usage is unknown, not zero. Cost estimates require explicit prices and are not provider billing."
+  ],
+  "paired_comparison": {
+    "paired_case_count": 24,
+    "strict_improved_case_ids": [
+      "cphos28-q2-05",
+      "cphos28-q7-05"
+    ],
+    "strict_regressed_case_ids": [
+      "cphos28-q5-02",
+      "cphos28-q5-06"
+    ],
+    "approximate_improved_case_ids": [],
+    "approximate_regressed_case_ids": [
+      "cphos28-q5-02",
+      "cphos28-q5-06"
+    ]
+  }
+}
