@@ -1,0 +1,67 @@
+{
+  "valid": true,
+  "dataset": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\cases.jsonl",
+  "sources": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\sources.json",
+  "case_count": 46,
+  "document_count": 2,
+  "passage_count": 48,
+  "split_counts": {
+    "dev": 18,
+    "edge": 4,
+    "test": 24
+  },
+  "category_counts": {
+    "empty_answer": 1,
+    "empty_context": 1,
+    "extrinsic_hallucination": 7,
+    "mixed": 7,
+    "multi_passage_synthesis": 7,
+    "no_factual_claims": 1,
+    "subtle_distortion": 14,
+    "supported": 7,
+    "withheld_evidence": 1
+  },
+  "gold_verdict_counts": {
+    "CONTRADICTED": 21,
+    "SUPPORTED": 21,
+    "UNSUPPORTED": 16
+  },
+  "problem_splits": {
+    "EDGE": [
+      "edge"
+    ],
+    "Q1": [
+      "dev"
+    ],
+    "Q2": [
+      "test"
+    ],
+    "Q3": [
+      "dev"
+    ],
+    "Q4": [
+      "dev"
+    ],
+    "Q5": [
+      "test"
+    ],
+    "Q6": [
+      "test"
+    ],
+    "Q7": [
+      "test"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "manual_review_required": [
+    "Whether every factual statement in each generated_answer has been decomposed into atomic claims.",
+    "Whether verdicts, transcribed formulas, and acceptable or required evidence sets are semantically correct.",
+    "Whether each transcription accurately represents the indicated PDF pages and figures."
+  ],
+  "exports": [
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\inputs.jsonl",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\manifest.jsonl",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\gold.jsonl"
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "version": "1.1",
+  "documents": [
+    {
+      "id": "exam",
+      "title": "第28届CPHOS物理竞赛联考理论试题",
+      "path": "D:\\下载\\CPHOS28\\CPHOS28\\第28届CPHOS物理竞赛联考理论试题.pdf",
+      "sha256": "849dd23db1d251c85f1c6f37b55c94d3482e1cbc53f2cb0f7ed11120965ed5b3",
+      "page_count": 8,
+      "copyright": "2025 CPHOS；原 PDF 版权归原作者，数据包未附原 PDF。"
+    },
+    {
+      "id": "solutions",
+      "title": "第28届CPHOS物理竞赛联考理论试题解答",
+      "path": "D:\\下载\\CPHOS28\\CPHOS28\\第28届CPHOS物理竞赛联考理论试题解答.pdf",
+      "sha256": "dd8c5bbc2f46180d39b7736731cc630048b5cb6ec07937a41da45d1c67c78c80",
+      "page_count": 24,
+      "copyright": "2025 CPHOS；原 PDF 版权归原作者，数据包未附原 PDF。"
+    }
+  ],
+  "passages": [
+    {
+      "id": "q1_setup",
+      "document_id": "exam",
+      "pages": [
+        1
+      ],
+      "locator": "一(1)双透镜题干",
+      "text": "双透镜光具组中，入射方向透镜的焦距为 f_1，出射方向透镜的焦距为 f_2，两透镜之间的距离为 D。物方主面、像方主面到等效透镜的距离分别记为 u、v，等效焦距记为 f。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_focal",
+      "document_id": "solutions",
+      "pages": [
+        2
+      ],
+      "locator": "一(1.1)，式(3)",
+      "text": "双透镜等效焦距：f = f_1*f_2/(f_1+f_2-D)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_principal",
+      "document_id": "solutions",
+      "pages": [
+        2
+      ],
+      "locator": "一(1.1)，式(4)(5)",
+      "text": "主面距离：u = f_2*D/(D-f_1-f_2)，v = f_1*D/(D-f_1-f_2)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_afocal",
+      "document_id": "solutions",
+      "pages": [
+        2
+      ],
+      "locator": "一(1.2)，式(7)(8)(9)",
+      "text": "使入射平行光 (r,0) 出射为 (k*r,0) 的配置满足 f_1 = -D/(k-1)，f_2 = k*D/(k-1)。该配置的光线矩阵为 M = [[k,D],[0,1/k]]。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_angular",
+      "document_id": "solutions",
+      "pages": [
+        2
+      ],
+      "locator": "一(1.2)，式(11)(12)",
+      "text": "小偏角入射时，出射位置相对原出射位置的偏差为 Delta_r = D*theta，出射光相对光轴的夹角为 Delta_theta = theta/k。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_sphere_data",
+      "document_id": "exam",
+      "pages": [
+        1
+      ],
+      "locator": "一(2.1)(2.2)球面例题",
+      "text": "球状光学面的半径为 R，右侧折射率为 n，左侧折射率为 1。例题数据为 u = 3 m，R = 4 m，n = 1.5，theta = pi/6；出射角 delta 以逆时针为正，数值用弧度表示并保留三位小数。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_sphere_formula",
+      "document_id": "solutions",
+      "pages": [
+        3
+      ],
+      "locator": "一(2.1)，式(16)",
+      "text": "球面折射的出射角：delta = arcsin((u+R)*sin(theta)/(n*R)) - arcsin((u+R)*sin(theta)/R) + theta。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q1_sphere_result",
+      "document_id": "solutions",
+      "pages": [
+        3
+      ],
+      "locator": "一(2.2)，式(17)及相邻出射角定义",
+      "text": "球面例题代入给定数据后，出射角为 delta = 0.081 rad。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_setup",
+      "document_id": "exam",
+      "pages": [
+        2
+      ],
+      "locator": "二题干及(1)",
+      "text": "匀质不可伸长细绳的一端固定在 A，另一端跨过固定圆柱悬吊物块。A 与圆柱圆心等高。绳的质量线密度为 lambda，圆柱半径为 R，系统静止且悬链部分未绷直。给定 mu = 0.150，L/R = 16.0，d/R = 5.60，theta_0 = 10.0 deg。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_mass",
+      "document_id": "solutions",
+      "pages": [
+        6
+      ],
+      "locator": "二(1)，式(21)",
+      "text": "参考答案给出的悬挂物块最大质量为 m_max = 6.66*lambda*R。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_track",
+      "document_id": "exam",
+      "pages": [
+        2
+      ],
+      "locator": "二(2)轨道条件",
+      "text": "将悬挂物块质量取最大值时的细绳固化为光滑轨道。质点从圆柱顶端水平向左出发，要求恰好到达 A 且速度为零。所有可能的碰撞均为完全非弹性碰撞，不考虑直接平抛到轨道左侧末端的情况。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_speed",
+      "document_id": "solutions",
+      "pages": [
+        7
+      ],
+      "locator": "二(2)，式(35)",
+      "text": "参考答案给出的所需初速度大小为 v_0 = 0.614*sqrt(g*R)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_t1",
+      "document_id": "solutions",
+      "pages": [
+        7
+      ],
+      "locator": "二(2)，式(36)",
+      "text": "圆周运动阶段用时 t_1 = 0.93008453*sqrt(R/g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_t2",
+      "document_id": "solutions",
+      "pages": [
+        6,
+        7
+      ],
+      "locator": "二(2)，式(29)(34)及时间单位定义",
+      "text": "随后斜抛阶段的无量纲时长 t_2 = 2.3024461，对应实际时长 Delta_t_2 = 2.3024461*sqrt(R/g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_t3",
+      "document_id": "solutions",
+      "pages": [
+        7
+      ],
+      "locator": "二(2)，式(43)",
+      "text": "碰撞后沿悬链线滑行的时长 t_3 = 3.7506261*sqrt(R/g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q2_total",
+      "document_id": "solutions",
+      "pages": [
+        7
+      ],
+      "locator": "二(2)，式(44)",
+      "text": "首次到达 A 的总时间为 t_f = t_1 + Delta_t_2 + t_3 = 6.98*sqrt(R/g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_setup",
+      "document_id": "exam",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "三题干及(2)给定数据",
+      "text": "圆筒内封闭氩气，可视为理想气体。活塞及筒壁绝热，活塞无摩擦且不漏气，圆筒放置在真空中。m = 0.64 kg，A = 80 cm^2，T_i = 293 K，y_i = 1 m，g = 9.81 m/s^2，R = 8.315 J/(mol*K)。计算终态时取扰动初速度 u_i = 5.0 m/s。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_model",
+      "document_id": "exam",
+      "pages": [
+        3
+      ],
+      "locator": "三两部分气体模型",
+      "text": "气体分为主体部分和活塞表面层。主体部分是准静态的，温度和压强均匀；表面层体积很小，温度与主体相同。表面层对活塞造成曳引，最终使其停止。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_mass",
+      "document_id": "solutions",
+      "pages": [
+        8
+      ],
+      "locator": "三(1)，式(3)(4)",
+      "text": "氩气总质量 m_Ar = mu*m*g*y_i/(R*T_i) = 1.03e-4 kg，其中 mu 为氩气摩尔质量。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_height_formula",
+      "document_id": "solutions",
+      "pages": [
+        9
+      ],
+      "locator": "三(2)，式(7)",
+      "text": "最终平衡高度满足 y_f = y_i + u_i^2/(5*g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_temperature",
+      "document_id": "solutions",
+      "pages": [
+        9
+      ],
+      "locator": "三(2)，式(10)(11)",
+      "text": "终态温度 T_f = T_i*(1+u_i^2/(5*g*y_i))，给定数据下 T_f = 442 K。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_entropy",
+      "document_id": "solutions",
+      "pages": [
+        9
+      ],
+      "locator": "三(3)，式(13)(14)",
+      "text": "整个过程的气体熵增 Delta_S = (5*m*g*y_i/(2*T_i))*ln(1+u_i^2/(5*g*y_i))，给定数据下 Delta_S = 2.21e-2 J/K。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_pressure",
+      "document_id": "solutions",
+      "pages": [
+        9
+      ],
+      "locator": "三(4)，式(21)",
+      "text": "近似到活塞速度 u 的一阶，表面层压强为 p_star = p*(1-2*u*sqrt(2*mu/(pi*R*T)))，其中 p、T 为主体压强、温度，mu 为摩尔质量。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q3_layer",
+      "document_id": "solutions",
+      "pages": [
+        10
+      ],
+      "locator": "三(6)，式(36)前文字及公式",
+      "text": "表面层厚度大概是一个平均自由程，故其体积 delta_V = lambda_bar*A，其中 lambda_bar 为平均自由程，A 为活塞面积。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_normal",
+      "document_id": "exam",
+      "pages": [
+        3
+      ],
+      "locator": "四引言，单边结构法向力",
+      "text": "单边直线感应弹射电动机除了产生电磁推力外，还产生与推力方向垂直的法向力；该法向力会影响轮轨摩擦力或磁悬浮气隙。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_double",
+      "document_id": "exam",
+      "pages": [
+        3
+      ],
+      "locator": "四引言，双边结构法向合力",
+      "text": "为使次级受到的法向合力为零，可在次级两边各安装一套初级部件，形成双边直线感应弹射电动机。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_scaling",
+      "document_id": "exam",
+      "pages": [
+        3
+      ],
+      "locator": "四引言，同线负荷下功率与推力比较",
+      "text": "在每侧电流线负荷与单边结构相同时，双边结构的输出功率和推力均为单边结构的两倍。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_geometry",
+      "document_id": "exam",
+      "pages": [
+        4
+      ],
+      "locator": "四一维模型参数",
+      "text": "次级导电板电导率为 sigma，厚度为 2*d，速度为 v，长度为 2*p*tau；双边初级间距为 2*g_e，其中 p 是次级对应的极对数，tau 是极距。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_components",
+      "document_id": "exam",
+      "pages": [
+        4
+      ],
+      "locator": "四假设I",
+      "text": "H 和 B 仅有 y 分量，J_1、J_2 和 E 仅有 z 分量。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_iron",
+      "document_id": "exam",
+      "pages": [
+        4
+      ],
+      "locator": "四假设II、III、V",
+      "text": "场量仅依赖空间坐标 x，并随时间 t 正弦交变。初级铁芯与绕组沿纵向视为无限长。不计铁芯饱和和铁耗，取 mu_Fe = infinity，sigma_Fe = 0。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q4_ohm",
+      "document_id": "solutions",
+      "pages": [
+        12
+      ],
+      "locator": "四(1.1)，式(2)",
+      "text": "次级导电板中的电流密度为 J_2_vec = sigma*(E_vec + v_vec cross B_vec)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_model",
+      "document_id": "exam",
+      "pages": [
+        5
+      ],
+      "locator": "五题干模型",
+      "text": "本题分析飞盘运动时不考虑重力。飞盘视为半径 r、厚度 h << r、质量 m 的圆柱体，其质量分布旋转对称。I_1 为垂直盘面的转动惯量，I_2 为沿盘面半径的转动惯量。初始速度沿 x 轴，主自旋沿 y 轴，小扰动满足 omega_0 << Omega_0。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_drag",
+      "document_id": "exam",
+      "pages": [
+        5
+      ],
+      "locator": "五迎风面阻力假设",
+      "text": "对迎风面，即表面法向速度 v_n_vec 朝向面外的部分，单位面积阻力为 f_vec = -eta*v_n_vec。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_torque",
+      "document_id": "solutions",
+      "pages": [
+        15
+      ],
+      "locator": "五(1)，式(5)",
+      "text": "相对质心的外力矩为 M_vec = -(pi/4)*eta*r^4*omega_vec，其中 omega_vec 为平行盘面的角速度分量。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_angular_decay",
+      "document_id": "solutions",
+      "pages": [
+        16
+      ],
+      "locator": "五(2)，式(8)后文字",
+      "text": "在刚体本动系中，平行盘面的角速度分量的模长满足 omega(t) = omega_0*exp(-pi*eta*r^4*t/(4*I_2))。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_velocity",
+      "document_id": "solutions",
+      "pages": [
+        16
+      ],
+      "locator": "五(3)，式(16)",
+      "text": "零阶平移速度为 v_vec(t) = v_0*exp(-pi*eta*r*h*t/(2*m))*x_hat。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q5_stability",
+      "document_id": "solutions",
+      "pages": [
+        16
+      ],
+      "locator": "五(2)，式(14)后结论",
+      "text": "主自旋向量仅在 Omega_0*y_hat 周围小幅变动并逐渐趋于稳定值，因此盘面朝向趋于稳定。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q6_bare",
+      "document_id": "solutions",
+      "pages": [
+        18
+      ],
+      "locator": "六(1)，式(2)(3)",
+      "text": "无限长裸弦的色散关系为 omega = +/-sqrt(T/mu)*k，波速为 v = sqrt(T/mu)。T 为张力，mu 为裸弦质量线密度。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q6_definitions",
+      "document_id": "exam",
+      "pages": [
+        6
+      ],
+      "locator": "六(2.1)无量纲量定义",
+      "text": "弦球链相邻原子间距为 a，原子质量为 m，裸弦线密度为 mu，张力为 T。定义 phi = omega*a*sqrt(mu/T)，q = m*omega/(2*sqrt(T*mu))，假设传递矩阵可对角化。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q6_polynomial",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(2.2)，式(9)",
+      "text": "传递矩阵特征值满足 lambda^2-2*(cos(phi)-q*sin(phi))*lambda+1 = 0。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q6_dispersion",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(2.2)，式(11)",
+      "text": "弦球链色散关系为 cos(kappa*a) = cos(phi)-q*sin(phi)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q6_modes",
+      "document_id": "exam",
+      "pages": [
+        6
+      ],
+      "locator": "六(3.3)模式定义",
+      "text": "在题设模式分类中，特征值模长 abs(lambda) != 1 时对应局域模，abs(lambda) = 1 时对应传播模。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_t",
+      "document_id": "solutions",
+      "pages": [
+        22
+      ],
+      "locator": "七(1A)，式(7)",
+      "text": "恒定正 x 方向固有加速度 g 的观者，用固有时 tau 表示的时间坐标为 t(tau) = (c/g)*sinh(g*tau/c)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_x",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1A)，式(9)",
+      "text": "同一观者的空间坐标为 x(tau) = (c^2/g)*cosh(g*tau/c)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_null",
+      "document_id": "exam",
+      "pages": [
+        6,
+        7
+      ],
+      "locator": "七(1A)(1B)惯性系与类光坐标",
+      "text": "在惯性系中，ds^2 = (c*dt)^2-dx^2。定义类光坐标 u = c*t-x，v = c*t+x。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_metric",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1B)，式(10)",
+      "text": "类光坐标下的度规为 ds^2 = du*dv。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_rindler",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1C)，式(17)",
+      "text": "加速观者坐标下的度规为 ds^2 = exp(2*g*xi/c^2)*((c*dtau)^2-dxi^2)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    },
+    {
+      "id": "q7_ratio",
+      "document_id": "solutions",
+      "pages": [
+        24
+      ],
+      "locator": "七(2B)，式(25)",
+      "text": "采用题目中空间频率 Omega 的约定，Bogoliubov 系数模方之比为 abs(alpha)^2/abs(beta)^2 = exp(2*pi*Omega*c^2/g)。",
+      "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
+      "review_status": "text_and_page_visual_checked"
+    }
+  ]
+}

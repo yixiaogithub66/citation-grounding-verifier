@@ -1,0 +1,179 @@
+{
+  "scope": "7 道大题的代表性文本/公式片段；不含完整图像题及完整推导。",
+  "problems": [
+    {
+      "problem_id": "Q1",
+      "topic": "光学",
+      "split": "dev",
+      "exam_pages": [
+        1,
+        2
+      ],
+      "solution_pages": [
+        1,
+        2,
+        3
+      ],
+      "question_summary": "求双透镜等效参数、平行光配置和小偏角响应，并计算球面折射的数值。",
+      "passage_ids": [
+        "q1_setup",
+        "q1_focal",
+        "q1_principal",
+        "q1_afocal",
+        "q1_angular",
+        "q1_sphere_data",
+        "q1_sphere_formula",
+        "q1_sphere_result"
+      ]
+    },
+    {
+      "problem_id": "Q2",
+      "topic": "悬链线与轨道动力学",
+      "split": "test",
+      "exam_pages": [
+        2
+      ],
+      "solution_pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "question_summary": "求给定静态位形下的最大悬挂质量，以及固化光滑轨道上恰好到达 A 的初速度和时间。",
+      "passage_ids": [
+        "q2_setup",
+        "q2_mass",
+        "q2_track",
+        "q2_speed",
+        "q2_t1",
+        "q2_t2",
+        "q2_t3",
+        "q2_total"
+      ]
+    },
+    {
+      "problem_id": "Q3",
+      "topic": "绝热活塞",
+      "split": "dev",
+      "exam_pages": [
+        2,
+        3
+      ],
+      "solution_pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "question_summary": "分析真空中绝热氩气活塞的气体质量、扰动后终态、熵增与表面层模型。",
+      "passage_ids": [
+        "q3_setup",
+        "q3_model",
+        "q3_mass",
+        "q3_height_formula",
+        "q3_temperature",
+        "q3_entropy",
+        "q3_pressure",
+        "q3_layer"
+      ]
+    },
+    {
+      "problem_id": "Q4",
+      "topic": "直线感应电机",
+      "split": "dev",
+      "exam_pages": [
+        3,
+        4
+      ],
+      "solution_pages": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "question_summary": "在一维长初级模型下分析磁场、电场及电磁推力。",
+      "passage_ids": [
+        "q4_normal",
+        "q4_double",
+        "q4_scaling",
+        "q4_geometry",
+        "q4_components",
+        "q4_iron",
+        "q4_ohm"
+      ]
+    },
+    {
+      "problem_id": "Q5",
+      "topic": "飞盘刚体运动",
+      "split": "test",
+      "exam_pages": [
+        4,
+        5
+      ],
+      "solution_pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "question_summary": "在薄盘和线性迎风面阻力模型下，求力矩、角速度与速度的一阶行为并讨论稳定性。",
+      "passage_ids": [
+        "q5_model",
+        "q5_drag",
+        "q5_torque",
+        "q5_angular_decay",
+        "q5_velocity",
+        "q5_stability"
+      ]
+    },
+    {
+      "problem_id": "Q6",
+      "topic": "有限长弦球链",
+      "split": "test",
+      "exam_pages": [
+        5,
+        6
+      ],
+      "solution_pages": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "question_summary": "由裸弦波动建立弦球链传递矩阵、色散关系并区分传播模与局域模。",
+      "passage_ids": [
+        "q6_bare",
+        "q6_definitions",
+        "q6_polynomial",
+        "q6_dispersion",
+        "q6_modes"
+      ]
+    },
+    {
+      "problem_id": "Q7",
+      "topic": "盎鲁效应与加速坐标",
+      "split": "test",
+      "exam_pages": [
+        6,
+        7
+      ],
+      "solution_pages": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "question_summary": "分析恒固有加速度世界线、类光坐标、加速度规及 Bogoliubov 系数。",
+      "passage_ids": [
+        "q7_t",
+        "q7_x",
+        "q7_null",
+        "q7_metric",
+        "q7_rindler",
+        "q7_ratio"
+      ]
+    }
+  ]
+}
