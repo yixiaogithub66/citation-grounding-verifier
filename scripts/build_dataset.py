@@ -78,7 +78,7 @@ passage("q4_normal", "exam", [3], "四引言，单边结构法向力", "单边�
 passage("q4_double", "exam", [3], "四引言，双边结构法向合力", "为使次级受到的法向合力为零，可在次级两边各安装一套初级部件，形成双边直线感应弹射电动机。")
 passage("q4_scaling", "exam", [3], "四引言，同线负荷下功率与推力比较", "在每侧电流线负荷与单边结构相同时，双边结构的输出功率和推力均为单边结构的两倍。")
 passage("q4_geometry", "exam", [4], "四一维模型参数", "次级导电板电导率为 sigma，厚度为 2*d，速度为 v，长度为 2*p*tau；双边初级间距为 2*g_e，其中 p 是次级对应的极对数，tau 是极距。")
-passage("q4_components", "exam", [4], "四假设I", "H 和 B 仅有 y 分量，J_1、J_2 和 E 仅有 z 分量。")
+passage("q4_components", "exam", [4], "四一维模型引导语及假设I", "一维简化模型中，H 和 B 仅有 y 分量，J_1、J_2 和 E 仅有 z 分量。")
 passage("q4_iron", "exam", [4], "四假设II、III、V", "场量仅依赖空间坐标 x，并随时间 t 正弦交变。初级铁芯与绕组沿纵向视为无限长。不计铁芯饱和和铁耗，取 mu_Fe = infinity，sigma_Fe = 0。")
 passage("q4_ohm", "solutions", [12], "四(1.1)，式(2)", "次级导电板中的电流密度为 J_2_vec = sigma*(E_vec + v_vec cross B_vec)。")
 
@@ -234,7 +234,7 @@ def main():
     args = parser.parse_args()
     documents = [document(*spec, args.pdf_root) for spec in DOCUMENT_SPECS]
     OUT.mkdir(parents=True, exist_ok=True)
-    write_json(OUT / "sources.json", {"version": "1.1", "documents": documents, "passages": list(PASSAGES.values())})
+    write_json(OUT / "sources.json", {"version": "1.2", "documents": documents, "passages": list(PASSAGES.values())})
     write_json(OUT / "problem_catalog.json", {
         "scope": "7 道大题的代表性文本/公式片段；不含完整图像题及完整推导。",
         "problems": [{

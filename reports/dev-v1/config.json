@@ -1,0 +1,84 @@
+{
+  "config": {
+    "created_at": "2026-10-20T10:00:48.271883+00:00",
+    "split": "dev",
+    "backends": [
+      "baseline",
+      "minimal",
+      "optimized"
+    ],
+    "limit": null,
+    "selected_case_ids": [
+      "cphos28-q1-01",
+      "cphos28-q1-02",
+      "cphos28-q1-03",
+      "cphos28-q1-04",
+      "cphos28-q1-05",
+      "cphos28-q1-06",
+      "cphos28-q3-01",
+      "cphos28-q3-02",
+      "cphos28-q3-03",
+      "cphos28-q3-04",
+      "cphos28-q3-05",
+      "cphos28-q3-06",
+      "cphos28-q4-01",
+      "cphos28-q4-02",
+      "cphos28-q4-03",
+      "cphos28-q4-04",
+      "cphos28-q4-05",
+      "cphos28-q4-06"
+    ],
+    "settings": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "timeout": 180.0,
+      "max_output_tokens": 16384,
+      "json_mode": true,
+      "thinking": "enabled",
+      "temperature": null,
+      "repair_attempts": 1,
+      "upstream_retries": 1,
+      "max_claims": 64,
+      "api_key_configured": true
+    },
+    "prices": {
+      "input_per_million": 0.3,
+      "cached_input_per_million": 0.006,
+      "output_per_million": 1.2,
+      "currency": "USD"
+    }
+  },
+  "provenance": {
+    "dataset_path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\cases.jsonl",
+    "dataset_sha256": "bc5d9b056c2f00f65bf41eac9ec167f1229d9dc9afa41ff7d723d45c648aee69",
+    "sources_path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28\\sources.json",
+    "sources_sha256": "66f1a5b14eae499ba31839a3a56abe9af260522c13a6edcfd825ce4c2ca21981",
+    "source_documents": [
+      {
+        "id": "exam",
+        "sha256": "849dd23db1d251c85f1c6f37b55c94d3482e1cbc53f2cb0f7ed11120965ed5b3"
+      },
+      {
+        "id": "solutions",
+        "sha256": "dd8c5bbc2f46180d39b7736731cc630048b5cb6ec07937a41da45d1c67c78c80"
+      }
+    ],
+    "local_source_hashes_rechecked": false,
+    "code_and_prompt_files_sha256": {
+      "grounding/__init__.py": "734d223c4bd015a4d1d11de949414369649cb3613510c9df3a082593fe7cbdfc",
+      "grounding/baseline.py": "8e6423a0551cfd9eca6c7e4e406a02039c6d3979c4b0362206ce3bc3bef5fd78",
+      "grounding/client.py": "32a1ca2d005c5e91812ff6fab8362cc040d21bd71d6e09ba4f48a20ce869b7d0",
+      "grounding/config.py": "8f87a8c49d893ff2ecb12db0759aad6ac3ecba67e9ca6ed378599370cd5bc238",
+      "grounding/contracts.py": "8ceb5d93e5482c67a79343914489ab79992fa9a51ae85d4819f3f9cedd881435",
+      "grounding/factory.py": "8fddc060c4e80baad0865492ec67f14b46eab05102e9eb46f0fc0ebf6bf88099",
+      "grounding/prompts.py": "d42b22d4f320ae799c164b91ea7d9df11869409f14e472345b68258992972e84",
+      "grounding/scoring.py": "f32a4e821d444f27c2a2815cdab2ca7c0394e2a21ffdd46c3a8dca9b2d22a2be",
+      "grounding/server.py": "a130f4537a7274f629b66a1ec46b74bd4d29798f9416a7e27c31d5132852f55a",
+      "grounding/verifiers.py": "2ce4a59a256d4380195275bacfbf03102a2ae52aab4f835533e0c640349a5f2b",
+      "scripts/benchmark.py": "956b4a80685391cd221d933bfe2c0fc3aa4df8d9d63303c3755eb6a6bdfeb49a",
+      "scripts/validate_dataset.py": "b202e627be4b7af80f2f78addf1495ee73bcddd978e42a7c3214f74665fceb9d"
+    },
+    "implementation_sha256": "0770792fe8b9046ac3a3ad136da3e2cc48430bb3a70d41773446630d82b44096",
+    "python_version": "3.12.5"
+  }
+}

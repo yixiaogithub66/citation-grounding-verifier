@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "documents": [
     {
       "id": "exam",
@@ -335,8 +335,8 @@
       "pages": [
         4
       ],
-      "locator": "四假设I",
-      "text": "H 和 B 仅有 y 分量，J_1、J_2 和 E 仅有 z 分量。",
+      "locator": "四一维模型引导语及假设I",
+      "text": "一维简化模型中，H 和 B 仅有 y 分量，J_1、J_2 和 E 仅有 z 分量。",
       "normalization": "由 AI 辅助选录并对照 PDF 页面核对；删除页眉、评分说明和重复题干；数学斜体、分式、上下标改写为 ASCII 变量及线性公式。此处为规范化转录，不声称与 PDF 二进制文本逐字相同；引用必须逐字匹配本 text。",
       "review_status": "text_and_page_visual_checked"
     },

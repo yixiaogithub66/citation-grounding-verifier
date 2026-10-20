@@ -24,6 +24,23 @@ Independent code review found that approximate claim matching could conflate a f
 
 The lexical baseline's comparison rules were tightened to avoid declaring a redundant unary plus or a signed zero term a contradiction.
 
-## Controlled development and held-out evaluation
+## First controlled development run
 
-Results and any further changes will be recorded here after the corresponding runs finish. No held-out predictions have been used to tune the initial implementations.
+`reports/dev-v1` completed all 54 case/backend records on 18 development cases. Strict claim+label F1 was 0.3333 for baseline, 0.8571 for minimal, and 0.3922 for optimized. The optimized approximate alignment diagnostic was 0.8627. The large strict/approximate gap came mainly from dropped sentence punctuation, not different verdicts.
+
+Two actual decomposition problems were observed:
+
+- `q1-05`: the optimized extractor turned the introductory phrase about substituting data into a standalone action claim, then marked it unsupported. The original sentence expressed one calculation result.
+- `q4-01`: it promoted a model descriptor into a separate assertion and split coordinated subjects, with all results marked unsupported because the selected context omitted the one-dimensional model heading.
+
+Minimal also shortened some statements and expanded the relational `q4-05` into two supported propositions. These are alignment/atomicity differences; they should not all be reported as semantic errors.
+
+The original data snapshot is retained as `reports/dev-v1/dataset.snapshot.jsonl` and `sources.snapshot.json`; the initial implementation is Git commit `1548b17`.
+
+## Version 2 changes, before held-out evaluation
+
+Generic decomposition instructions now preserve terminal punctuation for a complete single-predicate sentence, keep computational framing attached to its result, avoid promoting descriptive noun phrases into new assertions, and allow coordinated subjects sharing one predicate to remain grouped. Grouped subjects require evidence for every subject. Distinct predicates still split. Explanations use the claim's language.
+
+Dataset v1.2 also restores the original one-dimensional model heading in `q4_components`. This source selection correction affects development `q4-01`, `q4-03`, and `q4-06` only. No gold labels or held-out inputs change. It is explicitly a data repair, not an algorithm gain. Cross-version comparisons must restrict themselves to identical-input cases or identify this confound.
+
+`reports/dev-v2` reruns all three backends against the same final dataset/settings. The minimal prompt text and lexical baseline are unchanged; the prompt-version metadata increments globally. Held-out evaluation will use the resulting frozen implementation, with no tuning from test predictions.

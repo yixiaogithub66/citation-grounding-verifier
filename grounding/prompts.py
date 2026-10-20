@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 
 
-PROMPT_VERSION = "grounding-v1"
+PROMPT_VERSION = "grounding-v2"
 
 MINIMAL_PROMPT = """Check the factual claims in generated_answer using only context_passages.
 Return a JSON object {"claims":[{"claim_text":"one atomic claim",
@@ -26,11 +26,21 @@ Return exactly this JSON structure:
 "non_factual_spans":[{"text":"verbatim answer substring","reason":"why not factual"}]}.
 
 Keep claims in answer order. Copy the original assertion wording whenever possible.
+When an original sentence expresses one predicate, copy the complete sentence,
+including its terminal punctuation, as both claim_text and source_span.
 Resolve pronouns or shared subjects only when needed to make a claim standalone.
 Preserve all conditions, entities, negations, units, numbers, formulas, ranges, and
 uncertainty qualifiers. Never weaken a claim to make it easier to support.
 Split independently checkable conjunctions and factual explanatory premises.
+Coordinated subjects sharing one predicate and the same conditions may remain
+one claim; verifying it requires evidence for every listed subject. Split when
+the conjunction combines different predicates, conditions, or assertions.
 Do not split the premises of one conditional statement into unconditional facts.
+An introductory operation such as "substituting the given data", "using this
+formula", or "combining the two relations" modifies the calculation result.
+Keep it attached to that result, not as a separate claim that an action occurred.
+Likewise do not promote descriptive labels inside a referring noun phrase into
+new standalone assertions. Keep relevant qualifiers attached to the predicate.
 A calculation result or a statement about what a source says is a factual claim.
 Include unsupported-looking and false-looking assertions without correcting them.
 
@@ -74,7 +84,8 @@ be copied literally, preserving whitespace, Unicode, signs, and formulas. A quot
 can be short or the whole passage. index is the zero-based index from the input.
 For UNSUPPORTED, citations must be [].
 Reasoning should state why the quoted evidence entails or refutes the claim, or
-which information is missing. Output final JSON only, with no Markdown fences.
+which information is missing. Use the language of the claims for the explanation.
+Output final JSON only, with no Markdown fences.
 """
 
 REPAIR_PROMPT = """The previous response failed deterministic validation. Return a
