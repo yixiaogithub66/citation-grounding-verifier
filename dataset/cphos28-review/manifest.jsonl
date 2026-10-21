@@ -1,0 +1,3 @@
+{"row_index": 0, "line_number": 1, "id": "cphos28-review-density-01", "split": "review", "category": "density", "topic": "CPHOS28 v3 人工审阅样例", "problem_id": "Q2"}
+{"row_index": 1, "line_number": 2, "id": "cphos28-review-distractor-01", "split": "review", "category": "scope_distractor", "topic": "CPHOS28 v3 人工审阅样例", "problem_id": "Q6"}
+{"row_index": 2, "line_number": 3, "id": "cphos28-review-mixed-01", "split": "review", "category": "mixed_truth_compound", "topic": "CPHOS28 v3 人工审阅样例", "problem_id": "Q7"}

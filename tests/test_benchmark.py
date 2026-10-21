@@ -13,6 +13,8 @@ from unittest.mock import patch
 
 from grounding.contracts import VerificationError, VerificationResult
 from grounding.scoring import aggregate_backend, align_claims, cost_summary, score_case, usage_summary
+from grounding.config import Settings
+from grounding.factory import CANONICAL_BACKENDS, DEFAULT_BACKENDS
 from scripts import benchmark
 
 
@@ -306,6 +308,219 @@ class HarnessTests(unittest.TestCase):
             with contextlib.redirect_stderr(io.StringIO()) as stderr:
                 self.assertEqual(benchmark.main([]), 2)
                 self.assertNotIn("hidden-secret", stderr.getvalue())
+
+
+class VersionComparisonTests(unittest.TestCase):
+    def test_any_pair_compares_only_the_same_inputs(self) -> None:
+        case = case_with_claims(claim("The measured length is 12 m."))
+        left = record(case, {"claims": []})
+        right = record(case, {"claims": [claim("The measured length is 12 m.")]})
+        left.update(backend="optimized-v2", input_sha256="same")
+        right.update(backend="optimized-v3", input_sha256="same")
+        result = benchmark.pair_backends([left, right], "optimized-v2", "optimized-v3", {})
+        self.assertEqual(result["paired_case_count"], 1)
+        self.assertEqual(result["strict_improved_case_ids"], [case["id"]])
+        self.assertEqual(result["strict"]["claim_f1_difference"], 1)
+        right["input_sha256"] = "different"
+        result = benchmark.pair_backends([left, right], "optimized-v2", "optimized-v3", {})
+        self.assertEqual(result["paired_case_count"], 0)
+        self.assertEqual(result["input_mismatch_case_ids"], [case["id"]])
+
+    def test_four_backends_have_six_pairs_and_legacy_minimal_v3(self) -> None:
+        case = case_with_claims(claim("The measured length is 12 m."))
+        records = []
+        for backend in CANONICAL_BACKENDS:
+            item = record(case, {"claims": [claim("The measured length is 12 m.")]})
+            item.update(backend=backend, input_sha256="same")
+            records.append(item)
+        config = {
+            "created_at": "2026-10-20T00:00:00Z", "split": "review", "backends": list(CANONICAL_BACKENDS),
+            "selected_case_ids": [case["id"]], "prices": {}, "settings": {"model": "test-model"},
+        }
+        report = benchmark.make_report(records, config, {}, "test", "complete")
+        self.assertEqual(len(report["paired_comparisons"]), 6)
+        self.assertIn("optimized-v2__vs__optimized-v3", report["paired_comparisons"])
+        self.assertEqual(report["paired_comparison"]["candidate_backend"], "optimized-v3")
+
+    def test_merge_and_review_accounting_is_separate_from_outcomes(self) -> None:
+        stats = benchmark.intervention_summary([{"telemetry": {
+            "calls": [
+                {"stage": "merge"}, {"stage": "merge_repair_1"},
+                {"stage": "contradiction_review"}, {"stage": "contradiction_review_repair_1"},
+            ],
+            "merge_audits": [
+                {"merged": True, "before_claims": [{}, {}], "after_claims": [{}]},
+                {"decision": "keep_safety_guard", "input_count": 2, "output_count": 2},
+            ],
+            "contradiction_reviews": [
+                {"before_verdict": "CONTRADICTED", "after_verdict": "SUPPORTED"},
+                {"before_verdict": "CONTRADICTED", "after_verdict": "CONTRADICTED"},
+                {"before_verdict": "CONTRADICTED", "after_verdict": None, "error": "timeout"},
+            ],
+        }}])
+        self.assertEqual(stats["merge_calls"], 2)
+        self.assertEqual(stats["merged_groups"], 1)
+        self.assertEqual(stats["claims_removed_by_merge"], 1)
+        self.assertEqual(stats["contradiction_review_calls"], 2)
+        self.assertEqual(stats["contradiction_reviews"], 3)
+        self.assertEqual(stats["changed_verdicts"], 1)
+        self.assertEqual(stats["failed_or_incomplete_reviews"], 1)
+        self.assertEqual(stats["verdict_directions"]["CONTRADICTED->SUPPORTED"], 1)
+
+    def test_cli_defaults_and_alias_deduplication(self) -> None:
+        self.assertEqual(benchmark.build_parser().parse_args([]).backends, list(DEFAULT_BACKENDS))
+        with tempfile.TemporaryDirectory() as temporary, contextlib.redirect_stdout(io.StringIO()):
+            with patch.object(benchmark, "load_settings", return_value=Settings(api_key="test-key")):
+                with patch.object(benchmark, "build_verifier", return_value=object()) as build:
+                    with patch.object(benchmark, "run_cases", return_value={"status": "complete", "completed_records": 0, "backends": {}}) as run:
+                        result = benchmark.main([
+                            "--backends", "optimized", "optimized-v3", "minimal", "minimal",
+                            "--limit", "1", "--output-dir", str(Path(temporary) / "run"),
+                        ])
+        self.assertEqual(result, 0)
+        self.assertEqual([call.args[0] for call in build.call_args_list], ["optimized-v3", "minimal"])
+        self.assertEqual(list(run.call_args.args[1]), ["optimized-v3", "minimal"])
+
+
+class ConfirmationFreezeTests(unittest.TestCase):
+    def make_fixture(self, directory: Path) -> dict:
+        cases = [case_with_claims(claim("The measured length is 12 m."))]
+        cases[0].update(id="confirmation-1", split="confirmation")
+        pilot = [case_with_claims(claim("The measured length is 12 m.")) for _ in range(3)]
+        for index, case in enumerate(pilot):
+            case.update(id=f"pilot-{index}", split="review")
+            case["input"]["generated_answer"] = f"Pilot assertion {index}."
+        dataset, sources = directory / "cases.jsonl", directory / "sources.json"
+        pilot_dataset, pilot_sources = directory / "pilot.jsonl", directory / "pilot-sources.json"
+        for path, content in ((dataset, cases), (pilot_dataset, pilot)):
+            path.write_text("\n".join(json.dumps(item) for item in content) + "\n", encoding="utf-8")
+        sources.write_text("{}\n", encoding="utf-8")
+        pilot_sources.write_text("{}\n", encoding="utf-8")
+        policy = directory / "policy.md"
+        policy.write_text("Test-only annotation policy.\n", encoding="utf-8")
+        review = {
+            "schema_version": "1.0", "scope": "pilot-annotation-policy", "decision": "approved",
+            "reviewer": "Test-only simulated author", "reviewed_at": "2026-10-20T00:00:00Z",
+            "authorization_reference": "Unit-test fixture; not a real review or authorization",
+            "case_ids": [item["id"] for item in pilot],
+            "dataset_path": pilot_dataset.name, "dataset_sha256": benchmark._sha(pilot_dataset),
+            "sources_path": pilot_sources.name, "sources_sha256": benchmark._sha(pilot_sources),
+            "policy_sha256": benchmark._sha(policy),
+        }
+        review_path = directory / "author-review.json"
+        review_path.write_text(json.dumps(review), encoding="utf-8")
+        settings = Settings(api_key="test-key").public_dict()
+        source_info = {"code_and_prompt_files_sha256": {"test.py": "test-code-hash"}, "frozen_v2": {"verified": True}}
+        manifest = {
+            "schema_version": "1.0", "kind": "confirmation-freeze", "frozen_at": "2026-10-20T01:00:00Z",
+            "case_ids": [item["id"] for item in cases],
+            "dataset_sha256": benchmark._sha(dataset), "sources_sha256": benchmark._sha(sources),
+            "implementation_files_sha256": source_info["code_and_prompt_files_sha256"],
+            "settings": {key: value for key, value in settings.items() if key != "api_key_configured"},
+            "backends": list(CANONICAL_BACKENDS),
+            "annotation_policy": {"path": policy.name, "sha256": benchmark._sha(policy)},
+            "annotation_policy_review": {"path": review_path.name, "sha256": benchmark._sha(review_path)},
+        }
+        manifest_path = directory / "confirmation.freeze.json"
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+        return locals()
+
+    def verify(self, fixture: dict) -> dict:
+        with patch.object(benchmark, "check_dataset", return_value=(fixture["pilot"], {"valid": True})):
+            return benchmark.check_confirmation_manifest(
+                fixture["manifest_path"], fixture["dataset"], fixture["sources"], fixture["cases"],
+                fixture["settings"], list(CANONICAL_BACKENDS), fixture["source_info"],
+            )
+
+    def test_valid_freeze_records_only_pilot_policy_review_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = self.make_fixture(Path(temporary))
+            result = self.verify(fixture)
+            self.assertTrue(result["verified"])
+            self.assertEqual(result["review_scope"], "pilot-annotation-policy")
+            self.assertIn("does not authenticate", result["limitation"])
+
+    def test_missing_or_pending_attestation_blocks_confirmation(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = self.make_fixture(Path(temporary))
+            fixture["review"]["decision"] = "pending"
+            fixture["review_path"].write_text(json.dumps(fixture["review"]), encoding="utf-8")
+            fixture["manifest"]["annotation_policy_review"]["sha256"] = benchmark._sha(fixture["review_path"])
+            fixture["manifest_path"].write_text(json.dumps(fixture["manifest"]), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "approved author"):
+                self.verify(fixture)
+            fixture["review_path"].unlink()
+            with self.assertRaises(OSError):
+                self.verify(fixture)
+
+    def test_changed_data_code_settings_or_pilot_fail_freeze(self) -> None:
+        for change in ("dataset", "code", "settings", "pilot", "policy"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as temporary:
+                fixture = self.make_fixture(Path(temporary))
+                if change == "dataset":
+                    fixture["dataset"].write_text("changed", encoding="utf-8")
+                elif change == "code":
+                    fixture["source_info"]["code_and_prompt_files_sha256"] = {"test.py": "new-hash"}
+                elif change == "settings":
+                    fixture["settings"]["model"] = "new-model"
+                elif change == "pilot":
+                    fixture["pilot_dataset"].write_text("changed", encoding="utf-8")
+                else:
+                    fixture["policy"].write_text("changed", encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    self.verify(fixture)
+
+    def test_pilot_ids_cannot_overlap_confirmation(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = self.make_fixture(Path(temporary))
+            fixture["review"]["case_ids"][0] = fixture["cases"][0]["id"]
+            fixture["pilot"][0]["id"] = fixture["cases"][0]["id"]
+            fixture["review_path"].write_text(json.dumps(fixture["review"]), encoding="utf-8")
+            fixture["manifest"]["annotation_policy_review"]["sha256"] = benchmark._sha(fixture["review_path"])
+            fixture["manifest_path"].write_text(json.dumps(fixture["manifest"]), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "disjoint"):
+                self.verify(fixture)
+
+    def test_split_all_cannot_bypass_confirmation_gate(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary, contextlib.redirect_stderr(io.StringIO()) as stderr:
+            fixture = self.make_fixture(Path(temporary))
+            fixture["manifest_path"].unlink()
+            with patch.object(benchmark, "load_settings", return_value=Settings(api_key="test-key")):
+                with patch.object(benchmark, "check_dataset", return_value=(fixture["cases"], {"valid": True})):
+                    with patch.object(benchmark, "build_verifier") as build:
+                        result = benchmark.main([
+                            "--dataset", str(fixture["dataset"]), "--sources", str(fixture["sources"]),
+                            "--split", "all", "--backends", *CANONICAL_BACKENDS,
+                        ])
+            self.assertEqual(result, 2)
+            self.assertIn("Confirmation blocked", stderr.getvalue())
+            build.assert_not_called()
+
+    def test_renaming_a_pilot_does_not_make_it_unseen(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = self.make_fixture(Path(temporary))
+            fixture["pilot"][0]["input"] = copy.deepcopy(fixture["cases"][0]["input"])
+            with self.assertRaisesRegex(ValueError, "different IDs"):
+                self.verify(fixture)
+
+    def test_confirmation_repeats_require_explicit_label_across_output_folders(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            proof = {"exposure_fingerprint": "test-batch", "manifest_sha256": "test-manifest"}
+            first = benchmark.reserve_confirmation_run(proof, root / "first", ledger_dir=root / "ledger")
+            self.assertEqual(first["role"], "confirmation-first-run")
+            with self.assertRaisesRegex(ValueError, "already has a recorded run"):
+                benchmark.reserve_confirmation_run(proof, root / "second", ledger_dir=root / "ledger")
+            repeat = benchmark.reserve_confirmation_run(proof, root / "second", replicate=True, ledger_dir=root / "ledger")
+            self.assertEqual(repeat["role"], "confirmation-replicate")
+            self.assertEqual(repeat["initial_run"], str((root / "first").resolve()))
+
+    def test_replicate_requires_recorded_first_run(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            proof = {"exposure_fingerprint": "test-batch", "manifest_sha256": "test-manifest"}
+            with self.assertRaisesRegex(ValueError, "No prior confirmation"):
+                benchmark.reserve_confirmation_run(proof, root / "run", replicate=True, ledger_dir=root / "ledger")
 
 
 if __name__ == "__main__":

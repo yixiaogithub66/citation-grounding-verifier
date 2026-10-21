@@ -1,0 +1,43 @@
+{
+  "claims": [
+    {
+      "claim_text": "SQLite WAL mode allows multiple processes across different host machines on an NFS network share to write concurrently.",
+      "verdict": "CONTRADICTED",
+      "reasoning": "Passage 0 states that WAL does not work over a network filesystem, which directly conflicts with the claim that it allows concurrent writes across hosts on an NFS network share.",
+      "citations": [
+        {
+          "index": 0,
+          "quote": "However, WAL does not work over a network filesystem because it requires all processes to share a small amount of memory via shared memory files (-shm)."
+        }
+      ]
+    },
+    {
+      "claim_text": "Alongside the main database file, it uses two auxiliary files (-wal and -shm)",
+      "verdict": "SUPPORTED",
+      "reasoning": "Passage 1 lists the main database file plus the X-wal and X-shm files, which supports the claim that there are two auxiliary files alongside the main database file.",
+      "citations": [
+        {
+          "index": 1,
+          "quote": "When in active use, the state of a WAL mode database is described by three separate files: the main database file 'X', the write-ahead log file 'X-wal', and the wal-index shared-memory file 'X-shm'."
+        }
+      ]
+    },
+    {
+      "claim_text": "it automatically checkpoints when the log reaches roughly 1,000 pages.",
+      "verdict": "SUPPORTED",
+      "reasoning": "Passage 1 states that automatic checkpointing occurs by default when the WAL passes approximately 1000 pages.",
+      "citations": [
+        {
+          "index": 1,
+          "quote": "Automatic checkpointing occurs by default when the WAL passes approximately 1000 pages."
+        }
+      ]
+    },
+    {
+      "claim_text": "By default, WAL files are encrypted with AES-256 at rest.",
+      "verdict": "UNSUPPORTED",
+      "reasoning": "The passages do not mention encryption or AES-256 for WAL files.",
+      "citations": []
+    }
+  ]
+}

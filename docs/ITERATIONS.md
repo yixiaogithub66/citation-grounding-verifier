@@ -73,3 +73,28 @@ All actual LLM citations were verbatim substrings with valid indices. This struc
 ## Live HTTP check
 
 The original assignment's SQLite request in `examples/sqlite.json` was sent through the actual optimized HTTP service using the configured live DeepSeek backend. It returned HTTP 200 and four claims with verdicts `CONTRADICTED`, `SUPPORTED`, `SUPPORTED`, `UNSUPPORTED`, matching the assignment example. Every quote passed deterministic validation. The observed end-to-end latency was 34.172 seconds; this single service smoke check is separate from the benchmark latency aggregates and used the service's configured model defaults. Its response and request hash are retained in `reports/service-smoke`.
+
+## Version 3: mechanism-driven revision (2026-10-22)
+
+The author supplied an updated design after reviewing the negative v2 test result. V3 uses that old test for diagnosis; it cannot claim those cases remain unseen. The existing v2 files and historical reports stay unchanged. `optimized-v2` verifies the original inference-file hashes, while `optimized-v3` is a new implementation and `optimized` selects v3.
+
+The diagnosis separates matched-label counts from judgment accuracy: both historical LLM systems had 29 strictly aligned correct claims, but their extra predictions differed. That fact does not establish equal semantic judgment ability. The old negative result belongs to `grounding-v2`.
+
+| Observation / design concern | V3 change | Intended check |
+| --- | --- | --- |
+| Equivalent prose and formulas became duplicate claims | Preserve one proposition per sentence; merge only equivalent extracted assertions before verification | Synthetic equivalent and inconsistent restatements, compound mixed-truth claims, development regressions |
+| Merging can erase independent assertions | Candidate detection is separate from semantic approval; preserve source coverage and unrelated clauses | Partial-sentence merges, different conditions, shared subjects, unsupported invented spans |
+| A contradicted verdict needs auditable conflicting evidence | Internal claim anchor, evidence and explanation; batch re-review only when that record is unusable | Three-way review outcomes, multi-passage calculations, no error-to-unsupported fallback |
+| Extra reasoning stages have real cost | Record every merge/review/repair call and verdict-change direction | Usage totals, stage counts and same-set backend comparisons |
+
+These are design motivations, not measured gains. A deterministic quote/anchor check is a structural check; it does not prove that the explanation establishes a contradiction. Multiple v3 changes are bundled, so a paired v2/v3 difference is not a component-level ablation.
+
+The full protocol is in `docs/V3_DESIGN.md`. Three pilot examples are reserved for author review and excluded from final confirmation scores. After pilot annotation-policy review, the planned 12-case same-source, same-question-family confirmation set will compare baseline, minimal, frozen v2 and v3 with locked inputs, settings and code. No confirmation results or human-review completion are claimed before those steps occur.
+
+### Provider compatibility check
+
+The first real v3 development attempt (`reports/dev-v3`) exposed an HTTP 400 at verification, despite passing offline tests. A small direct request confirmed DeepSeek's JSON-object mode requires the literal word `json` in a message; v3's merge and verify prompts described an object but omitted that word. The run was stopped and its 46 completed records retained as an interrupted compatibility run, not a quality comparison. In-flight usage at interruption may be unreported.
+
+The fix adds only explicit JSON-output wording to those two prompts and a transport-level regression covering all four stages. It does not change semantic rules, historical labels or the scorer. All 134 tests then passed. The actual v3 HTTP service returned 200 for the assignment's SQLite example with the four expected verdicts, using two model calls (29.705 seconds); this check is separate from benchmark timing. See `reports/service-smoke-v3`.
+
+The original implementation snapshot is retained in `reports/v3-code-freeze.json`; the corrected snapshot is `reports/v3-code-freeze-final.json`. The integrator read the excluded pilot examples after the first snapshot; the subsequent change was the independently confirmed JSON-mode compatibility correction. The formal confirmation dataset has not been constructed or evaluated.

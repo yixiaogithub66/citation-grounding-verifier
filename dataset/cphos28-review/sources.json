@@ -1,0 +1,108 @@
+{
+  "version": "pilot-1",
+  "review_status": "ai_review_complete_awaiting_author",
+  "documents": [
+    {
+      "id": "solutions",
+      "title": "第28届CPHOS物理竞赛联考理论试题解答",
+      "path": "D:\\下载\\CPHOS28\\CPHOS28\\第28届CPHOS物理竞赛联考理论试题解答.pdf",
+      "sha256": "dd8c5bbc2f46180d39b7736731cc630048b5cb6ec07937a41da45d1c67c78c80",
+      "page_count": 24,
+      "copyright": "2025 CPHOS；原 PDF 版权归原作者，数据包未附原 PDF。"
+    }
+  ],
+  "passages": [
+    {
+      "id": "review_q2_constants",
+      "document_id": "solutions",
+      "pages": [
+        5
+      ],
+      "locator": "二(1)，式(10)",
+      "text": "参考解答在给定数值代入后得到 C_0 = 5.5766696，lambda*g*R/T_0 = 1.0486773。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "式(10)花括号内两行依次是 C_0=5.5766696 和 lambda*g*R/T_0=1.0486773；仅把希腊字母与分式线性化，不改变精度。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q2_length",
+      "document_id": "solutions",
+      "pages": [
+        5
+      ],
+      "locator": "二(1)，式(12)标题、式(13)",
+      "text": "参考解答给出的悬链线部分绳长为 l_1 = 10.639650*R。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "从式(12)前的悬链线部分绳长标题确定量名；式(13)为 l_1=10.639650R，补显式乘号。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q2_tension",
+      "document_id": "solutions",
+      "pages": [
+        5
+      ],
+      "locator": "二(1)，式(17)",
+      "text": "圆柱上部分张力关系中，T_1 = T_0/sin(theta_0)。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "式(17)的分子为 T_0、分母为 sin(theta_0)；圆柱上部分的范围来自式(14)前标题。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q6_regular_transfer",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(2.1)，式(7)",
+      "text": "相邻等间距区间的振幅传递矩阵为 M = [[exp(i*phi)*(1+i*q), exp(-i*phi)*i*q], [-exp(i*phi)*i*q, exp(-i*phi)*(1-i*q)]]。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "逐个核对式(7)的四项：左上 exp(+i*phi)*(1+i*q)，右上 exp(-i*phi)*i*q，左下 -exp(+i*phi)*i*q，右下 exp(-i*phi)*(1-i*q)。未用存在疑点的式(10)。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q6_boundary_geometry",
+      "document_id": "solutions",
+      "pages": [
+        18
+      ],
+      "locator": "六(3)有限长链题干及图6.3上方文字",
+      "text": "有限长链有 N 个原子，最左端与最右端原子距离固定边界分别为 tau*a、(1-tau)*a，其中 tau 属于 [0,1]。固定边界处弦位移为零。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "保留原文两端距离与 tau 的闭区间；Greek tau 写为 tau，未从图形估计长度。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q6_initial_transfer",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(3.1)，式(16)",
+      "text": "有限长链最左端的初始振幅关系为 [A_1, B_1]^T = [[exp(i*tau*phi)*(1+i*q), exp(-i*tau*phi)*i*q], [-exp(i*tau*phi)*i*q, exp(-i*tau*phi)*(1-i*q)]]*[1, -1]^T*A_0。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "式(16)中的相位均含 tau*phi；右侧列向量为 [1,-1]^T，再乘 A_0。^T 是列向量排版的显式转置记号；没有将 tau 改成1或约去。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    },
+    {
+      "id": "review_q7_inverse_time",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1C)，式(18)",
+      "text": "参考解答中由惯性坐标转回加速观者时间坐标的关系为 tau = (c/(2*g))*ln((x+c*t)/(x-c*t))。",
+      "normalization": "AI 对照 PDF 页面视觉核对后选录；删除页眉、评分信息和重复题干；分式用带括号的 /、乘法用 *、指数用 exp(...)、下标用 _，矩阵按逐行数组书写。保留数值、符号、上下标、适用条件；引用逐字匹配本规范化 text，不声称与 PDF 文本层逐字一致。",
+      "normalization_proof": "式(18)第二个等号后的前因子是 c/(2*g)，对数分子 x+c*t、分母 x-c*t。仅转写该等号右侧；未使用式(27)-(28)的温度约定。",
+      "review_status": "ai_text_and_page_visual_checked_awaiting_author",
+      "selected_for": "review_pilot_only_excluded_from_confirmation"
+    }
+  ],
+  "excluded_from_formal_confirmation": true
+}

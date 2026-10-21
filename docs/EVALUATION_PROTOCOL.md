@@ -2,15 +2,17 @@
 
 ## What is measured
 
-The task is faithfulness to supplied text, including short algebraic consequences, not external truth or independent exam solving. All three methods receive exactly `context_passages` and `generated_answer`. Gold data is loaded only by the scoring layer.
+The task is faithfulness to supplied text, including short algebraic consequences, not external truth or independent exam solving. All methods receive exactly `context_passages` and `generated_answer`. Gold data is loaded only by the scoring layer.
 
-Every method uses its own claim extraction. The two LLM methods use the same model, thinking setting, JSON-output setting and output-token budget. The minimal method gets one request with no retries. Optimized pays for its additional decomposition, verification, correction and transient retry calls. The baseline uses zero model requests.
+Every method uses its own claim extraction. The LLM methods use the same model, thinking setting, JSON-output setting and output-token budget. The minimal method gets one request with no retries. Optimized pays for its additional decomposition, verification, correction and transient retry calls. V3 also pays for every candidate-merge and contradiction-review call. The baseline uses zero model requests.
 
 ## Data separation
 
 Development: Q1, Q3, Q4, 18 cases. Held-out test: Q2, Q5, Q6, Q7, 24 cases. Edge diagnostics: 4 cases. Variants of a question stay in the same split. Data selection corrections discovered on development are versioned; test inputs and labels are unchanged by those corrections.
 
 There are only seven underlying questions; cases within a question are correlated. Aggregate scores are descriptive, not statistically independent measurements or general-domain performance estimates.
+
+For v3, the old test has been used for diagnosis and system design; it is now regression material. Its original frozen v2 results remain intact. New pilot examples are in a separate `review` dataset and never contribute to confirmation scores. The planned formal `confirmation` dataset uses new excerpts from the same source/questions, so it is not a question-level independent test. See `docs/V3_DESIGN.md` for the implementation freeze, pilot author review, data freeze and four-backend execution sequence.
 
 ## Metrics
 
@@ -31,6 +33,8 @@ The scorer's containment metric operates on individual quoted spans; adjacent pi
 Passage and gold-anchor recall receive credit only for aligned claims whose verdict is correct; exact-source substring validity is measured separately regardless of semantic correctness.
 
 The annotation convention permits coordinated subjects with a single shared predicate as one joint claim; every subject must be supported for a SUPPORTED verdict. This can be coarser than a decomposition that emits one claim per subject. Such granularity differences require review, rather than being automatically interpreted as semantic mistakes.
+
+The new-case policy in `docs/ANNOTATION_POLICY_V3.md` clarifies that a formula and equivalent prose are one proposition, while inconsistent restatements and independent mixed-truth propositions split. It does not rewrite historical labels. No scorer threshold or text-matching rule is changed for v3.
 
 ## Runtime and cost
 
