@@ -171,6 +171,23 @@ v3 的人工审阅材料已单独准备：[原 58 条标签复核表](reviews/cp
 另用任务说明中的 SQLite 示例实际请求本机 HTTP 服务，得到 `200` 及预期的四条判断：`CONTRADICTED / SUPPORTED / SUPPORTED / UNSUPPORTED`，逐字引用校验通过。[响应记录](reports/service-smoke/sqlite.response.json) 与 [运行记录](reports/service-smoke/run.json) 单独保存；本次服务检查耗时 34.172 秒，不计入上表。
 <!-- BENCHMARK_RESULTS_END -->
 
+## v3 当前验证
+
+v3 代码已实现并冻结，**正式确认集尚未构造或运行，作者审阅待完成**。原开发集四路回归共 72 条运行记录，全部结构有效：
+
+| 方法 | 开发集严格 F1 | 平均耗时/例 | 18 例参考价估算 |
+| --- | ---: | ---: | ---: |
+| `baseline` | 33.33% | 0.0022 s | USD 0 |
+| `minimal` | 89.80% | 2.5679 s | USD 0.011066 |
+| `optimized-v2` | 100% | 4.9160 s | USD 0.020181 |
+| `optimized-v3` | 100% | 5.7163 s | USD 0.024533 |
+
+v2/v3 均为 18/18 整例正确。该开发集已饱和，不能据此证明 v3 的泛化提升；本轮没有触发额外合并或矛盾复核调用。完整记录见 [四路开发回归](reports/dev-v3-final/report.md)。早期 JSON 模式兼容失败与修复过程也保留在 [迭代记录](docs/ITERATIONS.md)，未用失败后的重跑覆盖原记录。
+
+134 项测试通过；干净克隆在无密钥条件下通过测试、数据校验、离线评测和 HTTP 检查。真实 v3 服务已通过任务中的 SQLite 示例，见 [HTTP 记录](reports/service-smoke-v3/run.json)。这些检查验证实现与回归，正式效果结论仍需新增确认集。
+
+冻结后对旧 test 作了一次诊断回归：24/24 响应有效，严格 F1 **86.57%**，整例正确 21/24，原三处粒度问题仍在。两次合并调用找到了目标候选，但模型认为“局部性质”与“完整公式”不严格等价而拒绝合并，因此尚未实现预期的过拆修复。此处需要作者明确标注边界，不能宣称 v3 已胜出或借旧 test 继续追分。详见 [回归报告](reports/test-v3-regression/report.md) 和 [失败复核](reports/test-v3-regression/AUDIT.md)。
+
 ## 复现检查
 
 ```powershell

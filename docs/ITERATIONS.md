@@ -98,3 +98,19 @@ The first real v3 development attempt (`reports/dev-v3`) exposed an HTTP 400 at 
 The fix adds only explicit JSON-output wording to those two prompts and a transport-level regression covering all four stages. It does not change semantic rules, historical labels or the scorer. All 134 tests then passed. The actual v3 HTTP service returned 200 for the assignment's SQLite example with the four expected verdicts, using two model calls (29.705 seconds); this check is separate from benchmark timing. See `reports/service-smoke-v3`.
 
 The original implementation snapshot is retained in `reports/v3-code-freeze.json`; the corrected snapshot is `reports/v3-code-freeze-final.json`. The integrator read the excluded pilot examples after the first snapshot; the subsequent change was the independently confirmed JSON-mode compatibility correction. The formal confirmation dataset has not been constructed or evaluated.
+
+### Corrected four-backend development regression
+
+`reports/dev-v3-final` completed all 72 records on the original 18 development cases without API or schema errors. Strict joint F1 was 0.3333 for baseline, 0.8980 for minimal, and 1.0000 for both frozen v2 and v3. V2/v3 each produced 24/24 correctly aligned claims and passed all 18 whole cases. This is a saturated development set, not new confirmation evidence.
+
+Minimal shortened the correct calculation in `q1-05` and separated the structure description from the correct thrust relation in `q4-05`. Its two strict case failures are wording/granularity differences; the strict gap is not evidence of two incorrect semantic verdicts.
+
+Mean latency was 4.9160 seconds for v2 and 5.7163 seconds for v3; standardized estimated costs were USD 0.020180748 and USD 0.024532500. Both used 36 model calls. No merge or contradiction-review stage was triggered in this development run, so its result does not demonstrate those recovery mechanisms on live failures. Their behavior is exercised by transport/behavioral tests; any later regression evidence must be labeled separately.
+
+A fresh local clone of implementation commit `d72453c` passed all 134 tests, both dataset validators, the offline development benchmark, and actual baseline HTTP health/verify requests without a `.env` file or provider credentials. New pilot source validation additionally matched the local original PDF hash. The author review fields remain pending.
+
+### Frozen old-test regression: remaining granularity mismatch
+
+`reports/test-v3-regression` ran the frozen corrected v3 once on the 24 previously inspected test cases, solely as regression evidence. All outputs were valid; strict and approximate F1 were 0.8657, with 29 correct gold claims, 35 predictions, 6 extras, 3 missing and 21/24 correct whole cases. Two merge calls were made, but neither approved a merge; no contradiction review was triggered. The historical `q5-02`, `q5-03` and `q5-06` mismatches remained.
+
+For `q5-02` and `q5-06`, the candidate detector found the intended pair. The model then applied the strict-equivalence instruction: a radius-power or denominator statement asserts less than the corresponding complete formula, so it retained two claims. This exposes a mismatch between strict equivalence and the intended annotation grouping of a consistent partial description with a fuller formula. The new stage is implemented, but it has not solved that issue. No further prompt or label changes were made from this run. See `reports/test-v3-regression/AUDIT.md` for the evidence and the author policy decision still needed.
