@@ -1,5 +1,7 @@
 # Citation Grounding & Faithfulness Verifier
 
+最新的 [RAGTruth 外部盲测](reports/ragtruth-blind-v1-recovery/AUDIT.md) 已完成：优化版失败计入 F1 为58.89%，minimal为56.70%，差值区间跨零；原有CPHOS高分不足以证明通用泛化优势。下方保留全部历史结果。
+
 ## Overview
 
 A Python 3.11+ HTTP service that decomposes generated answers into factual claims, checks them against supplied passages, and enforces exact-source citations. The repository includes the original 46-case CPHOS28 benchmark, 12 new confirmation cases, deterministic and single-call baselines, separately versioned v2/v3.1 verifiers, recorded model outputs, and reproducible tests.
@@ -26,6 +28,54 @@ All 48 responses are structurally valid. The 12 related, constructed cases use Q
 接收来源段落和生成答案，拆成事实声明，返回 `SUPPORTED`、`CONTRADICTED` 或 `UNSUPPORTED`，并附来源中的逐字引用。本项目实现了 [任务说明](https://gist.github.com/wsxiaoys/849522ee389e0ce359ef444653084484) 要求的 HTTP 服务和三方案评测入口。
 
 Python **3.11+**，仅使用标准库，无需安装依赖。默认使用 DeepSeek `deepseek-flash`，也可连接 Chat Completions 兼容接口。程序化校验保证响应结构、引用下标和原文匹配；语义判断依赖对应验证方法。
+
+## RAGTruth 外部评测
+
+新增的 RAGTruth 入口使用外部自然生成回答和人工幻觉标签，独立于上述 CPHOS 公式数据。首轮按任务分层抽取 **30 个来源、180 条回答**，比较冻结的 `baseline / minimal / optimized-v3`。原推理代码和提示词保持原样；原始数据固定到上游 commit，转换、评分和运行设置在首次正式调用前冻结。
+
+这里的主任务是**回答级幻觉检测**：原生标签非空为正例，系统输出任何 `CONTRADICTED` 或 `UNSUPPORTED` 为预测正例。它不使用旧的声明精确文本 F1，也没有把未标注文字自动转换成 SUPPORTED gold。原子声明三分类、完整提取召回和引用语义充分性尚无独立金标，首轮不报告这些能力的准确率。
+
+<!-- RAGTRUTH_RESULTS_START -->
+2026-10-22 已完成 **180 条回答 × 3 方案 = 540 条记录**，输入来自 30 个来源，三类任务各 60 条。按原始标签有幻觉 60 条、未标幻觉 120 条。所有失败均保留。
+
+| 方案 | 成功输出 F1 | 失败计入 F1 下界 | 端到端准确率 | 技术失败 | 平均耗时/例 | 180例参考费用 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| baseline | 50.00% | 50.00% | 33.33% | 0/180 | 0.02 s | USD 0.0000 |
+| minimal | 59.46% | 56.70% | 53.33% | 9/180 | 27.58 s | USD 1.5077 |
+| optimized-v3 | 62.35% | 58.89% | 58.89% | 10/180 | 86.82 s | USD 4.4560 |
+
+**当前优化版只比 minimal 高 2.19 个百分点**（失败计入 F1），来源整组 bootstrap 的95%差值区间为 **[-2.64, +7.50] 个百分点**，尚不能确认稳定优势；平均耗时约 **3.15 倍**、参考费用约 **2.96 倍**。baseline 对全部180条回答都报出C/U，等同于恒阳性参考。按原生标签，两种LLM的主要问题是误报较多；优化版另有长输出预算耗尽的问题。
+
+失败计入 F1 是预注册保守下界：阳性失败记FN、阴性失败记FP；成功输出指标条件于180/171/170条成功返回，不能隐去失败。费用采用既有固定参考单价，不是实际账单。三类输出分布和逐字引用合法率都不是语义准确率。
+
+原生标签与Gist在“步骤/建议是否需要核验”上存在边界差异，少量案例也发现原标注覆盖疑点；已单独记录，未据此改写标签或首轮分数。这是回答级外部诊断，不能与旧CPHOS的97.62%声明文本对齐F1直接比较。
+
+本轮记录器曾发生本地权限错误，原84条完整记录（含2条失败）按字节保留；仅补跑456个缺失配对。原推理、提示词、评分器、输入与标签均未改变。完整[结果与审计](reports/ragtruth-blind-v1-recovery/AUDIT.md)、[自动报告](reports/ragtruth-blind-v1-recovery/report.md)、[原始预测](reports/ragtruth-blind-v1-recovery/predictions.jsonl)、[恢复记录](reports/ragtruth-recorder-recovery/README.md)均已保存。独立重算与离线重评分一致，**200项测试通过**。
+<!-- RAGTRUTH_RESULTS_END -->
+
+离线下载和准备入口（输出目录必须不存在）：
+
+```powershell
+python scripts/fetch_ragtruth.py --output-dir tmp/ragtruth-upstream
+python scripts/ragtruth_data.py --raw-dir tmp/ragtruth-upstream --output-dir results/ragtruth-prepared-copy --split test --sources-per-task 10
+```
+
+`--sources-per-task 0` 准备全部合格 test 回答。原始数据和测试标签不进入验证器；推理仅接收两个请求字段，完成后由独立脚本评分。API/格式失败保留在总体分母中，并同时报告成功输出上的指标和计入失败的保守 F1。置信区间按来源整体重采样，不能把同源六个回答当作六个独立来源。
+
+使用仓库已冻结的首轮选择复现（同一工作区已有来源曝光时需 `--replicate`，始终使用新输出目录）：
+
+```powershell
+python scripts/benchmark_ragtruth.py run --data-dir dataset/ragtruth-blind-v1/recovery --output-dir results/ragtruth-reproduction --thinking enabled --workers 4
+python scripts/ragtruth_score.py --run-dir results/ragtruth-reproduction --data-dir dataset/ragtruth-blind-v1/recovery
+```
+
+无需 API 的重新计分：
+
+```powershell
+python scripts/ragtruth_score.py --run-dir reports/ragtruth-blind-v1-recovery --data-dir dataset/ragtruth-blind-v1/recovery --output-dir results/ragtruth-rescore
+```
+
+完整的首次 freeze 命令、与上游输入的差异、费用参考和泛化边界见 [协议](docs/RAGTRUTH_PROTOCOL.md)。RAGTruth 项目与论文出处记录在 [数据目录](dataset/ragtruth-blind-v1/README.md)。
 
 ## 配置与启动
 

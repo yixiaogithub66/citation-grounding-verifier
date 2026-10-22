@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-22T09:13:39.608466+00:00",
+  "reason": "Recorder process terminated with PermissionError; exact OS operation was not logged. Durable JSONL remains intact.",
+  "original_run": "reports/ragtruth-blind-v1",
+  "original_progress": {
+    "by_backend": {
+      "baseline": {
+        "completed": 28,
+        "errors": 0
+      },
+      "minimal": {
+        "completed": 27,
+        "errors": 1
+      },
+      "optimized-v3": {
+        "completed": 29,
+        "errors": 1
+      }
+    },
+    "completed_at": "2026-10-22T09:07:45.584642+00:00",
+    "completed_records": 84,
+    "error_records": 2,
+    "expected_records": 540,
+    "gold_loaded": false,
+    "schema_version": "ragtruth-inference-run-v1",
+    "started_at": "2026-10-22T08:58:47.943966+00:00",
+    "status": "failed",
+    "updated_at": "2026-10-22T09:07:45.584642+00:00"
+  },
+  "original_predictions_sha256": "11de33afb00fd9035e723d5c58f5201c5baa8de71f12eedb74790f71c44ab24f",
+  "original_runner_sha256": "36a1d802ff200bb9a96c595f31d7b84f72a23c56792c0024b448fc5e7691bcb9",
+  "recovery_policy": "Retain every original response/backend record, including errors, and execute only missing pairs. No original prediction rerun or selection. No test gold scored or displayed before this amendment. Inference/prompts/data/native scoring stay unchanged.",
+  "recovery_data_dir": "dataset/ragtruth-blind-v1/recovery",
+  "same_prepared_file_bytes": {
+    "inputs.jsonl": true,
+    "manifest.jsonl": true,
+    "native_gold.jsonl": true,
+    "preparation.json": true
+  }
+}

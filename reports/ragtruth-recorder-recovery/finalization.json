@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-22T09:20:00.798994+00:00",
+  "old_runner_sha256": "36a1d802ff200bb9a96c595f31d7b84f72a23c56792c0024b448fc5e7691bcb9",
+  "new_runner_sha256": "da79fe06f79f9c13a43791657fa5f96797410067edb83ed6b5f90a604e05ad2d",
+  "original_runner_matches_freeze": true,
+  "same_data_hashes": true,
+  "same_inference_hashes": true,
+  "same_native_scorer_hash": true,
+  "same_settings": true,
+  "same_run_options": true,
+  "same_ordered_selection": true,
+  "original_journal_prefix_exact": true,
+  "retained_records": 84,
+  "tests_passed": 200
+}

@@ -1,0 +1,25 @@
+{
+  "by_backend": {
+    "baseline": {
+      "completed": 28,
+      "errors": 0
+    },
+    "minimal": {
+      "completed": 27,
+      "errors": 1
+    },
+    "optimized-v3": {
+      "completed": 29,
+      "errors": 1
+    }
+  },
+  "completed_at": "2026-10-22T09:07:45.584642+00:00",
+  "completed_records": 84,
+  "error_records": 2,
+  "expected_records": 540,
+  "gold_loaded": false,
+  "schema_version": "ragtruth-inference-run-v1",
+  "started_at": "2026-10-22T08:58:47.943966+00:00",
+  "status": "failed",
+  "updated_at": "2026-10-22T09:07:45.584642+00:00"
+}
