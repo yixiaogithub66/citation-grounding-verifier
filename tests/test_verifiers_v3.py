@@ -175,6 +175,32 @@ class V3Tests(unittest.TestCase):
         self.assertTrue(audit["merged"])
         self.assertEqual(audit["relation"], "same_sentence_redundancy")
 
+    def test_redundancy_with_identical_weak_claim_text_still_restores_complete_formula(self) -> None:
+        prose, formula = "The numerator contains x^3", "F = k*x^3/(1+s)"
+        answer = prose + ", " + formula + "."
+        parsed = extraction(prose, formula)
+        parsed["claims"][1]["claim_text"] = prose
+        result, _ = self.run_verifier(answer, [
+            parsed, {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual([claim["claim_text"] for claim in result.report["claims"]], [answer])
+        self.assertEqual(result.telemetry["merge_audits"][0]["after_claims"][0]["source_span"], answer)
+        self.assertTrue(result.report["claims"][0]["claim_text"].endswith("."))
+
+    def test_identical_weak_text_cannot_bypass_third_predicate_overlap_guard(self) -> None:
+        prose = "The numerator contains x^3"
+        independent = "the mass is 7."
+        answer = prose + ", F = k*x^3/(1+s), and " + independent
+        parsed = extraction(prose, prose, independent)
+        for claim in parsed["claims"]:
+            claim["source_span"] = answer
+        result, _ = self.run_verifier(answer, [
+            parsed, {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual(len(result.report["claims"]), 3)
+        self.assertEqual(result.telemetry["merge_audits"][0]["decision"], "keep_safety_guard")
+        self.assertEqual(result.report["claims"][-1]["claim_text"], independent)
+
     def test_formula_property_without_restatement_marker_still_gets_semantic_review(self) -> None:
         prose, formula = "The denominator contains 2", "F = k*x/(2*m)."
         answer = prose + ", " + formula

@@ -224,17 +224,18 @@ class OptimizedV3Verifier(OptimizedVerifier):
                 identical_text = all(_normalized(row["claim_text"]) == _normalized(before[0]["claim_text"]) for row in before)
                 identical_source = all(positions[item] == interval for item in selected)
                 redundancy = group["relation"] == "same_sentence_redundancy"
+                retain_first_wording = group["relation"] == "equivalent" and identical_text
                 if redundancy and sentence is None:
                     action, guard = "keep_safety_guard", "same_sentence_redundancy requires one original sentence."
                 elif redundancy and not any(_EQUATION_EQUALS.search(row["source_span"]) for row in before):
                     action, guard = "keep_safety_guard", "Formula-property redundancy requires an explicit equation, not an inequality-only implication."
-                elif any(_overlap(interval, other) for other in other_positions) and not (identical_text and identical_source):
+                elif any(_overlap(interval, other) for other in other_positions) and not (retain_first_wording and identical_source):
                     action, guard = "keep_safety_guard", "Covering interval overlaps an unmerged assertion."
                 else:
-                    if sentence and not identical_text and not any(_overlap(sentence, other) for other in other_positions):
+                    if sentence and not retain_first_wording and not any(_overlap(sentence, other) for other in other_positions):
                         interval = sentence
                     span = answer[interval[0]:interval[1]].strip()
-                    after = [{"claim_text": before[0]["claim_text"] if identical_text else span, "source_span": span}]
+                    after = [{"claim_text": before[0]["claim_text"] if retain_first_wording else span, "source_span": span}]
                     action = "merge"
             blocks.append({"group": group, "before": before, "after": after, "action": action, "guard": guard})
             index += count
