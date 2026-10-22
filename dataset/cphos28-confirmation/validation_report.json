@@ -1,0 +1,40 @@
+{
+  "valid": true,
+  "dataset": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28-confirmation\\cases.jsonl",
+  "sources": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28-confirmation\\sources.json",
+  "case_count": 12,
+  "document_count": 1,
+  "passage_count": 22,
+  "split_counts": {
+    "confirmation": 12
+  },
+  "category_counts": {
+    "density": 3,
+    "mixed_truth_compound": 3,
+    "reformulation_calculation": 3,
+    "scope_distractor": 3
+  },
+  "gold_verdict_counts": {
+    "CONTRADICTED": 13,
+    "SUPPORTED": 15,
+    "UNSUPPORTED": 14
+  },
+  "problem_splits": {
+    "Q2": [
+      "confirmation"
+    ],
+    "Q6": [
+      "confirmation"
+    ],
+    "Q7": [
+      "confirmation"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "manual_review_required": [
+    "Whether every factual statement in each generated_answer has been decomposed into atomic claims.",
+    "Whether verdicts, transcribed formulas, and acceptable or required evidence sets are semantically correct.",
+    "Whether each transcription accurately represents the indicated PDF pages and figures."
+  ]
+}

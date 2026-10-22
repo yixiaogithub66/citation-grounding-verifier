@@ -1,0 +1,305 @@
+{
+  "version": "confirmation-1",
+  "documents": [
+    {
+      "id": "solutions",
+      "title": "第28届CPHOS物理竞赛联考理论试题解答",
+      "path": "D:\\下载\\CPHOS28\\CPHOS28\\第28届CPHOS物理竞赛联考理论试题解答.pdf",
+      "sha256": "dd8c5bbc2f46180d39b7736731cc630048b5cb6ec07937a41da45d1c67c78c80",
+      "page_count": 24,
+      "copyright": "2025 CPHOS；原 PDF 版权归原作者，数据包未附原 PDF。"
+    }
+  ],
+  "passages": [
+    {
+      "id": "confirmation_q2_slope_arc",
+      "document_id": "solutions",
+      "pages": [
+        4
+      ],
+      "locator": "二(1)，式(2)",
+      "text": "悬链线部分的定义为 tan(theta) = dy/dx，弧长微元为 ds = sqrt(dx^2+dy^2)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "核对式(2)的tan、dy/dx及根号覆盖dx^2+dy^2；悬链线部分来自同页解答引导语。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_horizontal",
+      "document_id": "solutions",
+      "pages": [
+        4
+      ],
+      "locator": "二(1)，式(3)",
+      "text": "参考解答对悬链线部分积分得到 T*cos(theta) = T_0。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(3)为T乘cos(theta)，没有sin或额外竖直自重项；保留其悬链线段适用范围。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_integral",
+      "document_id": "solutions",
+      "pages": [
+        4
+      ],
+      "locator": "二(1)，式(5)",
+      "text": "悬链线部分再次积分得到 1/cos(theta)-C_0 = (lambda*g/T_0)*y。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(5)左侧为1/cos(theta)减C_0，右侧为lambda*g*y/T_0；显式括号只调整线性排版。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_hanging",
+      "document_id": "solutions",
+      "pages": [
+        5
+      ],
+      "locator": "二(1)，自由悬挂部分标题及式(18)",
+      "text": "参考解答在自由悬挂部分列出的张力关系为 T_2 = m*g+lambda*g*l。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "标题明确自由悬挂部分，式(18)为mg+lambda*g*l；不从相邻式(17)复用pilot的T_1。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_free_length",
+      "document_id": "solutions",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "二(1)，第5页自由悬挂部分l、第6页式(20)第一行",
+      "text": "参考解答给出的自由悬挂部分绳长数值为 l = 2.3932905*R。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "l的段落指代来自第5页自由悬挂部分；第6页式(20)第一行逐位为2.3932905R。未选录此前用过的式(21)。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_energy",
+      "document_id": "solutions",
+      "pages": [
+        6
+      ],
+      "locator": "二(2)，圆周运动部分及式(22)",
+      "text": "圆周运动部分满足能量关系 0.5*M*v_0^2+M*g*R*(1-cos(phi)) = 0.5*M*v^2。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(22)两动能项系数均为1/2，重力项为1-cos(phi)，转写1/2为0.5。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q2_normal",
+      "document_id": "solutions",
+      "pages": [
+        6
+      ],
+      "locator": "二(2)，式(23)第一个等号后的表达式",
+      "text": "圆周运动部分的支持力为 N = M*g*cos(phi)-M*v^2/R。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "只选录式(23)的第一种形式，负向心项为-M*v^2/R；不把同一行第二种已消去v的结果放进输入，以保留多段代数综合要求。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_coefficient_b",
+      "document_id": "solutions",
+      "pages": [
+        20
+      ],
+      "locator": "六(3.2)，式(24)",
+      "text": "参考解答给出的有限长链矩阵幂系数为 B = (lambda_1^(N-1)-lambda_2^(N-1))/(lambda_1-lambda_2)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(24)分子两个幂均为N-1，分母lambda_1-lambda_2；未添加原文未写的物理参数域。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_coefficient_a",
+      "document_id": "solutions",
+      "pages": [
+        20
+      ],
+      "locator": "六(3.2)，式(28)",
+      "text": "参考解答给出的另一矩阵幂系数为 A = (lambda_1^N-lambda_2^N)/(lambda_1-lambda_2)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(28)分子幂为N，不是N-1或N+1；分母保持特征根差。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_root_sum",
+      "document_id": "solutions",
+      "pages": [
+        20
+      ],
+      "locator": "六(3.2)，式(25)",
+      "text": "参考解答按韦达定理写出 lambda_1+lambda_2 = exp(i*phi)*(1+i*q)+exp(-i*phi)*(1-i*q)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(25)第一项相位正、括号为1+iq；第二项相位负、括号为1-iq；完整保留复数式。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_continuity",
+      "document_id": "solutions",
+      "pages": [
+        18
+      ],
+      "locator": "六(2.1)，解答式(4)第一行",
+      "text": "相邻区间内部连接处的位移连续条件为 u_j(a) = u_(j+1)(0)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(4)第一行是u_j在x=a和u_(j+1)在x=0的值相等；函数求值改用括号，不加等于零条件。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_fixed_ends",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(3.1)，式(13)",
+      "text": "有限长链两端固定边界的位移条件为 u_0(0) = 0，u_N((1-tau)*a) = 0。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(13)左边界在第0段x=0，右边界在第N段x=(1-tau)*a；不是重复pilot的几何描述或初始传递矩阵。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_eigenvectors",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(3.2)，式(18)",
+      "text": "参考解答给出的两个特征向量写作 p_(1,2) = [-exp(-i*phi)*i*q, exp(i*phi)*(1+i*q)-lambda_(1,2)]^T。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(18)列向量首项有前置负号，次项减相应lambda；(1,2)保留原文合写两个下标的记法，^T表示列向量。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_recurrence_a",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(2.1)，式(6)第一行",
+      "text": "相邻区间振幅递推的第一式为 A_(j+1) = A_j*exp(i*k*a)+(i*m*k/(2*mu))*(A_j*exp(i*k*a)+B_j*exp(-i*k*a))。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "核对式(6)第一行：校正项前为+i*m*k/(2*mu)，括号内两项为相加。未用pilot的完整传递矩阵代替。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q6_recurrence_b",
+      "document_id": "solutions",
+      "pages": [
+        19
+      ],
+      "locator": "六(2.1)，式(6)第二行",
+      "text": "相邻区间振幅递推的第二式为 B_(j+1) = B_j*exp(-i*k*a)-(i*m*k/(2*mu))*(A_j*exp(i*k*a)+B_j*exp(-i*k*a))。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "核对式(6)第二行：校正项前为负号，括号与第一行相同；B_j主项相位为-i*k*a。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_velocity",
+      "document_id": "solutions",
+      "pages": [
+        22
+      ],
+      "locator": "七(1A)，解答式(4)",
+      "text": "恒固有加速度观者的速度为 v = c*tanh(g*tau/c)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(4)使用tanh，不是此前t(tau)来源中的sinh；速度v前因子为c。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_gamma",
+      "document_id": "solutions",
+      "pages": [
+        22
+      ],
+      "locator": "七(1A)，解答式(5)",
+      "text": "该观者的洛伦兹因子为 gamma = 1/sqrt(1-v^2/c^2) = cosh(g*tau/c)。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(5)根号内为1-v^2/c^2，第二种形式为cosh；没有引入额外速度条件。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_clock_derivative",
+      "document_id": "solutions",
+      "pages": [
+        22
+      ],
+      "locator": "七(1A)，解答式(6)",
+      "text": "惯性系时间与固有时的微分关系为 dt/dtau = gamma。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(6)为dt/dtau而非反向导数，右边是gamma，不是倒数。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_proper_acceleration",
+      "document_id": "solutions",
+      "pages": [
+        22
+      ],
+      "locator": "七(1A)，解答式(1)",
+      "text": "由固有加速度定义，g = dv_prime/dtau。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "原文v带撇，线性记为v_prime；导数分母是固有时tau。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_origin_factor",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1C)，式(13)",
+      "text": "在加速观者坐标 xi=0 处，度规共形因子的平方满足 Omega^2(c*tau,0) = 1。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(13)第二个坐标参数明确为0；这里只说明该位置，不能把0转成任意xi。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_null_factor",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1C)，式(16)",
+      "text": "一般加速类光坐标下的线元为 ds^2 = exp(-g*(u_tilde-v_tilde)/c^2)*du_tilde*dv_tilde。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(16)指数为-g*(u_tilde-v_tilde)/c^2；带波浪的u、v各记为u_tilde、v_tilde，保留一般坐标差。未复用旧式(17)的xi形式。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    },
+    {
+      "id": "confirmation_q7_inverse_space",
+      "document_id": "solutions",
+      "pages": [
+        23
+      ],
+      "locator": "七(1C)，式(19)最后一个等号后的表达式",
+      "text": "由惯性坐标转回加速空间坐标的关系为 xi = (c^2/(2*g))*ln((g^2/c^4)*(x^2-c^2*t^2))。",
+      "normalization": "AI视觉核对原页；希腊字母转ASCII名称，下标用_，分式用带括号的/，乘法用*，指数用exp，列向量用^T。删除页眉和评分说明，保留符号、条件与数值；引文以本text为逐字匹配对象。",
+      "normalization_proof": "式(19)前因子为c^2/(2*g)，对数内为(g^2/c^4)*(x^2-c^2*t^2)；没有使用pilot式(18)的时间反变换。",
+      "review_status": "ai_text_and_page_visual_checked",
+      "prior_transcription_status": "new_excerpt_not_in_historical_or_pilot_sources"
+    }
+  ],
+  "provenance_scope": "same_source_same_question_family_new_excerpts",
+  "annotation_policy_sha256": "5ea385c57927d77ccfac8724f687ef44a105f7eecf4aa5cfbe30ba4b726da699",
+  "formal_human_label_review": false
+}

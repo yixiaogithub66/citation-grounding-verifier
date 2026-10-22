@@ -1,0 +1,217 @@
+{
+  "review_completed_at": "2026-10-22T03:12:54.299290+00:00",
+  "status": "independent_ai_review_complete_no_remaining_blockers",
+  "reviewer_role": "separate_read_only_AI_agent",
+  "reviewer_task": "/root/v3_data_review/confirmation_data_audit",
+  "cases_reviewed": 12,
+  "claims_reviewed": 42,
+  "visual_pages_checked": [
+    4,
+    5,
+    6,
+    18,
+    19,
+    20,
+    22,
+    23
+  ],
+  "model_predictions_seen": false,
+  "tested_model_api_calls": 0,
+  "human_formal_label_review": false,
+  "reviewed_cases_sha256": "2a2fefb97d8344f5dbdf126672de498d87fc8695b719b9479095b98b6b4165ea",
+  "reviewed_sources_sha256": "7b0681601d540ee9301e43ef0499bb4f3b452266db3f0306d2a92050ccf3aaa6",
+  "review_changes": [
+    {
+      "claim_id": "cphos28-confirmation-density-q2-c2",
+      "changes": {
+        "claim_text": {
+          "before": "悬链线段的张力竖直分量恒为 T_0，即 T*sin(theta) = T_0。",
+          "after": "悬链线段在任意适用角度下的张力竖直分量恒为 T_0，即 T*sin(theta) = T_0。"
+        },
+        "answer_quote": {
+          "before": "悬链线段的张力竖直分量恒为 T_0，即 T*sin(theta) = T_0。",
+          "after": "悬链线段在任意适用角度下的张力竖直分量恒为 T_0，即 T*sin(theta) = T_0。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-density-q2-c3",
+      "changes": {
+        "claim_text": {
+          "before": "悬链线积分关系为 1/cos(theta)+C_0 = (lambda*g/T_0)*y。",
+          "after": "参考解答中悬链线积分公式的符号写法为 1/cos(theta)+C_0 = (lambda*g/T_0)*y。"
+        },
+        "answer_quote": {
+          "before": "悬链线积分关系为 1/cos(theta)+C_0 = (lambda*g/T_0)*y。",
+          "after": "参考解答中悬链线积分公式的符号写法为 1/cos(theta)+C_0 = (lambda*g/T_0)*y。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-density-q6-c2",
+      "changes": {
+        "claim_text": {
+          "before": "在 lambda_1!=lambda_2 时，A = (lambda_1^(N+1)-lambda_2^(N+1))/(lambda_1-lambda_2)。",
+          "after": "对任意 lambda_1!=lambda_2，矩阵幂系数的一般表达式为 A = (lambda_1^(N+1)-lambda_2^(N+1))/(lambda_1-lambda_2)。"
+        },
+        "answer_quote": {
+          "before": "在 lambda_1!=lambda_2 时，A = (lambda_1^(N+1)-lambda_2^(N+1))/(lambda_1-lambda_2)。",
+          "after": "对任意 lambda_1!=lambda_2，矩阵幂系数的一般表达式为 A = (lambda_1^(N+1)-lambda_2^(N+1))/(lambda_1-lambda_2)。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-density-q7-c3",
+      "changes": {
+        "claim_text": {
+          "before": "惯性时间对固有时的导数为 dt/dtau = 1/gamma。",
+          "after": "惯性时间对固有时的一般微分恒等式为 dt/dtau = 1/gamma。"
+        },
+        "answer_quote": {
+          "before": "惯性时间对固有时的导数为 dt/dtau = 1/gamma。",
+          "after": "惯性时间对固有时的一般微分恒等式为 dt/dtau = 1/gamma。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-scope_distractor-q2-c1",
+      "changes": {
+        "verdict": {
+          "before": "CONTRADICTED",
+          "after": "UNSUPPORTED"
+        },
+        "reasoning": {
+          "before": "第0段将该式明确归属悬链线部分，第1段明确给出自由悬挂部分的另一关系；回答混淆了参考解答中的段落归属。",
+          "after": "第0段证明该式用于悬链线部分，第1段给自由悬挂部分另一关系，但二者并未排他地断言该式不可能也被列在自由悬挂部分；该额外归属缺少支持，不能把未说明当直接矛盾。"
+        },
+        "citations": {
+          "before": [
+            {
+              "index": 0,
+              "quote": "参考解答对悬链线部分积分得到 T*cos(theta) = T_0。"
+            },
+            {
+              "index": 1,
+              "quote": "参考解答在自由悬挂部分列出的张力关系为 T_2 = m*g+lambda*g*l。"
+            }
+          ],
+          "after": []
+        },
+        "acceptable_evidence_sets": {
+          "before": [
+            [
+              0,
+              1
+            ]
+          ],
+          "after": []
+        },
+        "required_passage_indices": {
+          "before": [
+            0,
+            1
+          ],
+          "after": []
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-scope_distractor-q7-c2",
+      "changes": {
+        "claim_text": {
+          "before": "在任意加速类光坐标处，线元都恒为 ds^2 = du_tilde*dv_tilde。",
+          "after": "不论 g 和加速类光坐标取何适用值，线元恒等式均为 ds^2 = du_tilde*dv_tilde。"
+        },
+        "answer_quote": {
+          "before": "在任意加速类光坐标处，线元都恒为 ds^2 = du_tilde*dv_tilde。",
+          "after": "不论 g 和加速类光坐标取何适用值，线元恒等式均为 ds^2 = du_tilde*dv_tilde。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-reformulation_calculation-q2-c1",
+      "changes": {
+        "reasoning": {
+          "before": "能量式给v^2=v_0^2+2*g*R*(1-cos(phi))，代入N=M*g*cos(phi)-M*v^2/R，整理得所述式；两段均必需。",
+          "after": "能量式乘2得M*v^2=M*v_0^2+2*M*g*R*(1-cos(phi))，将整个M*v^2代入支持力式得到结果，不需要另加M非零假设；两段均必需。"
+        }
+      }
+    },
+    {
+      "claim_id": "cphos28-confirmation-reformulation_calculation-q6-c2",
+      "changes": {
+        "claim_text": {
+          "before": "两条振幅递推相减后，A_(j+1)-B_(j+1) = A_j*exp(i*k*a)-B_j*exp(-i*k*a)。",
+          "after": "两条振幅递推相减恒等得到 A_(j+1)-B_(j+1) = A_j*exp(i*k*a)-B_j*exp(-i*k*a)。"
+        },
+        "answer_quote": {
+          "before": "两条振幅递推相减后，A_(j+1)-B_(j+1) = A_j*exp(i*k*a)-B_j*exp(-i*k*a)。",
+          "after": "两条振幅递推相减恒等得到 A_(j+1)-B_(j+1) = A_j*exp(i*k*a)-B_j*exp(-i*k*a)。"
+        }
+      }
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "cphos28-confirmation-density-q2",
+      "conclusion": "5条粒度正确；两处错误公式已明确任意适用角度或来源符号写法，避免退化参数歧义。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-density-q6",
+      "conclusion": "5条粒度正确；错误A式已明确对任意不同特征根的一般表达式，保留不同特征根条件。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-density-q7",
+      "conclusion": "5条粒度正确；gamma倒数错误明确按一般微分恒等式判断。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-scope_distractor-q2",
+      "conclusion": "第一条来源归属并无排他性，冻结前从C改为U并清空证据；其余S/U正确。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-scope_distractor-q6",
+      "conclusion": "U/S/C正确；未把内部连续当作内部必非零，未将固定端约束扩展到内部。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-scope_distractor-q7",
+      "conclusion": "S/C/U正确；一般线元错误明确量化所有适用g与坐标，没有默补特定正参数。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-mixed_truth_compound-q2",
+      "conclusion": "C/S/U正确；数值说明与公式冲突，拆分正确。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-mixed_truth_compound-q6",
+      "conclusion": "C/S/U正确；核对来源给出的特征向量写法，避免整体缩放歧义。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-mixed_truth_compound-q7",
+      "conclusion": "C/S/U正确；空间反变换前因子说明与公式不一致，拆分正确。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-reformulation_calculation-q2",
+      "conclusion": "S/C/U正确；用M*v^2整体代入，消除不必要的M非零假设，两段证据必需。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-reformulation_calculation-q6",
+      "conclusion": "S/C/U正确；求差错误明确按一般恒等式判断，两条递推均是必要前提。",
+      "status": "accepted_after_pre_inference_review"
+    },
+    {
+      "case_id": "cphos28-confirmation-reformulation_calculation-q7",
+      "conclusion": "S/C/U正确；乘法结果需要两段，恒等值1的反证只需gamma段，没有夸大多源必要性。",
+      "status": "accepted_after_pre_inference_review"
+    }
+  ],
+  "limitations": "Separate review roles do not establish statistically independent errors or expert certification."
+}
