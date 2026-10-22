@@ -15,6 +15,7 @@ from grounding.verifiers import OptimizedVerifier, _invalid, _text
 _RESTATEMENT = re.compile(r"\b(?:i\.?e\.?|in other words|that is)\b|\u5373|\u4e5f\u5c31\u662f", re.I)
 _SENTENCE_END = re.compile(r"[\u3002\uff01\uff1f!?]|\.(?=\s|$)|\n")
 _ABBREVIATION_END = re.compile(r"\b(?:i\.e|e\.g)\.$", re.I)
+_EQUATION_EQUALS = re.compile(r"(?<![<>=!])=(?!=)")
 _TOKENS = re.compile(r"[A-Za-z_][A-Za-z_0-9]*|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|[=+\-*/^<>]|[\u4e0d\u975e\u65e0\u672a]")
 _CORE_FIELDS = {"id", "claim_text", "verdict", "reasoning", "citations"}
 
@@ -69,6 +70,8 @@ def merge_candidates(claims: list[dict[str, str]], answer: str) -> list[dict[str
             triggers.append("normalized_text_equal")
         if sentence and _RESTATEMENT.search(answer[sentence[0]:sentence[1]]):
             triggers.append("restatement_marker")
+        if sentence and bool(_EQUATION_EQUALS.search(left["claim_text"])) != bool(_EQUATION_EQUALS.search(right["claim_text"])):
+            triggers.append("same_sentence_formula_description")
         left_tokens, right_tokens = set(_TOKENS.findall(left["claim_text"])), set(_TOKENS.findall(right["claim_text"]))
         if len(left_tokens) >= 2 and left_tokens == right_tokens and (sentence or _overlap(positions[index], positions[index + 1])):
             triggers.append("critical_token_set_equal")
@@ -189,11 +192,14 @@ class OptimizedV3Verifier(OptimizedVerifier):
                 _invalid("Merge decisions must preserve candidate ids and order.")
             flattened = []
             for group in decision["groups"]:
-                if not isinstance(group, dict) or set(group) != {"claim_ids", "reason"} or not _text(group["reason"]):
-                    _invalid("Each merge group needs claim_ids and a nonempty semantic reason.")
+                if not isinstance(group, dict) or set(group) != {"claim_ids", "relation", "reason"} or not _text(group["reason"]):
+                    _invalid("Each merge group needs claim_ids, relation and a nonempty semantic reason.")
                 ids = group["claim_ids"]
                 if not isinstance(ids, list) or not ids or any(not isinstance(item, str) for item in ids):
                     _invalid("Merge claim_ids must be a nonempty array of supplied ids.")
+                allowed_relations = ("distinct",) if len(ids) == 1 else ("equivalent", "same_sentence_redundancy")
+                if group["relation"] not in allowed_relations:
+                    _invalid("Singleton groups require distinct; merged groups require equivalent or same_sentence_redundancy.")
                 flattened.extend(ids)
             if flattened != candidate["claim_ids"]:
                 _invalid("Merge groups must partition candidate ids exactly once in original order.")
@@ -213,13 +219,18 @@ class OptimizedV3Verifier(OptimizedVerifier):
             if count > 1:
                 selected = set(range(index, index + count))
                 interval = (min(positions[item][0] for item in selected), max(positions[item][1] for item in selected))
+                sentence = _containing_sentence(interval, sentences)
                 other_positions = [position for item, position in enumerate(positions) if item not in selected]
                 identical_text = all(_normalized(row["claim_text"]) == _normalized(before[0]["claim_text"]) for row in before)
                 identical_source = all(positions[item] == interval for item in selected)
-                if any(_overlap(interval, other) for other in other_positions) and not (identical_text and identical_source):
+                redundancy = group["relation"] == "same_sentence_redundancy"
+                if redundancy and sentence is None:
+                    action, guard = "keep_safety_guard", "same_sentence_redundancy requires one original sentence."
+                elif redundancy and not any(_EQUATION_EQUALS.search(row["source_span"]) for row in before):
+                    action, guard = "keep_safety_guard", "Formula-property redundancy requires an explicit equation, not an inequality-only implication."
+                elif any(_overlap(interval, other) for other in other_positions) and not (identical_text and identical_source):
                     action, guard = "keep_safety_guard", "Covering interval overlaps an unmerged assertion."
                 else:
-                    sentence = _containing_sentence(interval, sentences)
                     if sentence and not identical_text and not any(_overlap(sentence, other) for other in other_positions):
                         interval = sentence
                     span = answer[interval[0]:interval[1]].strip()
@@ -244,6 +255,7 @@ class OptimizedV3Verifier(OptimizedVerifier):
                     "input_claim_ids": group["claim_ids"], "output_claim_ids": [row["id"] for row in after],
                     "input_count": len(block["before"]), "output_count": len(after),
                     "merged": block["action"] == "merge", "decision": block["action"],
+                    "relation": group["relation"],
                     "reason": group["reason"], "safety_guard": block["guard"],
                     "before_claims": block["before"], "after_claims": after,
                 })

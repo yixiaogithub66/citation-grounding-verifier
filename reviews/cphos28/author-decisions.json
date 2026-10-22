@@ -1,0 +1,86 @@
+{
+  "record_version": "1.0",
+  "status": "author-reviewed",
+  "author": "作者（本聊天用户本人）",
+  "author_confirmed_at": "2026-10-22",
+  "date_precision": "calendar_date",
+  "review_method": "AI逐项复核+作者裁决4争议项并报告抽查其余无问题",
+  "authorization_source": {
+    "type": "user_chat_reply",
+    "date": "2026-10-22",
+    "reference": "本对话中作者于2026-10-22对历史58条审阅记录的明确回复。",
+    "adjudication_text_form": "四项理由为忠实整理，不标称完整回复逐字转录；总体抽查短句按用户原话记录。"
+  },
+  "historical_dataset_sha256": "8f053e69982901852bd6f15382c15ba325a459aac9d2f8b37e5aac55a0ad71eb",
+  "historical_sources_sha256": "77599c2b0229ad11f392e86816116c81ec49642cb11be3118a072de853fa8c35",
+  "original_ai_review_path": "review.ai-v1.json",
+  "original_ai_review_sha256": "f8aa85fbe4a07e907211f190d4b7845da837ff487be8e1a59118785debd616a7",
+  "ai_reviewed_claim_count": 58,
+  "explicit_author_adjudication_count": 4,
+  "general_confirmation_claim_count": 54,
+  "general_spot_check_confirmation": {
+    "statement_verbatim": "其他我都抽查过了，没问题",
+    "reported_at": "2026-10-22",
+    "sampled_claim_ids": null,
+    "sample_size": null,
+    "individual_review_of_all_remaining_claims_claimed": false,
+    "scope_note": "作者报告抽查其余条目无问题，但未列具体ID、数量或逐项过程；不能认定任一未列明条目确被抽中。"
+  },
+  "zero_claim_case_scope": {
+    "case_ids": [
+      "cphos28-edge-02",
+      "cphos28-edge-03"
+    ],
+    "explicitly_adjudicated_in_reply": false,
+    "note": "零声明案例不计入58条；回复未逐例点名，不补造明确人工审阅。"
+  },
+  "open_flagged_claim_count": 0,
+  "historical_data_or_reports_rewritten": false,
+  "pilot_policy_authorization_included": false,
+  "decisions": [
+    {
+      "claim_id": "cphos28-q5-03-c1",
+      "kind": "explicit_author_adjudication",
+      "resolution_status": "closed",
+      "reviewed_at": "2026-10-22",
+      "verdict": "CONTRADICTED",
+      "granularity": "retain_whole_sentence",
+      "reasoning": "作者确认eta为阻力系数恒正，题干阻力定义f=-eta*v_n已经确定方向；维持CONTRADICTED及整句粒度。",
+      "semantic_scoring_position": "拆开后将文字方向结论判为UNSUPPORTED是真实失分，不能仅解释为粒度或文本对齐差异。文字与同向公式保留为同一错误事实。",
+      "future_evidence_policy": "维持原阻力定义作为反证；不回写历史输入、gold、预测或自动得分。"
+    },
+    {
+      "claim_id": "cphos28-q2-06-c2",
+      "kind": "explicit_author_adjudication",
+      "resolution_status": "closed",
+      "reviewed_at": "2026-10-22",
+      "verdict": "CONTRADICTED",
+      "granularity": "retain_existing",
+      "reasoning": "作者维持CONTRADICTED，确认含t_f与6.98的结果段已经足以反驳回答中的6.89。",
+      "semantic_scoring_position": "后续版本或语义审计应接受含量名t_f与6.98结果段的充分短引文，不要求全部中间求和项。",
+      "future_evidence_policy": "未来或语义审计采用该充分性立场；旧gold锚点和历史得分不回写。"
+    },
+    {
+      "claim_id": "cphos28-q3-01-c1",
+      "kind": "explicit_author_adjudication",
+      "resolution_status": "closed",
+      "reviewed_at": "2026-10-22",
+      "verdict": "SUPPORTED",
+      "granularity": "retain_existing",
+      "reasoning": "作者维持SUPPORTED；确认旧引文仅有数值与单位、缺少量名的问题属实。",
+      "semantic_scoring_position": "标签成立与引文独立可读性不足分别记录；不以引用锚点问题颠倒原标签。",
+      "future_evidence_policy": "未来锚点补为包含m_Ar与对应数值的整句，并单独披露；原数据和历史得分不回写。"
+    },
+    {
+      "claim_id": "cphos28-q4-03-c1",
+      "kind": "explicit_author_adjudication",
+      "resolution_status": "closed",
+      "reviewed_at": "2026-10-22",
+      "verdict": "CONTRADICTED",
+      "granularity": "retain_existing",
+      "reasoning": "作者维持CONTRADICTED；mu_Fe=infinity独立充分，sigma_Fe=0不是反驳磁导率为零所必需的证据。",
+      "semantic_scoring_position": "不因充分引文缺少sigma_Fe=0而在语义审计中判证据不足。",
+      "future_evidence_policy": "后续引文评价允许仅含mu_Fe=infinity的充分反证；历史gold不回写。"
+    }
+  ]
+}

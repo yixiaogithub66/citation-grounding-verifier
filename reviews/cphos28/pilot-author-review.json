@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "scope": "pilot-annotation-policy",
+  "decision": "approved",
+  "reviewer": "作者本人（本对话用户确认）",
+  "reviewed_at": "2026-10-22T02:48:55.673082+00:00",
+  "author_declared_review_date": "2026-10-22",
+  "timestamp_basis": "Time the received author confirmation was recorded; the author supplied a calendar date, not a wall-clock review time.",
+  "authorization_reference": "User reply in this chat on 2026-10-22 to request_user_input_async call_8ff0fdae1e9e410fa67963f2b1fdc345 item 0 and call_b7e6a3a5c090402e805ff2e3d9c565eb item 0.",
+  "author_confirmation": "已审阅，三条样例及规则通过",
+  "author_extension_confirmation": "扩展为同句内一致的冗余说明可合并",
+  "accepted_extension": "同一句内，文字只是完整公式的一个冗余说明，且对应性质一致、没有额外独立断言时，可合成一条并保留完整公式；若文字与公式冲突则仍拆分。",
+  "case_ids": [
+    "cphos28-review-density-01",
+    "cphos28-review-distractor-01",
+    "cphos28-review-mixed-01"
+  ],
+  "dataset_path": "../../dataset/cphos28-review/cases.jsonl",
+  "dataset_sha256": "1d19bc93b0b7c2fb804702e927bd0ce0a844262980cb8fff8e2f46b89848f640",
+  "sources_path": "../../dataset/cphos28-review/sources.json",
+  "sources_sha256": "4504865696dca1f82a05e83783b95fade56e5ac3bd35e719f51b4772d9c9444b",
+  "policy_sha256": "5ea385c57927d77ccfac8724f687ef44a105f7eecf4aa5cfbe30ba4b726da699",
+  "approved_base_policy_sha256": "3e16426a36f96c069a4f1758c423c961b6850e74c71ace0c3e962df3a461c5d6",
+  "formal_confirmation_review_scope": "No human review of future formal confirmation labels is claimed."
+}

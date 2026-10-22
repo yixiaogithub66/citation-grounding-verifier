@@ -10,7 +10,7 @@ A Python 3.11+ HTTP service that decomposes generated answers into factual claim
 | Minimal LLM | 89.23% | 1.9977 s | USD 0.012266 |
 | Optimized v2 | 86.57% | 4.9498 s | USD 0.028797 |
 
-These are the original `grounding-v2` results, including its negative comparison with minimal. V3 adds equivalence-aware merging and contradiction-evidence review; confirmation performance is not yet established. The new same-source, same-question-family confirmation experiment requires author review of three pilot examples, then frozen data and a four-backend comparison. See [v3 design](docs/V3_DESIGN.md) and [annotation policy](docs/ANNOTATION_POLICY_V3.md). Costs above use the recorded reference tariff, not a billing statement.
+These are the original `grounding-v2` results, including its negative comparison with minimal. V3 adds answer-only merging and contradiction-evidence review. The author has reviewed three pilot examples and approved the v3.1 same-sentence redundancy rule; confirmation performance must be established on frozen new data with all four backends. See [v3 design](docs/V3_DESIGN.md) and [annotation policy](docs/ANNOTATION_POLICY_V3.md). Costs above use the recorded reference tariff, not a billing statement.
 
 接收来源段落和生成答案，拆成事实声明，返回 `SUPPORTED`、`CONTRADICTED` 或 `UNSUPPORTED`，并附来源中的逐字引用。本项目实现了 [任务说明](https://gist.github.com/wsxiaoys/849522ee389e0ce359ef444653084484) 要求的 HTTP 服务和三方案评测入口。
 
@@ -136,9 +136,9 @@ CPHOS28 数据集共 **46 条案例、58 条标准声明**，来自 7 道物理�
 
 数据版本 **1.2** 补全了开发集来源中的出射角定义和一维模型标题，均来自原文相邻定义；标签和测试集输入未改变。历史运行保留原数据快照，不混入当前版本的三方案对照。完整变更记录见 [迭代记录](docs/ITERATIONS.md)。
 
-标签由 AI 辅助构造并复核，仍待用户/领域专家终审。该小规模中文公式数据主要诊断忠实度，不代表通用 RAG 性能。公式已规范化为线性文本，未测试图像理解。原 PDF 版权归 CPHOS，本仓库未附原 PDF 或宣称其内容采用开放许可。
+原 58 条标签已于 2026-10-22 经作者终审：AI 逐项复核，作者裁决四个标出项，并报告抽查其余条目无问题。该记录不等同于独立领域专家逐条认证；历史数据与成绩保持原样，引用改进意见单独登记，见 [作者审阅记录](reviews/cphos28/REVIEW.md)。该小规模中文公式数据主要诊断忠实度，不代表通用 RAG 性能。公式已规范化为线性文本，未测试图像理解。原 PDF 版权归 CPHOS，本仓库未附原 PDF 或宣称其内容采用开放许可。
 
-v3 的人工审阅材料已单独准备：[原 58 条标签复核表](reviews/cphos28/REVIEW.md)、[三条新样例审阅表](dataset/cphos28-review/REVIEW.md)、[标注规则](docs/ANNOTATION_POLICY_V3.md)。原标签未改；三条样例永久排除正式确认集。作者需裁决标出项并抽查其余标签，以及审阅三条新样例。当前未生成作者批准凭证，也未建立或运行正式确认集。
+作者已批准 [三条新样例](dataset/cphos28-review/REVIEW.md) 和 [标注规则](docs/ANNOTATION_POLICY_V3.md)，并明确允许同句内一致的冗余说明与完整公式合并；[审阅凭证](reviews/cphos28/pilot-author-review.json) 绑定实际样例、规则及用户确认。三条样例永久排除正式确认集；作者批准不代表已人工审核后续新增确认标签。
 
 ## 实测比较
 
@@ -171,9 +171,9 @@ v3 的人工审阅材料已单独准备：[原 58 条标签复核表](reviews/cp
 另用任务说明中的 SQLite 示例实际请求本机 HTTP 服务，得到 `200` 及预期的四条判断：`CONTRADICTED / SUPPORTED / SUPPORTED / UNSUPPORTED`，逐字引用校验通过。[响应记录](reports/service-smoke/sqlite.response.json) 与 [运行记录](reports/service-smoke/run.json) 单独保存；本次服务检查耗时 34.172 秒，不计入上表。
 <!-- BENCHMARK_RESULTS_END -->
 
-## v3 当前验证
+## v3 初版验证记录
 
-v3 代码已实现并冻结，**正式确认集尚未构造或运行，作者审阅待完成**。原开发集四路回归共 72 条运行记录，全部结构有效：
+以下保留初版 `grounding-v3`（严格等价规则）的验证记录。作者随后已批准样例、旧标签终审及冗余说明合并边界，当前实现更新为 `grounding-v3.1`，其新评测单独记录。初版开发集四路回归共 72 条运行记录，全部结构有效：
 
 | 方法 | 开发集严格 F1 | 平均耗时/例 | 18 例参考价估算 |
 | --- | ---: | ---: | ---: |
@@ -186,7 +186,7 @@ v2/v3 均为 18/18 整例正确。该开发集已饱和，不能据此证明 v3 
 
 134 项测试通过；干净克隆在无密钥条件下通过测试、数据校验、离线评测和 HTTP 检查。真实 v3 服务已通过任务中的 SQLite 示例，见 [HTTP 记录](reports/service-smoke-v3/run.json)。这些检查验证实现与回归，正式效果结论仍需新增确认集。
 
-冻结后对旧 test 作了一次诊断回归：24/24 响应有效，严格 F1 **86.57%**，整例正确 21/24，原三处粒度问题仍在。两次合并调用找到了目标候选，但模型认为“局部性质”与“完整公式”不严格等价而拒绝合并，因此尚未实现预期的过拆修复。此处需要作者明确标注边界，不能宣称 v3 已胜出或借旧 test 继续追分。详见 [回归报告](reports/test-v3-regression/report.md) 和 [失败复核](reports/test-v3-regression/AUDIT.md)。
+初版冻结后对旧 test 作了一次诊断回归：24/24 响应有效，严格 F1 **86.57%**，整例正确 21/24，原三处粒度问题仍在。两次合并调用找到了目标候选，但模型认为“局部性质”与“完整公式”不严格等价而拒绝合并，因此该版未实现预期的过拆修复。作者据此明确批准“同句内一致的冗余说明可合并”的规则，v3.1 单独实现并冻结；旧数据和旧成绩不回写。详见 [初版回归报告](reports/test-v3-regression/report.md) 和 [失败复核](reports/test-v3-regression/AUDIT.md)。
 
 ## 复现检查
 

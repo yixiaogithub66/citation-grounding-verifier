@@ -37,9 +37,10 @@ def extraction(*texts: str, exclusions: tuple[str, ...] = ()) -> dict:
     }
 
 
-def merge_decision(*groups: list[str], candidate_id: str = "m1") -> dict:
+def merge_decision(*groups: list[str], candidate_id: str = "m1", relation: str = "equivalent") -> dict:
     return {"candidate_id": candidate_id, "groups": [
-        {"claim_ids": group, "reason": "Same assertion." if len(group) > 1 else "Keep a distinct assertion."}
+        {"claim_ids": group, "relation": relation if len(group) > 1 else "distinct",
+         "reason": "Same assertion or consistent local formula property." if len(group) > 1 else "Keep a distinct assertion."}
         for group in groups
     ]}
 
@@ -118,7 +119,7 @@ class V3Tests(unittest.TestCase):
         result, client = self.run_verifier(text, [extraction(text), {"claims": [row(text, "SUPPORTED")]}], [text])
         self.assertEqual([item["stage"] for item in client.inputs], ["decompose", "verify"])
         self.assertEqual(result.telemetry["backend"], "optimized-v3")
-        self.assertEqual(result.telemetry["prompts"]["version"], "grounding-v3")
+        self.assertEqual(result.telemetry["prompts"]["version"], "grounding-v3.1")
         self.assertEqual(result.telemetry["merge_audits"], [])
         self.assertEqual(set(result.report["claims"][0]), {"claim_text", "verdict", "reasoning", "citations"})
 
@@ -160,6 +161,98 @@ class V3Tests(unittest.TestCase):
         self.assertEqual(set(payload), {"generated_answer", "claims", "candidates"})
         self.assertNotIn("context_passages", payload)
         self.assertEqual(result.report["claims"][0]["claim_text"], answer)
+
+    def test_same_sentence_weaker_property_merges_and_keeps_the_complete_formula(self) -> None:
+        prose, formula = "The numerator contains x^3", "F = k*x^3/(1+s)."
+        answer = prose + ", in other words " + formula
+        result, _ = self.run_verifier(answer, [
+            extraction(prose, formula, exclusions=("in other words",)),
+            {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual([claim["claim_text"] for claim in result.report["claims"]], [answer])
+        self.assertIn(formula, result.report["claims"][0]["claim_text"])
+        audit = result.telemetry["merge_audits"][0]
+        self.assertTrue(audit["merged"])
+        self.assertEqual(audit["relation"], "same_sentence_redundancy")
+
+    def test_formula_property_without_restatement_marker_still_gets_semantic_review(self) -> None:
+        prose, formula = "The denominator contains 2", "F = k*x/(2*m)."
+        answer = prose + ", " + formula
+        result, client = self.run_verifier(answer, [
+            extraction(prose, formula),
+            {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual(result.report["claims"][0]["claim_text"], answer)
+        payload = json.loads(client.inputs[1]["messages"][1]["content"])
+        self.assertIn("same_sentence_formula_description", payload["candidates"][0]["triggers"])
+        self.assertEqual([item["stage"] for item in client.inputs], ["decompose", "merge"])
+
+    def test_value_sign_and_condition_disagreements_remain_separate(self) -> None:
+        pairs = [
+            ("The numerator contains x^2", "F = k*x^3.", "Different powers."),
+            ("The written coefficient is +2", "F = -2*x.", "Different explicit signs."),
+            ("At T = 0 the value is 2", "at T = 1, F = 2.", "Different conditions."),
+        ]
+        for prose, formula, reason in pairs:
+            with self.subTest(reason=reason):
+                answer = prose + ", i.e. " + formula
+                decision = merge_decision(["c1"], ["c2"])
+                for group in decision["groups"]:
+                    group["reason"] = reason
+                result, _ = self.run_verifier(answer, [
+                    extraction(prose, formula, exclusions=("i.e.",)), {"decisions": [decision]},
+                ])
+                self.assertEqual([claim["claim_text"] for claim in result.report["claims"]], [prose, formula])
+                self.assertTrue(all(not audit["merged"] for audit in result.telemetry["merge_audits"]))
+                self.assertTrue(all(audit["relation"] == "distinct" for audit in result.telemetry["merge_audits"]))
+
+    def test_same_sentence_redundancy_is_rejected_across_original_sentences(self) -> None:
+        prose, formula = "The numerator contains x^3.", "F = k*x^3/(1+s)."
+        answer = prose + " " + formula
+        verifier = OptimizedV3Verifier(self.settings, FakeClient([]))
+        claims = verifier._extract(extraction(prose, formula), answer)
+        self.assertEqual(merge_candidates(claims, answer), [])
+        forced_candidates = [{"candidate_id": "m1", "claim_ids": ["c1", "c2"], "triggers": []}]
+        merged, audits = verifier._merge_output(
+            {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+            forced_candidates, claims, answer, [],
+        )
+        self.assertEqual([claim["claim_text"] for claim in merged], [prose, formula])
+        self.assertEqual(audits[0]["decision"], "keep_safety_guard")
+        self.assertIn("one original sentence", audits[0]["safety_guard"])
+
+    def test_inequality_implication_is_not_formula_property_redundancy(self) -> None:
+        left, right = "P <= Q", "P < Q."
+        answer = left + ", i.e. " + right
+        result, _ = self.run_verifier(answer, [
+            extraction(left, right, exclusions=("i.e.",)),
+            {"decisions": [merge_decision(["c1", "c2"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual(len(result.report["claims"]), 2)
+        self.assertEqual(result.telemetry["merge_audits"][0]["decision"], "keep_safety_guard")
+        self.assertIn("explicit equation", result.telemetry["merge_audits"][0]["safety_guard"])
+
+    def test_local_formula_property_merge_does_not_swallow_a_third_predicate(self) -> None:
+        prose, formula, independent = "The numerator contains x^3", "F = k*x^3/(1+s)", "the mass is 7."
+        answer = prose + ", i.e. " + formula + ", and " + independent
+        result, _ = self.run_verifier(answer, [
+            extraction(prose, formula, independent, exclusions=("i.e.", "and")),
+            {"decisions": [merge_decision(["c1", "c2"], ["c3"], relation="same_sentence_redundancy")]},
+        ])
+        self.assertEqual([claim["claim_text"] for claim in result.report["claims"]], [
+            prose + ", i.e. " + formula, independent,
+        ])
+        self.assertNotIn(independent, result.report["claims"][0]["claim_text"])
+        self.assertIn(formula, result.report["claims"][0]["claim_text"])
+
+    def test_unclassified_merge_relation_fails_instead_of_silently_merging(self) -> None:
+        text = "A is hot."
+        bad = {"decisions": [merge_decision(["c1", "c2"], relation="looks_similar")]}
+        client = FakeClient([extraction(text, text), bad, bad])
+        with self.assertRaises(VerificationError) as raised:
+            OptimizedV3Verifier(self.settings, client).verify(VerificationRequest([], text))
+        self.assertEqual(raised.exception.code, "invalid_model_output")
+        self.assertEqual(raised.exception.telemetry["merge_audits"], [])
 
     def test_marker_does_not_merge_prose_and_formula_with_different_values(self) -> None:
         left, right = "The rate is 2", "rate = 3."

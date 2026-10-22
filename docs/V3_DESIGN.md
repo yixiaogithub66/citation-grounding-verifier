@@ -12,7 +12,7 @@ The historical strict correct count of 29 for each LLM means 29 text-aligned, co
 
 The extraction rule preserves the full original sentence when it expresses one proposition. A formula and its equivalent prose are one proposition only if the quantity, value, sign, conditions and scope agree. A sentence containing independent propositions with different truth values must still split. Requiring multiple source passages does not itself justify splitting a single conclusion.
 
-Merging takes place before verification and receives only the answer and extracted claims, never source context or gold labels. Deterministic similarity and explicit restatement connectors select candidates; they do not prove equivalence. One batched model call decides which candidates are equivalent, defaulting to separate claims when uncertain. Reconstructed text comes from the original answer. A merge must preserve coverage and cannot absorb unrelated clauses merely because they share a sentence. Shared subjects and conditions must survive splitting.
+Merging takes place before verification and receives only the answer and extracted claims, never source context or gold labels. Deterministic similarity and explicit restatement connectors select candidates; they do not prove equivalence. One batched model call decides which candidates satisfy the author-approved grouping rule, defaulting to separate claims when uncertain. In v3.1 this includes consistent redundant property descriptions in the same sentence as their complete formula: the formula may contain more information, but the prose cannot add a new assertion or conflict with it. This is annotation grouping, not a claim of logical equivalence. Reconstructed text comes from the original answer. A merge must preserve coverage and cannot absorb unrelated clauses merely because they share a sentence. Shared subjects and conditions must survive splitting.
 
 ## Contradiction evidence review
 
@@ -33,7 +33,7 @@ Invalid JSON, fabricated public citations, upstream failures and exhausted forma
 
 The first three pilot examples are not an extra source of final evaluation credit. If their review leads to code or policy changes, freeze those changes before constructing the formal confirmation set. Historical labels can be adjudicated separately without overwriting the released v1.2 benchmark or its recorded results.
 
-The prepared author-facing materials are `reviews/cphos28/REVIEW.md` (58 historical claims) and `dataset/cphos28-review/REVIEW.md` (three new pilots). Their empty author-decision fields are pending, not approval. `docs/ANNOTATION_POLICY_V3.md` is the policy artifact to bind to the eventual pilot-review attestation.
+The author-facing materials are `reviews/cphos28/REVIEW.md` (58 historical claims) and `dataset/cphos28-review/REVIEW.md` (three new pilots). On 2026-10-22 the author approved the pilots, resolved all four flagged historical items and reported spot-checking the remainder without issues. The author also explicitly approved the same-sentence redundancy extension. `reviews/cphos28/pilot-author-review.json` records the actual pilot-policy confirmation and binds the reviewed files and `docs/ANNOTATION_POLICY_V3.md`; it does not certify human review of the formal confirmation labels.
 
 After a real author confirmation has been recorded in an attestation JSON and the formal cases have been constructed, the freeze helper validates and binds those existing artifacts without making model calls:
 
@@ -42,7 +42,7 @@ python scripts/freeze_confirmation.py --dataset dataset/cphos28-confirmation/cas
 python scripts/benchmark.py --dataset dataset/cphos28-confirmation/cases.jsonl --split confirmation --backends baseline minimal optimized-v2 optimized-v3 --thinking enabled --output-dir results/confirmation-first
 ```
 
-These commands describe the next stage; the formal dataset and approval file do not exist until their actual prerequisites are complete. The helper never manufactures approval and refuses to overwrite an existing freeze. The benchmark checks the author-reviewed pilot data, source and policy hashes, excludes pilot inputs even if renamed, and checks the formal code/data/settings bindings before any model call. A local execution ledger prevents an accidental second first-run in another output folder. Explicit `--confirmation-replicate` runs are labeled as repeats; this ledger does not prove global uniqueness across other checkouts or external API clients.
+The helper never manufactures approval and refuses to overwrite an existing freeze. The benchmark checks the author-reviewed pilot data, source and policy hashes, excludes pilot inputs even if renamed, and checks the formal code/data/settings bindings before any model call. A local execution ledger prevents an accidental second first-run in another output folder. Explicit `--confirmation-replicate` runs are labeled as repeats; this ledger does not prove global uniqueness across other checkouts or external API clients.
 
 ## Interpretation and release
 
