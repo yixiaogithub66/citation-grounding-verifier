@@ -1,5 +1,28 @@
 # Citation Grounding & Faithfulness Verifier
 
+## Overview
+
+A Python 3.11+ HTTP service that decomposes generated answers into factual claims, checks them against supplied passages, and enforces exact-source citations. The repository includes the original 46-case CPHOS28 benchmark, 12 new confirmation cases, deterministic and single-call baselines, separately versioned v2/v3.1 verifiers, recorded model outputs, and reproducible tests.
+
+| Historical frozen test (24 cases) | Strict claim + verdict F1 | Mean latency | Estimated run cost |
+| --- | ---: | ---: | ---: |
+| Non-LLM baseline | 30.77% | 0.0007 s | USD 0 |
+| Minimal LLM | 89.23% | 1.9977 s | USD 0.012266 |
+| Optimized v2 | 86.57% | 4.9498 s | USD 0.028797 |
+
+These are the original `grounding-v2` results, including its negative comparison with minimal. After author approval of three excluded pilots and the v3.1 annotation policy, a frozen same-source, same-question-family confirmation run completed on 2026-10-22:
+
+| New confirmation (12 cases / 42 gold claims) | Strict claim + verdict F1 | Whole cases correct | Mean latency | Estimated run cost |
+| --- | ---: | ---: | ---: | ---: |
+| Non-LLM baseline | 36.14% | 0/12 | 0.0013 s | USD 0 |
+| Minimal LLM | 58.14% | 3/12 | 5.1554 s | USD 0.018439 |
+| Frozen optimized v2 | 90.70% | 9/12 | 13.5279 s | USD 0.046071 |
+| Optimized v3.1 | **97.62%** | **11/12** | 15.8928 s | USD 0.053769 |
+
+V3.1 gains 6.92 percentage points over v2 on the same inputs, chiefly by avoiding two prose/formula over-splits during extraction. It takes 17.5% longer and costs 16.7% more at the fixed reference tariff. Three merge checks correctly retain mixed-truth assertions; no successful merge or contradiction re-review occurs. All LLM methods still misclassify one unsupported scope attribution as contradicted. Minimal's approximate-alignment F1 is 76.74%, so its strict gap must not be interpreted as an equivalent semantic-accuracy gap.
+
+All 48 responses are structurally valid. The 12 related, constructed cases use Q2/Q6/Q7 excerpts; formal labels are AI-assisted with independent AI-role review, not individually author-reviewed. This single run is not a component ablation or an independent-question generalization result. Code, data, settings and labels were frozen before inference and were not retuned from these outputs. Costs are standardized estimates, not billing statements. See [full results](reports/confirmation-v3.1/report.md), [outcome audit](reports/confirmation-v3.1/AUDIT.md), [v3.1 design](docs/V3_DESIGN.md) and [annotation policy](docs/ANNOTATION_POLICY_V3.md).
+
 接收来源段落和生成答案，拆成事实声明，返回 `SUPPORTED`、`CONTRADICTED` 或 `UNSUPPORTED`，并附来源中的逐字引用。本项目实现了 [任务说明](https://gist.github.com/wsxiaoys/849522ee389e0ce359ef444653084484) 要求的 HTTP 服务和三方案评测入口。
 
 Python **3.11+**，仅使用标准库，无需安装依赖。默认使用 DeepSeek `deepseek-flash`，也可连接 Chat Completions 兼容接口。程序化校验保证响应结构、引用下标和原文匹配；语义判断依赖对应验证方法。
@@ -20,7 +43,7 @@ LLM_REPAIR_ATTEMPTS=1
 LLM_UPSTREAM_RETRIES=1
 ```
 
-新服务和 `benchmark.py` 自动读取 `.env`，优先级为显式参数 > 进程环境变量 > `.env` > 默认值。文件仅解析为文本配置，不执行其中内容。`api-default` 沿用模型服务端默认思考模式；比较时两个 LLM 使用同一模型设置。
+新服务和 `benchmark.py` 自动读取 `.env`，优先级为显式参数 > 进程环境变量 > `.env` > 默认值。文件仅解析为文本配置，不执行其中内容。`api-default` 沿用模型服务端默认思考模式；比较时各 LLM 后端使用同一模型设置。
 
 启动优化验证器：
 
@@ -28,7 +51,7 @@ LLM_UPSTREAM_RETRIES=1
 python -m grounding.server --backend optimized
 ```
 
-服务地址为 `http://127.0.0.1:8000/verify`。`--backend minimal` 使用单次 LLM；`--backend baseline` 完全离线且无需密钥。可通过 `--port` 更改端口。
+服务地址为 `http://127.0.0.1:8000/verify`。`optimized` 是当前 `optimized-v3` 的别名；`--backend optimized-v2` 使用冻结的旧版。`--backend minimal` 使用单次 LLM；`--backend baseline` 完全离线且无需密钥。可通过 `--port` 更改端口。
 
 在另一个 PowerShell 窗口发送任务说明中的 SQLite 示例：
 
@@ -63,13 +86,14 @@ Invoke-RestMethod -Uri http://127.0.0.1:8000/verify -Method Post -ContentType "a
 
 错误响应为 `{"error":{"code":"...","message":"..."}}`。`GET /health` 用于检查服务状态。每个请求最多 64 个来源段落、每段 32,000 字符、答案 20,000 字符、总输入 200,000 字符、JSON body 1 MiB；最多返回 64 条声明。服务默认只绑定本机，最多 4 个并行验证请求，HTTP body 读取超时 15 秒。
 
-## 三种方法
+## 方法与版本
 
 | 方法 | 处理流程 | 优势与限制 |
 | --- | --- | --- |
 | `baseline` | 句子切分、IDF 加权词/中文字符特征检索、保守的公式/数值/否定规则 | 无 API 成本、确定性；不能可靠处理改写和跨段代数推理 |
 | `minimal` | 最简任务及输出契约提示词，单次 LLM 请求，再校验返回值 | 实现简单；无模型输出修复、无传输重试 |
-| `optimized` | 单独拆分事实及原答案片段，逐声明对照来源验证，校验结构与逐字引用，有限修复 | 提高覆盖和证据约束，但增加调用量；不存在语义正确性的硬保证 |
+| `optimized-v2` | 原冻结两阶段方案：拆分事实及原答案片段，再逐声明验证，校验结构与逐字引用，有限修复 | 保留历史对照；运行前校验推理文件的原始字节哈希 |
+| `optimized-v3`（`optimized`，提示版本 v3.1） | 拆分后筛选等价复述或同句一致的冗余说明，按需批量合并并保留完整公式；验证时记录矛盾证据，对缺少有效结构记录的矛盾按需批量复核 | 保留三种判决的改判方向，新增调用全部计入耗时和费用；结构检查不能证明语义正确 |
 
 HTTP 与 benchmark 调用相同的后端实现。推理模块只接收两个请求字段，不能访问数据集标签。优化方案的原文覆盖检查能发现字面遗漏，不能证明所有事实都已正确拆分；被模型判为非事实的片段仍需语义审阅。详细实现与测试位于 `grounding/` 和 `tests/`。
 
@@ -83,13 +107,19 @@ python scripts/benchmark.py --split test --output-dir results/comparison-test
 python scripts/benchmark.py --split edge --output-dir results/comparison-edge
 ```
 
-默认比较全部三种方法。离线检查可运行：
+默认比较 `baseline / minimal / optimized-v3`。四路开发集比较可运行：
+
+```powershell
+python scripts/benchmark.py --split dev --backends baseline minimal optimized-v2 optimized-v3 --thinking enabled --output-dir results/v3-dev
+```
+
+离线检查可运行：
 
 ```powershell
 python scripts/benchmark.py --backends baseline --split dev --output-dir results/baseline-dev
 ```
 
-先用开发集迭代，再冻结代码与提示词运行测试集。输出目录须为新目录或空目录，以保留既有实验。每次保存配置、代码/提示词/数据哈希、原始预测、调用追踪、结构错误、token 用量及 `report.json` / `report.md` 对照报告。所有调用和修复都计入延迟与用量。
+历史 v2 先用开发集迭代，再冻结代码与提示词运行测试集。旧 test 现已用于 v3 的诊断设计，后续仅作回归；v3 的正式比较改用新增确认集。输出目录须为新目录或空目录，以保留既有实验。每次保存配置、代码/提示词/数据哈希、原始预测、调用追踪、结构错误、token 用量及 `report.json` / `report.md` 对照报告。所有调用和修复都计入延迟与用量。
 
 关键指标包含：成功率、严格文本对齐下的声明+标签 P/R/F1、宏 F1、整例正确率、漏答/多答、近似对齐诊断、合法引用率、证据段落覆盖、标准证据文字包含率、平均/P50/P95 延迟、输入/输出及缓存 token。严格匹配不会把含义不同但字面相近的公式自动视为正确；近似对齐也只是诊断，需要检查匹配审计。
 
@@ -100,10 +130,20 @@ python scripts/benchmark.py --backends baseline --split dev --output-dir results
 复现本次测试采用的统一峰时参考价格估算：
 
 ```powershell
-python scripts/benchmark.py --split test --thinking enabled --input-price-per-million 0.30 --cached-input-price-per-million 0.006 --output-price-per-million 1.20 --currency USD --output-dir results/test-priced
+python scripts/benchmark.py --split test --backends baseline minimal optimized-v2 --thinking enabled --input-price-per-million 0.30 --cached-input-price-per-million 0.006 --output-price-per-million 1.20 --currency USD --output-dir results/test-priced
 ```
 
 计费来源与限制见 [价格说明](reports/PRICING.md)。这只是统一价格下的估算，非实际扣费账单。
+
+新增确认集已完成三条示例及标注规则的作者审阅、正式数据构造、独立 AI 复核与冻结。`--split confirmation` 会验证冻结清单、代码与数据哈希、模型设置、四路后端和示例审阅凭证；缺失时在任何模型调用前报错。示例仅用 `review` 划分，永久排除出正式确认集。详细顺序见 [v3 设计](docs/V3_DESIGN.md)。
+
+直接使用仓库已提交的冻结清单，在新输出目录运行四路确认评测：
+
+```powershell
+python scripts/benchmark.py --dataset dataset/cphos28-confirmation/cases.jsonl --split confirmation --backends baseline minimal optimized-v2 optimized-v3 --thinking enabled --input-price-per-million 0.30 --cached-input-price-per-million 0.006 --output-price-per-million 1.20 --currency USD --output-dir results/confirmation-reproduction
+```
+
+同一工作区已有该批输入的运行登记时，须额外加 `--confirmation-replicate`，明确记录为重复实验。新克隆的本地登记为空，不表示这些数据在全球从未运行过；复现也不是新的未见确认。无需重新生成或覆盖冻结清单，模型设置须与清单一致。
 
 原 `scripts/evaluate_llm.py` 保留为单模型诊断工具，其 `fixed-claims` 模式会提供标准拆分文字，因此不与这里的端到端三方案分数混用。
 
@@ -115,12 +155,16 @@ CPHOS28 数据集共 **46 条案例、58 条标准声明**，来自 7 道物理�
 
 数据版本 **1.2** 补全了开发集来源中的出射角定义和一维模型标题，均来自原文相邻定义；标签和测试集输入未改变。历史运行保留原数据快照，不混入当前版本的三方案对照。完整变更记录见 [迭代记录](docs/ITERATIONS.md)。
 
-标签由 AI 辅助构造并复核，仍待用户/领域专家终审。该小规模中文公式数据主要诊断忠实度，不代表通用 RAG 性能。公式已规范化为线性文本，未测试图像理解。原 PDF 版权归 CPHOS，本仓库未附原 PDF 或宣称其内容采用开放许可。
+原 58 条标签已于 2026-10-22 经作者终审：AI 逐项复核，作者裁决四个标出项，并报告抽查其余条目无问题。该记录不等同于独立领域专家逐条认证；历史数据与成绩保持原样，引用改进意见单独登记，见 [作者审阅记录](reviews/cphos28/REVIEW.md)。该小规模中文公式数据主要诊断忠实度，不代表通用 RAG 性能。公式已规范化为线性文本，未测试图像理解。原 PDF 版权归 CPHOS，本仓库未附原 PDF 或宣称其内容采用开放许可。
+
+作者已批准 [三条新样例](dataset/cphos28-review/REVIEW.md) 和 [标注规则](docs/ANNOTATION_POLICY_V3.md)，并明确允许同句内一致的冗余说明与完整公式合并；[审阅凭证](reviews/cphos28/pilot-author-review.json) 绑定实际样例、规则及用户确认。三条样例永久排除正式确认集；作者批准不代表已人工审核后续新增确认标签。
+
+[正式确认集](dataset/cphos28-confirmation/README.md) 包含 **12 条案例、42 条声明、22 个新片段**，来自 Q2/Q6/Q7，四种题型各 3 例，标签 S/C/U 为 15/13/14。标签采用 AI 辅助构造与独立 AI 角色复核；它是**同来源、同题族的新增确认集**，样例相关且部分片段复用，不是题目级独立测试。代码修复、数据审阅和冻结的真实时序见 [构造记录](dataset/cphos28-confirmation/construction.json)。
 
 ## 实测比较
 
 <!-- BENCHMARK_RESULTS_START -->
-2026-10-20，`deepseek-flash`，显式启用思考模式，数据 v1.2。开发阶段结束后冻结代码与提示词，测试集为 **24 条案例、32 条标准声明**；未根据测试结果再调参。三种方法均完成 24/24 次验证，返回结构全部有效。
+以下保留 2026-10-20 的历史 `grounding-v2` 结果：`deepseek-flash`，显式启用思考模式，数据 v1.2。该轮开发阶段结束后冻结代码与提示词，测试集为 **24 条案例、32 条标准声明**；该轮测试后未修改 v2。三种方法均完成 24/24 次验证，返回结构全部有效。后续 v3 已利用这些失败作诊断，不能再将旧 test 称为 v3 的未见测试。
 
 | 方法 | 严格声明+标签 F1 | 严格宏 F1 | 近似对齐诊断 F1 | 平均耗时/例 | P95 | 24 例估算费用 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -138,7 +182,7 @@ CPHOS28 数据集共 **46 条案例、58 条标准声明**，来自 7 道物理�
 
 - 最简方案 `q2-05`、`q7-05` 的求和/世界线结论正确，但改写了声明，导致严格匹配失败；`q5-03` 把同一符号错误的文字说明和公式分成两条。
 - 优化方案 `q5-02`、`q5-06` 将文字解释和等价公式重复拆分，未与单条标准声明对齐。这是声明粒度问题，不能一概称为物理判断错误。
-- 优化方案 `q5-03` 将方向判断标为 `UNSUPPORTED`，理由是片段未明确 `eta` 的符号；原标签按阻力系数正值理解。此项同时暴露上下文假设与标签边界，保留原测试记录供复核。
+- 优化方案 `q5-03` 将方向判断标为 `UNSUPPORTED`，理由是片段未明确 `eta` 的符号；作者于 2026-10-22 裁决阻力系数为正，维持整句 `CONTRADICTED`，该方向片段属于真实判决错误。历史记录与成绩不回写，争议已关闭。
 - 最简方案 `q2-05` 引用了无量纲 `t_2` 的数值，却没有引用同段的实际时长单位关系；合法子串并不自动等于充分证据。
 
 开发集最终严格 F1：baseline 33.3%、minimal 91.7%、optimized 100%。两个 LLM 的开发集近似诊断 F1 均为 100%，不应把文字对齐优势解释成等量语义收益。4 条边界案例由三种方法全部通过；没有真实调用触发格式修复，其恢复路径由模拟上游测试验证。
@@ -147,6 +191,48 @@ CPHOS28 数据集共 **46 条案例、58 条标准声明**，来自 7 道物理�
 
 另用任务说明中的 SQLite 示例实际请求本机 HTTP 服务，得到 `200` 及预期的四条判断：`CONTRADICTED / SUPPORTED / SUPPORTED / UNSUPPORTED`，逐字引用校验通过。[响应记录](reports/service-smoke/sqlite.response.json) 与 [运行记录](reports/service-smoke/run.json) 单独保存；本次服务检查耗时 34.172 秒，不计入上表。
 <!-- BENCHMARK_RESULTS_END -->
+
+## v3 初版验证记录
+
+以下保留初版 `grounding-v3`（严格等价规则）的验证记录。作者随后已批准样例、旧标签终审及冗余说明合并边界，当前实现更新为 `grounding-v3.1`，其新评测单独记录。初版开发集四路回归共 72 条运行记录，全部结构有效：
+
+| 方法 | 开发集严格 F1 | 平均耗时/例 | 18 例参考价估算 |
+| --- | ---: | ---: | ---: |
+| `baseline` | 33.33% | 0.0022 s | USD 0 |
+| `minimal` | 89.80% | 2.5679 s | USD 0.011066 |
+| `optimized-v2` | 100% | 4.9160 s | USD 0.020181 |
+| `optimized-v3` | 100% | 5.7163 s | USD 0.024533 |
+
+v2/v3 均为 18/18 整例正确。该开发集已饱和，不能据此证明 v3 的泛化提升；本轮没有触发额外合并或矛盾复核调用。完整记录见 [四路开发回归](reports/dev-v3-final/report.md)。早期 JSON 模式兼容失败与修复过程也保留在 [迭代记录](docs/ITERATIONS.md)，未用失败后的重跑覆盖原记录。
+
+当时 134 项测试通过；干净克隆在无密钥条件下通过测试、数据校验、离线评测和 HTTP 检查。真实 v3 服务已通过任务中的 SQLite 示例，见 [HTTP 记录](reports/service-smoke-v3/run.json)。这些是初版实现与回归检查，当前 v3.1 的确认结果另行记录。
+
+初版冻结后对旧 test 作了一次诊断回归：24/24 响应有效，严格 F1 **86.57%**，整例正确 21/24，原三处粒度问题仍在。两次合并调用找到了目标候选，但模型认为“局部性质”与“完整公式”不严格等价而拒绝合并，因此该版未实现预期的过拆修复。作者据此明确批准“同句内一致的冗余说明可合并”的规则，v3.1 单独实现并冻结；旧数据和旧成绩不回写。详见 [初版回归报告](reports/test-v3-regression/report.md) 和 [失败复核](reports/test-v3-regression/AUDIT.md)。
+
+## v3.1 正式确认结果
+
+2026-10-22 在冻结的 12 例、42 条声明上完成四路一次性实测：`deepseek-flash`、`thinking=enabled`，共 **48/48** 条结构有效记录，无 API 失败、格式修复或传输重试。代码、数据、规则、作者样例审阅凭证及模型设置均在调用前绑定哈希。
+
+| 方法 | 严格 F1 | 近似对齐 F1 | 严格整例正确 | 正确 / 预测 / gold | 平均耗时/例 | 12 例估算费用 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `baseline` | 36.14% | 36.14% | 0/12 | 15 / 41 / 42 | 0.0013 s | USD 0 |
+| `minimal` | 58.14% | 76.74% | 3/12 | 25 / 44 / 42 | 5.1554 s | USD 0.018439 |
+| `optimized-v2` | 90.70% | 90.70% | 9/12 | 39 / 44 / 42 | 13.5279 s | USD 0.046071 |
+| `optimized-v3`（v3.1） | **97.62%** | **97.62%** | **11/12** | **41 / 42 / 42** | 15.8928 s | USD 0.053769 |
+
+主要对照是同卷 v2 → v3.1：严格 F1 提高 **6.92 个百分点**，两例改善、无整例退步。`density-q6` 的 B 系数指数说明和完整公式、`reformulation_calculation-q2` 的系数符号说明和完整公式，在 v2 被多拆；v3.1 在初始提取时保留整句，消除 4 条 extra 和 2 条 missing。新增合并阶段没有执行实际合并，不能把这两例收益归因于合并调用。
+
+minimal 的失分包含缩写、改写和过拆；近似对齐后从 25 条正确增加到 33 条，但仍有粒度差异和范围判断错误。不能把 58.14% 的严格分数直接当成语义准确率，也不能用新旧数据的分差证明能力变化。
+
+三个 LLM 都把 `scope_distractor-q2-c1` 的额外来源归属由 gold 的 `UNSUPPORTED` 判成 `CONTRADICTED`。片段给出某公式用于悬链线，并未排他地证明其不能出现在自由悬挂部分；缺乏支持不等于直接矛盾。v3.1 的结构化矛盾记录通过检查，没有触发复核，说明该门控仍不能保证语义正确。原标签与全部预测保留。
+
+调用数为 minimal **12**、v2 **24**、v3.1 **27**。v3.1 的 3 次额外调用均检查半对半错句，保留分开的命题；实际合并数、矛盾复核数、改判数均为 0。相对 v2，平均延迟增加 **17.5%**、参考价费用增加 **16.7%**；四路合计估算 USD **0.118279**。该轮按固定顺序逐例执行，延迟与缓存费用并非随机化实验。
+
+v3.1 的证据段落覆盖为 28/28、多段必需证据覆盖为 5/5，但标准引文完整包含仅 10/33；许多短引文没有覆盖 gold 的整段锚点。这些指标度量不同，不能把段落覆盖 100% 写成语义引用准确率 100%。详细引文复核与剩余问题见 [结果审计](reports/confirmation-v3.1/AUDIT.md)，完整数值和调用记录见 [报告](reports/confirmation-v3.1/report.md) 与 [原始记录](reports/confirmation-v3.1/responses.jsonl)。
+
+本轮确认集来自同来源、同题族，12 例之间相关，正式 42 条标签经过 AI 构造与独立 AI 复核；作者审批限于先前的样例与规则。一次运行支持本批数据上的改善，不能证明通用优越性，也不能单独证明额外合并或复核阶段的收益。看到结果后未修改代码、评分或标签。
+
+另保留 v3.1 在旧数据上的 [开发回归](reports/dev-v3.1/report.md)（100%）和 [旧 test 回归](reports/test-v3.1-regression/report.md)（95.38%，23/24 整例）。它们使用独立合成审查修复前的代码快照，仅属已见数据回归，不替代本次确认。最终实现 **143 项测试通过**，干净克隆在无密钥下通过离线测试、数据校验、baseline benchmark 和 HTTP 检查。
 
 ## 复现检查
 

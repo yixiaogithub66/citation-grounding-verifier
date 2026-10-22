@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "kind": "confirmation-data-review-freeze",
+  "frozen_at": "2026-10-22T03:13:45.422618+00:00",
+  "case_count": 12,
+  "claim_count": 42,
+  "source_passage_count": 22,
+  "gold_verdict_counts": {
+    "CONTRADICTED": 13,
+    "SUPPORTED": 15,
+    "UNSUPPORTED": 14
+  },
+  "category_counts": {
+    "density": 3,
+    "mixed_truth_compound": 3,
+    "reformulation_calculation": 3,
+    "scope_distractor": 3
+  },
+  "files_sha256": {
+    "cases.jsonl": "2a2fefb97d8344f5dbdf126672de498d87fc8695b719b9479095b98b6b4165ea",
+    "sources.json": "7b0681601d540ee9301e43ef0499bb4f3b452266db3f0306d2a92050ccf3aaa6",
+    "inputs.jsonl": "2a96569a567b90e4c9c2abbb0204b63dc9264757c7d2ebfa705766da22062252",
+    "gold.jsonl": "58e026451919fd47522aaf27f8ef964eb0adbf4c6f17188fae0d1da78ff19ac9",
+    "manifest.jsonl": "36669e87dc31f6b3f0972430741492896e7fb4737ae0bc6a7d0b0968005dbf9c",
+    "validation_report.json": "87635391deb97d4f516ace6a3c5bef0b9a989c3bad81474391d2d90daff8a6f2",
+    "construction.json": "392b54be5edad90c4871ca2184bd4dae69a4a1a080e5fecc7965b0eef091d300",
+    "ai_review.json": "b8c87436ae206ab9654fc26f512db6d8112773628532f5cc181ac571ca75cc71",
+    "README.md": "87bd8dc79501aaa98a2f25c32c21918b9d2497588903a9c311c9765da67e5934",
+    "AI_REVIEW.md": "23c316318b78d0e4ca28ad3309832b6725f7e43c6784eecc5835ab3c5540da8c",
+    "SOURCE_REVIEW.md": "7942c606b2614e3df31b19b6b1f24ac464064602b082153ab9936329455986f2",
+    "review-history/draft-before-review.jsonl": "1d82d4cec98d24f9aaa29cde80f4a41825764bc41218a76f668079ed1c2aa547"
+  },
+  "builder_sha256": "abe14b0c109366d78bfee6c50005ef73d1290a505c917e64a0dd5b6c36a88759",
+  "final_implementation_freeze": {
+    "path": "../../reports/v3.1-code-freeze-final.json",
+    "sha256": "9e1d9ccade55aa65b962a9e998bfdd942d32e83316f527dab7c900de815711fe"
+  },
+  "annotation_policy": {
+    "path": "../../docs/ANNOTATION_POLICY_V3.md",
+    "sha256": "5ea385c57927d77ccfac8724f687ef44a105f7eecf4aa5cfbe30ba4b726da699"
+  },
+  "author_pilot_policy_review": {
+    "path": "../../reviews/cphos28/pilot-author-review.json",
+    "sha256": "669935d42d7dd9dd42539d68a66688678f65722800d6715222958c7b394d4d3f"
+  },
+  "tested_model_api_calls_before_freeze": 0,
+  "model_predictions_seen_before_freeze": false,
+  "independent_ai_review": "complete_no_remaining_blockers",
+  "formal_human_label_review": false,
+  "mutation_rule": "No input/gold/source edits after this freeze to improve model results. Later discovered annotation problems must be disclosed separately, preserving this data and its results.",
+  "runner_freeze_note": "This data-review record does not freeze runtime settings; confirmation.freeze.json is separately created by freeze_confirmation.py before the four-backend run."
+}

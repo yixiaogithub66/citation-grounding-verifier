@@ -1,0 +1,39 @@
+{
+  "valid": true,
+  "dataset": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28-review\\cases.jsonl",
+  "sources": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\cphos28-review\\sources.json",
+  "case_count": 3,
+  "document_count": 1,
+  "passage_count": 7,
+  "split_counts": {
+    "review": 3
+  },
+  "category_counts": {
+    "density": 1,
+    "mixed_truth_compound": 1,
+    "scope_distractor": 1
+  },
+  "gold_verdict_counts": {
+    "CONTRADICTED": 3,
+    "SUPPORTED": 5,
+    "UNSUPPORTED": 2
+  },
+  "problem_splits": {
+    "Q2": [
+      "review"
+    ],
+    "Q6": [
+      "review"
+    ],
+    "Q7": [
+      "review"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "manual_review_required": [
+    "Whether every factual statement in each generated_answer has been decomposed into atomic claims.",
+    "Whether verdicts, transcribed formulas, and acceptable or required evidence sets are semantically correct.",
+    "Whether each transcription accurately represents the indicated PDF pages and figures."
+  ]
+}
