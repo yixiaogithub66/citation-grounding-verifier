@@ -58,6 +58,16 @@ class FixedClaimsVerifier(OptimizedV4CombinedVerifier):
 
 
 class CombinedVerifierTests(unittest.TestCase):
+    def test_initial_and_review_prompts_meet_json_transport_requirement(self):
+        def upstream(messages, stage):
+            if not any("json" in message["content"].lower() for message in messages):
+                raise VerificationError("upstream_http_error", "JSON mode requires the word json in a message.")
+            text = json.loads(messages[1]["content"])["claims"][0]["claim_text"]
+            return {"claims": [row(text, "UNSUPPORTED" if stage == "verify" else "SUPPORTED")]}
+        result, client = self.execute("The antenna is blue.", upstream)
+        self.assertEqual(result.report["claims"][0]["verdict"], "SUPPORTED")
+        self.assertEqual(len(client.inputs), 2)
+
     def setUp(self):
         self.settings = Settings(base_url="http://example.test", model="fake", api_key="fake-only")
         self.config = replace(V4Config(), max_workers=1, format_retries=0)

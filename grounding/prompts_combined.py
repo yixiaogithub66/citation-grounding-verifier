@@ -20,7 +20,7 @@ statement to a particular source, finding it elsewhere does not establish that
 attribution.
 
 Preserve supplied id, exact claim_text and order. Never add, merge, drop, weaken
-or correct a claim. Return exactly {"claims":[...]} with no other top-level keys,
+or correct a claim. Return exactly the JSON object {"claims":[...]} with no other top-level keys,
 markdown, duplicate keys or truncation placeholders. Each factual row is:
 {"evidence_protocol":"PROTOCOL", "id":"same supplied id",
 "claim_text":"exact supplied assertion", "considered_evidence_ids":["p0u1"],
