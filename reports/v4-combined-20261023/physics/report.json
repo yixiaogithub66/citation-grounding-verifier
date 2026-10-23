@@ -1,0 +1,86 @@
+{
+  "backends": {
+    "optimized-v4-combined": {
+      "completed_aligned_verdict_accuracy": {
+        "denominator": 45,
+        "numerator": 44,
+        "value": 0.9777777777777777
+      },
+      "completed_claim_count": 62,
+      "count": 46,
+      "gold_alignment_coverage": {
+        "denominator": 58,
+        "numerator": 45,
+        "value": 0.7758620689655172
+      },
+      "gold_claim_count": 58,
+      "mean_latency_seconds": 3.980586956528461,
+      "status_counts": {
+        "complete": 46
+      },
+      "strict_all_gold_f1_diagnostic": {
+        "denominator": 120,
+        "numerator": 88,
+        "value": 0.7333333333333333
+      },
+      "usage": {
+        "cache_accounted_calls": 107,
+        "cache_usage_complete": true,
+        "calls": 107,
+        "calls_with_usage": 107,
+        "completion_tokens": 23154,
+        "prompt_cache_hit_tokens": 83584,
+        "prompt_cache_miss_tokens": 58847,
+        "prompt_tokens": 142431,
+        "reasoning_accounted_calls": 15,
+        "reasoning_tokens": 4091,
+        "reasoning_usage_complete": false,
+        "total_tokens": 165585,
+        "usage_complete": true
+      }
+    },
+    "optimized-v4.0": {
+      "completed_aligned_verdict_accuracy": {
+        "denominator": 53,
+        "numerator": 53,
+        "value": 1.0
+      },
+      "completed_claim_count": 61,
+      "count": 46,
+      "gold_alignment_coverage": {
+        "denominator": 58,
+        "numerator": 53,
+        "value": 0.9137931034482759
+      },
+      "gold_claim_count": 58,
+      "mean_latency_seconds": 3.339391304341995,
+      "status_counts": {
+        "complete": 46
+      },
+      "strict_all_gold_f1_diagnostic": {
+        "denominator": 119,
+        "numerator": 106,
+        "value": 0.8907563025210085
+      },
+      "usage": {
+        "cache_accounted_calls": 105,
+        "cache_usage_complete": true,
+        "calls": 105,
+        "calls_with_usage": 105,
+        "completion_tokens": 17620,
+        "prompt_cache_hit_tokens": 63863,
+        "prompt_cache_miss_tokens": 24147,
+        "prompt_tokens": 88010,
+        "reasoning_accounted_calls": 15,
+        "reasoning_tokens": 1822,
+        "reasoning_usage_complete": false,
+        "total_tokens": 105630,
+        "usage_complete": true
+      }
+    }
+  },
+  "config_sha256": "3e6c934f78db7fae310f0b9f630f1ca9baadaee8c41c9c8607673502e21726b6",
+  "kind": "exposed-claim-regression-not-unseen",
+  "note": "Conditional label accuracy only uses completed text-aligned claims. Read with gold alignment coverage and unmatched predictions; not semantic accuracy of every paraphrase.",
+  "responses_sha256": "e5f4961fa93e7c60ee28017b05f8c8c8d2bd0783106d22f7121f035f8fe10bba"
+}

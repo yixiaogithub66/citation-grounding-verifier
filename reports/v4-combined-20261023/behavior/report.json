@@ -1,0 +1,4575 @@
+{
+  "config_sha256": "cdc3c4821ba8740fb5ec86708c359b44514ad043a1f97bd9617f8303bc0a777a",
+  "elapsed_seconds": 128.125,
+  "groups": {
+    "optimized-v4-combined/end_to_end": {
+      "aligned_target_label_accuracy": {
+        "denominator": 46,
+        "numerator": 45,
+        "value": 0.9782608695652174
+      },
+      "both_expected_correct_all_pairs": {
+        "denominator": 24,
+        "numerator": 23,
+        "value": 0.9583333333333334
+      },
+      "by_domain": {
+        "business": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 5,
+            "value": 0.8333333333333334
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 11,
+            "value": 0.9166666666666666
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 5,
+            "value": 0.8333333333333334
+          }
+        },
+        "ordinary": {
+          "both_expected_correct": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          },
+          "cases": 10,
+          "expected_accuracy": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          }
+        },
+        "science": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "systems": {
+          "both_expected_correct": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          },
+          "cases": 14,
+          "expected_accuracy": {
+            "denominator": 14,
+            "numerator": 14,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          }
+        }
+      },
+      "by_family": {
+        "answer_boundary_surface": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "condition_change": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "embedded_fact_in_advice": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "entity_renaming": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "irrelevant_distractor": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "multi_passage_premises": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "necessary_premise_deletion": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "negation": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "numeric_decimal": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_integer": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_sign": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "paraphrase": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_over_world_knowledge": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_reordering": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 1,
+            "value": 0.5
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 3,
+            "value": 0.75
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 1,
+            "value": 0.5
+          }
+        }
+      },
+      "case_count": 48,
+      "cost": {
+        "complete": true,
+        "currency": "USD",
+        "estimated_amount": 0.027190950000000002,
+        "known_usage_amount": 0.027190950000000002,
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2
+        }
+      },
+      "empty_complete_case_count": 0,
+      "expected_accuracy_all_cases": {
+        "denominator": 48,
+        "numerator": 47,
+        "value": 0.9791666666666666
+      },
+      "known_claim_completion": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "mean_latency_seconds": 3.0442708333333335,
+      "p95_latency_seconds": 5.875,
+      "pair_count": 24,
+      "pair_resolution": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "relation_consistency_all_pairs": {
+        "denominator": 24,
+        "numerator": 23,
+        "value": 0.9583333333333334
+      },
+      "required_evidence_presence_and_label_correct": {
+        "denominator": 44,
+        "numerator": 43,
+        "value": 0.9772727272727273
+      },
+      "resolved_label_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "stable_wrong_pair_count": 0,
+      "status_counts": {
+        "complete": 48
+      },
+      "target_alignment_coverage": {
+        "denominator": 48,
+        "numerator": 46,
+        "value": 0.9583333333333334
+      },
+      "unknown_claim_total_case_count": 0,
+      "usage": {
+        "cache_accounted_calls": 104,
+        "cache_usage_complete": true,
+        "calls": 104,
+        "calls_with_usage": 104,
+        "completion_tokens": 14035,
+        "prompt_cache_hit_tokens": 83325,
+        "prompt_cache_miss_tokens": 32830,
+        "prompt_tokens": 116155,
+        "reasoning_accounted_calls": 8,
+        "reasoning_tokens": 1886,
+        "reasoning_usage_complete": false,
+        "total_tokens": 130190,
+        "usage_complete": true
+      }
+    },
+    "optimized-v4-combined/fixed_claim": {
+      "aligned_target_label_accuracy": {
+        "denominator": 48,
+        "numerator": 47,
+        "value": 0.9791666666666666
+      },
+      "both_expected_correct_all_pairs": {
+        "denominator": 24,
+        "numerator": 23,
+        "value": 0.9583333333333334
+      },
+      "by_domain": {
+        "business": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 5,
+            "value": 0.8333333333333334
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 11,
+            "value": 0.9166666666666666
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 5,
+            "value": 0.8333333333333334
+          }
+        },
+        "ordinary": {
+          "both_expected_correct": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          },
+          "cases": 10,
+          "expected_accuracy": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          }
+        },
+        "science": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "systems": {
+          "both_expected_correct": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          },
+          "cases": 14,
+          "expected_accuracy": {
+            "denominator": 14,
+            "numerator": 14,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          }
+        }
+      },
+      "by_family": {
+        "answer_boundary_surface": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "condition_change": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "embedded_fact_in_advice": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "entity_renaming": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "irrelevant_distractor": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "multi_passage_premises": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "necessary_premise_deletion": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "negation": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "numeric_decimal": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_integer": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_sign": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "paraphrase": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_over_world_knowledge": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_reordering": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 1,
+            "value": 0.5
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 3,
+            "value": 0.75
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 1,
+            "value": 0.5
+          }
+        }
+      },
+      "case_count": 48,
+      "cost": {
+        "complete": true,
+        "currency": "USD",
+        "estimated_amount": 0.018548916,
+        "known_usage_amount": 0.018548916,
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2
+        }
+      },
+      "empty_complete_case_count": 0,
+      "expected_accuracy_all_cases": {
+        "denominator": 48,
+        "numerator": 47,
+        "value": 0.9791666666666666
+      },
+      "known_claim_completion": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "mean_latency_seconds": 1.966479166658246,
+      "p95_latency_seconds": 4.562999999965541,
+      "pair_count": 24,
+      "pair_resolution": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "relation_consistency_all_pairs": {
+        "denominator": 24,
+        "numerator": 23,
+        "value": 0.9583333333333334
+      },
+      "required_evidence_presence_and_label_correct": {
+        "denominator": 44,
+        "numerator": 43,
+        "value": 0.9772727272727273
+      },
+      "resolved_label_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "review_audit_ai_draft": {
+        "events": [
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-02",
+            "side": "base"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-02",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-08",
+            "side": "base"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-08",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-09",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-10",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-11",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-13",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-24",
+            "side": "variant"
+          }
+        ],
+        "net_corrections": 0,
+        "note": "Conditional on triggered reviews, scored against AI-draft fixed-claim labels. Triggers differ across backends; this is not a causal H3-only comparison. Unchanged includes both correct and wrong labels.",
+        "outcome_counts": {
+          "unchanged": 9
+        },
+        "review_event_count": 9
+      },
+      "stable_wrong_pair_count": 0,
+      "status_counts": {
+        "complete": 48
+      },
+      "target_alignment_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "unknown_claim_total_case_count": 0,
+      "usage": {
+        "cache_accounted_calls": 57,
+        "cache_usage_complete": true,
+        "calls": 57,
+        "calls_with_usage": 57,
+        "completion_tokens": 10749,
+        "prompt_cache_hit_tokens": 46336,
+        "prompt_cache_miss_tokens": 17907,
+        "prompt_tokens": 64243,
+        "reasoning_accounted_calls": 9,
+        "reasoning_tokens": 1838,
+        "reasoning_usage_complete": false,
+        "total_tokens": 74992,
+        "usage_complete": true
+      }
+    },
+    "optimized-v4.0/end_to_end": {
+      "aligned_target_label_accuracy": {
+        "denominator": 46,
+        "numerator": 46,
+        "value": 1.0
+      },
+      "both_expected_correct_all_pairs": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "by_domain": {
+        "business": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "ordinary": {
+          "both_expected_correct": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          },
+          "cases": 10,
+          "expected_accuracy": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          }
+        },
+        "science": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "systems": {
+          "both_expected_correct": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          },
+          "cases": 14,
+          "expected_accuracy": {
+            "denominator": 14,
+            "numerator": 14,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          }
+        }
+      },
+      "by_family": {
+        "answer_boundary_surface": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "condition_change": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "embedded_fact_in_advice": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "entity_renaming": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "irrelevant_distractor": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "multi_passage_premises": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "necessary_premise_deletion": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "negation": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "numeric_decimal": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_integer": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_sign": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "paraphrase": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_over_world_knowledge": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_reordering": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        }
+      },
+      "case_count": 48,
+      "cost": {
+        "complete": true,
+        "currency": "USD",
+        "estimated_amount": 0.029295108,
+        "known_usage_amount": 0.029295108,
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2
+        }
+      },
+      "empty_complete_case_count": 0,
+      "expected_accuracy_all_cases": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "known_claim_completion": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "mean_latency_seconds": 3.6555625000013,
+      "p95_latency_seconds": 5.202999999979511,
+      "pair_count": 24,
+      "pair_resolution": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "relation_consistency_all_pairs": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "required_evidence_presence_and_label_correct": {
+        "denominator": 44,
+        "numerator": 44,
+        "value": 1.0
+      },
+      "resolved_label_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "stable_wrong_pair_count": 0,
+      "status_counts": {
+        "complete": 48
+      },
+      "target_alignment_coverage": {
+        "denominator": 48,
+        "numerator": 46,
+        "value": 0.9583333333333334
+      },
+      "unknown_claim_total_case_count": 0,
+      "usage": {
+        "cache_accounted_calls": 106,
+        "cache_usage_complete": true,
+        "calls": 106,
+        "calls_with_usage": 106,
+        "completion_tokens": 18643,
+        "prompt_cache_hit_tokens": 55918,
+        "prompt_cache_miss_tokens": 21960,
+        "prompt_tokens": 77878,
+        "reasoning_accounted_calls": 9,
+        "reasoning_tokens": 8445,
+        "reasoning_usage_complete": false,
+        "total_tokens": 96521,
+        "usage_complete": true
+      }
+    },
+    "optimized-v4.0/fixed_claim": {
+      "aligned_target_label_accuracy": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "both_expected_correct_all_pairs": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "by_domain": {
+        "business": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "ordinary": {
+          "both_expected_correct": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          },
+          "cases": 10,
+          "expected_accuracy": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 5,
+            "numerator": 5,
+            "value": 1.0
+          }
+        },
+        "science": {
+          "both_expected_correct": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          },
+          "cases": 12,
+          "expected_accuracy": {
+            "denominator": 12,
+            "numerator": 12,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 6,
+            "numerator": 6,
+            "value": 1.0
+          }
+        },
+        "systems": {
+          "both_expected_correct": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          },
+          "cases": 14,
+          "expected_accuracy": {
+            "denominator": 14,
+            "numerator": 14,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 7,
+            "numerator": 7,
+            "value": 1.0
+          }
+        }
+      },
+      "by_family": {
+        "answer_boundary_surface": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "condition_change": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "embedded_fact_in_advice": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "entity_renaming": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "irrelevant_distractor": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "multi_passage_premises": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "necessary_premise_deletion": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "negation": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "numeric_decimal": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_integer": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "numeric_sign": {
+          "both_expected_correct": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          },
+          "cases": 2,
+          "expected_accuracy": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 1,
+            "numerator": 1,
+            "value": 1.0
+          }
+        },
+        "paraphrase": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_over_world_knowledge": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        },
+        "source_reordering": {
+          "both_expected_correct": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          },
+          "cases": 4,
+          "expected_accuracy": {
+            "denominator": 4,
+            "numerator": 4,
+            "value": 1.0
+          },
+          "relation_consistency": {
+            "denominator": 2,
+            "numerator": 2,
+            "value": 1.0
+          }
+        }
+      },
+      "case_count": 48,
+      "cost": {
+        "complete": true,
+        "currency": "USD",
+        "estimated_amount": 0.015292001999999999,
+        "known_usage_amount": 0.015292001999999999,
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2
+        }
+      },
+      "empty_complete_case_count": 0,
+      "expected_accuracy_all_cases": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "known_claim_completion": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "mean_latency_seconds": 1.850937499999418,
+      "p95_latency_seconds": 3.843999999924563,
+      "pair_count": 24,
+      "pair_resolution": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "relation_consistency_all_pairs": {
+        "denominator": 24,
+        "numerator": 24,
+        "value": 1.0
+      },
+      "required_evidence_presence_and_label_correct": {
+        "denominator": 44,
+        "numerator": 44,
+        "value": 1.0
+      },
+      "resolved_label_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "review_audit_ai_draft": {
+        "events": [
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-02",
+            "side": "base"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-02",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-08",
+            "side": "base"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-08",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-09",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "UNSUPPORTED",
+            "before_verdict": "UNSUPPORTED",
+            "claim_id": "c1",
+            "expected_label": "UNSUPPORTED",
+            "kind": "U",
+            "outcome": "unchanged",
+            "pair_id": "behavior-10",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-11",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-13",
+            "side": "variant"
+          },
+          {
+            "after_verdict": "CONTRADICTED",
+            "before_verdict": "CONTRADICTED",
+            "claim_id": "c1",
+            "expected_label": "CONTRADICTED",
+            "kind": "C",
+            "outcome": "unchanged",
+            "pair_id": "behavior-24",
+            "side": "variant"
+          }
+        ],
+        "net_corrections": 0,
+        "note": "Conditional on triggered reviews, scored against AI-draft fixed-claim labels. Triggers differ across backends; this is not a causal H3-only comparison. Unchanged includes both correct and wrong labels.",
+        "outcome_counts": {
+          "unchanged": 9
+        },
+        "review_event_count": 9
+      },
+      "stable_wrong_pair_count": 0,
+      "status_counts": {
+        "complete": 48
+      },
+      "target_alignment_coverage": {
+        "denominator": 48,
+        "numerator": 48,
+        "value": 1.0
+      },
+      "unknown_claim_total_case_count": 0,
+      "usage": {
+        "cache_accounted_calls": 57,
+        "cache_usage_complete": true,
+        "calls": 57,
+        "calls_with_usage": 57,
+        "completion_tokens": 9591,
+        "prompt_cache_hit_tokens": 42867,
+        "prompt_cache_miss_tokens": 11752,
+        "prompt_tokens": 54619,
+        "reasoning_accounted_calls": 9,
+        "reasoning_tokens": 1714,
+        "reasoning_usage_complete": false,
+        "total_tokens": 64210,
+        "usage_complete": true
+      }
+    }
+  },
+  "kind": "exposed-ai-draft-behavior-diagnostic-not-unseen",
+  "note": "AI-draft expected labels, exploratory diagnostic evidence only. Same-label consistency counts stable mistakes; read both-expected-correct separately. No cross-dataset or unseen-generalization claim.",
+  "paired_backend_comparisons": {
+    "end_to_end": {
+      "cases": [
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-01",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-01",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-02",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-02",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-03",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-03",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-04",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-04",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-05",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-05",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-06",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": false,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-06",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-07",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-07",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-08",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-08",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-09",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-09",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-10",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-10",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-11",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-11",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-12",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-12",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-13",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-13",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-14",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-14",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-15",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-15",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-16",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-16",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-17",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-17",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-18",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-18",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-19",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-19",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-20",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-20",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-21",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-21",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-22",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-22",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-23",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-23",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-24",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-24",
+          "side": "variant"
+        }
+      ],
+      "failure_to_right": 0,
+      "label_flip_count_resolved": 1,
+      "paired_case_count": 48,
+      "right_to_failure": 0,
+      "right_to_wrong": 1,
+      "wrong_to_right": 0
+    },
+    "fixed_claim": {
+      "cases": [
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-01",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-01",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-02",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-02",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-03",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-03",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-04",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-04",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-05",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-05",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-06",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": false,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-06",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-07",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-07",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-08",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-08",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-09",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-09",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-10",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "UNSUPPORTED",
+          "old_correct": true,
+          "old_label": "UNSUPPORTED",
+          "pair_id": "behavior-10",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-11",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-11",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-12",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-12",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-13",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-13",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-14",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-14",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-15",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-15",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-16",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-16",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-17",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-17",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-18",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-18",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-19",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-19",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-20",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-20",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-21",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-21",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-22",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-22",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-23",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-23",
+          "side": "variant"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "SUPPORTED",
+          "old_correct": true,
+          "old_label": "SUPPORTED",
+          "pair_id": "behavior-24",
+          "side": "base"
+        },
+        {
+          "both_resolved": true,
+          "new_correct": true,
+          "new_label": "CONTRADICTED",
+          "old_correct": true,
+          "old_label": "CONTRADICTED",
+          "pair_id": "behavior-24",
+          "side": "variant"
+        }
+      ],
+      "failure_to_right": 0,
+      "label_flip_count_resolved": 1,
+      "paired_case_count": 48,
+      "right_to_failure": 0,
+      "right_to_wrong": 1,
+      "wrong_to_right": 0
+    }
+  },
+  "pairs": [
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-01",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "end_to_end",
+      "observed": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-02",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "paraphrase",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-03",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "paraphrase",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-04",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "source_reordering",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-05",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": false,
+      "domain": "business",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_reordering",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-06",
+      "pair_resolved": true,
+      "relation_consistent": false,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-07",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-08",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-09",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-10",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_decimal",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-11",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_sign",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-12",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_integer",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-13",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-14",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-15",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-16",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-17",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-18",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-19",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-20",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-21",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-22",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-23",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "embedded_fact_in_advice",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-24",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-01",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "fixed_claim",
+      "observed": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-02",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "paraphrase",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-03",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "paraphrase",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-04",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "source_reordering",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-05",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": false,
+      "domain": "business",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_reordering",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-06",
+      "pair_resolved": true,
+      "relation_consistent": false,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-07",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-08",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-09",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-10",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_decimal",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-11",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_sign",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-12",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_integer",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-13",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-14",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-15",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-16",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-17",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-18",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-19",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-20",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-21",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-22",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-23",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4-combined",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "embedded_fact_in_advice",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-24",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-01",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "end_to_end",
+      "observed": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-02",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "paraphrase",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-03",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "paraphrase",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-04",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "source_reordering",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-05",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_reordering",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-06",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-07",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "end_to_end",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-08",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-09",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-10",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_decimal",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-11",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_sign",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-12",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_integer",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-13",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-14",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-15",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-16",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-17",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-18",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-19",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-20",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-21",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-22",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-23",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "embedded_fact_in_advice",
+      "mode": "end_to_end",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-24",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-01",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "entity_renaming",
+      "mode": "fixed_claim",
+      "observed": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-02",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "paraphrase",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-03",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "paraphrase",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-04",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "source_reordering",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-05",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_reordering",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-06",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-07",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "family": "irrelevant_distractor",
+      "mode": "fixed_claim",
+      "observed": [
+        "CONTRADICTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-08",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-09",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "family": "necessary_premise_deletion",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "pair_id": "behavior-10",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_decimal",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-11",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_sign",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-12",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "numeric_integer",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-13",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-14",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "negation",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-15",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-16",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "condition_change",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-17",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-18",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "multi_passage_premises",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-19",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-20",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "business",
+      "expected": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "family": "answer_boundary_surface",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "pair_id": "behavior-21",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "science",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-22",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "ordinary",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "source_over_world_knowledge",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-23",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "both_expected_correct": true,
+      "domain": "systems",
+      "expected": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "family": "embedded_fact_in_advice",
+      "mode": "fixed_claim",
+      "observed": [
+        "SUPPORTED",
+        "CONTRADICTED"
+      ],
+      "pair_id": "behavior-24",
+      "pair_resolved": true,
+      "relation_consistent": true,
+      "stable_wrong": false
+    }
+  ],
+  "responses_sha256": "62e31f09bb2f6c48279b17a943fe149900d3ed4a1e3cd8a3f52938cf56501608",
+  "run_status": "complete",
+  "source_files_unchanged_after_run": true
+}

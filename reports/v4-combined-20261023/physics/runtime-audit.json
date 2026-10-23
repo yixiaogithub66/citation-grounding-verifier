@@ -1,0 +1,146 @@
+{
+  "kind": "exposed-physics-diagnostic-runtime-audit",
+  "runtime": {
+    "optimized-v4.0": {
+      "record_count": 46,
+      "usage": {
+        "calls": 105,
+        "calls_with_usage": 105,
+        "prompt_tokens": 88010,
+        "completion_tokens": 17620,
+        "total_tokens": 105630,
+        "prompt_cache_hit_tokens": 63863,
+        "prompt_cache_miss_tokens": 24147,
+        "reasoning_tokens": 1822,
+        "cache_accounted_calls": 105,
+        "reasoning_accounted_calls": 15,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": false
+      },
+      "cost": {
+        "estimated_amount": 0.028771277999999997,
+        "known_usage_amount": 0.028771277999999997,
+        "currency": "USD",
+        "complete": true,
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "reference": "fixed experiment reference; not billing"
+        },
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate."
+      },
+      "mean_latency_seconds": 3.339391304341995,
+      "p95_latency_seconds": 5.843999999924563,
+      "stage_calls": {
+        "decompose": 45,
+        "verify": 43,
+        "unsupported_review": 15,
+        "verify_claim_requery": 2
+      },
+      "targeted_requery_reasons": {
+        "Verification must preserve supplied id and exact claim_text.": 1,
+        "UNSUPPORTED must have citations:[]; never silently remove an invalid citation.": 1
+      },
+      "summary_totals": {
+        "citation_repairs": 0,
+        "format_repairs": 0,
+        "targeted_reasks": 2,
+        "batch_retries": 0,
+        "transport_retries": 0,
+        "contradiction_review_triggers": 0,
+        "unsupported_review_triggers": 15,
+        "contradiction_review_flips": 0,
+        "unsupported_review_flips": 0,
+        "decomposition_fallback_chunks": 0,
+        "unfinished_claims": 0,
+        "extracted_claim_count": 61,
+        "fallback_claim_count": 0
+      },
+      "errors": {},
+      "returned_models": {
+        "deepseek-flash": 105
+      },
+      "returned_system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 105
+      },
+      "mean_quote_chars": 37.214285714285715,
+      "quote_count": 56,
+      "warning": "Text accounting, exact quotes, and completed claims do not establish semantic recall or evidence sufficiency"
+    },
+    "optimized-v4-combined": {
+      "record_count": 46,
+      "usage": {
+        "calls": 107,
+        "calls_with_usage": 107,
+        "prompt_tokens": 142431,
+        "completion_tokens": 23154,
+        "total_tokens": 165585,
+        "prompt_cache_hit_tokens": 83584,
+        "prompt_cache_miss_tokens": 58847,
+        "reasoning_tokens": 4091,
+        "cache_accounted_calls": 107,
+        "reasoning_accounted_calls": 15,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": false
+      },
+      "cost": {
+        "estimated_amount": 0.045940404,
+        "known_usage_amount": 0.045940404,
+        "currency": "USD",
+        "complete": true,
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "reference": "fixed experiment reference; not billing"
+        },
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate."
+      },
+      "mean_latency_seconds": 3.980586956528461,
+      "p95_latency_seconds": 7.656000000075437,
+      "stage_calls": {
+        "decompose": 45,
+        "verify": 44,
+        "unsupported_review": 15,
+        "verify_claim_requery": 1,
+        "decompose_residual": 2
+      },
+      "targeted_requery_reasons": {
+        "UNSUPPORTED must have decision_evidence_ids:[]; invalid decision evidence is never silently removed.": 1
+      },
+      "summary_totals": {
+        "citation_repairs": 0,
+        "format_repairs": 0,
+        "targeted_reasks": 1,
+        "batch_retries": 0,
+        "transport_retries": 0,
+        "contradiction_review_triggers": 0,
+        "unsupported_review_triggers": 15,
+        "contradiction_review_flips": 0,
+        "unsupported_review_flips": 0,
+        "decomposition_fallback_chunks": 0,
+        "unfinished_claims": 0,
+        "extracted_claim_count": 62,
+        "fallback_claim_count": 0
+      },
+      "errors": {},
+      "returned_models": {
+        "deepseek-flash": 107
+      },
+      "returned_system_fingerprints": {
+        "e72d3c7f663d3e1383b00b3884cb4501": 107
+      },
+      "mean_quote_chars": 51.885245901639344,
+      "quote_count": 61,
+      "warning": "Text accounting, exact quotes, and completed claims do not establish semantic recall or evidence sufficiency"
+    }
+  },
+  "source_files_unchanged_after_run": true,
+  "dataset_hash_matches": true,
+  "reference_price_scope": "Same predeclared reference prices as main comparison; not actual billing."
+}
