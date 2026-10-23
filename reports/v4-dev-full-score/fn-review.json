@@ -1,0 +1,768 @@
+{
+  "cases": [
+    {
+      "author_review": "pending",
+      "extraction": {
+        "chunks": [
+          {
+            "chunk_id": "d1",
+            "claim_ids": [
+              "c1",
+              "c2",
+              "c3",
+              "c4",
+              "c5",
+              "c6",
+              "c7",
+              "c8",
+              "c9",
+              "c10",
+              "c11",
+              "c12"
+            ],
+            "error": {
+              "code": "invalid_model_output",
+              "message": "Extraction source spans must be exact answer substrings in answer order."
+            },
+            "fallback": true,
+            "fallback_limitation": "Sentence skeletons preserve text but do not certify factuality or atomicity.",
+            "hard_split": false,
+            "source_end": 1126,
+            "source_start": 0
+          }
+        ],
+        "claims": [
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "Based on the provided passages, here are some ways to find someone in France:\n\n",
+            "extraction_fallback": true,
+            "id": "c1",
+            "source_end": 79,
+            "source_span": "Based on the provided passages, here are some ways to find someone in France:\n\n",
+            "source_start": 0
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "1.",
+            "extraction_fallback": true,
+            "id": "c2",
+            "source_end": 81,
+            "source_span": "1.",
+            "source_start": 79
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Use a people search website in France: There are websites specifically designed for finding people in France, such as http://www.peoplefinder.com/france/.",
+            "extraction_fallback": true,
+            "id": "c3",
+            "source_end": 236,
+            "source_span": " Use a people search website in France: There are websites specifically designed for finding people in France, such as http://www.peoplefinder.com/france/.",
+            "source_start": 81
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " These websites can help you locate someone by entering their last name and other identifying details.",
+            "extraction_fallback": true,
+            "id": "c4",
+            "source_end": 338,
+            "source_span": " These websites can help you locate someone by entering their last name and other identifying details.",
+            "source_start": 236
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "2.",
+            "extraction_fallback": true,
+            "id": "c5",
+            "source_end": 341,
+            "source_span": "2.",
+            "source_start": 339
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Check the French white pages (Pages Jaunes): You can use the English version of the French white pages, http://www.pagesjaunes.fr/, to search for someone in France.",
+            "extraction_fallback": true,
+            "id": "c6",
+            "source_end": 506,
+            "source_span": " Check the French white pages (Pages Jaunes): You can use the English version of the French white pages, http://www.pagesjaunes.fr/, to search for someone in France.",
+            "source_start": 341
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Enter the person's last name in the Nom field and any additional information you may know, such as their first name or address.",
+            "extraction_fallback": true,
+            "id": "c7",
+            "source_end": 634,
+            "source_span": " Enter the person's last name in the Nom field and any additional information you may know, such as their first name or address.",
+            "source_start": 506
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "3.",
+            "extraction_fallback": true,
+            "id": "c8",
+            "source_end": 637,
+            "source_span": "3.",
+            "source_start": 635
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Post a missed connection ad on Craigslist Paris: You can post an ad on Craigslist Paris, http://paris.craigslist.org/, indicating that you are trying to find someone who you lost contact with.",
+            "extraction_fallback": true,
+            "id": "c9",
+            "source_end": 830,
+            "source_span": " Post a missed connection ad on Craigslist Paris: You can post an ad on Craigslist Paris, http://paris.craigslist.org/, indicating that you are trying to find someone who you lost contact with.",
+            "source_start": 637
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Provide as much detail as possible about the person you are looking for, including their last name and any other identifying information.",
+            "extraction_fallback": true,
+            "id": "c10",
+            "source_end": 968,
+            "source_span": " Provide as much detail as possible about the person you are looking for, including their last name and any other identifying information.",
+            "source_start": 830
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "Unable to answer based on given passages.",
+            "extraction_fallback": true,
+            "id": "c11",
+            "source_end": 1011,
+            "source_span": "Unable to answer based on given passages.",
+            "source_start": 970
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " The passages do not provide enough information to guide the user through the process of finding someone in France.",
+            "extraction_fallback": true,
+            "id": "c12",
+            "source_end": 1126,
+            "source_span": " The passages do not provide enough information to guide the user through the process of finding someone in France.",
+            "source_start": 1011
+          }
+        ],
+        "coverage_check": "Every substantive answer character is accounted for by an exact source span.",
+        "hard_split_recoveries": [],
+        "limitation": "Lexical coverage and fallback skeletons do not prove atomicity or factual completeness.",
+        "non_factual_spans": []
+      },
+      "id": "15129",
+      "input": {
+        "context_passages": [
+          "passage 1:Here a website for people search in France could of course be helpful. If you have lost relatives in Paris, Avignon, Bordeaux, Lyon, Nice or some other French city or little town and if that family member or relative was actually born there, you can send an email or letter to the town Hall in their city of birth.ut if you have not seen the person for over ten or maybe even twenty years, then the pictures that will come up on the above people search France will not help much, you won't know if it is the right person. Try to find out the person's middle name, that is often very helpful to have-it will make things easier.\n\n",
+          "passage 2:You can try the French white pages (in English): http://www.pagesjaunes.fr/pb.cgi?lang=en Little hint: instead of typing Paris in the City field, write IDF (or Ile de France) in the Dept district or region field.This will search for the person in Paris and its suburbs.You can also try posting an MC (missed connection) on Paris Craigslist (http://paris.craigslist.org/cgi-bin/pers...ou can try the French white pages (in English): http://www.pagesjaunes.fr/pb.cgi?lang=en Little hint: instead of typing Paris in the City field, write IDF (or Ile de France) in the Dept district or region field.\n\n",
+          "passage 3:Instructions. Visit www.pagesjaunes.fr, the Pages Blanches, which is the French version of the white pages. Enter the last name of the person you're searching for in the Nom field.You can enter a first name in Prenom.. Enter address information, if known, in the Ou section.Otherwise, leave it blank to search the entire country. Click Trouver to search for the name.The search results will display name, address and phone number for all listings that match your search criteria.nstructions. Visit www.pagesjaunes.fr, the Pages Blanches, which is the French version of the white pages. Enter the last name of the person you're searching for in the Nom field.\n\n"
+        ],
+        "generated_answer": "Based on the provided passages, here are some ways to find someone in France:\n\n1. Use a people search website in France: There are websites specifically designed for finding people in France, such as http://www.peoplefinder.com/france/. These websites can help you locate someone by entering their last name and other identifying details.\n2. Check the French white pages (Pages Jaunes): You can use the English version of the French white pages, http://www.pagesjaunes.fr/, to search for someone in France. Enter the person's last name in the Nom field and any additional information you may know, such as their first name or address.\n3. Post a missed connection ad on Craigslist Paris: You can post an ad on Craigslist Paris, http://paris.craigslist.org/, indicating that you are trying to find someone who you lost contact with. Provide as much detail as possible about the person you are looking for, including their last name and any other identifying information.\n\nUnable to answer based on given passages. The passages do not provide enough information to guide the user through the process of finding someone in France."
+      },
+      "native_gold": {
+        "has_hallucination": true,
+        "id": "15129",
+        "labels": [
+          {
+            "due_to_null": false,
+            "end": 338,
+            "implicit_true": true,
+            "label_type": "Subtle Baseless Info",
+            "meta": "LOW INTRO OF NEW INFO \n- Passages did not mention about using people finder in locating someone in France. However, this is likely to be true based on the context.",
+            "start": 79,
+            "text": "1. Use a people search website in France: There are websites specifically designed for finding people in France, such as http://www.peoplefinder.com/france/. These websites can help you locate someone by entering their last name and other identifying details."
+          }
+        ],
+        "source_id": "15442"
+      },
+      "prediction": {
+        "claims": [
+          {
+            "citations": [
+              {
+                "index": 2,
+                "quote": "Enter the last name of the person you're searching for in the Nom field.You can enter a first name in Prenom.. Enter address information, if known, in the Ou section."
+              },
+              {
+                "index": 0,
+                "quote": "Here a website for people search in France could of course be helpful."
+              }
+            ],
+            "claim_text": " These websites can help you locate someone by entering their last name and other identifying details.",
+            "reasoning": "The sources state a people-search website can help and describe entering last name and other identifying details (first name, address) to search.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "You can try the French white pages (in English): http://www.pagesjaunes.fr/pb.cgi?lang=en"
+              }
+            ],
+            "claim_text": " Check the French white pages (Pages Jaunes): You can use the English version of the French white pages, http://www.pagesjaunes.fr/, to search for someone in France.",
+            "reasoning": "Passage 2 explicitly offers the English version of the French white pages at the pagesjaunes.fr URL for searching a person.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "You can also try posting an MC (missed connection) on Paris Craigslist (http://paris.craigslist.org/cgi-bin/pers..."
+              }
+            ],
+            "claim_text": " Post a missed connection ad on Craigslist Paris: You can post an ad on Craigslist Paris, http://paris.craigslist.org/, indicating that you are trying to find someone who you lost contact with.",
+            "reasoning": "The cited passage explicitly suggests posting a missed connection on Paris Craigslist, which supports the core assertion that one can post such an ad there.",
+            "verdict": "SUPPORTED"
+          }
+        ]
+      },
+      "unsupported_reviews": [
+        {
+          "after_verdict": null,
+          "before_verdict": "UNSUPPORTED",
+          "claim_id": "c7",
+          "derivation": null,
+          "evidence": [],
+          "reviewed": true,
+          "trigger": "Final unsupported entailment/contradiction search"
+        }
+      ]
+    },
+    {
+      "author_review": "pending",
+      "extraction": {
+        "chunks": [
+          {
+            "chunk_id": "d1",
+            "claim_ids": [
+              "c1",
+              "c2",
+              "c3",
+              "c4",
+              "c5",
+              "c6",
+              "c7",
+              "c8",
+              "c9",
+              "c10",
+              "c11"
+            ],
+            "error": {
+              "code": "invalid_model_output",
+              "message": "Extraction left answer text unaccounted for near: 'and the ashes buried. (Passage 1)\\n2. Burn the flag in a proper ceremony. If you are able to personal'"
+            },
+            "fallback": true,
+            "fallback_limitation": "Sentence skeletons preserve text but do not certify factuality or atomicity.",
+            "hard_split": false,
+            "source_end": 738,
+            "source_start": 0
+          }
+        ],
+        "claims": [
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "Based on the provided passages, the proper way to dispose of a worn USA flag is as follows:\n\n",
+            "extraction_fallback": true,
+            "id": "c1",
+            "source_end": 93,
+            "source_span": "Based on the provided passages, the proper way to dispose of a worn USA flag is as follows:\n\n",
+            "source_start": 0
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "1.",
+            "extraction_fallback": true,
+            "id": "c2",
+            "source_end": 95,
+            "source_span": "1.",
+            "source_start": 93
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Remove the blue field from the flag and then place the flag out for collection.",
+            "extraction_fallback": true,
+            "id": "c3",
+            "source_end": 175,
+            "source_span": " Remove the blue field from the flag and then place the flag out for collection.",
+            "source_start": 95
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " The blue field should be burned in a peaceful manner and the ashes buried.",
+            "extraction_fallback": true,
+            "id": "c4",
+            "source_end": 250,
+            "source_span": " The blue field should be burned in a peaceful manner and the ashes buried.",
+            "source_start": 175
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " (Passage 1)\n",
+            "extraction_fallback": true,
+            "id": "c5",
+            "source_end": 263,
+            "source_span": " (Passage 1)\n",
+            "source_start": 250
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "2.",
+            "extraction_fallback": true,
+            "id": "c6",
+            "source_end": 265,
+            "source_span": "2.",
+            "source_start": 263
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Burn the flag in a proper ceremony.",
+            "extraction_fallback": true,
+            "id": "c7",
+            "source_end": 301,
+            "source_span": " Burn the flag in a proper ceremony.",
+            "source_start": 265
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way.",
+            "extraction_fallback": true,
+            "id": "c8",
+            "source_end": 415,
+            "source_span": " If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way.",
+            "source_start": 301
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " The flag must be folded in the customary triangle fold.",
+            "extraction_fallback": true,
+            "id": "c9",
+            "source_end": 471,
+            "source_span": " The flag must be folded in the customary triangle fold.",
+            "source_start": 415
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " (Passage 2)\n\n",
+            "extraction_fallback": true,
+            "id": "c10",
+            "source_end": 485,
+            "source_span": " (Passage 2)\n\n",
+            "source_start": 471
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "Therefore, the proper way to dispose of a worn USA flag is through burning it in a peaceful manner during a proper ceremony, or by placing it out for collection after removing the blue field and then properly disposing of the blue field through burning.",
+            "extraction_fallback": true,
+            "id": "c11",
+            "source_end": 738,
+            "source_span": "Therefore, the proper way to dispose of a worn USA flag is through burning it in a peaceful manner during a proper ceremony, or by placing it out for collection after removing the blue field and then properly disposing of the blue field through burning.",
+            "source_start": 485
+          }
+        ],
+        "coverage_check": "Every substantive answer character is accounted for by an exact source span.",
+        "hard_split_recoveries": [],
+        "limitation": "Lexical coverage and fallback skeletons do not prove atomicity or factual completeness.",
+        "non_factual_spans": []
+      },
+      "id": "12297",
+      "input": {
+        "context_passages": [
+          "passage 1:Disposal of a faded or worn American flag is to be done in one of three ways. You can, if necessary, put the flag out for collection only after you have removed the blue field from the flag. The blue field is to be burned in a peaceful manner and the ashes buried.\n\n",
+          "passage 2:“This Flag has served its nation long and well. It has worn to a condition to which it should no longer be used to represent the nation. This Flag represents all of the Flags collected and being retired from service today. We honor them all as we salute one Flag.”.\n\n",
+          "passage 3:The other method is to burn the flag yourself in a proper ceremony. If you are able to personally discharge your worn flag from service the ceremony that follows is the proper way. The flag must be folded in the customary triangle fold.\n\n"
+        ],
+        "generated_answer": "Based on the provided passages, the proper way to dispose of a worn USA flag is as follows:\n\n1. Remove the blue field from the flag and then place the flag out for collection. The blue field should be burned in a peaceful manner and the ashes buried. (Passage 1)\n2. Burn the flag in a proper ceremony. If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way. The flag must be folded in the customary triangle fold. (Passage 2)\n\nTherefore, the proper way to dispose of a worn USA flag is through burning it in a peaceful manner during a proper ceremony, or by placing it out for collection after removing the blue field and then properly disposing of the blue field through burning."
+      },
+      "native_gold": {
+        "has_hallucination": true,
+        "id": "12297",
+        "labels": [
+          {
+            "due_to_null": false,
+            "end": 483,
+            "implicit_true": false,
+            "label_type": "Evident Conflict",
+            "meta": "EVIDENT CONFLICT:\nAIGC: 2. Burn the flag in a proper ceremony.....folded in the customary triangle fold. (Passage 2)\nOriginal: This information is mentioned in passage 3.",
+            "start": 263,
+            "text": "2. Burn the flag in a proper ceremony. If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way. The flag must be folded in the customary triangle fold. (Passage 2)"
+          }
+        ],
+        "source_id": "14366"
+      },
+      "prediction": {
+        "claims": [
+          {
+            "citations": [
+              {
+                "index": 0,
+                "quote": "You can, if necessary, put the flag out for collection only after you have removed the blue field from the flag."
+              }
+            ],
+            "claim_text": " Remove the blue field from the flag and then place the flag out for collection.",
+            "reasoning": "The source directly describes removing the blue field as a precondition to putting the flag out for collection.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 0,
+                "quote": "The blue field is to be burned in a peaceful manner and the ashes buried."
+              }
+            ],
+            "claim_text": " The blue field should be burned in a peaceful manner and the ashes buried.",
+            "reasoning": "The source explicitly states the blue field is to be burned peacefully and the ashes buried.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 2,
+                "quote": "If you are able to personally discharge your worn flag from service the ceremony that follows is the proper way."
+              }
+            ],
+            "claim_text": " If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way.",
+            "reasoning": "The claim restates the conditional statement present verbatim in passage 3.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 2,
+                "quote": "The flag must be folded in the customary triangle fold."
+              }
+            ],
+            "claim_text": " The flag must be folded in the customary triangle fold.",
+            "reasoning": "Passage 3 contains the exact assertion.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 0,
+                "quote": "The blue field is to be burned in a peaceful manner and the ashes buried."
+              },
+              {
+                "index": 0,
+                "quote": "put the flag out for collection only after you have removed the blue field from the flag"
+              },
+              {
+                "index": 2,
+                "quote": "The other method is to burn the flag yourself in a proper ceremony."
+              }
+            ],
+            "claim_text": "Therefore, the proper way to dispose of a worn USA flag is through burning it in a peaceful manner during a proper ceremony, or by placing it out for collection after removing the blue field and then properly disposing of the blue field through burning.",
+            "reasoning": "Both described disposal alternatives follow directly from the quoted passages, with the blue-field burning taken from passage 1.",
+            "verdict": "SUPPORTED"
+          }
+        ]
+      },
+      "unsupported_reviews": []
+    },
+    {
+      "author_review": "pending",
+      "extraction": {
+        "chunks": [
+          {
+            "chunk_id": "d1",
+            "claim_ids": [
+              "c1",
+              "c2",
+              "c3",
+              "c4",
+              "c5",
+              "c6"
+            ],
+            "error": {
+              "code": "invalid_model_output",
+              "message": "Extraction left answer text unaccounted for near: 'and may send a message warning users before doing so.\\n\\nTo regain access to your account, you may nee'"
+            },
+            "fallback": true,
+            "fallback_limitation": "Sentence skeletons preserve text but do not certify factuality or atomicity.",
+            "hard_split": false,
+            "source_end": 835,
+            "source_start": 0
+          }
+        ],
+        "claims": [
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "Based on the given passages, it appears that your Snapchat account may be temporarily locked due to using third-party apps to access the service.",
+            "extraction_fallback": true,
+            "id": "c1",
+            "source_end": 145,
+            "source_span": "Based on the given passages, it appears that your Snapchat account may be temporarily locked due to using third-party apps to access the service.",
+            "source_start": 0
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Snapchat does not support or condone the use of third-party apps, as they can pose a security risk to users' accounts.",
+            "extraction_fallback": true,
+            "id": "c2",
+            "source_end": 264,
+            "source_span": " Snapchat does not support or condone the use of third-party apps, as they can pose a security risk to users' accounts.",
+            "source_start": 145
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " The company has been known to lock out accounts that have been accessed using third-party apps, and may send a message warning users before doing so.",
+            "extraction_fallback": true,
+            "id": "c3",
+            "source_end": 414,
+            "source_span": " The company has been known to lock out accounts that have been accessed using third-party apps, and may send a message warning users before doing so.",
+            "source_start": 264
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "To regain access to your account, you may need to uninstall any third-party apps you have installed and wait for an official Snapchat app to become available for your device.",
+            "extraction_fallback": true,
+            "id": "c4",
+            "source_end": 590,
+            "source_span": "To regain access to your account, you may need to uninstall any third-party apps you have installed and wait for an official Snapchat app to become available for your device.",
+            "source_start": 416
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": " Additionally, it's recommended to change your password and ensure that you're using the latest version of the Snapchat app.",
+            "extraction_fallback": true,
+            "id": "c5",
+            "source_end": 714,
+            "source_span": " Additionally, it's recommended to change your password and ensure that you're using the latest version of the Snapchat app.",
+            "source_start": 590
+          },
+          {
+            "boundary_context": {
+              "after": "",
+              "before": ""
+            },
+            "chunk_id": "d1",
+            "claim_text": "If you're still having trouble accessing your account, you may want to contact Snapchat support for further assistance.",
+            "extraction_fallback": true,
+            "id": "c6",
+            "source_end": 835,
+            "source_span": "If you're still having trouble accessing your account, you may want to contact Snapchat support for further assistance.",
+            "source_start": 716
+          }
+        ],
+        "coverage_check": "Every substantive answer character is accounted for by an exact source span.",
+        "hard_split_recoveries": [],
+        "limitation": "Lexical coverage and fallback skeletons do not prove atomicity or factual completeness.",
+        "non_factual_spans": []
+      },
+      "id": "15485",
+      "input": {
+        "context_passages": [
+          "passage 1:· just now. Report Abuse. If you used third-party apps to get into snapchat and they warned you more them 4 times then yes your account is locked :(they warned me 3 times, I changed my password and it did unlock it but on the 4th time I tried and nothing.I'm still waiting though. nancy · 8 months ago. Thumbs up.eport Abuse. My snaps from people started not to download so I logged out I put my username and password in and it was saying I am using third party applications what is third party user and how do I get back into my account. nicole · 9 months ago. Thumbs up. 0. Thumbs down. 0. 1 comment. Loading ...\n\n",
+          "passage 2:Snapchat cannot guarantee your security if you use these third party apps, so they may lock your Snapchat account. They will usually send you a message before they do so. However, if you have been locked out of your account and don’t know why, using third party apps may be a reason.If you are using third party apps, at the moment the only thing you can do is to uninstall that app and wait for an official Snapchat app to appear for the Windows Phone.ome people have come back to an old account to find it’s been locked. Others have received an email from Snapchat warning them about third party apps, before being locked out. Also see: How To Use Google Chrome Without Internet Connection. There are many reasons why people are getting locked out of Snapchat.\n\n",
+          "passage 3:The Snapchat app is used on an iPhone. Snapchat allows users' messages to vanish after seconds. (Photo by Peter Macdiarmid/Getty Images) | Peter Macdiarmid via Getty Images. We've noticed that you're using a third-party application to access Snapchat, putting yourself (and possibly your friends) at risk.ast month, 200,000 private Snapchat photos were leaked via one of the photo messaging app's many third-party apps. Now, the company is taking steps to punish individuals who use those apps.\n\n"
+        ],
+        "generated_answer": "Based on the given passages, it appears that your Snapchat account may be temporarily locked due to using third-party apps to access the service. Snapchat does not support or condone the use of third-party apps, as they can pose a security risk to users' accounts. The company has been known to lock out accounts that have been accessed using third-party apps, and may send a message warning users before doing so.\n\nTo regain access to your account, you may need to uninstall any third-party apps you have installed and wait for an official Snapchat app to become available for your device. Additionally, it's recommended to change your password and ensure that you're using the latest version of the Snapchat app.\n\nIf you're still having trouble accessing your account, you may want to contact Snapchat support for further assistance."
+      },
+      "native_gold": {
+        "has_hallucination": true,
+        "id": "15485",
+        "labels": [
+          {
+            "due_to_null": false,
+            "end": 714,
+            "implicit_true": false,
+            "label_type": "Evident Baseless Info",
+            "meta": "HIGH INTRO OF NEW INFO\nOriginal: No mention of changing your password and ensuring that you are using the latest version of the Snapchat app in the passages. \nGenerative: ",
+            "start": 605,
+            "text": "it's recommended to change your password and ensure that you're using the latest version of the Snapchat app."
+          },
+          {
+            "due_to_null": false,
+            "end": 835,
+            "implicit_true": false,
+            "label_type": "Evident Baseless Info",
+            "meta": "HIGH INTRO OF NEW INFO\nOriginal: No mention of contacting the Snapchat support for further assistance in the passages\nGenerative: \"If you're still having trouble accessing your account, you may want to contact Snapchat support for further assistance.\"",
+            "start": 716,
+            "text": "If you're still having trouble accessing your account, you may want to contact Snapchat support for further assistance."
+          }
+        ],
+        "source_id": "15501"
+      },
+      "prediction": {
+        "claims": [
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "Snapchat cannot guarantee your security if you use these third party apps, so they may lock your Snapchat account."
+              }
+            ],
+            "claim_text": "Based on the given passages, it appears that your Snapchat account may be temporarily locked due to using third-party apps to access the service.",
+            "reasoning": "The source explicitly says third party app use may result in account lock, matching the claim's hedged assertion.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "Snapchat cannot guarantee your security if you use these third party apps, so they may lock your Snapchat account."
+              },
+              {
+                "index": 2,
+                "quote": "We've noticed that you're using a third-party application to access Snapchat, putting yourself (and possibly your friends) at risk."
+              }
+            ],
+            "claim_text": " Snapchat does not support or condone the use of third-party apps, as they can pose a security risk to users' accounts.",
+            "reasoning": "The passages explicitly describe third-party apps as a security risk and as grounds for account locks, supporting the statement that Snapchat does not support/condone them.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "so they may lock your Snapchat account. They will usually send you a message before they do so."
+              }
+            ],
+            "claim_text": " The company has been known to lock out accounts that have been accessed using third-party apps, and may send a message warning users before doing so.",
+            "reasoning": "The cited passage explicitly says accounts may be locked for third-party apps and that a message is usually sent beforehand.",
+            "verdict": "SUPPORTED"
+          },
+          {
+            "citations": [
+              {
+                "index": 1,
+                "quote": "If you are using third party apps, at the moment the only thing you can do is to uninstall that app and wait for an official Snapchat app to appear for the Windows Phone."
+              }
+            ],
+            "claim_text": "To regain access to your account, you may need to uninstall any third-party apps you have installed and wait for an official Snapchat app to become available for your device.",
+            "reasoning": "The passage directly states uninstalling the third-party app and waiting for an official Snapchat app as the only current action.",
+            "verdict": "SUPPORTED"
+          }
+        ]
+      },
+      "unsupported_reviews": [
+        {
+          "after_verdict": null,
+          "before_verdict": "UNSUPPORTED",
+          "claim_id": "c5",
+          "derivation": null,
+          "evidence": [],
+          "reviewed": true,
+          "trigger": "Final unsupported entailment/contradiction search"
+        },
+        {
+          "after_verdict": null,
+          "before_verdict": "UNSUPPORTED",
+          "claim_id": "c6",
+          "derivation": null,
+          "evidence": [],
+          "reviewed": true,
+          "trigger": "Final unsupported entailment/contradiction search"
+        }
+      ]
+    }
+  ],
+  "kind": "native-FN-diagnostics-not-adjudication"
+}

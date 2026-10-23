@@ -1,0 +1,26 @@
+{
+  "decompose": {
+    "thinking": "disabled",
+    "max_output_tokens": 8192
+  },
+  "verify": {
+    "thinking": "disabled",
+    "max_output_tokens": 8192
+  },
+  "review": {
+    "thinking": "enabled",
+    "max_output_tokens": 16384
+  },
+  "decompose_chunk_chars": 1200,
+  "verify_batch_token_budget": 2400,
+  "max_batch_claims": 3,
+  "chars_per_token": 3.0,
+  "max_workers": 4,
+  "format_retries": 1,
+  "transport_retries": 1,
+  "targeted_retries": 1,
+  "batch_retries": 1,
+  "quote_fuzzy_threshold": 0.92,
+  "quote_window_tokens": 80,
+  "max_claims": 64
+}

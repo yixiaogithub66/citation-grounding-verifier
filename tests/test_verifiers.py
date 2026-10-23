@@ -340,7 +340,10 @@ class ClientTests(unittest.TestCase):
         try:
             settings = Settings(
                 base_url=f"http://127.0.0.1:{redirect.server_port}", model="test",
-                api_key="fake-test-only-token", timeout=2,
+                # Keep this a single redirect attempt, not a transport-retry
+                # test; Windows localhost startup can exceed two seconds under
+                # the full concurrent test workload.
+                api_key="fake-test-only-token", timeout=5, upstream_retries=0,
             )
             telemetry: dict = {"calls": []}
             with self.assertRaises(VerificationError) as raised:

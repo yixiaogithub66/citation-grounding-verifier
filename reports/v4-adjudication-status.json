@@ -1,0 +1,22 @@
+{
+  "acceptance": "pending",
+  "adjudicated_answer_fn_zero": "not_evaluable",
+  "approved_review_count": 0,
+  "input_sha256": {
+    "draft": "9fe0bf83fc505ad77659ae545980676405012b1be90896101a885afa3788f852",
+    "pending": "f97322c98db6b3cdde97c2e6fd3e435e9f915b209042949a45b8f2b8da621347"
+  },
+  "pending_reason": "AI drafts are unapproved; the human author must review every required claim",
+  "policy": {
+    "acceptance": "Flag counts alone cannot establish overall v4 true-FP/FN acceptance",
+    "ai_review_is_gold": false,
+    "fn": "Reported-claim review cannot establish missed claims or answer-level FN=0",
+    "identity": "Artifact checks do not authenticate a human; approval relies on genuine explicit user confirmation",
+    "native_labels_modified": false,
+    "scope": "Only the selected reported C/U claims; not exhaustive answer gold"
+  },
+  "reported_claim_flags": null,
+  "required_review_count": 341,
+  "schema_version": "ragtruth-v4-adjudicated-flags-v1",
+  "status": "pending_author_approval"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "origin_commit": "cfadeca69f907aa91eaa4f825b78f02ac5da0e92",
+  "hash_method": "sha256-raw-bytes",
+  "scope": "Frozen optimized-v2 inference and shared response validation/configuration; excludes factory, scorer, benchmark, v3, tests and documentation.",
+  "files": {
+    "grounding/prompts.py": "7106603e029635f14238861f05881e8482f944ce1bc6aa56f9d60243a4667769",
+    "grounding/verifiers.py": "2ce4a59a256d4380195275bacfbf03102a2ae52aab4f835533e0c640349a5f2b",
+    "grounding/client.py": "32a1ca2d005c5e91812ff6fab8362cc040d21bd71d6e09ba4f48a20ce869b7d0",
+    "grounding/contracts.py": "8ceb5d93e5482c67a79343914489ab79992fa9a51ae85d4819f3f9cedd881435",
+    "grounding/config.py": "8f87a8c49d893ff2ecb12db0759aad6ac3ecba67e9ca6ed378599370cd5bc238",
+    "scripts/validate_dataset.py": "b202e627be4b7af80f2f78addf1495ee73bcddd978e42a7c3214f74665fceb9d"
+  }
+}

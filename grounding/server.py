@@ -14,6 +14,8 @@ from typing import Any
 from grounding.config import load_settings
 from grounding.contracts import VerificationError, VerificationRequest, strict_json_loads, validate_report
 from grounding.factory import BACKENDS, build_verifier
+from grounding.contracts_v4 import validate_endpoint_report
+from grounding.config_v4 import load_v4_config
 
 
 LOGGER = logging.getLogger("grounding.server")
@@ -98,7 +100,7 @@ class VerificationHandler(BaseHTTPRequestHandler):
                 raise VerificationError("server_busy", "Too many concurrent verification requests.", 503)
             try:
                 result = self.server.verifier.verify(request)
-                validate_report(result.report, request.context_passages)
+                validate_endpoint_report(result.report, request.context_passages)
             finally:
                 self.server.slots.release()
             self.send_json(200, result.report)
@@ -119,13 +121,16 @@ def main() -> None:
     parser.add_argument("--port", default=8000, type=int)
     parser.add_argument("--backend", choices=BACKENDS, default="optimized")
     parser.add_argument("--env-file", type=Path)
+    parser.add_argument("--v4-config", type=Path, help="Independent per-stage v4 JSON settings")
     parser.add_argument("--max-concurrent", type=int, default=4)
     args = parser.parse_args()
     if not 0 <= args.port <= 65535 or not 1 <= args.max_concurrent <= 32:
         parser.error("Invalid port or concurrency limit.")
     try:
         settings = load_settings(args.env_file)
-        verifier = build_verifier(args.backend, settings)
+        if args.v4_config and args.backend not in ("optimized-v4", "optimized-v4.0"):
+            parser.error("--v4-config requires the optimized-v4.0 backend.")
+        verifier = build_verifier(args.backend, settings, v4_config=load_v4_config(args.v4_config)) if args.backend in ("optimized-v4", "optimized-v4.0") else build_verifier(args.backend, settings)
     except VerificationError as exc:
         parser.error(exc.message)
     with VerificationServer((args.host, args.port), verifier, backend=args.backend, max_concurrent=args.max_concurrent) as server:

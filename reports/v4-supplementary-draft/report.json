@@ -1,0 +1,47 @@
+{
+  "backends": {
+    "optimized-v4.0": {
+      "completed_aligned_verdict_accuracy": {
+        "denominator": 12,
+        "numerator": 12,
+        "value": 1.0
+      },
+      "completed_claim_count": 14,
+      "count": 10,
+      "gold_alignment_coverage": {
+        "denominator": 13,
+        "numerator": 12,
+        "value": 0.9230769230769231
+      },
+      "gold_claim_count": 13,
+      "mean_latency_seconds": 2.4750000000116414,
+      "status_counts": {
+        "complete": 10
+      },
+      "strict_all_gold_f1_diagnostic": {
+        "denominator": 27,
+        "numerator": 24,
+        "value": 0.8888888888888888
+      },
+      "usage": {
+        "cache_accounted_calls": 24,
+        "cache_usage_complete": true,
+        "calls": 24,
+        "calls_with_usage": 24,
+        "completion_tokens": 2995,
+        "prompt_cache_hit_tokens": 12160,
+        "prompt_cache_miss_tokens": 6421,
+        "prompt_tokens": 18581,
+        "reasoning_accounted_calls": 3,
+        "reasoning_tokens": 264,
+        "reasoning_usage_complete": false,
+        "total_tokens": 21576,
+        "usage_complete": true
+      }
+    }
+  },
+  "config_sha256": "fba4dd2aafe80edb81ea9050240cef91c62654193cb592d012838feb7a01329b",
+  "kind": "exposed-claim-regression-not-unseen",
+  "note": "Conditional label accuracy only uses completed text-aligned claims. Read with gold alignment coverage and unmatched predictions; not semantic accuracy of every paraphrase.",
+  "responses_sha256": "2f798b515e0522f7df19bd2218730cddb5eacf9091afba48a26aea7e9ee4cc09"
+}

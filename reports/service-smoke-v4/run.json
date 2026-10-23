@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "latency_seconds": 3.640999999945052,
+  "schema_valid": true,
+  "request_sha256": "5d1f2a44791caa9d6a04af1bee87eab626d7946d95999aea914ab338975b0e34",
+  "verdicts": [
+    "CONTRADICTED",
+    "SUPPORTED",
+    "SUPPORTED",
+    "UNSUPPORTED"
+  ],
+  "mode": "real HTTP and configured upstream model"
+}

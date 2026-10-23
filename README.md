@@ -1,5 +1,9 @@
 # Citation Grounding & Faithfulness Verifier
 
+新增独立后端 **`optimized-v4.0`**：分块拆分与句子骨架降级、保守引文修复、分批核查、C/U 有界复核和部分结果返回。当前处于开发验证及作者裁定阶段，尚未宣称通过未见测试验收。启动、配置、评测与冻结流程见 [v4 说明](docs/V4_DESIGN.md)；[341 条 AI 裁定草案](reviews/ragtruth-v4-dev-adjudication-v1/ai-draft/README.md)等待作者逐条终审。`optimized` 别名继续指向历史 v3。
+
+v4 已完成旧 180 条开发评测：170 条完整、10 条部分、0 条整例执行失败，平均 14.80 秒；原生口径 FP=66、FN=3，尚未达成语义验收目标。坏引用七例恢复 6 条完整报告；318 项测试通过。详细回归、开销和未完成项见 [v4 开发审计](reports/V4_DEVELOPMENT_AUDIT.md)。新未见切片尚未取数。
+
 最新的 [RAGTruth 外部盲测](reports/ragtruth-blind-v1-recovery/AUDIT.md) 已完成：优化版失败计入 F1 为58.89%，minimal为56.70%，差值区间跨零；原有CPHOS高分不足以证明通用泛化优势。下方保留全部历史结果。
 
 ## Overview
@@ -62,7 +66,7 @@ python scripts/ragtruth_data.py --raw-dir tmp/ragtruth-upstream --output-dir res
 
 `--sources-per-task 0` 准备全部合格 test 回答。原始数据和测试标签不进入验证器；推理仅接收两个请求字段，完成后由独立脚本评分。API/格式失败保留在总体分母中，并同时报告成功输出上的指标和计入失败的保守 F1。置信区间按来源整体重采样，不能把同源六个回答当作六个独立来源。
 
-使用仓库已冻结的首轮选择复现（同一工作区已有来源曝光时需 `--replicate`，始终使用新输出目录）：
+以下首轮复现命令需在历史提交 `5fc6c40` 的独立 checkout 中运行；v4 开发目录会被旧冻结校验正确拒绝。使用已冻结的首轮选择复现时，同一工作区已有来源曝光需 `--replicate`，始终使用新输出目录：
 
 ```powershell
 python scripts/benchmark_ragtruth.py run --data-dir dataset/ragtruth-blind-v1/recovery --output-dir results/ragtruth-reproduction --thinking enabled --workers 4
@@ -144,6 +148,7 @@ Invoke-RestMethod -Uri http://127.0.0.1:8000/verify -Method Post -ContentType "a
 | `minimal` | 最简任务及输出契约提示词，单次 LLM 请求，再校验返回值 | 实现简单；无模型输出修复、无传输重试 |
 | `optimized-v2` | 原冻结两阶段方案：拆分事实及原答案片段，再逐声明验证，校验结构与逐字引用，有限修复 | 保留历史对照；运行前校验推理文件的原始字节哈希 |
 | `optimized-v3`（`optimized`，提示版本 v3.1） | 拆分后筛选等价复述或同句一致的冗余说明，按需批量合并并保留完整公式；验证时记录矛盾证据，对缺少有效结构记录的矛盾按需批量复核 | 保留三种判决的改判方向，新增调用全部计入耗时和费用；结构检查不能证明语义正确 |
+| `optimized-v4.0`（`optimized-v4`） | 分块拆分、保守引用定位、按预算分批、C/U 有界复核与部分结果；无独立合并阶段 | 分阶段配置与逐条干预审计；部分报告需要读取 `status/errors`，作者裁定与未见验收尚待完成 |
 
 HTTP 与 benchmark 调用相同的后端实现。推理模块只接收两个请求字段，不能访问数据集标签。优化方案的原文覆盖检查能发现字面遗漏，不能证明所有事实都已正确拆分；被模型判为非事实的片段仍需语义审阅。详细实现与测试位于 `grounding/` 和 `tests/`。
 
@@ -187,7 +192,7 @@ python scripts/benchmark.py --split test --backends baseline minimal optimized-v
 
 新增确认集已完成三条示例及标注规则的作者审阅、正式数据构造、独立 AI 复核与冻结。`--split confirmation` 会验证冻结清单、代码与数据哈希、模型设置、四路后端和示例审阅凭证；缺失时在任何模型调用前报错。示例仅用 `review` 划分，永久排除出正式确认集。详细顺序见 [v3 设计](docs/V3_DESIGN.md)。
 
-直接使用仓库已提交的冻结清单，在新输出目录运行四路确认评测：
+在历史提交 `5fc6c40` 的独立 checkout 中使用原冻结清单，可在新目录复现四路确认评测。当前 v4 目录将其作为回归材料时，使用 `scripts/benchmark_v4_claims.py`，不冒充新的确认实验：
 
 ```powershell
 python scripts/benchmark.py --dataset dataset/cphos28-confirmation/cases.jsonl --split confirmation --backends baseline minimal optimized-v2 optimized-v3 --thinking enabled --input-price-per-million 0.30 --cached-input-price-per-million 0.006 --output-price-per-million 1.20 --currency USD --output-dir results/confirmation-reproduction

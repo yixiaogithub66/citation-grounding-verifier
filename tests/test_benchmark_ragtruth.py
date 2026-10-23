@@ -127,9 +127,12 @@ class RagtruthRunnerTests(unittest.TestCase):
     def test_initial_inference_freeze_is_verified(self) -> None:
         self.patch.stop()
         try:
-            with patch.object(runner, "SUPPORT_FILES", ()):
-                provenance = runner.implementation_provenance()
-                self.assertTrue(provenance["frozen_v2"]["verified"])
+            # The current checkout has v4 additions and a new factory/HTTP
+            # boundary. It must NOT pass itself off as the frozen v1 runtime.
+            # Reproduction of v1 requires its archived historical checkout.
+            with self.assertRaisesRegex(ValueError, "initial RAGTruth freeze"):
+                runner.implementation_provenance()
+            self.assertTrue(runner.frozen_v2_provenance()["verified"])
             initial = runner._object(runner.INITIAL_FREEZE)
             initial["files"]["grounding/config.py"] = "changed"
             changed_path = self.root / "bad-initial-freeze.json"
