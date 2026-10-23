@@ -1,0 +1,17 @@
+{
+  "status": "paper_examples_observed_source_mapping_unresolved",
+  "paper": "Retromorphic Testing with Hierarchical Verification for Hallucination Detection in RAG",
+  "url": "https://arxiv.org/html/2603.27752v1",
+  "section": "4.7",
+  "paper_displayed_sample_ids": [
+    "879",
+    "587",
+    "25"
+  ],
+  "identifier_namespace": "unknown; not assumed to equal original response IDs",
+  "resolved_source_ids": null,
+  "observation": "Browser extraction of experiment sections also displayed adjacent paper case studies.",
+  "dataset_files_accessed": false,
+  "required_before_unseen_selection": "Resolve to source groups using non-gold metadata when possible; exclude those exposed sources. If mapping cannot be established, do not certify the overlapping candidate pool as untouched.",
+  "other_public_examples": "Other papers contain public illustrations; no paper examples or benchmark labels are copied into runtime prompts. Any future external evaluation dataset needs its own exposure audit."
+}

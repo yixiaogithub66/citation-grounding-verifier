@@ -1,0 +1,736 @@
+{
+  "created_at": "2026-10-23",
+  "scope": "Phase2 verification literature evidence only; no implementation or gold edits",
+  "language": "zh-CN",
+  "search_form": "targeted narrative evidence search, not systematic review",
+  "source_count": 9,
+  "body_methods_and_results_read_count": 7,
+  "queries": {
+    "Q1": "RefChecker Reference-based Fine-grained Hallucination Checker EMNLP 2024 paper",
+    "Q2": "MiniCheck Efficient Fact-Checking of LLMs on Grounding Documents 2024 EMNLP paper",
+    "Q3": "AlignScore Evaluating Factual Consistency Unified Alignment Function ACL 2023",
+    "Q4": "Chain-of-Verification Reduces Hallucination in Large Language Models ACL 2024 paper",
+    "Q5": "Large Language Models Cannot Self-Correct Reasoning Yet ICLR 2024 paper",
+    "Q6": "2025 sufficient context retrieval augmented generation fact checking evidence sufficiency paper",
+    "Q7": "TRUE Re-evaluating Factual Consistency Evaluation ACL 2022",
+    "Q8": "QAFactEval Improved QA-Based Factual Consistency Evaluation ACL 2022",
+    "Q9": "2025 FactCG complex claims graph fact checking EMNLP",
+    "Q10": "Parent-provided DOI/arXiv lookup: arXiv:2603.27752; opened methods/results/limitations only"
+  },
+  "sources": [
+    {
+      "id": "V01",
+      "title": "Knowledge-Centric Hallucination Detection",
+      "aliases": [
+        "RefChecker: Reference-based Fine-grained Hallucination Checker and Benchmark for Large Language Models"
+      ],
+      "authors": [
+        "Xiangkun Hu",
+        "Dongyu Ru",
+        "Lin Qiu",
+        "Qipeng Guo",
+        "Tianhang Zhang",
+        "Yang Xu",
+        "Yun Luo",
+        "Pengfei Liu",
+        "Yue Zhang",
+        "Zheng Zhang"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.emnlp-main.395/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.395",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Preliminaries",
+          "4 The REFCHECKER framework",
+          "5 The KNOWHALBENCH dataset",
+          "6 Experiments",
+          "Limitations"
+        ],
+        "pages_pdf": "4-9",
+        "body_methods_and_results_read": true,
+        "not_read": "All appendices and released artifact code not audited"
+      },
+      "findings": [
+        {
+          "claim": "Triplet claims are checked using entailment, contradiction and neutral; neutral covers insufficient reference.",
+          "locator": "§3-4"
+        },
+        {
+          "claim": "Granularity study uses response-level macro-F1; reported 18.2-27.2 point headline refers to correlations in §6.3.",
+          "locator": "§6.1; §6.3 Table 4"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "Limitations a/c/d, PDF p.9",
+          "text": "Triplet format can miss complex/temporal semantics; attribution is rudimentary; model prior knowledge can turn neutral into entailment or contradiction."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3-4 and §6",
+          "text": "A triple representation and response-level correlations do not certify v4's natural-language atomic claims or S/C/U reliability; migration not tested."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "RefChecker Reference-based Fine-grained Hallucination Checker EMNLP 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "methods",
+          "result metric"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.emnlp-main.395.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2405.14486",
+        "note": "Formal title differs from early arXiv title; one work, not two independent sources"
+      }
+    },
+    {
+      "id": "V02",
+      "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+      "authors": [
+        "Liyan Tang",
+        "Philippe Laban",
+        "Greg Durrett"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.emnlp-main.499/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.499",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Background and Motivation",
+          "3 Methodology: Training Data Synthesis",
+          "4 LLM-AGGREFACT Benchmark",
+          "5 Experimental Setup",
+          "6 Results",
+          "7 Rethinking LLM Fact-Checking",
+          "Limitations",
+          "A.2",
+          "A.3",
+          "B.1-B.2 relevant tables"
+        ],
+        "pages_pdf": "2-10,15-17",
+        "body_methods_and_results_read": true,
+        "not_read": "All remaining appendix prompts/training details not audited"
+      },
+      "findings": [
+        {
+          "claim": "C2D/D2C target multi-fact, multi-sentence support; contradiction and neutral are merged to unsupported.",
+          "locator": "§2 footnote 2; §3.3"
+        },
+        {
+          "claim": "Main table uses fixed 0.5 threshold: FT5 average BAcc 74.7, GPT-4 75.3; claim decomposition is not consistently beneficial.",
+          "locator": "§4.1; Table 2; §7.1 Table 5"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "Limitations, PDF pp.9-10",
+          "text": "No adequate evaluation of significantly separated or cross-document evidence; English-only training; limited interpretability."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§2; §3.3; §6.2",
+          "text": "Binary support does not recover C/U; 400x cost comparison is tied to historical models and hardware/API accounting, not a current v4 cost forecast."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "MiniCheck Efficient Fact-Checking of LLMs on Grounding Documents 2024 EMNLP paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "label mapping",
+          "threshold",
+          "main tables"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.emnlp-main.499.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2404.10774"
+      }
+    },
+    {
+      "id": "V03",
+      "title": "AlignScore: Evaluating Factual Consistency with A Unified Alignment Function",
+      "authors": [
+        "Yuheng Zha",
+        "Yichi Yang",
+        "Ruichen Li",
+        "Zhiting Hu"
+      ],
+      "year": 2023,
+      "url": "https://aclanthology.org/2023.acl-long.634/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "ACL 2023",
+      "doi": "10.18653/v1/2023.acl-long.634",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Methods",
+          "4.1 Implementation",
+          "4.2 Benchmarks",
+          "beginning of main results table"
+        ],
+        "pages_pdf": "2-6",
+        "body_methods_and_results_read": false,
+        "not_read": "Full remaining results, limitations and appendices"
+      },
+      "findings": [
+        {
+          "claim": "Model has 3-way, binary and regression heads; final metric uses the 3-way ALIGNED probability.",
+          "locator": "§3.1-3.2"
+        },
+        {
+          "claim": "Final score averages each answer sentence's maximum alignment over roughly 350-token context chunks.",
+          "locator": "§3.2 Eq.3"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.2 Eq.3",
+          "text": "Max-chunk aggregation alone cannot compose evidence located in distinct chunks; sentence averaging targets proportional consistency, unlike any-C/U answer detection. Not an empirical claim about v4 performance."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "AlignScore Evaluating Factual Consistency Unified Alignment Function ACL 2023"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "heads",
+          "aggregation"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2023.acl-long.634.pdf"
+      }
+    },
+    {
+      "id": "V04",
+      "title": "QAFactEval: Improved QA-Based Factual Consistency Evaluation for Summarization",
+      "authors": [
+        "Alexander Fabbri",
+        "Chien-Sheng Wu",
+        "Wenhao Liu",
+        "Caiming Xiong"
+      ],
+      "year": 2022,
+      "url": "https://aclanthology.org/2022.naacl-main.187/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "NAACL 2022",
+      "doi": "10.18653/v1/2022.naacl-main.187",
+      "read_scope": {
+        "level": "abstract_only",
+        "sections": [
+          "Official metadata",
+          "Abstract"
+        ],
+        "body_methods_and_results_read": false,
+        "not_read": "Paper body, appendix, implementation"
+      },
+      "findings": [
+        {
+          "claim": "Abstract reports importance of question generation/answerability components and complementary QA/entailment signals.",
+          "locator": "Abstract",
+          "evidence_scope": "abstract-only background"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "not-assessed",
+          "locator": "abstract_only",
+          "text": "Method weaknesses not assessed (read scope: abstract_only); no method-level criticism or v4 effect estimate."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "not checked",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "QAFactEval Improved QA-Based Factual Consistency Evaluation ACL 2022"
+      ],
+      "verification": {
+        "status": "verified_primary_metadata_only",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "abstract"
+        ],
+        "primary_fulltext_available_but_not_read": "https://aclanthology.org/2022.naacl-main.187.pdf"
+      }
+    },
+    {
+      "id": "V05",
+      "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+      "authors": [
+        "Shehzaad Dhuliawala",
+        "Mojtaba Komeili",
+        "Jing Xu",
+        "Roberta Raileanu",
+        "Xian Li",
+        "Asli Celikyilmaz",
+        "Jason Weston"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.findings-acl.212/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "Findings of ACL 2024",
+      "doi": "10.18653/v1/2024.findings-acl.212",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Chain-of-Verification",
+          "4.1 Tasks",
+          "4.2 Baselines",
+          "Tables 1-2"
+        ],
+        "pages_pdf": "2-6",
+        "body_methods_and_results_read": true,
+        "not_read": "Rest of results and all appendix demonstrations"
+      },
+      "findings": [
+        {
+          "claim": "Factored verification answers questions without conditioning on the initial draft; the study uses the same LLM, without external tool retrieval.",
+          "locator": "§3.3"
+        },
+        {
+          "claim": "Closed-book MultiSpanQA Llama65B F1: few-shot .39, joint .46, factored .48.",
+          "locator": "Table 2"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.3; §4.1-4.2",
+          "text": "Generation repair and closed-book factual QA differ from context-only S/C/U; task-specific few-shot demonstrations are not transferable as benchmark-specific v4 inference."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.3",
+          "text": "Separate contexts reduce direct copying but do not establish statistically independent errors."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Chain-of-Verification Reduces Hallucination in Large Language Models ACL 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "method variants",
+          "Table 2"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.findings-acl.212.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2309.11495"
+      }
+    },
+    {
+      "id": "V06",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "authors": [
+        "Jie Huang",
+        "Xinyun Chen",
+        "Swaroop Mishra",
+        "Huaixiu Steven Zheng",
+        "Adams Yu",
+        "Xinying Song",
+        "Denny Zhou"
+      ],
+      "year": 2024,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "ICLR 2024",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Background and Related Work",
+          "3 Intrinsic Self-Correction",
+          "4 Debate vs Self-Consistency",
+          "5 Prompt Design",
+          "6 beginning"
+        ],
+        "pages_pdf": "2-8",
+        "body_methods_and_results_read": true,
+        "not_read": "All appendix prompts and remaining discussion"
+      },
+      "findings": [
+        {
+          "claim": "Intrinsic self-correction excludes external feedback; removing gold-guided stopping changes apparent benefits, and correct-to-incorrect revisions occur.",
+          "locator": "§2-3; Tables 2-6"
+        },
+        {
+          "claim": "The paper checks equal-response comparisons and stronger initial instructions.",
+          "locator": "§4-5; Tables 7-8"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§3.3 footnote 1, PDF p.5",
+          "text": "HotpotQA transition analysis omitted because sample is too small for meaningful statistics."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.1 and §2 scope",
+          "text": "2023-era models and selected reasoning tasks do not prove impossibility for 2026 models or source-conditioned evidence reviews."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "checked: found",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Large Language Models Cannot Self-Correct Reasoning Yet ICLR 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "scope",
+          "experimental controls"
+        ],
+        "primary_fulltext": "https://proceedings.iclr.cc/paper_files/paper/2024/file/8b4add8b0aa8749d80a34ca5d941c355-Paper-Conference.pdf",
+        "secondary_primary_record": "https://openreview.net/forum?id=IkmD3fKBPQ"
+      }
+    },
+    {
+      "id": "V07",
+      "title": "Sufficient Context: A New Lens on Retrieval Augmented Generation Systems",
+      "authors": [
+        "Hailey Joren",
+        "Jianyi Zhang",
+        "Chun-Sung Ferng",
+        "Da-Cheng Juan",
+        "Ankur Taly",
+        "Cyrus Rashtchian"
+      ],
+      "year": 2025,
+      "url": "https://arxiv.org/html/2411.06037v3",
+      "kind": "peer_reviewed_conference_paper_author_version",
+      "venue": "ICLR 2025",
+      "version": "arXiv v3, 2025-04-23",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Sufficient Context",
+          "4 A New Lens on RAG Performance",
+          "5 Techniques to Reduce Hallucinations",
+          "6 Conclusion and Limitations"
+        ],
+        "body_methods_and_results_read": true,
+        "not_read": "All appendices and released source code"
+      },
+      "findings": [
+        {
+          "claim": "Sufficiency asks whether some plausible answer exists from query/context, not whether a fixed candidate answer is entailed.",
+          "locator": "§3.1"
+        },
+        {
+          "claim": "Autorater accuracy 93% on 115 labeled instances; selection uses confidence plus sufficiency and reports accuracy-coverage, with no added gain in one setting.",
+          "locator": "§3.2 Table 1; §5.1 Figure 4"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§6 Limitations",
+          "text": "Analysis focuses on QA; retrieval-method effects are incompletely explored."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.1; §4.3",
+          "text": "World-correct answers aided by parametric knowledge are not necessarily grounded in supplied context; sufficiency cannot be substituted for S/C/U."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "2025 sufficient context retrieval augmented generation fact checking evidence sufficiency paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "conference year",
+          "arXiv version",
+          "definition",
+          "Table 1"
+        ],
+        "primary_publication_record": "https://research.google/pubs/sufficient-context-a-new-lens-on-retrieval-augmented-generation-systems/",
+        "blocked_url": "https://openreview.net/pdf?id=Jjr2Odj8DJ",
+        "fallback": "OpenReview PDF presented browser challenge; read arXiv author v3 full-text sections instead"
+      }
+    },
+    {
+      "id": "V08",
+      "title": "FactCG: Enhancing Fact Checkers with Graph-Based Multi-Hop Data",
+      "authors": [
+        "Deren Lei",
+        "Yaxi Li",
+        "Siyao Li",
+        "Mengya Hu",
+        "Rui Xu",
+        "Ken Archer",
+        "Mingyu Wang",
+        "Emily Ching",
+        "Alex Deng"
+      ],
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.naacl-long.258/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "NAACL 2025",
+      "doi": "10.18653/v1/2025.naacl-long.258",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Problem Formulation",
+          "4 Multi-Hop Analysis",
+          "5 CG2C",
+          "6 Experiments",
+          "7 Connected Reasoning"
+        ],
+        "pages_pdf": "3-8",
+        "body_methods_and_results_read": true,
+        "not_read": "Later limitations and all appendix results/code"
+      },
+      "findings": [
+        {
+          "claim": "CG2C builds multi-premise training pairs via context graphs; CoRe requires both original support and non-support after removal of necessary evidence.",
+          "locator": "§5; §7.1"
+        },
+        {
+          "claim": "Binary classification uses maximum chunk score; main results tune thresholds per dataset, while unified calibration is left for future work.",
+          "locator": "§3; §5.3; §6.2"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§6.3; §7.3",
+          "text": "Each experiment ran once; about half of evaluated reasoning still categorized as disconnected."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§5.1-5.2; §6.2",
+          "text": "Constructed labels still depend on semantic correctness of LLM graph extraction/editing; tuned-threshold gains do not establish gains under a unified v4 inference policy."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "checked: found",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "2025 FactCG complex claims graph fact checking EMNLP"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "threshold selection",
+          "binary mapping",
+          "CoRe definition"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2025.naacl-long.258.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2501.17144"
+      }
+    },
+    {
+      "id": "V09",
+      "title": "Retromorphic Testing with Hierarchical Verification for Hallucination Detection in RAG",
+      "authors": [
+        "Boxi Yu",
+        "Yuzhong Zhang",
+        "Liting Lin",
+        "Lionel Briand",
+        "Emir Muñoz"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/html/2603.27752v1",
+      "kind": "preprint",
+      "venue": "arXiv; peer-reviewed acceptance not verified",
+      "version": "v1, 2026-03-29",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Preliminaries",
+          "3 Approach",
+          "4.1-4.6 Experiments",
+          "5 Limitations and Threats"
+        ],
+        "body_methods_and_results_read": true,
+        "incidental_scope": "Web extraction expanded into first three examples in §4.7; exposure recorded separately",
+        "not_read": "Released toolkit, annotation files and sample files"
+      },
+      "findings": [
+        {
+          "claim": "RT4CHART already combines atomic claims, three labels, answer-span mapping, context evidence and local-to-global verification; global step re-extracts evidence.",
+          "locator": "§2-3"
+        },
+        {
+          "claim": "Global verification answer-F1 change: +.036 on one dataset and .000 on the other; direct-span ablation removes both decomposition and local checks.",
+          "locator": "§4.4 Tables 6-7"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§5.1-5.2",
+          "text": "Hedging/certainty shifts, redundant/conflicting context, model dependence, and English RAGTruth-family scope remain limitations."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§4.2; §4.4 Table 7",
+          "text": "Related data families limit generality; joint removal of decomposition/local checking cannot identify the local component's causal contribution alone."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "checked: found",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Parent-provided DOI/arXiv lookup: arXiv:2603.27752; opened methods/results/limitations only"
+      ],
+      "verification": {
+        "status": "verified_primary_preprint",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "version date",
+          "methods",
+          "Tables 6-7",
+          "limitations"
+        ],
+        "primary_metadata": "https://arxiv.org/abs/2603.27752",
+        "warning": "No claim of peer review; no dataset or artifact access"
+      }
+    }
+  ],
+  "background_not_counted": [
+    {
+      "title": "TRUE: Re-evaluating Factual Consistency Evaluation",
+      "url": "https://aclanthology.org/2022.naacl-main.287/",
+      "read_scope": "metadata/abstract search discovery only",
+      "reason": "Adjacent older evidence; QAFactEval retained as abstract-level QA complement; no method claims extracted."
+    }
+  ],
+  "exposure_log": [
+    {
+      "source_id": "V09",
+      "dataset": "RAGTruth paper examples",
+      "sample_ids": [
+        "879",
+        "587",
+        "25"
+      ],
+      "cause": "Web opening §4 experiments auto-expanded into §4.7 examples",
+      "sample_files_accessed": false,
+      "source_group_mapping": "not resolved",
+      "parent_notified": true,
+      "action": "Record as literature exposure; exclude mapped source groups from future unseen evaluation after mapping; never put content into inference."
+    }
+  ],
+  "constraints": {
+    "benchmark_specific_tuning": false,
+    "model_api_calls": 0,
+    "inference_changes": false,
+    "prompt_changes": false,
+    "gold_changes": false,
+    "dataset_downloads": false,
+    "author_adjudication": "deferred"
+  },
+  "ai_assistance": "AI-assisted search, source verification, reading and paraphrase; no empirical replication"
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "read_only_analysis_of_exposed_dev_logs",
+  "created_at": "2026-10-23T03:24:25.684687+00:00",
+  "records": 180,
+  "chunks": 204,
+  "fallback_chunks": 71,
+  "fallback_final_errors": {
+    "unaccounted_answer_text": 67,
+    "Extraction source spans must be exact answer substrings in answer order.": 4
+  },
+  "call_stages": {
+    "decompose": 204,
+    "decompose_repair_1": 128,
+    "verify": 606,
+    "unsupported_review": 303,
+    "verify_claim_requery": 178,
+    "verify_claim_requery_repair_1": 21,
+    "verify_batch_retry_1": 16,
+    "contradiction_review": 1
+  },
+  "repair_stages": {
+    "decompose": 128,
+    "verify_claim_requery": 21
+  },
+  "predictions_sha256": "c6111f98e36a2d9b900fc5a0b79bdc75c440ff0b78be29ec05f986c4bcc6165b",
+  "inference_git_commit": "eb5431ec5885499d990e1907af3cc8a63ddc8ac4",
+  "limitations": [
+    "Final validation error categories only; uncovered text may include genuine missing assertions, not just format noise.",
+    "No model calls or inference changes in this analysis.",
+    "No semantic benefit inferred from review verdict flips.",
+    "151/178 targeted reasks are U-with-nonempty-citations contract failures; only 20/178 are content-changing quote issues. These counts do not prove any proposed protocol will remove them or improve labels."
+  ],
+  "targeted_requery_reasons": {
+    "UNSUPPORTED must have citations:[]; never silently remove an invalid citation.": 151,
+    "Only provisional fallback skeletons may be excluded as non-factual, with a reason.": 2,
+    "Verification must preserve supplied id and exact claim_text.": 2,
+    "Each verified claim needs id, claim_text, verdict, reasoning, citations, derivation, and conflict.": 2,
+    "Citation content needs a new semantic judgment.": 20,
+    "The expected claim is missing or duplicated.": 1
+  }
+}

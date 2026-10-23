@@ -1,0 +1,1636 @@
+{
+  "count": 30,
+  "papers": 23,
+  "industry_sources": 7,
+  "sources": [
+    {
+      "id": "C01",
+      "title": "Towards Effective Extraction and Evaluation of Factual Claims",
+      "authors": [
+        "Dasha Metropolitansky",
+        "Jonathan Larson"
+      ],
+      "year": 2025,
+      "venue": "ACL 2025 (Long Papers)",
+      "doi": "10.18653/v1/2025.acl-long.348",
+      "url": "https://aclanthology.org/2025.acl-long.348/",
+      "pdf_url": "https://aclanthology.org/2025.acl-long.348.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted full-text reading: §§2.1–2.3, 3.1–3.4, 4.1–4.2, 5.2–5.3, 6; §9 scope/annotator/hyperparameter limitations. Not all 50 pages or appendices.",
+      "findings": {
+        "mechanism": "Claimify separates sentence selection, disambiguation and decomposition. Context windows support reference resolution; unresolved ambiguity excludes the entire sentence. Evaluation separates entailment, element-level coverage and context-dependent verification outcomes.",
+        "empirical": "On BingCheck, sentence macro-F1 is 91.2%; element macro-F1 is 83.7%. Removing selection causes the largest ablation deterioration. Element evaluation retains 81% of sentences whose automated element-level verifiability agrees with sentence annotations.",
+        "scope": "Extraction quality on the paper's dataset and models; not downstream TabbyML correctness."
+      },
+      "limitations": {
+        "author_reported": [
+          "Single dataset; three annotators; narrow windows can miss list preambles.",
+          "Disambiguation detection accuracy needs further evaluation."
+        ],
+        "our_inference": [
+          "Dropping an entire ambiguous sentence can suppress unambiguous factual content. This cannot be copied as silent success under v4's coverage contract.",
+          "Automated element scoring and subset selection warrant independent validation."
+        ]
+      },
+      "queries": [
+        "Q01",
+        "Q05",
+        "Q07",
+        "Q09"
+      ],
+      "verification": {
+        "metadata": "ACL landing page and PDF title/authors/year; DOI on publisher page.",
+        "methods_results": "Read source sections, not inferred from abstract. Reported numbers from §5.2; ablation interpretation from §6.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C02",
+      "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+      "authors": [
+        "Sewon Min",
+        "Kalpesh Krishna",
+        "Xinxi Lyu",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Pang Wei Koh",
+        "Mohit Iyyer",
+        "Luke Zettlemoyer",
+        "Hannaneh Hajishirzi"
+      ],
+      "year": 2023,
+      "venue": "EMNLP 2023",
+      "doi": "10.18653/v1/2023.emnlp-main.741",
+      "url": "https://aclanthology.org/2023.emnlp-main.741/",
+      "pdf_url": "https://aclanthology.org/2023.emnlp-main.741.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted PDF reading: §3.1 definition/assumptions, §4.2 estimator evaluation, limitations pp.12084–12085, Appendix B.2 segment-vs-system metrics. Other sections not fully read.",
+      "findings": {
+        "mechanism": "Break responses into one-information-unit facts and estimate the fraction supported by a designated knowledge source. Equal fact weighting and a sufficiently consistent source are explicit assumptions.",
+        "empirical": "The advertised <2% error concerns aggregate FActScore estimation, not 98% fact-level accuracy. §4.2 shows that a verifier better at individual judgments can yield a worse aggregate score because error directions differ.",
+        "scope": "Primarily biographies with Wikipedia; proof-of-concept extension is not broad domain validation."
+      },
+      "limitations": {
+        "author_reported": [
+          "Nuanced, debatable facts and conflicting source collections violate important assumptions.",
+          "Estimator quality depends on generation distribution; precision omits recall."
+        ],
+        "our_inference": [
+          "Selecting a verifier by generator identity is prohibited by this project's contract, even though the paper observes generator-dependent best estimators.",
+          "Atomic-count changes alter metric weights; a higher score alone cannot establish a better extractor."
+        ]
+      },
+      "queries": [
+        "Q02"
+      ],
+      "verification": {
+        "metadata": "Title/year/venue/DOI checked against ACL; PDF uses Pang Wei Koh, while landing-page display says Pang Koh. Retained PDF name.",
+        "methods_results": "Aggregate-vs-individual distinction checked directly in §4.2 and B.2.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C03",
+      "title": "VeriScore: Evaluating the factuality of verifiable claims in long-form text generation",
+      "authors": [
+        "Yixiao Song",
+        "Yekyung Kim",
+        "Mohit Iyyer"
+      ],
+      "year": 2024,
+      "venue": "Findings of EMNLP 2024",
+      "doi": "10.18653/v1/2024.findings-emnlp.552",
+      "url": "https://aclanthology.org/2024.findings-emnlp.552/",
+      "pdf_url": "https://aclanthology.org/2024.findings-emnlp.552.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted PDF reading: §§2.1.1–2.1.2, §3.1 human extraction evaluation; full limitations. Did not fully read fine-tuning or all verification experiments.",
+      "findings": {
+        "mechanism": "Extract a single event/state with required modifiers, using the current sentence plus up to three previous and one following sentence. Verifiability filtering and reference resolution occur during extraction.",
+        "empirical": "Three raters assessed 120 texts (15 from each of eight sources), yielding 360 preferences; SAFE was preferred 26 times. The comparison used SAFE extraction plus revision, omitting its relevance stage.",
+        "scope": "Evidence for mixed-content extraction preference; not complete proposition recall or three-label grounding accuracy."
+      },
+      "limitations": {
+        "author_reported": [
+          "Working verifiability definition, not a formal one; complex claims remain difficult.",
+          "Sliding-window extraction is slow; topic relevance is not judged."
+        ],
+        "our_inference": [
+          "Its broad exclusion of advice/hypotheticals must not override v4's requirement to retain embedded factual premises.",
+          "A fixed sentence window may miss distant list headers or antecedents."
+        ]
+      },
+      "queries": [
+        "Q03",
+        "Q08"
+      ],
+      "verification": {
+        "metadata": "ACL and PDF agree on title/authors/year; DOI from ACL.",
+        "methods_results": "Human-study sample and comparator conditions read in §3.1, not just the 93% abstract-level shorthand.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C04",
+      "title": "Long-form factuality in large language models",
+      "authors": [
+        "Jerry Wei",
+        "Chengrun Yang",
+        "Xinying Song",
+        "Yifeng Lu",
+        "Nathan Hu",
+        "Jie Huang",
+        "Dustin Tran",
+        "Daiyi Peng",
+        "Ruibo Liu",
+        "Da Huang",
+        "Cosmo Du",
+        "Quoc V. Le"
+      ],
+      "year": 2024,
+      "venue": "NeurIPS 2024",
+      "doi": "10.48550/arXiv.2403.18802",
+      "doi_note": "Verified arXiv/DataCite DOI, not a conference DOI.",
+      "url": "https://arxiv.org/abs/2403.18802",
+      "pdf_url": "https://papers.neurips.cc/paper_files/paper/2024/file/937ae0e83eb08d2cb8627fe1def8c751-Paper-Conference.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "NeurIPS PDF §§2–4, §8; Appendix A.3, C.4–C.8 and beginning C.10. Not all 72 pages. Metadata cross-checked with arXiv v4 and DeepMind publication page.",
+      "findings": {
+        "mechanism": "SAFE splits sentences, resolves references, filters prompt relevance, and performs iterative web retrieval/verification. LongFact supplies open-domain long-answer prompts.",
+        "empirical": "The 72% agreement on 16,011 facts evaluates steps 2–4 using manually split inputs. C.4 separately measures extraction via response-level fact-count correlations (Pearson .798; Spearman .846), plus inspected examples.",
+        "scope": "Count correlation is not proposition recall or semantic equivalence. The 76% win rate is conditioned on 100 disagreements and researcher reannotation with broader web access."
+      },
+      "limitations": {
+        "author_reported": [
+          "LLM reasoning/revision failures and search coverage failures remain.",
+          "Fact-level extraction alignment was not performed because wording differed."
+        ],
+        "our_inference": [
+          "Web truth and prompt relevance filtering do not directly match v4's supplied-context, all-factual-assertions contract."
+        ]
+      },
+      "queries": [
+        "Q04"
+      ],
+      "verification": {
+        "metadata": "NeurIPS PDF venue/title/authors confirmed; arXiv records v4 dated 2024-11-07 and DOI.",
+        "methods_results": "Main verification result and separate extraction evaluation checked in §4 and C.4.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C05",
+      "title": "Decontextualization: Making Sentences Stand-Alone",
+      "authors": [
+        "Eunsol Choi",
+        "Jennimaria Palomaki",
+        "Matthew Lamm",
+        "Tom Kwiatkowski",
+        "Dipanjan Das",
+        "Michael Collins"
+      ],
+      "year": 2021,
+      "venue": "Transactions of the Association for Computational Linguistics 9:447–461",
+      "doi": "10.1162/tacl_a_00377",
+      "url": "https://aclanthology.org/2021.tacl-1.27/",
+      "pdf_url": "https://aclanthology.org/2021.tacl-1.27.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted PDF reading: §2 truth-conditional definition; §3.4 scope/sampling; §5.2 and Tables 4–5 automatic evaluation. Did not fully read human evaluation/downstream studies.",
+      "findings": {
+        "mechanism": "A decontextualized sentence must be interpretable alone while preserving its original truth-conditional meaning. Reference resolution, scoping and bridging are involved; implicatures are deliberately excluded.",
+        "empirical": "On the selected Wikipedia task, T5-11B outperforms the coreference baseline on reported SARI-add/delete scores. Exact match can reward unchanged copying; SARI is explicitly not an accuracy percentage.",
+        "scope": "English Wikipedia sentences selected to favor simple edits and low background-knowledge demands."
+      },
+      "limitations": {
+        "author_reported": [
+          "News, literary/social contexts and technical domains are harder; valid rewrites and feasibility judgments can differ."
+        ],
+        "our_inference": [
+          "Standalone readability alone cannot certify preservation of a scientific condition or numerical relation.",
+          "The paper's semantic definition should be distinguished from v4's broader implicit-factual-content policy."
+        ]
+      },
+      "queries": [
+        "Q06"
+      ],
+      "verification": {
+        "metadata": "ACL metadata and PDF checked; DOI from publisher record.",
+        "methods_results": "Definitions and task restrictions read directly; numerical model-performance claims intentionally limited.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C06",
+      "title": "A Closer Look at Claim Decomposition",
+      "authors": [
+        "Miriam Wanner",
+        "Seth Ebner",
+        "Zhengping Jiang",
+        "Mark Dredze",
+        "Benjamin Van Durme"
+      ],
+      "year": 2024,
+      "venue": "*SEM 2024",
+      "doi": "10.18653/v1/2024.starsem-1.13",
+      "url": "https://aclanthology.org/2024.starsem-1.13/",
+      "pdf_url": "https://aclanthology.org/2024.starsem-1.13.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted PDF reading: §§3.1–3.2; conclusion/limitations; Appendix Tables 3–6. Did not fully read every decomposition prompt.",
+      "findings": {
+        "mechanism": "DecompScore replaces the external evidence with the original sentence and counts supported subclaims per passage. Proposed examples draw on logical atomism and neo-Davidsonian semantics.",
+        "empirical": "Holding generated biographies fixed, changing decomposition changes FActScore; Table 4 macro-averages range from 24.1 to 35.3 across methods. Authors explicitly say a larger FActScore is not necessarily better extraction.",
+        "scope": "Biographies, English, particular decomposers/verifier; demonstrates measurement sensitivity."
+      },
+      "limitations": {
+        "author_reported": [
+          "All tested methods still omit subclaims; many yield non-atomic units.",
+          "Only claimed content is evaluated, not relevant information omitted by the generator."
+        ],
+        "our_inference": [
+          "Supported-subclaim counts can reward redundant/easy fragments unless coverage and redundancy are separately assessed.",
+          "A decomposition evaluator must not replace verification against supplied evidence."
+        ]
+      },
+      "queries": [
+        "Q05",
+        "Q07"
+      ],
+      "verification": {
+        "metadata": "ACL metadata and PDF title/authors/year checked; DOI on ACL.",
+        "methods_results": "Definition directly checked in §3.2; numeric range verified in Table 4.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C07",
+      "title": "Decomposition Dilemmas: Does Claim Decomposition Boost or Burden Fact-Checking Performance?",
+      "authors": [
+        "Qisheng Hu",
+        "Quanyu Long",
+        "Wenya Wang"
+      ],
+      "year": 2025,
+      "venue": "NAACL 2025 (Long Papers)",
+      "doi": "10.18653/v1/2025.naacl-long.320",
+      "url": "https://aclanthology.org/2025.naacl-long.320/",
+      "pdf_url": "https://aclanthology.org/2025.naacl-long.320.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted full-text reading: §3.2 pipeline/settings; §4 and Tables 1–3; §5 error taxonomy; §6 trade-off/complexity experiments; §8 limitations. Not all appendix material.",
+      "findings": {
+        "mechanism": "Compares three decomposition styles, multiple verifiers, claim/response granularities, retrieval and harmonic-mean aggregation. Errors include lost details/relations, ambiguity, excessive fragmentation and changed meaning.",
+        "empirical": "WICE with MiniCheck: baseline BAcc 80.01/F1 72.32 versus FactScore decomposition 71.11/59.90. On FELM, MiniCheck plus VeriScore improves F1 48.10→67.56; GPT-4o-mini plus FactScore lowers F1 71.56→54.34.",
+        "scope": "Evidence that decomposition effects interact with input granularity and verifier, not universally positive."
+      },
+      "limitations": {
+        "author_reported": [
+          "Binary labels only; retrieval/decomposition noise not directly quantified; length/count are complexity proxies."
+        ],
+        "our_inference": [
+          "The empirical trade-off does not justify benchmark-specific branching or a universal maximum claim count.",
+          "Effects mix decomposition, retrieval and aggregation, unlike fixed-context v4."
+        ]
+      },
+      "queries": [
+        "Q05",
+        "Q07"
+      ],
+      "verification": {
+        "metadata": "ACL landing page and PDF agree; DOI verified.",
+        "methods_results": "Read methods, opposite-direction results, taxonomy and limitations directly; no abstract-derived numbers.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C08",
+      "title": "DnDScore: Decontextualization and Decomposition for Factuality Verification in Long-Form Text Generation",
+      "authors": [
+        "Miriam Wanner",
+        "Benjamin Van Durme",
+        "Mark Dredze"
+      ],
+      "year": 2025,
+      "venue": "EMNLP 2025",
+      "doi": "10.18653/v1/2025.emnlp-main.1205",
+      "url": "https://aclanthology.org/2025.emnlp-main.1205/",
+      "pdf_url": "https://aclanthology.org/2025.emnlp-main.1205.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Targeted full-text reading: §§3.3–4.2, 5.2–5.3, 6.1–6.2, end §6 duplicate analysis, limitations, Appendix C.3 human evaluation and related Tables 8–9. Not all prompts/appendices.",
+      "findings": {
+        "mechanism": "DnD emits paired atomic subclaims and contextualized forms in one call. DnDScore supplies both to a verifier, asking it to judge the specified subclaim using context rather than treating all added context as another assertion.",
+        "empirical": "Human checking uses 100 LFQA instances selected because subclaim/contextualized judgments flip. Sufficient-information judgments rise 54%→88%; DnDScore agreement is 76%, contextualized FActScore 77%.",
+        "scope": "Supports importance of disambiguating context on selected disagreements; not broad superiority in accuracy."
+      },
+      "limitations": {
+        "author_reported": [
+          "English biographies/QA; static known source documents; opinions outside scope."
+        ],
+        "our_inference": [
+          "Average factuality-score rises are measurement changes, not accuracy gains.",
+          "Context must preserve conditions while avoiding duplicate counting; source context is not itself verification evidence."
+        ]
+      },
+      "queries": [
+        "Q09"
+      ],
+      "verification": {
+        "metadata": "Parent supplied DOI-linked ACL page; verified ACL/PDF title/authors/year/venue.",
+        "methods_results": "Paired representation read in §§3.3/4.2; conditioned sample and numbers from C.3.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "C09",
+      "title": "Harmful Factuality: LLMs Correcting What They Shouldn't",
+      "authors": [
+        "Mingchen Li",
+        "Hanzhi Zhang",
+        "Heng Fan",
+        "Junhua Ding",
+        "Yunhe Feng"
+      ],
+      "year": 2026,
+      "venue": "Findings of EACL 2026",
+      "doi": "10.18653/v1/2026.findings-eacl.46",
+      "url": "https://aclanthology.org/2026.findings-eacl.46/",
+      "pdf_url": "https://aclanthology.org/2026.findings-eacl.46.pdf",
+      "kind": "peer_reviewed_primary_research",
+      "read_scope": "Publisher metadata; PDF pp.896–904 including §3 perturbation methods, §4.4 outcome definitions, §5 selected results, §6 mitigation, §8 limitations. Shell PDF extraction used after web find errors; middle of p.900 output truncated, not claimed fully read.",
+      "findings": {
+        "mechanism": "Controlled entity substitutions test whether summarization, rephrasing and grounded QA restore world-correct entities instead of preserving supplied input. Outcomes distinguish correction, retention, dual presence and omission.",
+        "empirical": "For the tested GEP summarization setting, a source-only instruction approximately halves harmful-correction rates for GPT-4.1/GPT-4o. This is a bounded experimental finding, not a universal scaling law.",
+        "scope": "WikiEntities perturbations and selected OpenAI/Llama models; generation tasks rather than a dedicated claim-extraction benchmark."
+      },
+      "limitations": {
+        "author_reported": [
+          "Single corpus; limited model families; mitigation limited to prompts."
+        ],
+        "our_inference": [
+          "Entity occurrence categories do not fully certify semantic faithfulness.",
+          "v4 already prohibits correction; the paper does not prove stronger wording improves v4 or that source-only instructions are sufficient."
+        ]
+      },
+      "queries": [
+        "Q09",
+        "Q10",
+        "Q11"
+      ],
+      "verification": {
+        "metadata": "ACL metadata and PDF agree, DOI on publisher page.",
+        "methods_results": "Direct PDF extraction read; no model inference/API used. Numbers taken from §6, not abstract alone.",
+        "status": "verified_primary"
+      },
+      "source_record_file": "phase2_claims_sources.json"
+    },
+    {
+      "id": "E01",
+      "title": "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList",
+      "authors": [
+        "Marco Tulio Ribeiro",
+        "Tongshuang Wu",
+        "Carlos Guestrin",
+        "Sameer Singh"
+      ],
+      "year": 2020,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2020.acl-main.442",
+      "url": "https://aclanthology.org/2020.acl-main.442/",
+      "kind": "peer_reviewed_paper",
+      "read_scope": "Abstract, introduction and Section 2; PDF pp.1–3. User-study results only as summarized in the introduction; no independent full analysis of Section 3.",
+      "findings": [
+        "提出最小功能、语义不变及方向期望三种行为测试，按语言能力组织，而非只看一个保留集准确率。"
+      ],
+      "limitations": [
+        {
+          "provenance": "reader_inferred",
+          "text": "这些实验不是本项目核查任务；变形关系必须由任务语义另外验证，稳定预测可以稳定地错。"
+        }
+      ],
+      "verification": "ACL metadata and primary PDF agree on title/authors/year/DOI.",
+      "source_record_file": "phase2_evaluation_sources.json"
+    },
+    {
+      "id": "E02",
+      "title": "FaithBench: A Diverse Hallucination Benchmark for Summarization by Modern LLMs",
+      "authors": [
+        "Forrest Sheng Bao",
+        "Miaoran Li",
+        "Renyi Qu",
+        "Ge Luo",
+        "Erana Wan",
+        "Yujia Tang",
+        "Weisi Fan",
+        "Manveer Singh Tamber",
+        "Suleman Kazi",
+        "Vivek Sourabh",
+        "Mike Qi",
+        "Ruixuan Tu",
+        "Chenyu Xu",
+        "Matthew Gonzales",
+        "Ofer Mendelevitch",
+        "Amin Ahmad"
+      ],
+      "year": 2025,
+      "venue": "NAACL Short Papers",
+      "doi": "10.18653/v1/2025.naacl-short.38",
+      "url": "https://aclanthology.org/2025.naacl-short.38/",
+      "kind": "peer_reviewed_paper",
+      "read_scope": "Sections 2.2–2.4, selected Section 3 results/Table 2 discussion, Limitations and Appendix C composition; no dataset records.",
+      "findings": [
+        "由检测器分歧选出的困难摘要；75个来源、每来源10模型，共750条。采用consistent/benign/questionable/unwanted，不等同本项目S/C/U。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Limitations, PDF pp.5–6",
+          "text": "只覆盖摘要和较短英文context；困难样本排名不代表所有样本排名，灰区标注一致性较低。"
+        }
+      ],
+      "verification": "ACL metadata and primary PDF verified; not conflated with unrelated faithbench.com theological benchmark.",
+      "source_record_file": "phase2_evaluation_sources.json"
+    },
+    {
+      "id": "E03",
+      "title": "Benchmarking LLM Faithfulness in RAG with Evolving Leaderboards",
+      "authors": [
+        "Manveer Singh Tamber",
+        "Forrest Sheng Bao",
+        "Chenyu Xu",
+        "Ge Luo",
+        "Suleman Kazi",
+        "Minseok Bae",
+        "Miaoran Li",
+        "Ofer Mendelevitch",
+        "Renyi Qu",
+        "Jimmy Lin"
+      ],
+      "year": 2025,
+      "venue": "EMNLP Industry Track",
+      "doi": "10.18653/v1/2025.emnlp-industry.54",
+      "url": "https://aclanthology.org/2025.emnlp-industry.54/",
+      "kind": "peer_reviewed_industry_paper",
+      "read_scope": "Sections 4–5, Section 6.1 and Table 1, conclusion; no prompt-example appendix or dataset records.",
+      "findings": [
+        "FaithJudge依赖同一来源其他回答的人工幻觉标注；论文比较多个摘要集并扩展QA/data-to-text。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Section 5 and conclusion",
+          "text": "需要同一文章摘要的人工标注作为推理上下文。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "text": "该原方法违反本项目不将benchmark标注放入运行Prompt的要求，不能直接复用；可借鉴多集合评价方式。"
+        }
+      ],
+      "verification": "ACL published title/PDF plus arXiv 2505.04847 cross-identified; counted as one work.",
+      "source_record_file": "phase2_evaluation_sources.json"
+    },
+    {
+      "id": "E04",
+      "title": "MARCH: Multi-Agent Reinforced Check for Hallucination",
+      "authors": [
+        "Zhuo Li",
+        "Yupeng Zhang",
+        "Pengyu Cheng",
+        "Jiajun Song",
+        "Mengyu Zhou",
+        "Hao Li",
+        "Shujie Hu",
+        "Yu Qin",
+        "Erchao Zhao",
+        "Xiaoxi Jiang",
+        "Guanjun Jiang"
+      ],
+      "year": 2026,
+      "venue": "ACL",
+      "doi": "10.18653/v1/2026.acl-long.1828",
+      "url": "https://aclanthology.org/2026.acl-long.1828/",
+      "kind": "peer_reviewed_paper",
+      "read_scope": "Sections 2.1–2.3 architecture and reward introduction, Section 3.1 setup, Section 3.4 selected ablations, Section 6 Limitations; no training/demo appendices.",
+      "findings": [
+        "Proposer把生成答案转为QA对；Checker只看问题和证据，不看原答案/提取答案；结合多代理强化学习优化。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Section 6",
+          "text": "主要英文、偏数值任务；部分评价依赖LLM judge，可能存在偏差。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "text": "训练管线的收益不能归因于仅在现有API上隐藏初判；同模型分角色不形成独立误差过程。"
+        }
+      ],
+      "verification": "ACL publication/PDF verified; arXiv 2603.24579 earlier title is version alias, not independent evidence.",
+      "source_record_file": "phase2_evaluation_sources.json"
+    },
+    {
+      "id": "E05",
+      "title": "GAVEL: Evidence-Contract Debate with Mechanized Scrutiny for Provenance-Grounded Fact-Checking",
+      "authors": [
+        "Ruoyu Xu",
+        "Gaoxiang Li",
+        "Victor S. Sheng"
+      ],
+      "year": 2026,
+      "venue": "Findings of ACL",
+      "doi": "10.18653/v1/2026.findings-acl.1789",
+      "url": "https://aclanthology.org/2026.findings-acl.1789/",
+      "kind": "peer_reviewed_paper",
+      "read_scope": "Sections 3–5.5 and Limitations; PDF pp.3–8; no Appendix B case data.",
+      "findings": [
+        "原子子声明绑定句子/表格证据ID，确定性核对标识及逐字quote，再由模型审查推导；最多三轮辩论，按标签和完整证据联合指标评价。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Limitations",
+          "text": "多调用成本、检索不足、合法证据的语义误读；只使用gpt-3.5-turbo且两个Wikipedia基准，跨领域/模型收益未证。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "text": "未形成证据合同的内容直接视unsupported不能用于把本项目执行失败转U；多轮多角色整体不能原样加入既有复核上限。"
+        }
+      ],
+      "verification": "ACL official metadata and methods/results PDF verified.",
+      "source_record_file": "phase2_evaluation_sources.json"
+    },
+    {
+      "id": "I01",
+      "title": "Building effective agents",
+      "authors": [
+        "Erik S.",
+        "Barry Zhang"
+      ],
+      "year": 2024,
+      "publication_date": "2024-12-19",
+      "organization": "Anthropic",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "kind": "official_engineering_blog",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "What are agents?",
+          "When (and when not) to use agents",
+          "When and how to use frameworks",
+          "Building blocks, workflows, and agents",
+          "Combining and customizing these patterns",
+          "Appendix 2: Prompt engineering your tools",
+          "Authors & Acknowledgments"
+        ],
+        "locator": "Observed web lines 48–185, 208–226; external linked implementations not read."
+      },
+      "findings": [
+        "固定子任务适用明确工作流；增加复杂度需有可测收益。",
+        "Evaluator-optimizer 的前提是评价标准清楚且迭代带来价值；代理需停止条件。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "When (and when not) to use agents; Agents",
+          "text": "代理复杂度增加成本/延迟且可能使错误累积。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Read sections listed above",
+          "text": "工程经验，未在已读段落提供 TabbyML 契约下受控效应估计。"
+        }
+      ],
+      "queries": [
+        "site.anthropic.com engineering building effective agents Dec 2024"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official page opened; title/date/authors checked on-page.",
+        "redirect": "/engineering/ redirects to /research/",
+        "evidence_grade": "gray_literature_mechanism",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I02",
+      "title": "Citations",
+      "authors": [
+        "Anthropic"
+      ],
+      "year": null,
+      "publication_date": null,
+      "organization": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/citations",
+      "kind": "official_product_documentation",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "Introduction",
+          "Comparison with prompt-based approaches",
+          "How citations work",
+          "Automatic chunking vs custom content",
+          "Citable versus non-citable content",
+          "Citation indices",
+          "Token costs",
+          "Feature compatibility",
+          "Document types table"
+        ],
+        "locator": "Observed web lines 79–191 and 237–245; SDK examples not executed."
+      },
+      "findings": [
+        "服务解析来源位置并提取 cited_text；文档/字符/页/块索引保留来源定位。",
+        "当前 citations 与 strict structured outputs 互斥，同时请求返回400。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Feature compatibility",
+          "text": "交错文本/引用块与严格 JSON Schema 格式不兼容。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Comparison with prompt-based approaches",
+          "text": "有效指针保证不能推出引文语义充分；厂商自报引用质量提升不是本项目收益。"
+        }
+      ],
+      "queries": [
+        "site.platform.claude.com docs citations cited_text guaranteed"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official living documentation opened and relevant sections read.",
+        "date_status": "First publication date not displayed; year intentionally null.",
+        "evidence_grade": "documented_interface_contract",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I03",
+      "title": "Structured outputs",
+      "authors": [
+        "Google AI for Developers"
+      ],
+      "year": 2026,
+      "publication_date": null,
+      "last_updated": "2026-10-21",
+      "organization": "Google",
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "kind": "official_product_documentation",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "Introduction",
+          "JSON schema support",
+          "Type-specific properties",
+          "Structured outputs versus function calling",
+          "Best practices",
+          "Limitations",
+          "Last updated footer"
+        ],
+        "locator": "Observed web lines 88–98 and 1521–1586; long SDK example bodies not assessed or executed."
+      },
+      "findings": [
+        "受限 JSON Schema 可约束类型、字段和枚举；值仍需客户端验证。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Best practices; Limitations",
+          "text": "语法正确不保证语义正确；支持子集、复杂 schema 拒绝、部分约束被忽略。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Introduction; Limitations",
+          "text": "此接口保证不证明项目实际供应商支持相同参数，也不保证语义召回。"
+        }
+      ],
+      "queries": [
+        "site.ai.google.dev gemini-api docs structured-output syntactically correct JSON semantically"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official documentation opened; footer update date checked.",
+        "date_status": "year is documented last-update year, not first-publication year.",
+        "evidence_grade": "documented_interface_contract",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I04",
+      "title": "Effective context engineering for AI agents",
+      "authors": [
+        "Prithvi Rajasekaran",
+        "Ethan Dixon",
+        "Carly Ryan",
+        "Jeremy Hadfield"
+      ],
+      "year": 2025,
+      "publication_date": "2025-09-29",
+      "organization": "Anthropic",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "kind": "official_engineering_blog",
+      "read_scope": {
+        "level": "full_main_text",
+        "sections": [
+          "Context engineering vs. prompt engineering",
+          "Why context engineering is important",
+          "The anatomy of effective context",
+          "Context retrieval and agentic search",
+          "Context engineering for long-horizon tasks",
+          "Conclusion",
+          "Authors & Acknowledgments"
+        ],
+        "locator": "Observed web lines 43–135; linked external studies not counted as read."
+      },
+      "findings": [
+        "以足够的高相关上下文替代规则堆积；上下文选择有资源代价。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Context retrieval and agentic search; Compaction",
+          "text": "运行时探索更慢；过度压缩可能丢失关键细节。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Context engineering for long-horizon tasks",
+          "text": "长程代理场景与固定 context-only 核查不同；不能据此承诺上下文裁剪或子代理收益。"
+        }
+      ],
+      "queries": [
+        "site.anthropic.com engineering effective context engineering for AI agents September 29 2025"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official page opened; title/date/authors checked.",
+        "redirect": "/engineering/ redirects to /research/",
+        "evidence_grade": "gray_literature_mechanism",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I05",
+      "title": "Demystifying evals for AI agents",
+      "authors": [
+        "Mikaela Grace",
+        "Jeremy Hadfield",
+        "Rodrigo Olivares",
+        "Jiri De Jonghe"
+      ],
+      "year": 2026,
+      "publication_date": "2026-01-09",
+      "organization": "Anthropic",
+      "url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+      "kind": "official_engineering_blog",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "The structure of an evaluation",
+          "Types of graders for agents",
+          "Capability vs. regression evals",
+          "Research agents",
+          "How to think about non-determinism",
+          "Roadmap to great evals",
+          "Holistic evaluation methods",
+          "Authors & Acknowledgments"
+        ],
+        "locator": "Observed web lines 52–177, 262–264, 271–425, 447–450; framework appendix and linked benchmark papers not assessed."
+      },
+      "findings": [
+        "确定性、模型和人工评分分工；模型评分需人工校准。",
+        "平衡应该/不应该触发的样本，并结合重复试验、过程记录及最终结果。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Types of graders; Holistic evaluation methods",
+          "text": "程序评分缺少细微语义，人工判断有成本与分歧，自动评测可能偏离真实使用。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Roadmap to great evals",
+          "text": "开发集迭代建议不能覆盖本项目的未见冻结要求，也不构成改写原生标签授权。"
+        }
+      ],
+      "queries": [
+        "site.anthropic.com engineering demystifying evals for AI agents January 9 2026"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official page opened; title/date/authors checked.",
+        "redirect": "/engineering/ redirects to /research/",
+        "evidence_grade": "gray_literature_method_guidance",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I06",
+      "title": "Use contextual grounding check to filter hallucinations in responses",
+      "authors": [
+        "Amazon Web Services"
+      ],
+      "year": null,
+      "publication_date": null,
+      "organization": "Amazon Web Services",
+      "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-contextual-grounding-check.html",
+      "kind": "official_product_documentation",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "Definition and supported cases",
+          "Grounding versus relevance",
+          "Multiple sources note",
+          "Character limits",
+          "Confidence scores and thresholds",
+          "Required components"
+        ],
+        "locator": "Observed web lines 5–28 and official search content; API configuration examples not executed."
+      },
+      "findings": [
+        "grounding 与 relevance 分开定义；多 grounding_source 合并评估，相关性有 chunk 聚合规则。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Opening paragraphs; Notes",
+          "text": "支持场景及输入长度受限；流式响应可能在输出后才被标无关。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "Grounding; Confidence scores and thresholds",
+          "text": "该二元过滤口径不能直接映射 C/U，也不能替代项目来源归属和精确 quote 审核。"
+        }
+      ],
+      "queries": [
+        "site.aws.amazon.com contextual grounding checks limitations Amazon Bedrock Guardrails"
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Official living documentation opened and definitions checked.",
+        "date_status": "No publication/update date displayed in read page; year intentionally null.",
+        "evidence_grade": "documented_service_boundary",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "I07",
+      "title": "From extraction to action: Using grounding and confidence to build reliable document workflows",
+      "authors": [
+        "Joe Filcik",
+        "Colin Murphy"
+      ],
+      "year": 2026,
+      "publication_date": "2026-10-14",
+      "organization": "Microsoft",
+      "url": "https://devblogs.microsoft.com/foundry/content-understanding-confidence-grounding-hitl/",
+      "kind": "official_engineering_case_blog",
+      "read_scope": {
+        "level": "full_main_text",
+        "sections": [
+          "Grounding",
+          "Confidence",
+          "A real workflow",
+          "Steps 1–3",
+          "The results",
+          "Try it yourself",
+          "Lessons for reliable automation",
+          "Authors"
+        ],
+        "locator": "Observed web lines 19–163; videos and linked calibration notebook not executed/read."
+      },
+      "findings": [
+        "证据、独立置信模型和人工校准分工；校准策略需留出验证并监测未触发项错误。",
+        "厂商自报留出重点复核字段减少41%，覆盖超过80%已知错误；所有字段仍经人工检查。"
+      ],
+      "limitations": [
+        {
+          "provenance": "author_acknowledged",
+          "locator": "Steps 1–3; The results",
+          "text": "校准不跨配置保证；降低重点复核量不等于同等省时或零错自动化。"
+        },
+        {
+          "provenance": "reader_inferred",
+          "locator": "A real workflow; The results",
+          "text": "匿名客户与未独立审计结果；按来源/表单阈值不可照搬为本项目 benchmark 分支。"
+        }
+      ],
+      "queries": [
+        "site.microsoft.com/en-us/research/blog/claimify-extracting-high-quality-claims-from-language-model-outputs/ \"coverage\""
+      ],
+      "verification": {
+        "status": "verified",
+        "accessed": "2026-10-23",
+        "method": "Found via official-domain search, then opened full official blog; author names and publication date checked.",
+        "discovery_note": "Search broadened from claim coverage to current Microsoft production grounding/confidence; no exhaustive industry search claimed.",
+        "evidence_grade": "vendor_reported_production_case",
+        "project_effect_verified": false
+      },
+      "source_record_file": "phase2_industry_sources.json"
+    },
+    {
+      "id": "V01",
+      "title": "Knowledge-Centric Hallucination Detection",
+      "aliases": [
+        "RefChecker: Reference-based Fine-grained Hallucination Checker and Benchmark for Large Language Models"
+      ],
+      "authors": [
+        "Xiangkun Hu",
+        "Dongyu Ru",
+        "Lin Qiu",
+        "Qipeng Guo",
+        "Tianhang Zhang",
+        "Yang Xu",
+        "Yun Luo",
+        "Pengfei Liu",
+        "Yue Zhang",
+        "Zheng Zhang"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.emnlp-main.395/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.395",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Preliminaries",
+          "4 The REFCHECKER framework",
+          "5 The KNOWHALBENCH dataset",
+          "6 Experiments",
+          "Limitations"
+        ],
+        "pages_pdf": "4-9",
+        "body_methods_and_results_read": true,
+        "not_read": "All appendices and released artifact code not audited"
+      },
+      "findings": [
+        {
+          "claim": "Triplet claims are checked using entailment, contradiction and neutral; neutral covers insufficient reference.",
+          "locator": "§3-4"
+        },
+        {
+          "claim": "Granularity study uses response-level macro-F1; reported 18.2-27.2 point headline refers to correlations in §6.3.",
+          "locator": "§6.1; §6.3 Table 4"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "Limitations a/c/d, PDF p.9",
+          "text": "Triplet format can miss complex/temporal semantics; attribution is rudimentary; model prior knowledge can turn neutral into entailment or contradiction."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3-4 and §6",
+          "text": "A triple representation and response-level correlations do not certify v4's natural-language atomic claims or S/C/U reliability; migration not tested."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "RefChecker Reference-based Fine-grained Hallucination Checker EMNLP 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "methods",
+          "result metric"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.emnlp-main.395.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2405.14486",
+        "note": "Formal title differs from early arXiv title; one work, not two independent sources"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V02",
+      "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+      "authors": [
+        "Liyan Tang",
+        "Philippe Laban",
+        "Greg Durrett"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.emnlp-main.499/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "EMNLP 2024",
+      "doi": "10.18653/v1/2024.emnlp-main.499",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Background and Motivation",
+          "3 Methodology: Training Data Synthesis",
+          "4 LLM-AGGREFACT Benchmark",
+          "5 Experimental Setup",
+          "6 Results",
+          "7 Rethinking LLM Fact-Checking",
+          "Limitations",
+          "A.2",
+          "A.3",
+          "B.1-B.2 relevant tables"
+        ],
+        "pages_pdf": "2-10,15-17",
+        "body_methods_and_results_read": true,
+        "not_read": "All remaining appendix prompts/training details not audited"
+      },
+      "findings": [
+        {
+          "claim": "C2D/D2C target multi-fact, multi-sentence support; contradiction and neutral are merged to unsupported.",
+          "locator": "§2 footnote 2; §3.3"
+        },
+        {
+          "claim": "Main table uses fixed 0.5 threshold: FT5 average BAcc 74.7, GPT-4 75.3; claim decomposition is not consistently beneficial.",
+          "locator": "§4.1; Table 2; §7.1 Table 5"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "Limitations, PDF pp.9-10",
+          "text": "No adequate evaluation of significantly separated or cross-document evidence; English-only training; limited interpretability."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§2; §3.3; §6.2",
+          "text": "Binary support does not recover C/U; 400x cost comparison is tied to historical models and hardware/API accounting, not a current v4 cost forecast."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "MiniCheck Efficient Fact-Checking of LLMs on Grounding Documents 2024 EMNLP paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "label mapping",
+          "threshold",
+          "main tables"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.emnlp-main.499.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2404.10774"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V03",
+      "title": "AlignScore: Evaluating Factual Consistency with A Unified Alignment Function",
+      "authors": [
+        "Yuheng Zha",
+        "Yichi Yang",
+        "Ruichen Li",
+        "Zhiting Hu"
+      ],
+      "year": 2023,
+      "url": "https://aclanthology.org/2023.acl-long.634/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "ACL 2023",
+      "doi": "10.18653/v1/2023.acl-long.634",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Methods",
+          "4.1 Implementation",
+          "4.2 Benchmarks",
+          "beginning of main results table"
+        ],
+        "pages_pdf": "2-6",
+        "body_methods_and_results_read": false,
+        "not_read": "Full remaining results, limitations and appendices"
+      },
+      "findings": [
+        {
+          "claim": "Model has 3-way, binary and regression heads; final metric uses the 3-way ALIGNED probability.",
+          "locator": "§3.1-3.2"
+        },
+        {
+          "claim": "Final score averages each answer sentence's maximum alignment over roughly 350-token context chunks.",
+          "locator": "§3.2 Eq.3"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.2 Eq.3",
+          "text": "Max-chunk aggregation alone cannot compose evidence located in distinct chunks; sentence averaging targets proportional consistency, unlike any-C/U answer detection. Not an empirical claim about v4 performance."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "AlignScore Evaluating Factual Consistency Unified Alignment Function ACL 2023"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "heads",
+          "aggregation"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2023.acl-long.634.pdf"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V04",
+      "title": "QAFactEval: Improved QA-Based Factual Consistency Evaluation for Summarization",
+      "authors": [
+        "Alexander Fabbri",
+        "Chien-Sheng Wu",
+        "Wenhao Liu",
+        "Caiming Xiong"
+      ],
+      "year": 2022,
+      "url": "https://aclanthology.org/2022.naacl-main.187/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "NAACL 2022",
+      "doi": "10.18653/v1/2022.naacl-main.187",
+      "read_scope": {
+        "level": "abstract_only",
+        "sections": [
+          "Official metadata",
+          "Abstract"
+        ],
+        "body_methods_and_results_read": false,
+        "not_read": "Paper body, appendix, implementation"
+      },
+      "findings": [
+        {
+          "claim": "Abstract reports importance of question generation/answerability components and complementary QA/entailment signals.",
+          "locator": "Abstract",
+          "evidence_scope": "abstract-only background"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "not-assessed",
+          "locator": "abstract_only",
+          "text": "Method weaknesses not assessed (read scope: abstract_only); no method-level criticism or v4 effect estimate."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "not checked",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "QAFactEval Improved QA-Based Factual Consistency Evaluation ACL 2022"
+      ],
+      "verification": {
+        "status": "verified_primary_metadata_only",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "abstract"
+        ],
+        "primary_fulltext_available_but_not_read": "https://aclanthology.org/2022.naacl-main.187.pdf"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V05",
+      "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+      "authors": [
+        "Shehzaad Dhuliawala",
+        "Mojtaba Komeili",
+        "Jing Xu",
+        "Roberta Raileanu",
+        "Xian Li",
+        "Asli Celikyilmaz",
+        "Jason Weston"
+      ],
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.findings-acl.212/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "Findings of ACL 2024",
+      "doi": "10.18653/v1/2024.findings-acl.212",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Chain-of-Verification",
+          "4.1 Tasks",
+          "4.2 Baselines",
+          "Tables 1-2"
+        ],
+        "pages_pdf": "2-6",
+        "body_methods_and_results_read": true,
+        "not_read": "Rest of results and all appendix demonstrations"
+      },
+      "findings": [
+        {
+          "claim": "Factored verification answers questions without conditioning on the initial draft; the study uses the same LLM, without external tool retrieval.",
+          "locator": "§3.3"
+        },
+        {
+          "claim": "Closed-book MultiSpanQA Llama65B F1: few-shot .39, joint .46, factored .48.",
+          "locator": "Table 2"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.3; §4.1-4.2",
+          "text": "Generation repair and closed-book factual QA differ from context-only S/C/U; task-specific few-shot demonstrations are not transferable as benchmark-specific v4 inference."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.3",
+          "text": "Separate contexts reduce direct copying but do not establish statistically independent errors."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Chain-of-Verification Reduces Hallucination in Large Language Models ACL 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "method variants",
+          "Table 2"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2024.findings-acl.212.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2309.11495"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V06",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "authors": [
+        "Jie Huang",
+        "Xinyun Chen",
+        "Swaroop Mishra",
+        "Huaixiu Steven Zheng",
+        "Adams Yu",
+        "Xinying Song",
+        "Denny Zhou"
+      ],
+      "year": 2024,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "ICLR 2024",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Background and Related Work",
+          "3 Intrinsic Self-Correction",
+          "4 Debate vs Self-Consistency",
+          "5 Prompt Design",
+          "6 beginning"
+        ],
+        "pages_pdf": "2-8",
+        "body_methods_and_results_read": true,
+        "not_read": "All appendix prompts and remaining discussion"
+      },
+      "findings": [
+        {
+          "claim": "Intrinsic self-correction excludes external feedback; removing gold-guided stopping changes apparent benefits, and correct-to-incorrect revisions occur.",
+          "locator": "§2-3; Tables 2-6"
+        },
+        {
+          "claim": "The paper checks equal-response comparisons and stronger initial instructions.",
+          "locator": "§4-5; Tables 7-8"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§3.3 footnote 1, PDF p.5",
+          "text": "HotpotQA transition analysis omitted because sample is too small for meaningful statistics."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.1 and §2 scope",
+          "text": "2023-era models and selected reasoning tasks do not prove impossibility for 2026 models or source-conditioned evidence reviews."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "checked: found",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Large Language Models Cannot Self-Correct Reasoning Yet ICLR 2024 paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "scope",
+          "experimental controls"
+        ],
+        "primary_fulltext": "https://proceedings.iclr.cc/paper_files/paper/2024/file/8b4add8b0aa8749d80a34ca5d941c355-Paper-Conference.pdf",
+        "secondary_primary_record": "https://openreview.net/forum?id=IkmD3fKBPQ"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V07",
+      "title": "Sufficient Context: A New Lens on Retrieval Augmented Generation Systems",
+      "authors": [
+        "Hailey Joren",
+        "Jianyi Zhang",
+        "Chun-Sung Ferng",
+        "Da-Cheng Juan",
+        "Ankur Taly",
+        "Cyrus Rashtchian"
+      ],
+      "year": 2025,
+      "url": "https://arxiv.org/html/2411.06037v3",
+      "kind": "peer_reviewed_conference_paper_author_version",
+      "venue": "ICLR 2025",
+      "version": "arXiv v3, 2025-04-23",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Sufficient Context",
+          "4 A New Lens on RAG Performance",
+          "5 Techniques to Reduce Hallucinations",
+          "6 Conclusion and Limitations"
+        ],
+        "body_methods_and_results_read": true,
+        "not_read": "All appendices and released source code"
+      },
+      "findings": [
+        {
+          "claim": "Sufficiency asks whether some plausible answer exists from query/context, not whether a fixed candidate answer is entailed.",
+          "locator": "§3.1"
+        },
+        {
+          "claim": "Autorater accuracy 93% on 115 labeled instances; selection uses confidence plus sufficiency and reports accuracy-coverage, with no added gain in one setting.",
+          "locator": "§3.2 Table 1; §5.1 Figure 4"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§6 Limitations",
+          "text": "Analysis focuses on QA; retrieval-method effects are incompletely explored."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§3.1; §4.3",
+          "text": "World-correct answers aided by parametric knowledge are not necessarily grounded in supplied context; sufficiency cannot be substituted for S/C/U."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "2025 sufficient context retrieval augmented generation fact checking evidence sufficiency paper"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "conference year",
+          "arXiv version",
+          "definition",
+          "Table 1"
+        ],
+        "primary_publication_record": "https://research.google/pubs/sufficient-context-a-new-lens-on-retrieval-augmented-generation-systems/",
+        "blocked_url": "https://openreview.net/pdf?id=Jjr2Odj8DJ",
+        "fallback": "OpenReview PDF presented browser challenge; read arXiv author v3 full-text sections instead"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V08",
+      "title": "FactCG: Enhancing Fact Checkers with Graph-Based Multi-Hop Data",
+      "authors": [
+        "Deren Lei",
+        "Yaxi Li",
+        "Siyao Li",
+        "Mengya Hu",
+        "Rui Xu",
+        "Ken Archer",
+        "Mingyu Wang",
+        "Emily Ching",
+        "Alex Deng"
+      ],
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.naacl-long.258/",
+      "kind": "peer_reviewed_conference_paper",
+      "venue": "NAACL 2025",
+      "doi": "10.18653/v1/2025.naacl-long.258",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "3 Problem Formulation",
+          "4 Multi-Hop Analysis",
+          "5 CG2C",
+          "6 Experiments",
+          "7 Connected Reasoning"
+        ],
+        "pages_pdf": "3-8",
+        "body_methods_and_results_read": true,
+        "not_read": "Later limitations and all appendix results/code"
+      },
+      "findings": [
+        {
+          "claim": "CG2C builds multi-premise training pairs via context graphs; CoRe requires both original support and non-support after removal of necessary evidence.",
+          "locator": "§5; §7.1"
+        },
+        {
+          "claim": "Binary classification uses maximum chunk score; main results tune thresholds per dataset, while unified calibration is left for future work.",
+          "locator": "§3; §5.3; §6.2"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§6.3; §7.3",
+          "text": "Each experiment ran once; about half of evaluated reasoning still categorized as disconnected."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§5.1-5.2; §6.2",
+          "text": "Constructed labels still depend on semantic correctness of LLM graph extraction/editing; tuned-threshold gains do not establish gains under a unified v4 inference policy."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "not checked",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "checked: found",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "2025 FactCG complex claims graph fact checking EMNLP"
+      ],
+      "verification": {
+        "status": "verified_primary",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "year",
+          "venue",
+          "threshold selection",
+          "binary mapping",
+          "CoRe definition"
+        ],
+        "primary_fulltext": "https://aclanthology.org/2025.naacl-long.258.pdf",
+        "secondary_primary_record": "https://arxiv.org/abs/2501.17144"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    },
+    {
+      "id": "V09",
+      "title": "Retromorphic Testing with Hierarchical Verification for Hallucination Detection in RAG",
+      "authors": [
+        "Boxi Yu",
+        "Yuzhong Zhang",
+        "Liting Lin",
+        "Lionel Briand",
+        "Emir Muñoz"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/html/2603.27752v1",
+      "kind": "preprint",
+      "venue": "arXiv; peer-reviewed acceptance not verified",
+      "version": "v1, 2026-03-29",
+      "read_scope": {
+        "level": "sections",
+        "sections": [
+          "2 Preliminaries",
+          "3 Approach",
+          "4.1-4.6 Experiments",
+          "5 Limitations and Threats"
+        ],
+        "body_methods_and_results_read": true,
+        "incidental_scope": "Web extraction expanded into first three examples in §4.7; exposure recorded separately",
+        "not_read": "Released toolkit, annotation files and sample files"
+      },
+      "findings": [
+        {
+          "claim": "RT4CHART already combines atomic claims, three labels, answer-span mapping, context evidence and local-to-global verification; global step re-extracts evidence.",
+          "locator": "§2-3"
+        },
+        {
+          "claim": "Global verification answer-F1 change: +.036 on one dataset and .000 on the other; direct-span ablation removes both decomposition and local checks.",
+          "locator": "§4.4 Tables 6-7"
+        }
+      ],
+      "limitations": [
+        {
+          "provenance": "author-acknowledged",
+          "locator": "§5.1-5.2",
+          "text": "Hedging/certainty shifts, redundant/conflicting context, model dependence, and English RAGTruth-family scope remain limitations."
+        },
+        {
+          "provenance": "reader-inferred",
+          "locator": "§4.2; §4.4 Table 7",
+          "text": "Related data families limit generality; joint removal of decomposition/local checking cannot identify the local component's causal contribution alone."
+        }
+      ],
+      "method_weakness_checklist": {
+        "Research hypothesis clarity": "not checked",
+        "Variable operational definitions": "not checked",
+        "Internal validity": "checked: found",
+        "External validity": "checked: found",
+        "Statistical reporting completeness": "not checked",
+        "Conclusion conservatism": "not checked"
+      },
+      "queries": [
+        "Parent-provided DOI/arXiv lookup: arXiv:2603.27752; opened methods/results/limitations only"
+      ],
+      "verification": {
+        "status": "verified_primary_preprint",
+        "checked_at": "2026-10-23",
+        "checked_fields": [
+          "title",
+          "authors",
+          "version date",
+          "methods",
+          "Tables 6-7",
+          "limitations"
+        ],
+        "primary_metadata": "https://arxiv.org/abs/2603.27752",
+        "warning": "No claim of peer review; no dataset or artifact access"
+      },
+      "source_record_file": "phase2_verification_sources.json"
+    }
+  ]
+}
