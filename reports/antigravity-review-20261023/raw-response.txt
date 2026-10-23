@@ -1,0 +1,122 @@
+### 1. 源码核对与现有报告的关键因果归因漏洞审计
+
+现有三份报告（[`reports/v4-m1-faithful-20261023/README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md)、[`behavior-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/behavior-semantic-audit.md)、[`physics-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/physics-semantic-audit.md)）在诚实披露退步反例（如 `15485`、`15127`、`7022`、`7036`、`behavior-16/base`、`q3-05`）和拒绝直接升级默认后端方面是审慎的。但将报告数据与 [`grounding/verifiers_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py)、[`grounding/prompts_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py) 的实现机制逐行核对后，可以定位出 **5 个关键因果归因漏洞（混杂因素）**：
+
+#### 漏洞一：M1 提示词与二元字符覆盖校验的交互，直接诱发了“修饰成分被剥离为非事实”的退步（源码已证实）
+- **源码机制**：[`extract_claims`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L91-L144) 要求分块内每个实质字符（[`_meaningful`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L56-L57)：字母、数字、符号及 `-*/`）必须落入 `claims[].source_span`（[`L121`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L121)）或 `non_factual_spans[].text`（[`L138`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L138)）两个对称桶之一。然而，[`grounding/prompts_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py#L23-L25) 新增了负向指令：`A conditional or hypothetical assertion does not assert that its condition actually holds. A source reference or subject label alone is not the factual assertion it qualifies.` 以及 [`L54-L55`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py#L54-L55) 的 `Headings and list introductions may supply scope without being separate factual claims.`
+- **因果链条**：由于 `decompose` 阶段关闭了思考模式（[`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L2-L5) 中 `"thinking": "disabled"`），模型在满足强制字符覆盖记账时，将上述“条件或来源标签本身不独立构成断言”的指示，执行成了**把条件从句或来源前缀从 `claims[].source_span` 中切出并塞入 `non_factual_spans`**，进而从 `claim_text` 中同步抹除该限定。这直接解释了 [`physics-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/physics-semantic-audit.md#L58-L65) 中 `q3-05` 将“给定扰动后，”排入 `non_factual_spans`（理由逐字呼应新提示：“仅设定条件的引导语，未独立断言扰动实际发生”），以及 [`behavior-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/behavior-semantic-audit.md#L50) 中 `behavior-05/base` 新版显式将 `Passage 0` 归属开头排入非事实的现象。
+- **校验盲区**：此外，[`extract_claims`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L136-L140) 对 `non_factual_spans` 使用 `while start >= 0:` 循环将该跨度在块内的**所有重复出现位置**全部记为 `covered`（违反 [`prompts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_v4.py#L32-L33) 与 [`prompts_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py#L50-L51) 中 `a repeated occurrence must be accounted for separately` 的契约）。只要某个短跨度被列入 `non_factual_spans` 一次，块内后续同形事实片段即可绕过 [`L141-L143`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L141-L143) 的未覆盖字符检查（**推断**：这会掩盖长块中同形短语的漏提，需在原始轨迹中核查触发频次）。
+
+#### 漏洞二：M1 输出变动通过批次重排（Batch Realignment）与元数据注入耦合了 M3 输入（源码已证实 + 影响幅度为推断）
+- **源码机制**：[`OptimizedV4Verifier._batches`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L723-L738) 按顺序以 `max_batch_claims: 3`（[`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L15-L16)）和 `verify_batch_token_budget: 2400` 打包声明；[`_batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L474-L478) 将完整 `claims` 字典数组（含 `id`、`claim_text`、`source_span`、`source_start`、`source_end`、`chunk_id`，见 [`L688-L702`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L688-L702)）序列化进同一次 M3 请求。
+- **因果归因漏洞**：[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L56) 仅在 **41 对整篇回答提取对象 100% 相同**的样本上观察到 **6 对（14.63%）** 因 M3 随机性或重试路径差异导致最终状态翻转。但在其余 **138 对（180 − 42）** 样本中：
+  1. 即使某条子声明的 `claim_text` 完全未变，只要前文少拆或合并了 1 条声明，后续所有声明的 `id`（`c1, c2...`）及 `3 条/批` 的同批组合就会整体错位；
+  2. 即使 `claim_text` 未变，只要 `source_span` 边界或偏移改变，M3 收到的 JSON 载荷（[`_batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L476)）即不再相同；
+  3. **推断**：若在 M1 输出完全一致的 41 例中已有 6/41（14.63%）发生案例级结果翻转，则在其余 138 例中，按同量级估计约有 ~20 例翻转可由 M3 采样方差与批次重排单独产生。现有报告记录的总翻转数为 33 例（19 错→对、8 对→错、5 对→未决、1 未决→对，见 [`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L44)），且配对 bootstrap 95% 区间（已决 F1 `−0.08 ~ +7.30` 个百分点，全例正确决策率 `−1.67 ~ +9.44` 个百分点，见 [`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L38-L42)）均跨越 0，说明 **RAGTruth 上的正向净分数差值尚未超出 M3 随机波动与批次耦合噪声范围**。
+
+#### 漏洞三：五大维度的混淆——“少提取 + 粗粒度 + 未决增加 + 违反建议规则”共同制造了表面 F1 提升（数据与源码已证实）
+将 [`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L21-L34) 与 [`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L5-L12) 对照，必须严格剥离以下五个维度：
+
+| 归因维度 | 源码与报告实测证据 | 对表面指标的扭曲机制 |
+| :--- | :--- | :--- |
+| **1. M1 提取目标变化** | RAGTruth 提取目标数从 `1529` 降至 `1379`（**减少 150 条 / −9.8%**，[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L28)）；物理集从 `62` 降至 `59`（[`physics-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/physics-semantic-audit.md#L24)）。 | 案例级正例判定采用析取规则（**任一已完成声明为 C/U 即判正例**，[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L10)）。当 M1 减少声明数、将复合命题合并（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L52)）或误排入非事实（`15127`、`behavior-16/base`）时，M3 触发假阳性的机会机械性下降；物理集严格正确数停留在 `54/58`，仅靠分母从 `62` 降为 `59` 把严格 F1 从 `90.00%` 抬高到 `92.31%`（[`physics-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/physics-semantic-audit.md#L5,L25-L29)）。 |
+| **2. M3 随机判决与粗粒度宽容** | 41 对相同 M1 输入中 6 对结果不同（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L56)）；复合目标子命题无支持仍被整体判 S（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L52)）。 | `verify` 阶段关闭思考（[`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L6-L9)），当 M1 将多个子命题合为一条粗粒度声明时，M3 未严格执行全称蕴含（[`prompts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_v4.py#L54-L55)），漏检子命题错误并减少 C/U 检出。 |
+| **3. 执行失败与 Unknown 膨胀** | 部分报告从 `9` 升至 `13`，未完成声明从 `17` 升至 `23`，未决案例从 `1`（0 正 1 负）升至 `5`（1 正 4 负）（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L21-L32)）。 | 已决 F1（$\frac{2\text{TP}}{2\text{TP}+\text{FP}+\text{FN}}$）从 `59.69%`（`114/191`）升至 `63.33%`（`114/180`），其中 **TP 完全未增（57→57）**！FN 从 3 降为 2 包含了 `7022` 因关键声明 JSON 校验失败而从已决正例退化为 `unknown` 正例（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L53)），以及 `15485` 违反建议非事实规则把操作建议抽成事实判 U（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L50)）。同时新增 3 个未决负例也直接缩减了已决分母（**推断**：若这 3 个新增未决负例中有原版 FP 因未完成声明而转为 unknown，则执行失败直接压低了表观 FP）。 |
+| **4. 原生标签（Native Labels）** | RAGTruth 180 例的 TP/FP/TN/FN 均为回答级原生标签（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L22,L44)）。 | 回答级原生标签无法观测全 S 回答内部的事实漏提（如 `15127`，[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L51)）或阳性回答内部的错误归属引用（如 `7036`，[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L54)），且已知包含原生假阳性争议（[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L12)）。 |
+| **5. 作者金标（Author Adjudication）** | 报告明确声明作者裁定细节尚未导入，行为集（48 例）与物理集（46 例）均为 AI 草案/辅助构造，未经作者逐条终审（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L13,L17)）。 | 在 [`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L12) 规定的作者裁定门禁完成前，任何原生 FP 下降均不得宣称为“真 FP（true FP）”改善。 |
+
+#### 漏洞四：为什么 M1 fallback 减少（73→55），未完成声明反而增加（17→23）？（源码机制证实 + 触发比例为推断）
+报告未解释为何 M1-faithful 提取声明更少（1379 vs 1529）、M1 fallback 块更少（55 vs 73），但 M3 未完成声明反而从 17 增至 23（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L28-L32)）。核对 [`grounding/verifiers_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py) 可见两处重试机制缺陷：
+1. **批次核查行级格式错误直接挤占唯一的 `targeted_retries` 预算**：在 [`_batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L482-L495) 中，`batch_retries` 循环仅校验顶层信封 `self._envelope(value)`（[`L485`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L485)）；单条声明的 [`_validate_row`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L527) 并未包裹在 [`_format_stage`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L246-L279) 中。一旦某行出现普通格式瑕疵（如 `UNSUPPORTED` 附带了非空 `citations`、缺 `derivation` 等），不会走轻量级 `format_retries`，而是直接消耗该声明唯一的 `state["targeted_used"] += 1`（[`L530-L532`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L530-L532)，配置上限为 `1`，见 [`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L21)）。随后若该声明进入 C/U 复核（[`_review`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L428-L435)）并触发模糊引文重问（[`_NeedsRequery`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L259-L261,L380-L382)），尽管 [`L432-L433`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L432-L433) 注释写着允许使用剩余重问预算，但因 `state["targeted_used"]` 已在初判耗尽，该声明会立即抛出未捕获异常并沦为 `unfinished_claims`（[`L564-L567`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L564-L567)）。
+2. **`_batch` 重试缺失 assistant 上下文**：[`_batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L494) 在批次级重试时仅向 `messages` 追加了第 2 条 `"role": "user"` 的 `REPAIR_PROMPT`，未像 [`_format_stage`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L270-L278) 那样附上上一轮失败的 `"role": "assistant"` 输出。
+3. **推断**：M1-faithful 要求将限定条件、来源归属与重述保留在同一声明中（[`prompts_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py#L21-L34)），生成了更长、包含更多子句的复合声明，使 M3 初判需要匹配更多引文锚点，从而更容易在初判或复核中耗尽单次 `targeted_retries` 预算并转化为 `unfinished_claims`。
+
+---
+
+### 2. 至多两个最小的通用机制假设
+
+基于上述归因，当前系统并不适合继续堆叠长 Prompt 或增加复核轮次，而应针对已证实的两个核心机制缺陷提出最小、可证伪的通用修正：
+
+#### 假设 A（M1 结构化契约修正）：将“独立非事实跨度”与“附着于事实声明的语境/条件/归属限定词”在提取契约上显式解耦
+- **机制说明**：
+  在 [`grounding/prompts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_v4.py#L14-L36) 基线上，不增加长篇抽象说教，而是直接修正二元切分歧义：明确规定**限定某条事实声明的时间、条件、假设前提、范围、标题作用域及声称来源（如“给定 X 后”、“在方案 Y 下”、“某段落称”）属于该事实声明不可分割的组成部分，必须包含在该声明的 `source_span` 与 `claim_text` 内**；`non_factual_spans` 仅用于**不限定任何事实断言的纯独立非事实句段**（如纯操作指令动词短语、礼貌用语、纯询问句）。同时在 [`extract_claims`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L133-L140) 中修复 `non_factual_spans` 的全局 `while start >= 0` 覆盖漏洞，使其与 `claims` 一样按出现位置逐次记账。
+- **可能收益**：
+  消除模型因“条件/来源本身不独立构成断言”而将其切入 `non_factual_spans` 造成的限定词丢失（如 `q3-05`、`behavior-05/base`）及短事实句整句误排除（如 `behavior-16/base`），同时堵住单个短非事实跨度掩盖块内后续重复文本的覆盖校验漏洞。
+- **失效方式**：
+  1. 模型可能将带有长铺垫的纯建议句整句保留进 `source_span`，若未剥离祈使语气，可能诱发类似 `15485` 将纯建议当作事实提取的逆向退步；
+  2. 按出现位置逐次记账 `non_factual_spans` 后，若回答中多次出现相同的非事实连接词而模型只列出一次，会触发 `extract_claims` 校验重试并可能增加 M1 `format_retries` 或 fallback 率。
+- **成本**：
+  零额外生产阶段，M1 系统提示相对原版 `prompts_v4.py`（2,031 字符）增幅控制在 300 字符以内（比 `prompts_m1_faithful.py` 的 3,300 字符缩短约 30%）；仅在块内存在重复非事实短跨度且模型漏列时可能增加至多 1 次受界 `format_retries`。
+- **如何遵守已有约束**：
+  M1 仍独自承担原子粒度，无任何运行时拼句、连接词词表或公式分支（遵守 [`AGENTS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/AGENTS.md#L10) 与 [`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L6)）；完全基于通用语义中“命题算子/限定语与独立非事实句”的区分，不含任何 benchmark 原文、题号或领域特征。
+
+#### 假设 B（M3 重试与负载隔离修正）：隔离批次行级格式修复与语义引文重问（`targeted_retries`），并剥离传入 M3 的 M1 内部定位元数据
+- **机制说明**：
+  1. 在 [`OptimizedV4Verifier._batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L474-L495,L514-L552) 中，补齐批次重试缺失的 `"role": "assistant"` 历史消息（对齐 [`_format_stage`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L270-L278)），并将批次内的单行纯结构/schema 校验错误（非 `_NeedsRequery`）交由现有的 `format_retries`（[`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L19)）修复，**仅当触发 [`_NeedsRequery`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L203-L206)（模糊引文需重新进行语义判决）时才消耗 `state["targeted_used"]`**。
+  2. 在构造发往 M3 的请求载荷（[`_batch`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L476) 与 [`_single_decision`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L354)）时，仅向模型传入契约必需的核查字段（`id`、`claim_text`，以及 fallback 时的 `extraction_fallback` 与 `boundary_context`），不向 M3 暴露 M1 内部的 `source_span`、`source_start`、`source_end`、`chunk_id` 字段（这些字段仍完整保留在本地 `claims` 与 `telemetry` 中）。
+- **可能收益**：
+  1. 防止初判中的普通 JSON/schema 错误提前耗尽该声明唯一的 `targeted_retries` 预算，从而减少声明在后续 C/U 复核中因引文重问无预算而沦为 `unfinished_claims`（直接改善 `partial` 报告率与 `unknown` 案例数）；
+  2. 消除 M1 `source_span` 切分边界或块号变动对 M3 判决的无关干扰，同时降低 M3 输入与批量估算 token 成本（[`_batches`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L730)）。
+- **失效方式**：
+  1. 若某条声明在初判既有格式错误、修复后又触发模糊引文重问，则会多发生 1 次受界的单行格式修复调用；
+  2. 当 `claim_text` 在 M1 提取时已经丢失了代词前件或来源限定，剥离 `source_span` 后 M3 无法再从 `source_span` 中“偷看”被 M1 漏掉的原文背景（但这恰恰使 M1 的提取质量问题透明化，符合阶段职责分离）。
+- **成本**：
+  常规无错路径减少 M3 输入 token（每条声明少传约一半 JSON 字段）；仅在初判发生单行格式错误且后续又需引文重问的边缘情况下，最多增加 1 次 `format_retries`（受 `config.format_retries = 1` 严格约束）。
+- **如何遵守已有约束**：
+  严格保持 `format_retries=1`、`targeted_retries=1`、至多一次 C 复核与一次 U 复核的上限（[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L8-L9)）；内容改变的引文依然100%触发 `_NeedsRequery` 重新语义判决，绝不静默替换或把失败转成 `UNSUPPORTED`（[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L7-L8)）。
+
+---
+
+### 3. 唯一优先实验设计：先离线解耦审计、再做 M1 单阶段固定核查实验
+
+在启动任何新一轮全量三数据集端到端重跑之前，**优先推荐一个两步走（Step A 零调用离线解耦审计 + Step B 针对假设 A 的 M1 独立固定评测）的最小可证伪实验**，不新增任何生产阶段：
+
+#### （1）对照、干预与冻结项
+- **Step A（零模型调用离线归因解耦，必选前置）**：
+  - 直接读取本轮已归档的 `results/v4-m1-faithful-20261023/dev/predictions.jsonl`（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L89)），按以下三类子集对 180 对 RAGTruth 案例做分层统计：
+    1. **子集 S1（M1 `claim_text` 集合逐字完全相同，不论 `source_span` 或 `chunk_id`）**：隔离纯 M3 随机性与 `source_span` 载荷噪声；
+    2. **子集 S2（特定声明 `claim_text` 相同，但因前文拆分变化导致所在 `_batches` 批次组合不同）**：量化 `max_batch_claims: 3` 批次重排对单条声明判决一致率与 `unfinished_claims` 的混杂影响；
+    3. **子集 S3（`claim_text` 实质变化或落入 `non_factual_spans`）**：单独统计因 `targeted_used` 在初判行级格式错误中被耗尽而导致后续失败的声明数（验证假设 B），以及 `non_factual_spans` 含条件/归属词的比例（验证假设 A）。
+- **Step B（假设 A 的受控干预实验）**：
+  - **对照组（Control）**：原 `optimized-v4.0`（[`grounding/prompts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_v4.py) + 现行 [`grounding/verifiers_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py)）。
+  - **干预组（Treatment）**：仅应用**假设 A**（在 `prompts_v4.py` 的 `DECOMPOSE_PROMPT` 上最小化增补“限定条件/时间/归属保留在被限定声明的 `source_span` 与 `claim_text` 中，`non_factual_spans` 仅限独立非事实句段”，并在 `extract_claims` 中按次序逐个覆盖 `non_factual_spans`）。
+  - **冻结项（Frozen）**：完全冻结 [`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json)、M3 全部提示词（`VERIFY_PROMPT`、`C_REVIEW_PROMPT`、`U_REVIEW_PROMPT`、`REPAIR_PROMPT`）、[`grounding/evidence_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/evidence_v4.py) 引文修复与数值信号逻辑，以及已曝光开发集输入（RAGTruth 180、Behavior 48、Physics 46）。**在进入 M3 前，先仅运行 `_decompose` 阶段完成提取层面的配对对比**；对于提取出的 `claim_text` 与原 v4 已归档轨迹完全一致且同批组合未变的批次，直接复用或固定对比，仅对提取发生变化的样本运行 M3（并在变化样本上对 M3 做 $K=3$ 次独立采样以分离 M3 随机方差）。
+
+#### （2）提取精度（Extraction Precision）与事实召回（Fact Recall）的分别测量方法
+不能使用回答级 TP/FP/TN/FN 代替提取层评测，必须分别在声明级测量：
+1. **提取精度（Extraction Precision，防虚构/防失真/防把建议当事实）**：
+   - **分母**：M1 提取出的全部 `claims`（含普通声明与经 M3 过滤后保留的 fallback 声明）。
+   - **分子**：满足以下全部条件的声明：(a) 确系原回答做出的事实性断言（非纯操作建议、祈使步聚或疑问句，防止 `15485`、`5278` 类错误）；(b) 完整保留了原句中的主体、声称来源归属、显式条件/时间/范围限定及正负号（防止 `q3-05`、`7036`、`behavior-05/base` 类限定丢失）。
+   - **硬性子指标**：`条件/归属剥离率`（原句中的条件状语或来源归属词出现在 `non_factual_spans` 而未出现在对应 `claim_text` 中的次数）与 `非事实误提率`（纯建议/疑问被抽入 `claims` 的次数）。
+2. **事实召回（Fact Recall，防漏提/防粗粒度打包掩盖）**：
+   - **分母**：原回答中包含的独立可核查原子事实命题总数（在 Physics 58 条与 Behavior 48 条上对照预设原子命题清单；在 RAGTruth 上对所有 `non_factual_spans` 以及提取声明数少于对照组的所有配对样本做 100% 离线核查）。
+   - **分子**：被 M1 独立提取且未与其他独立前提/结论强行打包为复合声明的事实命题数。
+   - **硬性子指标**：`非事实桶漏检数（False Exclusion Count）`（任何包含事实断言或内嵌事实前提的文本被放入 `non_factual_spans` 的次数，如 `15127`、`behavior-16/base`）及 `复合过粗打包数`（将两个可独立核查且真值条件不同的事实合为单条声明的次数）。
+
+#### （3）如何防止“少提取”或“多产生 unknown/partial”制造虚假提升
+1. **防范“少提取/粗粒度”刷分**：
+   - 规定任何因删减事实声明（`False Exclusion`）或将多条独立事实合并为粗粒度复合声明而导致的 M3 阳性（C/U）减少，在审计口径中**一律不得计入 FP 改善**；
+   - 在计算物理集与行为集 F1 时，除报告原生严格/近似 F1 外，必须同时报告**固定预设目标总数（58 与 48）为分母的严格召回率（Strict Recall）**，禁止凭输出总数下降（如 `62→59`）引起的分母缩小宣称提升。
+2. **防范“多 unknown / 执行失败”刷分**：
+   - 严禁仅报告剔除 `unknown` 后的 `已决 F1（Resolved F1）`。必须同步将 **全样本最坏情况口径（Worst-Case All-Case Metric）** 作为主门槛：将所有 `unknown` 正例及整例失败正例视同未成功检出（计入 FN 口径），将所有 `unknown` 负例及整例失败负例视同未成功放行（不计入 TN，并在保守 FP 口径中视同未排除风险）；
+   - 同时锁定 `已提取事实目标完成率`（[`README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L28)）与 `完整报告率` 不得低于原 v4 基线（`171/180` 与 `98.89%`）。
+
+#### （4）停止条件与采用条件（Stop / Adoption Criteria）
+- **立即停止/否决条件（满足任一即停止并回退）**：
+  1. 在仅运行 `_decompose` 后，Behavior 48 或 Physics 46 上出现 **哪怕 1 例**完整事实句被排入 `non_factual_spans`（如 `behavior-16/base`）或显式条件/来源归属被切入 `non_factual_spans`（如 `q3-05`）；
+  2. RAGTruth 180 上纯建议/询问句被抽为事实声明的案例数高于原 v4；
+  3. RAGTruth 180 上的 `unknown` 案例数（`> 1`）、`unfinished_claims`（`> 17`）或 `partial` 报告数（`> 9`）劣于原 v4 对照组。
+- **采用进入下一阶段条件（须全部满足）**：
+  1. Behavior 48 与 Physics 46 上，原 `m1-faithful` 已取得的来源归属恢复（`behavior-05/variant`、`behavior-06/base`）与同句公式说明绑定（`q5-02`、`q5-03`）保持不退步，且 `behavior-16/base` 与 `q3-05` 两类退步清零（严格匹配数达到 `≥ 56/58` 而非停留在 `54/58`）；
+  2. RAGTruth 180 上，对 `non_factual_spans` 的全量审计确认无新增事实漏检，完整报告率 `≥ 171/180`；
+  3. 仅当上述提取层与开发集门禁通过后，才可冻结全部代码、提示与配置，按 [`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L11) 抽取未见 `v2` 集做一次性确认。
+
+#### （5）作者裁定依赖边界
+- Step A（离线轨迹解耦审计）与 Step B 的 M1 提取层指标（条件/归属保留、非事实误排检查）可先由脚本与 AI 辅助初筛完成，**不阻塞实验启动**（符合 [`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L11) “Do not delay principal external evidence merely for supplemental data”）；
+- 但任何关于“开发集真 FP（true FP）已低于 minimal 且不高于 v3”（[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L12)）或默认后端切换的正式验收结论，**必须等待作者对旧 minimal/v3 原生 FP 争议样本及本次变化样本完成独立终审裁定后方可成立**；AI 诊断审计绝不能替代作者裁定或覆写原生标签。
+
+---
+
+### 4. 实际检查范围、未验证内容与 AI 辅助审阅声明
+
+本次技术审阅仅基于本消息内联提供的 **12 份静态材料**完成核对：项目约束与作者决策（[`AGENTS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/AGENTS.md#L1-L11)、[`docs/V4_DECISIONS.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/docs/V4_DECISIONS.md#L1-L17)）、运行配置（[`configs/optimized-v4.0.json`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/configs/optimized-v4.0.json#L1-L26)）、核心源码（[`grounding/prompts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_v4.py#L1-L115)、[`grounding/prompts_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/prompts_m1_faithful.py#L1-L74)、[`grounding/verifiers_m1_faithful.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_m1_faithful.py#L1-L37)、[`grounding/verifiers_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/verifiers_v4.py#L1-L836)、[`grounding/evidence_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/evidence_v4.py#L1-L386)、[`grounding/contracts_v4.py`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/grounding/contracts_v4.py#L1-L28)）以及三份实验报告（[`reports/v4-m1-faithful-20261023/README.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/README.md#L1-L100)、[`behavior-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/behavior-semantic-audit.md#L1-L86)、[`physics-semantic-audit.md`](file:///C:/Users/yixiao/AppData/Local/Temp/codex-antigravity-review-0ide368z/reports/v4-m1-faithful-20261023/physics-semantic-audit.md#L1-L106)）。本次审阅**未检查也未验证**任何未提供的外部文件或运行产物，包括但不限于 `grounding/client.py`、`grounding/config.py`、`grounding/config_v4.py`、`grounding/contracts.py`、`docs/V4_M1_FAITHFUL_EXPERIMENT.md`、测试套件以及报告引用的 `predictions.jsonl`、`responses.jsonl`、`operational-audit.json`、`dev-semantic-audit.md`、`dev-exclusion-audit.md`、`alignment-audit.md` 和 `audit_m1_experiment.py` 的具体实现与逐条原始记录。本意见仅为辅助 AI 审查结论，不构成任何案例或数据集的作者终审裁定。
