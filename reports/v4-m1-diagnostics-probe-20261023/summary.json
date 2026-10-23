@@ -1,0 +1,111 @@
+{
+  "arms": {
+    "terse_existing": {
+      "records": 12,
+      "accepted": 12,
+      "accepted_and_all_factual_source_targets_claim_covered": 12,
+      "usage": {
+        "calls": 12,
+        "calls_with_usage": 12,
+        "prompt_tokens": 7399,
+        "completion_tokens": 774,
+        "total_tokens": 8173,
+        "prompt_cache_hit_tokens": 4608,
+        "prompt_cache_miss_tokens": 2791,
+        "reasoning_tokens": 0,
+        "cache_accounted_calls": 12,
+        "reasoning_accounted_calls": 0,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": false
+      },
+      "cost": {
+        "reference_prices": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.006,
+          "output_per_million": 1.2,
+          "currency": "USD"
+        },
+        "known_usage_subtotal": 0.001793748,
+        "estimated_total": 0.001793748,
+        "priced_calls": 12,
+        "unpriced_calls": 0,
+        "complete": true,
+        "cache_standardized_all_miss_known_subtotal": 0.0031485,
+        "cache_standardized_all_miss_total": 0.0031485,
+        "cache_standardized_priced_calls": 12,
+        "cache_standardized_unpriced_calls": 0,
+        "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+      },
+      "latency_seconds": [
+        1.422000000020489,
+        3.609000000054948,
+        1.359000000054948,
+        4.578000000095926,
+        1.047000000020489,
+        1.4380000000819564,
+        1.625,
+        1.562000000034459,
+        1.187999999965541,
+        1.3439999999245629,
+        1.234000000054948,
+        1.4060000000754371
+      ]
+    },
+    "detailed_diagnostic": {
+      "records": 12,
+      "accepted": 12,
+      "accepted_and_all_factual_source_targets_claim_covered": 12,
+      "usage": {
+        "calls": 12,
+        "calls_with_usage": 12,
+        "prompt_tokens": 8417,
+        "completion_tokens": 795,
+        "total_tokens": 9212,
+        "prompt_cache_hit_tokens": 5376,
+        "prompt_cache_miss_tokens": 3041,
+        "reasoning_tokens": 0,
+        "cache_accounted_calls": 12,
+        "reasoning_accounted_calls": 0,
+        "usage_complete": true,
+        "cache_usage_complete": true,
+        "reasoning_usage_complete": false
+      },
+      "cost": {
+        "reference_prices": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.006,
+          "output_per_million": 1.2,
+          "currency": "USD"
+        },
+        "known_usage_subtotal": 0.0018985559999999996,
+        "estimated_total": 0.0018985559999999996,
+        "priced_calls": 12,
+        "unpriced_calls": 0,
+        "complete": true,
+        "cache_standardized_all_miss_known_subtotal": 0.0034790999999999993,
+        "cache_standardized_all_miss_total": 0.0034790999999999993,
+        "cache_standardized_priced_calls": 12,
+        "cache_standardized_unpriced_calls": 0,
+        "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+      },
+      "latency_seconds": [
+        3.4679999999934807,
+        1.3599999999860302,
+        4.0,
+        1.25,
+        1.2179999999934807,
+        1.0,
+        1.265999999945052,
+        1.765999999945052,
+        1.375,
+        1.702999999979511,
+        1.0309999999590218,
+        1.515999999945052
+      ]
+    }
+  },
+  "frozen_artifacts_unchanged": true,
+  "changed_frozen_artifacts": [],
+  "note": "AI-authored protocol probe; lexical claim-source coverage is not semantic correctness. Fixed one-repair design cannot measure initial repair-trigger reduction or end-to-end F1."
+}

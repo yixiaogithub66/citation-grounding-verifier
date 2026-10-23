@@ -1,0 +1,244 @@
+{
+  "journal_sha256": "d8127893cbd844e1547d633bdc1db15e3fab3905672333047b830e1cca8adcc2",
+  "groups": {
+    "pre_fix": {
+      "decompose": {
+        "calls": 422,
+        "usage": {
+          "calls": 422,
+          "calls_with_usage": 421,
+          "prompt_tokens": 321145,
+          "completion_tokens": 155520,
+          "total_tokens": 476665,
+          "prompt_cache_hit_tokens": 191837,
+          "prompt_cache_miss_tokens": 129308,
+          "reasoning_tokens": 0,
+          "cache_accounted_calls": 421,
+          "reasoning_accounted_calls": 0,
+          "usage_complete": false,
+          "cache_usage_complete": false,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 1,
+          "calls_missing_cache_accounting": 1
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.226567422,
+          "estimated_total": null,
+          "priced_calls": 421,
+          "unpriced_calls": 1,
+          "complete": false,
+          "cache_standardized_all_miss_known_subtotal": 0.2829675000000003,
+          "cache_standardized_all_miss_total": null,
+          "cache_standardized_priced_calls": 421,
+          "cache_standardized_unpriced_calls": 1,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      },
+      "verify": {
+        "calls": 927,
+        "usage": {
+          "calls": 927,
+          "calls_with_usage": 922,
+          "prompt_tokens": 1601245,
+          "completion_tokens": 306165,
+          "total_tokens": 1907410,
+          "prompt_cache_hit_tokens": 1351628,
+          "prompt_cache_miss_tokens": 249617,
+          "reasoning_tokens": 0,
+          "cache_accounted_calls": 922,
+          "reasoning_accounted_calls": 0,
+          "usage_complete": false,
+          "cache_usage_complete": false,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 5,
+          "calls_missing_cache_accounting": 5
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.4503928679999998,
+          "estimated_total": null,
+          "priced_calls": 922,
+          "unpriced_calls": 5,
+          "complete": false,
+          "cache_standardized_all_miss_known_subtotal": 0.8477715000000006,
+          "cache_standardized_all_miss_total": null,
+          "cache_standardized_priced_calls": 922,
+          "cache_standardized_unpriced_calls": 5,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      },
+      "review": {
+        "calls": 339,
+        "usage": {
+          "calls": 339,
+          "calls_with_usage": 338,
+          "prompt_tokens": 640941,
+          "completion_tokens": 367543,
+          "total_tokens": 1008484,
+          "prompt_cache_hit_tokens": 523520,
+          "prompt_cache_miss_tokens": 117421,
+          "reasoning_tokens": 316750,
+          "cache_accounted_calls": 338,
+          "reasoning_accounted_calls": 338,
+          "usage_complete": false,
+          "cache_usage_complete": false,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 1,
+          "calls_missing_cache_accounting": 1
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.47941902000000036,
+          "estimated_total": null,
+          "priced_calls": 338,
+          "unpriced_calls": 1,
+          "complete": false,
+          "cache_standardized_all_miss_known_subtotal": 0.6333339000000003,
+          "cache_standardized_all_miss_total": null,
+          "cache_standardized_priced_calls": 338,
+          "cache_standardized_unpriced_calls": 1,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      }
+    },
+    "post_fix": {
+      "decompose": {
+        "calls": 430,
+        "usage": {
+          "calls": 430,
+          "calls_with_usage": 429,
+          "prompt_tokens": 330454,
+          "completion_tokens": 156728,
+          "total_tokens": 487182,
+          "prompt_cache_hit_tokens": 197602,
+          "prompt_cache_miss_tokens": 132852,
+          "reasoning_tokens": 0,
+          "cache_accounted_calls": 429,
+          "reasoning_accounted_calls": 0,
+          "usage_complete": false,
+          "cache_usage_complete": false,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 1,
+          "calls_missing_cache_accounting": 1
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.229114812,
+          "estimated_total": null,
+          "priced_calls": 429,
+          "unpriced_calls": 1,
+          "complete": false,
+          "cache_standardized_all_miss_known_subtotal": 0.2872098000000001,
+          "cache_standardized_all_miss_total": null,
+          "cache_standardized_priced_calls": 429,
+          "cache_standardized_unpriced_calls": 1,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      },
+      "verify": {
+        "calls": 929,
+        "usage": {
+          "calls": 929,
+          "calls_with_usage": 929,
+          "prompt_tokens": 1615847,
+          "completion_tokens": 303037,
+          "total_tokens": 1918884,
+          "prompt_cache_hit_tokens": 1372738,
+          "prompt_cache_miss_tokens": 243109,
+          "reasoning_tokens": 0,
+          "cache_accounted_calls": 929,
+          "reasoning_accounted_calls": 0,
+          "usage_complete": true,
+          "cache_usage_complete": true,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 0,
+          "calls_missing_cache_accounting": 0
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.44481352799999957,
+          "estimated_total": 0.44481352799999957,
+          "priced_calls": 929,
+          "unpriced_calls": 0,
+          "complete": true,
+          "cache_standardized_all_miss_known_subtotal": 0.8483985000000002,
+          "cache_standardized_all_miss_total": 0.8483985000000002,
+          "cache_standardized_priced_calls": 929,
+          "cache_standardized_unpriced_calls": 0,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      },
+      "review": {
+        "calls": 315,
+        "usage": {
+          "calls": 315,
+          "calls_with_usage": 313,
+          "prompt_tokens": 594251,
+          "completion_tokens": 263683,
+          "total_tokens": 857934,
+          "prompt_cache_hit_tokens": 486784,
+          "prompt_cache_miss_tokens": 107467,
+          "reasoning_tokens": 218756,
+          "cache_accounted_calls": 313,
+          "reasoning_accounted_calls": 313,
+          "usage_complete": false,
+          "cache_usage_complete": false,
+          "reasoning_usage_complete": false,
+          "calls_missing_usage": 2,
+          "calls_missing_cache_accounting": 2
+        },
+        "reference_cost": {
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          },
+          "known_usage_subtotal": 0.3515804040000003,
+          "estimated_total": null,
+          "priced_calls": 313,
+          "unpriced_calls": 2,
+          "complete": false,
+          "cache_standardized_all_miss_known_subtotal": 0.4946949,
+          "cache_standardized_all_miss_total": null,
+          "cache_standardized_priced_calls": 313,
+          "cache_standardized_unpriced_calls": 2,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+        }
+      }
+    }
+  },
+  "scope": "Known per-phase reference costs; missing calls are not zero cost. Descriptive, not a causal attribution."
+}
