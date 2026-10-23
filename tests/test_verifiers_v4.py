@@ -105,6 +105,100 @@ class V4VerifierTests(unittest.TestCase):
         self.assertEqual([claim["source_start"] for claim in claims], [0, len(text) + 1])
         self.assertEqual(len(claims), 2)
 
+    def test_one_non_factual_row_cannot_cover_all_repeated_occurrences(self):
+        for text in ("Please wait.", "请稍候。", "−5"):
+            with self.subTest(text=text), self.assertRaises(VerificationError):
+                extract_claims(extraction(exclusions=(text,)), text + " " + text, max_claims=64)
+
+    def test_repeated_non_factual_rows_each_consume_one_occurrence(self):
+        text = "Please wait."
+        for reasons in (("Request.", "Request."), ("First request.", "Second request.")):
+            with self.subTest(reasons=reasons):
+                payload = extraction(exclusions=(text, text))
+                for entry, reason in zip(payload["non_factual_spans"], reasons):
+                    entry["reason"] = reason
+                claims, exclusions = extract_claims(payload, text + " " + text, max_claims=64)
+                self.assertEqual(claims, [])
+                self.assertEqual([entry["source_start"] for entry in exclusions], [0, len(text) + 1])
+                self.assertEqual([entry["reason"] for entry in exclusions], list(reasons))
+
+    def test_extra_non_factual_row_cannot_reuse_last_occurrence(self):
+        text = "Please wait."
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=(text, text)), text, max_claims=64)
+
+    def test_non_factual_reason_does_not_spread_to_a_different_context(self):
+        text = "The lamp is on."
+        answer = 'Say "' + text + '" ' + text
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=("Say", text)), answer, max_claims=64)
+
+    def test_non_factual_matching_does_not_skip_claim_covered_occurrences(self):
+        text = "The lamp is on."
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(text, exclusions=(text,)), text + " " + text, max_claims=64)
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=(text + " ", text)), text + " " + text, max_claims=64)
+
+    def test_non_factual_order_is_independent_of_claim_order(self):
+        text = "The lamp is on."
+        answer = "Please wait. " + text
+        claims, exclusions = extract_claims(extraction(text, exclusions=("Please wait.",)), answer, max_claims=64)
+        self.assertEqual(claims[0]["source_start"], len("Please wait. "))
+        self.assertEqual(exclusions[0]["source_start"], 0)
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=("second", "first")), "first second", max_claims=64)
+
+    def test_non_factual_occurrences_allow_overlaps_without_expansion(self):
+        claims, exclusions = extract_claims(extraction(exclusions=("aa", "aa")), "aaa", max_claims=64)
+        self.assertEqual(claims, [])
+        self.assertEqual([(entry["source_start"], entry["source_end"]) for entry in exclusions], [(0, 2), (1, 3)])
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=("aa",)), "aaa", max_claims=64)
+        with self.assertRaises(VerificationError):
+            extract_claims(extraction(exclusions=("aa", "aa", "aa")), "aaa", max_claims=64)
+
+    def test_non_factual_matching_preserves_same_start_and_claim_overlaps(self):
+        answer = "Please note that the lamp is on."
+        claims, exclusions = extract_claims(
+            extraction(answer, exclusions=("Please note", "Please note that")), answer, max_claims=64,
+        )
+        self.assertEqual(len(claims), 1)
+        self.assertEqual([entry["source_start"] for entry in exclusions], [0, 0])
+
+    def test_incomplete_repeated_non_factual_extraction_uses_bounded_repair(self):
+        text = "Please wait."
+        result, client = self.run_case(text + " " + text, [
+            extraction(exclusions=(text,)), extraction(exclusions=(text, text)),
+        ])
+        self.assertEqual(result.report, {"claims": []})
+        self.assertEqual([entry["stage"] for entry in client.inputs], ["decompose", "decompose_repair_1"])
+        self.assertEqual(len(result.telemetry["extraction"]["non_factual_spans"]), 2)
+        self.assertEqual(result.telemetry["summary"]["decomposition_fallback_chunks"], 0)
+
+    def test_exhausted_non_factual_occurrence_error_keeps_fact_in_sentence_fallback(self):
+        fact = "The lamp is on."
+        instruction = "Read this aloud: " + fact
+        answer = instruction + " " + fact
+        bad = extraction(exclusions=("Read this aloud:", fact))
+        result, client = self.run_case(answer, [
+            bad, bad,
+            {"claims": [
+                {"id": "c1", "claim_text": instruction, "non_factual": True,
+                 "reason": "An instruction to read the supplied text."},
+                row(" " + fact, claim_id="c2", quote=fact),
+            ]},
+        ], contexts=[fact])
+        self.assertEqual([entry["stage"] for entry in client.inputs], ["decompose", "decompose_repair_1", "verify"])
+        self.assertEqual(len(result.report["claims"]), 1)
+        self.assertEqual(result.report["claims"][0]["claim_text"], " " + fact)
+        self.assertEqual(result.report["claims"][0]["verdict"], "SUPPORTED")
+        self.assertEqual(result.report["claims"][0]["citations"], [{"index": 0, "quote": fact}])
+        self.assertEqual(result.telemetry["summary"]["decomposition_fallback_chunks"], 1)
+        self.assertEqual(result.telemetry["summary"]["unsupported_review_triggers"], 0)
+        self.assertEqual(len(result.telemetry["fallback_exclusions"]), 1)
+        self.assertTrue(all(claim["extraction_fallback"] for claim in result.telemetry["extraction"]["claims"]))
+
     def test_every_chunk_is_bounded_even_for_an_indivisible_long_sentence(self):
         text = "a" * 270 + "."
         spans = decomposition_chunks(text, 128)

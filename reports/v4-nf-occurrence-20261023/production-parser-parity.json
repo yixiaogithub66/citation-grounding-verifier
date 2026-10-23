@@ -1,0 +1,14 @@
+{
+  "source_sha256": "e5efb9f4eea5b4e97c94d063f5d3f948427eee55a9cadb8b4d7977ace59d66c9",
+  "audit_script_sha256": "977645561534fdb7354107b50971a70b9b393aedfb001cb04bb9aa7a987eb7a3",
+  "comparison": "Exact success values or exact error codes and messages; no wording exemption.",
+  "counts": {
+    "records": 548,
+    "decompose_calls": 862,
+    "compared": 854,
+    "exact_match": 854,
+    "invalid_json": 8
+  },
+  "mismatches": [],
+  "limitation": "Fixed exposed responses only; no new model calls or estimate of new repair/completion or semantic accuracy."
+}

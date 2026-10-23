@@ -124,20 +124,26 @@ def extract_claims(payload: Any, answer: str, *, max_claims: int) -> tuple[list[
             claims.append({**row, "source_start": start, "source_end": end})
             seen.add(occurrence)
     exclusions: list[dict] = []
+    exclusion_occurrences: dict[str, int] = {}
+    prior_exclusion_start = 0
     for row in excluded:
         if (
             not isinstance(row, dict) or set(row) != {"text", "reason"}
             or not _text(row["text"]) or not _text(row["reason"])
         ):
             _invalid("Each non-factual span needs exactly nonempty text and reason.")
-        start = answer.find(row["text"])
+        # A non-factual classification belongs to one occurrence, not every
+        # equal substring. Keep this array's order independent of claims and
+        # never skip covered text to guess which later context a row meant.
+        # Advancing by one start position retains legal overlapping spans.
+        search_start = max(prior_exclusion_start, exclusion_occurrences.get(row["text"], -1) + 1)
+        start = answer.find(row["text"], search_start)
         if start < 0:
-            _invalid("A non-factual span is not an exact answer substring.")
-        while start >= 0:
-            end = start + len(row["text"])
-            covered.update(range(start, end))
-            exclusions.append({**row, "source_start": start, "source_end": end})
-            start = answer.find(row["text"], start + 1)
+            _invalid("Each non-factual row needs a separate exact answer occurrence in answer order.")
+        end = start + len(row["text"])
+        prior_exclusion_start = exclusion_occurrences[row["text"]] = start
+        covered.update(range(start, end))
+        exclusions.append({**row, "source_start": start, "source_end": end})
     uncovered = next((i for i, char in enumerate(answer) if _meaningful(char) and i not in covered), None)
     if uncovered is not None:
         _invalid("Extraction left answer text unaccounted for near: " + repr(answer[uncovered:uncovered + 100]))
