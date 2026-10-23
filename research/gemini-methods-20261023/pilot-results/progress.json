@@ -1,0 +1,15 @@
+{
+  "completed_at": "2026-10-23T16:02:39.396745+00:00",
+  "error": 6,
+  "expected_records": 84,
+  "frozen_artifacts_unchanged": true,
+  "gold_sent_to_model": false,
+  "model_calls_started": 78,
+  "record_count": 84,
+  "responses_sha256": "870a78e883a3caf66c6d2806d314534e39ad2a8e24b60b2f94ebdf650bb68d39",
+  "schema_version": "generic-methods-initial-stage-pilot-v1",
+  "skipped": 6,
+  "started_at": "2026-10-23T16:01:59.946366+00:00",
+  "status": "complete",
+  "valid": 72
+}

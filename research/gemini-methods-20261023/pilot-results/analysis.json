@@ -1,0 +1,1244 @@
+{
+  "case_scores": [
+    {
+      "arm": "base",
+      "case_id": "j-attribution-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-entailment-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-attribution-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-entailment-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-paraphrase-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-deletion-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-direction-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-deletion-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-direction-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-entailment-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-condition-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": false,
+      "valid_and_label_hit": false
+    },
+    {
+      "arm": "base",
+      "case_id": "j-deletion-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-paraphrase-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-attribution-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-condition-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-attribution-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-entailment-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": false,
+      "valid_and_label_hit": false
+    },
+    {
+      "arm": "base",
+      "case_id": "j-deletion-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-direction-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-condition-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-paraphrase-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-condition-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": false,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": false
+    },
+    {
+      "arm": "base",
+      "case_id": "j-direction-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "base",
+      "case_id": "j-paraphrase-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-attribution-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-entailment-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-entailment-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-attribution-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-deletion-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-paraphrase-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-deletion-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-direction-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-direction-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-entailment-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-condition-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": false,
+      "valid_and_label_hit": false
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-condition-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-deletion-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-attribution-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-paraphrase-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-entailment-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-deletion-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-attribution-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-direction-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-paraphrase-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-condition-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": false,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": false
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-condition-s",
+      "expected_verdict": "SUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "SUPPORTED",
+      "repetition": 1,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-direction-c",
+      "expected_verdict": "CONTRADICTED",
+      "raw_label_hit": true,
+      "raw_verdict": "CONTRADICTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    },
+    {
+      "arm": "candidate",
+      "case_id": "j-paraphrase-u",
+      "expected_verdict": "UNSUPPORTED",
+      "raw_label_hit": true,
+      "raw_verdict": "UNSUPPORTED",
+      "repetition": 0,
+      "safe_quote_repairs": 0,
+      "valid": true,
+      "valid_and_label_hit": true
+    }
+  ],
+  "created_at": "2026-10-23T16:04:00.298484+00:00",
+  "freeze_sha256": "fd744beab097d8a0fb2921a562ccb99a7fb521491b0cd192e15565e471eb110b",
+  "p1": {
+    "base": {
+      "raw_label_hits": 23,
+      "records": 24,
+      "runtime": {
+        "by_variant_execution_order": {
+          "first": {
+            "mean_latency_seconds": 2.0376666666610013,
+            "p95_latency_seconds": 2.937000000034459,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.0052550999999999995,
+              "cache_standardized_all_miss_total": 0.0052550999999999995,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.002923974,
+              "known_usage_subtotal": 0.002923974,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 1724,
+              "prompt_cache_hit_tokens": 7929,
+              "prompt_cache_miss_tokens": 2692,
+              "prompt_tokens": 10621,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 12345,
+              "usage_complete": true
+            }
+          },
+          "second": {
+            "mean_latency_seconds": 2.1367500000051223,
+            "p95_latency_seconds": 4.530999999959022,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.005370299999999999,
+              "cache_standardized_all_miss_total": 0.005370299999999999,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.003075924,
+              "known_usage_subtotal": 0.003075924,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 1820,
+              "prompt_cache_hit_tokens": 7804,
+              "prompt_cache_miss_tokens": 2817,
+              "prompt_tokens": 10621,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 12441,
+              "usage_complete": true
+            }
+          }
+        },
+        "error_codes": {
+          "invalid_model_output": 2
+        },
+        "mean_latency_seconds": 2.0872083333330615,
+        "p95_latency_seconds": 2.937000000034459,
+        "record_count": 24,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0106254,
+          "cache_standardized_all_miss_total": 0.0106254,
+          "cache_standardized_priced_calls": 24,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.005999898,
+          "known_usage_subtotal": 0.005999898,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 24,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "returned_models": {
+          "deepseek-flash": 24
+        },
+        "returned_system_fingerprints": {
+          "e72d3c7f663d3e1383b00b3884cb4501": 24
+        },
+        "stage_calls": {
+          "p1_base": 24
+        },
+        "summary_totals": {
+          "extracted_claim_count": 0,
+          "fallback_claim_count": 0,
+          "non_factual_span_count": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 24,
+          "cache_usage_complete": true,
+          "calls": 24,
+          "calls_missing_cache_accounting": 0,
+          "calls_missing_usage": 0,
+          "calls_with_usage": 24,
+          "completion_tokens": 3544,
+          "prompt_cache_hit_tokens": 15733,
+          "prompt_cache_miss_tokens": 5509,
+          "prompt_tokens": 21242,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 24786,
+          "usage_complete": true
+        }
+      },
+      "safe_quote_repairs": 0,
+      "valid": 22,
+      "valid_and_label_hits": 21
+    },
+    "candidate": {
+      "raw_label_hits": 23,
+      "records": 24,
+      "runtime": {
+        "by_variant_execution_order": {
+          "first": {
+            "mean_latency_seconds": 2.0819999999851766,
+            "p95_latency_seconds": 3.265999999945052,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.0058479000000000005,
+              "cache_standardized_all_miss_total": 0.0058479000000000005,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.002950236,
+              "known_usage_subtotal": 0.002950236,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 1744,
+              "prompt_cache_hit_tokens": 9856,
+              "prompt_cache_miss_tokens": 2661,
+              "prompt_tokens": 12517,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 14261,
+              "usage_complete": true
+            }
+          },
+          "second": {
+            "mean_latency_seconds": 2.054583333335662,
+            "p95_latency_seconds": 2.6089999999385327,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.0057759,
+              "cache_standardized_all_miss_total": 0.0057759,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.002727708,
+              "known_usage_subtotal": 0.002727708,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 1684,
+              "prompt_cache_hit_tokens": 10368,
+              "prompt_cache_miss_tokens": 2149,
+              "prompt_tokens": 12517,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 14201,
+              "usage_complete": true
+            }
+          }
+        },
+        "error_codes": {
+          "invalid_model_output": 1
+        },
+        "mean_latency_seconds": 2.068291666660419,
+        "p95_latency_seconds": 2.6089999999385327,
+        "record_count": 24,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0116238,
+          "cache_standardized_all_miss_total": 0.0116238,
+          "cache_standardized_priced_calls": 24,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.005677943999999999,
+          "known_usage_subtotal": 0.005677943999999999,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 24,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "returned_models": {
+          "deepseek-flash": 24
+        },
+        "returned_system_fingerprints": {
+          "e72d3c7f663d3e1383b00b3884cb4501": 24
+        },
+        "stage_calls": {
+          "p1_candidate": 24
+        },
+        "summary_totals": {
+          "extracted_claim_count": 0,
+          "fallback_claim_count": 0,
+          "non_factual_span_count": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 24,
+          "cache_usage_complete": true,
+          "calls": 24,
+          "calls_missing_cache_accounting": 0,
+          "calls_missing_usage": 0,
+          "calls_with_usage": 24,
+          "completion_tokens": 3428,
+          "prompt_cache_hit_tokens": 20224,
+          "prompt_cache_miss_tokens": 4810,
+          "prompt_tokens": 25034,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 28462,
+          "usage_complete": true
+        }
+      },
+      "safe_quote_repairs": 0,
+      "valid": 23,
+      "valid_and_label_hits": 22
+    }
+  },
+  "p2": {
+    "base": {
+      "claim_or_recovery_count": 11,
+      "non_factual_span_count": 8,
+      "records": 12,
+      "runtime": {
+        "by_variant_execution_order": {
+          "first": {
+            "mean_latency_seconds": 1.612250000005588,
+            "p95_latency_seconds": 2.015999999945052,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.0029097,
+              "cache_standardized_all_miss_total": 0.0029097,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.002006532,
+              "known_usage_subtotal": 0.002006532,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 975,
+              "prompt_cache_hit_tokens": 3072,
+              "prompt_cache_miss_tokens": 2727,
+              "prompt_tokens": 5799,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 6774,
+              "usage_complete": true
+            }
+          }
+        },
+        "error_codes": {
+          "invalid_model_output": 2
+        },
+        "mean_latency_seconds": 1.612250000005588,
+        "p95_latency_seconds": 2.015999999945052,
+        "record_count": 12,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0029097,
+          "cache_standardized_all_miss_total": 0.0029097,
+          "cache_standardized_priced_calls": 12,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.002006532,
+          "known_usage_subtotal": 0.002006532,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 12,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "returned_models": {
+          "deepseek-flash": 12
+        },
+        "returned_system_fingerprints": {
+          "e72d3c7f663d3e1383b00b3884cb4501": 12
+        },
+        "stage_calls": {
+          "p2_base": 12
+        },
+        "summary_totals": {
+          "extracted_claim_count": 0,
+          "fallback_claim_count": 0,
+          "non_factual_span_count": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 12,
+          "cache_usage_complete": true,
+          "calls": 12,
+          "calls_missing_cache_accounting": 0,
+          "calls_missing_usage": 0,
+          "calls_with_usage": 12,
+          "completion_tokens": 975,
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 2727,
+          "prompt_tokens": 5799,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 6774,
+          "usage_complete": true
+        }
+      },
+      "semantic_score": null,
+      "statuses": {
+        "error": 2,
+        "valid": 10
+      }
+    },
+    "nf_audit": {
+      "claim_or_recovery_count": 0,
+      "non_factual_span_count": 0,
+      "records": 12,
+      "runtime": {
+        "by_variant_execution_order": {},
+        "error_codes": {},
+        "mean_latency_seconds": 1.3541666666666667,
+        "p95_latency_seconds": 1.7349999999860302,
+        "record_count": 6,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0007827,
+          "cache_standardized_all_miss_total": 0.0007827,
+          "cache_standardized_priced_calls": 6,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.00048164400000000004,
+          "known_usage_subtotal": 0.00048164400000000004,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 6,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "returned_models": {
+          "deepseek-flash": 6
+        },
+        "returned_system_fingerprints": {
+          "e72d3c7f663d3e1383b00b3884cb4501": 6
+        },
+        "stage_calls": {
+          "p2_nf_audit": 6
+        },
+        "summary_totals": {
+          "extracted_claim_count": 0,
+          "fallback_claim_count": 0,
+          "non_factual_span_count": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 6,
+          "cache_usage_complete": true,
+          "calls": 6,
+          "calls_missing_cache_accounting": 0,
+          "calls_missing_usage": 0,
+          "calls_with_usage": 6,
+          "completion_tokens": 42,
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 1417,
+          "prompt_tokens": 2441,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 2483,
+          "usage_complete": true
+        }
+      },
+      "semantic_score": null,
+      "statuses": {
+        "skipped": 6,
+        "valid": 6
+      }
+    },
+    "repeat": {
+      "claim_or_recovery_count": 10,
+      "non_factual_span_count": 9,
+      "records": 12,
+      "runtime": {
+        "by_variant_execution_order": {
+          "second": {
+            "mean_latency_seconds": 1.567666666659837,
+            "p95_latency_seconds": 1.922000000020489,
+            "record_count": 12,
+            "reference_cost": {
+              "cache_standardized_all_miss_known_subtotal": 0.0027921,
+              "cache_standardized_all_miss_total": 0.0027921,
+              "cache_standardized_priced_calls": 12,
+              "cache_standardized_unpriced_calls": 0,
+              "complete": true,
+              "estimated_total": 0.0018889319999999996,
+              "known_usage_subtotal": 0.0018889319999999996,
+              "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+              "priced_calls": 12,
+              "reference_prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2
+              },
+              "unpriced_calls": 0
+            },
+            "usage": {
+              "cache_accounted_calls": 12,
+              "cache_usage_complete": true,
+              "calls": 12,
+              "calls_with_usage": 12,
+              "completion_tokens": 877,
+              "prompt_cache_hit_tokens": 3072,
+              "prompt_cache_miss_tokens": 2727,
+              "prompt_tokens": 5799,
+              "reasoning_accounted_calls": 0,
+              "reasoning_tokens": 0,
+              "reasoning_usage_complete": false,
+              "total_tokens": 6676,
+              "usage_complete": true
+            }
+          }
+        },
+        "error_codes": {
+          "invalid_model_output": 1
+        },
+        "mean_latency_seconds": 1.567666666659837,
+        "p95_latency_seconds": 1.922000000020489,
+        "record_count": 12,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0027921,
+          "cache_standardized_all_miss_total": 0.0027921,
+          "cache_standardized_priced_calls": 12,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.0018889319999999996,
+          "known_usage_subtotal": 0.0018889319999999996,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 12,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "returned_models": {
+          "deepseek-flash": 12
+        },
+        "returned_system_fingerprints": {
+          "e72d3c7f663d3e1383b00b3884cb4501": 12
+        },
+        "stage_calls": {
+          "p2_repeat": 12
+        },
+        "summary_totals": {
+          "extracted_claim_count": 0,
+          "fallback_claim_count": 0,
+          "non_factual_span_count": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 12,
+          "cache_usage_complete": true,
+          "calls": 12,
+          "calls_missing_cache_accounting": 0,
+          "calls_missing_usage": 0,
+          "calls_with_usage": 12,
+          "completion_tokens": 877,
+          "prompt_cache_hit_tokens": 3072,
+          "prompt_cache_miss_tokens": 2727,
+          "prompt_tokens": 5799,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 6676,
+          "usage_complete": true
+        }
+      },
+      "semantic_score": null,
+      "statuses": {
+        "error": 1,
+        "valid": 11
+      }
+    }
+  },
+  "qualification": "P1 label agreement with AI-drafted expectations is not evidence sufficiency; P2 semantic recovery requires independent review. Initial-stage probes omit production fallback/reviews.",
+  "responses_sha256": "870a78e883a3caf66c6d2806d314534e39ad2a8e24b60b2f94ebdf650bb68d39",
+  "runtime": {
+    "by_variant_execution_order": {
+      "first": {
+        "mean_latency_seconds": 1.9106388888839219,
+        "p95_latency_seconds": 2.937000000034459,
+        "record_count": 36,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.014012699999999998,
+          "cache_standardized_all_miss_total": 0.014012699999999998,
+          "cache_standardized_priced_calls": 36,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.007880742000000001,
+          "known_usage_subtotal": 0.007880742000000001,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 36,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 36,
+          "cache_usage_complete": true,
+          "calls": 36,
+          "calls_with_usage": 36,
+          "completion_tokens": 4443,
+          "prompt_cache_hit_tokens": 20857,
+          "prompt_cache_miss_tokens": 8080,
+          "prompt_tokens": 28937,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 33380,
+          "usage_complete": true
+        }
+      },
+      "second": {
+        "mean_latency_seconds": 1.9196666666668736,
+        "p95_latency_seconds": 2.6089999999385327,
+        "record_count": 36,
+        "reference_cost": {
+          "cache_standardized_all_miss_known_subtotal": 0.0139383,
+          "cache_standardized_all_miss_total": 0.0139383,
+          "cache_standardized_priced_calls": 36,
+          "cache_standardized_unpriced_calls": 0,
+          "complete": true,
+          "estimated_total": 0.007692564,
+          "known_usage_subtotal": 0.007692564,
+          "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+          "priced_calls": 36,
+          "reference_prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2
+          },
+          "unpriced_calls": 0
+        },
+        "usage": {
+          "cache_accounted_calls": 36,
+          "cache_usage_complete": true,
+          "calls": 36,
+          "calls_with_usage": 36,
+          "completion_tokens": 4381,
+          "prompt_cache_hit_tokens": 21244,
+          "prompt_cache_miss_tokens": 7693,
+          "prompt_tokens": 28937,
+          "reasoning_accounted_calls": 0,
+          "reasoning_tokens": 0,
+          "reasoning_usage_complete": false,
+          "total_tokens": 33318,
+          "usage_complete": true
+        }
+      }
+    },
+    "error_codes": {
+      "invalid_model_output": 6
+    },
+    "mean_latency_seconds": 1.871999999997803,
+    "p95_latency_seconds": 2.6089999999385327,
+    "record_count": 78,
+    "reference_cost": {
+      "cache_standardized_all_miss_known_subtotal": 0.028733699999999994,
+      "cache_standardized_all_miss_total": 0.028733699999999994,
+      "cache_standardized_priced_calls": 78,
+      "cache_standardized_unpriced_calls": 0,
+      "complete": true,
+      "estimated_total": 0.016054950000000005,
+      "known_usage_subtotal": 0.016054950000000005,
+      "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+      "priced_calls": 78,
+      "reference_prices": {
+        "cached_input_per_million": 0.006,
+        "currency": "USD",
+        "input_per_million": 0.3,
+        "output_per_million": 1.2
+      },
+      "unpriced_calls": 0
+    },
+    "returned_models": {
+      "deepseek-flash": 78
+    },
+    "returned_system_fingerprints": {
+      "e72d3c7f663d3e1383b00b3884cb4501": 78
+    },
+    "stage_calls": {
+      "p1_base": 24,
+      "p1_candidate": 24,
+      "p2_base": 12,
+      "p2_nf_audit": 6,
+      "p2_repeat": 12
+    },
+    "summary_totals": {
+      "extracted_claim_count": 0,
+      "fallback_claim_count": 0,
+      "non_factual_span_count": 0
+    },
+    "usage": {
+      "cache_accounted_calls": 78,
+      "cache_usage_complete": true,
+      "calls": 78,
+      "calls_missing_cache_accounting": 0,
+      "calls_missing_usage": 0,
+      "calls_with_usage": 78,
+      "completion_tokens": 8866,
+      "prompt_cache_hit_tokens": 43125,
+      "prompt_cache_miss_tokens": 17190,
+      "prompt_tokens": 60315,
+      "reasoning_accounted_calls": 0,
+      "reasoning_tokens": 0,
+      "reasoning_usage_complete": false,
+      "total_tokens": 69181,
+      "usage_complete": true
+    }
+  },
+  "schema_version": "generic-methods-initial-stage-pilot-v1"
+}
