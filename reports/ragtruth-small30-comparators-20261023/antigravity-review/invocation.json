@@ -1,0 +1,22 @@
+{
+  "args": [
+    "C:\\Users\\yixiao\\.gemini\\bin\\agy.exe",
+    "--new-project",
+    "--mode",
+    "plan",
+    "--model",
+    "gemini-4-argon-high",
+    "--effort",
+    "high",
+    "--print-timeout",
+    "5m",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json"
+  ],
+  "cwd": "C:\\Users\\yixiao\\AppData\\Local\\Temp\\tabby-comparator-review-ucd_50nx",
+  "plan_sha256": "9e3f9850b6b385ee4d46069f946a22a9d03474563f75b92872042d97f94c20c4",
+  "request_sha256": "69e0846f0ea58f68a711352b99eb547ebae955d14df547443ab3648a6f8d7e7f",
+  "started_at": "2026-10-23T14:31:43.231442+00:00"
+}
