@@ -1,0 +1,326 @@
+{
+  "schema_version": "industry-methods-sources-v1",
+  "date": "2026-10-23",
+  "scope": "targeted primary-source engineering research, not systematic review",
+  "production_changes": false,
+  "new_benchmark_files_opened": false,
+  "research_skill_method": "deep-research primary-source verification and evidence/hypothesis separation; scoped delegated work",
+  "queries": [
+    "site.api-docs.deepseek.com guides json_mode strict function calling beta structured output",
+    "site.anthropic.com engineering citations structured output extractive evidence",
+    "Lost in the Middle language models long contexts",
+    "FrugalGPT LLM cascade cost",
+    "site.arxiv.org structured generation constraints limitations large language models JSONSchemaBench",
+    "site.arxiv.org Efficient Guided Generation JSON",
+    "site.anthropic.com prompt caching cache",
+    "site.aws.amazon.com builders library timeouts retries backoff jitter"
+  ],
+  "excluded_search_material": "Third-party SEO, Wikipedia, Reddit, proxy/mirror documents and unofficial routing repositories were not used as evidence. Direct official targets were opened when search returned mirrors.",
+  "source_independence": "E01/E02/E03/E09 share vendor; E04/E05 are API docs and E07 engineering experience, not independent semantic efficacy trials.",
+  "sources": [
+    {
+      "id": "E01",
+      "title": "JSON Output",
+      "organization": "DeepSeek",
+      "type": "official_api_documentation",
+      "url": "https://api-docs.deepseek.com/guides/json_mode/",
+      "read_scope": "Notice and JSON chat example",
+      "supports": [
+        "json_object is JSON mode",
+        "JSON instruction and output budget are required",
+        "empty content is an acknowledged boundary"
+      ],
+      "does_not_support": [
+        "schema enforcement",
+        "semantic correctness"
+      ],
+      "version": "live document, no publication date shown",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E02",
+      "title": "Chat Completions API",
+      "organization": "DeepSeek",
+      "type": "official_api_documentation",
+      "url": "https://api-docs.deepseek.com/api/create-chat-completion/",
+      "read_scope": "response_format, thinking, tools.strict, tool_choice, finish_reason fields",
+      "supports": [
+        "response_format lists only text/json_object",
+        "tool strict is beta",
+        "required/named tool choices unsupported in thinking mode"
+      ],
+      "does_not_support": [
+        "Chat response_format json_schema support",
+        "all-schema support"
+      ],
+      "version": "live document, no publication date shown",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E03",
+      "title": "Responses API",
+      "organization": "DeepSeek",
+      "type": "official_api_documentation",
+      "url": "https://api-docs.deepseek.com/api/create-response/",
+      "read_scope": "model, text.format, max_output_tokens, status/incomplete_details, usage fields; linked compatibility guide",
+      "supports": [
+        "text.format lists json_schema with name/schema",
+        "deepseek-flash is documented",
+        "output budget includes reasoning",
+        "status and incomplete details differ from Chat finish_reason"
+      ],
+      "does_not_support": [
+        "tested availability through current account/proxy",
+        "complete JSON Schema keyword matrix",
+        "semantic correctness"
+      ],
+      "version": "live document, no publication date shown",
+      "additional_url": "https://api-docs.deepseek.com/guides/responses_api/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E04",
+      "title": "Citations",
+      "organization": "Anthropic",
+      "type": "official_api_documentation_vendor_claims",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/citations",
+      "read_scope": "comparison, location indexes, token costs, compatibility, plain-text/custom content modes",
+      "supports": [
+        "valid source pointers and cited_text extraction",
+        "native citations incompatible with structured outputs",
+        "location and token accounting semantics"
+      ],
+      "does_not_support": [
+        "DeepSeek native citation support",
+        "entailed claims guaranteed",
+        "transfer of vendor quality benefit to this project"
+      ],
+      "version": "live document, no publication date shown",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E05",
+      "title": "Structured outputs",
+      "organization": "Google",
+      "type": "official_api_documentation",
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "read_scope": "overview, examples, supported schema, limitations and best practices",
+      "supports": [
+        "schema-conforming structured fields",
+        "subset and semantic-validation boundary"
+      ],
+      "does_not_support": [
+        "unconditional factual correctness",
+        "compatibility with DeepSeek"
+      ],
+      "version": "official page last updated 2026-10-21 UTC",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E06",
+      "title": "JSONSchemaBench: A Rigorous Benchmark of Structured Outputs for Language Models",
+      "authors": [
+        "Saibo Geng",
+        "Hudson Cooper",
+        "Michał Moskal",
+        "Samuel Jenkins",
+        "Julian Berman",
+        "Nathan Ranchin",
+        "Robert West",
+        "Eric Horvitz",
+        "Harsha Nori"
+      ],
+      "type": "primary_research_paper",
+      "url": "https://arxiv.org/abs/2501.10868",
+      "full_text_url": "https://arxiv.org/html/2501.10868v3",
+      "version": "v3, 2025-02-27",
+      "read_scope": "abstract, framework coverage/failure discussion, section 6 setup/results and relevant table; not whole paper",
+      "supports": [
+        "separate efficiency, constraint coverage and semantic quality",
+        "over-constrained/under-constrained implementation failure categories"
+      ],
+      "does_not_support": [
+        "DeepSeek guarantee or predicted gain",
+        "same effects on this grounding task"
+      ],
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E07",
+      "title": "Timeouts, retries, and backoff with jitter",
+      "organization": "Amazon Web Services",
+      "author_displayed": "Marc",
+      "type": "official_engineering_article",
+      "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "resolved_url": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+      "version": "page displays 2019-12-05",
+      "read_scope": "failures/timeouts/retries/multilayer amplification discussion",
+      "supports": [
+        "bounded retry location matters",
+        "independent retry layers can multiply load",
+        "timeout and backoff safeguards"
+      ],
+      "does_not_support": [
+        "LLM semantic correctness",
+        "prescribed C/U review policy"
+      ],
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E08",
+      "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+      "authors": [
+        "Lingjiao Chen",
+        "Matei Zaharia",
+        "James Zou"
+      ],
+      "type": "primary_research_paper",
+      "url": "https://arxiv.org/abs/2305.05176",
+      "full_text_url": "https://arxiv.org/html/2305.05176v1",
+      "version": "v1, 2023-05-09",
+      "read_scope": "abstract and sections 1-3; no benchmark dataset fetched",
+      "supports": [
+        "cost-constrained quality optimization",
+        "prompt adaptation, approximation, learned cascade strategies"
+      ],
+      "does_not_support": [
+        "transfer of reported savings to this project",
+        "universal confidence thresholds",
+        "benchmark-specific routing under current project policy"
+      ],
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E09",
+      "title": "Context Caching",
+      "organization": "DeepSeek",
+      "type": "official_api_documentation",
+      "url": "https://api-docs.deepseek.com/guides/kv_cache/",
+      "version": "live document, no publication date shown",
+      "read_scope": "full short guide: persistence, prefix matching, usage fields, randomness/best effort",
+      "supports": [
+        "persistent prefix units and common-prefix rules",
+        "best-effort hit behavior",
+        "generation remains stochastic",
+        "hit/miss usage fields"
+      ],
+      "does_not_support": [
+        "answer caching",
+        "guaranteed zero latency or fixed savings"
+      ],
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "E10",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "type": "primary_research_paper",
+      "url": "https://aclanthology.org/2024.tacl-1.9/",
+      "read_url": "https://arxiv.org/abs/2307.03172",
+      "additional_read_url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+      "version": "TACL 2024",
+      "read_scope": "abstract and introduction search extract; not full paper",
+      "supports": [
+        "controlled evidence-position changes affect then-tested QA/retrieval models"
+      ],
+      "does_not_support": [
+        "effect magnitude on current deepseek-flash",
+        "context truncation reliably helps"
+      ],
+      "accessed_at": "2026-10-23"
+    }
+  ],
+  "failed_fetches": [
+    {
+      "url": "https://api-docs.deepseek.com/guides/function_calling/",
+      "result": "timeout"
+    },
+    {
+      "url": "https://api-docs.deepseek.com/guides/tool_calls",
+      "result": "tool internal error"
+    },
+    {
+      "url": "https://api-docs.deepseek.com/api/create-chat-completion/ linked Tool Calls Guide",
+      "result": "tool internal error",
+      "fallback": "strict/tool_choice facts verified directly in official Chat API specification"
+    }
+  ],
+  "exposure_log": [
+    {
+      "url": "https://arxiv.org/html/2501.10868v3",
+      "visible_material": "Section 6 toy comma-number example, Table 7 last-letter example, task descriptions for Shuffle Objects/GSM8K, aggregate scores. No original benchmark item IDs displayed.",
+      "ids": [],
+      "ragtruth_exposure": false,
+      "handling": "Do not reuse example strings in project prompts or new experiment fixtures."
+    },
+    {
+      "url": "https://arxiv.org/html/2305.05176v1",
+      "visible_material": "Financial service cost illustration, dataset names HEADLINES/CoQA/OVERRULING in indexed page; no source records or sample IDs read.",
+      "ids": [],
+      "ragtruth_exposure": false
+    },
+    {
+      "url": "https://api-docs.deepseek.com/guides/json_mode/",
+      "visible_material": "Generic mountain/river extraction demonstration.",
+      "ids": [],
+      "ragtruth_exposure": false
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/build-with-claude/citations",
+      "visible_material": "Generic grass/sky demonstration.",
+      "ids": [],
+      "ragtruth_exposure": false
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output",
+      "visible_material": "Generic recipe extraction and Euro match schema/tool-use demonstrations; no benchmark item IDs.",
+      "ids": [],
+      "ragtruth_exposure": false
+    },
+    {
+      "url": "https://api-docs.deepseek.com/guides/kv_cache/",
+      "visible_material": "Generic capital-city and financial-report cache demonstrations.",
+      "ids": [],
+      "ragtruth_exposure": false
+    },
+    {
+      "url": "local:reports/v4-combined-20261023/README.md",
+      "visible_material": "Previously exposed report and failure excerpts only; no new benchmark source files opened.",
+      "ids": [
+        "15485",
+        "12297",
+        "6142",
+        "q1-05"
+      ],
+      "ragtruth_exposure": "previously_registered"
+    },
+    {
+      "url": "local:reports/ragtruth-small30-comparators-20261023/README.md",
+      "visible_material": "Previously exposed score/report diagnostics only.",
+      "ids": [
+        "14367",
+        "2736",
+        "9526",
+        "9586",
+        "16421",
+        "27",
+        "16452"
+      ],
+      "ragtruth_exposure": "previously_registered"
+    }
+  ],
+  "hypotheses": [
+    "schema capability probe then known-field echo elimination as isolated factor",
+    "new single-call-guarded diagnostic without changing historical minimal",
+    "bounded type-specific repair diagnostic only within existing review eligibility and counts"
+  ],
+  "recommendation_limit": "No proven semantic gain, no current production promotion; simple mechanisms require independent frozen small experiments."
+}

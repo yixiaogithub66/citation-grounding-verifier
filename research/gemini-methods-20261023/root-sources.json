@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-23",
+  "method": "Targeted primary-source investigation; not exhaustive review",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "Decomposition Dilemmas: Does Claim Decomposition Boost or Burden Fact-Checking Performance?",
+      "authors": [
+        "Qisheng Hu",
+        "Quanyu Long",
+        "Wenya Wang"
+      ],
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.naacl-long.320/",
+      "full_text": "https://aclanthology.org/2025.naacl-long.320.pdf",
+      "doi": "10.18653/v1/2025.naacl-long.320",
+      "type": "peer_reviewed_computational_experiment",
+      "read_scope": "Publisher metadata; PDF introduction, methods pp.2-4 and decomposition error/result search passages. Not all appendix examples.",
+      "supports": "Decomposition effects depend on verifier, input granularity and introduced noise; finer claims are not uniformly better.",
+      "cannot_infer": "Its open retrieval, binary entailment aggregation and model-specific outcomes do not give a causal explanation or expected gain for this closed-context v4.",
+      "exposure": "Methods page expanded dataset names/tables but no new sample file; any illustrations are not reusable fixtures."
+    },
+    {
+      "id": "R02",
+      "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+      "authors": "Liyan Tang et al.; exact full author list not reverified in this role",
+      "year": 2024,
+      "url": "https://github.com/Liyan06/MiniCheck",
+      "full_text": "https://par.nsf.gov/servlets/purl/10631137",
+      "type": "primary_paper_and_author_repository",
+      "read_scope": "Author repository overview; primary PDF section7 extraction/decontextualization discussion from indexed full text. Author list not independently metadata checked here.",
+      "supports": "Decomposition and decontextualization did not consistently help in its experiments; specialized verifiers require task-specific validation.",
+      "cannot_infer": "Neither a universal case against decomposition nor transferable cost/model accuracy guarantee. No MiniCheck weights installed or tested.",
+      "exposure": "Only aggregate description; no dataset files fetched."
+    },
+    {
+      "id": "R03",
+      "title": "Evaluating and Improving Evidence-Grounded Fact-Checking in LLMs via Multi-Round Evidence Ablation",
+      "authors": [
+        "Xingyu Deng",
+        "Mingzi Cao",
+        "Nikolaos Aletras",
+        "Xi Wang",
+        "Mark Stevenson"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2609.08943",
+      "doi": "10.48550/arXiv.2609.08943",
+      "related_doi": "10.1145/3799682.3841076",
+      "type": "arxiv_primary_paper_with_CIKM26_comment",
+      "read_scope": "Primary abstract and metadata; no full method replication.",
+      "supports": "FAE removes cited evidence to test evidence dependence; REAL is a training approach. Static accuracy can coexist with weak evidence dependence.",
+      "cannot_infer": "No transfer of training gains; a valid deletion test must remove all alternative support and retain no direct contradiction.",
+      "exposure": "No raw datasets or selected test examples opened."
+    },
+    {
+      "id": "R04",
+      "title": "Detecting hallucinations with LLM-as-a-judge: Prompt engineering and beyond",
+      "organization": "Datadog",
+      "url": "https://www.datadoghq.com/blog/ai/llm-hallucination-detection/",
+      "type": "official_industry_blog_vendor_evidence",
+      "read_scope": "Rubric, structured output, two-stage reasoning and measurement sections (page lines491-558).",
+      "supports": "Guided rubrics distinguish contradiction from lack of support; output constraints and semantic quality need separate validation.",
+      "cannot_infer": "Vendor scores are not independent local replication; two-call formatting is not automatically cost effective or needed, and customer tolerance choices do not replace our entailment policy.",
+      "exposure": "No benchmark records opened; aggregate benchmark tables only in viewed section."
+    },
+    {
+      "id": "R05",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "authors": [
+        "Jie Huang",
+        "Xinyun Chen",
+        "Swaroop Mishra",
+        "Huaixiu Steven Zheng",
+        "Adams Wei Yu",
+        "Xinying Song",
+        "Denny Zhou"
+      ],
+      "year": 2024,
+      "url": "https://openreview.net/forum?id=IkmD3fKBPQ",
+      "publisher_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html",
+      "organization_url": "https://deepmind.google/research/publications/48252/",
+      "type": "peer_reviewed_computational_experiment",
+      "read_scope": "Official conference metadata/abstract and original-paper abstract; not all experiments.",
+      "supports": "Intrinsic correction without external feedback can fail or degrade reasoning; extra calls need a same-budget comparator.",
+      "cannot_infer": "Not a blanket impossibility result for evidence-aware auditing, current models, or all tasks.",
+      "exposure": "No benchmark data files or sample records opened."
+    }
+  ],
+  "queries": [
+    "factual consistency claim decomposition harmful factuality evaluation decomposition errors paper",
+    "LLM hallucination verification citation exact quotes pointer extraction industrial engineering blog",
+    "MiniCheck efficient fact checking grounding LLMs paper 2024",
+    "Decomposition Dilemmas claim decomposition fact checking ACL",
+    "MiniCheck decomposition decontextualization",
+    "Evidence Ablation REAL 2609.08943",
+    "Large Language Models Cannot Self-Correct Reasoning Yet openreview"
+  ],
+  "exclusions": "Secondary snippets from SEO/Reddit/LLM summaries were not used as evidence; no reported numeric gains imported into local expectations.",
+  "additional_primary_cross_checks": [
+    "https://aclanthology.org/2026.acl-long.1468/",
+    "https://api-docs.deepseek.com/api/create-response/"
+  ]
+}

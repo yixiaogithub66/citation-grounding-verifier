@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "authoring_status": "AI_DRAFT_NOT_AUTHOR_ADJUDICATED",
+  "created_date": "2026-10-23",
+  "purpose": "Fixed-claim controlled diagnostic pilot; not a benchmark or evidence of unseen generalization.",
+  "authoring_constraints": [
+    "Created without reading candidate judgment prompt.",
+    "No new benchmark lookup or sample file read while authoring.",
+    "Invented names and contexts; no quoted benchmark or paper example text.",
+    "No M1 decomposition; claim_text is the complete fixed verification target.",
+    "All metadata and expected fields excluded from model inputs.",
+    "All twelve cases including both deletion arms must be run; no outcome-based selection."
+  ],
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "j-attribution-s",
+      "family": "attribution",
+      "language": "en",
+      "claim_text": "According to Ivara's signed note, the Glimfen crate is sealed.",
+      "context_passages": [
+        "Ivara's entire signed note: The Glimfen crate is sealed.",
+        "Dovren's entire signed note: The Glimfen crate is not sealed."
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "Ivara's entire signed note: The Glimfen crate is sealed."
+        }
+      ],
+      "rationale": "目标限定为Ivara的记录内容；其完整记录明确陈述sealed。不能引用另一署名者替代。",
+      "paired_case_id": "j-attribution-c",
+      "relationship": "same_context_change_attributed_author_S_to_C"
+    },
+    {
+      "id": "j-attribution-c",
+      "family": "attribution",
+      "language": "en",
+      "claim_text": "According to Dovren's signed note, the Glimfen crate is sealed.",
+      "context_passages": [
+        "Ivara's entire signed note: The Glimfen crate is sealed.",
+        "Dovren's entire signed note: The Glimfen crate is not sealed."
+      ],
+      "expected_verdict": "CONTRADICTED",
+      "expected_evidence": [
+        {
+          "index": 1,
+          "quote": "Dovren's entire signed note: The Glimfen crate is not sealed."
+        }
+      ],
+      "rationale": "目标限定为Dovren的这一份完整记录；该记录明确写not sealed，与所报告内容冲突。不是仅因另一人说过而判C。",
+      "paired_case_id": "j-attribution-s",
+      "relationship": "same_context_change_attributed_author_C_to_S"
+    },
+    {
+      "id": "j-direction-s",
+      "family": "relation_direction",
+      "language": "zh",
+      "claim_text": "在雾岫站的本次传输中，绛禾向弥朔发送了校验片。",
+      "context_passages": [
+        "在雾岫站的本次传输中，绛禾向弥朔发送了校验片。弥朔没有向绛禾发送校验片。"
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "在雾岫站的本次传输中，绛禾向弥朔发送了校验片。弥朔没有向绛禾发送校验片。"
+        }
+      ],
+      "rationale": "同次传输、发送方、接收方和对象均与原文一致。",
+      "paired_case_id": "j-direction-c",
+      "relationship": "same_context_reverse_relation_with_explicit_negative_S_to_C"
+    },
+    {
+      "id": "j-direction-c",
+      "family": "relation_direction",
+      "language": "zh",
+      "claim_text": "在雾岫站的本次传输中，弥朔向绛禾发送了校验片。",
+      "context_passages": [
+        "在雾岫站的本次传输中，绛禾向弥朔发送了校验片。弥朔没有向绛禾发送校验片。"
+      ],
+      "expected_verdict": "CONTRADICTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "在雾岫站的本次传输中，绛禾向弥朔发送了校验片。弥朔没有向绛禾发送校验片。"
+        }
+      ],
+      "rationale": "同次传输的反向发送被原文明确否定；C依赖显式反证，不能仅从正向发送推得反向不发生。",
+      "paired_case_id": "j-direction-s",
+      "relationship": "same_context_reverse_relation_with_explicit_negative_C_to_S"
+    },
+    {
+      "id": "j-condition-s",
+      "family": "condition_scope",
+      "language": "zh",
+      "claim_text": "薄霭盒的面板处于蓝色状态且温度不超过 −5 °C 时，控制器允许启动自检。",
+      "context_passages": [
+        "对于薄霭盒，若面板处于蓝色状态，且温度不超过 −5 °C，控制器允许启动自检。材料未说明其他条件下能否启动。"
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "对于薄霭盒，若面板处于蓝色状态，且温度不超过 −5 °C，控制器允许启动自检。材料未说明其他条件下能否启动。"
+        }
+      ],
+      "rationale": "保留蓝色状态和不超过负五度两个必要适用条件，未扩展原文保障范围。",
+      "paired_case_id": "j-condition-u",
+      "relationship": "same_context_remove_temperature_qualification_S_to_U"
+    },
+    {
+      "id": "j-condition-u",
+      "family": "condition_scope",
+      "language": "zh",
+      "claim_text": "薄霭盒的面板处于蓝色状态时，无论温度多少，控制器都允许启动自检。",
+      "context_passages": [
+        "对于薄霭盒，若面板处于蓝色状态，且温度不超过 −5 °C，控制器允许启动自检。材料未说明其他条件下能否启动。"
+      ],
+      "expected_verdict": "UNSUPPORTED",
+      "expected_evidence": [],
+      "rationale": "原文只保证蓝色且不超过负五度时允许，不能推出所有温度均允许；也未明确说明其他温度禁止，故U而非C。",
+      "paired_case_id": "j-condition-s",
+      "relationship": "same_context_restore_temperature_qualification_U_to_S"
+    },
+    {
+      "id": "j-paraphrase-s",
+      "family": "ordinary_paraphrase",
+      "language": "en",
+      "claim_text": "The Vespor ferry service is temporarily suspended.",
+      "context_passages": [
+        "The Vespor ferry service is temporarily halted."
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "The Vespor ferry service is temporarily halted."
+        }
+      ],
+      "rationale": "在同一渡轮服务和暂时停运语境中halted与suspended是常规保义转述。",
+      "paired_case_id": "j-paraphrase-u",
+      "relationship": "same_context_add_unstated_cause_S_to_U"
+    },
+    {
+      "id": "j-paraphrase-u",
+      "family": "ordinary_paraphrase",
+      "language": "en",
+      "claim_text": "A crew strike caused the temporary suspension of the Vespor ferry service.",
+      "context_passages": [
+        "The Vespor ferry service is temporarily halted."
+      ],
+      "expected_verdict": "UNSUPPORTED",
+      "expected_evidence": [],
+      "rationale": "待判目标是停运的罢工原因关系；原文只有停运状态，没有原因支持，也无反证。",
+      "paired_case_id": "j-paraphrase-s",
+      "relationship": "same_context_remove_unstated_cause_U_to_S"
+    },
+    {
+      "id": "j-entailment-s",
+      "family": "one_step_entailment",
+      "language": "en",
+      "claim_text": "Ticket Pex-47 is redeemable at the Kavo desk.",
+      "context_passages": [
+        "Every Lethric ticket is redeemable at the Kavo desk.",
+        "Ticket Pex-47 is a Lethric ticket."
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 0,
+          "quote": "Every Lethric ticket is redeemable at the Kavo desk."
+        },
+        {
+          "index": 1,
+          "quote": "Ticket Pex-47 is a Lethric ticket."
+        }
+      ],
+      "rationale": "将明确的全称规则实例化到明确属于该类的Pex-47，一步即可推出；两段前提缺一不可。",
+      "paired_case_id": "j-entailment-u",
+      "relationship": "same_claim_reverse_only_rule_direction_S_to_U"
+    },
+    {
+      "id": "j-entailment-u",
+      "family": "one_step_entailment",
+      "language": "en",
+      "claim_text": "Ticket Pex-47 is redeemable at the Kavo desk.",
+      "context_passages": [
+        "Every ticket redeemable at the Kavo desk is a Lethric ticket.",
+        "Ticket Pex-47 is a Lethric ticket."
+      ],
+      "expected_verdict": "UNSUPPORTED",
+      "expected_evidence": [],
+      "rationale": "规则只说可兑换票都是Lethric票，已知某票是Lethric不能反推可兑换；没有明确不可兑换的反证。",
+      "paired_case_id": "j-entailment-s",
+      "relationship": "same_claim_restore_rule_direction_U_to_S"
+    },
+    {
+      "id": "j-deletion-s",
+      "family": "unique_evidence_deletion",
+      "language": "zh",
+      "claim_text": "澄砚馆的青铃柜额定容积为 3.5 L。",
+      "context_passages": [
+        "澄砚馆的青铃柜位于西侧走廊。",
+        "澄砚馆的青铃柜额定容积为 3.5 L。"
+      ],
+      "expected_verdict": "SUPPORTED",
+      "expected_evidence": [
+        {
+          "index": 1,
+          "quote": "澄砚馆的青铃柜额定容积为 3.5 L。"
+        }
+      ],
+      "rationale": "第二段直接给出同一柜体的额定容积；第一段仅给位置。",
+      "paired_case_id": "j-deletion-u",
+      "relationship": "same_claim_delete_only_supporting_passage_S_to_U"
+    },
+    {
+      "id": "j-deletion-u",
+      "family": "unique_evidence_deletion",
+      "language": "zh",
+      "claim_text": "澄砚馆的青铃柜额定容积为 3.5 L。",
+      "context_passages": [
+        "澄砚馆的青铃柜位于西侧走廊。"
+      ],
+      "expected_verdict": "UNSUPPORTED",
+      "expected_evidence": [],
+      "rationale": "仅删除唯一给出容积的段落，保留的位置信息不能支持或反驳3.5L。",
+      "paired_case_id": "j-deletion-s",
+      "relationship": "same_claim_restore_only_supporting_passage_U_to_S"
+    }
+  ]
+}

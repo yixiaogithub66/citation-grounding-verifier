@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-23",
+  "scope": "M1事实/NF边界、分解与证据对齐；任务限定调查，非系统综述",
+  "source_count": 7,
+  "primary_source_only": true,
+  "sources": [
+    {
+      "id": "CM1",
+      "title": "The Alignment Bottleneck in Decomposition-Based Claim Verification",
+      "authors": "Mahmud Elahi Akhter; Federico Ruggeri; Iman Munire Bilal; Rob Procter; Maria Liakata",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2602.10380v1",
+      "publisher_or_author_url": "https://nlp.unibo.it/publication/akhter-etal-2026-alignment-bottleneck/",
+      "version": "arXiv v1, 2026-02-11; 作者页面另列IJCAI2026，本文方法细节依v1",
+      "read_scope": "正文§1、§4-7、Limitations；未开附录样本文件",
+      "direct_support": "子命题与证据对齐、可靠的子判决共同决定分解收益；重复整套证据会传播子判决噪声。",
+      "cannot_infer": "其U是上游弃权；我们U是缺证且回答级算检测，不能照搬偏U策略。作者承认最终二分类与子级三分类不一致，模型/固定分解限制。",
+      "transfer_hypothesis": "用固定完整claim检查证据是否支持同一主体—关系—限定，先评估遗漏的必要成分。",
+      "method_weakness_origin": "author-acknowledged: Limitations及§5.2-5.4",
+      "evidence_type": "受控计算实验；主结果含oracle标签，不能视作部署收益"
+    },
+    {
+      "id": "CM2",
+      "title": "Teaching Language Models to Check Grounded Claim Factuality with Human Test-Taking Strategies",
+      "authors": "Yuxuan Ye; Raul Santos-Rodriguez; Edwin Simpson",
+      "year": 2026,
+      "url": "https://aclanthology.org/2026.acl-long.1468/",
+      "full_text": "https://aclanthology.org/2026.acl-long.1468.pdf",
+      "doi": "10.18653/v1/2026.acl-long.1468",
+      "read_scope": "§3.2(PDF pp.3-4)、§5.2-5.3(pp.8-9)、Limitations(p.10)",
+      "direct_support": "核查顺序为主体客体、描述、关系、剩余蕴含；消融检验显式核对和推理互补，零样例fact-check prompt。",
+      "cannot_infer": "二分类不区分C/U；示例允许两跳而我们仅既定一步。分解prompt含few-shot，不能称整条流水线零样例。省token百分比不是本地预期。",
+      "transfer_hypothesis": "同一M3调用内，用短证据核对替换无边界长解释，保持现有标签、引文和复核上限。",
+      "method_weakness_origin": "author-acknowledged: Limitations；reader-inferred: 标签/推理契约迁移差异",
+      "evidence_type": "受控计算实验与模型训练；不迁移训练集专用结果"
+    },
+    {
+      "id": "CM3",
+      "title": "NLI under the Microscope: What Atomic Hypothesis Decomposition Reveals",
+      "authors": "Neha Srikanth; Rachel Rudinger",
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.naacl-long.130/",
+      "full_text": "https://aclanthology.org/2025.naacl-long.130.pdf",
+      "doi": "10.18653/v1/2025.naacl-long.130",
+      "read_scope": "§3、§4.1-4.2、§6、Limitations(pp.3-5,8-10)",
+      "direct_support": "完整命题与有效原子命题的标签可作一致性检查；一致性只是理解的必要而非充分证据。",
+      "cannot_infer": "作者没有为SNLI所有分解检查完整覆盖；高一致性可包含一致错误，不证明事实覆盖或核查正确。",
+      "transfer_hypothesis": "离线固定完整命题与必要成分，测每成分正确及整体正确，避免只看输出claim数。",
+      "method_weakness_origin": "author-acknowledged: §4.1与Limitations",
+      "evidence_type": "NLI行为诊断，非工业引用系统评测"
+    },
+    {
+      "id": "CM4",
+      "title": "Towards Effective Extraction and Evaluation of Factual Claims",
+      "authors": "Dasha Metropolitansky; Jonathan Larson",
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.acl-long.348/",
+      "full_text": "https://aclanthology.org/2025.acl-long.348.pdf",
+      "doi": "10.18653/v1/2025.acl-long.348",
+      "read_scope": "§2.1-2.3、§3.1-3.3、§6及Appendix D；非50页全读",
+      "direct_support": "分别评价提取蕴含、元素级覆盖、去语境化；混合句选择阶段保留可核查成分。",
+      "cannot_infer": "不能从逐句过滤得到零遗漏保证；其多采样与歧义排除机制不能直接装入当前有界调用或把未解决项吞掉。",
+      "transfer_hypothesis": "只针对被排除内容做有界、可追踪的事实遗漏核对；错误和未处理项仍显式记录。",
+      "method_weakness_origin": "reader-inferred: §3与Appendix D的部署契约差异",
+      "evidence_type": "提取方法与分维评价；与前轮已读来源重复，非新增独立证据"
+    },
+    {
+      "id": "CM5",
+      "title": "AFaCTA: Assisting the Annotation of Factual Claim Detection with Reliable LLM Annotators",
+      "authors": "Jingwei Ni; Minjing Shi; Dominik Stammbach; Mrinmaya Sachan; Elliott Ash; Markus Leippold",
+      "year": 2024,
+      "url": "https://aclanthology.org/2024.acl-long.104/",
+      "full_text": "https://aclanthology.org/2024.acl-long.104.pdf",
+      "doi": "10.18653/v1/2024.acl-long.104",
+      "read_scope": "§2-4(pp.2-5)、§7.1-7.2检索片段",
+      "direct_support": "可核查事实与表达主观性、check-worthiness不能混为一谈；事实提取路径关注混合表达中的客观部分。",
+      "cannot_infer": "主要政治语料，可靠性依模型与路径一致子集；多路径一致不等于本项目人审，更不能按主观性关键词整句排除。",
+      "transfer_hypothesis": "NF审查采用“是否仍断言可真假判定的前提”而非是否建议/观点；单次 bounded检查不照搬多轮辩论。",
+      "method_weakness_origin": "author-acknowledged: §4、§7.2；reader-inferred: 跨任务迁移",
+      "evidence_type": "标注辅助与模型实验，不是给定context忠实度的直接证据"
+    },
+    {
+      "id": "CM6",
+      "title": "Revisiting the Gold Standard: Grounding Summarization Evaluation with Robust Human Evaluation",
+      "authors": "Yixin Liu; Alexander R. Fabbri; Pengfei Liu; Yilun Zhao; Linyong Nan; Ruilin Han; Simeng Han; Shafiq Joty; Chien-Sheng Wu; Caiming Xiong; Dragomir Radev",
+      "year": 2023,
+      "url": "https://aclanthology.org/2023.acl-long.228/",
+      "full_text": "https://aclanthology.org/2023.acl-long.228.pdf",
+      "doi": "10.18653/v1/2023.acl-long.228",
+      "read_scope": "§3.1-3.2及Appendix A.1；摘要/引言结果概览",
+      "direct_support": "先固定原子内容清单再匹配输出，使分母可重用；人类偏好评分和目标质量协议可能产生不同排序。",
+      "cannot_infer": "其ACU测摘要内容重要性，不是S/C/U真实性；不能把该指标直接当忠实度金标。",
+      "transfer_hypothesis": "独立于当前提取输出固定事实分母，分别报告漏提、错误新增和核查准确性。",
+      "method_weakness_origin": "reader-inferred: §3.1明确评测salience而非factuality",
+      "evidence_type": "人工协议与计算元评测"
+    },
+    {
+      "id": "CM7",
+      "title": "FaStFact: Faster, Stronger Long-Form Factuality Evaluations in LLMs",
+      "authors": "Yingjia Wan et al.",
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.findings-emnlp.1295/",
+      "full_text": "https://aclanthology.org/2025.findings-emnlp.1295.pdf",
+      "doi": "10.18653/v1/2025.findings-emnlp.1295",
+      "read_scope": "摘要、引言及Figure1(PDF pp.1-2)；后续方法/局限页面抓取超时，未精读",
+      "direct_support": "其概览将分块提取、内部知识置信度预验证、全文网页取证组合。",
+      "cannot_infer": "未核对完整消融与局限，不能引用其准确率或节省数字；参数知识预验证与本项目闭卷契约不同。",
+      "transfer_hypothesis": "仅作为不采用“自信即支持”捷径的近邻；本地已有分块，无新增实施依据。",
+      "method_weakness_origin": "reader-inferred: 概览揭示任务契约差异；方法弱点未评估",
+      "evidence_type": "方法概览阅读，不与已读方法源等权"
+    }
+  ],
+  "verification": {
+    "publisher_metadata_and_pdf_title": "verified for CM2-CM7",
+    "author_page_and_arxiv_title": "verified for CM1",
+    "cross_index_status": "not yet checked in this role; do not claim independent index verification",
+    "exact_read_scope_required": true
+  },
+  "search_queries": [
+    "claim decomposition factuality evaluation non verifiable statements selection omission 2025 2026 paper",
+    "atomic claims decomposition factual consistency granularity decontextualization entailment 2025 paper",
+    "ACU fine grained content evaluation summary Pyramid factuality atomic content units 2023 paper",
+    "site.aclanthology.org factual claim detection imperatives presuppositions verifiability subjective claims 2024 2025"
+  ],
+  "research_exposure": {
+    "new_benchmark_files_opened": false,
+    "ragtruth_examples_intentionally_opened": false,
+    "examples_visible_in_research_pages": [
+      {
+        "source_id": "CM3",
+        "locations": [
+          "Figure1",
+          "Table1",
+          "§6 examples"
+        ],
+        "dataset": "SNLI / delta-SNLI",
+        "original_ids": "not provided in viewed sections"
+      },
+      {
+        "source_id": "CM4",
+        "locations": [
+          "§2-3 illustrations",
+          "search tool expanded Table5 and Appendix examples"
+        ],
+        "dataset": "Claimify paper illustrations/BingCheck-related content",
+        "original_ids": "unmapped"
+      },
+      {
+        "source_id": "CM5",
+        "locations": [
+          "Table1",
+          "§2 illustrations"
+        ],
+        "dataset": "PoliClaim / CheckThat or illustrative examples",
+        "original_ids": "unmapped"
+      },
+      {
+        "source_id": "CM7",
+        "locations": [
+          "Figure1"
+        ],
+        "dataset": "FastFact paper illustration",
+        "original_ids": "unmapped"
+      },
+      {
+        "source_id": "CM2",
+        "locations": [
+          "§3.2 illustration"
+        ],
+        "dataset": "paper illustration",
+        "original_ids": "unmapped"
+      },
+      {
+        "url": "https://www.mdpi.com/2227-7390/14/10/1769",
+        "locations": [
+          "search excerpt on atomic decomposition"
+        ],
+        "dataset": "paper illustration",
+        "original_ids": "unmapped; screened out, no full page read"
+      }
+    ],
+    "policy": "示例不入prompt/测试模板/生产规则；若以后选上述外部集合，先做曝光映射，不称完全未见。"
+  }
+}

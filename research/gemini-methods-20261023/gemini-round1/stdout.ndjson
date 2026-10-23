@@ -1,0 +1,437 @@
+{"event":"init","conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","init":{"model":"gemini-4-argon-high","cwd":"C:\\Users\\yixiao\\AppData\\Local\\Temp\\tabby-methods-gemini-crjf5rh8","tools":["ask_custom_permission","ask_permission","ask_question","browser_click_element","browser_drag_pixel_to_pixel","browser_get_dom","browser_get_network_request","browser_input","browser_list_network_requests","browser_mouse_down","browser_mouse_up","browser_move_mouse","browser_press_key","browser_refresh_page","browser_resize_window","browser_scroll","browser_scroll_dom","browser_select_option","browser_subagent","call_mcp_tool","capture_browser_console_logs","capture_browser_screenshot","click_browser_pixel","command_status","define_subagent","delete_knowledge","execute_browser_javascript","find_by_name","finish","generate_image","grep_search","invoke_subagent","list_browser_pages","list_dir","list_permissions","list_plugin_accounts","list_resources","manage_inbox","manage_subagents","manage_task","multi_replace_file_content","notebook_edit","notebook_execution","open_browser_url","read_browser_page","read_resource","read_url_content","replace_file_content","run_command","run_workflow","schedule","search_marketplace","search_web","sed_file","send_command_input","send_message","view_file","wait","wait_5_seconds","write_to_file"],"permission_mode":"request-review"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":0,"state":"DONE","step_type":"user_input"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"### 一、 核心立场：拒斥“"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"多轮盲审"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"万能论”与混"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"改陷阱\n\n"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"本地观测已给出强"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"反证：在共同完结"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的 28 条"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"样本上，结构"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"繁复的 v4（拆分/"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"核查关闭 thinking，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"仅 review 开启）与"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"单次开启"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" thinking 的 minimal "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"同"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"为 17 正确，v4 并无稳定语"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"义优势；而将“答"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"案单位+证据指针"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"+盲化"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"复核”混改的 combined 方案"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，完整率虽升，正"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"确数却从"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 110 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"跌至 104/180，成本暴涨至约"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 2.1 倍。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"这与"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" Hu et al. (NAACL 2025) 和 MiniChec"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"k (EMNLP 2024 §7) 的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"结论高度"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"吻合：**拆分与多阶段复核"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"并非单调"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"有益，上游过切失"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"真与下游"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"盲审噪声会相互放"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"大**。因"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"此"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，本轮研究严禁混改模块，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"冻结基线"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"与生产 prompt，在**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"等预算（对齐 think"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"ing 与"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" token 上限）**前"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"提下做单变量正交"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"机制探针（Probe）"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。\n\n---\n\n##"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"# 二、 三个联合来"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"源竞争"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"假设\n\n#### 假设 H1：M1“去"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"语境化过切”与“"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"NF 一刀切"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"”导致"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"条件剥离及嵌入事实漏检\n* "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**联合来源**：Hu e"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"t al. (NAACL"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 2025，拆分"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"歧义、失"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"真与过切噪声) + MiniCheck (EMN"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"LP 2024 §7"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，去语境化无"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"稳定收益) + 文献代理核验"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"中的 Claimify/AFaCTA "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"概念机制"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"（元素级覆盖、"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"主观建议形式与嵌入客观事"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"实解耦，*注：待"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"文献终核"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，仅借机制*）。\n*"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" **当前错误机制"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**：v4 与 faithful-M1 将含建议"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/步骤的复合句整"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"句划入 NF"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，漏掉其中"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"嵌入的能力、因果或数值断"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"言；或将长句过切"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"为原子句"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"时剥离了前提条件"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"、范围"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"与归属（且无 runtime merge 兜"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"底），导致仅仅“"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"字符覆盖/引用合"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"法”却丧"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"失语义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"完整性。\n* **独立干预**："}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"固定下游核查器，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"仅在 M1 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"引入**“主干条件"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"绑定 + 排除区三要"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"素（能力/因果/数"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"值）剥离规则”**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"——子句"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"拆分强制"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"继承原句条件/归属前缀；"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"拟判 NF 的句子必"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"须通过“"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"零能力/因果/数"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"值断言”"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"反向"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"校验。\n* "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**失败反例**：\n  1"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":". **纯建议不应事"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"实化（假阳性提取"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"）**：如"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"“建议排查"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"前先清空缓存并重启节点”"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，干预若过度敏感"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，会把未"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"发生的操作步骤拆"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"成“清空缓存能修"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"复"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"故障”的因果声明送检，导"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"致被误判为缺证（"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"U）。\n  2. **条件/"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"范围保留"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"反"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"例**：如“仅当并发超 1000 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"且关闭压"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"缩时，吞吐量才会"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"下降 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"20%”，若把条件子"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"句单独拆成已发生"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"事实，或漏掉“关"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"闭压缩”"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，会直接"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"造成假 C "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"或假 U。\n* **小试可测量指"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"标**：AI 草拟靶向"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"样本上，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"合法"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" NF 中嵌入事实的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"召回率、**纯建议"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"被误提为事实的误"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"报率**，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"以及拆分后条件/"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"归属限定"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"词的完整保留率。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"\n\n#### 假设 H2：单"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"次 M3 内"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"部缺乏“关系/限"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"定顺序锚定”，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"导致同义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"误杀与参数知识抢"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"答\n* **联合来源**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"：Ye et al."}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" (ACL 202"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"6，按主体客体→描述→关"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"系→剩余"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"蕴含信息的阅读理"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"解策略) + Deng et al."}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" (REAL,"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" arXiv 2609.08943，删除引用证"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"据的离线事实消融"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":") + Datadog "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"官方博客（细化"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" rubric 区分矛盾 C 与无据 U"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，但剔除其“合理"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"外推算幻"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"觉”选项以符合本"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"项目闭卷"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"一步"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"推导与常规同义契约）。\n* **当前错"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"误机制**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"：单次核查在缺乏"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"顺序推理"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"锚"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"点时，易忽略主客体反转、程度/范"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"围限定错"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"位，或把合法的常"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"规同义改"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"写、"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"明确一步推导机械判为 U；同时可能"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"依赖预训练参数常"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"识放过 co"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"ntext 缺证的断言。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"\n* **独立干预**：不增加事后 review "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"模块，在"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**等预算 thinking** "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的单次 M3"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"内部嵌入四步检验清单：①"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"主客体与"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"归属对齐 → ②因"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"果/比较关系方向"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" → ③数"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"值/"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"条件/范围限定核对 → ④"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"闭卷一步"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"推导与同义容忍裁"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"定（C/U 各至多"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"计一次，实质错误严禁降级"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"为 U）。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"配合离线 REAL 证据"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"消融检验"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。\n* **失败反例**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"："}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"\n  1. **正常同义改写与一步"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"推导（过度字面化"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"）**：Cont"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"ext 为“A"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 耗时 10 秒，仅为"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" B 的一半”，回答"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"写“B 耗时 20 秒"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"且慢于 A"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"”。若"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"机械比对字面描述词，会在“描述对"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"齐”步误"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"杀为 U。\n  2. **"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"条件/范围消融盲区**：离"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"线消融若未删净 co"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"ntext 中全部必要及"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**替代证"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"据**，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"模型维持 S 并非因"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"为调用了参数知识"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，而是捕"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"获了残余替代线索"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"；反之，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"若漏看回答"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"中“在全"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"部场景下均成立”"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的绝对化范围扩展"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，则会漏报 U/C。\n*"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" **小试可"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"测量指标**：固定"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"标准 claim 输入下，四步清"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"单对同义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/一步推导的容忍"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"准确率、"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"对关系"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/限定错位的捕获率；以及**彻底删"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"净全部必"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"要与替代证据后，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"原判 S 翻"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"转为 U 的敏感度**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。\n\n#### 假设 H3："}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"生成期“推理与 JS"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"ON/字面引"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"文强"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"耦合”引发格式崩"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"坏与语义妥协\n* **"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"联合来源**：Datadog"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 官方博"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"客（先自由推理再"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"结构化转换；格式"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"约束可能损伤语义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"） + DeepSeek 官方文"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"档核验（Chat API `re"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"sponse_forma"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"t` 仅 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"`text`/`json_object` 无原生 `json"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"_schema`；Responses API"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 文档有但现场未"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"验） + 本"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"地观测（minimal 因"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 2 条引文格式失败落至 17/30"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，v4 有 4 条 partial"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"）。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"\n* **当前错误机制"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**：单次调用同时背负复杂"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"蕴含推理"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"、字面引文截取与"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" JSON"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 语法闭合，导致"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"尾部截断或引文索"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"引微瑕；"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"若强改提示词压格"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"式，又会"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"挤压"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"推理深度。\n* **独立干预**：测试**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"“确定性"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"纯格式/索引直修"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" + 实质差"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"异"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"强制重判”**边界"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"——本地后处理仅"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"修复可证"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"明内容不变的标点"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"、空白或"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"索引偏移；一旦引"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"文与原文存在**数"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"字、字母、否定词"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**等任何实质内容"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"不同，严"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"禁模糊匹配直修，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"必须触发"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"重判。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"\n* **失败反例**：\n  1. **极"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"性/数值微差越界"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"直修**："}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"引"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"文漏掉“不/未”或将“\u003c5%"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"”引作“5%”，若"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"被当"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"成格式容错放行，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"会直接颠倒 C/S 结"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"论。\n  2. "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**重判"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"分布漂移**：触发"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"单条重判时，解码"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"随机性可"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"能导致原本正确的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"判定翻转"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。\n* **小试可测量"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"指标**：完结率提"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"升（如 28→30）、"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"纯格式直"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"修拦截率 vs 实质"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"内容差异触发重判"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的准确率"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。\n\n---\n\n### 三、 优"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"先次序裁"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"定与“是否值得做"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"”\n\n1. **"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"第一优先"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"级（最值得做）：单次 M3 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的关系/限定核对"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" + 离线证"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"据消融**\n   "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"* **理由**：直接绕开昂贵且无效的多"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"轮盲审（"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"combined 教训），在"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"单次等"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"预算调用"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"内解决核心的同义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"容忍、限定词漏看"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"与参数知识依赖问"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"题，性价"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"比最高。\n2. **第二"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"优先级"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"（值得做离线诊断，暂不串"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"联）：M1 排除区的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"独立语义"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"审计**\n   * **理由**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"：专门"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"诊断合法 NF 漏嵌"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"入事实与条件丢失"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"的比例，但鉴于 Hu"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" et al. 揭示的拆分"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"噪声风险"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，先"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"做独立审计 probe，"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"不急于改动端到端"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"流水线。\n3. **第三"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"优先级（"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"仅做极窄"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"工程验证，其余不值得做）"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"：窄协议 / strict-sc"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"hema 探针*"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"*\n   * **裁定**：**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"绝"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"不值得**重做旧 12 对定位"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"反馈 probe"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"（已 12/12 饱和且"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"多耗"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 12.7% token）；**不值得**在 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"Chat API 上堆砌复杂"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"提示词伪"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"造 strict schema。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**仅值得**写零 API 成本的“"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"可证明内"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"容不变格式直修器"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"”，并用"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"极少调用探测 Respo"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"nses API `json"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"_schema` 现场是否真可用且不"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"降智。\n\n---\n\n### 四"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"、 ≤120 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"次调用的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"机制 Probe"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 方案（非端到端泛化）\n\n*"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" **零泄露"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"合成材料（AI 草拟"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"）"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**：绝不碰已曝光的 30 源"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"探索集或测试集 ID"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"。全新构"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"造 **20 条靶"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"向机制样本**（显"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"式标记为 **`AI草拟"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" / 待人工"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"终审`**），均分为"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 4 组（"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"每组 5 条）：①纯建议 vs 嵌入能力"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/因果/数"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"值事实；②强条件"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/范围"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/归属限"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"定；③正常同义改"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"写与明确一步推导"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"；④删净全部必要"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"与替代证"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"据的 REAL 消融对"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" + 数字/否定微差"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"引文。\n* **等预算"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"正交调用分配（总"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"计 11"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"0 次 API 调用）**"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"：\n  1. **Probe 1（M1 边界审计"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，40 次）"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"**：20 条 ×"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 2 臂（现行 M1 vs "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"条件绑定+三要素"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"剥离 M1）"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，对齐 thinking/token"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 预算，单"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"测纯建议误提率与嵌入事实"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"/条件保留率。\n  "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"2. **Probe 2（单次 M"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"3 四步策略与消融"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，60 次）**：固定"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"标准 claim 输入，20"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" 条 × 3 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"臂（单"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"次基础 M3 vs 单次四步策略"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" M3 vs 删净全部必"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"要/替代证据后的"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"四步策略"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":" M3），统一开启同"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"等"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"预算 thinking (16384)，单测 S/"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"C/U 边界与证据依"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"赖度。\n  "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"3. **"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"Probe 3（Re"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"sponses API `json_schema` 现场连"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"通性探针"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"，10 次）**：抽取 "}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"10 条复杂"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"引文样本"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"测试现场是否支持、是否改"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"变判定语"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"义；可证明内容不"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"变的格式"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"直修在本地离线"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"ACTIVE","step_type":"agent_response","text_delta":"运行（0 调用）。"}}
+{"event":"step_update","step_update":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","step_index":1,"state":"DONE","step_type":"agent_response","text_delta":"\n","duration_seconds":99.2180684,"usage":{"input_tokens":8873,"output_tokens":5842,"thinking_tokens":3498,"cache_read_tokens":0,"total_tokens":14715}}}
+{"event":"result","result":{"conversation_id":"25a15606-0595-4eb2-8425-d4cdeb8e1aee","status":"SUCCESS","response":"### 一、 核心立场：拒斥“多轮盲审万能论”与混改陷阱\n\n本地观测已给出强反证：在共同完结的 28 条样本上，结构繁复的 v4（拆分/核查关闭 thinking，仅 review 开启）与单次开启 thinking 的 minimal 同为 17 正确，v4 并无稳定语义优势；而将“答案单位+证据指针+盲化复核”混改的 combined 方案，完整率虽升，正确数却从 110 跌至 104/180，成本暴涨至约 2.1 倍。这与 Hu et al. (NAACL 2025) 和 MiniCheck (EMNLP 2024 §7) 的结论高度吻合：**拆分与多阶段复核并非单调有益，上游过切失真与下游盲审噪声会相互放大**。因此，本轮研究严禁混改模块，冻结基线与生产 prompt，在**等预算（对齐 thinking 与 token 上限）**前提下做单变量正交机制探针（Probe）。\n\n---\n\n### 二、 三个联合来源竞争假设\n\n#### 假设 H1：M1“去语境化过切”与“NF 一刀切”导致条件剥离及嵌入事实漏检\n* **联合来源**：Hu et al. (NAACL 2025，拆分歧义、失真与过切噪声) + MiniCheck (EMNLP 2024 §7，去语境化无稳定收益) + 文献代理核验中的 Claimify/AFaCTA 概念机制（元素级覆盖、主观建议形式与嵌入客观事实解耦，*注：待文献终核，仅借机制*）。\n* **当前错误机制**：v4 与 faithful-M1 将含建议/步骤的复合句整句划入 NF，漏掉其中嵌入的能力、因果或数值断言；或将长句过切为原子句时剥离了前提条件、范围与归属（且无 runtime merge 兜底），导致仅仅“字符覆盖/引用合法”却丧失语义完整性。\n* **独立干预**：固定下游核查器，仅在 M1 引入**“主干条件绑定 + 排除区三要素（能力/因果/数值）剥离规则”**——子句拆分强制继承原句条件/归属前缀；拟判 NF 的句子必须通过“零能力/因果/数值断言”反向校验。\n* **失败反例**：\n  1. **纯建议不应事实化（假阳性提取）**：如“建议排查前先清空缓存并重启节点”，干预若过度敏感，会把未发生的操作步骤拆成“清空缓存能修复故障”的因果声明送检，导致被误判为缺证（U）。\n  2. **条件/范围保留反例**：如“仅当并发超 1000 且关闭压缩时，吞吐量才会下降 20%”，若把条件子句单独拆成已发生事实，或漏掉“关闭压缩”，会直接造成假 C 或假 U。\n* **小试可测量指标**：AI 草拟靶向样本上，合法 NF 中嵌入事实的召回率、**纯建议被误提为事实的误报率**，以及拆分后条件/归属限定词的完整保留率。\n\n#### 假设 H2：单次 M3 内部缺乏“关系/限定顺序锚定”，导致同义误杀与参数知识抢答\n* **联合来源**：Ye et al. (ACL 2026，按主体客体→描述→关系→剩余蕴含信息的阅读理解策略) + Deng et al. (REAL, arXiv 2609.08943，删除引用证据的离线事实消融) + Datadog 官方博客（细化 rubric 区分矛盾 C 与无据 U，但剔除其“合理外推算幻觉”选项以符合本项目闭卷一步推导与常规同义契约）。\n* **当前错误机制**：单次核查在缺乏顺序推理锚点时，易忽略主客体反转、程度/范围限定错位，或把合法的常规同义改写、明确一步推导机械判为 U；同时可能依赖预训练参数常识放过 context 缺证的断言。\n* **独立干预**：不增加事后 review 模块，在**等预算 thinking** 的单次 M3 内部嵌入四步检验清单：①主客体与归属对齐 → ②因果/比较关系方向 → ③数值/条件/范围限定核对 → ④闭卷一步推导与同义容忍裁定（C/U 各至多计一次，实质错误严禁降级为 U）。配合离线 REAL 证据消融检验。\n* **失败反例**：\n  1. **正常同义改写与一步推导（过度字面化）**：Context 为“A 耗时 10 秒，仅为 B 的一半”，回答写“B 耗时 20 秒且慢于 A”。若机械比对字面描述词，会在“描述对齐”步误杀为 U。\n  2. **条件/范围消融盲区**：离线消融若未删净 context 中全部必要及**替代证据**，模型维持 S 并非因为调用了参数知识，而是捕获了残余替代线索；反之，若漏看回答中“在全部场景下均成立”的绝对化范围扩展，则会漏报 U/C。\n* **小试可测量指标**：固定标准 claim 输入下，四步清单对同义/一步推导的容忍准确率、对关系/限定错位的捕获率；以及**彻底删净全部必要与替代证据后，原判 S 翻转为 U 的敏感度**。\n\n#### 假设 H3：生成期“推理与 JSON/字面引文强耦合”引发格式崩坏与语义妥协\n* **联合来源**：Datadog 官方博客（先自由推理再结构化转换；格式约束可能损伤语义） + DeepSeek 官方文档核验（Chat API `response_format` 仅 `text`/`json_object` 无原生 `json_schema`；Responses API 文档有但现场未验） + 本地观测（minimal 因 2 条引文格式失败落至 17/30，v4 有 4 条 partial）。\n* **当前错误机制**：单次调用同时背负复杂蕴含推理、字面引文截取与 JSON 语法闭合，导致尾部截断或引文索引微瑕；若强改提示词压格式，又会挤压推理深度。\n* **独立干预**：测试**“确定性纯格式/索引直修 + 实质差异强制重判”**边界——本地后处理仅修复可证明内容不变的标点、空白或索引偏移；一旦引文与原文存在**数字、字母、否定词**等任何实质内容不同，严禁模糊匹配直修，必须触发重判。\n* **失败反例**：\n  1. **极性/数值微差越界直修**：引文漏掉“不/未”或将“\u003c5%”引作“5%”，若被当成格式容错放行，会直接颠倒 C/S 结论。\n  2. **重判分布漂移**：触发单条重判时，解码随机性可能导致原本正确的判定翻转。\n* **小试可测量指标**：完结率提升（如 28→30）、纯格式直修拦截率 vs 实质内容差异触发重判的准确率。\n\n---\n\n### 三、 优先次序裁定与“是否值得做”\n\n1. **第一优先级（最值得做）：单次 M3 的关系/限定核对 + 离线证据消融**\n   * **理由**：直接绕开昂贵且无效的多轮盲审（combined 教训），在单次等预算调用内解决核心的同义容忍、限定词漏看与参数知识依赖问题，性价比最高。\n2. **第二优先级（值得做离线诊断，暂不串联）：M1 排除区的独立语义审计**\n   * **理由**：专门诊断合法 NF 漏嵌入事实与条件丢失的比例，但鉴于 Hu et al. 揭示的拆分噪声风险，先做独立审计 probe，不急于改动端到端流水线。\n3. **第三优先级（仅做极窄工程验证，其余不值得做）：窄协议 / strict-schema 探针**\n   * **裁定**：**绝不值得**重做旧 12 对定位反馈 probe（已 12/12 饱和且多耗 12.7% token）；**不值得**在 Chat API 上堆砌复杂提示词伪造 strict schema。**仅值得**写零 API 成本的“可证明内容不变格式直修器”，并用极少调用探测 Responses API `json_schema` 现场是否真可用且不降智。\n\n---\n\n### 四、 ≤120 次调用的机制 Probe 方案（非端到端泛化）\n\n* **零泄露合成材料（AI 草拟）**：绝不碰已曝光的 30 源探索集或测试集 ID。全新构造 **20 条靶向机制样本**（显式标记为 **`AI草拟 / 待人工终审`**），均分为 4 组（每组 5 条）：①纯建议 vs 嵌入能力/因果/数值事实；②强条件/范围/归属限定；③正常同义改写与明确一步推导；④删净全部必要与替代证据的 REAL 消融对 + 数字/否定微差引文。\n* **等预算正交调用分配（总计 110 次 API 调用）**：\n  1. **Probe 1（M1 边界审计，40 次）**：20 条 × 2 臂（现行 M1 vs 条件绑定+三要素剥离 M1），对齐 thinking/token 预算，单测纯建议误提率与嵌入事实/条件保留率。\n  2. **Probe 2（单次 M3 四步策略与消融，60 次）**：固定标准 claim 输入，20 条 × 3 臂（单次基础 M3 vs 单次四步策略 M3 vs 删净全部必要/替代证据后的四步策略 M3），统一开启同等预算 thinking (16384)，单测 S/C/U 边界与证据依赖度。\n  3. **Probe 3（Responses API `json_schema` 现场连通性探针，10 次）**：抽取 10 条复杂引文样本测试现场是否支持、是否改变判定语义；可证明内容不变的格式直修在本地离线运行（0 调用）。\n","duration_seconds":99.3528967,"num_turns":1,"usage":{"input_tokens":8873,"output_tokens":5842,"thinking_tokens":3498,"cache_read_tokens":0,"total_tokens":14715}}}
