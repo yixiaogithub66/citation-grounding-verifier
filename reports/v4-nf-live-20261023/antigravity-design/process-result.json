@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-10-23T12:19:10.985153+00:00",
+  "args": [
+    "C:\\Users\\yixiao\\.gemini\\bin\\agy.exe",
+    "--new-project",
+    "--mode",
+    "plan",
+    "--model",
+    "gemini-4-argon-high",
+    "--effort",
+    "high",
+    "--print-timeout",
+    "5m",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json"
+  ],
+  "plan_sha256": "ad763c059832fb82612f6aedc197533585767970d731d906e36046cc43a6abbd",
+  "request_sha256": "b7e31b04e72a5b4905d35c2910506305fdf1e19ade4d10503f6eaa6245fb9881",
+  "creationflags": "CREATE_NO_WINDOW",
+  "permission_bypass": false,
+  "exit_code": 0,
+  "elapsed_seconds": 90.343
+}
