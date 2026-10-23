@@ -1,6 +1,8 @@
 # Citation Grounding & Faithfulness Verifier
 
-新增独立后端 **`optimized-v4.0`**：分块拆分与句子骨架降级、保守引文修复、分批核查、C/U 有界复核和部分结果返回。当前处于开发验证及作者裁定阶段，尚未宣称通过未见测试验收。启动、配置、评测与冻结流程见 [v4 说明](docs/V4_DESIGN.md)；[341 条 AI 裁定草案](reviews/ragtruth-v4-dev-adjudication-v1/ai-draft/README.md)等待作者逐条终审。`optimized` 别名继续指向历史 v3。
+新增实验后端 **`optimized-v4-combined`**：组合答案位置与覆盖记账、证据角色/指针协议、初判盲化复核，并配套离线行为测试。原 v4 保留作配对对照；启动与实验边界见 [组合实验说明](docs/V4_COMBINED_EXPERIMENT.md)。
+
+独立后端 **`optimized-v4.0`**：分块拆分与句子骨架降级、保守引文修复、分批核查、C/U 有界复核和部分结果返回。当前处于开发验证及作者裁定阶段，尚未宣称通过未见测试验收。启动、配置、评测与冻结流程见 [v4 说明](docs/V4_DESIGN.md)；[341 条 AI 裁定草案](reviews/ragtruth-v4-dev-adjudication-v1/ai-draft/README.md)的作者审核已提交，剩余细节暂缓处理，尚未导入为最终裁定版本。`optimized` 别名继续指向历史 v3。
 
 v4 已完成旧 180 条开发评测：170 条完整、10 条部分、0 条整例执行失败，平均 14.80 秒；原生口径 FP=66、FN=3，尚未达成语义验收目标。坏引用七例恢复 6 条完整报告；318 项测试通过。详细回归、开销和未完成项见 [v4 开发审计](reports/V4_DEVELOPMENT_AUDIT.md)。新未见切片尚未取数。
 

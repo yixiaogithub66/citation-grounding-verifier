@@ -120,7 +120,7 @@ def main():
     p.add_argument('--dataset',type=Path,required=True)
     p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--v4-config',type=Path)
-    p.add_argument('--backends',nargs='+',choices=('baseline','minimal','optimized-v2','optimized-v3','optimized-v4.0'),default=['optimized-v4.0'])
+    p.add_argument('--backends',nargs='+',choices=('baseline','minimal','optimized-v2','optimized-v3','optimized-v4.0','optimized-v4-combined'),default=['optimized-v4.0'])
     p.add_argument('--split')
     p.add_argument('--workers',type=int,default=4)
     p.add_argument('--limit',type=int)

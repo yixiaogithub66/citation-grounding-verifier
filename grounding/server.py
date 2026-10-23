@@ -128,9 +128,10 @@ def main() -> None:
         parser.error("Invalid port or concurrency limit.")
     try:
         settings = load_settings(args.env_file)
-        if args.v4_config and args.backend not in ("optimized-v4", "optimized-v4.0"):
-            parser.error("--v4-config requires the optimized-v4.0 backend.")
-        verifier = build_verifier(args.backend, settings, v4_config=load_v4_config(args.v4_config)) if args.backend in ("optimized-v4", "optimized-v4.0") else build_verifier(args.backend, settings)
+        v4_backends = ("optimized-v4", "optimized-v4.0", "optimized-v4-combined")
+        if args.v4_config and args.backend not in v4_backends:
+            parser.error("--v4-config requires a v4 backend.")
+        verifier = build_verifier(args.backend, settings, v4_config=load_v4_config(args.v4_config)) if args.backend in v4_backends else build_verifier(args.backend, settings)
     except VerificationError as exc:
         parser.error(exc.message)
     with VerificationServer((args.host, args.port), verifier, backend=args.backend, max_concurrent=args.max_concurrent) as server:
