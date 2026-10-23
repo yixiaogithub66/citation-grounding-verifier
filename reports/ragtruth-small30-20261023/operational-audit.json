@@ -1,0 +1,375 @@
+{
+  "schema_version": "ragtruth-small30-independent-operational-audit-v1",
+  "records": 30,
+  "invariant_issues": [],
+  "passed": true,
+  "summary": {
+    "missing_returned_model_calls": 0,
+    "missing_fingerprint_calls": 0,
+    "missing_completion_empty_extraction": 1,
+    "complete_empty_outputs": 2,
+    "calls_with_errors": 5,
+    "completed_claims": 223,
+    "terminal_error_claims": 8,
+    "fallback_excluded_claims": 35,
+    "completed_unsupported_claims": 56,
+    "quotes": 289,
+    "exact_quotes": 289,
+    "status_counts": {
+      "complete": 26,
+      "partial": 4
+    },
+    "logical_gates": {
+      "contradiction_reviews": 0,
+      "unsupported_reviews": 65,
+      "targeted_reasks": 36
+    },
+    "call_stages": {
+      "decompose": 35,
+      "verify": 98,
+      "decompose_repair_1": 23,
+      "unsupported_review": 65,
+      "verify_claim_requery": 36,
+      "verify_claim_requery_repair_1": 12,
+      "verify_batch_retry_1": 3
+    },
+    "returned_models": {
+      "deepseek-flash": 272
+    },
+    "returned_fingerprints": {
+      "e72d3c7f663d3e1383b00b3884cb4501": 272
+    },
+    "record_errors": {},
+    "usage": {
+      "calls": 272,
+      "calls_with_usage": 272,
+      "prompt_tokens": 455723,
+      "completion_tokens": 145449,
+      "total_tokens": 601172,
+      "prompt_cache_hit_tokens": 258560,
+      "prompt_cache_miss_tokens": 197163,
+      "reasoning_tokens": 63420,
+      "cache_accounted_calls": 272,
+      "reasoning_accounted_calls": 65,
+      "usage_complete": true,
+      "cache_usage_complete": true,
+      "reasoning_usage_complete": false,
+      "calls_missing_usage": 0,
+      "calls_missing_cache_accounting": 0
+    },
+    "reference_cost": {
+      "reference_prices": {
+        "cached_input_per_million": 0.006,
+        "currency": "USD",
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "reference": "fixed prior experiment reference, not current pricing or billing"
+      },
+      "known_usage_subtotal": 0.23523905999999997,
+      "estimated_total": 0.23523905999999997,
+      "priced_calls": 272,
+      "unpriced_calls": 0,
+      "complete": true,
+      "cache_standardized_all_miss_known_subtotal": 0.3112556999999998,
+      "cache_standardized_all_miss_total": 0.3112556999999998,
+      "cache_standardized_priced_calls": 272,
+      "cache_standardized_unpriced_calls": 0,
+      "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill."
+    }
+  },
+  "per_case": [
+    {
+      "id": "16452",
+      "status": "complete",
+      "completed_claims": 0,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 1,
+      "issues": 0
+    },
+    {
+      "id": "14367",
+      "status": "complete",
+      "completed_claims": 3,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 2,
+      "issues": 0
+    },
+    {
+      "id": "12023",
+      "status": "complete",
+      "completed_claims": 3,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 3,
+      "issues": 0
+    },
+    {
+      "id": "16421",
+      "status": "complete",
+      "completed_claims": 0,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 6,
+      "calls": 8,
+      "issues": 0
+    },
+    {
+      "id": "16150",
+      "status": "complete",
+      "completed_claims": 4,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 1,
+      "calls": 6,
+      "issues": 0
+    },
+    {
+      "id": "14054",
+      "status": "complete",
+      "completed_claims": 6,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 5,
+      "issues": 0
+    },
+    {
+      "id": "15935",
+      "status": "complete",
+      "completed_claims": 4,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 6,
+      "issues": 0
+    },
+    {
+      "id": "17517",
+      "status": "complete",
+      "completed_claims": 7,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 16,
+      "calls": 12,
+      "issues": 0
+    },
+    {
+      "id": "15195",
+      "status": "complete",
+      "completed_claims": 4,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 6,
+      "calls": 10,
+      "issues": 0
+    },
+    {
+      "id": "5058",
+      "status": "complete",
+      "completed_claims": 9,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 8,
+      "issues": 0
+    },
+    {
+      "id": "5567",
+      "status": "complete",
+      "completed_claims": 6,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 4,
+      "issues": 0
+    },
+    {
+      "id": "3641",
+      "status": "complete",
+      "completed_claims": 7,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 9,
+      "issues": 0
+    },
+    {
+      "id": "2374",
+      "status": "complete",
+      "completed_claims": 3,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 2,
+      "calls": 7,
+      "issues": 0
+    },
+    {
+      "id": "5084",
+      "status": "complete",
+      "completed_claims": 3,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 5,
+      "issues": 0
+    },
+    {
+      "id": "3251",
+      "status": "partial",
+      "completed_claims": 13,
+      "unfinished_claims": 1,
+      "fallback_exclusions": 0,
+      "calls": 10,
+      "issues": 0
+    },
+    {
+      "id": "644",
+      "status": "complete",
+      "completed_claims": 5,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 6,
+      "issues": 0
+    },
+    {
+      "id": "27",
+      "status": "complete",
+      "completed_claims": 9,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 10,
+      "issues": 0
+    },
+    {
+      "id": "13941",
+      "status": "complete",
+      "completed_claims": 4,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 13,
+      "issues": 0
+    },
+    {
+      "id": "2736",
+      "status": "complete",
+      "completed_claims": 4,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 4,
+      "issues": 0
+    },
+    {
+      "id": "10014",
+      "status": "complete",
+      "completed_claims": 19,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 9,
+      "issues": 0
+    },
+    {
+      "id": "46",
+      "status": "complete",
+      "completed_claims": 8,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 7,
+      "issues": 0
+    },
+    {
+      "id": "9080",
+      "status": "complete",
+      "completed_claims": 12,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 12,
+      "issues": 0
+    },
+    {
+      "id": "5684",
+      "status": "complete",
+      "completed_claims": 11,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 9,
+      "issues": 0
+    },
+    {
+      "id": "9586",
+      "status": "complete",
+      "completed_claims": 5,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 2,
+      "calls": 10,
+      "issues": 0
+    },
+    {
+      "id": "7919",
+      "status": "complete",
+      "completed_claims": 10,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 13,
+      "issues": 0
+    },
+    {
+      "id": "8474",
+      "status": "partial",
+      "completed_claims": 10,
+      "unfinished_claims": 3,
+      "fallback_exclusions": 0,
+      "calls": 16,
+      "issues": 0
+    },
+    {
+      "id": "5851",
+      "status": "partial",
+      "completed_claims": 16,
+      "unfinished_claims": 1,
+      "fallback_exclusions": 0,
+      "calls": 13,
+      "issues": 0
+    },
+    {
+      "id": "9526",
+      "status": "partial",
+      "completed_claims": 6,
+      "unfinished_claims": 3,
+      "fallback_exclusions": 2,
+      "calls": 21,
+      "issues": 0
+    },
+    {
+      "id": "9730",
+      "status": "complete",
+      "completed_claims": 20,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 23,
+      "issues": 0
+    },
+    {
+      "id": "9603",
+      "status": "complete",
+      "completed_claims": 12,
+      "unfinished_claims": 0,
+      "fallback_exclusions": 0,
+      "calls": 10,
+      "issues": 0
+    }
+  ],
+  "frozen_dependency_paths": {
+    "grounding.contracts": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\grounding\\contracts.py",
+    "grounding.contracts_v4": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\grounding\\contracts_v4.py",
+    "grounding.prompts_v4": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\grounding\\prompts_v4.py",
+    "grounding.verifiers_v4": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\grounding\\verifiers_v4.py",
+    "scripts.ragtruth_small30": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\scripts\\ragtruth_small30.py",
+    "scripts.analyze_v4_nf": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\scripts\\analyze_v4_nf.py",
+    "scripts.score_v4": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023\\source\\scripts\\score_v4.py"
+  },
+  "input_hashes": {
+    "preselection.json": "bcd5f01b4e47eb61f66a9a4e32cfc14b7d5771c458ebd6a8eafdb7f03fc0adfa",
+    "binding.json": "263ed007646d2924a8d2c011874c213d1f2fb68121ddeda353bd80e90c465223",
+    "predictions.jsonl": "cd805d809995dcf33ebe8fd7598c29ce873cde1d6f794d6a6d8d745bb362fd72",
+    "progress.json": "438ce49d57464ce29c1918e82607f047dcfa2055b7395998522838ca3a41a807",
+    "inputs.jsonl": "445ec4e93e9bf930ab5c3b3b9963fa2c6a39c8ecfa689c8e087971d23dbe643d",
+    "manifest.jsonl": "726c841f954dec523d91357e2182981e034f916547e91fd518233328c8776a92"
+  },
+  "audit_script_sha256": "e36560a3b84d9a91fbe330c0307a1dbe2dfdfa9542375ed93f544d30ca05e2cb",
+  "pure_review_checker_source_sha256": "fe839e2b822f4e3e6e4d8fc4449f0cbe33eccfef4a8e17750479d55188dc655d",
+  "review_policy": "Each logical C/U/targeted event is bounded per claim; transport/format attempts are not additional logical gates. C cannot follow U.",
+  "error_policy": "Terminal error has no final verdict and cannot be public completed U; earlier errors followed by validated repair are allowed.",
+  "nonfactual_completion_policy": "A validated NON_FACTUAL completion of a provisional extraction_fallback skeleton is an exclusion; its chain is complete but it cannot count as a completed public claim.",
+  "limitations": "Recorded deterministic contracts only; not semantic correctness, extraction recall, or author adjudication. Native labels and score report were not parsed. Returned model/fingerprint metadata can remain unknown."
+}

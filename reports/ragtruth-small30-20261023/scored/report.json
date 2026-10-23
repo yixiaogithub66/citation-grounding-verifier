@@ -1,0 +1,2970 @@
+{
+  "backends": {
+    "optimized-v4.0": {
+      "by_task": {
+        "Data2txt": {
+          "claim_completion_known_cases": {
+            "denominator": 128,
+            "numerator": 121,
+            "value": 0.9453125
+          },
+          "complete_case_rate": {
+            "denominator": 10,
+            "numerator": 7,
+            "value": 0.7
+          },
+          "completed_claim_count": 121,
+          "confusion": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 1,
+            "tp": 9,
+            "unknown_negative": 0,
+            "unknown_positive": 0
+          },
+          "correct_decisions_per_all_cases": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "decision_coverage": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "empty_claims_count": 0,
+          "known_failed_claim_count": 7,
+          "native_fn_zero_target": "met",
+          "native_fn_zero_target_policy": "Requires at least one native positive and no FN or unresolved native positive; unknown cannot manufacture FN=0",
+          "nonempty_answer_empty_claims_count": 0,
+          "resolved_only": {
+            "accuracy": {
+              "denominator": 10,
+              "numerator": 10,
+              "value": 1.0
+            },
+            "f1": {
+              "denominator": 18,
+              "numerator": 18,
+              "value": 1.0
+            },
+            "precision": {
+              "denominator": 9,
+              "numerator": 9,
+              "value": 1.0
+            },
+            "recall": {
+              "denominator": 9,
+              "numerator": 9,
+              "value": 1.0
+            }
+          },
+          "status_counts": {
+            "complete": 7,
+            "partial": 3
+          },
+          "technical_failure_rate": {
+            "denominator": 10,
+            "numerator": 3,
+            "value": 0.3
+          },
+          "total_count": 10,
+          "unknown_claim_total_case_count": 0
+        },
+        "QA": {
+          "claim_completion_known_cases": {
+            "denominator": 35,
+            "numerator": 35,
+            "value": 1.0
+          },
+          "complete_case_rate": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "completed_claim_count": 35,
+          "confusion": {
+            "fn": 1,
+            "fp": 5,
+            "tn": 3,
+            "tp": 1,
+            "unknown_negative": 0,
+            "unknown_positive": 0
+          },
+          "correct_decisions_per_all_cases": {
+            "denominator": 10,
+            "numerator": 4,
+            "value": 0.4
+          },
+          "decision_coverage": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "empty_claims_count": 2,
+          "known_failed_claim_count": 0,
+          "native_fn_zero_target": "not_met",
+          "native_fn_zero_target_policy": "Requires at least one native positive and no FN or unresolved native positive; unknown cannot manufacture FN=0",
+          "nonempty_answer_empty_claims_count": 2,
+          "resolved_only": {
+            "accuracy": {
+              "denominator": 10,
+              "numerator": 4,
+              "value": 0.4
+            },
+            "f1": {
+              "denominator": 8,
+              "numerator": 2,
+              "value": 0.25
+            },
+            "precision": {
+              "denominator": 6,
+              "numerator": 1,
+              "value": 0.16666666666666666
+            },
+            "recall": {
+              "denominator": 2,
+              "numerator": 1,
+              "value": 0.5
+            }
+          },
+          "status_counts": {
+            "complete": 10
+          },
+          "technical_failure_rate": {
+            "denominator": 10,
+            "numerator": 0,
+            "value": 0.0
+          },
+          "total_count": 10,
+          "unknown_claim_total_case_count": 0
+        },
+        "Summary": {
+          "claim_completion_known_cases": {
+            "denominator": 68,
+            "numerator": 67,
+            "value": 0.9852941176470589
+          },
+          "complete_case_rate": {
+            "denominator": 10,
+            "numerator": 9,
+            "value": 0.9
+          },
+          "completed_claim_count": 67,
+          "confusion": {
+            "fn": 0,
+            "fp": 5,
+            "tn": 2,
+            "tp": 3,
+            "unknown_negative": 0,
+            "unknown_positive": 0
+          },
+          "correct_decisions_per_all_cases": {
+            "denominator": 10,
+            "numerator": 5,
+            "value": 0.5
+          },
+          "decision_coverage": {
+            "denominator": 10,
+            "numerator": 10,
+            "value": 1.0
+          },
+          "empty_claims_count": 0,
+          "known_failed_claim_count": 1,
+          "native_fn_zero_target": "met",
+          "native_fn_zero_target_policy": "Requires at least one native positive and no FN or unresolved native positive; unknown cannot manufacture FN=0",
+          "nonempty_answer_empty_claims_count": 0,
+          "resolved_only": {
+            "accuracy": {
+              "denominator": 10,
+              "numerator": 5,
+              "value": 0.5
+            },
+            "f1": {
+              "denominator": 11,
+              "numerator": 6,
+              "value": 0.5454545454545454
+            },
+            "precision": {
+              "denominator": 8,
+              "numerator": 3,
+              "value": 0.375
+            },
+            "recall": {
+              "denominator": 3,
+              "numerator": 3,
+              "value": 1.0
+            }
+          },
+          "status_counts": {
+            "complete": 9,
+            "partial": 1
+          },
+          "technical_failure_rate": {
+            "denominator": 10,
+            "numerator": 1,
+            "value": 0.1
+          },
+          "total_count": 10,
+          "unknown_claim_total_case_count": 0
+        }
+      },
+      "claim_completion_known_cases": {
+        "denominator": 231,
+        "numerator": 223,
+        "value": 0.9653679653679653
+      },
+      "complete_case_rate": {
+        "denominator": 30,
+        "numerator": 26,
+        "value": 0.8666666666666667
+      },
+      "completed_claim_count": 223,
+      "confusion": {
+        "fn": 1,
+        "fp": 10,
+        "tn": 6,
+        "tp": 13,
+        "unknown_negative": 0,
+        "unknown_positive": 0
+      },
+      "correct_decisions_per_all_cases": {
+        "denominator": 30,
+        "numerator": 19,
+        "value": 0.6333333333333333
+      },
+      "decision_coverage": {
+        "denominator": 30,
+        "numerator": 30,
+        "value": 1.0
+      },
+      "empty_claims_count": 2,
+      "known_failed_claim_count": 8,
+      "native_fn_zero_target": "not_met",
+      "native_fn_zero_target_policy": "Requires at least one native positive and no FN or unresolved native positive; unknown cannot manufacture FN=0",
+      "nonempty_answer_empty_claims_count": 2,
+      "resolved_only": {
+        "accuracy": {
+          "denominator": 30,
+          "numerator": 19,
+          "value": 0.6333333333333333
+        },
+        "f1": {
+          "denominator": 37,
+          "numerator": 26,
+          "value": 0.7027027027027027
+        },
+        "precision": {
+          "denominator": 23,
+          "numerator": 13,
+          "value": 0.5652173913043478
+        },
+        "recall": {
+          "denominator": 14,
+          "numerator": 13,
+          "value": 0.9285714285714286
+        }
+      },
+      "status_counts": {
+        "complete": 26,
+        "partial": 4
+      },
+      "technical_failure_rate": {
+        "denominator": 30,
+        "numerator": 4,
+        "value": 0.13333333333333333
+      },
+      "total_count": 30,
+      "unknown_claim_total_case_count": 0
+    }
+  },
+  "case_results": [
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 0,
+      "completion_telemetry_valid": true,
+      "empty_claims": true,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "16421",
+      "nonempty_answer_empty_claims": true,
+      "outcome": "clean",
+      "source_id": "12228",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": false,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 0,
+      "completion_telemetry_valid": false,
+      "empty_claims": true,
+      "failed_claims": 0,
+      "generator": "gpt-4-0613",
+      "id": "16452",
+      "nonempty_answer_empty_claims": true,
+      "outcome": "clean",
+      "source_id": "12234",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 4,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-13b-chat",
+      "id": "16150",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "12182",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 4,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "15935",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15577",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 3,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "14367",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "clean",
+      "source_id": "15315",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 3,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "12023",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "clean",
+      "source_id": "14319",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 6,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "mistral-7B-instruct",
+      "id": "14054",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15262",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 7,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "17517",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "12414",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 4,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "15195",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15453",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 4,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "13941",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15243",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "QA",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 9,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "gpt-4-0613",
+      "id": "5058",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "13499",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 7,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "3641",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "12073",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 3,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-13b-chat",
+      "id": "2374",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "11860",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 6,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "5567",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "clean",
+      "source_id": "13583",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 3,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "mistral-7B-instruct",
+      "id": "5084",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "13503",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 9,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "27",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15596",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 13,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 1,
+      "generator": "llama-2-70b-chat",
+      "id": "3251",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "12008",
+      "status": "partial",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 5,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "mistral-7B-instruct",
+      "id": "644",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15700",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 4,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "gpt-4-0613",
+      "id": "2736",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "clean",
+      "source_id": "11922",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 8,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-13b-chat",
+      "id": "46",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "15599",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Summary",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 19,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "gpt-4-0613",
+      "id": "10014",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "clean",
+      "source_id": "14769",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": false,
+      "y_true": false
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 12,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "mistral-7B-instruct",
+      "id": "9080",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14605",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 11,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "mistral-7B-instruct",
+      "id": "5684",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "13603",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 5,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-13b-chat",
+      "id": "9586",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14690",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 10,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-70b-chat",
+      "id": "7919",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14194",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 10,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 3,
+      "generator": "mistral-7B-instruct",
+      "id": "8474",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14498",
+      "status": "partial",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 16,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 1,
+      "generator": "gpt-3.5-turbo-0613",
+      "id": "5851",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "13637",
+      "status": "partial",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 20,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-13b-chat",
+      "id": "9730",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14719",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 6,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 3,
+      "generator": "llama-2-13b-chat",
+      "id": "9526",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14680",
+      "status": "partial",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    },
+    {
+      "backend": "optimized-v4.0",
+      "claim_total_known": true,
+      "completed_claims": 12,
+      "completion_telemetry_valid": true,
+      "empty_claims": false,
+      "failed_claims": 0,
+      "generator": "llama-2-7b-chat",
+      "id": "9603",
+      "nonempty_answer_empty_claims": false,
+      "outcome": "detected",
+      "source_id": "14694",
+      "status": "complete",
+      "structural_errors": [],
+      "task_type": "Data2txt",
+      "y_pred": true,
+      "y_true": true
+    }
+  ],
+  "input_hashes": {
+    "binding.json": "263ed007646d2924a8d2c011874c213d1f2fb68121ddeda353bd80e90c465223",
+    "predictions.jsonl": "cd805d809995dcf33ebe8fd7598c29ce873cde1d6f794d6a6d8d745bb362fd72",
+    "preselection.json": "bcd5f01b4e47eb61f66a9a4e32cfc14b7d5771c458ebd6a8eafdb7f03fc0adfa"
+  },
+  "legacy_whole_case_failure": {
+    "backend_count": 1,
+    "backends": {
+      "optimized-v4.0": {
+        "answered_only": {
+          "accuracy": {
+            "denominator": 26,
+            "numerator": 16,
+            "value": 0.6153846153846154
+          },
+          "answered_count": 26,
+          "answered_negative_count": 15,
+          "answered_positive_count": 11,
+          "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+          "f1": {
+            "denominator": 30,
+            "numerator": 20,
+            "value": 0.6666666666666666
+          },
+          "precision": {
+            "denominator": 19,
+            "numerator": 10,
+            "value": 0.5263157894736842
+          },
+          "recall": {
+            "denominator": 11,
+            "numerator": 10,
+            "value": 0.9090909090909091
+          }
+        },
+        "bootstrap": {
+          "cluster_count": 30,
+          "cluster_key": "source_id",
+          "confidence_level": 0.95,
+          "detection_f1": {
+            "defined_replicates": 2000,
+            "high": 0.7619047619047619,
+            "low": 0.363474025974026,
+            "point_estimate": 0.5882352941176471,
+            "undefined_replicates": 0
+          },
+          "end_to_end_accuracy": {
+            "defined_replicates": 2000,
+            "high": 0.7,
+            "low": 0.36666666666666664,
+            "point_estimate": 0.5333333333333333,
+            "undefined_replicates": 0
+          },
+          "method": "source_cluster_percentile",
+          "resampling_unit": "whole source with all responses and backends",
+          "samples": 2000,
+          "seed": 20261023
+        },
+        "by_generator": {
+          "gpt-3.5-turbo-0613": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 0,
+                "numerator": 0,
+                "value": null
+              },
+              "answered_count": 0,
+              "answered_negative_count": 0,
+              "answered_positive_count": 0,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 0,
+                "numerator": 0,
+                "value": null
+              },
+              "precision": {
+                "denominator": 0,
+                "numerator": 0,
+                "value": null
+              },
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "value": null
+              }
+            },
+            "citations": {
+              "checked_citation_count": 31,
+              "citation_count": 31,
+              "exact_substring_rate": {
+                "denominator": 31,
+                "numerator": 31,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 1,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 31
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 0,
+              "negative_failures": 0,
+              "positive_failures": 1,
+              "tn": 0,
+              "tp": 0
+            },
+            "conservative_confusion": {
+              "fn": 1,
+              "fp": 0,
+              "tn": 0,
+              "tp": 0
+            },
+            "context_validation_recorded_count": 1,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.013435451999999999,
+              "known_usage_amount": 0.013435451999999999,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 1,
+              "numerator": 0,
+              "value": 0.0
+            },
+            "detection_f1": {
+              "denominator": 1,
+              "numerator": 0,
+              "value": 0.0
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 1,
+              "numerator": 0,
+              "value": 0.0
+            },
+            "error_count": 1,
+            "failure_counts": {
+              "invalid_schema": 1
+            },
+            "latency": {
+              "mean_seconds": 37.75,
+              "measured_count": 1,
+              "p50_seconds": 37.75,
+              "p95_seconds": 37.75,
+              "total_recorded_seconds": 37.75,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 0,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 1,
+            "record_count": 1,
+            "schema_outcomes": {
+              "invalid": 1,
+              "not_returned": 0,
+              "valid": 0
+            },
+            "source_count": 1,
+            "success_count": 0,
+            "total_count": 1,
+            "usage": {
+              "cache_accounted_calls": 13,
+              "cache_usage_complete": true,
+              "calls": 13,
+              "calls_with_usage": 13,
+              "completion_tokens": 8364,
+              "prompt_cache_hit_tokens": 11392,
+              "prompt_cache_miss_tokens": 11101,
+              "prompt_tokens": 22493,
+              "reasoning_accounted_calls": 1,
+              "reasoning_tokens": 3512,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 30857,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 0,
+              "SUPPORTED": 0,
+              "UNSUPPORTED": 0
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "gpt-4-0613": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 4,
+                "numerator": 3,
+                "value": 0.75
+              },
+              "answered_count": 4,
+              "answered_negative_count": 4,
+              "answered_positive_count": 0,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 1,
+                "numerator": 0,
+                "value": 0.0
+              },
+              "precision": {
+                "denominator": 1,
+                "numerator": 0,
+                "value": 0.0
+              },
+              "recall": {
+                "denominator": 0,
+                "numerator": 0,
+                "value": null
+              }
+            },
+            "citations": {
+              "checked_citation_count": 44,
+              "citation_count": 44,
+              "exact_substring_rate": {
+                "denominator": 44,
+                "numerator": 44,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 4,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 44
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 1,
+              "negative_failures": 0,
+              "positive_failures": 0,
+              "tn": 3,
+              "tp": 0
+            },
+            "conservative_confusion": {
+              "fn": 0,
+              "fp": 1,
+              "tn": 3,
+              "tp": 0
+            },
+            "context_validation_recorded_count": 4,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.014007672,
+              "known_usage_amount": 0.014007672,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 4,
+              "numerator": 4,
+              "value": 1.0
+            },
+            "detection_f1": {
+              "denominator": 1,
+              "numerator": 0,
+              "value": 0.0
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 1,
+            "end_to_end_accuracy": {
+              "denominator": 4,
+              "numerator": 3,
+              "value": 0.75
+            },
+            "error_count": 0,
+            "failure_counts": {},
+            "latency": {
+              "mean_seconds": 9.18725000001723,
+              "measured_count": 4,
+              "p50_seconds": 8.155999999959022,
+              "p95_seconds": 16.01500000001397,
+              "total_recorded_seconds": 36.74900000006892,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 4,
+            "nonempty_answer_empty_claims": 1,
+            "positive_count": 0,
+            "record_count": 4,
+            "schema_outcomes": {
+              "invalid": 0,
+              "not_returned": 0,
+              "valid": 4
+            },
+            "source_count": 4,
+            "success_count": 4,
+            "total_count": 4,
+            "usage": {
+              "cache_accounted_calls": 22,
+              "cache_usage_complete": true,
+              "calls": 22,
+              "calls_with_usage": 22,
+              "completion_tokens": 7753,
+              "prompt_cache_hit_tokens": 16512,
+              "prompt_cache_miss_tokens": 15350,
+              "prompt_tokens": 31862,
+              "reasoning_accounted_calls": 1,
+              "reasoning_tokens": 709,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 39615,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 0,
+              "SUPPORTED": 31,
+              "UNSUPPORTED": 1
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "llama-2-13b-chat": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 5,
+                "numerator": 4,
+                "value": 0.8
+              },
+              "answered_count": 5,
+              "answered_negative_count": 1,
+              "answered_positive_count": 4,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 9,
+                "numerator": 8,
+                "value": 0.8888888888888888
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 4,
+                "value": 0.8
+              },
+              "recall": {
+                "denominator": 4,
+                "numerator": 4,
+                "value": 1.0
+              }
+            },
+            "citations": {
+              "checked_citation_count": 49,
+              "citation_count": 49,
+              "exact_substring_rate": {
+                "denominator": 49,
+                "numerator": 49,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 6,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 49
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 1,
+              "negative_failures": 0,
+              "positive_failures": 1,
+              "tn": 0,
+              "tp": 4
+            },
+            "conservative_confusion": {
+              "fn": 1,
+              "fp": 1,
+              "tn": 0,
+              "tp": 4
+            },
+            "context_validation_recorded_count": 6,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.064738824,
+              "known_usage_amount": 0.064738824,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 6,
+              "numerator": 5,
+              "value": 0.8333333333333334
+            },
+            "detection_f1": {
+              "denominator": 10,
+              "numerator": 8,
+              "value": 0.8
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 6,
+              "numerator": 4,
+              "value": 0.6666666666666666
+            },
+            "error_count": 1,
+            "failure_counts": {
+              "invalid_schema": 1
+            },
+            "latency": {
+              "mean_seconds": 27.12249999999767,
+              "measured_count": 6,
+              "p50_seconds": 19.92200000002049,
+              "p95_seconds": 55.875,
+              "total_recorded_seconds": 162.73499999998603,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 1,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 5,
+            "record_count": 6,
+            "schema_outcomes": {
+              "invalid": 1,
+              "not_returned": 0,
+              "valid": 5
+            },
+            "source_count": 6,
+            "success_count": 5,
+            "total_count": 6,
+            "usage": {
+              "cache_accounted_calls": 74,
+              "cache_usage_complete": true,
+              "calls": 74,
+              "calls_with_usage": 74,
+              "completion_tokens": 40855,
+              "prompt_cache_hit_tokens": 82304,
+              "prompt_cache_miss_tokens": 50730,
+              "prompt_tokens": 133034,
+              "reasoning_accounted_calls": 21,
+              "reasoning_tokens": 20302,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 173889,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 3,
+              "SUPPORTED": 23,
+              "UNSUPPORTED": 14
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "llama-2-70b-chat": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 6,
+                "numerator": 3,
+                "value": 0.5
+              },
+              "answered_count": 6,
+              "answered_negative_count": 4,
+              "answered_positive_count": 2,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 5,
+                "numerator": 2,
+                "value": 0.4
+              },
+              "precision": {
+                "denominator": 3,
+                "numerator": 1,
+                "value": 0.3333333333333333
+              },
+              "recall": {
+                "denominator": 2,
+                "numerator": 1,
+                "value": 0.5
+              }
+            },
+            "citations": {
+              "checked_citation_count": 48,
+              "citation_count": 48,
+              "exact_substring_rate": {
+                "denominator": 48,
+                "numerator": 48,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 7,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 48
+            },
+            "confusion": {
+              "fn": 1,
+              "fp": 2,
+              "negative_failures": 1,
+              "positive_failures": 0,
+              "tn": 2,
+              "tp": 1
+            },
+            "conservative_confusion": {
+              "fn": 1,
+              "fp": 3,
+              "tn": 2,
+              "tp": 1
+            },
+            "context_validation_recorded_count": 7,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.039135636,
+              "known_usage_amount": 0.039135636,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 7,
+              "numerator": 6,
+              "value": 0.8571428571428571
+            },
+            "detection_f1": {
+              "denominator": 6,
+              "numerator": 2,
+              "value": 0.3333333333333333
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 1,
+            "end_to_end_accuracy": {
+              "denominator": 7,
+              "numerator": 3,
+              "value": 0.42857142857142855
+            },
+            "error_count": 1,
+            "failure_counts": {
+              "invalid_schema": 1
+            },
+            "latency": {
+              "mean_seconds": 16.609714285703376,
+              "measured_count": 7,
+              "p50_seconds": 18.56299999996554,
+              "p95_seconds": 27.18799999996554,
+              "total_recorded_seconds": 116.26799999992363,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 5,
+            "nonempty_answer_empty_claims": 1,
+            "positive_count": 2,
+            "record_count": 7,
+            "schema_outcomes": {
+              "invalid": 1,
+              "not_returned": 0,
+              "valid": 6
+            },
+            "source_count": 7,
+            "success_count": 6,
+            "total_count": 7,
+            "usage": {
+              "cache_accounted_calls": 53,
+              "cache_usage_complete": true,
+              "calls": 53,
+              "calls_with_usage": 53,
+              "completion_tokens": 22138,
+              "prompt_cache_hit_tokens": 48256,
+              "prompt_cache_miss_tokens": 40935,
+              "prompt_tokens": 89191,
+              "reasoning_accounted_calls": 16,
+              "reasoning_tokens": 7496,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 111329,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 0,
+              "SUPPORTED": 19,
+              "UNSUPPORTED": 11
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "llama-2-7b-chat": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 6,
+                "numerator": 3,
+                "value": 0.5
+              },
+              "answered_count": 6,
+              "answered_negative_count": 4,
+              "answered_positive_count": 2,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 7,
+                "numerator": 4,
+                "value": 0.5714285714285714
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 2,
+                "value": 0.4
+              },
+              "recall": {
+                "denominator": 2,
+                "numerator": 2,
+                "value": 1.0
+              }
+            },
+            "citations": {
+              "checked_citation_count": 39,
+              "citation_count": 39,
+              "exact_substring_rate": {
+                "denominator": 39,
+                "numerator": 39,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 6,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 39
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 3,
+              "negative_failures": 0,
+              "positive_failures": 0,
+              "tn": 1,
+              "tp": 2
+            },
+            "conservative_confusion": {
+              "fn": 0,
+              "fp": 3,
+              "tn": 1,
+              "tp": 2
+            },
+            "context_validation_recorded_count": 6,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.059721276,
+              "known_usage_amount": 0.059721276,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 6,
+              "numerator": 6,
+              "value": 1.0
+            },
+            "detection_f1": {
+              "denominator": 7,
+              "numerator": 4,
+              "value": 0.5714285714285714
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 6,
+              "numerator": 3,
+              "value": 0.5
+            },
+            "error_count": 0,
+            "failure_counts": {},
+            "latency": {
+              "mean_seconds": 30.382833333317347,
+              "measured_count": 6,
+              "p50_seconds": 19.14000000001397,
+              "p95_seconds": 61.76599999994505,
+              "total_recorded_seconds": 182.29699999990407,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 4,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 2,
+            "record_count": 6,
+            "schema_outcomes": {
+              "invalid": 0,
+              "not_returned": 0,
+              "valid": 6
+            },
+            "source_count": 6,
+            "success_count": 6,
+            "total_count": 6,
+            "usage": {
+              "cache_accounted_calls": 57,
+              "cache_usage_complete": true,
+              "calls": 57,
+              "calls_with_usage": 57,
+              "completion_tokens": 40372,
+              "prompt_cache_hit_tokens": 48896,
+              "prompt_cache_miss_tokens": 36605,
+              "prompt_tokens": 85501,
+              "reasoning_accounted_calls": 13,
+              "reasoning_tokens": 24252,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 125873,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 2,
+              "SUPPORTED": 28,
+              "UNSUPPORTED": 9
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "mistral-7B-instruct": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 5,
+                "numerator": 3,
+                "value": 0.6
+              },
+              "answered_count": 5,
+              "answered_negative_count": 2,
+              "answered_positive_count": 3,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 8,
+                "numerator": 6,
+                "value": 0.75
+              },
+              "precision": {
+                "denominator": 5,
+                "numerator": 3,
+                "value": 0.6
+              },
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "value": 1.0
+              }
+            },
+            "citations": {
+              "checked_citation_count": 78,
+              "citation_count": 78,
+              "exact_substring_rate": {
+                "denominator": 78,
+                "numerator": 78,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 6,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 78
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 2,
+              "negative_failures": 0,
+              "positive_failures": 1,
+              "tn": 0,
+              "tp": 3
+            },
+            "conservative_confusion": {
+              "fn": 1,
+              "fp": 2,
+              "tn": 0,
+              "tp": 3
+            },
+            "context_validation_recorded_count": 6,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.044200199999999995,
+              "known_usage_amount": 0.044200199999999995,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 6,
+              "numerator": 5,
+              "value": 0.8333333333333334
+            },
+            "detection_f1": {
+              "denominator": 9,
+              "numerator": 6,
+              "value": 0.6666666666666666
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 6,
+              "numerator": 3,
+              "value": 0.5
+            },
+            "error_count": 1,
+            "failure_counts": {
+              "invalid_schema": 1
+            },
+            "latency": {
+              "mean_seconds": 17.802000000005744,
+              "measured_count": 6,
+              "p50_seconds": 15.25,
+              "p95_seconds": 29.0,
+              "total_recorded_seconds": 106.81200000003446,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 2,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 4,
+            "record_count": 6,
+            "schema_outcomes": {
+              "invalid": 1,
+              "not_returned": 0,
+              "valid": 5
+            },
+            "source_count": 6,
+            "success_count": 5,
+            "total_count": 6,
+            "usage": {
+              "cache_accounted_calls": 53,
+              "cache_usage_complete": true,
+              "calls": 53,
+              "calls_with_usage": 53,
+              "completion_tokens": 25967,
+              "prompt_cache_hit_tokens": 51200,
+              "prompt_cache_miss_tokens": 42442,
+              "prompt_tokens": 93642,
+              "reasoning_accounted_calls": 13,
+              "reasoning_tokens": 7149,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 119609,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 6,
+              "SUPPORTED": 21,
+              "UNSUPPORTED": 10
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          }
+        },
+        "by_task": {
+          "Data2txt": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 7,
+                "numerator": 7,
+                "value": 1.0
+              },
+              "answered_count": 7,
+              "answered_negative_count": 1,
+              "answered_positive_count": 6,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 12,
+                "numerator": 12,
+                "value": 1.0
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 6,
+                "value": 1.0
+              },
+              "recall": {
+                "denominator": 6,
+                "numerator": 6,
+                "value": 1.0
+              }
+            },
+            "citations": {
+              "checked_citation_count": 187,
+              "citation_count": 187,
+              "exact_substring_rate": {
+                "denominator": 187,
+                "numerator": 187,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 10,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 187
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 0,
+              "negative_failures": 0,
+              "positive_failures": 3,
+              "tn": 1,
+              "tp": 6
+            },
+            "conservative_confusion": {
+              "fn": 3,
+              "fp": 0,
+              "tn": 1,
+              "tp": 6
+            },
+            "context_validation_recorded_count": 10,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.128865024,
+              "known_usage_amount": 0.128865024,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 10,
+              "numerator": 7,
+              "value": 0.7
+            },
+            "detection_f1": {
+              "denominator": 15,
+              "numerator": 12,
+              "value": 0.8
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 10,
+              "numerator": 7,
+              "value": 0.7
+            },
+            "error_count": 3,
+            "failure_counts": {
+              "invalid_schema": 3
+            },
+            "latency": {
+              "mean_seconds": 30.51720000000205,
+              "measured_count": 10,
+              "p50_seconds": 18.875,
+              "p95_seconds": 61.76599999994505,
+              "total_recorded_seconds": 305.1720000000205,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 1,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 9,
+            "record_count": 10,
+            "schema_outcomes": {
+              "invalid": 3,
+              "not_returned": 0,
+              "valid": 7
+            },
+            "source_count": 10,
+            "success_count": 7,
+            "total_count": 10,
+            "usage": {
+              "cache_accounted_calls": 136,
+              "cache_usage_complete": true,
+              "calls": 136,
+              "calls_with_usage": 136,
+              "completion_tokens": 81367,
+              "prompt_cache_hit_tokens": 149504,
+              "prompt_cache_miss_tokens": 101092,
+              "prompt_tokens": 250596,
+              "reasoning_accounted_calls": 35,
+              "reasoning_tokens": 38594,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 331963,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 9,
+              "SUPPORTED": 59,
+              "UNSUPPORTED": 21
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "QA": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 10,
+                "numerator": 4,
+                "value": 0.4
+              },
+              "answered_count": 10,
+              "answered_negative_count": 8,
+              "answered_positive_count": 2,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 8,
+                "numerator": 2,
+                "value": 0.25
+              },
+              "precision": {
+                "denominator": 6,
+                "numerator": 1,
+                "value": 0.16666666666666666
+              },
+              "recall": {
+                "denominator": 2,
+                "numerator": 1,
+                "value": 0.5
+              }
+            },
+            "citations": {
+              "checked_citation_count": 30,
+              "citation_count": 30,
+              "exact_substring_rate": {
+                "denominator": 30,
+                "numerator": 30,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 10,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 30
+            },
+            "confusion": {
+              "fn": 1,
+              "fp": 5,
+              "negative_failures": 0,
+              "positive_failures": 0,
+              "tn": 3,
+              "tp": 1
+            },
+            "conservative_confusion": {
+              "fn": 1,
+              "fp": 5,
+              "tn": 3,
+              "tp": 1
+            },
+            "context_validation_recorded_count": 10,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.05341412399999999,
+              "known_usage_amount": 0.05341412399999999,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 10,
+              "numerator": 10,
+              "value": 1.0
+            },
+            "detection_f1": {
+              "denominator": 8,
+              "numerator": 2,
+              "value": 0.25
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 2,
+            "end_to_end_accuracy": {
+              "denominator": 10,
+              "numerator": 4,
+              "value": 0.4
+            },
+            "error_count": 0,
+            "failure_counts": {},
+            "latency": {
+              "mean_seconds": 19.046899999992455,
+              "measured_count": 10,
+              "p50_seconds": 18.56299999996554,
+              "p95_seconds": 57.09400000004098,
+              "total_recorded_seconds": 190.46899999992456,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 8,
+            "nonempty_answer_empty_claims": 2,
+            "positive_count": 2,
+            "record_count": 10,
+            "schema_outcomes": {
+              "invalid": 0,
+              "not_returned": 0,
+              "valid": 10
+            },
+            "source_count": 10,
+            "success_count": 10,
+            "total_count": 10,
+            "usage": {
+              "cache_accounted_calls": 66,
+              "cache_usage_complete": true,
+              "calls": 66,
+              "calls_with_usage": 66,
+              "completion_tokens": 34324,
+              "prompt_cache_hit_tokens": 50304,
+              "prompt_cache_miss_tokens": 39745,
+              "prompt_tokens": 90049,
+              "reasoning_accounted_calls": 15,
+              "reasoning_tokens": 16507,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 124373,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 1,
+              "SUPPORTED": 23,
+              "UNSUPPORTED": 11
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          },
+          "Summary": {
+            "answered_only": {
+              "accuracy": {
+                "denominator": 9,
+                "numerator": 5,
+                "value": 0.5555555555555556
+              },
+              "answered_count": 9,
+              "answered_negative_count": 6,
+              "answered_positive_count": 3,
+              "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+              "f1": {
+                "denominator": 10,
+                "numerator": 6,
+                "value": 0.6
+              },
+              "precision": {
+                "denominator": 7,
+                "numerator": 3,
+                "value": 0.42857142857142855
+              },
+              "recall": {
+                "denominator": 3,
+                "numerator": 3,
+                "value": 1.0
+              }
+            },
+            "citations": {
+              "checked_citation_count": 72,
+              "citation_count": 72,
+              "exact_substring_rate": {
+                "denominator": 72,
+                "numerator": 72,
+                "value": 1.0
+              },
+              "records_with_diagnostics": 10,
+              "records_without_diagnostics": 0,
+              "valid_exact_citation_count": 72
+            },
+            "confusion": {
+              "fn": 0,
+              "fp": 4,
+              "negative_failures": 1,
+              "positive_failures": 0,
+              "tn": 2,
+              "tp": 3
+            },
+            "conservative_confusion": {
+              "fn": 0,
+              "fp": 5,
+              "tn": 2,
+              "tp": 3
+            },
+            "context_validation_recorded_count": 10,
+            "cost": {
+              "complete": true,
+              "currency": "USD",
+              "estimated_amount": 0.052959912,
+              "known_usage_amount": 0.052959912,
+              "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+              "prices": {
+                "cached_input_per_million": 0.006,
+                "currency": "USD",
+                "input_per_million": 0.3,
+                "output_per_million": 1.2,
+                "reference": "fixed prior experiment reference, not current pricing or billing"
+              }
+            },
+            "coverage": {
+              "denominator": 10,
+              "numerator": 9,
+              "value": 0.9
+            },
+            "detection_f1": {
+              "denominator": 11,
+              "numerator": 6,
+              "value": 0.5454545454545454
+            },
+            "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+            "empty_answer_empty_claims": 0,
+            "empty_claims_answer_length_unknown": 0,
+            "empty_claims_count": 0,
+            "end_to_end_accuracy": {
+              "denominator": 10,
+              "numerator": 5,
+              "value": 0.5
+            },
+            "error_count": 1,
+            "failure_counts": {
+              "invalid_schema": 1
+            },
+            "latency": {
+              "mean_seconds": 14.696999999997207,
+              "measured_count": 10,
+              "p50_seconds": 13.984000000054948,
+              "p95_seconds": 24.56299999996554,
+              "total_recorded_seconds": 146.96999999997206,
+              "unknown_count": 0
+            },
+            "missing_record_count": 0,
+            "negative_count": 7,
+            "nonempty_answer_empty_claims": 0,
+            "positive_count": 3,
+            "record_count": 10,
+            "schema_outcomes": {
+              "invalid": 1,
+              "not_returned": 0,
+              "valid": 9
+            },
+            "source_count": 10,
+            "success_count": 9,
+            "total_count": 10,
+            "usage": {
+              "cache_accounted_calls": 70,
+              "cache_usage_complete": true,
+              "calls": 70,
+              "calls_with_usage": 70,
+              "completion_tokens": 29758,
+              "prompt_cache_hit_tokens": 58752,
+              "prompt_cache_miss_tokens": 56326,
+              "prompt_tokens": 115078,
+              "reasoning_accounted_calls": 15,
+              "reasoning_tokens": 8319,
+              "reasoning_usage_complete": false,
+              "records_missing_telemetry": 0,
+              "total_tokens": 144836,
+              "usage_complete": true
+            },
+            "verdict_counts": {
+              "CONTRADICTED": 1,
+              "SUPPORTED": 40,
+              "UNSUPPORTED": 13
+            },
+            "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+          }
+        },
+        "citations": {
+          "checked_citation_count": 289,
+          "citation_count": 289,
+          "exact_substring_rate": {
+            "denominator": 289,
+            "numerator": 289,
+            "value": 1.0
+          },
+          "records_with_diagnostics": 30,
+          "records_without_diagnostics": 0,
+          "valid_exact_citation_count": 289
+        },
+        "confusion": {
+          "fn": 1,
+          "fp": 9,
+          "negative_failures": 1,
+          "positive_failures": 3,
+          "tn": 6,
+          "tp": 10
+        },
+        "conservative_confusion": {
+          "fn": 4,
+          "fp": 10,
+          "tn": 6,
+          "tp": 10
+        },
+        "context_validation_recorded_count": 30,
+        "cost": {
+          "complete": true,
+          "currency": "USD",
+          "estimated_amount": 0.23523906,
+          "known_usage_amount": 0.23523906,
+          "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+          "prices": {
+            "cached_input_per_million": 0.006,
+            "currency": "USD",
+            "input_per_million": 0.3,
+            "output_per_million": 1.2,
+            "reference": "fixed prior experiment reference, not current pricing or billing"
+          }
+        },
+        "coverage": {
+          "denominator": 30,
+          "numerator": 26,
+          "value": 0.8666666666666667
+        },
+        "detection_f1": {
+          "denominator": 34,
+          "numerator": 20,
+          "value": 0.5882352941176471
+        },
+        "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+        "empty_answer_empty_claims": 0,
+        "empty_claims_answer_length_unknown": 0,
+        "empty_claims_count": 2,
+        "end_to_end_accuracy": {
+          "denominator": 30,
+          "numerator": 16,
+          "value": 0.5333333333333333
+        },
+        "error_count": 4,
+        "failure_counts": {
+          "invalid_schema": 4
+        },
+        "latency": {
+          "mean_seconds": 21.420366666663902,
+          "measured_count": 30,
+          "p50_seconds": 18.18799999996554,
+          "p95_seconds": 57.09400000004098,
+          "total_recorded_seconds": 642.6109999999171,
+          "unknown_count": 0
+        },
+        "missing_record_count": 0,
+        "negative_count": 16,
+        "nonempty_answer_empty_claims": 2,
+        "positive_count": 14,
+        "record_count": 30,
+        "schema_outcomes": {
+          "invalid": 4,
+          "not_returned": 0,
+          "valid": 26
+        },
+        "source_count": 30,
+        "success_count": 26,
+        "total_count": 30,
+        "usage": {
+          "cache_accounted_calls": 272,
+          "cache_usage_complete": true,
+          "calls": 272,
+          "calls_with_usage": 272,
+          "completion_tokens": 145449,
+          "prompt_cache_hit_tokens": 258560,
+          "prompt_cache_miss_tokens": 197163,
+          "prompt_tokens": 455723,
+          "reasoning_accounted_calls": 65,
+          "reasoning_tokens": 63420,
+          "reasoning_usage_complete": false,
+          "records_missing_telemetry": 0,
+          "total_tokens": 601172,
+          "usage_complete": true
+        },
+        "verdict_counts": {
+          "CONTRADICTED": 11,
+          "SUPPORTED": 122,
+          "UNSUPPORTED": 45
+        },
+        "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+      }
+    },
+    "case_results": [
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "gpt-4-0613",
+        "id": "10014",
+        "schema_outcome": "valid",
+        "source_id": "14769",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "12023",
+        "schema_outcome": "valid",
+        "source_id": "14319",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "13941",
+        "schema_outcome": "valid",
+        "source_id": "15243",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "mistral-7B-instruct",
+        "id": "14054",
+        "schema_outcome": "valid",
+        "source_id": "15262",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "14367",
+        "schema_outcome": "valid",
+        "source_id": "15315",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "15195",
+        "schema_outcome": "valid",
+        "source_id": "15453",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "15935",
+        "schema_outcome": "valid",
+        "source_id": "15577",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-13b-chat",
+        "id": "16150",
+        "schema_outcome": "valid",
+        "source_id": "12182",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "16421",
+        "schema_outcome": "valid",
+        "source_id": "12228",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": false,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "gpt-4-0613",
+        "id": "16452",
+        "schema_outcome": "valid",
+        "source_id": "12234",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "17517",
+        "schema_outcome": "valid",
+        "source_id": "12414",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "QA",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-13b-chat",
+        "id": "2374",
+        "schema_outcome": "valid",
+        "source_id": "11860",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "27",
+        "schema_outcome": "valid",
+        "source_id": "15596",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "gpt-4-0613",
+        "id": "2736",
+        "schema_outcome": "valid",
+        "source_id": "11922",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": "invalid_schema",
+        "generator": "llama-2-70b-chat",
+        "id": "3251",
+        "schema_outcome": "invalid",
+        "source_id": "12008",
+        "structural_errors": [
+          "prediction must have exactly the claims field"
+        ],
+        "success": false,
+        "task_type": "Summary",
+        "y_pred": null,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "3641",
+        "schema_outcome": "valid",
+        "source_id": "12073",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-13b-chat",
+        "id": "46",
+        "schema_outcome": "valid",
+        "source_id": "15599",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "gpt-4-0613",
+        "id": "5058",
+        "schema_outcome": "valid",
+        "source_id": "13499",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "mistral-7B-instruct",
+        "id": "5084",
+        "schema_outcome": "valid",
+        "source_id": "13503",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "5567",
+        "schema_outcome": "valid",
+        "source_id": "13583",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": false,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "mistral-7B-instruct",
+        "id": "5684",
+        "schema_outcome": "valid",
+        "source_id": "13603",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": "invalid_schema",
+        "generator": "gpt-3.5-turbo-0613",
+        "id": "5851",
+        "schema_outcome": "invalid",
+        "source_id": "13637",
+        "structural_errors": [
+          "prediction must have exactly the claims field"
+        ],
+        "success": false,
+        "task_type": "Data2txt",
+        "y_pred": null,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "mistral-7B-instruct",
+        "id": "644",
+        "schema_outcome": "valid",
+        "source_id": "15700",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Summary",
+        "y_pred": true,
+        "y_true": false
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-70b-chat",
+        "id": "7919",
+        "schema_outcome": "valid",
+        "source_id": "14194",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": "invalid_schema",
+        "generator": "mistral-7B-instruct",
+        "id": "8474",
+        "schema_outcome": "invalid",
+        "source_id": "14498",
+        "structural_errors": [
+          "prediction must have exactly the claims field"
+        ],
+        "success": false,
+        "task_type": "Data2txt",
+        "y_pred": null,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "mistral-7B-instruct",
+        "id": "9080",
+        "schema_outcome": "valid",
+        "source_id": "14605",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": "invalid_schema",
+        "generator": "llama-2-13b-chat",
+        "id": "9526",
+        "schema_outcome": "invalid",
+        "source_id": "14680",
+        "structural_errors": [
+          "prediction must have exactly the claims field"
+        ],
+        "success": false,
+        "task_type": "Data2txt",
+        "y_pred": null,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-13b-chat",
+        "id": "9586",
+        "schema_outcome": "valid",
+        "source_id": "14690",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-7b-chat",
+        "id": "9603",
+        "schema_outcome": "valid",
+        "source_id": "14694",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      },
+      {
+        "backend": "optimized-v4.0",
+        "failure": null,
+        "generator": "llama-2-13b-chat",
+        "id": "9730",
+        "schema_outcome": "valid",
+        "source_id": "14719",
+        "structural_errors": [],
+        "success": true,
+        "task_type": "Data2txt",
+        "y_pred": true,
+        "y_true": true
+      }
+    ],
+    "expected_record_count": 30,
+    "gold_has_hallucination_disagreements": 0,
+    "gold_positive_rule": "len(labels) > 0; no annotation types excluded",
+    "limitations": [
+      "This is response-level hallucination detection on RAGTruth native labels, not an official span-localization score or atomic-claim accuracy. No complete atomic-claim gold is available.",
+      "Native gold is positive exactly when labels is nonempty, including implicit_true and due_to_null annotations. Unmarked answer text is never converted into SUPPORTED claim gold.",
+      "A valid response predicts positive if any claim is CONTRADICTED or UNSUPPORTED. A valid empty claims array predicts negative, including for a nonempty answer. Native detection does not measure claim extraction coverage.",
+      "Answered-only precision, recall, F1 and accuracy condition on successful outputs. Request errors, malformed outputs and missing records remain in all-case coverage and end-to-end denominators; they are never treated as clean responses.",
+      "The primary detection_f1 is an explicit pessimistic lower bound, not an official score: positive failures add false negatives and negative failures add false positives. Every failure is incorrect for end_to_end_accuracy.",
+      "SUPPORTED / CONTRADICTED / UNSUPPORTED counts are an output distribution, not three-class classification accuracy. Exact citation substring validity is a mechanical check, not semantic citation quality.",
+      "Scoring checks output structure independently. Source-dependent schema and exact-substring checks use runner-recorded diagnostics; absent diagnostics are reported as unknown and cannot be reconstructed without source text.",
+      "Confidence intervals use percentile bootstrap resampling of whole source_id clusters, retaining all responses and backends for a sampled source. They do not isolate model sampling or API variation; undefined F1 replicates are reported and excluded from its percentile interval.",
+      "Usage and latency include recorded failed attempts. Missing telemetry is unknown, not zero. Cost uses explicitly supplied prices and recorded usage, not provider billing."
+    ],
+    "manifest_count": 30,
+    "overall": {
+      "answered_only": {
+        "accuracy": {
+          "denominator": 26,
+          "numerator": 16,
+          "value": 0.6153846153846154
+        },
+        "answered_count": 26,
+        "answered_negative_count": 15,
+        "answered_positive_count": 11,
+        "denominator_scope": "Only successful schema-valid predictions; failures excluded from these conditional metrics.",
+        "f1": {
+          "denominator": 30,
+          "numerator": 20,
+          "value": 0.6666666666666666
+        },
+        "precision": {
+          "denominator": 19,
+          "numerator": 10,
+          "value": 0.5263157894736842
+        },
+        "recall": {
+          "denominator": 11,
+          "numerator": 10,
+          "value": 0.9090909090909091
+        }
+      },
+      "bootstrap": {
+        "cluster_count": 30,
+        "cluster_key": "source_id",
+        "confidence_level": 0.95,
+        "detection_f1": {
+          "defined_replicates": 2000,
+          "high": 0.7619047619047619,
+          "low": 0.363474025974026,
+          "point_estimate": 0.5882352941176471,
+          "undefined_replicates": 0
+        },
+        "end_to_end_accuracy": {
+          "defined_replicates": 2000,
+          "high": 0.7,
+          "low": 0.36666666666666664,
+          "point_estimate": 0.5333333333333333,
+          "undefined_replicates": 0
+        },
+        "method": "source_cluster_percentile",
+        "resampling_unit": "whole source with all responses and backends",
+        "samples": 2000,
+        "seed": 20261023
+      },
+      "citations": {
+        "checked_citation_count": 289,
+        "citation_count": 289,
+        "exact_substring_rate": {
+          "denominator": 289,
+          "numerator": 289,
+          "value": 1.0
+        },
+        "records_with_diagnostics": 30,
+        "records_without_diagnostics": 0,
+        "valid_exact_citation_count": 289
+      },
+      "confusion": {
+        "fn": 1,
+        "fp": 9,
+        "negative_failures": 1,
+        "positive_failures": 3,
+        "tn": 6,
+        "tp": 10
+      },
+      "conservative_confusion": {
+        "fn": 4,
+        "fp": 10,
+        "tn": 6,
+        "tp": 10
+      },
+      "context_validation_recorded_count": 30,
+      "cost": {
+        "complete": true,
+        "currency": "USD",
+        "estimated_amount": 0.23523906,
+        "known_usage_amount": 0.23523906,
+        "note": "Provider billing is not queried. Prices must be supplied explicitly; missing usage prevents a complete estimate. Without a cached price all input is charged at the supplied input rate.",
+        "prices": {
+          "cached_input_per_million": 0.006,
+          "currency": "USD",
+          "input_per_million": 0.3,
+          "output_per_million": 1.2,
+          "reference": "fixed prior experiment reference, not current pricing or billing"
+        }
+      },
+      "coverage": {
+        "denominator": 30,
+        "numerator": 26,
+        "value": 0.8666666666666667
+      },
+      "detection_f1": {
+        "denominator": 34,
+        "numerator": 20,
+        "value": 0.5882352941176471
+      },
+      "detection_f1_kind": "pessimistic_failure_lower_bound_not_official",
+      "empty_answer_empty_claims": 0,
+      "empty_claims_answer_length_unknown": 0,
+      "empty_claims_count": 2,
+      "end_to_end_accuracy": {
+        "denominator": 30,
+        "numerator": 16,
+        "value": 0.5333333333333333
+      },
+      "error_count": 4,
+      "failure_counts": {
+        "invalid_schema": 4
+      },
+      "latency": {
+        "mean_seconds": 21.420366666663902,
+        "measured_count": 30,
+        "p50_seconds": 18.18799999996554,
+        "p95_seconds": 57.09400000004098,
+        "total_recorded_seconds": 642.6109999999171,
+        "unknown_count": 0
+      },
+      "missing_record_count": 0,
+      "negative_count": 16,
+      "nonempty_answer_empty_claims": 2,
+      "positive_count": 14,
+      "record_count": 30,
+      "schema_outcomes": {
+        "invalid": 4,
+        "not_returned": 0,
+        "valid": 26
+      },
+      "source_count": 30,
+      "success_count": 26,
+      "total_count": 30,
+      "usage": {
+        "cache_accounted_calls": 272,
+        "cache_usage_complete": true,
+        "calls": 272,
+        "calls_with_usage": 272,
+        "completion_tokens": 145449,
+        "prompt_cache_hit_tokens": 258560,
+        "prompt_cache_miss_tokens": 197163,
+        "prompt_tokens": 455723,
+        "reasoning_accounted_calls": 65,
+        "reasoning_tokens": 63420,
+        "reasoning_usage_complete": false,
+        "records_missing_telemetry": 0,
+        "total_tokens": 601172,
+        "usage_complete": true
+      },
+      "verdict_counts": {
+        "CONTRADICTED": 11,
+        "SUPPORTED": 122,
+        "UNSUPPORTED": 45
+      },
+      "verdict_counts_scope": "Output distribution on successful predictions, not classification accuracy."
+    },
+    "paired_comparisons": {},
+    "prediction_positive_rule": "any valid claim verdict in {CONTRADICTED, UNSUPPORTED}",
+    "schema_version": "ragtruth-response-detection-v1",
+    "task": "response_level_hallucination_detection",
+    "zero_denominator_policy": "undefined ratios are null"
+  },
+  "manifest_count": 30,
+  "overall": {
+    "claim_completion_known_cases": {
+      "denominator": 231,
+      "numerator": 223,
+      "value": 0.9653679653679653
+    },
+    "complete_case_rate": {
+      "denominator": 30,
+      "numerator": 26,
+      "value": 0.8666666666666667
+    },
+    "completed_claim_count": 223,
+    "confusion": {
+      "fn": 1,
+      "fp": 10,
+      "tn": 6,
+      "tp": 13,
+      "unknown_negative": 0,
+      "unknown_positive": 0
+    },
+    "correct_decisions_per_all_cases": {
+      "denominator": 30,
+      "numerator": 19,
+      "value": 0.6333333333333333
+    },
+    "decision_coverage": {
+      "denominator": 30,
+      "numerator": 30,
+      "value": 1.0
+    },
+    "empty_claims_count": 2,
+    "known_failed_claim_count": 8,
+    "native_fn_zero_target": "not_met",
+    "native_fn_zero_target_policy": "Requires at least one native positive and no FN or unresolved native positive; unknown cannot manufacture FN=0",
+    "nonempty_answer_empty_claims_count": 2,
+    "resolved_only": {
+      "accuracy": {
+        "denominator": 30,
+        "numerator": 19,
+        "value": 0.6333333333333333
+      },
+      "f1": {
+        "denominator": 37,
+        "numerator": 26,
+        "value": 0.7027027027027027
+      },
+      "precision": {
+        "denominator": 23,
+        "numerator": 13,
+        "value": 0.5652173913043478
+      },
+      "recall": {
+        "denominator": 14,
+        "numerator": 13,
+        "value": 0.9285714285714286
+      }
+    },
+    "status_counts": {
+      "complete": 26,
+      "partial": 4
+    },
+    "technical_failure_rate": {
+      "denominator": 30,
+      "numerator": 4,
+      "value": 0.13333333333333333
+    },
+    "total_count": 30,
+    "unknown_claim_total_case_count": 0
+  },
+  "partial_aware_bootstrap": {
+    "backends": {
+      "optimized-v4.0": {
+        "correct_decisions_per_all_cases": {
+          "defined_replicates": 2000,
+          "high": 0.8,
+          "low": 0.4666666666666667,
+          "point_estimate": 0.6333333333333333,
+          "undefined_replicates": 0
+        },
+        "decision_coverage": {
+          "defined_replicates": 2000,
+          "high": 1.0,
+          "low": 1.0,
+          "point_estimate": 1.0,
+          "undefined_replicates": 0
+        },
+        "resolved_f1": {
+          "defined_replicates": 2000,
+          "high": 0.8444444444444444,
+          "low": 0.5,
+          "point_estimate": 0.7027027027027027,
+          "undefined_replicates": 0
+        }
+      }
+    },
+    "cluster_count": 30,
+    "conditional_metric_warning": "Resolved F1 may condition on different cases; read joint coverage and all-case decision yield",
+    "method": "pooled_source_cluster_percentile",
+    "paired": {},
+    "samples": 2000,
+    "seed": 20261023
+  },
+  "policy": {
+    "claim_coverage": "completed/(completed+failed) only where extraction total is known; other cases counted separately",
+    "human_adjudication": "separate report only; never replaces native labels",
+    "native_claim_accuracy": "not available: RAGTruth has no full claim/verdict/evidence gold",
+    "negative": "complete output without C/U",
+    "positive": "any completed valid C/U claim",
+    "resolved_metrics": "conditional on resolved outputs; always read with decision coverage and unknown counts",
+    "unknown": "partial all-S or execution/contract failure; never TN or FN"
+  },
+  "qualification": "Exploratory 30 disjoint from known source registry; literature exposure remains unresolved, untouched status not certified; not formal v2 acceptance or a paired comparison",
+  "runtime": {
+    "by_variant_execution_order": {},
+    "error_codes": {},
+    "mean_latency_seconds": 21.420366666663902,
+    "p95_latency_seconds": 57.09400000004098,
+    "record_count": 30,
+    "reference_cost": {
+      "cache_standardized_all_miss_known_subtotal": 0.3112556999999998,
+      "cache_standardized_all_miss_total": 0.3112556999999998,
+      "cache_standardized_priced_calls": 272,
+      "cache_standardized_unpriced_calls": 0,
+      "complete": true,
+      "estimated_total": 0.23523905999999997,
+      "known_usage_subtotal": 0.23523905999999997,
+      "note": "Fixed reference prices, not provider billing. Unpriced calls are excluded from subtotals. All-miss pricing holds cache treatment constant; it is not an actual bill.",
+      "priced_calls": 272,
+      "reference_prices": {
+        "cached_input_per_million": 0.006,
+        "currency": "USD",
+        "input_per_million": 0.3,
+        "output_per_million": 1.2,
+        "reference": "fixed prior experiment reference, not current pricing or billing"
+      },
+      "unpriced_calls": 0
+    },
+    "returned_models": {
+      "deepseek-flash": 272
+    },
+    "returned_system_fingerprints": {
+      "e72d3c7f663d3e1383b00b3884cb4501": 272
+    },
+    "stage_calls": {
+      "decompose": 35,
+      "decompose_repair_1": 23,
+      "unsupported_review": 65,
+      "verify": 98,
+      "verify_batch_retry_1": 3,
+      "verify_claim_requery": 36,
+      "verify_claim_requery_repair_1": 12
+    },
+    "summary_totals": {
+      "batch_retries": 3,
+      "citation_repairs": 0,
+      "contradiction_review_flips": 0,
+      "contradiction_review_triggers": 0,
+      "decomposition_fallback_chunks": 14,
+      "extracted_claim_count": 266,
+      "fallback_claim_count": 125,
+      "format_repairs": 35,
+      "non_factual_span_count": 47,
+      "targeted_reasks": 36,
+      "transport_retries": 0,
+      "unfinished_claims": 8,
+      "unsupported_review_flips": 6,
+      "unsupported_review_triggers": 65
+    },
+    "usage": {
+      "cache_accounted_calls": 272,
+      "cache_usage_complete": true,
+      "calls": 272,
+      "calls_missing_cache_accounting": 0,
+      "calls_missing_usage": 0,
+      "calls_with_usage": 272,
+      "completion_tokens": 145449,
+      "prompt_cache_hit_tokens": 258560,
+      "prompt_cache_miss_tokens": 197163,
+      "prompt_tokens": 455723,
+      "reasoning_accounted_calls": 65,
+      "reasoning_tokens": 63420,
+      "reasoning_usage_complete": false,
+      "total_tokens": 601172,
+      "usage_complete": true
+    }
+  },
+  "schema_version": "ragtruth-partial-detection-v4.0"
+}

@@ -1,0 +1,13 @@
+{
+  "valid": true,
+  "status": "SUCCESS",
+  "step_types": [
+    "agent_response",
+    "user_input"
+  ],
+  "model": "gemini-4-argon-high",
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "stdout_sha256": "f3319703a864ccaf851bbfa27005689b354aaea1d08551c6b9e9aa7e3c0cf810",
+  "note": "Recovered nested result object from original stdout without rerunning; final content requires independent factual review."
+}

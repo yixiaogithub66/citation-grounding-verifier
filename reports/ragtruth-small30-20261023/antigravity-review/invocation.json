@@ -1,0 +1,22 @@
+{
+  "args": [
+    "C:\\Users\\yixiao\\.gemini\\bin\\agy.exe",
+    "--new-project",
+    "--mode",
+    "plan",
+    "--model",
+    "gemini-4-argon-high",
+    "--effort",
+    "high",
+    "--print-timeout",
+    "5m",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json"
+  ],
+  "cwd": "C:\\Users\\yixiao\\AppData\\Local\\Temp\\tabby-small30-review-itu_r01h",
+  "request_sha256": "41baf2eed5cff5111241edb315555a3fadc71afbc3cc4a6722a30fe669eb67be",
+  "scope": "aggregate read-only review; no tools; no author adjudication",
+  "started_at": "2026-10-23T13:51:24.799456+00:00"
+}

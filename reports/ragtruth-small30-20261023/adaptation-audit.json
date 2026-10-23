@@ -1,0 +1,51 @@
+{
+  "schema_version": "ragtruth-small30-adaptation-audit-v1",
+  "status": "pass",
+  "created_at": "2026-10-23T13:43:04.876164+00:00",
+  "audit_script_sha256": "e93b2f903bc7cb2b68a15ba6ac7b06ddcf0ef44ca7d327ccd3facfffa8e9fd66",
+  "run_dir": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-small30-20261023",
+  "preselection_sha256": "bcd5f01b4e47eb61f66a9a4e32cfc14b7d5771c458ebd6a8eafdb7f03fc0adfa",
+  "binding_sha256": "263ed007646d2924a8d2c011874c213d1f2fb68121ddeda353bd80e90c465223",
+  "raw_files_sha256": {
+    "provenance.json": "92309765368f042c4af0b2e66a434418ecbbb1afa7f1593dca8c79ccf55f2c0d",
+    "response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+    "source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b"
+  },
+  "prepared_files_sha256": {
+    "inputs.jsonl": "445ec4e93e9bf930ab5c3b3b9963fa2c6a39c8ecfa689c8e087971d23dbe643d",
+    "manifest.jsonl": "726c841f954dec523d91357e2182981e034f916547e91fd518233328c8776a92",
+    "native_gold.jsonl": "af31668f8b859b4393608b7c183b01748da2f9b17991cdbe4d38d6d039125bcb",
+    "preparation.json": "0d13eeb910ae980d9d4889d9994e8ee731bd8496092d07dec33555d404fb0211"
+  },
+  "frozen_adapter_sha256": "3c63ebbfae5e614a7af39cf5a5c686835acba0091c5abddb3296d2206fb2368e",
+  "frozen_sampler_sha256": "0e3b928ac30d9a31f110c3cedf94fcee4d92bfd5d0212a4feb4ef6410df8b614",
+  "counts": {
+    "responses": 30,
+    "unique_sources": 30,
+    "per_task": {
+      "QA": 10,
+      "Summary": 10,
+      "Data2txt": 10
+    },
+    "known_excluded_sources": 33,
+    "overlap": 0,
+    "eligibility_exclusions": 0,
+    "structured_null_values": 25,
+    "structured_boolean_values": 150
+  },
+  "checks": {
+    "independent_hash_selection": true,
+    "frozen_adapter_reconstruction": true,
+    "answers_unchanged_utf8": true,
+    "qa_exact_contiguous_slices": true,
+    "qa_question_not_added": true,
+    "summary_exact": true,
+    "structured_json_types_preserved": true,
+    "native_annotations_preserved": true,
+    "request_has_only_contract_fields": true,
+    "no_prompt_or_gold_added_to_evidence": true
+  },
+  "not_certified_untouched": true,
+  "semantic_accuracy_evaluated": false,
+  "qualification": "Mechanical selection/adaptation integrity only; unresolved literature exposure remains. No comparison of model verdicts or semantic correctness."
+}

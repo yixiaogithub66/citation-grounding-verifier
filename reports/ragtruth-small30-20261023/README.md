@@ -1,13 +1,76 @@
-# RAGTruth exploratory 30: exposure audit
+# RAGTruth 其他来源 30 条：当前 v4 实测
 
-Audit date: 2026-10-23, Asia/Shanghai. This document records preselection exposure evidence, not evaluation results. The user authorized a separate 30-record exploratory evaluation; this is not the formal 180-record blind-v2 acceptance run.
+2026-10-23。用冻结的 `optimized-v4.0`（含 `e78fa35` NF 定位修复）和 `deepseek-flash` 完成 30 条实际推理。按原生回答级幻觉标签，正确 19/30（63.33%），检测 F1 70.27%；26 条完整、4 条部分完成、0 条整条错误。**这是当前系统在另一批小样本上的表现，不是优化前后对照，不能据此宣称泛化改善。**
 
-[exposure-audit.json](exposure-audit.json) records 9 canonical exposure ledgers, their union of **33 source IDs and 198 response IDs**, and hashes of all evidence. The sources comprise the 30 old blind-v1 test sources and three train-smoke sources (`12075`, `14808`, `15196`). All recorded smoke sources have explicit mappings. A metadata-only check of configuration, preparation and freeze files under `results`, `reports`, `dataset` and `tmp` found no additional source IDs outside this union. This local check cannot establish exposure outside these records.
+## 主要结果
 
-The cached upstream revision is `c103204b9ce28d6bbad859304bf30de72b8ed8fe`. Opaque SHA-256 checks of `source_info.jsonl`, `response.jsonl` and `provenance.json` match the original preparation. The audit did not read raw source/response text or new native labels, open new web pages or make model calls. The 13 hashed evidence files are the 9 canonical ledgers, old v1 manifest and preparation, and the two existing literature-exposure records.
+正类表示存在原生幻觉标注；系统有效 claim 中出现 C/U 即报告检测到。原生标签未改写，也未经本轮作者裁定。
 
-Two literature exposures remain unmapped: the RT4CHART paper's displayed IDs `879`, `587`, `25`, whose identifier namespace is unknown, and four UUID candidates observed in a RAGTruth++ search snippet. Their exact existing provenance is copied into the JSON. Neither identifier set is assumed to equal original RAGTruth response/source IDs. No new lookup was performed, and no resolution is claimed.
+| 指标 | 结果 |
+| --- | ---: |
+| 回答级准确率 / 正确决策占全部样本 | 63.33%（19/30） |
+| 幻觉检测 Precision / Recall / F1 | 56.52% / 92.86% / 70.27% |
+| TP / FP / TN / FN | 13 / 10 / 6 / 1 |
+| 未决阳性 / 阴性 | 0 / 0 |
+| 回答级决策覆盖率 | 100%（30/30） |
+| 完整报告率 | 86.67%（26/30） |
+| 部分完成 / 整条错误 | 4 / 0 |
+| 已提取事实目标完成率 | 96.54%（223/231） |
+| 非空答案产生空 claims | 2（原生口径 1 FN、1 TN） |
+| 逐字合法引用 | 289/289 |
+| 模型调用 | 272 次 |
+| 输入 / 输出 token | 455,723 / 145,449 |
+| 总 token | 601,172 |
+| 单例平均 / P95 时延 | 21.42 / 57.09 秒 |
+| 参考费用（全部 30 条） | USD 0.235239（约 USD 0.00784/条） |
 
-The new selection must exclude all 33 registered sources and freeze inference, configuration and sampling before selection. It may be described as disjoint from known recorded evaluation sources; it **cannot be certified wholly untouched**, and is not a formal blind-v2 confirmation. New sampled source groups must be registered before evaluation and excluded from subsequent unseen selections. Response IDs and exposure metadata are audit bookkeeping only; they must not enter inference prompts, rules or settings.
+4 条部分报告都有已完成的 C/U，因而均能形成“检测到”的回答级决策；它们仍计为部分完成。有效部分全 S 的部分报告应记未决，不进入 TN/FN，本轮没有这种情况。
 
-Use the existing deterministic native adapter and keep native labels separate from verifier inputs. RAGTruth's native annotations support response-level binary hallucination detection, not atomic S/C/U accuracy. This 30-record slice is a different sample from the prior 180 and must not be described as a paired before/after comparison.
+完成率分母是提取后保留的事实目标，不能证明事实提取完整：266 个提取条目中有 35 个降级骨架条目以 NON_FACTUAL 退出，剩余 231 个目标，223 个完成、8 个未完成。空报告也揭示了完成率与语义覆盖率的区别。引用逐字合法不等于证据蕴含正确。
+
+30 个来源、2,000 次来源级 bootstrap 的准确率 95% 区间为 **46.67%–80.00%**，F1 为 **50.00%–84.44%**。该区间不包含模型重复运行的随机波动。保留旧评分器“部分完成按整条失败”口径：端到端准确率 53.33%（16/30），悲观检测 F1 下界 58.82%；旧契约将 4 条 partial 记失败，不代表当前扩展接口 Schema 不合法或有 4 条整条请求报错。
+
+## 按任务分层
+
+| 任务 | 样本 / 原生阳性 | 正确 | TP / FP / TN / FN | F1 | 完整 / 部分 |
+| --- | ---: | ---: | --- | ---: | ---: |
+| QA | 10 / 2 | 4/10（40%） | 1 / 5 / 3 / 1 | 25.00% | 10 / 0 |
+| Summary | 10 / 3 | 5/10（50%） | 3 / 5 / 2 / 0 | 54.55% | 9 / 1 |
+| Data2txt | 10 / 9 | 10/10（100%） | 9 / 0 / 1 / 0 | 100% | 7 / 3 |
+
+每层仅 10 条，类别比例差异很大。Data2txt 的 100% 不代表该领域已经解决：原生阳性占 9/10，同时 3 条报告没有完整完成。QA 和摘要的原生 FP 较多；未经作者裁定，不称为已裁定“真 FP”。
+
+## 取样与输入适配
+
+[PLAN.md](PLAN.md) 随 `7da060c` 入仓，先冻结推理源码、Prompt、运行配置、取样方法和原始数据哈希，再取数。北京时间 21:42:06 冻结，21:43:28 开始推理、21:46:41 结束；运行使用冻结源码，结束后的哈希检查通过。420 项本地测试通过。本轮没有根据样本改 Prompt、参数或推理代码，没有重抽样、重跑失败项。
+
+- 数据来自官方 [ParticleMedia/RAGTruth 固定版本](https://github.com/ParticleMedia/RAGTruth/tree/c103204b9ce28d6bbad859304bf30de72b8ed8fe)，使用已校验的本地缓存。
+- test 的 QA、Summary、Data2txt 各 10 个来源，每来源 1 条 quality-good 回答，共 30 条、30 来源。quality-good 不等于无幻觉。
+- 固定种子 `ragtruth-current-small30-20261023-v1`，按来源哈希和来源内回答哈希排序；不根据标签、生成模型或预测选样。
+- 排除全部已登记的 33 个来源，交集为 0；输入上限沿用原有策略，本轮无超限剔除，无截断。
+- 模型只收到 `context_passages` 和 `generated_answer`。QA 保留 passages、问题不加入事实证据；Summary 原文完整保留；Data2txt 用确定性 JSON 保留全部字段，包括 25 个 null、150 个布尔值。答案全部保持原文。
+- 原生 hallucination spans 保存在独立 gold 文件，推理不加载。没有完整原子 claim 金标，所以不报告 claim 三分类准确率或官方 span 定位分数。
+
+[独立适配审计](adaptation-audit.json) 重算取样排序，核查来源隔离、文件哈希、文本完整性、JSON 类型和原生标注一致性。适配改变了任务呈现方式，尤其 QA 不提供问题、Data2txt 采用 JSON；本轮测的是此适配器下的接口性能，不能直接当作其他论文的同配置分数。
+
+[曝光审计](exposure-audit.json) 绑定 9 个历史 ledger（并集 33 来源、198 回答）和 13 份证据文件。旧 30 个 test 来源、3 个 train smoke 来源均已映射；历史文献中少量 RT4CHART / RAGTruth++ 例子仍未映射回原始来源。本轮称为**与已登记来源不重叠的探索性小样本**，不认证完全未见，不替代正式 blind-v2。新增 30 来源已登记，未来正式确认须排除。
+
+## 故障观察
+
+[有限离线诊断](diagnostics.md) 是 AI 技术观察，不是作者裁定。唯一 FN 产生空 claims：降级句骨架最终全部以 NON_FACTUAL 退出，存在把建议中的事实前提丢掉的风险。另一条空报告是拒答文本。4 条 partial 中，2 条是核查批 JSON 在有限重试后仍不合法，2 条是引文重判后仍不合法；日志没有支持输出预算截断的证据。
+
+运行有 14 个拆分块走句切降级、36 次局部重判、65 次 U 复核。后续应研究这些通用阶段故障和事实覆盖问题，用独立合成变式及新来源验证；不得根据本轮 ID、原文或标签加入专用规则。本轮只测性能，未据此修改系统。
+
+## 成本与复核材料
+
+272 次调用均有输入/输出和缓存用量。费用沿用固定参考单价：非缓存输入 USD 0.30/百万、缓存输入 0.006/百万、输出 1.20/百万。这是参考估算，不是当前报价或实际账单；统一按缓存全未命中计则为 USD 0.311256。记录到 reasoning tokens 63,420，65 次调用有该细分字段；它已包含在输出 token 中，不能重复加总，其他调用缺少该细分字段不推定为零。
+
+时延包含各样本内部调用和重试；4 案例并发的总墙钟时间约 193 秒。不同样本、缓存状态或并发下的成本和时延不能直接解释为优化增益。
+
+- [30 条适配输入及使用说明](../../dataset/ragtruth-small30-20261023/README.md)：每行 `input` 可用于 `/verify`，`id` 仅供评测记账。
+- [完整机器评分](scored/report.json)、[摘要与冻结文件哈希](summary.json)：评分副本与本次运行产物逐字节一致。
+- [运行契约审计](operational-audit.json)：30 条、0 项不变量异常；核查引用、预算、复核上限、终端错误和公有报告一致性，另有 4 项合成审计自检通过。
+- [Antigravity CLI High 解读复核](antigravity-review/response.md)及[主代理核对与纠正](antigravity-review/assessment.md)：只读取内联计划和聚合结果，无桌面操作，不改代码或样本。审查中的“4 条 partial 均为 TP”等错误未采纳；实际为 3 TP、1 FP。辅助 AI 审查不等于作者裁定，21,652 token 审查开销与评测开销分开。
+- 原始本地快照和逐条 telemetry：`results/ragtruth-small30-20261023/`。摘要绑定该目录 12 个核心产物 SHA-256；未覆盖重跑。
+
+评分入口：`python scripts/ragtruth_small30.py score --output-dir results/ragtruth-small30-20261023 --env-file .env`。已存在评分目录时脚本拒绝覆盖。
