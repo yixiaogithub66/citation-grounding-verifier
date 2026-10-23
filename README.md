@@ -1,6 +1,6 @@
 # Citation Grounding & Faithfulness Verifier
 
-新增 M1 单独对照后端 **`optimized-v4-m1-faithful`**：只修改拆分提示，检查原答案实际断言的命题及其限定条件；沿用原 v4 的核查、引用、预算和失败语义。它是待验证假设，非默认后端。见 [调用前实验方案](docs/V4_M1_FAITHFUL_EXPERIMENT.md)。
+M1 单独对照后端 **`optimized-v4-m1-faithful`** 已完成 548 条运行记录：只改拆分提示，沿用原 v4 的核查、引用和预算。旧 RAGTruth 开发集原生已决 F1 59.69%→63.33%、FP 74→64，但完整报告 171→167、未决 1→5，并出现事实遗漏和条件丢失。**保留实验后端，不升级默认；尚未证明通用性提升。** 388 项测试通过。见 [完整结果与语义审计](reports/v4-m1-faithful-20261023/README.md)及[调用前方案](docs/V4_M1_FAITHFUL_EXPERIMENT.md)。
 
 实验后端 **`optimized-v4-combined`**：组合答案位置与覆盖记账、证据角色/指针协议、初判盲化复核，并配套离线行为测试。原 v4 保留作配对对照；启动与实验边界见 [组合实验说明](docs/V4_COMBINED_EXPERIMENT.md)。
 

@@ -1,0 +1,21 @@
+{
+  "recorded_date": "2026-10-23",
+  "purpose": "Read-only review of the user-supplied optimization conjecture; exposure metadata only, not evaluation labels or runtime input.",
+  "status": "search_snippet_observed_source_mapping_unresolved",
+  "url": "https://huggingface.co/datasets/blue-guardrails/ragtruth-plus-plus/blob/main/hallucination_spans.csv",
+  "observation": "A broad literature search returned a RAGTruth++ CSV snippet containing short annotated spans and UUID-like identifiers. The dataset page and dataset files were not opened or downloaded. Identifier strings below were normalized from snippet spacing and have not been verified against full records.",
+  "snippet_identifier_candidates": [
+    "019a53c9-40e2-7f30-b43e-1abe372da81a",
+    "019a53c9-40da-72a1-83d1-1cb5e5f32707",
+    "019a90f6-ccd9-71a1-bdcb-12506f672b7e",
+    "019a90f6-cd8d-74e3-80a2-bef412f29c25"
+  ],
+  "identifier_namespace": "Unverified RAGTruth++ snippet identifiers; not assumed to be original RAGTruth response or source-group identifiers.",
+  "resolved_source_ids": null,
+  "dataset_files_accessed": false,
+  "used_for_runtime_or_scoring": false,
+  "unseen_selection_performed": false,
+  "required_before_unseen_selection": "Resolve any overlap with candidate source groups using non-gold metadata when possible, and exclude exposed sources. Until mapping is resolved, do not certify a potentially overlapping candidate pool as untouched.",
+  "previous_exposure_record": "research/v4-generality-20261023/research_exposure.json",
+  "previous_frozen_artifacts_modified": false
+}

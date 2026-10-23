@@ -1,0 +1,2550 @@
+{
+  "schema_version": "m1-behavior-semantic-ai-audit-v1",
+  "status": "AI diagnostic review; no author approval; not gold; no score changes",
+  "freeze_commit": "42c9469",
+  "scope": {
+    "pairs": 24,
+    "inputs": 48,
+    "response_records": 96,
+    "reviewed_response_records": 96,
+    "reviewed_response_coverage": 1.0,
+    "domains": [
+      "business",
+      "ordinary",
+      "science",
+      "systems"
+    ],
+    "families": [
+      "answer_boundary_surface",
+      "condition_change",
+      "embedded_fact_in_advice",
+      "entity_renaming",
+      "irrelevant_distractor",
+      "multi_passage_premises",
+      "necessary_premise_deletion",
+      "negation",
+      "numeric_decimal",
+      "numeric_integer",
+      "numeric_sign",
+      "paraphrase",
+      "source_over_world_knowledge",
+      "source_reordering"
+    ]
+  },
+  "inputs": {
+    "responses.jsonl": {
+      "path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\v4-m1-faithful-20261023\\behavior\\responses.jsonl",
+      "sha256": "0b684c9f34fc1f7b3970a81b533ff789bd95c710d7203409e7be49ffc7a2dbd6"
+    },
+    "pairs.jsonl": {
+      "path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\v4-m1-faithful-20261023\\behavior\\pairs.jsonl",
+      "sha256": "ddfa453a0cebc6597968cb55270aa77db4a154636fc24358a941c8eeb59c55c6"
+    },
+    "config.json": {
+      "path": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\v4-m1-faithful-20261023\\behavior\\config.json",
+      "sha256": "d3e7697ad05b16f163718e05cd96fbf0b268e8c6dabb97cbadbc6d5f01594401"
+    }
+  },
+  "method": "Read all original answers and contexts, both extraction traces and non-factual exclusions, and final predictions. Check extraction against the answer independently of the draft target and labels. Issue assessments are AI judgments, not a deterministic semantic oracle. No additional provider model calls.",
+  "summary": {
+    "optimized-v4.0": {
+      "reviewed_records": 48,
+      "issue_records": 3,
+      "no_issue_detected_records": 45,
+      "diagnostic_expected_agreement": 47,
+      "extracted_claims": 48,
+      "lexically_aligned_targets": 45
+    },
+    "optimized-v4-m1-faithful": {
+      "reviewed_records": 48,
+      "issue_records": 2,
+      "no_issue_detected_records": 46,
+      "diagnostic_expected_agreement": 47,
+      "extracted_claims": 47,
+      "lexically_aligned_targets": 45
+    }
+  },
+  "limitations": [
+    "Single model sample per backend/input; no repeated-sampling uncertainty estimate.",
+    "All fixtures are exposed AI-authored short diagnostics, not author-written or unseen gold.",
+    "Most answers contain one explicit factual target; no long-answer chunk boundary or substantive ambiguity stress coverage.",
+    "Only one advice pair; no evidence of reliable performance across the full variety of embedded advice premises.",
+    "All-record review does not establish complete semantic-error detection or quantify population precision/recall."
+  ],
+  "cases": [
+    {
+      "pair_id": "behavior-01",
+      "side": "base",
+      "family": "entity_renaming",
+      "domain": "systems",
+      "answer": "The Dax cache has a retention limit of 5 hours.",
+      "context_passages": [
+        "The Dax cache has a retention limit of 5 hours."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Dax cache has a retention limit of 5 hours."
+          ],
+          "source_spans": [
+            "The Dax cache has a retention limit of 5 hours."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Dax cache has a retention limit of 5 hours."
+          ],
+          "source_spans": [
+            "The Dax cache has a retention limit of 5 hours."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-01",
+      "side": "variant",
+      "family": "entity_renaming",
+      "domain": "systems",
+      "answer": "The Neris cache has a retention limit of 5 hours.",
+      "context_passages": [
+        "The Neris cache has a retention limit of 5 hours."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Neris cache has a retention limit of 5 hours."
+          ],
+          "source_spans": [
+            "The Neris cache has a retention limit of 5 hours."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Neris cache has a retention limit of 5 hours."
+          ],
+          "source_spans": [
+            "The Neris cache has a retention limit of 5 hours."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-02",
+      "side": "base",
+      "family": "entity_renaming",
+      "domain": "business",
+      "answer": "Cirro reported profit of 4 credits.",
+      "context_passages": [
+        "Cirro reported revenue of 17 credits."
+      ],
+      "diagnostic_expected_label": "UNSUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Cirro reported profit of 4 credits."
+          ],
+          "source_spans": [
+            "Cirro reported profit of 4 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Cirro reported profit of 4 credits."
+          ],
+          "source_spans": [
+            "Cirro reported profit of 4 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-02",
+      "side": "variant",
+      "family": "entity_renaming",
+      "domain": "business",
+      "answer": "Vela reported profit of 4 credits.",
+      "context_passages": [
+        "Vela reported revenue of 17 credits."
+      ],
+      "diagnostic_expected_label": "UNSUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Vela reported profit of 4 credits."
+          ],
+          "source_spans": [
+            "Vela reported profit of 4 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Vela reported profit of 4 credits."
+          ],
+          "source_spans": [
+            "Vela reported profit of 4 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-03",
+      "side": "base",
+      "family": "paraphrase",
+      "domain": "ordinary",
+      "answer": "The Rilo gallery opened to visitors in 2018.",
+      "context_passages": [
+        "The Rilo gallery opened to visitors in 2018."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rilo gallery opened to visitors in 2018."
+          ],
+          "source_spans": [
+            "The Rilo gallery opened to visitors in 2018."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rilo gallery opened to visitors in 2018."
+          ],
+          "source_spans": [
+            "The Rilo gallery opened to visitors in 2018."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-03",
+      "side": "variant",
+      "family": "paraphrase",
+      "domain": "ordinary",
+      "answer": "The Rilo gallery began admitting visitors in 2018.",
+      "context_passages": [
+        "The Rilo gallery opened to visitors in 2018."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rilo gallery began admitting visitors in 2018."
+          ],
+          "source_spans": [
+            "The Rilo gallery began admitting visitors in 2018."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rilo gallery began admitting visitors in 2018."
+          ],
+          "source_spans": [
+            "The Rilo gallery began admitting visitors in 2018."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-04",
+      "side": "base",
+      "family": "paraphrase",
+      "domain": "science",
+      "answer": "The Elun trial measured mortality.",
+      "context_passages": [
+        "The Elun trial did not measure mortality."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Elun trial measured mortality."
+          ],
+          "source_spans": [
+            "The Elun trial measured mortality."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Elun trial measured mortality."
+          ],
+          "source_spans": [
+            "The Elun trial measured mortality."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-04",
+      "side": "variant",
+      "family": "paraphrase",
+      "domain": "science",
+      "answer": "Mortality was measured in the Elun trial.",
+      "context_passages": [
+        "The Elun trial did not measure mortality."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Mortality was measured in the Elun trial."
+          ],
+          "source_spans": [
+            "Mortality was measured in the Elun trial."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Mortality was measured in the Elun trial."
+          ],
+          "source_spans": [
+            "Mortality was measured in the Elun trial."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-05",
+      "side": "base",
+      "family": "source_reordering",
+      "domain": "systems",
+      "answer": "Passage 0 states that the Lysa camera has a resolution of 12 megapixels.",
+      "context_passages": [
+        "The Lysa camera has a resolution of 12 megapixels.",
+        "The harbor gate is green."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "issue_detected",
+          "issue_type": "source_attribution_lost",
+          "review_note": "The original answer asserts what Passage 0 states. claim_text retains only the camera property, although source_span includes attribution. A source span cannot replace the missing truth condition in the claim.",
+          "extracted_claim_texts": [
+            "The Lysa camera has a resolution of 12 megapixels."
+          ],
+          "source_spans": [
+            "Passage 0 states that the Lysa camera has a resolution of 12 megapixels."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "issue_detected",
+          "issue_type": "source_attribution_lost",
+          "review_note": "The original Passage 0 attribution is excluded as non-factual framing; claim_text retains only the camera property. The aggregate SUPPORTED label hides the lost attribution.",
+          "extracted_claim_texts": [
+            "The Lysa camera has a resolution of 12 megapixels."
+          ],
+          "source_spans": [
+            "the Lysa camera has a resolution of 12 megapixels"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Passage 0 states that",
+              "reason": "source attribution framing rather than an independently asserted fact",
+              "source_start": 0,
+              "source_end": 21
+            }
+          ],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-05",
+      "side": "variant",
+      "family": "source_reordering",
+      "domain": "systems",
+      "answer": "Passage 1 states that the Lysa camera has a resolution of 12 megapixels.",
+      "context_passages": [
+        "The harbor gate is green.",
+        "The Lysa camera has a resolution of 12 megapixels."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "issue_detected",
+          "issue_type": "source_attribution_lost",
+          "review_note": "The original Passage 1 attribution is excluded as non-factual framing. The camera property survives but the attributed assertion does not.",
+          "extracted_claim_texts": [
+            "The Lysa camera has a resolution of 12 megapixels."
+          ],
+          "source_spans": [
+            "the Lysa camera has a resolution of 12 megapixels"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Passage 1 states that",
+              "reason": "attribution framing, not itself a factual assertion about the camera",
+              "source_start": 0,
+              "source_end": 21
+            }
+          ],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Attribution is retained in claim_text; this repairs the control extraction even though both final aggregate labels are SUPPORTED.",
+          "extracted_claim_texts": [
+            "Passage 1 states that the Lysa camera has a resolution of 12 megapixels."
+          ],
+          "source_spans": [
+            "Passage 1 states that the Lysa camera has a resolution of 12 megapixels."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-06",
+      "side": "base",
+      "family": "source_reordering",
+      "domain": "business",
+      "answer": "Passage 0 states that the quoted fee is exactly 7 credits.",
+      "context_passages": [
+        "The quoted fee is exactly 9 credits.",
+        "The quoted fee is exactly 7 credits."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "issue_detected",
+          "issue_type": "source_attribution_lost",
+          "review_note": "Passage 0 attribution is excluded, changing the target from a statement about a named passage to an unqualified fee claim. The verifier then cites Passage 1 and returns SUPPORTED despite noticing a conflicting fee in Passage 0.",
+          "extracted_claim_texts": [
+            "The quoted fee is exactly 7 credits."
+          ],
+          "source_spans": [
+            "the quoted fee is exactly 7 credits"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Passage 0 states that",
+              "reason": "attribution framing describing what a source states, not itself a factual assertion about the fee",
+              "source_start": 0,
+              "source_end": 21
+            }
+          ],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": false,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Attribution is retained; M3 cites Passage 0 and returns CONTRADICTED. This agrees with the predeclared zero-based diagnostic interpretation; it is not author adjudication.",
+          "extracted_claim_texts": [
+            "Passage 0 states that the quoted fee is exactly 7 credits."
+          ],
+          "source_spans": [
+            "Passage 0 states that the quoted fee is exactly 7 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-06",
+      "side": "variant",
+      "family": "source_reordering",
+      "domain": "business",
+      "answer": "Passage 1 states that the quoted fee is exactly 7 credits.",
+      "context_passages": [
+        "The quoted fee is exactly 7 credits.",
+        "The quoted fee is exactly 9 credits."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Passage 1 states that the quoted fee is exactly 7 credits."
+          ],
+          "source_spans": [
+            "Passage 1 states that the quoted fee is exactly 7 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Passage 1 states that the quoted fee is exactly 7 credits."
+          ],
+          "source_spans": [
+            "Passage 1 states that the quoted fee is exactly 7 credits."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-07",
+      "side": "base",
+      "family": "irrelevant_distractor",
+      "domain": "science",
+      "answer": "The Rava sensor reading is 4 kPa.",
+      "context_passages": [
+        "The Rava sensor reading is 4 kPa."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "source_spans": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "source_spans": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-07",
+      "side": "variant",
+      "family": "irrelevant_distractor",
+      "domain": "science",
+      "answer": "The Rava sensor reading is 4 kPa.",
+      "context_passages": [
+        "The Rava sensor reading is 4 kPa.",
+        "The city archive displays a wooden sailing ship."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "source_spans": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "source_spans": [
+            "The Rava sensor reading is 4 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-08",
+      "side": "base",
+      "family": "irrelevant_distractor",
+      "domain": "ordinary",
+      "answer": "The Omi garden opens at 08:00 each day.",
+      "context_passages": [
+        "The Omi garden opens at 09:00 each day."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "source_spans": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "source_spans": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-08",
+      "side": "variant",
+      "family": "irrelevant_distractor",
+      "domain": "ordinary",
+      "answer": "The Omi garden opens at 08:00 each day.",
+      "context_passages": [
+        "The Omi garden opens at 09:00 each day.",
+        "A concert ticket costs 6 credits."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "source_spans": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "source_spans": [
+            "The Omi garden opens at 08:00 each day."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-09",
+      "side": "base",
+      "family": "necessary_premise_deletion",
+      "domain": "systems",
+      "answer": "Neris carries a beacon.",
+      "context_passages": [
+        "Every blue-group drone carries a beacon.",
+        "Neris is a blue-group drone."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Neris carries a beacon."
+          ],
+          "source_spans": [
+            "Neris carries a beacon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Neris carries a beacon."
+          ],
+          "source_spans": [
+            "Neris carries a beacon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-09",
+      "side": "variant",
+      "family": "necessary_premise_deletion",
+      "domain": "systems",
+      "answer": "Neris carries a beacon.",
+      "context_passages": [
+        "Neris is a blue-group drone."
+      ],
+      "diagnostic_expected_label": "UNSUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Neris carries a beacon."
+          ],
+          "source_spans": [
+            "Neris carries a beacon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Neris carries a beacon."
+          ],
+          "source_spans": [
+            "Neris carries a beacon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-10",
+      "side": "base",
+      "family": "necessary_premise_deletion",
+      "domain": "business",
+      "answer": "The Ivo account has no monthly fee.",
+      "context_passages": [
+        "Every silver account has no monthly fee.",
+        "The Ivo account is a silver account."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Ivo account has no monthly fee."
+          ],
+          "source_spans": [
+            "The Ivo account has no monthly fee."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Ivo account has no monthly fee."
+          ],
+          "source_spans": [
+            "The Ivo account has no monthly fee."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-10",
+      "side": "variant",
+      "family": "necessary_premise_deletion",
+      "domain": "business",
+      "answer": "The Ivo account has no monthly fee.",
+      "context_passages": [
+        "Every silver account has no monthly fee."
+      ],
+      "diagnostic_expected_label": "UNSUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Ivo account has no monthly fee."
+          ],
+          "source_spans": [
+            "The Ivo account has no monthly fee."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Ivo account has no monthly fee."
+          ],
+          "source_spans": [
+            "The Ivo account has no monthly fee."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "UNSUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-11",
+      "side": "base",
+      "family": "numeric_decimal",
+      "domain": "science",
+      "answer": "The recorded sample mass is exactly 3.5 g.",
+      "context_passages": [
+        "The recorded sample mass is exactly 3.5 g."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The recorded sample mass is exactly 3.5 g."
+          ],
+          "source_spans": [
+            "The recorded sample mass is exactly 3.5 g."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The recorded sample mass is exactly 3.5 g."
+          ],
+          "source_spans": [
+            "The recorded sample mass is exactly 3.5 g."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-11",
+      "side": "variant",
+      "family": "numeric_decimal",
+      "domain": "science",
+      "answer": "The recorded sample mass is exactly 35 g.",
+      "context_passages": [
+        "The recorded sample mass is exactly 3.5 g."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The recorded sample mass is exactly 35 g."
+          ],
+          "source_spans": [
+            "The recorded sample mass is exactly 35 g."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The recorded sample mass is exactly 35 g."
+          ],
+          "source_spans": [
+            "The recorded sample mass is exactly 35 g."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-12",
+      "side": "base",
+      "family": "numeric_sign",
+      "domain": "science",
+      "answer": "The chamber temperature reading is exactly −5 °C.",
+      "context_passages": [
+        "The chamber temperature reading is exactly −5 °C."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The chamber temperature reading is exactly −5 °C."
+          ],
+          "source_spans": [
+            "The chamber temperature reading is exactly −5 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The chamber temperature reading is exactly −5 °C."
+          ],
+          "source_spans": [
+            "The chamber temperature reading is exactly −5 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-12",
+      "side": "variant",
+      "family": "numeric_sign",
+      "domain": "science",
+      "answer": "The chamber temperature reading is exactly 5 °C.",
+      "context_passages": [
+        "The chamber temperature reading is exactly −5 °C."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The chamber temperature reading is exactly 5 °C."
+          ],
+          "source_spans": [
+            "The chamber temperature reading is exactly 5 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The chamber temperature reading is exactly 5 °C."
+          ],
+          "source_spans": [
+            "The chamber temperature reading is exactly 5 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-13",
+      "side": "base",
+      "family": "numeric_integer",
+      "domain": "business",
+      "answer": "The final June inventory count is exactly 1250 bolts.",
+      "context_passages": [
+        "The final June inventory count is exactly 1250 bolts."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The final June inventory count is exactly 1250 bolts."
+          ],
+          "source_spans": [
+            "The final June inventory count is exactly 1250 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The final June inventory count is exactly 1250 bolts."
+          ],
+          "source_spans": [
+            "The final June inventory count is exactly 1250 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-13",
+      "side": "variant",
+      "family": "numeric_integer",
+      "domain": "business",
+      "answer": "The final June inventory count is exactly 1251 bolts.",
+      "context_passages": [
+        "The final June inventory count is exactly 1250 bolts."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The final June inventory count is exactly 1251 bolts."
+          ],
+          "source_spans": [
+            "The final June inventory count is exactly 1251 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The final June inventory count is exactly 1251 bolts."
+          ],
+          "source_spans": [
+            "The final June inventory count is exactly 1251 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-14",
+      "side": "base",
+      "family": "negation",
+      "domain": "systems",
+      "answer": "The Sora protocol does not permit bulk deletion.",
+      "context_passages": [
+        "The Sora protocol does not permit bulk deletion."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Sora protocol does not permit bulk deletion."
+          ],
+          "source_spans": [
+            "The Sora protocol does not permit bulk deletion."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Sora protocol does not permit bulk deletion."
+          ],
+          "source_spans": [
+            "The Sora protocol does not permit bulk deletion."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-14",
+      "side": "variant",
+      "family": "negation",
+      "domain": "systems",
+      "answer": "The Sora protocol permits bulk deletion.",
+      "context_passages": [
+        "The Sora protocol does not permit bulk deletion."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Sora protocol permits bulk deletion."
+          ],
+          "source_spans": [
+            "The Sora protocol permits bulk deletion."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Sora protocol permits bulk deletion."
+          ],
+          "source_spans": [
+            "The Sora protocol permits bulk deletion."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-15",
+      "side": "base",
+      "family": "negation",
+      "domain": "ordinary",
+      "answer": "The Lumo exhibition does not include amber.",
+      "context_passages": [
+        "The Lumo exhibition does not include amber."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Lumo exhibition does not include amber."
+          ],
+          "source_spans": [
+            "The Lumo exhibition does not include amber."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Lumo exhibition does not include amber."
+          ],
+          "source_spans": [
+            "The Lumo exhibition does not include amber."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-15",
+      "side": "variant",
+      "family": "negation",
+      "domain": "ordinary",
+      "answer": "The Lumo exhibition includes amber.",
+      "context_passages": [
+        "The Lumo exhibition does not include amber."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Lumo exhibition includes amber."
+          ],
+          "source_spans": [
+            "The Lumo exhibition includes amber."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Lumo exhibition includes amber."
+          ],
+          "source_spans": [
+            "The Lumo exhibition includes amber."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-16",
+      "side": "base",
+      "family": "condition_change",
+      "domain": "systems",
+      "answer": "Approved tokens are active.",
+      "context_passages": [
+        "Approved tokens are active. Unapproved tokens are inactive."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Approved tokens are active."
+          ],
+          "source_spans": [
+            "Approved tokens are active."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "issue_detected",
+          "issue_type": "factual_assertion_excluded_as_non_factual",
+          "review_note": "The complete declarative assertion Approved tokens are active. is excluded in full as an alleged incomplete fragment. No claim reaches M3; valid text accounting does not preserve this fact.",
+          "extracted_claim_texts": [],
+          "source_spans": [],
+          "non_factual_spans": [
+            {
+              "text": "Approved tokens are active.",
+              "reason": "Fragment lacks a factual predicate about a verifiable state; it is an incomplete/context-free statement rather than an asserted factual proposition.",
+              "source_start": 0,
+              "source_end": 27
+            }
+          ],
+          "observed_aggregate_label": "NON_FACTUAL",
+          "diagnostic_expected_agreement": false,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-16",
+      "side": "variant",
+      "family": "condition_change",
+      "domain": "systems",
+      "answer": "Unapproved tokens are active.",
+      "context_passages": [
+        "Approved tokens are active. Unapproved tokens are inactive."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Unapproved tokens are active."
+          ],
+          "source_spans": [
+            "Unapproved tokens are active."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Unapproved tokens are active."
+          ],
+          "source_spans": [
+            "Unapproved tokens are active."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-17",
+      "side": "base",
+      "family": "condition_change",
+      "domain": "science",
+      "answer": "The pump stops below 0 °C.",
+      "context_passages": [
+        "The pump stops below 0 °C. It runs at or above 0 °C."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The pump stops below 0 °C."
+          ],
+          "source_spans": [
+            "The pump stops below 0 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The pump stops below 0 °C."
+          ],
+          "source_spans": [
+            "The pump stops below 0 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-17",
+      "side": "variant",
+      "family": "condition_change",
+      "domain": "science",
+      "answer": "The pump stops above 0 °C.",
+      "context_passages": [
+        "The pump stops below 0 °C. It runs at or above 0 °C."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The pump stops above 0 °C."
+          ],
+          "source_spans": [
+            "The pump stops above 0 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The pump stops above 0 °C."
+          ],
+          "source_spans": [
+            "The pump stops above 0 °C."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-18",
+      "side": "base",
+      "family": "multi_passage_premises",
+      "domain": "ordinary",
+      "answer": "Lira attends room 4.",
+      "context_passages": [
+        "Every pupil in class P attends room 4. Lira is a pupil in class P."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Lira attends room 4."
+          ],
+          "source_spans": [
+            "Lira attends room 4."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Lira attends room 4."
+          ],
+          "source_spans": [
+            "Lira attends room 4."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-18",
+      "side": "variant",
+      "family": "multi_passage_premises",
+      "domain": "ordinary",
+      "answer": "Lira attends room 4.",
+      "context_passages": [
+        "Every pupil in class P attends room 4.",
+        "Lira is a pupil in class P."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Lira attends room 4."
+          ],
+          "source_spans": [
+            "Lira attends room 4."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Lira attends room 4."
+          ],
+          "source_spans": [
+            "Lira attends room 4."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-19",
+      "side": "base",
+      "family": "multi_passage_premises",
+      "domain": "business",
+      "answer": "Boxes A and B together contain exactly 7 bolts.",
+      "context_passages": [
+        "Box A contains exactly 4 bolts. Box B contains exactly 3 bolts."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "source_spans": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "source_spans": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-19",
+      "side": "variant",
+      "family": "multi_passage_premises",
+      "domain": "business",
+      "answer": "Boxes A and B together contain exactly 7 bolts.",
+      "context_passages": [
+        "Box A contains exactly 4 bolts.",
+        "Box B contains exactly 3 bolts."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "source_spans": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "source_spans": [
+            "Boxes A and B together contain exactly 7 bolts."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-20",
+      "side": "base",
+      "family": "answer_boundary_surface",
+      "domain": "systems",
+      "answer": "The Leto pump has an approved pressure limit of 11 kPa.",
+      "context_passages": [
+        "The Leto pump has an approved pressure limit of 11 kPa."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Leto pump has an approved pressure limit of 11 kPa."
+          ],
+          "source_spans": [
+            "The Leto pump has an approved pressure limit of 11 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Leto pump has an approved pressure limit of 11 kPa."
+          ],
+          "source_spans": [
+            "The Leto pump has an approved pressure limit of 11 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-20",
+      "side": "variant",
+      "family": "answer_boundary_surface",
+      "domain": "systems",
+      "answer": "Leto pump\nApproved pressure limit: 11 kPa.",
+      "context_passages": [
+        "The Leto pump has an approved pressure limit of 11 kPa."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "The Leto pump has an approved pressure limit of 11 kPa."
+          ],
+          "source_spans": [
+            "Leto pump\nApproved pressure limit: 11 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "The heading subject Leto pump remains inside claim_text. Predicate inversion is a faithful paraphrase, despite lexical matcher rejection.",
+          "extracted_claim_texts": [
+            "The approved pressure limit for the Leto pump is 11 kPa."
+          ],
+          "source_spans": [
+            "Leto pump\nApproved pressure limit: 11 kPa."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 0,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-21",
+      "side": "base",
+      "family": "answer_boundary_surface",
+      "domain": "business",
+      "answer": "Within the Miro pilot, the Zeva plan permits refunds.",
+      "context_passages": [
+        "Within the Miro pilot only, the Zeva plan permits refunds."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Within the Miro pilot, the Zeva plan permits refunds."
+          ],
+          "source_spans": [
+            "Within the Miro pilot, the Zeva plan permits refunds."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Within the Miro pilot, the Zeva plan permits refunds."
+          ],
+          "source_spans": [
+            "Within the Miro pilot, the Zeva plan permits refunds."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-21",
+      "side": "variant",
+      "family": "answer_boundary_surface",
+      "domain": "business",
+      "answer": "Within the Miro pilot, regarding the Zeva plan:\nIt permits refunds.",
+      "context_passages": [
+        "Within the Miro pilot only, the Zeva plan permits refunds."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Within the Miro pilot, the Zeva plan permits refunds."
+          ],
+          "source_spans": [
+            "Within the Miro pilot, regarding the Zeva plan:\nIt permits refunds."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "The pronoun it is not explicitly replaced, but its antecedent Zeva plan and the Miro-pilot scope remain in the same standalone claim. No demonstrated subject or scope loss; this differs from an antecedent existing only in discarded background.",
+          "extracted_claim_texts": [
+            "Within the Miro pilot, regarding the Zeva plan, it permits refunds."
+          ],
+          "source_spans": [
+            "Within the Miro pilot, regarding the Zeva plan:\nIt permits refunds."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-22",
+      "side": "base",
+      "family": "source_over_world_knowledge",
+      "domain": "science",
+      "answer": "In the fictional Orin setting, Earth has exactly two moons.",
+      "context_passages": [
+        "In the fictional Orin setting, Earth has exactly two moons."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the fictional Orin setting, Earth has exactly two moons."
+          ],
+          "source_spans": [
+            "In the fictional Orin setting, Earth has exactly two moons."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the fictional Orin setting, Earth has exactly two moons."
+          ],
+          "source_spans": [
+            "In the fictional Orin setting, Earth has exactly two moons."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-22",
+      "side": "variant",
+      "family": "source_over_world_knowledge",
+      "domain": "science",
+      "answer": "In the fictional Orin setting, Earth has exactly one moon.",
+      "context_passages": [
+        "In the fictional Orin setting, Earth has exactly two moons."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the fictional Orin setting, Earth has exactly one moon."
+          ],
+          "source_spans": [
+            "In the fictional Orin setting, Earth has exactly one moon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the fictional Orin setting, Earth has exactly one moon."
+          ],
+          "source_spans": [
+            "In the fictional Orin setting, Earth has exactly one moon."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-23",
+      "side": "base",
+      "family": "source_over_world_knowledge",
+      "domain": "ordinary",
+      "answer": "In the invented Elda calendar, every week has exactly nine days.",
+      "context_passages": [
+        "In the invented Elda calendar, every week has exactly nine days."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the invented Elda calendar, every week has exactly nine days."
+          ],
+          "source_spans": [
+            "In the invented Elda calendar, every week has exactly nine days."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the invented Elda calendar, every week has exactly nine days."
+          ],
+          "source_spans": [
+            "In the invented Elda calendar, every week has exactly nine days."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-23",
+      "side": "variant",
+      "family": "source_over_world_knowledge",
+      "domain": "ordinary",
+      "answer": "In the invented Elda calendar, every week has exactly seven days.",
+      "context_passages": [
+        "In the invented Elda calendar, every week has exactly nine days."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the invented Elda calendar, every week has exactly seven days."
+          ],
+          "source_spans": [
+            "In the invented Elda calendar, every week has exactly seven days."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "In the invented Elda calendar, every week has exactly seven days."
+          ],
+          "source_spans": [
+            "In the invented Elda calendar, every week has exactly seven days."
+          ],
+          "non_factual_spans": [],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-24",
+      "side": "base",
+      "family": "embedded_fact_in_advice",
+      "domain": "systems",
+      "answer": "Set the mode to 7 because mode 7 enables diagnostics.",
+      "context_passages": [
+        "Mode 7 enables diagnostics. Mode 8 disables diagnostics."
+      ],
+      "diagnostic_expected_label": "SUPPORTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Mode 7 enables diagnostics."
+          ],
+          "source_spans": [
+            "mode 7 enables diagnostics."
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Set the mode to 7",
+              "reason": "This is an instruction to perform an action, not itself a factual assertion.",
+              "source_start": 0,
+              "source_end": 17
+            },
+            {
+              "text": "because ",
+              "reason": "This is a conjunction linking the instruction to its stated reason, carrying no factual assertion of its own.",
+              "source_start": 18,
+              "source_end": 26
+            }
+          ],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "The instruction and connective are excluded, while the asserted mode/effect relationship survives. Lowercasing and final punctuation removal do not change the assertion.",
+          "extracted_claim_texts": [
+            "mode 7 enables diagnostics"
+          ],
+          "source_spans": [
+            "mode 7 enables diagnostics"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Set the mode to 7 because",
+              "reason": "instruction to act, with connective",
+              "source_start": 0,
+              "source_end": 25
+            }
+          ],
+          "observed_aggregate_label": "SUPPORTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    },
+    {
+      "pair_id": "behavior-24",
+      "side": "variant",
+      "family": "embedded_fact_in_advice",
+      "domain": "systems",
+      "answer": "Set the mode to 8 because mode 8 enables diagnostics.",
+      "context_passages": [
+        "Mode 7 enables diagnostics. Mode 8 disables diagnostics."
+      ],
+      "diagnostic_expected_label": "CONTRADICTED",
+      "expected_label_status": "AI-authored diagnostic, not author-approved gold",
+      "backend_audits": {
+        "optimized-v4.0": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "Reviewed original answer, extracted claims and exclusions: no assertion, subject, condition, attribution or material implicit-content loss identified for this short input.",
+          "extracted_claim_texts": [
+            "Mode 8 enables diagnostics."
+          ],
+          "source_spans": [
+            "mode 8 enables diagnostics"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Set the mode to 8",
+              "reason": "instruction or advice rather than a factual assertion",
+              "source_start": 0,
+              "source_end": 17
+            },
+            {
+              "text": "because",
+              "reason": "causal connective linking the instruction to its rationale",
+              "source_start": 18,
+              "source_end": 25
+            }
+          ],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        },
+        "optimized-v4-m1-faithful": {
+          "assessment": "no_issue_detected_in_review",
+          "issue_type": null,
+          "review_note": "The instruction is excluded without losing the asserted causal premise, including its false mode value. No performed action is invented.",
+          "extracted_claim_texts": [
+            "Mode 8 enables diagnostics."
+          ],
+          "source_spans": [
+            "mode 8 enables diagnostics"
+          ],
+          "non_factual_spans": [
+            {
+              "text": "Set the mode to 8 because",
+              "reason": "Instruction to act plus connective; the assertion is captured in the claim about mode 8.",
+              "source_start": 0,
+              "source_end": 25
+            }
+          ],
+          "observed_aggregate_label": "CONTRADICTED",
+          "diagnostic_expected_agreement": true,
+          "lexical_aligned_target_count": 1,
+          "execution_status": "complete",
+          "fallback_chunks": 0,
+          "author_adjudicated": false
+        }
+      }
+    }
+  ]
+}

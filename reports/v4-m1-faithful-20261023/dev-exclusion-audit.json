@@ -1,0 +1,1248 @@
+{
+  "schema_version": "m1-dev-exclusion-targeted-ai-audit-v1",
+  "status": "AI diagnostic audit; no author approval, gold changes or rescoring",
+  "created_at_utc": "2026-10-23T10:18:27.466930+00:00",
+  "run_progress_at_snapshot": {
+    "completed_at": "2026-10-23T10:16:39.959551+00:00",
+    "completed_records": 360,
+    "data_unchanged": true,
+    "error_records": 0,
+    "expected_records": 360,
+    "partial_records": 22,
+    "source_unchanged": true,
+    "started_at": "2026-10-23T09:49:54.182779+00:00",
+    "status": "completed"
+  },
+  "snapshot": {
+    "parsed_response_records": 360,
+    "incomplete_last_line_ignored": false,
+    "predictions_prefix_bytes": 13402130,
+    "predictions_prefix_sha256": "951f9bbaa6c28231ad9dda85da6be52416f0225e0aa2347683db82cf3ab91538",
+    "inputs_sha256": "154ae7dc4c0ea647e0bc265eea7341a246e3974b5111ee8c8d47e6cdecd3a74b"
+  },
+  "selection": [
+    "Only inputs with both frozen backend outputs available are screened.",
+    "Select old ordinary extracted claims; old extraction_fallback skeletons are excluded.",
+    "Skip claims exactly retained after whitespace-only normalization in any new claim.",
+    "Require an old claim source-span/new non-factual span intersection containing at least eight Unicode L/N/M characters.",
+    "Deduplicate repeated exclusion spans; retain one candidate per old claim. The threshold is an offline review-load filter, not a runtime parameter or semantic oracle.",
+    "AI review then checks the full original answer and all new claims, distinguishing retained paraphrases, permissible advice filtering, lost premises/attribution, and ambiguous boundaries."
+  ],
+  "limitations": [
+    "No native or adjudicated gold labels are used for selection or AI extraction judgments.",
+    "The old backend is a comparison, not a gold extractor; a selected candidate is not automatically a missing fact.",
+    "Unselected inputs/spans, short overlaps, both-backend omissions, fallback-only claims and omissions without new non-factual overlap are not cleared by this audit.",
+    "Only one sampled output per backend/input; judgments are AI diagnoses, not author-final annotations."
+  ],
+  "counts": {
+    "paired_inputs": 180,
+    "new_exclusion_entries": 459,
+    "paired_inputs_with_new_exclusions": 80,
+    "old_ordinary_claims_screened": 1044,
+    "old_claims_exactly_retained": 439,
+    "old_fallback_claims_not_screened": 561,
+    "candidates": 35,
+    "candidate_inputs": 12,
+    "reviewed_candidates": 35,
+    "unreviewed_candidates": 0,
+    "candidates_with_unchanged_detection": 34
+  },
+  "review_categories": {
+    "summary_excluded_but_content_retained": 2,
+    "retained_elsewhere": 12,
+    "boundary_uncertain": 6,
+    "factual_premise_loss": 9,
+    "attribution_loss": 3,
+    "reasonable_nonfactual_filter": 2,
+    "subject_attribution_binding_lost": 1
+  },
+  "candidates": [
+    {
+      "key": "16771:c1",
+      "id": "16771",
+      "old_claim_id": "c1",
+      "old_claim": "The nervous system and endocrine system have both similarities and differences.",
+      "old_source_span": "The nervous system and endocrine system have both similarities and differences.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "The nervous system and endocrine system have both similarities and differences.",
+          "reason": "Introductory framing that merely announces the comparison topic.",
+          "source_start": 0,
+          "source_end": 79,
+          "overlap_substantive_characters": 68
+        }
+      ],
+      "answer": "The nervous system and endocrine system have both similarities and differences. \n\nSimilarities:\n1. Both systems are dedicated to maintaining homeostasis and coordinating the activities of cells, tissues, organs, and systems.\n2. Both systems are regulated by negative feedback mechanisms.\n3. Chemical messengers play a crucial role in both systems.\n\nDifferences:\n1. The nervous system is composed of neuron cells, while the endocrine system is made up of glands.\n2. Transmission in the nervous system occurs through electrochemical pulses, while chemical hormones are responsible for signal transmission in the endocrine system.\n3. The nervous system utilizes interconnected cells to transmit signals, whereas the organs of the endocrine system are discrete and not physically connected.\n4. The nervous system transmits signals through neurons, while the endocrine system uses the circulatory system to transmit signals.",
+      "new_claims": [
+        "Both the nervous system and the endocrine system are dedicated to maintaining homeostasis and coordinating the activities of cells, tissues, organs, and systems.",
+        "Both the nervous system and the endocrine system are regulated by negative feedback mechanisms.",
+        "Chemical messengers play a crucial role in both the nervous system and the endocrine system.",
+        "The nervous system is composed of neuron cells.",
+        "The endocrine system is made up of glands.",
+        "Transmission in the nervous system occurs through electrochemical pulses.",
+        "Chemical hormones are responsible for signal transmission in the endocrine system.",
+        "The nervous system utilizes interconnected cells to transmit signals.",
+        "The organs of the endocrine system are discrete and not physically connected.",
+        "The nervous system transmits signals through neurons.",
+        "The endocrine system uses the circulatory system to transmit signals."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "summary_excluded_but_content_retained",
+        "confidence": "high",
+        "note": "The introductory sentence does assert both similarities and differences, so calling it purely non-factual framing is inaccurate. However, the retained shared properties and contrasting properties preserve the substantive comparison; this is not established loss of an independent factual target.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13716:c1",
+      "id": "13716",
+      "old_claim_id": "c1",
+      "old_claim": "The dryer vent cover is located on the outside of the house.",
+      "old_source_span": "locate the dryer vent cover on the outside of your house",
+      "new_overlapping_exclusions": [
+        {
+          "text": "To clean a dryer vent, first locate the dryer vent cover on the outside of your house and remove it.",
+          "reason": "Instruction to locate and remove the vent cover.",
+          "source_start": 0,
+          "source_end": 100,
+          "overlap_substantive_characters": 46
+        }
+      ],
+      "answer": "To clean a dryer vent, first locate the dryer vent cover on the outside of your house and remove it. The vent duct should slide right out if it isn't fastened or sealed to the home's exterior. Use a dryer vent brush to remove the lint from inside the hole. Then, remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer. Reconnect the vent and move the dryer back against the wall. You may also want to remove the bottom front panel of the dryer and clean there as well, paying particular attention to the area around the lint filter. Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of your house.",
+        "The vent duct should slide right out if it isn't fastened or sealed to the home's exterior.",
+        "You may also want to remove the bottom front panel of the dryer and clean there as well.",
+        "Particular attention should be paid to the area around the lint filter.",
+        "Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new claim The dryer vent cover is located on the outside of your house. preserves the location proposition with a pronoun change. A broad overlapping exclusion does not prove this proposition was dropped.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13716:c3",
+      "id": "13716",
+      "old_claim_id": "c3",
+      "old_claim": "A dryer vent brush is used to remove the lint from inside the hole.",
+      "old_source_span": "Use a dryer vent brush to remove the lint from inside the hole.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Use a dryer vent brush to remove the lint from inside the hole.",
+          "reason": "Instruction to use a brush to remove lint.",
+          "source_start": 193,
+          "source_end": 256,
+          "overlap_substantive_characters": 50
+        }
+      ],
+      "answer": "To clean a dryer vent, first locate the dryer vent cover on the outside of your house and remove it. The vent duct should slide right out if it isn't fastened or sealed to the home's exterior. Use a dryer vent brush to remove the lint from inside the hole. Then, remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer. Reconnect the vent and move the dryer back against the wall. You may also want to remove the bottom front panel of the dryer and clean there as well, paying particular attention to the area around the lint filter. Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of your house.",
+        "The vent duct should slide right out if it isn't fastened or sealed to the home's exterior.",
+        "You may also want to remove the bottom front panel of the dryer and clean there as well.",
+        "Particular attention should be paid to the area around the lint filter.",
+        "Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "Use a dryer vent brush to remove lint is an instruction. It may imply a tool-capability premise, but converting every action-purpose instruction into a factual capability claim would conflict with the instruction/non-factual boundary. Do not treat the old claim as gold.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13716:c4",
+      "id": "13716",
+      "old_claim_id": "c4",
+      "old_claim": "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+      "old_source_span": "remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Then, remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint",
+          "reason": "Instruction to remove the vent.",
+          "source_start": 257,
+          "source_end": 385,
+          "overlap_substantive_characters": 99
+        }
+      ],
+      "answer": "To clean a dryer vent, first locate the dryer vent cover on the outside of your house and remove it. The vent duct should slide right out if it isn't fastened or sealed to the home's exterior. Use a dryer vent brush to remove the lint from inside the hole. Then, remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer. Reconnect the vent and move the dryer back against the wall. You may also want to remove the bottom front panel of the dryer and clean there as well, paying particular attention to the area around the lint filter. Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of your house.",
+        "The vent duct should slide right out if it isn't fastened or sealed to the home's exterior.",
+        "You may also want to remove the bottom front panel of the dryer and clean there as well.",
+        "Particular attention should be paid to the area around the lint filter.",
+        "Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "medium",
+        "note": "The answer describes a specific removal mechanism using the clamp and elbow-shaped joint. The new list contains neither that mechanism nor those structural relations. This is a likely loss of an embedded mechanism premise, not evidence that the advised action occurred.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13716:c5",
+      "id": "13716",
+      "old_claim_id": "c5",
+      "old_claim": "The dryer vent brush is again used to remove the lint from the vent and the hole in the back of the dryer.",
+      "old_source_span": "and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer",
+      "new_overlapping_exclusions": [
+        {
+          "text": "and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer.",
+          "reason": "Instruction to use the brush to remove lint.",
+          "source_start": 386,
+          "source_end": 493,
+          "overlap_substantive_characters": 84
+        }
+      ],
+      "answer": "To clean a dryer vent, first locate the dryer vent cover on the outside of your house and remove it. The vent duct should slide right out if it isn't fastened or sealed to the home's exterior. Use a dryer vent brush to remove the lint from inside the hole. Then, remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint and again use your dryer vent brush to remove the lint from the vent and the hole in the back of the dryer. Reconnect the vent and move the dryer back against the wall. You may also want to remove the bottom front panel of the dryer and clean there as well, paying particular attention to the area around the lint filter. Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of your house.",
+        "The vent duct should slide right out if it isn't fastened or sealed to the home's exterior.",
+        "You may also want to remove the bottom front panel of the dryer and clean there as well.",
+        "Particular attention should be paid to the area around the lint filter.",
+        "Removing the lint filter frame can provide easier access to lint deposits for a more thorough cleaning."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "Repeated brush-use instruction is excluded. Whether its purpose clause asserts a separate tool-capability fact beyond advice needs a stable author-level semantics policy; no definitive omission label assigned.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c1",
+      "id": "13720",
+      "old_claim_id": "c1",
+      "old_claim": "The dryer vent cover is located on the outside of the house.",
+      "old_source_span": "Locate the dryer vent cover on the outside of your house",
+      "new_overlapping_exclusions": [
+        {
+          "text": "1. Locate the dryer vent cover on the outside of your house and remove it.",
+          "reason": "Instruction to act, not an assertion that it was done",
+          "source_start": 128,
+          "source_end": 202,
+          "overlap_substantive_characters": 46
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "The instruction locates the vent cover on the house exterior. The only retained new claim concerns fire prevention, so the embedded location premise is absent.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c2",
+      "id": "13720",
+      "old_claim_id": "c2",
+      "old_claim": "A special lint brush has an extendable handle.",
+      "old_source_span": "Use a special lint brush with an extendable handle",
+      "new_overlapping_exclusions": [
+        {
+          "text": "2. Use a special lint brush with an extendable handle to clean the inside of the pipe.",
+          "reason": "Instruction to act",
+          "source_start": 203,
+          "source_end": 289,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "Selecting a brush with an extendable handle can prescribe a tool type without making a general factual claim that lint brushes have such handles. The old existential/general wording is not a reliable gold target.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c3",
+      "id": "13720",
+      "old_claim_id": "c3",
+      "old_claim": "The vent is attached to the back of the dryer.",
+      "old_source_span": "Remove the vent from the back of the dryer",
+      "new_overlapping_exclusions": [
+        {
+          "text": "3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+          "reason": "Instruction to act",
+          "source_start": 290,
+          "source_end": 416,
+          "overlap_substantive_characters": 34
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "The instruction presupposes the vent attachment/location at the dryer back. This structural location is absent from the sole retained fire-prevention claim.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c4",
+      "id": "13720",
+      "old_claim_id": "c4",
+      "old_claim": "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+      "old_source_span": "Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+          "reason": "Instruction to act",
+          "source_start": 290,
+          "source_end": 416,
+          "overlap_substantive_characters": 99
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "medium",
+        "note": "The specified clamp/elbow removal mechanism is excluded with the entire instruction, and no retained claim captures it. Treat as likely embedded mechanism loss, not an assertion of a performed action.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c5",
+      "id": "13720",
+      "old_claim_id": "c5",
+      "old_claim": "The area in the back of the dryer includes a hole.",
+      "old_source_span": "the hole in the back of the dryer",
+      "new_overlapping_exclusions": [
+        {
+          "text": "4. Clean the vent as well as the hole in the back of the dryer using the lint brush.",
+          "reason": "Instruction to act",
+          "source_start": 417,
+          "source_end": 501,
+          "overlap_substantive_characters": 26
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "medium",
+        "note": "The instruction explicitly identifies a hole in the dryer back. The new fire-prevention claim does not preserve this structural premise.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c6",
+      "id": "13720",
+      "old_claim_id": "c6",
+      "old_claim": "The dryer has a bottom front panel.",
+      "old_source_span": "remove the bottom front panel of the dryer",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Additionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.",
+          "reason": "Advice/optional recommendation, not an assertion of fact",
+          "source_start": 567,
+          "source_end": 716,
+          "overlap_substantive_characters": 35
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "Optional removal of a bottom front panel presupposes an available panel for the discussed dryer, but the advice could be conditional on model applicability. The old generic The dryer has wording may overgeneralize; leave this boundary unresolved.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13720:c7",
+      "id": "13720",
+      "old_claim_id": "c7",
+      "old_claim": "The dryer has a lint filter and an area around it.",
+      "old_source_span": "clean the area around the lint filter",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Additionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.",
+          "reason": "Advice/optional recommendation, not an assertion of fact",
+          "source_start": 567,
+          "source_end": 716,
+          "overlap_substantive_characters": 31
+        }
+      ],
+      "answer": "Sure, here's how to clean the dryer vent based on the given passages:\n\nTo clean the dryer vent, you should follow these steps:\n\n1. Locate the dryer vent cover on the outside of your house and remove it.\n2. Use a special lint brush with an extendable handle to clean the inside of the pipe.\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.\n4. Clean the vent as well as the hole in the back of the dryer using the lint brush.\n5. Reconnect the vent and move the dryer back against the wall.\n\nAdditionally, you may also want to remove the bottom front panel of the dryer and clean the area around the lint filter for a more thorough cleaning.\n\nIt is important to note that cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents.",
+      "new_claims": [
+        "Cleaning the dryer vent regularly can prevent dangerous house fires caused by clogged vents."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "Advice to clean around a lint filter carries a referential presupposition, but separately extracting existence and surrounding area may over-atomize the instruction. Do not count this as an author-confirmed missing fact.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13719:c1",
+      "id": "13719",
+      "old_claim_id": "c1",
+      "old_claim": "Passage 1 contains information about locating the dryer vent cover on the outside of the house.",
+      "old_source_span": "Locate the dryer vent cover on the outside of your house (passage 1)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "(passage 1)",
+          "reason": "Source citation label, not a factual assertion by itself.",
+          "source_start": 166,
+          "source_end": 177,
+          "overlap_substantive_characters": 8
+        }
+      ],
+      "answer": "Sure, I can help you with that! Here are the steps to clean a dryer vent based on the provided passages:\n\n1. Locate the dryer vent cover on the outside of your house (passage 1) and remove it by sliding it out if it isn't fastened or sealed to the exterior (step 2).\n2. Use a dryer vent brush to remove lint from the hole where the vent connects to the dryer (step 3).\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint (step 4).\n4. Clean the lint from the vent and the hole in the back of the dryer using the dryer vent brush (step 4).\n5. Reconnect the vent and move the dryer back against the wall (step 5).\n6. If desired, remove the bottom front panel of the dryer and clean the area around the lint filter (passage 2).\n7. Use a vacuum nozzle to clean the lint deposits in the area around the lint filter frame (passage 2).\n\nNote: Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent. Therefore, these steps are based on the information provided in passages 1-2.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of the house.",
+        "If the dryer vent cover isn't fastened or sealed to the exterior, it can be removed by sliding it out.",
+        "A dryer vent brush is used to remove lint from the hole where the vent connects to the dryer.",
+        "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+        "Lint is cleaned from the vent and the hole in the back of the dryer using the dryer vent brush.",
+        "The bottom front panel of the dryer can be removed and the area around the lint filter cleaned, if desired.",
+        "A vacuum nozzle is used to clean the lint deposits in the area around the lint filter frame.",
+        "Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent.",
+        "These steps are based on the information provided in passages 1-2."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "attribution_loss",
+        "confidence": "high",
+        "note": "The exterior location survives in a new claim, but its explicit passage 1 attachment is discarded as a bare citation label. A later claim about all steps being based on passages 1-2 does not restore this particular source binding.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13719:c6",
+      "id": "13719",
+      "old_claim_id": "c6",
+      "old_claim": "Step 5 involves reconnecting the vent and moving the dryer back against the wall.",
+      "old_source_span": "Reconnect the vent and move the dryer back against the wall (step 5)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Reconnect the vent and move the dryer back against the wall",
+          "reason": "Instruction to act, not itself a factual assertion.",
+          "source_start": 615,
+          "source_end": 674,
+          "overlap_substantive_characters": 49
+        }
+      ],
+      "answer": "Sure, I can help you with that! Here are the steps to clean a dryer vent based on the provided passages:\n\n1. Locate the dryer vent cover on the outside of your house (passage 1) and remove it by sliding it out if it isn't fastened or sealed to the exterior (step 2).\n2. Use a dryer vent brush to remove lint from the hole where the vent connects to the dryer (step 3).\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint (step 4).\n4. Clean the lint from the vent and the hole in the back of the dryer using the dryer vent brush (step 4).\n5. Reconnect the vent and move the dryer back against the wall (step 5).\n6. If desired, remove the bottom front panel of the dryer and clean the area around the lint filter (passage 2).\n7. Use a vacuum nozzle to clean the lint deposits in the area around the lint filter frame (passage 2).\n\nNote: Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent. Therefore, these steps are based on the information provided in passages 1-2.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of the house.",
+        "If the dryer vent cover isn't fastened or sealed to the exterior, it can be removed by sliding it out.",
+        "A dryer vent brush is used to remove lint from the hole where the vent connects to the dryer.",
+        "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+        "Lint is cleaned from the vent and the hole in the back of the dryer using the dryer vent brush.",
+        "The bottom front panel of the dryer can be removed and the area around the lint filter cleaned, if desired.",
+        "A vacuum nozzle is used to clean the lint deposits in the area around the lint filter frame.",
+        "Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent.",
+        "These steps are based on the information provided in passages 1-2."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "reasonable_nonfactual_filter",
+        "confidence": "high",
+        "note": "The answer instructs reconnection and moving the dryer; the old Step 5 involves statement promotes procedural organization into a fact. Excluding the instruction is consistent with the advice policy and does not assert or erase a performed event.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13719:c7",
+      "id": "13719",
+      "old_claim_id": "c7",
+      "old_claim": "If desired, remove the bottom front panel of the dryer and clean the area around the lint filter.",
+      "old_source_span": "If desired, remove the bottom front panel of the dryer and clean the area around the lint filter (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "(passage 2)",
+          "reason": "Source citation label, not a factual assertion by itself.",
+          "source_start": 785,
+          "source_end": 796,
+          "overlap_substantive_characters": 8
+        }
+      ],
+      "answer": "Sure, I can help you with that! Here are the steps to clean a dryer vent based on the provided passages:\n\n1. Locate the dryer vent cover on the outside of your house (passage 1) and remove it by sliding it out if it isn't fastened or sealed to the exterior (step 2).\n2. Use a dryer vent brush to remove lint from the hole where the vent connects to the dryer (step 3).\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint (step 4).\n4. Clean the lint from the vent and the hole in the back of the dryer using the dryer vent brush (step 4).\n5. Reconnect the vent and move the dryer back against the wall (step 5).\n6. If desired, remove the bottom front panel of the dryer and clean the area around the lint filter (passage 2).\n7. Use a vacuum nozzle to clean the lint deposits in the area around the lint filter frame (passage 2).\n\nNote: Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent. Therefore, these steps are based on the information provided in passages 1-2.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of the house.",
+        "If the dryer vent cover isn't fastened or sealed to the exterior, it can be removed by sliding it out.",
+        "A dryer vent brush is used to remove lint from the hole where the vent connects to the dryer.",
+        "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+        "Lint is cleaned from the vent and the hole in the back of the dryer using the dryer vent brush.",
+        "The bottom front panel of the dryer can be removed and the area around the lint filter cleaned, if desired.",
+        "A vacuum nozzle is used to clean the lint deposits in the area around the lint filter frame.",
+        "Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent.",
+        "These steps are based on the information provided in passages 1-2."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "attribution_loss",
+        "confidence": "high",
+        "note": "The optional panel/filter instruction is paraphrased in a new claim, but its explicit passage 2 attribution is dropped. This observation concerns source binding; the advisory wording itself should not automatically become a factual event.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13719:c8",
+      "id": "13719",
+      "old_claim_id": "c8",
+      "old_claim": "A vacuum nozzle can be used to clean the lint deposits in the area around the lint filter frame.",
+      "old_source_span": "Use a vacuum nozzle to clean the lint deposits in the area around the lint filter frame (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "(passage 2)",
+          "reason": "Source citation label, not a factual assertion by itself.",
+          "source_start": 889,
+          "source_end": 900,
+          "overlap_substantive_characters": 8
+        }
+      ],
+      "answer": "Sure, I can help you with that! Here are the steps to clean a dryer vent based on the provided passages:\n\n1. Locate the dryer vent cover on the outside of your house (passage 1) and remove it by sliding it out if it isn't fastened or sealed to the exterior (step 2).\n2. Use a dryer vent brush to remove lint from the hole where the vent connects to the dryer (step 3).\n3. Remove the vent from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint (step 4).\n4. Clean the lint from the vent and the hole in the back of the dryer using the dryer vent brush (step 4).\n5. Reconnect the vent and move the dryer back against the wall (step 5).\n6. If desired, remove the bottom front panel of the dryer and clean the area around the lint filter (passage 2).\n7. Use a vacuum nozzle to clean the lint deposits in the area around the lint filter frame (passage 2).\n\nNote: Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent. Therefore, these steps are based on the information provided in passages 1-2.",
+      "new_claims": [
+        "The dryer vent cover is located on the outside of the house.",
+        "If the dryer vent cover isn't fastened or sealed to the exterior, it can be removed by sliding it out.",
+        "A dryer vent brush is used to remove lint from the hole where the vent connects to the dryer.",
+        "The vent is removed from the back of the dryer by unscrewing the vent clamp and sliding the vent out of the elbow-shaped joint.",
+        "Lint is cleaned from the vent and the hole in the back of the dryer using the dryer vent brush.",
+        "The bottom front panel of the dryer can be removed and the area around the lint filter cleaned, if desired.",
+        "A vacuum nozzle is used to clean the lint deposits in the area around the lint filter frame.",
+        "Passage 3 provides additional information but does not provide specific instructions for cleaning the dryer vent.",
+        "These steps are based on the information provided in passages 1-2."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "attribution_loss",
+        "confidence": "high",
+        "note": "Vacuum-nozzle cleaning content remains, but its attached passage 2 attribution is excluded. Global source-group attribution does not uniquely preserve the cited passage of this step.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13743:c4",
+      "id": "13743",
+      "old_claim_id": "c4",
+      "old_claim": "One of the three main benefits of MSM powder is increased oxygen delivery.",
+      "old_source_span": "a. Increased oxygen delivery",
+      "new_overlapping_exclusions": [
+        {
+          "text": "a. Increased oxygen delivery",
+          "reason": "List item wording restating benefit already accounted for",
+          "source_start": 398,
+          "source_end": 426,
+          "overlap_substantive_characters": 24
+        }
+      ],
+      "answer": "Based on the provided passages, the benefits of MSM powder are:\n\n1. Increased efficiency of oxygen delivery to the blood with the same amount of effort. (Passage 1)\n2. Improved nutrient absorption through increased permeability of cell walls. (Passage 2)\n3. Relief from muscular aches and pains through reduction of inflammation. (Passage 3)\n\nTherefore, the three main benefits of MSM powder are:\n\na. Increased oxygen delivery\nb. Better nutrient absorption\nc. Reduced inflammation and pain relief",
+      "new_claims": [
+        "Increased efficiency of oxygen delivery to the blood with the same amount of effort is a benefit of MSM powder.",
+        "Improved nutrient absorption through increased permeability of cell walls is a benefit of MSM powder.",
+        "Relief from muscular aches and pains through reduction of inflammation is a benefit of MSM powder.",
+        "The three main benefits of MSM powder are increased oxygen delivery, better nutrient absorption, and reduced inflammation and pain relief."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new compound claim explicitly lists all three main benefits, and preceding claims state their details. Calling repeated list items non-factual is taxonomically questionable, but the selected benefit proposition is not missing. This audit does not certify the resulting compound granularity.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13743:c5",
+      "id": "13743",
+      "old_claim_id": "c5",
+      "old_claim": "One of the three main benefits of MSM powder is better nutrient absorption.",
+      "old_source_span": "b. Better nutrient absorption",
+      "new_overlapping_exclusions": [
+        {
+          "text": "b. Better nutrient absorption",
+          "reason": "List item wording restating benefit already accounted for",
+          "source_start": 427,
+          "source_end": 456,
+          "overlap_substantive_characters": 25
+        }
+      ],
+      "answer": "Based on the provided passages, the benefits of MSM powder are:\n\n1. Increased efficiency of oxygen delivery to the blood with the same amount of effort. (Passage 1)\n2. Improved nutrient absorption through increased permeability of cell walls. (Passage 2)\n3. Relief from muscular aches and pains through reduction of inflammation. (Passage 3)\n\nTherefore, the three main benefits of MSM powder are:\n\na. Increased oxygen delivery\nb. Better nutrient absorption\nc. Reduced inflammation and pain relief",
+      "new_claims": [
+        "Increased efficiency of oxygen delivery to the blood with the same amount of effort is a benefit of MSM powder.",
+        "Improved nutrient absorption through increased permeability of cell walls is a benefit of MSM powder.",
+        "Relief from muscular aches and pains through reduction of inflammation is a benefit of MSM powder.",
+        "The three main benefits of MSM powder are increased oxygen delivery, better nutrient absorption, and reduced inflammation and pain relief."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new compound claim explicitly lists all three main benefits, and preceding claims state their details. Calling repeated list items non-factual is taxonomically questionable, but the selected benefit proposition is not missing. This audit does not certify the resulting compound granularity.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "13743:c6",
+      "id": "13743",
+      "old_claim_id": "c6",
+      "old_claim": "One of the three main benefits of MSM powder is reduced inflammation and pain relief.",
+      "old_source_span": "c. Reduced inflammation and pain relief",
+      "new_overlapping_exclusions": [
+        {
+          "text": "c. Reduced inflammation and pain relief",
+          "reason": "List item wording restating benefit already accounted for",
+          "source_start": 457,
+          "source_end": 496,
+          "overlap_substantive_characters": 33
+        }
+      ],
+      "answer": "Based on the provided passages, the benefits of MSM powder are:\n\n1. Increased efficiency of oxygen delivery to the blood with the same amount of effort. (Passage 1)\n2. Improved nutrient absorption through increased permeability of cell walls. (Passage 2)\n3. Relief from muscular aches and pains through reduction of inflammation. (Passage 3)\n\nTherefore, the three main benefits of MSM powder are:\n\na. Increased oxygen delivery\nb. Better nutrient absorption\nc. Reduced inflammation and pain relief",
+      "new_claims": [
+        "Increased efficiency of oxygen delivery to the blood with the same amount of effort is a benefit of MSM powder.",
+        "Improved nutrient absorption through increased permeability of cell walls is a benefit of MSM powder.",
+        "Relief from muscular aches and pains through reduction of inflammation is a benefit of MSM powder.",
+        "The three main benefits of MSM powder are increased oxygen delivery, better nutrient absorption, and reduced inflammation and pain relief."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new compound claim explicitly lists all three main benefits, and preceding claims state their details. Calling repeated list items non-factual is taxonomically questionable, but the selected benefit proposition is not missing. This audit does not certify the resulting compound granularity.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c1",
+      "id": "15127",
+      "old_claim_id": "c1",
+      "old_claim": "www.pagesjaunes.fr is a website that can be used to find someone in France.",
+      "old_source_span": "To find someone in France, you can use the website www.pagesjaunes.fr",
+      "new_overlapping_exclusions": [
+        {
+          "text": "To find someone in France, you can use the website",
+          "reason": "Advice framing addressed to the reader.",
+          "source_start": 0,
+          "source_end": 50,
+          "overlap_substantive_characters": 40
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "boundary_uncertain",
+        "confidence": "medium",
+        "note": "The explicit can-use-this-site-to-find-someone-in-France capability is omitted as advice framing. However, the retained French-white-pages identity and statement about name/address/phone search results may jointly preserve the general directory function. Do not count this broad capability as a definite additional missing fact; the concrete field/control mappings are clearer losses.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c3",
+      "id": "15127",
+      "old_claim_id": "c3",
+      "old_claim": "The \"Nom\" field is where the last name of the person is entered.",
+      "old_source_span": "Enter the last name of the person in the \"Nom\" field",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Enter the last name of the person in the \"Nom\" field",
+          "reason": "Instruction to act.",
+          "source_start": 110,
+          "source_end": 162,
+          "overlap_substantive_characters": 40
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "The Nom/last-name interface mapping is factual content embedded in an imperative. The two retained website/results claims contain no field mapping.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c4",
+      "id": "15127",
+      "old_claim_id": "c4",
+      "old_claim": "The \"Prenom\" field can optionally be used to enter the person's first name.",
+      "old_source_span": "and optionally enter their first name in the \"Prenom\" field",
+      "new_overlapping_exclusions": [
+        {
+          "text": "and optionally enter their first name in the \"Prenom\" field",
+          "reason": "Instruction to act.",
+          "source_start": 163,
+          "source_end": 222,
+          "overlap_substantive_characters": 48
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "The Prenom/first-name mapping and optionality are embedded interface facts. Both disappear when the entire instruction is excluded.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c5",
+      "id": "15127",
+      "old_claim_id": "c5",
+      "old_claim": "The address can be entered in the \"Ou\" section if it is known.",
+      "old_source_span": "If you know the address, you can enter it in the \"Ou\" section",
+      "new_overlapping_exclusions": [
+        {
+          "text": "If you know the address, you can enter it in the \"Ou\" section.",
+          "reason": "Conditional instruction to act; does not assert the condition holds.",
+          "source_start": 224,
+          "source_end": 286,
+          "overlap_substantive_characters": 46
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "The conditional permission to enter a known address in Ou describes an interface capability. Preserving the condition does not require asserting that the user knows an address; the capability is missing from the new claims.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c6",
+      "id": "15127",
+      "old_claim_id": "c6",
+      "old_claim": "The address field should be left blank if the address is unknown.",
+      "old_source_span": "Leave it blank if you don't know the address",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Leave it blank if you don't know the address.",
+          "reason": "Conditional instruction to act.",
+          "source_start": 287,
+          "source_end": 332,
+          "overlap_substantive_characters": 35
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "reasonable_nonfactual_filter",
+        "confidence": "high",
+        "note": "Leave the field blank if the address is unknown is a conditional recommendation. It does not by itself assert a performed action or an independently specified system effect; filtering the old should claim is reasonable.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "15127:c7",
+      "id": "15127",
+      "old_claim_id": "c7",
+      "old_claim": "Clicking \"Trouver\" searches for the name.",
+      "old_source_span": "Click on \"Trouver\" to search for the name",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Click on \"Trouver\" to search for the name.",
+          "reason": "Instruction to act.",
+          "source_start": 333,
+          "source_end": 375,
+          "overlap_substantive_characters": 32
+        }
+      ],
+      "answer": "To find someone in France, you can use the website www.pagesjaunes.fr, the French version of the white pages. Enter the last name of the person in the \"Nom\" field and optionally enter their first name in the \"Prenom\" field. If you know the address, you can enter it in the \"Ou\" section. Leave it blank if you don't know the address. Click on \"Trouver\" to search for the name. The search results will display the name, address, and phone number of the matching listings.",
+      "new_claims": [
+        "The website www.pagesjaunes.fr is the French version of the white pages.",
+        "The search results will display the name, address, and phone number of the matching listings."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "factual_premise_loss",
+        "confidence": "high",
+        "note": "Clicking the named Trouver control initiates a name search: an action/effect relationship embedded in an instruction. The generic existence of search results does not retain which control performs the search.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "16878:c4",
+      "id": "16878",
+      "old_claim_id": "c4",
+      "old_claim": "The planting area is prepared by turning the soil over with a hoe or tiller to a depth of 12 inches, removing any large rocks or debris.",
+      "old_source_span": "prepare your planting area by turning the soil over with a hoe or tiller to a depth of 12 inches, removing any large rocks or debris",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Next, prepare your planting area",
+          "reason": "instruction to act",
+          "source_start": 278,
+          "source_end": 310,
+          "overlap_substantive_characters": 23
+        }
+      ],
+      "answer": "To plant a potato that has sprouted, first cut large potatoes into chunks with two or three eyes each, being careful not to break the long sprouts. Place these chunks on a tray and let them dry out in a cool, dark place overnight. Small, sprouted potatoes can be planted whole. Next, prepare your planting area by turning the soil over with a hoe or tiller to a depth of 12 inches, removing any large rocks or debris. Dig a trench about 4 inches wide and 6 to 8 inches deep. Cut your potatoes into cubes of about 1 to 2 inches, making sure to leave a sprout on each cube. Place these cubes in the trench, sprouted side facing up, spaced about 6 to 8 inches apart. Cover the potatoes with compost and then replace the dirt on top of the plantings. Water the potatoes thoroughly and regularly when the soil is dry to the touch. Finally, add a 4-inch layer of mulch around the plants, keeping it at least 4 inches away from the sprouting potato vines. This mulch will help keep the soil cool and maintain a consistent moisture level.",
+      "new_claims": [
+        "Large potatoes should be cut into chunks with two or three eyes each, being careful not to break the long sprouts.",
+        "These chunks should be placed on a tray and left to dry out in a cool, dark place overnight.",
+        "Small, sprouted potatoes can be planted whole.",
+        "The planting area should be prepared by turning the soil over with a hoe or tiller to a depth of 12 inches, removing any large rocks or debris.",
+        "A trench should be about 4 inches wide and 6 to 8 inches deep.",
+        "Potatoes should be cut into cubes of about 1 to 2 inches, making sure to leave a sprout on each cube.",
+        "These cubes should be placed in the trench, sprouted side facing up, spaced about 6 to 8 inches apart.",
+        "The potatoes should be covered with compost and then the dirt replaced on top of the plantings.",
+        "The potatoes should be watered thoroughly and regularly when the soil is dry to the touch.",
+        "A 4-inch layer of mulch should be added around the plants, keeping it at least 4 inches away from the sprouting potato vines.",
+        "This mulch will help keep the soil cool and maintain a consistent moisture level."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new claim retains preparation by turning soil, tool options, 12-inch depth and debris removal with should wording. No selected numerical or mechanism content is lost, although whether the full recommendation itself belongs in factual claims is a separate extraction-precision question.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "12435:c6",
+      "id": "12435",
+      "old_claim_id": "c6",
+      "old_claim": "The causes of IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+      "old_source_span": "it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "As for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:",
+          "reason": "List introduction attributing claims to passages; the list items carry the factual content.",
+          "source_start": 269,
+          "source_end": 374,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Based on the provided passages, the main symptoms of Irritable Bowel Syndrome (IBS) are:\n\n1. Diarrhea ( passage 1)\n2. Constipation (passage 2 & 3)\n3. Alternating constipation and diarrhea (passage 3)\n4. Belly pains or cramps (passage 3)\n5. Gas or bloating (passage 3)\n\nAs for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)\n\nIt is important to note that the exact cause of IBS is still unknown and may involve multiple factors. Additionally, the passages do not provide clear information on the specific causes of the symptoms mentioned above. Therefore, I am unable to answer the question regarding the specific causes of each symptom based on the provided passages.",
+      "new_claims": [
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include constipation.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include alternating constipation and diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include belly pains or cramps.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include gas or bloating.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+        "The passages suggest that IBS may be due to a combination of factors, including alterations in GI tract motility.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal nervous system signals.",
+        "The passages suggest that IBS may be due to a combination of factors, including increased sensitivity to pain.",
+        "The passages suggest that IBS may be due to a combination of factors, including food intolerances.",
+        "The exact cause of IBS is still unknown and may involve multiple factors.",
+        "The passages do not provide clear information on the specific causes of the symptoms mentioned above."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new corresponding claim retains the cause candidate, may modality, combination-of-factors scope and even the global passages-suggest attribution. Excluding the list introduction as a location does not remove those qualifiers from claim_text. Incidental shared limitation: individual numbered passage attribution from the original list is absent from these old and new claim texts; that is not a new loss demonstrated by this candidate.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "12435:c7",
+      "id": "12435",
+      "old_claim_id": "c7",
+      "old_claim": "The causes of IBS may be due to a combination of factors, including alterations in GI tract motility.",
+      "old_source_span": "it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "As for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:",
+          "reason": "List introduction attributing claims to passages; the list items carry the factual content.",
+          "source_start": 269,
+          "source_end": 374,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Based on the provided passages, the main symptoms of Irritable Bowel Syndrome (IBS) are:\n\n1. Diarrhea ( passage 1)\n2. Constipation (passage 2 & 3)\n3. Alternating constipation and diarrhea (passage 3)\n4. Belly pains or cramps (passage 3)\n5. Gas or bloating (passage 3)\n\nAs for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)\n\nIt is important to note that the exact cause of IBS is still unknown and may involve multiple factors. Additionally, the passages do not provide clear information on the specific causes of the symptoms mentioned above. Therefore, I am unable to answer the question regarding the specific causes of each symptom based on the provided passages.",
+      "new_claims": [
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include constipation.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include alternating constipation and diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include belly pains or cramps.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include gas or bloating.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+        "The passages suggest that IBS may be due to a combination of factors, including alterations in GI tract motility.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal nervous system signals.",
+        "The passages suggest that IBS may be due to a combination of factors, including increased sensitivity to pain.",
+        "The passages suggest that IBS may be due to a combination of factors, including food intolerances.",
+        "The exact cause of IBS is still unknown and may involve multiple factors.",
+        "The passages do not provide clear information on the specific causes of the symptoms mentioned above."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new corresponding claim retains the cause candidate, may modality, combination-of-factors scope and even the global passages-suggest attribution. Excluding the list introduction as a location does not remove those qualifiers from claim_text. Incidental shared limitation: individual numbered passage attribution from the original list is absent from these old and new claim texts; that is not a new loss demonstrated by this candidate.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "12435:c8",
+      "id": "12435",
+      "old_claim_id": "c8",
+      "old_claim": "The causes of IBS may be due to a combination of factors, including abnormal nervous system signals.",
+      "old_source_span": "it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "As for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:",
+          "reason": "List introduction attributing claims to passages; the list items carry the factual content.",
+          "source_start": 269,
+          "source_end": 374,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Based on the provided passages, the main symptoms of Irritable Bowel Syndrome (IBS) are:\n\n1. Diarrhea ( passage 1)\n2. Constipation (passage 2 & 3)\n3. Alternating constipation and diarrhea (passage 3)\n4. Belly pains or cramps (passage 3)\n5. Gas or bloating (passage 3)\n\nAs for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)\n\nIt is important to note that the exact cause of IBS is still unknown and may involve multiple factors. Additionally, the passages do not provide clear information on the specific causes of the symptoms mentioned above. Therefore, I am unable to answer the question regarding the specific causes of each symptom based on the provided passages.",
+      "new_claims": [
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include constipation.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include alternating constipation and diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include belly pains or cramps.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include gas or bloating.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+        "The passages suggest that IBS may be due to a combination of factors, including alterations in GI tract motility.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal nervous system signals.",
+        "The passages suggest that IBS may be due to a combination of factors, including increased sensitivity to pain.",
+        "The passages suggest that IBS may be due to a combination of factors, including food intolerances.",
+        "The exact cause of IBS is still unknown and may involve multiple factors.",
+        "The passages do not provide clear information on the specific causes of the symptoms mentioned above."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new corresponding claim retains the cause candidate, may modality, combination-of-factors scope and even the global passages-suggest attribution. Excluding the list introduction as a location does not remove those qualifiers from claim_text. Incidental shared limitation: individual numbered passage attribution from the original list is absent from these old and new claim texts; that is not a new loss demonstrated by this candidate.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "12435:c9",
+      "id": "12435",
+      "old_claim_id": "c9",
+      "old_claim": "The causes of IBS may be due to a combination of factors, including increased sensitivity to pain.",
+      "old_source_span": "it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "As for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:",
+          "reason": "List introduction attributing claims to passages; the list items carry the factual content.",
+          "source_start": 269,
+          "source_end": 374,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Based on the provided passages, the main symptoms of Irritable Bowel Syndrome (IBS) are:\n\n1. Diarrhea ( passage 1)\n2. Constipation (passage 2 & 3)\n3. Alternating constipation and diarrhea (passage 3)\n4. Belly pains or cramps (passage 3)\n5. Gas or bloating (passage 3)\n\nAs for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)\n\nIt is important to note that the exact cause of IBS is still unknown and may involve multiple factors. Additionally, the passages do not provide clear information on the specific causes of the symptoms mentioned above. Therefore, I am unable to answer the question regarding the specific causes of each symptom based on the provided passages.",
+      "new_claims": [
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include constipation.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include alternating constipation and diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include belly pains or cramps.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include gas or bloating.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+        "The passages suggest that IBS may be due to a combination of factors, including alterations in GI tract motility.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal nervous system signals.",
+        "The passages suggest that IBS may be due to a combination of factors, including increased sensitivity to pain.",
+        "The passages suggest that IBS may be due to a combination of factors, including food intolerances.",
+        "The exact cause of IBS is still unknown and may involve multiple factors.",
+        "The passages do not provide clear information on the specific causes of the symptoms mentioned above."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new corresponding claim retains the cause candidate, may modality, combination-of-factors scope and even the global passages-suggest attribution. Excluding the list introduction as a location does not remove those qualifiers from claim_text. Incidental shared limitation: individual numbered passage attribution from the original list is absent from these old and new claim texts; that is not a new loss demonstrated by this candidate.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "12435:c10",
+      "id": "12435",
+      "old_claim_id": "c10",
+      "old_claim": "The causes of IBS may be due to a combination of factors, including food intolerances.",
+      "old_source_span": "it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)",
+      "new_overlapping_exclusions": [
+        {
+          "text": "As for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:",
+          "reason": "List introduction attributing claims to passages; the list items carry the factual content.",
+          "source_start": 269,
+          "source_end": 374,
+          "overlap_substantive_characters": 42
+        }
+      ],
+      "answer": "Based on the provided passages, the main symptoms of Irritable Bowel Syndrome (IBS) are:\n\n1. Diarrhea ( passage 1)\n2. Constipation (passage 2 & 3)\n3. Alternating constipation and diarrhea (passage 3)\n4. Belly pains or cramps (passage 3)\n5. Gas or bloating (passage 3)\n\nAs for the causes of IBS, the passages suggest that it may be due to a combination of factors, including:\n\n1. Abnormal gastrointestinal (GI) tract movements (passage 1)\n2. Alterations in GI tract motility (passage 2)\n3. Abnormal nervous system signals (passage 2)\n4. Increased sensitivity to pain (passage 2)\n5. Food intolerances (passage 2)\n\nIt is important to note that the exact cause of IBS is still unknown and may involve multiple factors. Additionally, the passages do not provide clear information on the specific causes of the symptoms mentioned above. Therefore, I am unable to answer the question regarding the specific causes of each symptom based on the provided passages.",
+      "new_claims": [
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include constipation.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include alternating constipation and diarrhea.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include belly pains or cramps.",
+        "The main symptoms of Irritable Bowel Syndrome (IBS) include gas or bloating.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal gastrointestinal (GI) tract movements.",
+        "The passages suggest that IBS may be due to a combination of factors, including alterations in GI tract motility.",
+        "The passages suggest that IBS may be due to a combination of factors, including abnormal nervous system signals.",
+        "The passages suggest that IBS may be due to a combination of factors, including increased sensitivity to pain.",
+        "The passages suggest that IBS may be due to a combination of factors, including food intolerances.",
+        "The exact cause of IBS is still unknown and may involve multiple factors.",
+        "The passages do not provide clear information on the specific causes of the symptoms mentioned above."
+      ],
+      "old_detection": "negative",
+      "new_detection": "negative",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new corresponding claim retains the cause candidate, may modality, combination-of-factors scope and even the global passages-suggest attribution. Excluding the list introduction as a location does not remove those qualifiers from claim_text. Incidental shared limitation: individual numbered passage attribution from the original list is absent from these old and new claim texts; that is not a new loss demonstrated by this candidate.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "4348:c5",
+      "id": "4348",
+      "old_claim_id": "c5",
+      "old_claim": "Despite the controversy, the nursing home industry is seeking legislative support for an override of the veto.",
+      "old_source_span": "Despite the controversy, the nursing home industry is seeking legislative support for an override of the veto.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Despite the controversy,",
+          "reason": "concessive transition, not itself a factual assertion",
+          "source_start": 453,
+          "source_end": 477,
+          "overlap_substantive_characters": 21
+        }
+      ],
+      "answer": "Here is a summary of the article in 104 words:\n\nIllinois Senate President Don Harmon has faced criticism over accepting large campaign contributions from the nursing home industry as he supports legislation that could provide substantial property tax breaks to nursing homes in Cook County. Critics argue that the contributions could have influenced Harmon's decision to support the tax relief measure, which was later vetoed by Governor J.B. Pritzker. Despite the controversy, the nursing home industry is seeking legislative support for an override of the veto.",
+      "new_claims": [
+        "Illinois Senate President Don Harmon has faced criticism over accepting large campaign contributions from the nursing home industry.",
+        "Harmon supports legislation that could provide substantial property tax breaks to nursing homes in Cook County.",
+        "Critics argue that the contributions could have influenced Harmon's decision to support the tax relief measure.",
+        "The tax relief measure was later vetoed by Governor J.B. Pritzker.",
+        "The nursing home industry is seeking legislative support for an override of the veto."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The main assertion about seeking an override is retained verbatim apart from the concessive opening; preceding retained claims preserve the controversy/criticism. No independent asserted event or fact is shown missing by removing this transition.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "1731:c9",
+      "id": "1731",
+      "old_claim_id": "c9",
+      "old_claim": "It is important to recognize that testing oneself does not necessarily lead to better health outcomes.",
+      "old_source_span": "it is important to recognize that testing oneself does not necessarily lead to better health outcomes,",
+      "new_overlapping_exclusions": [
+        {
+          "text": "it is important to recognize that",
+          "reason": "evaluative framing rather than factual assertion",
+          "source_start": 832,
+          "source_end": 865,
+          "overlap_substantive_characters": 28
+        }
+      ],
+      "answer": "In recent years, there has been a trend towards \"National Get Tested Month,\" with influential figures such as Mark Cuban and Taylor Swift encouraging people to get tested for various medical conditions. However, some experts are warning that this trend could lead to a number of negative consequences, including unnecessary medical procedures and increased healthcare costs. With the rise of direct-to-consumer genetic testing, it has become possible for individuals to order their own lab tests without a doctor's order, leading to concerns about the accuracy and relevance of the results. Some have pointed to the example of South Korea, where thyroid cancer screenings have led to a 15-fold increase in diagnoses, raising questions about the potential harms of over-testing. While there have been advances in diagnostic testing, it is important to recognize that testing oneself does not necessarily lead to better health outcomes, and that education and regulation are needed to ensure that individuals are not misled by false or irrelevant test results.",
+      "new_claims": [
+        "In recent years, there has been a trend towards \"National Get Tested Month.\"",
+        "Influential figures such as Mark Cuban and Taylor Swift encourage people to get tested for various medical conditions.",
+        "Some experts are warning that this trend could lead to a number of negative consequences, including unnecessary medical procedures and increased healthcare costs.",
+        "With the rise of direct-to-consumer genetic testing, it has become possible for individuals to order their own lab tests without a doctor's order.",
+        "This has led to concerns about the accuracy and relevance of the results.",
+        "Some have pointed to the example of South Korea, where thyroid cancer screenings have led to a 15-fold increase in diagnoses.",
+        "The South Korea example raises questions about the potential harms of over-testing.",
+        "While there have been advances in diagnostic testing, testing oneself does not necessarily lead to better health outcomes.",
+        "Education and regulation are needed to ensure that individuals are not misled by false or irrelevant test results."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "retained_elsewhere",
+        "confidence": "high",
+        "note": "The new claim retains the substantive assertion that self-testing does not necessarily improve outcomes, including its uncertainty and a diagnostic-progress qualification. Excluding the evaluative it is important to recognize that framing loses no selected factual premise.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "7033:c4",
+      "id": "7033",
+      "old_claim_id": "c4",
+      "old_claim": "Customers have mentioned various aspects of their experience in their reviews.",
+      "old_source_span": "Customers have mentioned various aspects of their experience in their reviews.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "Customers have mentioned various aspects of their experience in their reviews.",
+          "reason": "This is a general framing/summary statement introducing the reviews rather than a specific factual assertion.",
+          "source_start": 232,
+          "source_end": 310,
+          "overlap_substantive_characters": 67
+        }
+      ],
+      "answer": "Denny's is a local business located at 5677 Calle Real in Goleta, CA. It falls under the categories of Restaurants, Diners, Breakfast & Brunch, and American (Traditional). The business has received an overall rating of 3.0 stars. \n\nCustomers have mentioned various aspects of their experience in their reviews. One customer praised the exceptional service provided by their waiter, Gabriel, stating that he went above and beyond expectations and treated them like a long-time friend. Another customer expressed their disappointment over the closure of the restaurant, emphasizing that it was the only 24-hour option in the area and a comfortable place for regular folks, families, and students to eat. They attributed the closure to the unsustainable rent increase imposed by the landlord. A third customer had difficulty reaching the restaurant over the phone despite it being open 24 hours.\n\nBased on the provided data, Denny's does not offer reservations and does not have outdoor seating. However, they do offer free WiFi and takeout services. The restaurant is also described as good for groups and has a casual ambience. Additionally, there is a parking lot available for customers.\n\nOverall, Denny's is a local restaurant in Goleta that has received mixed reviews from customers, with some praising the service and others expressing disappointment over its closure.",
+      "new_claims": [
+        "Denny's is a local business located at 5677 Calle Real in Goleta, CA.",
+        "Denny's falls under the categories of Restaurants, Diners, Breakfast & Brunch, and American (Traditional).",
+        "The business has received an overall rating of 3.0 stars.",
+        "One customer praised the exceptional service provided by their waiter, Gabriel, stating that he went above and beyond expectations and treated them like a long-time friend.",
+        "Another customer expressed their disappointment over the closure of the restaurant, emphasizing that it was the only 24-hour option in the area and a comfortable place for regular folks, families, and students to eat.",
+        "They attributed the closure to the unsustainable rent increase imposed by the landlord.",
+        "A third customer had difficulty reaching the restaurant over the phone despite it being open 24 hours.",
+        "Based on the provided data, Denny's does not offer reservations and does not have outdoor seating.",
+        "However, they do offer free WiFi and takeout services.",
+        "The restaurant is also described as good for groups and has a casual ambience.",
+        "Additionally, there is a parking lot available for customers.",
+        "Overall, Denny's is a local restaurant in Goleta that has received mixed reviews from customers, with some praising the service and others expressing disappointment over its closure."
+      ],
+      "old_detection": "positive",
+      "new_detection": "negative",
+      "detection_unchanged": false,
+      "review": {
+        "category": "summary_excluded_but_content_retained",
+        "confidence": "high",
+        "note": "The general statement that customers mention various aspects is factual summary wording, not purely non-factual. The retained reviews explicitly describe multiple aspects and the closing summary retains mixed reviews, so this selected proposition is substantively retained. The whole-answer positive-to-negative change cannot be attributed to this broad framing omission alone.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    },
+    {
+      "key": "7036:c12",
+      "id": "7036",
+      "old_claim_id": "c12",
+      "old_claim": "The negative reviewer also mentions that the restaurant is closing due to a rent increase.",
+      "old_source_span": "They also mention that the restaurant is closing due to a rent increase.",
+      "new_overlapping_exclusions": [
+        {
+          "text": "They also mention",
+          "reason": "Attribution phrasing; the factual content is captured in the separate claim",
+          "source_start": 1046,
+          "source_end": 1063,
+          "overlap_substantive_characters": 15
+        }
+      ],
+      "answer": "Here is an objective overview of the local business \"Denny's\" based on the provided structured data in JSON format:\n\nDenny's is a Restaurant located in Goleta, California, with a rating of 3.0 out of 5 stars based on 3 customer reviews. The restaurant offers a variety of dining options, including breakfast, brunch, and dinner, and is open 24 hours a day. The menu features traditional American cuisine, including burgers, sandwiches, salads, and entrees.\n\nTwo of the three customer reviews are positive, praising the restaurant's exceptional service and comfortable seating. One reviewer notes that the staff went above and beyond their expectations, providing excellent service and treating them like old friends. Another reviewer appreciated the affordability of the restaurant and its comfortable seating, although they lament the fact that it is closing due to a significant increase in rent.\n\nHowever, one reviewer had a negative experience, expressing frustration at not being able to reach the restaurant by phone despite it being open. They also mention that the restaurant is closing due to a rent increase.\n\nOverall, Denny's seems to be a popular spot for diners in Goleta, with a focus on friendly service and comfort. However, the recent rent increase and subsequent closure have caused some inconvenience for customers.",
+      "new_claims": [
+        "Denny's is a Restaurant located in Goleta, California.",
+        "Denny's has a rating of 3.0 out of 5 stars based on 3 customer reviews.",
+        "Denny's offers a variety of dining options, including breakfast, brunch, and dinner.",
+        "Denny's is open 24 hours a day.",
+        "Denny's menu features traditional American cuisine, including burgers, sandwiches, salads, and entrees.",
+        "Two of the three customer reviews are positive, praising the restaurant's exceptional service and comfortable seating.",
+        "One reviewer notes that the staff went above and beyond their expectations, providing excellent service and treating them like old friends.",
+        "Another reviewer appreciated the affordability of the restaurant and its comfortable seating, although they lament the fact that it is closing due to a significant increase in rent.",
+        "One reviewer had a negative experience, expressing frustration at not being able to reach the restaurant by phone despite it being open.",
+        "They also mention that the restaurant is closing due to a rent increase.",
+        "Denny's seems to be a popular spot for diners in Goleta, with a focus on friendly service and comfort.",
+        "The recent rent increase and subsequent closure have caused some inconvenience for customers."
+      ],
+      "old_detection": "positive",
+      "new_detection": "positive",
+      "detection_unchanged": true,
+      "review": {
+        "category": "subject_attribution_binding_lost",
+        "confidence": "high",
+        "note": "The new c10 keeps They also mention but drops the explicit negative-reviewer antecedent present in the old claim. The original answer binds They to the immediately preceding phone-complaint reviewer. New c9 is sent in batch b3 while c10 is in b4, so the correct antecedent is not in that verification batch. New c10 is judged SUPPORTED using another positive review about the rent/closure, despite the original attribution being to the negative reviewer. Both answers remain detection-positive because other claims are U. The overlapping non-factual phrase also remains in c10: overlap is the selection clue, not proof that physical deletion caused this binding error.",
+        "reviewer": "AI diagnostic review; not author adjudication"
+      }
+    }
+  ]
+}
