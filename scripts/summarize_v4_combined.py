@@ -14,24 +14,32 @@ if str(ROOT) not in sys.path:
 
 from grounding.scoring import usage_summary, cost_summary
 from scripts.benchmark_ragtruth import _jsonl, _object, _sha, _write_json
-from scripts.benchmark_v4_combined import BACKENDS, SCHEMA
+from scripts.benchmark_v4_combined import BACKENDS, SCHEMA, EXPERIMENTS, experiment_policy
 from scripts.ragtruth_v4 import code_hashes
 from scripts.ragtruth_score import _interval
 from scripts.score_v4 import score_records, _summary, load_prediction_journal, render_report
 
 
-def paired_comparison(rows, *, samples=2000, seed=20261023):
+def _backend_pair(backends):
+    if (not isinstance(backends, (tuple, list))
+            or tuple(backends) not in [policy["backends"] for policy in EXPERIMENTS.values()]):
+        raise ValueError("Unsupported paired backend selection")
+    return tuple(backends)
+
+
+def paired_comparison(rows, *, samples=2000, seed=20261023, backends=BACKENDS):
     if type(samples) is not int or samples < 0:
         raise ValueError("Bootstrap sample count must be nonnegative")
-    reference, candidate = BACKENDS
+    backends = _backend_pair(backends)
+    reference, candidate = backends
     pairs = defaultdict(dict)
     groups = defaultdict(list)
     for row in rows:
-        if row["backend"] not in BACKENDS or row["backend"] in pairs[row["id"]]:
+        if row["backend"] not in backends or row["backend"] in pairs[row["id"]]:
             raise ValueError("Unexpected or duplicate paired backend")
         pairs[row["id"]][row["backend"]] = row
         groups[row["source_id"]].append(row)
-    if any(set(pair) != set(BACKENDS) for pair in pairs.values()):
+    if any(set(pair) != set(backends) for pair in pairs.values()):
         raise ValueError("Every case must have both observations, including failures")
     changes, cases = Counter(), []
     def state(row):
@@ -44,10 +52,10 @@ def paired_comparison(rows, *, samples=2000, seed=20261023):
         if a["y_pred"] != b["y_pred"] or a["status"] != b["status"]:
             cases.append({"id": identifier, "source_id": a["source_id"], "native_positive": a["y_true"],
                           "reference": {"detected": a["y_pred"], "status": a["status"]},
-                          "combined": {"detected": b["y_pred"], "status": b["status"]}})
+                          "combined" if backends == BACKENDS else "candidate": {"detected": b["y_pred"], "status": b["status"]}})
     names = ("resolved_f1", "decision_coverage", "correct_decisions_per_all_cases", "complete_case_rate")
     def delta(items):
-        summaries = [_summary([r for r in items if r["backend"] == name]) for name in BACKENDS]
+        summaries = [_summary([r for r in items if r["backend"] == name]) for name in backends]
         def values(s):
             return (s["resolved_only"]["f1"]["value"], s["decision_coverage"]["value"],
                     s["correct_decisions_per_all_cases"]["value"], s["complete_case_rate"]["value"])
@@ -65,12 +73,14 @@ def paired_comparison(rows, *, samples=2000, seed=20261023):
             "method": "paired whole-source percentile bootstrap; descriptive exposed-dev uncertainty",
             "confidence_level": 0.95, "samples": samples, "seed": seed,
             "deltas": {name: _interval(bucket, samples, point) for name, bucket, point in zip(names, draws, points)},
-            "limitation": "Native answer labels only; label flips are not claim-level semantic corrections; no causal attribution to individual H1/H2/H3"}
+            "limitation": "Native answer labels only; label flips are not claim-level semantic corrections; " +
+                          ("no causal attribution to individual H1/H2/H3" if backends == BACKENDS else
+                           "exposed development evidence does not establish unseen generalization or author-adjudicated correctness")}
 
 
-def runtime_diagnostics(records, prices):
+def runtime_diagnostics(records, prices, *, backends=BACKENDS):
     result = {}
-    for backend in BACKENDS:
+    for backend in _backend_pair(backends):
         rows = [r for r in records if r["backend"] == backend]
         usage = usage_summary(rows)
         stage_calls, requery_reasons, errors, fingerprints, models = Counter(), Counter(), Counter(), Counter(), Counter()
@@ -110,8 +120,8 @@ def runtime_diagnostics(records, prices):
 
 def summarize(run_dir: Path, data_dir: Path, output_dir: Path, *, samples=2000):
     config, progress = _object(run_dir / "config.json"), _object(run_dir / "progress.json")
-    if config.get("schema_version") != SCHEMA or config.get("backends") != list(BACKENDS):
-        raise ValueError("Not a combined paired development run")
+    experiment_policy(config.get("backends"), config.get("schema_version"))
+    backends = tuple(config["backends"])
     if progress.get("status") != "completed" or not progress.get("source_unchanged") or not progress.get("data_unchanged"):
         raise ValueError("Incomplete/changed run cannot be summarized as a complete comparison")
     for name, digest in config["code_files_sha256"].items():
@@ -126,13 +136,16 @@ def summarize(run_dir: Path, data_dir: Path, output_dir: Path, *, samples=2000):
     inputs, manifest, gold = ([r for r in _jsonl(data_dir / name) if r["id"] in chosen]
                               for name in ("inputs.jsonl", "manifest.jsonl", "native_gold.jsonl"))
     records = load_prediction_journal(run_dir / "predictions.jsonl")
-    if len(records) != len(chosen) * len(BACKENDS) or progress["completed_records"] != len(records):
+    if len(records) != len(chosen) * len(backends) or progress["completed_records"] != len(records):
         raise ValueError("Complete comparison must include every paired record")
-    report = score_records(records, manifest, gold, backends=BACKENDS, inputs=inputs,
+    report = score_records(records, manifest, gold, backends=backends, inputs=inputs,
                            bootstrap_samples=samples, prices=config.get("price_reference"))
     report["qualification"] = config["qualification"]
-    report["combined_paired_comparison"] = paired_comparison(report["case_results"], samples=samples)
-    report["runtime_diagnostics"] = runtime_diagnostics(records, config.get("price_reference"))
+    comparison_key = "combined_paired_comparison" if config["schema_version"] == SCHEMA else "paired_comparison"
+    report[comparison_key] = paired_comparison(report["case_results"], samples=samples, backends=backends)
+    report["runtime_diagnostics"] = runtime_diagnostics(records, config.get("price_reference"), backends=backends)
+    report["experiment"] = {"schema_version": config["schema_version"], "backends": list(backends),
+                            "intervention": config["intervention"], "attribution_limit": config["attribution_limit"]}
     report["input_hashes"] = {**hashes, "predictions.jsonl": _sha(run_dir / "predictions.jsonl"),
                               "config.json": _sha(run_dir / "config.json")}
     output_dir.mkdir(parents=True, exist_ok=False)

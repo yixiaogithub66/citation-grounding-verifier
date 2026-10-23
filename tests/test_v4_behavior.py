@@ -52,6 +52,40 @@ class BehaviorTests(unittest.TestCase):
         self.assertEqual(summary["both_expected_correct_all_pairs"]["value"], 0)
         self.assertEqual(summary["stable_wrong_pair_count"], 1)
 
+    def test_paired_comparison_uses_explicit_backends_and_order(self):
+        pair = self.pairs[0]
+        backends = ("optimized-v4.0", "optimized-v4-m1-faithful")
+        rows = [record(pair, side, verdict, backend=backend)
+                for side in ("base", "variant")
+                for backend, verdict in zip(backends, ("UNSUPPORTED", "SUPPORTED"))]
+        result = behavior.summarize([pair], rows, backends=backends)
+        comparison = result["paired_backend_comparisons"]["end_to_end"]
+        self.assertEqual(comparison["paired_case_count"], 2)
+        self.assertEqual(comparison["wrong_to_right"], 2)
+        self.assertEqual(comparison["candidate_backend"], backends[1])
+        reversed_result = behavior.summarize([pair], rows, backends=backends[::-1])
+        self.assertEqual(reversed_result["paired_backend_comparisons"]["end_to_end"]["right_to_wrong"], 2)
+        with self.assertRaisesRegex(ValueError, "differs from declared"):
+            behavior.summarize([pair], rows)
+
+    def test_m1_backend_run_selection_reaches_summary(self):
+        hashes = {"scripts/benchmark_v4_behavior.py": behavior._sha(Path(behavior.__file__))}
+        verifier = SimpleNamespace(verify=lambda request: VerificationResult({"claims": []}))
+        backends = ("optimized-v4.0", "optimized-v4-m1-faithful")
+        received = []
+        def factory(backend, *args, **kwargs):
+            received.append(backend)
+            return verifier
+        with tempfile.TemporaryDirectory() as directory, patch.object(behavior, "code_hashes", return_value=hashes):
+            output = Path(directory) / "run"
+            report = behavior.run(behavior.DEFAULT_DATASET, output, Settings(api_key="fake"), V4Config(),
+                                  limit_pairs=1, modes=("end_to_end",), backends=backends, workers=1,
+                                  verifier_factory=factory)
+            config = json.loads((output / "config.json").read_text())
+            self.assertEqual(config["backends"], list(backends))
+            self.assertEqual(set(received), set(backends))
+            self.assertEqual(report["paired_backend_comparisons"]["end_to_end"]["paired_case_count"], 2)
+
     def test_transition_requires_the_declared_direction_not_arbitrary_difference(self):
         pair = next(p for p in self.pairs if p["family"] == "necessary_premise_deletion")
         rows = [record(pair, "base", "UNSUPPORTED"), record(pair, "variant", "SUPPORTED")]

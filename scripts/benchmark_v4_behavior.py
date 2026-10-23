@@ -32,6 +32,7 @@ from scripts.ragtruth_v4 import code_hashes
 
 SCHEMA = "v4-behavioral-ai-draft-v1"
 BACKENDS = ("optimized-v4.0", "optimized-v4-combined")
+SUPPORTED_BACKENDS = (*BACKENDS, "optimized-v4-m1-faithful")
 MODES = ("end_to_end", "fixed_claim")
 LABELS = {"SUPPORTED", "CONTRADICTED", "UNSUPPORTED"}
 DEFAULT_DATASET = ROOT / "dataset/v4-behavioral-ai-draft/pairs.jsonl"
@@ -203,7 +204,12 @@ def review_audit(rows: list[dict]) -> dict:
             "note": "Conditional on triggered reviews, scored against AI-draft fixed-claim labels. Triggers differ across backends; this is not a causal H3-only comparison. Unchanged includes both correct and wrong labels."}
 
 
-def summarize(pairs: list[dict], records: list[dict], prices=None) -> dict:
+def summarize(pairs: list[dict], records: list[dict], prices=None, *, backends=BACKENDS) -> dict:
+    if (not isinstance(backends, (tuple, list)) or not 1 <= len(backends) <= 2
+            or len(set(backends)) != len(backends) or any(b not in SUPPORTED_BACKENDS for b in backends)):
+        raise ValueError("Select one or two distinct supported behavior backends")
+    if any(row["backend"] not in backends for row in records):
+        raise ValueError("Behavior record backend differs from declared selection")
     index = {(row["backend"], row["mode"], row["pair_id"], row["side"]): row for row in records}
     if len(index) != len(records):
         raise ValueError("Duplicate behavior result identity")
@@ -252,8 +258,8 @@ def summarize(pairs: list[dict], records: list[dict], prices=None) -> dict:
         paired = []
         for pair in pairs:
             for side in ("base", "variant"):
-                old = index.get((BACKENDS[0], mode, pair["id"], side))
-                new = index.get((BACKENDS[1], mode, pair["id"], side))
+                old = index.get((backends[0], mode, pair["id"], side))
+                new = index.get((backends[1], mode, pair["id"], side)) if len(backends) == 2 else None
                 if old and new:
                     a, b = old["score"], new["score"]
                     paired.append({"pair_id": pair["id"], "side": side,
@@ -261,6 +267,8 @@ def summarize(pairs: list[dict], records: list[dict], prices=None) -> dict:
                                    "old_correct": a["expected_correct"], "new_correct": b["expected_correct"],
                                    "both_resolved": a["observed_label"] is not None and b["observed_label"] is not None})
         comparisons[mode] = {
+            "reference_backend": backends[0],
+            "candidate_backend": backends[1] if len(backends) == 2 else None,
             "paired_case_count": len(paired),
             "wrong_to_right": sum(not r["old_correct"] and r["new_correct"] and r["both_resolved"] for r in paired),
             "right_to_wrong": sum(r["old_correct"] and not r["new_correct"] and r["both_resolved"] for r in paired),
@@ -283,9 +291,9 @@ def run(dataset: Path, output_dir: Path, settings, config, *, backends=BACKENDS,
         raise ValueError("Pair limit must be positive")
     if limit_pairs is not None:
         pairs = pairs[:limit_pairs]
-    if (not pairs or not 1 <= workers <= 16 or not backends or not modes
+    if (not pairs or not 1 <= workers <= 16 or not 1 <= len(backends) <= 2 or not modes
             or len(set(backends)) != len(backends) or len(set(modes)) != len(modes)
-            or any(b not in BACKENDS for b in backends) or any(m not in MODES for m in modes)):
+            or any(b not in SUPPORTED_BACKENDS for b in backends) or any(m not in MODES for m in modes)):
         raise ValueError("Invalid behavior run selection")
     output_dir.mkdir(parents=True, exist_ok=False)
     hashes = code_hashes()
@@ -360,7 +368,7 @@ def run(dataset: Path, output_dir: Path, settings, config, *, backends=BACKENDS,
             "error": "Source files changed after the freeze; no valid scored comparison is published. Raw records are retained for audit.",
         }, exclusive=True)
         raise ValueError("Source files changed during run; frozen comparison is invalid")
-    report = summarize(pairs, records, prices)
+    report = summarize(pairs, records, prices, backends=backends)
     report.update({"kind": metadata["kind"], "config_sha256": _sha(output_dir / "config.json"),
                    "responses_sha256": _sha(output_dir / "responses.jsonl"), "elapsed_seconds": time.monotonic() - started,
                    "source_files_unchanged_after_run": True, "run_status": "complete"})
@@ -383,7 +391,7 @@ def main():
     parser.add_argument("--dataset", type=Path, default=DEFAULT_DATASET)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--v4-config", type=Path)
-    parser.add_argument("--backends", nargs="+", choices=BACKENDS, default=list(BACKENDS))
+    parser.add_argument("--backends", nargs="+", choices=SUPPORTED_BACKENDS, default=list(BACKENDS))
     parser.add_argument("--modes", nargs="+", choices=MODES, default=list(MODES))
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--limit-pairs", type=int)

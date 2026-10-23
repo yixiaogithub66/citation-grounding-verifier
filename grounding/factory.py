@@ -11,7 +11,7 @@ from grounding.contracts import VerificationError
 # Historical confirmation scripts bind this four-way order. New evaluation
 # protocols select v4 explicitly instead of retroactively changing that manifest.
 CANONICAL_BACKENDS = ("baseline", "minimal", "optimized-v2", "optimized-v3")
-BACKENDS = (*CANONICAL_BACKENDS, "optimized-v4.0", "optimized-v4-combined", "optimized", "optimized-v4")
+BACKENDS = (*CANONICAL_BACKENDS, "optimized-v4.0", "optimized-v4-combined", "optimized-v4-m1-faithful", "optimized", "optimized-v4")
 DEFAULT_BACKENDS = ("baseline", "minimal", "optimized-v3")
 FROZEN_V2_COMMIT = "cfadeca69f907aa91eaa4f825b78f02ac5da0e92"
 FROZEN_V2_FILES = {
@@ -75,6 +75,9 @@ def build_verifier(name: str, settings: Settings, *, v4_config=None):
     if name == "optimized-v4-combined":
         from grounding.verifiers_combined import OptimizedV4CombinedVerifier
         return OptimizedV4CombinedVerifier(settings, config=v4_config)
+    if name == "optimized-v4-m1-faithful":
+        from grounding.verifiers_m1_faithful import OptimizedV4M1FaithfulVerifier
+        return OptimizedV4M1FaithfulVerifier(settings, config=v4_config)
     if name == "optimized-v2" and not frozen_v2_provenance()["verified"]:
         raise VerificationError("configuration_error", "Frozen optimized-v2 inference files do not match the recorded commit.", 503)
     if name == "optimized-v3":

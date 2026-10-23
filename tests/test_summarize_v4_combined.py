@@ -1,5 +1,5 @@
 import unittest
-from scripts.benchmark_v4_combined import BACKENDS
+from scripts.benchmark_v4_combined import BACKENDS, M1_BACKENDS
 from scripts.summarize_v4_combined import paired_comparison
 
 
@@ -31,6 +31,19 @@ class PairedScoringTests(unittest.TestCase):
         result = paired_comparison(rows, samples=10)
         self.assertEqual(result["transition_counts"], {"wrong_to_wrong": 1})
         self.assertEqual(result["deltas"]["resolved_f1"]["high"], 0)
+
+    def test_new_pair_uses_same_scoring_formula_and_rejects_stray_old_candidate(self):
+        original = [observation("a", BACKENDS[0], True, False), observation("a", BACKENDS[1], True, True)]
+        renamed = [{**row, "backend": M1_BACKENDS[BACKENDS.index(row["backend"])]} for row in original]
+        old = paired_comparison(original, samples=20)
+        new = paired_comparison(renamed, samples=20, backends=M1_BACKENDS)
+        self.assertEqual(old["deltas"], new["deltas"])
+        self.assertEqual(old["transition_counts"], new["transition_counts"])
+        self.assertEqual(new["candidate"], M1_BACKENDS[1])
+        self.assertIn("candidate", new["case_changes"][0])
+        self.assertNotIn("combined", new["case_changes"][0])
+        with self.assertRaisesRegex(ValueError, "Unexpected or duplicate"):
+            paired_comparison(original, samples=0, backends=M1_BACKENDS)
 
 
 if __name__ == "__main__":

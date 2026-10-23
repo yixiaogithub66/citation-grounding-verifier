@@ -10,7 +10,8 @@ from grounding.config_v4 import V4Config
 from grounding.contracts import VerificationError, VerificationResult
 from grounding.factory import build_verifier, normalize_backend
 from scripts.benchmark_ragtruth import _canonical_sha
-from scripts.benchmark_v4_combined import run, BACKENDS
+from scripts.benchmark_v4_combined import run, BACKENDS, SCHEMA, M1_BACKENDS, M1_SCHEMA
+from scripts import summarize_v4_combined as summarizer
 
 
 class CombinedRunnerTests(unittest.TestCase):
@@ -74,6 +75,55 @@ class CombinedRunnerTests(unittest.TestCase):
             return Verifier()
         result = run(self.data, self.root / "run", self.settings, V4Config(), verifier_factory=factory, project_root=self.root)
         self.assertEqual(result["status"], "invalidated_changed_inputs")
+
+    def test_m1_pair_freezes_and_summarizes_without_changing_default_pair(self):
+        # This synthetic gold is first parsed by the offline scorer, not inference.
+        (self.data / "native_gold.jsonl").write_text(json.dumps({
+            "id": "response", "source_id": "source", "labels": []}) + "\n", encoding="utf-8")
+        received = []
+        def factory(backend, settings, *, v4_config):
+            received.append((backend, v4_config))
+            return Mock(verify=lambda request: VerificationResult({"claims": []}, {"calls": []}))
+        output = self.root / "m1-run"
+        progress = run(self.data, output, self.settings, V4Config(), verifier_factory=factory,
+                       project_root=self.root, backends=M1_BACKENDS, schema=M1_SCHEMA,
+                       intervention="Synthetic M1-only comparison")
+        self.assertEqual(progress["expected_records"], 2)
+        self.assertEqual({b for b, _ in received}, set(M1_BACKENDS))
+        frozen = json.loads((output / "config.json").read_text())
+        self.assertEqual(frozen["backends"], list(M1_BACKENDS))
+        self.assertEqual(frozen["schema_version"], M1_SCHEMA)
+        self.assertEqual(frozen["intervention"], "Synthetic M1-only comparison")
+        self.assertEqual(frozen["v4_config"], V4Config().public_dict())
+        with patch.object(summarizer, "ROOT", self.root):
+            report = summarizer.summarize(output, self.data, self.root / "summary", samples=0)
+        self.assertEqual(set(report["backends"]), set(M1_BACKENDS))
+        self.assertEqual(report["paired_comparison"]["candidate"], M1_BACKENDS[1])
+        self.assertEqual(set(report["runtime_diagnostics"]), set(M1_BACKENDS))
+        self.assertNotIn("combined_paired_comparison", report)
+        self.assertEqual(BACKENDS, ("optimized-v4.0", "optimized-v4-combined"))
+        self.assertEqual(SCHEMA, "v4-combined-paired-exposed-dev-v1")
+
+    def test_mismatched_or_unknown_experiment_rejected_before_output_or_calls(self):
+        for backends, schema in ((M1_BACKENDS, SCHEMA), (BACKENDS, M1_SCHEMA),
+                                 (M1_BACKENDS, "unregistered-schema"), (M1_BACKENDS[::-1], M1_SCHEMA)):
+            factory = Mock()
+            output = self.root / "invalid-run"
+            with self.assertRaisesRegex(ValueError, "schema/backend pair"):
+                run(self.data, output, self.settings, V4Config(), verifier_factory=factory,
+                    project_root=self.root, backends=backends, schema=schema)
+            factory.assert_not_called()
+            self.assertFalse(output.exists())
+
+    def test_summarizer_rejects_schema_pair_mismatch_before_scoring(self):
+        output = self.root / "invalid-summary-run"
+        output.mkdir()
+        (output / "config.json").write_text(json.dumps({"schema_version": SCHEMA, "backends": list(M1_BACKENDS)}))
+        (output / "progress.json").write_text("{}")
+        with patch.object(summarizer, "score_records") as scorer:
+            with self.assertRaisesRegex(ValueError, "schema/backend pair"):
+                summarizer.summarize(output, self.data, self.root / "summary", samples=0)
+            scorer.assert_not_called()
 
     def test_unseen_seed_rejected_before_calls(self):
         (self.data / "preparation.json").write_text(json.dumps({"seed": "ragtruth-blind-v2"}))

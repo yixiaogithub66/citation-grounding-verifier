@@ -34,12 +34,44 @@ from scripts.ragtruth_v4 import code_hashes
 
 BACKENDS = ("optimized-v4.0", "optimized-v4-combined")
 SCHEMA = "v4-combined-paired-exposed-dev-v1"
+M1_BACKENDS = ("optimized-v4.0", "optimized-v4-m1-faithful")
+M1_SCHEMA = "v4-m1-faithful-paired-exposed-dev-v1"
+EXPERIMENTS = {
+    SCHEMA: {
+        "backends": BACKENDS,
+        "intervention": "H1+H2+H3 in combined runtime; H4 is a separate offline behavioral evaluation",
+        "attribution_limit": "A joint experiment cannot identify an individual hypothesis effect",
+        "ledger_mode": "exposed-dev-combined",
+    },
+    M1_SCHEMA: {
+        "backends": M1_BACKENDS,
+        "intervention": "M1 semantic fidelity prompt only; original v4 verification, evidence repair, review and resource configuration retained",
+        "attribution_limit": "An exposed-dev M1 prompt comparison; stochastic outputs and native labels do not establish unseen generalization or author-adjudicated correctness",
+        "ledger_mode": "exposed-dev-m1-faithful",
+    },
+}
+SUPPORTED_BACKENDS = tuple(dict.fromkeys((*BACKENDS, *M1_BACKENDS)))
+
+
+def experiment_policy(backends, schema: str) -> dict:
+    """Bind a declared experiment to its ordered pair before any model calls."""
+    policy = EXPERIMENTS.get(schema)
+    if (policy is None or not isinstance(backends, (tuple, list))
+            or tuple(backends) != policy["backends"]):
+        raise ValueError("Unsupported experiment schema/backend pair")
+    return policy
 
 
 def run(data_dir: Path, output_dir: Path, settings, config: V4Config, *,
         workers: int = 4, seed: int = 20261023, limit: int | None = None,
         prices: dict | None = None, verifier_factory=build_verifier,
-        project_root: Path = ROOT) -> dict:
+        project_root: Path = ROOT, backends=BACKENDS, schema: str = SCHEMA,
+        intervention: str | None = None) -> dict:
+    policy = experiment_policy(backends, schema)
+    backends = tuple(backends)
+    intervention = policy["intervention"] if intervention is None else intervention
+    if not isinstance(intervention, str) or not intervention.strip():
+        raise ValueError("Intervention description must be nonempty")
     options = _run_options(workers, seed)
     common = public_settings(settings)
     config.validate()
@@ -49,7 +81,7 @@ def run(data_dir: Path, output_dir: Path, settings, config: V4Config, *,
         raise ValueError("Limit must be a positive integer")
     inputs, manifest, prep, hashes = _data(data_dir)  # Gold hashed, not parsed.
     if prep.get("seed") != "ragtruth-blind-v1-20261022":
-        raise ValueError("Combined experiment accepts only the exposed v1 development slice")
+        raise ValueError("Paired experiment accepts only the exposed v1 development slice")
     if limit is not None:
         inputs, manifest = inputs[:limit], manifest[:limit]
     if not inputs:
@@ -68,16 +100,16 @@ def run(data_dir: Path, output_dir: Path, settings, config: V4Config, *,
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(raw)
     metadata = {
-        "schema_version": SCHEMA, "created_at": _now(), "mode": "dev",
+        "schema_version": schema, "created_at": _now(), "mode": "dev",
         "qualification": "exposed v1 paired development experiment; not unseen or author-adjudicated",
         "data_dir": str(data_dir.resolve()), "data_files_sha256": hashes,
-        "selection": selection, "backends": list(BACKENDS), "settings": common,
+        "selection": selection, "backends": list(backends), "settings": common,
         "v4_config": config.public_dict(), "run_options": options,
         "code_files_sha256": source_hashes, "python_version": platform.python_version(),
         "price_reference": price_reference, "gold_loaded": False,
         "dev_subset": {"ids": None, "limit": limit},
-        "intervention": "H1+H2+H3 in combined runtime; H4 is a separate offline behavioral evaluation",
-        "attribution_limit": "A joint experiment cannot identify an individual hypothesis effect",
+        "intervention": intervention,
+        "attribution_limit": policy["attribution_limit"],
         "order_policy": "Deterministic per-response shuffled backend order; same request and budgets",
         "source_snapshot": {"directory": "source", "hashes": "code_files_sha256"},
     }
@@ -87,10 +119,10 @@ def run(data_dir: Path, output_dir: Path, settings, config: V4Config, *,
         replicate=True, smoke=False, freeze_sha256=_sha(output_dir / "config.json"),
         data_files_sha256=hashes, secret=settings.api_key,
     )
-    ledger["mode"] = "exposed-dev-combined"
+    ledger["mode"] = policy["ledger_mode"]
     _write_json(ledger_path, _redact(ledger, settings.api_key))
     progress = {"status": "running", "completed_records": 0,
-                "expected_records": len(inputs) * len(BACKENDS),
+                "expected_records": len(inputs) * len(backends),
                 "partial_records": 0, "error_records": 0, "started_at": _now()}
     _write_json(output_dir / "progress.json", progress, exclusive=True)
     journal_lock = threading.Lock()
@@ -107,7 +139,7 @@ def run(data_dir: Path, output_dir: Path, settings, config: V4Config, *,
             print(f"[{progress['completed_records']}/{progress['expected_records']}] {record['backend']} stored", flush=True)
 
     def work(case, meta):
-        order = backend_order(case["id"], seed, BACKENDS)
+        order = backend_order(case["id"], seed, backends)
         for position, backend in enumerate(order):
             started, started_at = time.monotonic(), _now()
             prediction, error, telemetry = None, None, {"calls": []}
@@ -166,6 +198,9 @@ def main():
     parser.add_argument("--data-dir", type=Path, default=ROOT / "dataset/ragtruth-blind-v1/recovery")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--v4-config", type=Path)
+    parser.add_argument("--backends", nargs=2, choices=SUPPORTED_BACKENDS, default=list(BACKENDS))
+    parser.add_argument("--schema", choices=tuple(EXPERIMENTS), default=SCHEMA)
+    parser.add_argument("--intervention")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--seed", type=int, default=20261023)
     parser.add_argument("--limit", type=int)
@@ -178,7 +213,8 @@ def main():
         "output_per_million": args.price_output, "currency": "USD", "reference": "fixed experiment reference; not billing",
     }
     result = run(args.data_dir, args.output_dir, load_settings(thinking="enabled"), load_v4_config(args.v4_config),
-                 workers=args.workers, seed=args.seed, limit=args.limit, prices=prices)
+                 workers=args.workers, seed=args.seed, limit=args.limit, prices=prices,
+                 backends=tuple(args.backends), schema=args.schema, intervention=args.intervention)
     print(json.dumps(result, ensure_ascii=True))
 
 

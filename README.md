@@ -1,6 +1,8 @@
 # Citation Grounding & Faithfulness Verifier
 
-新增实验后端 **`optimized-v4-combined`**：组合答案位置与覆盖记账、证据角色/指针协议、初判盲化复核，并配套离线行为测试。原 v4 保留作配对对照；启动与实验边界见 [组合实验说明](docs/V4_COMBINED_EXPERIMENT.md)。
+新增 M1 单独对照后端 **`optimized-v4-m1-faithful`**：只修改拆分提示，检查原答案实际断言的命题及其限定条件；沿用原 v4 的核查、引用、预算和失败语义。它是待验证假设，非默认后端。见 [调用前实验方案](docs/V4_M1_FAITHFUL_EXPERIMENT.md)。
+
+实验后端 **`optimized-v4-combined`**：组合答案位置与覆盖记账、证据角色/指针协议、初判盲化复核，并配套离线行为测试。原 v4 保留作配对对照；启动与实验边界见 [组合实验说明](docs/V4_COMBINED_EXPERIMENT.md)。
 
 组合实验已完成：旧 RAGTruth 180 条配对中，完整报告 170→179、原生 FP 66→76、FN 2→0，已决 F1 63.04%→61.22%，参考费用为 2.12 倍。FN 改变含非事实片段被事实化的问题，不能作为语义修复证明；物理回归和 AI 草案行为测试也未显示整体优势。**结构完整性改善，尚未获得整体通用性优化。** 377 项测试通过；详见 [完整实测与审计](reports/v4-combined-20261023/README.md)。
 
