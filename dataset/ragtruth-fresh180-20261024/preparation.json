@@ -1,0 +1,586 @@
+{
+  "adapter_version": "ragtruth-native-v1",
+  "artifacts_sha256": {
+    "inputs.jsonl": "401daf76c58fae8eccc9388bafb951703c7b4e1799287f534e4ecdf12a00990f",
+    "manifest.jsonl": "881a031fb76be049ce522be2840d170d70ad4240694d8ad078915b7b7bfb6f92",
+    "native_gold.jsonl": "74a4560cb31a9e6e1f5d0578f744053ce55840ad0159c388f7ee391670c08fb4"
+  },
+  "counts": {
+    "selected_responses": 180,
+    "selected_responses_by_task": {
+      "Data2txt": 60,
+      "QA": 60,
+      "Summary": 60
+    },
+    "selected_sources": 30
+  },
+  "exclusions": [
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "11317",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "11400",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "11860",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "11877",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "11922",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12008",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12073",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12182",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12183",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12228",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12234",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "12243",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12287",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12305",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "12344",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12414",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "12422",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "12423",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13492",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13499",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13503",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13535",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13554",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13583",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13603",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13614",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13637",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13688",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13713",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13775",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13818",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13823",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13874",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13894",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13895",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "13935",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14038",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14040",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14060",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14169",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14194",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14300",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14319",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14323",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14353",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14360",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14366",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14373",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14390",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "14458",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14498",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14605",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14680",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14690",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14694",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14719",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14769",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14778",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "14908",
+      "task_type": "Data2txt"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15206",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15210",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15243",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15262",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15275",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15288",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15315",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15388",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15402",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15420",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15442",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15450",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15453",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15455",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15501",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15546",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15551",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15577",
+      "task_type": "QA"
+    },
+    {
+      "reason": "not_six_good_responses",
+      "source_id": "15583",
+      "task_type": "QA"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15596",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15599",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15601",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15667",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15690",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15696",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15700",
+      "task_type": "Summary"
+    },
+    {
+      "reason": "previously_exposed_source",
+      "source_id": "15739",
+      "task_type": "Summary"
+    }
+  ],
+  "native_gold_policy": "Original labels preserved; invalid selected offsets abort without replacement",
+  "preselection_freeze_sha256": "edeca8e894d70d146f65f469a3f30d5d5b755f2a46074c606382528ef8907cd4",
+  "raw_files_sha256": {
+    "provenance.json": "92309765368f042c4af0b2e66a434418ecbbb1afa7f1593dca8c79ccf55f2c0d",
+    "response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+    "source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b"
+  },
+  "sampling_policy": {
+    "deduplication": "Exposure audit excludes exact context aliases and duplicate canonical request groups before hash ranking.",
+    "excluded_source_ids": [
+      "11317",
+      "11400",
+      "11860",
+      "11877",
+      "11922",
+      "12008",
+      "12073",
+      "12075",
+      "12182",
+      "12183",
+      "12228",
+      "12234",
+      "12287",
+      "12305",
+      "12414",
+      "12423",
+      "13492",
+      "13499",
+      "13503",
+      "13535",
+      "13554",
+      "13583",
+      "13603",
+      "13614",
+      "13637",
+      "13688",
+      "13713",
+      "13775",
+      "13818",
+      "13823",
+      "13874",
+      "13894",
+      "13895",
+      "13935",
+      "14038",
+      "14040",
+      "14060",
+      "14169",
+      "14194",
+      "14319",
+      "14366",
+      "14390",
+      "14498",
+      "14605",
+      "14680",
+      "14690",
+      "14694",
+      "14719",
+      "14769",
+      "14778",
+      "14808",
+      "14908",
+      "15196",
+      "15206",
+      "15210",
+      "15243",
+      "15262",
+      "15275",
+      "15315",
+      "15442",
+      "15453",
+      "15501",
+      "15577",
+      "15596",
+      "15599",
+      "15601",
+      "15667",
+      "15690",
+      "15696",
+      "15700",
+      "15739"
+    ],
+    "gold_used_for_selection": false,
+    "incomplete_group_policy": "exclude sources without exactly six good responses before ranking",
+    "ordering": "sha256(seed|task_type|source_id), then source_id",
+    "quality": "good",
+    "responses_per_source": 6,
+    "seed": "ragtruth-fresh180-v2-20261024",
+    "sources_per_task": 10,
+    "split": "test",
+    "tasks": [
+      "QA",
+      "Summary",
+      "Data2txt"
+    ]
+  },
+  "schema_version": "ragtruth-v2-preparation-v4.0",
+  "seed": "ragtruth-fresh180-v2-20261024",
+  "selected_source_ids": {
+    "Data2txt": [
+      "14726",
+      "14542",
+      "14546",
+      "14017",
+      "14223",
+      "14034",
+      "14030",
+      "14738",
+      "14219",
+      "14860"
+    ],
+    "QA": [
+      "14334",
+      "15158",
+      "15332",
+      "15378",
+      "14418",
+      "15269",
+      "15539",
+      "12269",
+      "15130",
+      "14396"
+    ],
+    "Summary": [
+      "15638",
+      "11880",
+      "11817",
+      "13834",
+      "11355",
+      "13842",
+      "15789",
+      "13848",
+      "15732",
+      "15661"
+    ]
+  },
+  "split": "test"
+}
