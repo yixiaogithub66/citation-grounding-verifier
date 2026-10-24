@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-24T04:27:36.840285+00:00",
+  "scope": "Protocol registration before coordinator reads new case content; case author/auditor may inspect cases only for reference correctness.",
+  "files": {
+    "protocol.py": "2f90ac6378ebad449e771873601ab34095ad4e57381e465a7b5df16314848021",
+    "PLAN.md": "767b1e8d5dbdf2277c1826f4432cbc3f829126d39dac7d3bd9a34cc4d2f3be25",
+    "analyze.py": "c57f99725aaa730bc61f8523c2a4de69dbe4e8b7ba06c8f5bf44a68498f03253"
+  }
+}
