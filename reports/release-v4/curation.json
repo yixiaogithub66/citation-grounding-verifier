@@ -1,0 +1,19 @@
+{
+  "archive_commit": "bd51922f30f5d1e105e8ebc5578d16fad9585342",
+  "archive_branch": "develop",
+  "history_rewritten": false,
+  "removed_file_count": 1361,
+  "removed_bytes": 64883296,
+  "preserved_result_zip": {
+    "path": "reports/ragtruth-fresh180-20261024/evidence.zip",
+    "sha256": "6432ceb6cef99e357a12814cb2c9f73390601e6088b3c105f64171be3c6f341e",
+    "bytes": 3821101
+  },
+  "exception": "Small pilot-author-review attestation retained at its frozen manifest path; large review drafts archived.",
+  "scope": "Current release tree only; all historical contents and Git history retained at archive_commit.",
+  "retained_dependency_files": [
+    "examples/sqlite.json",
+    "reports/ragtruth-inference-freeze.json",
+    "dataset/v4-behavioral-ai-draft/pairs.jsonl"
+  ]
+}

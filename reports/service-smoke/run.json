@@ -1,9 +1,0 @@
-{
-  "endpoint": "http://127.0.0.1:8000/verify",
-  "backend": "optimized",
-  "status": 200,
-  "latency_seconds": 34.17211599997245,
-  "request_sha256": "756a66205a95fe90ec1bf7ea4822827b027148787217e19d702e15daff707138",
-  "request_file": "examples/sqlite.json",
-  "method": "Actual local HTTP request using configured live DeepSeek backend."
-}

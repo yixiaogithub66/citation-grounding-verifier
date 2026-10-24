@@ -12,10 +12,11 @@ from grounding import factory
 
 
 class BackendVersionTests(unittest.TestCase):
-    def test_optimized_alias_selects_v3(self) -> None:
-        self.assertEqual(factory.normalize_backend("optimized"), "optimized-v3")
+    def test_optimized_alias_selects_v4_and_explicit_v3_is_retained(self) -> None:
+        self.assertEqual(factory.normalize_backend("optimized"), "optimized-v4.0")
+        self.assertEqual(factory.normalize_backend("optimized-v3"), "optimized-v3")
         implementation = Mock()
-        with patch.dict("sys.modules", {"grounding.verifiers_v3": Mock(OptimizedV3Verifier=implementation)}):
+        with patch.dict("sys.modules", {"grounding.verifiers_v4": Mock(OptimizedV4Verifier=implementation)}):
             result = factory.build_verifier("optimized", Settings(api_key="test-key"))
         self.assertIs(result, implementation.return_value)
         implementation.assert_called_once()

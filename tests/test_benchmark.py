@@ -342,6 +342,23 @@ class VersionComparisonTests(unittest.TestCase):
         self.assertIn("optimized-v2__vs__optimized-v3", report["paired_comparisons"])
         self.assertEqual(report["paired_comparison"]["candidate_backend"], "optimized-v3")
 
+    def test_pairs_use_only_actual_selected_backends(self) -> None:
+        case = case_with_claims(claim("The measured length is 12 m."))
+        names = ["baseline", "minimal", "custom-verifier"]
+        records = []
+        for name in names:
+            item = record(case, {"claims": [claim("The measured length is 12 m.")]})
+            item.update(backend=name, input_sha256="same")
+            records.append(item)
+        config = {"created_at": "2026-10-24T00:00:00Z", "split": "dev", "backends": names,
+                  "selected_case_ids": [case["id"]], "prices": {}, "settings": {"model": "test"}}
+        report = benchmark.make_report(records, config, {}, "test", "complete")
+        self.assertEqual(set(report["paired_comparisons"]), {
+            "baseline__vs__minimal", "baseline__vs__custom-verifier", "minimal__vs__custom-verifier",
+        })
+        self.assertTrue(all(item["paired_case_count"] == 1 for item in report["paired_comparisons"].values()))
+        self.assertIsNone(report["paired_comparison"])
+
     def test_merge_and_review_accounting_is_separate_from_outcomes(self) -> None:
         stats = benchmark.intervention_summary([{"telemetry": {
             "calls": [
@@ -374,12 +391,25 @@ class VersionComparisonTests(unittest.TestCase):
                 with patch.object(benchmark, "build_verifier", return_value=object()) as build:
                     with patch.object(benchmark, "run_cases", return_value={"status": "complete", "completed_records": 0, "backends": {}}) as run:
                         result = benchmark.main([
-                            "--backends", "optimized", "optimized-v3", "minimal", "minimal",
+                            "--backends", "optimized-v3", "optimized-v3", "minimal", "minimal",
                             "--limit", "1", "--output-dir", str(Path(temporary) / "run"),
                         ])
         self.assertEqual(result, 0)
         self.assertEqual([call.args[0] for call in build.call_args_list], ["optimized-v3", "minimal"])
         self.assertEqual(list(run.call_args.args[1]), ["optimized-v3", "minimal"])
+
+    def test_legacy_benchmark_rejects_all_v4_names_before_settings_or_inference(self) -> None:
+        for name in ("optimized", "optimized-v4", "optimized-v4.0", "optimized-v4-combined", "optimized-v4-m1-faithful"):
+            with self.subTest(backend=name), patch.object(benchmark, "load_settings") as settings, \
+                    patch.object(benchmark, "build_verifier") as build, \
+                    contextlib.redirect_stderr(io.StringIO()) as stderr:
+                with self.assertRaises(SystemExit) as raised:
+                    benchmark.main(["--backends", name])
+                self.assertEqual(raised.exception.code, 2)
+                self.assertIn("benchmark_v4_claims.py", stderr.getvalue())
+                self.assertIn("partial", stderr.getvalue())
+                settings.assert_not_called()
+                build.assert_not_called()
 
 
 class ConfirmationFreezeTests(unittest.TestCase):

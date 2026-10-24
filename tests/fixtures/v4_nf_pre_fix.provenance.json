@@ -1,0 +1,9 @@
+{
+  "source_commit": "1106c2b536b19b311c57e006b7554a5d6d64c2af",
+  "source_path": "grounding/verifiers_v4.py",
+  "git_blob": "51044e7c43a9b07d2d0ca4ee28407009cefd9261",
+  "sha256": "ea9354a600807f671097a6961c9a854103e41d1751950314279c792c0dcc45aa",
+  "size_bytes": 46037,
+  "fixture": "v4_nf_pre_fix.py",
+  "purpose": "Exact historical single-module fixture for isolated pre/post NF occurrence behavior; never imported by production."
+}
