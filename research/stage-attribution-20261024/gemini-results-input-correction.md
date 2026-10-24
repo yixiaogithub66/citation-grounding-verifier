@@ -1,7 +1,0 @@
-# Result-review input correction (no inference rerun)
-
-The coordinator's first Gemini result-review request incorrectly described simple sa07/repetition1 as changing fixed claim IDs/text. Direct inspection shows IDs, texts and all three verdicts were correct. The sole defect was an extra top-level type:"json_object" field. This mistake was in the supplied audit brief, not independently discovered by Gemini.
-
-The frozen validator rejects that envelope before populating label_rows. Therefore analysis.json's raw_label_correct/identifiable fields are envelope-gated diagnostics, not a full accounting of all parseable raw claims. Frozen common-contract valid-correct counts remain simple84/current85 out of90; no invalid response is promoted into success. A separate raw diagnostic counts simple87 correct/90 readable (3 semantic errors), current87 correct/87 readable plus3 JSON-unreadable opportunities, both using /90 planned denominator. All model records, inference, frozen references, primary protocol scoring and initial/after review pairs are unchanged.
-
-The two additional S/C rows in that invalid-envelope batch have citation combinations already present in the 68-item evidence audit. Evidence-sufficient valid-correct bounds remain simple80–82/current84–85. This raw correction does not change review:85 eligible correct initial labels,27 reviews,zero label changes,one structured-conflict repair.

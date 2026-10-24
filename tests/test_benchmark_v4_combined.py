@@ -138,7 +138,7 @@ class CombinedRunnerTests(unittest.TestCase):
             build_verifier("optimized-v4-combined", self.settings, v4_config=V4Config())
         implementation.assert_called_once_with(self.settings, config=V4Config())
         self.assertEqual(normalize_backend("optimized-v4"), "optimized-v4.0")
-        self.assertEqual(normalize_backend("optimized"), "optimized-v3")
+        self.assertEqual(normalize_backend("optimized"), "optimized-v4.0")
 
 
 if __name__ == "__main__":

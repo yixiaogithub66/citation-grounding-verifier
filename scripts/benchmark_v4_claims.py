@@ -21,7 +21,7 @@ from grounding.config import load_settings
 from grounding.config_v4 import load_v4_config
 from grounding.contracts import VerificationError, VerificationRequest, validate_report
 from grounding.contracts_v4 import validate_v4_report
-from grounding.factory import build_verifier
+from grounding.factory import BACKENDS, CURRENT_BACKENDS, DEFAULT_V4_CONFIG_PATH, build_verifier, normalize_backend
 from grounding.scoring import fraction, usage_summary, cost_summary
 from scripts.benchmark_ragtruth import _jsonl, _write_json, _sha, _now, _redact, public_settings
 from scripts.ragtruth_v4 import code_hashes
@@ -46,7 +46,7 @@ def summarize(records):
                            'usage':usage}
     return summaries
 
-def run(dataset, output_dir, settings, config, *, backends=('optimized-v4.0',), split=None, workers=4, limit=None):
+def run(dataset, output_dir, settings, config, *, backends=CURRENT_BACKENDS, split=None, workers=4, limit=None):
     cases=_jsonl(dataset)
     if split:
         cases=[c for c in cases if c.get('split')==split]
@@ -119,14 +119,17 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--dataset',type=Path,required=True)
     p.add_argument('--output-dir',type=Path,required=True)
-    p.add_argument('--v4-config',type=Path)
-    p.add_argument('--backends',nargs='+',choices=('baseline','minimal','optimized-v2','optimized-v3','optimized-v4.0','optimized-v4-combined','optimized-v4-m1-faithful'),default=['optimized-v4.0'])
+    p.add_argument('--v4-config',type=Path,default=DEFAULT_V4_CONFIG_PATH,
+                   help="Per-stage v4 settings; default: repository configs/optimized-v4.0.json")
+    p.add_argument('--env-file',type=Path)
+    p.add_argument('--backends',nargs='+',choices=BACKENDS,default=list(CURRENT_BACKENDS))
     p.add_argument('--split')
     p.add_argument('--workers',type=int,default=4)
     p.add_argument('--limit',type=int)
     args=p.parse_args()
     if not 1<=args.workers<=16 or args.limit is not None and args.limit<1: p.error('Invalid workers/limit')
-    settings=load_settings(thinking='enabled')
+    args.backends=list(dict.fromkeys(normalize_backend(name) for name in args.backends))
+    settings=load_settings(env_file=args.env_file,thinking='enabled')
     if any(b!='baseline' for b in args.backends) and not settings.api_key: p.error('LLM_API_KEY is required')
     run(args.dataset,args.output_dir,settings,load_v4_config(args.v4_config),backends=tuple(args.backends),split=args.split,workers=args.workers,limit=args.limit)
 

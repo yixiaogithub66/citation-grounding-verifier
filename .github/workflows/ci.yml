@@ -19,3 +19,4 @@ jobs:
       - run: python scripts/validate_dataset.py --dataset dataset/cphos28-review/cases.jsonl
       - run: python scripts/validate_dataset.py --dataset dataset/cphos28-confirmation/cases.jsonl
       - run: python scripts/benchmark.py --backends baseline --split dev --output-dir results/ci-baseline
+      - run: python scripts/benchmark_v4_claims.py --dataset dataset/cphos28/cases.jsonl --split dev --backends baseline --output-dir results/ci-current-baseline

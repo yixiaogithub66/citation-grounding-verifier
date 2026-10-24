@@ -1,4 +1,4 @@
-"""Local HTTP server: python -m grounding.server --backend optimized."""
+"""Local HTTP server: python -m grounding.server (optimized-v4.0 by default)."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from typing import Any
 
 from grounding.config import load_settings
 from grounding.contracts import VerificationError, VerificationRequest, strict_json_loads, validate_report
-from grounding.factory import BACKENDS, build_verifier
+from grounding.factory import BACKENDS, DEFAULT_V4_CONFIG_PATH, V4_BACKENDS, build_verifier, normalize_backend
 from grounding.contracts_v4 import validate_endpoint_report
 from grounding.config_v4 import load_v4_config
 
@@ -27,7 +27,7 @@ class VerificationServer(ThreadingHTTPServer):
     daemon_threads = True
     allow_reuse_address = True
 
-    def __init__(self, address, verifier, *, backend: str = "optimized", max_concurrent: int = 4):
+    def __init__(self, address, verifier, *, backend: str = "optimized-v4.0", max_concurrent: int = 4):
         self.verifier = verifier
         self.backend = backend
         self.slots = threading.BoundedSemaphore(max_concurrent)
@@ -119,19 +119,19 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=8000, type=int)
-    parser.add_argument("--backend", choices=BACKENDS, default="optimized")
+    parser.add_argument("--backend", choices=BACKENDS, default="optimized-v4.0")
     parser.add_argument("--env-file", type=Path)
-    parser.add_argument("--v4-config", type=Path, help="Independent per-stage v4 JSON settings")
+    parser.add_argument("--v4-config", type=Path, help="Per-stage v4 JSON settings; defaults to the repository's configs/optimized-v4.0.json")
     parser.add_argument("--max-concurrent", type=int, default=4)
     args = parser.parse_args()
     if not 0 <= args.port <= 65535 or not 1 <= args.max_concurrent <= 32:
         parser.error("Invalid port or concurrency limit.")
+    args.backend = normalize_backend(args.backend)
+    if args.v4_config and args.backend not in V4_BACKENDS:
+        parser.error("--v4-config requires a v4 backend.")
     try:
         settings = load_settings(args.env_file)
-        v4_backends = ("optimized-v4", "optimized-v4.0", "optimized-v4-combined", "optimized-v4-m1-faithful")
-        if args.v4_config and args.backend not in v4_backends:
-            parser.error("--v4-config requires a v4 backend.")
-        verifier = build_verifier(args.backend, settings, v4_config=load_v4_config(args.v4_config)) if args.backend in v4_backends else build_verifier(args.backend, settings)
+        verifier = build_verifier(args.backend, settings, v4_config=load_v4_config(args.v4_config or DEFAULT_V4_CONFIG_PATH)) if args.backend in V4_BACKENDS else build_verifier(args.backend, settings)
     except VerificationError as exc:
         parser.error(exc.message)
     with VerificationServer((args.host, args.port), verifier, backend=args.backend, max_concurrent=args.max_concurrent) as server:

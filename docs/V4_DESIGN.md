@@ -1,6 +1,6 @@
 # optimized-v4.0
 
-V4 implements the author decisions in [V4_DECISIONS.md](V4_DECISIONS.md). It is a separately selectable backend. The `optimized` compatibility alias still selects historical v3; use `optimized-v4.0` explicitly. No result in this document certifies author adjudication or unseen-test acceptance.
+V4 implements the author decisions in [V4_DECISIONS.md](V4_DECISIONS.md). The service now defaults to `optimized-v4.0`; `optimized` and `optimized-v4` select it too. Explicit `optimized-v2` and `optimized-v3` remain available for historical work. The default stage configuration is resolved from the repository, independently of the launch directory; an explicit `--v4-config` overrides it. No result in this document certifies author adjudication or unseen-test acceptance.
 
 ## Pipeline and boundaries
 
@@ -43,56 +43,28 @@ Partial response uses HTTP 200 and retains the original fields on each completed
 
 Consumers that require complete verification must inspect `status`/`errors`; reading `claims` alone only retrieves completed work. The original input limits and 64-claim capacity remain. Overflow is explicit and never silently truncates assertions. `status:complete` is not added to complete responses, preserving the original success schema.
 
-## Development and regression
+## Current evaluation and archived history
 
-Old RAGTruth v1 is now exposed development/regression material. A bounded seven-case quote-recovery check is:
-
-```powershell
-python scripts/ragtruth_v4.py run --data-dir dataset/ragtruth-blind-v1/recovery --output-dir results/v4-quote-check --backends optimized-v4.0 --ids 2469 445 6276 6279 7022 7033 7036 --replicate --v4-config configs/optimized-v4.0.json
-python scripts/score_v4.py --run-dir results/v4-quote-check --data-dir dataset/ragtruth-blind-v1/recovery --output-dir results/v4-quote-check-score
-```
-
-Omit `--ids` to run all 180 exposed cases. Output directories must be new. The seven IDs are the historical minimal bad-substring cases; they are not seven v3 failures. A complete report counts toward the 5/7 recovery target whether recovery uses a format repair or a rejudgment. A partial report does not count as complete recovery.
-
-CPHOS and supplemental drafts use the independent claim-gold regression runner:
+The current runner defaults to baseline, minimal and v4, and preserves partial reports:
 
 ```powershell
-python scripts/benchmark_v4_claims.py --dataset dataset/cphos28/cases.jsonl --output-dir results/v4-cphos-regression --v4-config configs/optimized-v4.0.json
-python scripts/benchmark_v4_claims.py --dataset dataset/v4-supplementary-draft/cases.jsonl --output-dir results/v4-supplementary-draft --v4-config configs/optimized-v4.0.json
+python scripts/benchmark_v4_claims.py --dataset dataset/cphos28/cases.jsonl --split test --output-dir results/current-comparison
 ```
 
-The latter ten cases are AI-authored synthetic source specifications/exercises, pending author review. They are not a human gold set and do not replace the principal external evaluation. They include six systems cases and four physics cases; the supplied premises are self-contained.
+Read aligned claim accuracy together with alignment coverage. The historical `benchmark.py` rejects v4 before calling a model because its claims-only scoring contract does not support partial reports. All output directories must be new.
 
-Offline behavioral verification:
+For RAGTruth, a completed C/U detects an answer-level problem; partial all-S remains unknown, neither TN nor FN. Full-case correct yield, complete/partial/error counts, decision coverage and conditional F1 must be reported together. Native annotations do not provide complete atomic-claim gold or author-adjudicated true FP.
 
-```powershell
-python -m unittest discover -s tests
-```
+The completed fresh180 run and unchanged evidence ZIP are [here](../reports/ragtruth-fresh180-20261024/README.md). It used previously unexposed sources after preselection freezing. Those sources are now exposed and cannot serve as untouched confirmation after subsequent development. Older protocols, review drafts and source snapshots remain in the [immutable development archive](https://github.com/yixiaogithub66/citation-grounding-verifier/tree/bd51922f30f5d1e105e8ebc5578d16fad9585342); historical freezes can require their original checkout or archived source tree.
 
-The legacy RAGTruth v1 freeze intentionally rejects the changed v4 checkout. Reproduce that exact historical runtime from commit `5fc6c40` in a separate checkout. Frozen v2 inference files remain unchanged; the new v4 runner can compare old verifiers without altering their original prompts.
+Author review of the old reported claims was submitted but has not been imported as a final adjudicated dataset. Native labels and scores remain unchanged. This release does not assert completion of the separate FP/FN acceptance gate.
 
-## Adjudication and acceptance
+## Known boundaries retained in this release
 
-The author chose AI drafts followed by the author's own per-claim final review. The review package is [here](../reviews/ragtruth-v4-dev-adjudication-v1/ai-draft/README.md): 96 cases, 341 reported C/U claims, including 82 cases in the native-FP union and 40 backend-disagreement cases. These subsets overlap.
+Repeated source spans with different claim text can still cause unnecessary coverage failures. An occurrence-aware extraction protocol must preserve legitimate multiple claims sharing the same source span. Sentence fallback is an explicit degradation, not factual-selection certification.
 
-The AI drafting tool receives only source passages and candidate claim text, without the original backend verdict or native label. It logs its prompt, settings, responses and exact-quote validation. This separation does not establish independent human review or independent model errors. All author decisions remain pending until the actual user supplies them. Original native labels are never overwritten.
+Whitespace normalization is not proven safe for indentation-sensitive code or exact string literals. A stricter quote-repair policy needs separate implementation and semantic/cost validation; this entry-point release does not claim that issue is fixed.
 
-Reviewing reported claims alone does not prove the absence of unreported hallucinations. An adjudicated full-answer FN claim additionally needs adequate full-answer adjudication coverage. Acceptance must distinguish native, reviewed-claim and author-adjudicated full-answer scopes.
+Internal conflict-content drift currently takes a targeted requery before a possible C gate. Its routing needs clarification while keeping semantic rejudgment distinct from formatting repair and preserving the total review budget.
 
-Partial-aware native scoring declares a positive result when any completed valid claim is C/U. A partial report containing only S is unknown, not TN/FN. Reports show resolved-only metrics, decision coverage, complete-case rate, technical failures, known claim completion counts and unknown claim denominators. They preserve historical whole-case-failure scores separately. Zero observed FN with unresolved native-positive cases cannot pass the FN=0 target.
-
-## Unseen v2 procedure
-
-Do not prepare the new slice until implementation/configuration are final and the development review/acceptance prerequisites have been resolved. Preselection freezing hashes code, prompts, stage settings, the original pinned raw files and all recorded source exposure. It is distinct from the later freeze that binds selected inputs and opaque gold bytes.
-
-```powershell
-python scripts/ragtruth_v4.py freeze-preselection --freeze-manifest reports/v4-preselection-freeze.json --v4-config configs/optimized-v4.0.json
-python scripts/ragtruth_v4.py prepare --raw-dir tmp/ragtruth-upstream --output-dir dataset/ragtruth-blind-v2 --preselection-freeze reports/v4-preselection-freeze.json
-python scripts/ragtruth_v4.py freeze-run --data-dir dataset/ragtruth-blind-v2 --preselection-freeze reports/v4-preselection-freeze.json --freeze-manifest dataset/ragtruth-blind-v2/freeze.json
-python scripts/ragtruth_v4.py run --mode test --data-dir dataset/ragtruth-blind-v2 --freeze-manifest dataset/ragtruth-blind-v2/freeze.json --output-dir results/ragtruth-blind-v2 --v4-config configs/optimized-v4.0.json
-python scripts/score_v4.py --run-dir results/ragtruth-blind-v2 --data-dir dataset/ragtruth-blind-v2 --output-dir reports/ragtruth-blind-v2
-```
-
-The new seed contains `v2`; the hash-ranking rule is unchanged. Exclusions apply to complete source groups, including the original 30 and all additionally recorded exposures. Selection keeps ten eligible sources per task and six good responses per source, for 180 responses. The frozen four-way comparison is baseline/minimal/v3/v4 on the same new inputs. V1 and v2 are different slices; their raw scores are not a paired case comparison.
-
-Any changed inference, scorer or configuration invalidates the formal freeze. No retuning or relabelling after viewing test outcomes. New FP adjudication can be disclosed separately while preserving the native result.
+Outer HTTP concurrency and internal v4 workers are distinct; their product can increase upstream concurrency. This is a local demonstration service, not a load-tested multi-tenant deployment. See the [results discussion](RESULTS.md) for measured accuracy, high FP and cost limits. No dataset-specific prompt, threshold, keyword branch or runtime merge was added.

@@ -307,8 +307,10 @@ class ClientTests(unittest.TestCase):
 
         class Destination(BaseHTTPRequestHandler):
             def do_GET(self) -> None:
+                self.rfile.read(int(self.headers.get("Content-Length", "0")))
                 received.append(("destination", self.headers.get("Authorization")))
                 self.send_response(200)
+                self.send_header("Content-Length", "2")
                 self.end_headers()
                 self.wfile.write(b"{}")
 
@@ -321,9 +323,14 @@ class ClientTests(unittest.TestCase):
 
         class Redirect(BaseHTTPRequestHandler):
             def do_POST(self) -> None:
+                # Drain the real POST before closing this HTTP/1.0 fixture.
+                # Closing with unread request data can reset the Windows
+                # connection before the client observes the redirect response.
+                self.rfile.read(int(self.headers["Content-Length"]))
                 received.append(("configured-origin", self.headers.get("Authorization")))
                 self.send_response(302)
                 self.send_header("Location", f"http://127.0.0.1:{destination.server_port}/leak")
+                self.send_header("Content-Length", "0")
                 self.end_headers()
 
             def log_message(self, *args) -> None:

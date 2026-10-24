@@ -93,7 +93,7 @@ class M1FaithfulIsolationTests(unittest.TestCase):
     def test_explicit_factory_selection_and_empty_input_do_not_change_defaults(self):
         verifier = build_verifier("optimized-v4-m1-faithful", self.settings, v4_config=self.config)
         self.assertIsInstance(verifier, OptimizedV4M1FaithfulVerifier)
-        self.assertEqual(normalize_backend("optimized"), "optimized-v3")
+        self.assertEqual(normalize_backend("optimized"), "optimized-v4.0")
         self.assertEqual(normalize_backend("optimized-v4"), "optimized-v4.0")
         result = verifier.verify(VerificationRequest([], " "))
         self.assertEqual(result.report, {"claims": []})

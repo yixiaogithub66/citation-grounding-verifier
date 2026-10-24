@@ -462,13 +462,16 @@ def make_report(
         },
         "limitations": LIMITATIONS,
     }
-    ordered = [name for name in (*CANONICAL_BACKENDS, "optimized") if name in backend_names]
+    ordered = list(dict.fromkeys(backend_names))
     report["paired_comparisons"] = {
         f"{reference}__vs__{candidate}": pair_backends(records, reference, candidate, config["prices"])
         for reference, candidate in combinations(ordered, 2)
     }
-    legacy_candidate = next((name for name in ("optimized-v3", "optimized", "optimized-v2") if name in backend_names), "optimized")
-    report["paired_comparison"] = pair_backends(records, "minimal", legacy_candidate, config["prices"])
+    legacy_candidate = next((name for name in ("optimized-v3", "optimized-v2", "optimized-v4.0", "optimized") if name in backend_names), None)
+    report["paired_comparison"] = (
+        pair_backends(records, "minimal", legacy_candidate, config["prices"])
+        if "minimal" in backend_names and legacy_candidate is not None else None
+    )
     return report
 
 
@@ -579,6 +582,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.limit is not None and args.limit <= 0:
         parser.error("--limit must be positive")
     args.backends = list(dict.fromkeys(normalize_backend(name) for name in args.backends))
+    if any(name.startswith("optimized-v4") for name in args.backends):
+        parser.error(
+            "This historical benchmark uses the claims-only scoring contract and cannot score v4 partial reports. "
+            "Use python scripts/benchmark_v4_claims.py --dataset <cases.jsonl> --output-dir <new-directory> "
+            "--backends baseline minimal optimized-v4.0 --v4-config configs/optimized-v4.0.json instead."
+        )
     overrides = {
         key: getattr(args, key) for key in
         ("model", "base_url", "timeout", "max_output_tokens", "thinking", "repair_attempts", "upstream_retries", "json_mode", "temperature")

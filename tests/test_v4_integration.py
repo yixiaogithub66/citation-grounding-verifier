@@ -46,7 +46,7 @@ class V4BoundaryTests(unittest.TestCase):
     def test_historical_frozen_inference_is_intact(self):
         self.assertTrue(frozen_v2_provenance()["verified"])
         self.assertEqual(normalize_backend("optimized-v4"), "optimized-v4.0")
-        self.assertEqual(normalize_backend("optimized"), "optimized-v3")
+        self.assertEqual(normalize_backend("optimized"), "optimized-v4.0")
 
     def test_stage_config_roundtrip_and_strict_unknown_fields(self):
         config = V4Config()

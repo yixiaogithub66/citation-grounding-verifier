@@ -12,7 +12,12 @@ from grounding.contracts import VerificationError
 # protocols select v4 explicitly instead of retroactively changing that manifest.
 CANONICAL_BACKENDS = ("baseline", "minimal", "optimized-v2", "optimized-v3")
 BACKENDS = (*CANONICAL_BACKENDS, "optimized-v4.0", "optimized-v4-combined", "optimized-v4-m1-faithful", "optimized", "optimized-v4")
+# The legacy benchmark keeps its historical default; the current public runner
+# and service select v4 explicitly. Frozen confirmation orders stay unchanged.
 DEFAULT_BACKENDS = ("baseline", "minimal", "optimized-v3")
+CURRENT_BACKENDS = ("baseline", "minimal", "optimized-v4.0")
+V4_BACKENDS = ("optimized-v4.0", "optimized-v4-combined", "optimized-v4-m1-faithful")
+DEFAULT_V4_CONFIG_PATH = Path(__file__).resolve().parents[1] / "configs" / "optimized-v4.0.json"
 FROZEN_V2_COMMIT = "cfadeca69f907aa91eaa4f825b78f02ac5da0e92"
 FROZEN_V2_FILES = {
     "grounding/prompts.py", "grounding/verifiers.py", "grounding/client.py",
@@ -23,9 +28,9 @@ FROZEN_V2_FILES = {
 def normalize_backend(name: str) -> str:
     if name not in BACKENDS:
         raise VerificationError("configuration_error", f"Unknown backend: {name}", 503)
-    if name == "optimized-v4":
+    if name in ("optimized", "optimized-v4"):
         return "optimized-v4.0"
-    return "optimized-v3" if name == "optimized" else name
+    return name
 
 
 def frozen_v2_provenance(root: Path | None = None) -> dict:
