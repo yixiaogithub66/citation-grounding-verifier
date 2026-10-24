@@ -1,0 +1,1122 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+  "mapping": {
+    "r-03c51b7eb8aac4a707c85528": {
+      "arm": "ledger_id",
+      "case_id": "cp013",
+      "identity_key": "bf2fb74290883b71de87850698cacdb02d6fe869b5257303b9b916026987ee18",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-0b4d440566429f27e51de91e": {
+      "arm": "ledger_id",
+      "case_id": "cp006",
+      "identity_key": "4ed38a215e9deb28604134ad4115b3afa068922d57f6df31fb46373ac3a94a93",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-0ef9af66328f7e0b5e64bfdc": {
+      "arm": "ledger_id",
+      "case_id": "cp009",
+      "identity_key": "3791023fe3ea48233df1021fe43e03685dac9754afd480e005c5aa58cad0bf8b",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-0f1873df5469d3a2aaf1440d": {
+      "arm": "ledger_text",
+      "case_id": "cp004",
+      "identity_key": "ae4ffa03d8292bc316c062a2d40174516a0831e2fe344bd654fb986c6794126b",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-0ff407ef2dcc275c8d2ccd15": {
+      "arm": "legacy",
+      "case_id": "cp012",
+      "identity_key": "2d14270a65ce2285c8d325a770aa4ebb00409f9c8b89695581b74992364f9751",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-10e9dba6d68ad885fde36015": {
+      "arm": "ledger_text",
+      "case_id": "cp013",
+      "identity_key": "b97acd22bf9714b99c91933924c6818e6a6291c37653da9059cfdbaa01d6899d",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-1253c275990d6d2b3c9b1966": {
+      "arm": "ledger_id",
+      "case_id": "cp017",
+      "identity_key": "1bb2a92723821fd5fd0f0cdc1824bf7651c1fd912a7cc250e175295a1c936e12",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-12a5ba777639f6d28ee94723": {
+      "arm": "legacy",
+      "case_id": "cp016",
+      "identity_key": "284b980e81f030896dce08e3e10dd2496f129ff5bf58ae8b3ea5a54275d9b6bb",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-16e9c2995e78a517a2b9edf4": {
+      "arm": "ledger_text",
+      "case_id": "cp004",
+      "identity_key": "80ab61e4c8cd61cca1e9c9642043ae989342df76535896bd4cae4600155b24c1",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-185b68b8250c8bc376b59e7d": {
+      "arm": "ledger_id",
+      "case_id": "cp005",
+      "identity_key": "467e8b3450af00c9c94e11fd503d96961f50eb2c19932932cf2d4e37f4be212e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-1d9e58ad34ba1fc092cc41f7": {
+      "arm": "ledger_id",
+      "case_id": "cp008",
+      "identity_key": "5de756ce95aeb505832d0c08e8f659475817b0408927498eab0795a0d818152f",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-2357cb785cdbf69271bcfdd6": {
+      "arm": "ledger_id",
+      "case_id": "cp015",
+      "identity_key": "18b9bb76c1aaebb33c446573b588f1f4510e1e28e5905c8291222d88baf97552",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-23812e6e05fd9d8c1c6e6d38": {
+      "arm": "legacy",
+      "case_id": "cp020",
+      "identity_key": "0699be1d3f91d01b16e45d934324dc6ba370458dc2cd38190c16e3663e103ff6",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-267bd237403a9e826e2e9238": {
+      "arm": "ledger_text",
+      "case_id": "cp012",
+      "identity_key": "17afc6905bba1dd77f978b5ce394d14d48ce3b032626a96a08b0ca930c236560",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-26fe8ae887b082a8f3a1038f": {
+      "arm": "ledger_id",
+      "case_id": "cp011",
+      "identity_key": "78a295487e2a55310f9323630825c949f158f8ae2a67525b9961030cfe2dcb54",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-274ad00680c7b0f4a1f4ec95": {
+      "arm": "legacy",
+      "case_id": "cp007",
+      "identity_key": "43373aa40888599885097ed0c125549d482507bd5c367c510c007e8b4518ee31",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: 'and ask each reviewer to write their own comments. For anything uncertain, leave a question instead '"
+      },
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-2857bb626fa843f4a3752833": {
+      "arm": "ledger_text",
+      "case_id": "cp020",
+      "identity_key": "7c4e6836921ffeb34896bdc52497a2c3de3d33dc5f1d0d68cae923e5db786203",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-2d9d8492749861530f8b053e": {
+      "arm": "ledger_text",
+      "case_id": "cp008",
+      "identity_key": "7fb9a38f25bff4216f28573ea343cdb839fcc2e134b0389be9b1e9d65274d336",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-2df8fb6002229853c5f8b119": {
+      "arm": "legacy",
+      "case_id": "cp015",
+      "identity_key": "d2dc7aced51ddca4afa7711a63e2ac7e176efcb599e31d828afc27d9308db539",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: 'and leave their responses blank until they answer. Avoid guessing any missing entry.'"
+      },
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-2f7467bfdba9ca76b7007a03": {
+      "arm": "ledger_id",
+      "case_id": "cp008",
+      "identity_key": "5c915e0fb39f81883154d4d2a1137ae428e77cbbec0ad0c4f72f4722989a5604",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-2f92181a7fa7a3f195c6f444": {
+      "arm": "legacy",
+      "case_id": "cp005",
+      "identity_key": "53db0a9bf274ef1931b3b11f317caedaf3842c4692a6fb4276c1829c95836a10",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: \"and the batch's cooling interval lasted 7.5 hours. Please transcribe the decimal as written and keep\""
+      },
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-30781f66fef991ff27dfe369": {
+      "arm": "legacy",
+      "case_id": "cp018",
+      "identity_key": "bfefd3bedd61b42765fd02815fff3efd6dc51ed9a5f0d64808ab274065abcf9e",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-32f4437487e2a5d28b414e4c": {
+      "arm": "legacy",
+      "case_id": "cp007",
+      "identity_key": "45c4fa36891f1fe03dbb1f5808d20a90204f9acdcc1ac44902ee80a5c7bcb59d",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-3c59bbebc83fb5fb4d5845c4": {
+      "arm": "ledger_id",
+      "case_id": "cp011",
+      "identity_key": "867923239380ac5c8a5db5d07cf1a3a2e4eae8a28d870bc1170d9015b0ff7686",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-3dea42b76e29f3779abc38c5": {
+      "arm": "ledger_id",
+      "case_id": "cp004",
+      "identity_key": "60bd04c8f8912dba181d65cdce92e7d7b8a68b79533acca2e48ddc86d505c597",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-3e799eb6b784d7c432ef1df3": {
+      "arm": "ledger_text",
+      "case_id": "cp007",
+      "identity_key": "64ad94de3b390643363e9af3de96f551d5a591d9f6817e78be5c082efcfa8769",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-3f52c31878b90df689ceb261": {
+      "arm": "ledger_id",
+      "case_id": "cp014",
+      "identity_key": "b3f3f055d9f9b06c756c2ce5e7701de49c7a7ef046c401078ae46aab45cd3210",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-41ad1c2eaf09c920dd8a2ce4": {
+      "arm": "ledger_text",
+      "case_id": "cp002",
+      "identity_key": "3a33492f5d7f178671a39a0cb2aa1f58a424d928c7f1dd67491b0eacc37d5269",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-41f68dc42270e8755241e4f4": {
+      "arm": "ledger_text",
+      "case_id": "cp009",
+      "identity_key": "43e9274fc6eaf6601fd72e8a40e48b3e7faa78c54352a411b814b3cf06495817",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-446dea3993ba71beca3f78c3": {
+      "arm": "ledger_text",
+      "case_id": "cp014",
+      "identity_key": "58af5734c666563572caf9ec59c04ceba122be5f524ee81dec0b239f781cdf8f",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-447496ce72b7a6b8524985d5": {
+      "arm": "legacy",
+      "case_id": "cp011",
+      "identity_key": "f1729a78c2b07b5d2df571c291febde2f524795d12b690dd6ee3ae6ed643e325",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-44edb200466b1b893956a7b3": {
+      "arm": "ledger_id",
+      "case_id": "cp013",
+      "identity_key": "ce65d90c982f0e2088606779ad66a421ae7a056510e39d66e9dd7402eef0079e",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-48a88ac2099ab0b68501e568": {
+      "arm": "ledger_text",
+      "case_id": "cp014",
+      "identity_key": "999219beb5a6c625029ef8df36e91ef0fd0d257d12cd0bb252f522c853c5827e",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-4a7fee71cdd4324bb54c6d3b": {
+      "arm": "ledger_text",
+      "case_id": "cp010",
+      "identity_key": "2730e2305b29e4e82e04fbfde506b9d7c79ade007fa5a4339557cbc6c4f4973d",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-4b7567dcc06703f594b45695": {
+      "arm": "ledger_id",
+      "case_id": "cp012",
+      "identity_key": "3c4199cab1662a5287f3c10d278ceada630201867a5db03800f7c27423638454",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-4be66c0c8985171731babad2": {
+      "arm": "ledger_text",
+      "case_id": "cp013",
+      "identity_key": "c7718b3a66beba7c86dad0390a0e125575894c50b123438077490d6349fcb5e1",
+      "original_error": {
+        "code": "upstream_connection_error",
+        "message": "Could not connect to upstream API."
+      },
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-4d863762d8746a36c86628c7": {
+      "arm": "legacy",
+      "case_id": "cp019",
+      "identity_key": "8ff88b239578925557adb832297a9361867ce6fe634cc0f9937ee4ccf0e5d6bd",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-4da665f6d4d5508324bee44b": {
+      "arm": "ledger_id",
+      "case_id": "cp001",
+      "identity_key": "e6fa50664dadde1b4b29b8c882d0b4939d6031d08be9fd2df03b87f48c137b49",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-4efe7dff0f7536f55a803d33": {
+      "arm": "legacy",
+      "case_id": "cp009",
+      "identity_key": "b3c2789e8b1a3dbcfa5d073e142a295aad83b14a47f0a000295fd2e69d21d80f",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-4f222fadb4044f3d42ba6bb7": {
+      "arm": "ledger_id",
+      "case_id": "cp018",
+      "identity_key": "bd11eb33d78b75b63e5ab47d8bceafbefb7e5280685f57272ad0e06b01d05c34",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-505558fb635569153967df47": {
+      "arm": "legacy",
+      "case_id": "cp003",
+      "identity_key": "edd60d01551ee76e77ea022f4157d621ac3ee80e40822034cc15665598f42abc",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-5169b3d9b7b4d3eb95a9e0a2": {
+      "arm": "legacy",
+      "case_id": "cp010",
+      "identity_key": "47009ab433a57d097956427c80fe2e0e03342f99541a4bbbc862394fcbc547af",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-517e86c3307c80c90e7d0847": {
+      "arm": "legacy",
+      "case_id": "cp016",
+      "identity_key": "ce54c362a7305e73a023d90e11c35fb5ef0006ad9fc5ad5690e99b25b963461b",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-561159436ec91c992efc9566": {
+      "arm": "ledger_text",
+      "case_id": "cp011",
+      "identity_key": "3a5e4c0c248344e78c4eb3950864ae03e21ffe55ecf447dad24c333188570c74",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-58979b54af8d52caffff4808": {
+      "arm": "ledger_text",
+      "case_id": "cp018",
+      "identity_key": "0b3cbab05a2ba7d3e18a5735466ac1bde78e7699d3f3855975e03b036f42a7c7",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-5b08ed346b1618cfe153f596": {
+      "arm": "ledger_text",
+      "case_id": "cp007",
+      "identity_key": "b5a28fca57674db45d4fa27dc91e6a13a724b07aa9480bd9cd3bb3d31159681c",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-5b56c5e6ed36774393a5d7c3": {
+      "arm": "ledger_text",
+      "case_id": "cp015",
+      "identity_key": "1fde378a08f5789ee88e96e776bc2a0c90d53e4671858b722e784e478a9b54a2",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-5d0c8b5ea8430c31b03be121": {
+      "arm": "ledger_id",
+      "case_id": "cp005",
+      "identity_key": "661d7cfac22c59d73dc488842ce9868c99cb5a0ef07532182bd6e7aabd6fe181",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-6079ddc2ee93a33608677f74": {
+      "arm": "ledger_text",
+      "case_id": "cp003",
+      "identity_key": "401cf7042a9b02244297609b69cb4dca1b09d666f87ee13d902edeca4657695d",
+      "original_error": {
+        "code": "upstream_connection_error",
+        "message": "Upstream response could not be read completely."
+      },
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-60cc988af6222bcedaae7bc9": {
+      "arm": "ledger_text",
+      "case_id": "cp005",
+      "identity_key": "18be6512be28b6d33f700aa871d12bcfae1e76648d46f4671fbc24f6cdafa3e0",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-6282a567294a27f65b98b462": {
+      "arm": "legacy",
+      "case_id": "cp018",
+      "identity_key": "5468b42cec1fd9b2698953835f9e1931b5fd110c2cadf25fa1984ab4532c2b26",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-64d94e9b10cbbfc8ff3d8782": {
+      "arm": "ledger_text",
+      "case_id": "cp001",
+      "identity_key": "bc4cd2692f7075c9c326a9439bd680bd6d0d9cc6d9939f9b28a8133128d02b31",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-64e74924809c36c8c8488dd4": {
+      "arm": "legacy",
+      "case_id": "cp002",
+      "identity_key": "54c740dcffe69ec7a8993e5be7583a91168d4b5ddc2560264f8694a5d7e4cc68",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: 'because the reference screen is 5 metres wide. Please leave room for a second reader to add a commen'"
+      },
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-64ef37d98a762fcbf890c2af": {
+      "arm": "legacy",
+      "case_id": "cp001",
+      "identity_key": "b01dbe33d45fa055717d4f2e808939de5df6e441f9bfb0442f17f9925b2880c4",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-66227c717937a3d2567c04a9": {
+      "arm": "ledger_id",
+      "case_id": "cp006",
+      "identity_key": "4307dbc4c3faa2639e93c54072ed3de369fa93a4a477b6cc2d7f357e86541be6",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-68761967c219c7aecaf4bec8": {
+      "arm": "ledger_text",
+      "case_id": "cp018",
+      "identity_key": "fe531f93235e74068aa2972ea0d5b92066a567da1214d9be7c7a085be13d3376",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-6dddcd39fc1ecedd30935d8b": {
+      "arm": "ledger_id",
+      "case_id": "cp019",
+      "identity_key": "8b93057abe97f1eb78e7ba393ab595d7bd8a66c13c7a64a3584a2b5794c15a4e",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-6dfa1171d52becf9ea4f9b41": {
+      "arm": "ledger_text",
+      "case_id": "cp015",
+      "identity_key": "82820bec3b4d4185a28762a5054dbe4bbae9cf580d18bec078f89824a39cd0ec",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-6e5a80760a153c05a8912546": {
+      "arm": "legacy",
+      "case_id": "cp009",
+      "identity_key": "39b9634c7db7cab52ba7c16b5e34e113b30f07897d0bc1f0c791af0958422793",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-6f0057313c86528dff883b64": {
+      "arm": "ledger_text",
+      "case_id": "cp020",
+      "identity_key": "ae3424f5ec2719f4f21fafe7b7ea90601de083f7ff57ea89a4381b7cddbef8ca",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-7451d0eaf696567fe4136f8f": {
+      "arm": "ledger_text",
+      "case_id": "cp006",
+      "identity_key": "068ce4953c3c5a7d98de169c41e5194003f72d99c8830be0329144f99042b65c",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-75cfebf50ce48ee80d3856b9": {
+      "arm": "ledger_id",
+      "case_id": "cp016",
+      "identity_key": "a201739becc546debaf6cba069b41eecda403522311870f833989a6e2285499e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-791bfec740707fd974c46600": {
+      "arm": "ledger_id",
+      "case_id": "cp015",
+      "identity_key": "13f0e73e83070649cbe7ce0fa8403101b874974d6e35104b15c66e3d6414363e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-7a465a9e72725256c907ff31": {
+      "arm": "ledger_id",
+      "case_id": "cp003",
+      "identity_key": "20d5164be4227c9a8984908396bcd4a005016dc5ce2fb9fd1988de5317f1c0c6",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-7bce1c802c045b529b39c52c": {
+      "arm": "ledger_text",
+      "case_id": "cp003",
+      "identity_key": "894b3ca0d774c9bee56b5a4d8a40321df77fc161a7ee53b0eacd384d7ffde205",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-7dc960a66becf6b7524f197c": {
+      "arm": "ledger_id",
+      "case_id": "cp004",
+      "identity_key": "54f2dc20114b563bbcfe977b78791544b998a9bdfad858c56009a9e71f383ed7",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-7de6d86c791f90c1fa6b5262": {
+      "arm": "ledger_id",
+      "case_id": "cp002",
+      "identity_key": "a9f8f1e9c92f05c2550fdad059d5913a2b2bb287ff9d9466854cabf8339f72f2",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-7ded76f7282f1f28030e1664": {
+      "arm": "ledger_id",
+      "case_id": "cp016",
+      "identity_key": "89b30f1b9eb33ce17bb46ad613cc7c20523c1731ac4412c328c805930c6044cd",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-7df1f3e0bda2ee9223880152": {
+      "arm": "ledger_id",
+      "case_id": "cp001",
+      "identity_key": "024fc9708f0e91b96cd39edb4f8c3797ab8708abc6c017c4df67b10b1cbbfd39",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-814010d65b8c670c5c39f679": {
+      "arm": "legacy",
+      "case_id": "cp004",
+      "identity_key": "be6597209836d6021c720d917819496baa5ecd89f675b9153b8b580c117081cb",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: 'that is, its horizontal offset is -1.25 mm. The calibration entry was saved at 08:20. It was filed i'"
+      },
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-8708c99153e0a9b552bea605": {
+      "arm": "ledger_id",
+      "case_id": "cp017",
+      "identity_key": "f35d4f456b6b367c7cd99c4a4d3746d1c9f4d905b345aafedb116409058c7782",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-8738b64c7640e65ede20cdb0": {
+      "arm": "legacy",
+      "case_id": "cp013",
+      "identity_key": "21fc5d2270ef29b7980d942e036caf98921cba99abd80b8fa4b7f52e8c4618f7",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-87fce451f172dbc36ee16754": {
+      "arm": "legacy",
+      "case_id": "cp012",
+      "identity_key": "94580d61656c8c8b86126b084df82249bdfe59b3979ffef62f570e4d445646c4",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-8d23638a50807eb3e64a7497": {
+      "arm": "ledger_text",
+      "case_id": "cp001",
+      "identity_key": "8243a2e8b593c65185fdd3348cfad5b05f281dbc2a0c2fe00035e7a738b935d1",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-95854e483f1b967afb0d5cec": {
+      "arm": "ledger_id",
+      "case_id": "cp020",
+      "identity_key": "bd11ac83dc04ce37385cc6aa617312a2e3c091da41b29f7eabc8ec508da24557",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-96d05364b54f810efdfe9c9b": {
+      "arm": "legacy",
+      "case_id": "cp017",
+      "identity_key": "2f767e9360d27ec16db0549e1c357b46732b95d0d8c22d4d8ecadc60f372f1c9",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-9782b63c6941b4062fbbe1c1": {
+      "arm": "ledger_text",
+      "case_id": "cp016",
+      "identity_key": "9ab67fb76b8b497b8b9f93d57298e94aab2b4e747e6795304af50bd6663c209f",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-97f8cd5d5202afb9d346ed45": {
+      "arm": "ledger_text",
+      "case_id": "cp008",
+      "identity_key": "50a32b1f9b3ab3303384a629337fd412ea524fd7ef45e7a0e1959acd14fe768e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-98188e811506e2412be959dc": {
+      "arm": "legacy",
+      "case_id": "cp020",
+      "identity_key": "5bdeb3298b70042e85f200e55b756b9bc69cc941b726ce8253cd74a9ffb3408d",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-999b2c24df2303ae35134bf1": {
+      "arm": "ledger_id",
+      "case_id": "cp014",
+      "identity_key": "13e1a9cdfdfcbdfef5ad1498b972745a49fe38632d1cf0efc274bfd69318db8a",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-9a525447bf1926a5b359add0": {
+      "arm": "legacy",
+      "case_id": "cp003",
+      "identity_key": "a8df4809e0d8cd6969eea37a5f30e22a8fbc3be537c1828e06226badc911ccf4",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-9a845743680cb116ef8b975e": {
+      "arm": "ledger_text",
+      "case_id": "cp012",
+      "identity_key": "aa899902fc18345003d35b11d6f74d40b9db338baea02f797e40f9650f61d2c3",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-9d00e9f232a14d7e6d56d49f": {
+      "arm": "ledger_id",
+      "case_id": "cp012",
+      "identity_key": "94a5722177e2ed6bb8b1d907b08295b75db5160060dcc498c2017b5603aec5bb",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-9fc42d5a313e8c9f2d311b59": {
+      "arm": "ledger_id",
+      "case_id": "cp010",
+      "identity_key": "abec8f75268373e76c79ba96763f7022a010d40ae1a6d02529daac3ea3729665",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-a04f7e4573612530997b0059": {
+      "arm": "ledger_text",
+      "case_id": "cp009",
+      "identity_key": "4c8b01a3211d8cf4b836de3a28c4d2135918a83913520d120626d3f62ac46d56",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-a2afc85578c7bbba6afb1e7d": {
+      "arm": "ledger_id",
+      "case_id": "cp003",
+      "identity_key": "2857c87fde66e581346c2d2a411de8a617b820ea4439de391d03c8514b0a2c1c",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-a84134c657b2c0cd2cf4c463": {
+      "arm": "ledger_id",
+      "case_id": "cp002",
+      "identity_key": "0897bc814fdb85c1251ddadc337a6edaa7f2d032698714bfebaaf1124edf4c23",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-a8a455af2265690d6f5cd7cb": {
+      "arm": "legacy",
+      "case_id": "cp002",
+      "identity_key": "48613d662164d962bb8938a76fbf4594fc6b44b4de1bed155efc664e15dd8892",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-aa17b48d1ad5cbf16203aa97": {
+      "arm": "legacy",
+      "case_id": "cp010",
+      "identity_key": "b0341947e758f65b981790c79b3a0a9d4b407899135ad566547298143d31c9ca",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-af0fc50bbebbd1f7d3d9861f": {
+      "arm": "ledger_text",
+      "case_id": "cp019",
+      "identity_key": "587df9f81556bd6046d0af3a4068c9f4215d4ffbfefb10d3acd11853a3f6b597",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-b372b6f1c1075c4ea846b343": {
+      "arm": "legacy",
+      "case_id": "cp008",
+      "identity_key": "5bf139df54b4f9120c46183cb660d9de46c287059b15b279e4046f4a2fa53e6e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-b437b044b134f5bc3733afde": {
+      "arm": "ledger_id",
+      "case_id": "cp018",
+      "identity_key": "cef9e6e6777f94be33c45c2cc2293a3a55eebc75fdc8b163b156eb2e6455632e",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-b43fbe760f6375231f931a54": {
+      "arm": "ledger_text",
+      "case_id": "cp019",
+      "identity_key": "e1a59aabb82e932af482f6320e097a7ec69830735e2d6606ab6047084d017dda",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-b494e43e6d3b822bb5ff3d0a": {
+      "arm": "ledger_text",
+      "case_id": "cp006",
+      "identity_key": "4b4b563f8e3e835cf55d40b7aaaa054ec0bc2a2398987c0f6d71c9533238e8a3",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-b5898d1c378e7ea309ce295a": {
+      "arm": "legacy",
+      "case_id": "cp013",
+      "identity_key": "41220f6b57ce71e3607b2353e22bb7d29df300018d068d5bbaf4ddc229a206b4",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-b8cb6a18d2753caa1eca0cff": {
+      "arm": "ledger_id",
+      "case_id": "cp009",
+      "identity_key": "c7eea5cf552f20b4d837040bf733ebcd8555a2b8f2a4e0aa90ee9a3dd4f81396",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-bd6be292364180ae6b373054": {
+      "arm": "ledger_id",
+      "case_id": "cp007",
+      "identity_key": "c185914a37d2dd35625424f1a6a3b0b03130404451f52cb4423612297275b4d1",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-be9f6da1008c050446a21b2a": {
+      "arm": "legacy",
+      "case_id": "cp014",
+      "identity_key": "79fc20169315dd78df5065d7595cc81bb0d1b9362a5e49a2d161db8edf7a4426",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-bfefbbdcbccda8352c88349f": {
+      "arm": "legacy",
+      "case_id": "cp011",
+      "identity_key": "e4c1d81ec09007fff8b37b7aafef13d7b09e2b1fb2324a9ccad07f5ac9ff5c8e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-c0414bd82c323f83c084cd3b": {
+      "arm": "ledger_id",
+      "case_id": "cp019",
+      "identity_key": "80f532c95ce3ad79950a1ac22dd8e8ef1323627523b90a59ac69adfe3ad83cbd",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-c079f9bfcde0c7439cc97f1d": {
+      "arm": "ledger_id",
+      "case_id": "cp007",
+      "identity_key": "7514a2c9e6d48bf4ca233bbbd710028874d99a08b7a9279158ad17f3d00ae675",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-c509b5d1c132fb243b64e0c0": {
+      "arm": "ledger_id",
+      "case_id": "cp010",
+      "identity_key": "132df2d34f31f8dca5715da6c4837d396f2ecd83e811817294cd38acc0fcbb4a",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-c84b8c76bc931880b492b221": {
+      "arm": "ledger_text",
+      "case_id": "cp016",
+      "identity_key": "2ee5b64a3006597f262daf82e8c7b5272cd0562ea99c30bbddbdfda420ab198d",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-d7564249bd5ec4fcf7369403": {
+      "arm": "legacy",
+      "case_id": "cp001",
+      "identity_key": "2c98db2df42ac20e2dbb6a33a5674946e7d1ca94d716a7a4aa924a8820d247cc",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-d7e725449c561db48cb00de5": {
+      "arm": "legacy",
+      "case_id": "cp017",
+      "identity_key": "663b8c0088ffdd33661e9df3c9d2a63cd6e2f2478ab2de2e2151c4537cf0e41b",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-d80936287b2425a3669d36e5": {
+      "arm": "legacy",
+      "case_id": "cp015",
+      "identity_key": "0f48a57c18088044b1a05b812af454b5c12175c062bbcbcd27633985b503b0df",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-da00c53a6f3626533961c6cf": {
+      "arm": "legacy",
+      "case_id": "cp006",
+      "identity_key": "2017e64062b0738a119a863119f618e787dc3fc1bec19c6c4d038e6eda9bb211",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-db7775c1f10b67aee1143a56": {
+      "arm": "ledger_text",
+      "case_id": "cp017",
+      "identity_key": "8bcd1f5b5bd73a1f709d8e1b1df2c949e14f0306074df0f40fb24ea482b7268e",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-dd1aee80592713eb349c6775": {
+      "arm": "ledger_text",
+      "case_id": "cp010",
+      "identity_key": "70b0e54aad49debde13fb12cae7aedc192b41867204a2877680ce22aaad6b5c0",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-dd1f96ded0c629d44eb5ce4d": {
+      "arm": "ledger_id",
+      "case_id": "cp020",
+      "identity_key": "124bc1a024d4e09e9e7a8b1d7d622c093ad4427ef2f5498d2ab0fa19e6a3bdec",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-de1e4e419df2fc9d3eb85b87": {
+      "arm": "legacy",
+      "case_id": "cp014",
+      "identity_key": "0a9816fb5be496236da90e29522f2a5b9e98102f3519261f97d5ca4f07297a8a",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: '考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\\n本次取件登'"
+      },
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-e0df531d39ba4bac91422c61": {
+      "arm": "legacy",
+      "case_id": "cp006",
+      "identity_key": "f3c6c015e11cf45421cc291416a85e74bafaa017c2e4b3a8ecb1a9b630ba9941",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-e176cf3b62075f0dc31481c9": {
+      "arm": "legacy",
+      "case_id": "cp005",
+      "identity_key": "d14625236b305635fb77bfe1e11ba7337b4a1cdf8c2543b490c58af5b4b01ff7",
+      "original_error": {
+        "code": "invalid_model_output",
+        "message": "Extraction left answer text unaccounted for near: \"and the batch's cooling interval lasted 7.5 hours. Please transcribe the decimal as written and keep\""
+      },
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-e63edc1edb52c658c997fe77": {
+      "arm": "legacy",
+      "case_id": "cp008",
+      "identity_key": "98d9869c2d8641f616f149217325df4c4d1eedabf6176bb6bdaa9947135ca584",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-ed9ff9537a0a24014db8b9ae": {
+      "arm": "ledger_text",
+      "case_id": "cp005",
+      "identity_key": "375e7df1d23647ff8ce1768aa92f776dc143a03c1bb99313d9d1614281bd19c9",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-ee5f4d0b36429327478302d9": {
+      "arm": "ledger_text",
+      "case_id": "cp011",
+      "identity_key": "c835b10f82412879706a4aacc40ed859b762dd734a2473dab22ff7be35037e54",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-f603a12558dd6724a2c9d1c8": {
+      "arm": "legacy",
+      "case_id": "cp004",
+      "identity_key": "38f89493e3e80e885be62541710ad39eae33744f609a5eed02fcf862b3e4cb57",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 0
+    },
+    "r-f9511fd886753949a11dd196": {
+      "arm": "ledger_text",
+      "case_id": "cp002",
+      "identity_key": "e19bb208d4e1d34a874c49e26223b0520fb06967e5e7b838e427135d3f86a628",
+      "original_error": {
+        "code": "upstream_connection_error",
+        "message": "Upstream response could not be read completely."
+      },
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-fabec256dc4a2a2f2400d3d3": {
+      "arm": "ledger_text",
+      "case_id": "cp017",
+      "identity_key": "3dd6232b2a0ec2c0748bb7af405939fdedadc22ffebdd911b188b810f790359c",
+      "original_error": null,
+      "part": 1,
+      "probe": "natural",
+      "repetition": 1
+    },
+    "r-fc100f5598d6cb568f8db7e5": {
+      "arm": "legacy",
+      "case_id": "cp019",
+      "identity_key": "200b5824df9f5ac5489378991f036417a68f62e1030075442d1f06f63c36e2fb",
+      "original_error": null,
+      "part": 2,
+      "probe": "natural",
+      "repetition": 1
+    }
+  },
+  "record_count": 120,
+  "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+  "restricted_to": "coordinating reviewer only; never distribute with blind packets",
+  "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+  "schema_version": "coverage-protocol-blind-review-v1",
+  "seed": "coverage-protocol-review-20261024-v1"
+}

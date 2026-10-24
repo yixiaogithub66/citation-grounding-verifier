@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 0,
+    "case_id": "cp008",
+    "identity_key": "98d9869c2d8641f616f149217325df4c4d1eedabf6176bb6bdaa9947135ca584",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。本次红色试件标记为“薄片”，也就是它带有“薄片”标记。请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+      "max_claims": 64
+    },
+    "payload_sha256": "8a80a2cbfda20174f78bfbaf76c650b101fb54b8215a87540b90276a843bbe15",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 38
+  },
+  "reserved_at": "2026-10-24T02:48:48.960037+00:00"
+}

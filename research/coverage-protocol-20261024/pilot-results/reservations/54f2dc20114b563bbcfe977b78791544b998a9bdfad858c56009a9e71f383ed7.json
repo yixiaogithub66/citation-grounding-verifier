@@ -1,0 +1,40 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_id",
+    "backend_order_index": 0,
+    "case_id": "cp004",
+    "identity_key": "54f2dc20114b563bbcfe977b78791544b998a9bdfad858c56009a9e71f383ed7",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. ",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "The calibration entry was saved at 08:20. ",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "It was filed in folder “Night-6”. ",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "Please preserve that reference when rewriting the note.",
+          "unit_id": "u0004"
+        }
+      ]
+    },
+    "payload_sha256": "3d8d3009b9f1bf18f69a7c001e5c10049e948ecfae1e955f4dbdbcdcad0dace9",
+    "probe": "natural",
+    "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+    "repetition": 1,
+    "task_index": 30
+  },
+  "reserved_at": "2026-10-24T02:48:23.462067+00:00"
+}

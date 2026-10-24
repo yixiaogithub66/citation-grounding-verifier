@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 1,
+    "case_id": "cp015",
+    "identity_key": "0f48a57c18088044b1a05b812af454b5c12175c062bbcbcd27633985b503b0df",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "Would you like the handover note to begin with an open question? Please choose your preferred order for the fields. You could reserve one line for a comment and another for a signature, or try a free-text box instead. Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. Avoid guessing any missing entry.",
+      "max_claims": 64
+    },
+    "payload_sha256": "0a3608c6951072dd319e2c8693210565983b222d0c5637aa9fcb865349709d6e",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 3
+  },
+  "reserved_at": "2026-10-24T02:47:08.551206+00:00"
+}

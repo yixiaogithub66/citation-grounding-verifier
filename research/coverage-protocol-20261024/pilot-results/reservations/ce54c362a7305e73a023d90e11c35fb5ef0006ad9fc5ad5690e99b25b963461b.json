@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 1,
+    "case_id": "cp016",
+    "identity_key": "ce54c362a7305e73a023d90e11c35fb5ef0006ad9fc5ad5690e99b25b963461b",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。B 柜的空闲格口为 7 个。值班日志把 A 柜标为“已巡检”；它的巡检时间记为 11:25。请将两台柜的记录分开填写。",
+      "max_claims": 64
+    },
+    "payload_sha256": "ad6c995cf6bf3bf474a06c867a4c0229a0e3c11c3a26757e47a0df2833e5cf96",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 1,
+    "task_index": 4
+  },
+  "reserved_at": "2026-10-24T02:47:14.095480+00:00"
+}

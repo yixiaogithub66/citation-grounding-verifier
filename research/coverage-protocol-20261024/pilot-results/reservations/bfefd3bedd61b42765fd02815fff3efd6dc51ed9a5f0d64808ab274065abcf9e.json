@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 0,
+    "case_id": "cp018",
+    "identity_key": "bfefd3bedd61b42765fd02815fff3efd6dc51ed9a5f0d64808ab274065abcf9e",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "max_claims": 64
+    },
+    "payload_sha256": "235e2b03ee081140b8d2c7a57ae714d89ed8634bd45016c72ec1e1ada95b34bd",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 13
+  },
+  "reserved_at": "2026-10-24T02:47:27.783606+00:00"
+}

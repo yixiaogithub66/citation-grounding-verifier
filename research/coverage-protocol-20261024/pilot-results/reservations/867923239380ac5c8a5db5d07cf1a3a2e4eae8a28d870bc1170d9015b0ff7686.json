@@ -1,0 +1,44 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_id",
+    "backend_order_index": 1,
+    "case_id": "cp011",
+    "identity_key": "867923239380ac5c8a5db5d07cf1a3a2e4eae8a28d870bc1170d9015b0ff7686",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "要不要把说明写成一张任务卡？",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "请先选一种语气，再试着给每一步起一个短标题。",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。",
+          "unit_id": "u0004"
+        },
+        {
+          "text": "最后，请保留一块空白区域供读者提出问题。",
+          "unit_id": "u0005"
+        }
+      ]
+    },
+    "payload_sha256": "caa2d6c824c952453d78174b2612d62c78a930da1cafef8c9d3a451ab3d63546",
+    "probe": "natural",
+    "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+    "repetition": 1,
+    "task_index": 6
+  },
+  "reserved_at": "2026-10-24T02:47:15.594896+00:00"
+}

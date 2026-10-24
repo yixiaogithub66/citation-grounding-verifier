@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 0,
+    "case_id": "cp007",
+    "identity_key": "43373aa40888599885097ed0c125549d482507bd5c367c510c007e8b4518ee31",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "max_claims": 64
+    },
+    "payload_sha256": "c3a455be169d96e9a38d906d0f6bd75726b4792ad42bc1ec1e7932396cd0ac9b",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 10
+  },
+  "reserved_at": "2026-10-24T02:47:19.821980+00:00"
+}

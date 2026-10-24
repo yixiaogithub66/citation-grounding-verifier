@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 2,
+    "case_id": "cp005",
+    "identity_key": "53db0a9bf274ef1931b3b11f317caedaf3842c4692a6fb4276c1829c95836a10",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "Batch Kestrel used kiln 3. Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. Please transcribe the decimal as written and keep the temperature and duration in separate fields.\nFor the shelf map, begin with the placement note: the blue test tile occupied shelf B. You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. Leave any comments about appearance for a later inspection. If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; avoid filling a blank field with a plausible value. Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+      "max_claims": 64
+    },
+    "payload_sha256": "41eb17e550c10a2a87a80e7f45d28a85ce3ac76e5d47f273343c2768391a8c8c",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 25
+  },
+  "reserved_at": "2026-10-24T02:48:14.699762+00:00"
+}

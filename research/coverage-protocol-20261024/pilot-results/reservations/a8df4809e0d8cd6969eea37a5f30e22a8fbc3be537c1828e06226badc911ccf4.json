@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 0,
+    "case_id": "cp003",
+    "identity_key": "a8df4809e0d8cd6969eea37a5f30e22a8fbc3be537c1828e06226badc911ccf4",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。要不要把数值和操作建议分成两栏？是否需要给每一项留出签名位置？你可以先画草稿，再邀请接班人挑选喜欢的版本。对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+      "max_claims": 64
+    },
+    "payload_sha256": "f2f70b57d5230b70546c6dcbf38d746e3ce8c097f18931fd439104308c52156e",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 15
+  },
+  "reserved_at": "2026-10-24T02:47:29.576839+00:00"
+}

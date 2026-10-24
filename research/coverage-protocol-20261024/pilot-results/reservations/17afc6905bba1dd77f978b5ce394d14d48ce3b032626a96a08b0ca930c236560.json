@@ -1,0 +1,40 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_text",
+    "backend_order_index": 0,
+    "case_id": "cp012",
+    "identity_key": "17afc6905bba1dd77f978b5ce394d14d48ce3b032626a96a08b0ca930c236560",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. ",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "Its lock code is “073”. ",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "In the inventory, cabinet S is listed immediately after R. ",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "Please keep the leading zero when copying the code and retain the cabinet references.",
+          "unit_id": "u0004"
+        }
+      ]
+    },
+    "payload_sha256": "3e6623b2cb3efed46fc95203dc657cde4bd15da62f0032c915be0ec35f52663e",
+    "probe": "natural",
+    "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+    "repetition": 0,
+    "task_index": 20
+  },
+  "reserved_at": "2026-10-24T02:47:43.955216+00:00"
+}

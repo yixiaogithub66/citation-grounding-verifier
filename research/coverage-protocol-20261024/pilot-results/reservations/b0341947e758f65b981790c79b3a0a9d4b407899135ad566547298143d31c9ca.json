@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 2,
+    "case_id": "cp010",
+    "identity_key": "b0341947e758f65b981790c79b3a0a9d4b407899135ad566547298143d31c9ca",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "Please keep the original wording on the panel, since the final clue is printed in violet. For the margin note, use the recorded route order: the mirror room follows the knot table. Avoid inventing a reason for that order; you could ask the designer for a separate explanation if one is needed.\nTwo other entries belong on the handover card. The brass key weighs 31.6 grams. The demonstration session begins at 13:40. I would place those entries on separate lines and leave a blank space for comments. Before sharing a draft, ask a reader to circle anything they would like clarified. Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+      "max_claims": 64
+    },
+    "payload_sha256": "c97e780ddd9dd6538bd85395e65e9d2ca93fcaf8fff8cbbbe3ab1ae69cf30c8c",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 2
+  },
+  "reserved_at": "2026-10-24T02:47:11.639429+00:00"
+}

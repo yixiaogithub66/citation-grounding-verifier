@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 1,
+    "case_id": "cp019",
+    "identity_key": "8ff88b239578925557adb832297a9361867ce6fe634cc0f9937ee4ccf0e5d6bd",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "max_claims": 64
+    },
+    "payload_sha256": "2b1f963208f23804625d8157662b7c17f0c097063ba1856926204a97776a50aa",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 1
+  },
+  "reserved_at": "2026-10-24T02:47:07.695562+00:00"
+}

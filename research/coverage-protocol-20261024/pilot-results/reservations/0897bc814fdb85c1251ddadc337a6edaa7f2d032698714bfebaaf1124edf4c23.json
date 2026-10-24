@@ -1,0 +1,56 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_id",
+    "backend_order_index": 1,
+    "case_id": "cp002",
+    "identity_key": "0897bc814fdb85c1251ddadc337a6edaa7f2d032698714bfebaaf1124edf4c23",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "For the review sheet, keep the setup information beside the still image. ",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. ",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\n",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. ",
+          "unit_id": "u0004"
+        },
+        {
+          "text": "Do not round it while preparing the handover. ",
+          "unit_id": "u0005"
+        },
+        {
+          "text": "You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. ",
+          "unit_id": "u0006"
+        },
+        {
+          "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. ",
+          "unit_id": "u0007"
+        },
+        {
+          "text": "Keep the title plain and avoid adding a diagnosis to the filename.",
+          "unit_id": "u0008"
+        }
+      ]
+    },
+    "payload_sha256": "1b2cae2a348a9dd76c46f8192b9452ac2be39b6ff9526fc5624e0747b0baec6e",
+    "probe": "natural",
+    "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+    "repetition": 1,
+    "task_index": 31
+  },
+  "reserved_at": "2026-10-24T02:48:48.738227+00:00"
+}

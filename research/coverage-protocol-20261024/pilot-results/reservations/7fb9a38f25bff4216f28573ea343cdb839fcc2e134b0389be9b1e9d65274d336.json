@@ -1,0 +1,36 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_text",
+    "backend_order_index": 1,
+    "case_id": "cp008",
+    "identity_key": "7fb9a38f25bff4216f28573ea343cdb839fcc2e134b0389be9b1e9d65274d336",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "本次红色试件标记为“薄片”，也就是它带有“薄片”标记。",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+          "unit_id": "u0003"
+        }
+      ]
+    },
+    "payload_sha256": "986902247dd190412dd8ad835df2f4bc3acb93cb66162ce3542cb1e8e91c3f5d",
+    "probe": "natural",
+    "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+    "repetition": 0,
+    "task_index": 38
+  },
+  "reserved_at": "2026-10-24T02:48:51.060366+00:00"
+}

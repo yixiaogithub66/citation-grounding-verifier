@@ -1,0 +1,44 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_text",
+    "backend_order_index": 0,
+    "case_id": "cp003",
+    "identity_key": "401cf7042a9b02244297609b69cb4dca1b09d666f87ee13d902edeca4657695d",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "要不要把数值和操作建议分成两栏？",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "是否需要给每一项留出签名位置？",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "你可以先画草稿，再邀请接班人挑选喜欢的版本。",
+          "unit_id": "u0004"
+        },
+        {
+          "text": "对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+          "unit_id": "u0005"
+        }
+      ]
+    },
+    "payload_sha256": "c8ee7a3bb0e3f96f2a4204cd7800fd175fdd58842548de438fcf1d09a613a136",
+    "probe": "natural",
+    "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+    "repetition": 1,
+    "task_index": 21
+  },
+  "reserved_at": "2026-10-24T02:47:43.914637+00:00"
+}

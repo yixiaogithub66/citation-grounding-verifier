@@ -1,0 +1,23 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "legacy",
+    "backend_order_index": 1,
+    "case_id": "cp017",
+    "identity_key": "663b8c0088ffdd33661e9df3c9d2a63cd6e2f2478ab2de2e2151c4537cf0e41b",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "generated_answer": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。这块标本的质量为 126.8 克，保存盒为 5 号盒。请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n目录给它标注的采集日期是 2024 年 4 月 9 日。你可以在旁边留出复核栏，请整理人员决定何时签字；如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+      "max_claims": 64
+    },
+    "payload_sha256": "d133731c1dd2c59a57aebff7eca1d1eecb5a79f152cbd00db6359f0da8a6f79b",
+    "probe": "natural",
+    "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+    "repetition": 0,
+    "task_index": 0
+  },
+  "reserved_at": "2026-10-24T02:47:08.058588+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_text",
+    "backend_order_index": 1,
+    "case_id": "cp020",
+    "identity_key": "7c4e6836921ffeb34896bdc52497a2c3de3d33dc5f1d0d68cae923e5db786203",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. ",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. ",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+          "unit_id": "u0003"
+        }
+      ]
+    },
+    "payload_sha256": "72376ee3345221c9e27136fbcb63c3241ac7e6eef2e16966527fa692bc6b95aa",
+    "probe": "natural",
+    "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+    "repetition": 0,
+    "task_index": 37
+  },
+  "reserved_at": "2026-10-24T02:48:45.290753+00:00"
+}

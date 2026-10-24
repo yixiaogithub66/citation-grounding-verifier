@@ -1,0 +1,60 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "request": {
+    "arm": "ledger_text",
+    "backend_order_index": 2,
+    "case_id": "cp005",
+    "identity_key": "18be6512be28b6d33f700aa871d12bcfae1e76648d46f4671fbc24f6cdafa3e0",
+    "payload": {
+      "boundary_context": {
+        "after": "",
+        "before": ""
+      },
+      "max_claims": 64,
+      "source_units": [
+        {
+          "text": "Batch Kestrel used kiln 3. ",
+          "unit_id": "u0001"
+        },
+        {
+          "text": "Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. ",
+          "unit_id": "u0002"
+        },
+        {
+          "text": "Please transcribe the decimal as written and keep the temperature and duration in separate fields.\n",
+          "unit_id": "u0003"
+        },
+        {
+          "text": "For the shelf map, begin with the placement note: the blue test tile occupied shelf B. ",
+          "unit_id": "u0004"
+        },
+        {
+          "text": "You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. ",
+          "unit_id": "u0005"
+        },
+        {
+          "text": "Leave any comments about appearance for a later inspection. ",
+          "unit_id": "u0006"
+        },
+        {
+          "text": "If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; ",
+          "unit_id": "u0007"
+        },
+        {
+          "text": "avoid filling a blank field with a plausible value. ",
+          "unit_id": "u0008"
+        },
+        {
+          "text": "Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+          "unit_id": "u0009"
+        }
+      ]
+    },
+    "payload_sha256": "a7ab82e3cfa426b3121034f7e344188e445eee6c83b912785b68b0cb42bacbc3",
+    "probe": "natural",
+    "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+    "repetition": 1,
+    "task_index": 23
+  },
+  "reserved_at": "2026-10-24T02:48:08.604752+00:00"
+}

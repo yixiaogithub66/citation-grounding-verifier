@@ -1,0 +1,3434 @@
+{
+  "integrity": {
+    "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+    "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+    "readable_diagnostic_records": 3,
+    "record_count": 60,
+    "records_sha256_canonical": "4246ecca5f4301d4dc3bd7a4a530be95a84ccd8aabab1bfe24de680aaa5fce0b",
+    "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+    "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+    "target_mapping_slots": 120,
+    "technical_status_counts": {
+      "error": 5,
+      "valid": 55
+    },
+    "unique_answer_count": 10,
+    "unique_review_ids": 60,
+    "unreadable_records": 2
+  },
+  "records": [
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 76,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 153,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-98188e811506e2412be959dc",
+      "status": "valid"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 94,
+              "start": 0,
+              "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 302,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed location of N-8.",
+          "sources": [
+            {
+              "end": 397,
+              "start": 344,
+              "text": "For storage, drawer Q is the listed location of N-8. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-4f222fadb4044f3d42ba6bb7",
+      "status": "valid"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-b43fbe760f6375231f931a54",
+      "status": "valid"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 92,
+              "start": 46,
+              "text": "specimen N-8 has a recorded mass of 84.2 grams"
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists the collection depth of the specimen as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 300,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum"
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed location of N-8.",
+          "sources": [
+            {
+              "end": 395,
+              "start": 357,
+              "text": "drawer Q is the listed location of N-8"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-30781f66fef991ff27dfe369",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": null
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": null
+        }
+      ],
+      "diagnostic_only": true,
+      "error": {
+        "code": "technical_invalid"
+      },
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": false,
+      "review_id": "r-de1e4e419df2fc9d3eb85b87",
+      "status": "error"
+    },
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 77,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 154,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-2857bb626fa843f4a3752833",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": [
+        {
+          "claim_text": "The locker bank at Alder Court has 28 compartments.",
+          "sources": [
+            {
+              "end": 52,
+              "start": 0,
+              "text": "The locker bank at Alder Court has 28 compartments. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The service panel of the locker bank at Alder Court is on the east side.",
+          "sources": [
+            {
+              "end": 91,
+              "start": 52,
+              "text": "Its service panel is on the east side. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The last recorded reset occurred at 06:45.",
+          "sources": [
+            {
+              "end": 310,
+              "start": 215,
+              "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-10e9dba6d68ad885fde36015",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-bd6be292364180ae6b373054",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": [
+            {
+              "end": 38,
+              "start": 23,
+              "text": "本次取件使用的是 12 号柜门"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": [
+            {
+              "end": 130,
+              "start": 115,
+              "text": "本次取件登记时间为 17:08"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-be9f6da1008c050446a21b2a",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": [
+        {
+          "claim_text": "The reference screen is 5 metres wide.",
+          "sources": [
+            {
+              "end": 157,
+              "start": 120,
+              "text": "the reference screen is 5 metres wide"
+            }
+          ]
+        },
+        {
+          "claim_text": "The vertical correction is +0.40 degrees.",
+          "sources": [
+            {
+              "end": 355,
+              "start": 315,
+              "text": "the vertical correction is +0.40 degrees"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-a8a455af2265690d6f5cd7cb",
+      "status": "valid"
+    },
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 77,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 154,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-95854e483f1b967afb0d5cec",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": [
+            {
+              "end": 67,
+              "start": 20,
+              "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": [
+            {
+              "end": 131,
+              "start": 115,
+              "text": "本次取件登记时间为 17:08。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-48a88ac2099ab0b68501e568",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": [
+            {
+              "end": 67,
+              "start": 20,
+              "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": [
+            {
+              "end": 131,
+              "start": 115,
+              "text": "本次取件登记时间为 17:08。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-3f52c31878b90df689ceb261",
+      "status": "valid"
+    },
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 77,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 154,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-dd1f96ded0c629d44eb5ce4d",
+      "status": "valid"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 94,
+              "start": 0,
+              "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists the collection depth of the specimen as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 302,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed storage location of N-8.",
+          "sources": [
+            {
+              "end": 397,
+              "start": 344,
+              "text": "For storage, drawer Q is the listed location of N-8. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-68761967c219c7aecaf4bec8",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": null,
+      "diagnostic_only": true,
+      "error": {
+        "code": "technical_invalid"
+      },
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": false,
+      "provenance_scorable": false,
+      "review_id": "r-4be66c0c8985171731babad2",
+      "status": "error"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 94,
+              "start": 0,
+              "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists the collection depth of specimen N-8 as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 302,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed storage location of N-8.",
+          "sources": [
+            {
+              "end": 397,
+              "start": 344,
+              "text": "For storage, drawer Q is the listed location of N-8. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-58979b54af8d52caffff4808",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": [
+        {
+          "claim_text": "The reference screen is 5 metres wide.",
+          "sources": [
+            {
+              "end": 159,
+              "start": 73,
+              "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The vertical correction is +0.40 degrees.",
+          "sources": [
+            {
+              "end": 357,
+              "start": 263,
+              "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Abbreviating the numerical entry is less preferable than shortening the instructions if the wording feels crowded.",
+          "sources": [
+            {
+              "end": 637,
+              "start": 536,
+              "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-7de6d86c791f90c1fa6b5262",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 36,
+              "start": 23,
+              "text": "本次烧制的批次名是“鹭羽”"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 99,
+              "start": 84,
+              "text": "空匣钵的质量为 2.35 千克"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 214,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-da00c53a6f3626533961c6cf",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 100,
+              "start": 79,
+              "text": "关于称量，空匣钵的质量为 2.35 千克。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 233,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-7451d0eaf696567fe4136f8f",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": [
+            {
+              "end": 67,
+              "start": 20,
+              "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": [
+            {
+              "end": 131,
+              "start": 115,
+              "text": "本次取件登记时间为 17:08。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-999b2c24df2303ae35134bf1",
+      "status": "valid"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 0,
+              "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-a04f7e4573612530997b0059",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-c079f9bfcde0c7439cc97f1d",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens.",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens"
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's wooden-token count is four.",
+          "sources": [
+            {
+              "end": 86,
+              "start": 56,
+              "text": "its wooden-token count is four"
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's lock code is “073”.",
+          "sources": [
+            {
+              "end": 110,
+              "start": 88,
+              "text": "Its lock code is “073”"
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after R.",
+          "sources": [
+            {
+              "end": 169,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-0ff407ef2dcc275c8d2ccd15",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 100,
+              "start": 79,
+              "text": "关于称量，空匣钵的质量为 2.35 千克。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 233,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-0b4d440566429f27e51de91e",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-5b08ed346b1618cfe153f596",
+      "status": "valid"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 94,
+              "start": 0,
+              "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists the collection depth of N-8 as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 302,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed storage location of N-8.",
+          "sources": [
+            {
+              "end": 397,
+              "start": 344,
+              "text": "For storage, drawer Q is the listed location of N-8. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The draft label can be compared with the catalogue entry before printing.",
+          "sources": [
+            {
+              "end": 492,
+              "start": 397,
+              "text": "You could ask a colleague to compare the draft label with the catalogue entry before printing. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-b437b044b134f5bc3733afde",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens.",
+          "sources": [
+            {
+              "end": 88,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's lock code is “073”.",
+          "sources": [
+            {
+              "end": 112,
+              "start": 88,
+              "text": "Its lock code is “073”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "sources": [
+            {
+              "end": 171,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-9d00e9f232a14d7e6d56d49f",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-3e799eb6b784d7c432ef1df3",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four.",
+          "sources": [
+            {
+              "end": 88,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Its lock code is “073”.",
+          "sources": [
+            {
+              "end": 112,
+              "start": 88,
+              "text": "Its lock code is “073”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after R.",
+          "sources": [
+            {
+              "end": 171,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-267bd237403a9e826e2e9238",
+      "status": "valid"
+    },
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 76,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 153,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-23812e6e05fd9d8c1c6e6d38",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": [
+        {
+          "claim_text": "The reference screen is 5 metres wide.",
+          "sources": null
+        },
+        {
+          "claim_text": "The vertical correction is +0.40 degrees.",
+          "sources": null
+        }
+      ],
+      "diagnostic_only": true,
+      "error": {
+        "code": "technical_invalid"
+      },
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": false,
+      "review_id": "r-64e74924809c36c8c8488dd4",
+      "status": "error"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-af0fc50bbebbd1f7d3d9861f",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": [
+        {
+          "claim_text": "The reference screen is 5 metres wide.",
+          "sources": [
+            {
+              "end": 159,
+              "start": 73,
+              "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The vertical correction is +0.40 degrees.",
+          "sources": [
+            {
+              "end": 357,
+              "start": 263,
+              "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-41ad1c2eaf09c920dd8a2ce4",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": null,
+      "diagnostic_only": true,
+      "error": {
+        "code": "technical_invalid"
+      },
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": false,
+      "provenance_scorable": false,
+      "review_id": "r-f9511fd886753949a11dd196",
+      "status": "error"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 0,
+              "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-41f68dc42270e8755241e4f4",
+      "status": "valid"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 0,
+              "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-0ef9af66328f7e0b5e64bfdc",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [
+        {
+          "claim_text": "A blank section could be reserved for observations.",
+          "sources": null
+        },
+        {
+          "claim_text": "Each reviewer could be asked to write their own comments.",
+          "sources": null
+        }
+      ],
+      "diagnostic_only": true,
+      "error": {
+        "code": "technical_invalid"
+      },
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": false,
+      "review_id": "r-274ad00680c7b0f4a1f4ec95",
+      "status": "error"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-c0414bd82c323f83c084cd3b",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 100,
+              "start": 79,
+              "text": "关于称量，空匣钵的质量为 2.35 千克。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 233,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-b494e43e6d3b822bb5ff3d0a",
+      "status": "valid"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-6dddcd39fc1ecedd30935d8b",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens.",
+          "sources": [
+            {
+              "end": 88,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's wooden-token count is four.",
+          "sources": [
+            {
+              "end": 88,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's lock code is “073”.",
+          "sources": [
+            {
+              "end": 112,
+              "start": 88,
+              "text": "Its lock code is “073”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "sources": [
+            {
+              "end": 171,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-4b7567dcc06703f594b45695",
+      "status": "valid"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-fc100f5598d6cb568f8db7e5",
+      "status": "valid"
+    },
+    {
+      "answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-32f4437487e2a5d28b414e4c",
+      "status": "valid"
+    },
+    {
+      "answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+      "claims": [],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-4d863762d8746a36c86628c7",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 36,
+              "start": 23,
+              "text": "本次烧制的批次名是“鹭羽”"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 99,
+              "start": 84,
+              "text": "空匣钵的质量为 2.35 千克"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 214,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-e0df531d39ba4bac91422c61",
+      "status": "valid"
+    },
+    {
+      "answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+      "claims": [
+        {
+          "claim_text": "Specimen N-8 has a recorded mass of 84.2 grams.",
+          "sources": [
+            {
+              "end": 92,
+              "start": 46,
+              "text": "specimen N-8 has a recorded mass of 84.2 grams"
+            }
+          ]
+        },
+        {
+          "claim_text": "The catalogue lists N-8's collection depth as -3.6 metres relative to the local datum.",
+          "sources": [
+            {
+              "end": 300,
+              "start": 217,
+              "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum"
+            }
+          ]
+        },
+        {
+          "claim_text": "Drawer Q is the listed storage location of N-8.",
+          "sources": [
+            {
+              "end": 395,
+              "start": 357,
+              "text": "drawer Q is the listed location of N-8"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "specimen N-8",
+            "recorded mass",
+            "84.2 grams"
+          ],
+          "source_quote": "specimen N-8 has a recorded mass of 84.2 grams"
+        },
+        {
+          "description": "The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "catalogue entry",
+            "its = specimen N-8",
+            "collection depth",
+            "-3.6 metres",
+            "relative to local datum"
+          ],
+          "source_quote": "The catalogue lists its collection depth as -3.6 metres relative to the local datum."
+        },
+        {
+          "description": "Drawer Q is N-8's listed storage location.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "N-8",
+            "listed storage location",
+            "drawer Q"
+          ],
+          "source_quote": "drawer Q is the listed location of N-8"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-6282a567294a27f65b98b462",
+      "status": "valid"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 0,
+              "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            },
+            {
+              "end": 169,
+              "start": 126,
+              "text": "请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-b8cb6a18d2753caa1eca0cff",
+      "status": "valid"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 25,
+              "text": "展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-4efe7dff0f7536f55a803d33",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four.",
+          "sources": [
+            {
+              "end": 88,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's lock code is “073”.",
+          "sources": [
+            {
+              "end": 112,
+              "start": 88,
+              "text": "Its lock code is “073”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after R.",
+          "sources": [
+            {
+              "end": 171,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-9a845743680cb116ef8b975e",
+      "status": "valid"
+    },
+    {
+      "answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+      "claims": [
+        {
+          "claim_text": "本次取件使用的是 12 号柜门。",
+          "sources": [
+            {
+              "end": 67,
+              "start": 20,
+              "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次取件登记时间为 17:08。",
+          "sources": [
+            {
+              "end": 131,
+              "start": 115,
+              "text": "本次取件登记时间为 17:08。"
+            }
+          ]
+        },
+        {
+          "claim_text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。",
+          "sources": [
+            {
+              "end": 251,
+              "start": 213,
+              "text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次取件使用 12 号柜门，该事实嵌入建议理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次取件",
+            "使用的柜门",
+            "12 号"
+          ],
+          "source_quote": "本次取件使用的是 12 号柜门"
+        },
+        {
+          "description": "本次取件登记时间为 17:08。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "本次取件",
+            "登记时间",
+            "17:08"
+          ],
+          "source_quote": "本次取件登记时间为 17:08。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-446dea3993ba71beca3f78c3",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": [
+        {
+          "claim_text": "The locker bank at Alder Court has 28 compartments.",
+          "sources": [
+            {
+              "end": 51,
+              "start": 0,
+              "text": "The locker bank at Alder Court has 28 compartments."
+            }
+          ]
+        },
+        {
+          "claim_text": "Its service panel is on the east side.",
+          "sources": [
+            {
+              "end": 90,
+              "start": 52,
+              "text": "Its service panel is on the east side."
+            }
+          ]
+        },
+        {
+          "claim_text": "The last recorded reset occurred at 06:45.",
+          "sources": [
+            {
+              "end": 308,
+              "start": 267,
+              "text": "the last recorded reset occurred at 06:45"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-8738b64c7640e65ede20cdb0",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": [
+        {
+          "claim_text": "The locker bank at Alder Court has 28 compartments.",
+          "sources": [
+            {
+              "end": 51,
+              "start": 0,
+              "text": "The locker bank at Alder Court has 28 compartments."
+            }
+          ]
+        },
+        {
+          "claim_text": "Its service panel is on the east side.",
+          "sources": [
+            {
+              "end": 90,
+              "start": 52,
+              "text": "Its service panel is on the east side."
+            }
+          ]
+        },
+        {
+          "claim_text": "The last recorded reset occurred at 06:45.",
+          "sources": [
+            {
+              "end": 308,
+              "start": 267,
+              "text": "the last recorded reset occurred at 06:45"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-b5898d1c378e7ea309ce295a",
+      "status": "valid"
+    },
+    {
+      "answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+      "claims": [
+        {
+          "claim_text": "展项“折返街”设置了 6 个解谜站。",
+          "sources": [
+            {
+              "end": 43,
+              "start": 25,
+              "text": "展项“折返街”设置了 6 个解谜站。"
+            }
+          ]
+        },
+        {
+          "claim_text": "入口展示牌的编号为 P-17。",
+          "sources": [
+            {
+              "end": 126,
+              "start": 111,
+              "text": "入口展示牌的编号为 P-17。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "展项折返街设置了 6 个解谜站。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "展项折返街",
+            "解谜站数量",
+            "6"
+          ],
+          "source_quote": "展项“折返街”设置了 6 个解谜站。"
+        },
+        {
+          "description": "入口展示牌编号为 P-17。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "入口展示牌",
+            "编号",
+            "P-17"
+          ],
+          "source_quote": "入口展示牌的编号为 P-17。"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-6e5a80760a153c05a8912546",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": [
+        {
+          "claim_text": "The locker bank at Alder Court has 28 compartments.",
+          "sources": [
+            {
+              "end": 52,
+              "start": 0,
+              "text": "The locker bank at Alder Court has 28 compartments. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The service panel of the locker bank at Alder Court is on the east side.",
+          "sources": [
+            {
+              "end": 91,
+              "start": 52,
+              "text": "Its service panel is on the east side. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The last recorded reset occurred at 06:45.",
+          "sources": [
+            {
+              "end": 310,
+              "start": 215,
+              "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-44edb200466b1b893956a7b3",
+      "status": "valid"
+    },
+    {
+      "answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+      "claims": [
+        {
+          "claim_text": "The locker bank at Alder Court has 28 compartments.",
+          "sources": [
+            {
+              "end": 52,
+              "start": 0,
+              "text": "The locker bank at Alder Court has 28 compartments. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The service panel of the locker bank at Alder Court is on the east side.",
+          "sources": [
+            {
+              "end": 91,
+              "start": 52,
+              "text": "Its service panel is on the east side. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The last recorded reset occurred at 06:45.",
+          "sources": [
+            {
+              "end": 310,
+              "start": 215,
+              "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The locker bank at Alder Court has 28 compartments.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "locker bank at Alder Court",
+            "compartments",
+            "28"
+          ],
+          "source_quote": "The locker bank at Alder Court has 28 compartments."
+        },
+        {
+          "description": "The Alder Court locker bank's service panel is on the east side.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = locker bank at Alder Court",
+            "service panel",
+            "east side"
+          ],
+          "source_quote": "Its service panel is on the east side."
+        },
+        {
+          "description": "The last recorded reset occurred at 06:45.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "last recorded reset",
+            "occurred at",
+            "06:45",
+            "recorded scope"
+          ],
+          "source_quote": "the last recorded reset occurred at 06:45"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-03c51b7eb8aac4a707c85528",
+      "status": "valid"
+    },
+    {
+      "answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+      "claims": [
+        {
+          "claim_text": "The reference screen is 5 metres wide.",
+          "sources": [
+            {
+              "end": 159,
+              "start": 73,
+              "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. "
+            }
+          ]
+        },
+        {
+          "claim_text": "The vertical correction is +0.40 degrees.",
+          "sources": [
+            {
+              "end": 357,
+              "start": 263,
+              "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The reference screen is 5 metres wide, a premise embedded in a recommendation.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "reference screen",
+            "width",
+            "5 metres"
+          ],
+          "source_quote": "the reference screen is 5 metres wide"
+        },
+        {
+          "description": "The vertical correction is positive 0.40 degrees.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "vertical correction",
+            "+0.40",
+            "degrees",
+            "positive sign"
+          ],
+          "source_quote": "the vertical correction is +0.40 degrees"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-a84134c657b2c0cd2cf4c463",
+      "status": "valid"
+    },
+    {
+      "answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+      "claims": [
+        {
+          "claim_text": "本次烧制的批次名是“鹭羽”。",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。"
+            }
+          ]
+        },
+        {
+          "claim_text": "空匣钵的质量为 2.35 千克。",
+          "sources": [
+            {
+              "end": 100,
+              "start": 79,
+              "text": "关于称量，空匣钵的质量为 2.35 千克。"
+            }
+          ]
+        },
+        {
+          "claim_text": "本次记录的保温时长是 42 分钟。",
+          "sources": [
+            {
+              "end": 233,
+              "start": 198,
+              "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "本次烧制的批次名为鹭羽，此事实嵌入建议的理由。",
+          "id": "f1",
+          "required_semantic_elements": [
+            "本次烧制",
+            "批次名",
+            "鹭羽"
+          ],
+          "source_quote": "本次烧制的批次名是“鹭羽”"
+        },
+        {
+          "description": "空匣钵的质量为 2.35 千克。",
+          "id": "f2",
+          "required_semantic_elements": [
+            "空匣钵",
+            "质量",
+            "2.35 千克",
+            "不得改为装载后质量"
+          ],
+          "source_quote": "空匣钵的质量为 2.35 千克。"
+        },
+        {
+          "description": "本次记录的保温时长为 42 分钟，此事实与建议在同一句中。",
+          "id": "f3",
+          "required_semantic_elements": [
+            "本次记录",
+            "保温时长",
+            "42 分钟"
+          ],
+          "source_quote": "本次记录的保温时长是 42 分钟"
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-66227c717937a3d2567c04a9",
+      "status": "valid"
+    },
+    {
+      "answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+      "claims": [
+        {
+          "claim_text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”.",
+          "sources": [
+            {
+              "end": 77,
+              "start": 0,
+              "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. "
+            }
+          ]
+        },
+        {
+          "claim_text": "Specimen V-2 carries the tag “layered”.",
+          "sources": [
+            {
+              "end": 154,
+              "start": 77,
+              "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. "
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "catalogue rule",
+            "condition: specimen tag layered",
+            "assigned drawer M",
+            "rule rather than observed placement"
+          ],
+          "source_quote": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”."
+        },
+        {
+          "description": "Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "specimen V-2",
+            "that tag = layered",
+            "carries tag",
+            "both same-sentence occurrences express the same tagging fact"
+          ],
+          "source_quote": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-6f0057313c86528dff883b64",
+      "status": "valid"
+    },
+    {
+      "answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+      "claims": [
+        {
+          "claim_text": "Cabinet R contains four wooden tokens.",
+          "sources": [
+            {
+              "end": 37,
+              "start": 0,
+              "text": "Cabinet R contains four wooden tokens"
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's wooden-token count is four.",
+          "sources": [
+            {
+              "end": 86,
+              "start": 56,
+              "text": "its wooden-token count is four"
+            }
+          ]
+        },
+        {
+          "claim_text": "Cabinet R's lock code is “073”.",
+          "sources": [
+            {
+              "end": 110,
+              "start": 88,
+              "text": "Its lock code is “073”"
+            }
+          ]
+        },
+        {
+          "claim_text": "In the inventory, cabinet S is listed immediately after R.",
+          "sources": [
+            {
+              "end": 169,
+              "start": 112,
+              "text": "In the inventory, cabinet S is listed immediately after R"
+            }
+          ]
+        }
+      ],
+      "diagnostic_only": false,
+      "error": null,
+      "expected_facts": [
+        {
+          "description": "Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant.",
+          "id": "f1",
+          "required_semantic_elements": [
+            "Cabinet R",
+            "wooden tokens",
+            "count four",
+            "same-sentence equivalent expression adds no assertion"
+          ],
+          "source_quote": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four."
+        },
+        {
+          "description": "Cabinet R's lock code is 073.",
+          "id": "f2",
+          "required_semantic_elements": [
+            "Its = Cabinet R",
+            "lock code",
+            "073",
+            "leading zero retained"
+          ],
+          "source_quote": "Its lock code is “073”."
+        },
+        {
+          "description": "In the inventory, cabinet S is listed immediately after cabinet R.",
+          "id": "f3",
+          "required_semantic_elements": [
+            "inventory ordering",
+            "cabinet S",
+            "immediately after cabinet R",
+            "not physical adjacency"
+          ],
+          "source_quote": "In the inventory, cabinet S is listed immediately after R."
+        }
+      ],
+      "expected_pure_nf": false,
+      "extraction_readable": true,
+      "provenance_scorable": true,
+      "review_id": "r-87fce451f172dbc36ee16754",
+      "status": "valid"
+    }
+  ],
+  "review_guidance": {
+    "blindness": "Do not inspect private-key.json, original journals, prompts, request payloads, usage, source code or experiment summaries. Repeated answers are expected; judge each extraction independently. Review IDs and packet order do not imply rank. The generic technical error code intentionally hides protocol-specific details.",
+    "claim_issues": "For each readable claim, identify non_factual_as_claim, meaning_changed, unresolved_reference, compound_claim or source_misaligned as applicable, explaining the evidence. Advice and questions themselves are non-factual; their asserted premises remain facts. Asserted conditional rules are factual and retain their conditions. Mark independent assertions grouped in one claim as compound_claim. A faithful same-sentence repetition alone is not a false positive, changed meaning, or compound fact; mention redundant extraction only in uncertainty. For technical invalids, limit issues to content diagnostics (non_factual_as_claim or meaning_changed); do not issue standalone, atomicity, or provenance judgments.",
+    "content_retained": "For each fact, map every claim index needed to assess its asserted content. Preserve subject, relation, attribution, polarity, quantity/unit, modality and applicability conditions. Semantic paraphrase is allowed. A referent that can be uniquely resolved from the full answer and extraction can count as content retained, even when the claim is not self-contained. A missing or changed element is false; genuine ambiguity is null and must be explained. Do not treat substring or numeric overlap as proof.",
+    "indices": "claim_indices and claim_index are zero-based indices into this record's claims array.",
+    "output": "Return one object per review_id using scoring_schema; include one target entry per expected fact.",
+    "scope": "AI semantic review of fictional diagnostic material, not author gold or author final adjudication. Expected facts are provisional semantic targets, not a required output wording or count. Do not infer semantic truth from technical validity.",
+    "selection_pass": "For technically valid, readable output: true only if every target has content_retained=true and no claim asserts non-factual material or changes meaning. False when a definite omission or content error exists; null when the result remains uncertain. Standalone, atomicity and provenance problems are separate from this content-selection score. Pure NF requires an empty claims array. Technical invalid always means null, never a completed pass or fail.",
+    "source_supported": "Only score when provenance_scorable is true. Check that the mapped claim's displayed source spans support its predicate, quantities, attribution, necessary conditions and scope. A claim may correctly expand an explicit shared antecedent from the full answer even when the attached fragment itself omits the antecedent's name; that omission alone is not a source error or strict-score failure. Whether the attached fragment includes the antecedent may be noted descriptively. Offsets are start-inclusive/end-exclusive Unicode code-point indices into answer. Multiple spans are separate exact spans, never an implied continuous envelope. Exact matching is structural evidence, not semantic proof. If the sources do not support the mapping use false; uncertain support is null.",
+    "standalone_retained": "For a technically valid record, separately judge whether the mapped claim or claims express the fact with explicit, correct subject, attribution and conditions when each claim is read by itself. An unresolved pronoun or omitted governing condition fails this stricter criterion even if full-paragraph context rescues content_retained. Do not require verbatim source wording. For technical-invalid records use null.",
+    "strict_fidelity_pass": "For technically valid, readable output: true only if selection_pass=true, every target is standalone_retained=true and source_supported=true, and there are no claim issues. Any definite strict failure yields false; otherwise unresolved judgments yield null. A valid pure-NF empty extraction passes vacuously. Technical invalid always means null.",
+    "technical_gate": "For status other than valid, diagnostic_only is true. If extraction_readable is true, assess content_retained only; standalone_retained and source_supported must be null. selection_pass and strict_fidelity_pass must both be null for every technical-invalid record, even if all content appears retained. Never convert it into a completed success. If extraction_readable is false, all target judgments must be null with empty claim_indices; leave claim_issues empty as unscored, not as zero errors. Explain in uncertainty. Invalid raw output is diagnostic only and never replaces validated output."
+  },
+  "schema_version": "coverage-protocol-blind-review-v1",
+  "scoring_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "claim_issues": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "claim_index": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "kind": {
+              "enum": [
+                "non_factual_as_claim",
+                "meaning_changed",
+                "unresolved_reference",
+                "compound_claim",
+                "source_misaligned"
+              ],
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "claim_index",
+            "kind",
+            "reason"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "review_id": {
+        "type": "string"
+      },
+      "selection_pass": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "strict_fidelity_pass": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "targets": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "claim_indices": {
+              "items": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "type": "array",
+              "uniqueItems": true
+            },
+            "content_retained": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "fact_id": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "source_supported": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "standalone_retained": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "fact_id",
+            "claim_indices",
+            "content_retained",
+            "standalone_retained",
+            "source_supported",
+            "reason"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "uncertainty": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "review_id",
+      "targets",
+      "claim_issues",
+      "selection_pass",
+      "strict_fidelity_pass",
+      "uncertainty"
+    ],
+    "type": "object"
+  }
+}

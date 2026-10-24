@@ -1,0 +1,4669 @@
+{
+  "requests": [
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp017",
+      "identity_key": "f35d4f456b6b367c7cd99c4a4d3746d1c9f4d905b345aafedb116409058c7782",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "这块标本的质量为 126.8 克，保存盒为 5 号盒。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "目录给它标注的采集日期是 2024 年 4 月 9 日。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "你可以在旁边留出复核栏，请整理人员决定何时签字；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+            "unit_id": "u0006"
+          }
+        ]
+      },
+      "payload_sha256": "f69be5ab07872f17c771fd3cbf9131f0f8da89a29c83c0429de5d43643050507",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 0
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp017",
+      "identity_key": "663b8c0088ffdd33661e9df3c9d2a63cd6e2f2478ab2de2e2151c4537cf0e41b",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。这块标本的质量为 126.8 克，保存盒为 5 号盒。请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n目录给它标注的采集日期是 2024 年 4 月 9 日。你可以在旁边留出复核栏，请整理人员决定何时签字；如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+        "max_claims": 64
+      },
+      "payload_sha256": "d133731c1dd2c59a57aebff7eca1d1eecb5a79f152cbd00db6359f0da8a6f79b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 0
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp017",
+      "identity_key": "8bcd1f5b5bd73a1f709d8e1b1df2c949e14f0306074df0f40fb24ea482b7268e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "这块标本的质量为 126.8 克，保存盒为 5 号盒。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "目录给它标注的采集日期是 2024 年 4 月 9 日。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "你可以在旁边留出复核栏，请整理人员决定何时签字；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+            "unit_id": "u0006"
+          }
+        ]
+      },
+      "payload_sha256": "f69be5ab07872f17c771fd3cbf9131f0f8da89a29c83c0429de5d43643050507",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 0
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp019",
+      "identity_key": "80f532c95ce3ad79950a1ac22dd8e8ef1323627523b90a59ac69adfe3ad83cbd",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先决定目录标签面向谁，再选择想呈现的栏目。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "是否愿意用一个问句作为开头？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以给复核意见留空，也可以另附一张便笺。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要替复核人提前填写结论。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "24d24a41d6e245ed5fe9fb23d163b3ba433c02fa1b119ac65c1830f22711a39b",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 1
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp019",
+      "identity_key": "8ff88b239578925557adb832297a9361867ce6fe634cc0f9937ee4ccf0e5d6bd",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+        "max_claims": 64
+      },
+      "payload_sha256": "2b1f963208f23804625d8157662b7c17f0c097063ba1856926204a97776a50aa",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 1
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp019",
+      "identity_key": "e1a59aabb82e932af482f6320e097a7ec69830735e2d6606ab6047084d017dda",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先决定目录标签面向谁，再选择想呈现的栏目。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "是否愿意用一个问句作为开头？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以给复核意见留空，也可以另附一张便笺。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要替复核人提前填写结论。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "24d24a41d6e245ed5fe9fb23d163b3ba433c02fa1b119ac65c1830f22711a39b",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 1
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp010",
+      "identity_key": "70b0e54aad49debde13fb12cae7aedc192b41867204a2877680ce22aaad6b5c0",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Please keep the original wording on the panel, since the final clue is printed in violet. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "For the margin note, use the recorded route order: the mirror room follows the knot table. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Avoid inventing a reason for that order; ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "you could ask the designer for a separate explanation if one is needed.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Two other entries belong on the handover card. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "The brass key weighs 31.6 grams. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "The demonstration session begins at 13:40. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "I would place those entries on separate lines and leave a blank space for comments. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Before sharing a draft, ask a reader to circle anything they would like clarified. ",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+            "unit_id": "u0010"
+          }
+        ]
+      },
+      "payload_sha256": "57debada97aaa00638734838e9e6662bdff52a5efbeac08299f2ba6635a5abe0",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 2
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp010",
+      "identity_key": "abec8f75268373e76c79ba96763f7022a010d40ae1a6d02529daac3ea3729665",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Please keep the original wording on the panel, since the final clue is printed in violet. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "For the margin note, use the recorded route order: the mirror room follows the knot table. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Avoid inventing a reason for that order; ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "you could ask the designer for a separate explanation if one is needed.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Two other entries belong on the handover card. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "The brass key weighs 31.6 grams. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "The demonstration session begins at 13:40. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "I would place those entries on separate lines and leave a blank space for comments. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Before sharing a draft, ask a reader to circle anything they would like clarified. ",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+            "unit_id": "u0010"
+          }
+        ]
+      },
+      "payload_sha256": "57debada97aaa00638734838e9e6662bdff52a5efbeac08299f2ba6635a5abe0",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 2
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp010",
+      "identity_key": "b0341947e758f65b981790c79b3a0a9d4b407899135ad566547298143d31c9ca",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Please keep the original wording on the panel, since the final clue is printed in violet. For the margin note, use the recorded route order: the mirror room follows the knot table. Avoid inventing a reason for that order; you could ask the designer for a separate explanation if one is needed.\nTwo other entries belong on the handover card. The brass key weighs 31.6 grams. The demonstration session begins at 13:40. I would place those entries on separate lines and leave a blank space for comments. Before sharing a draft, ask a reader to circle anything they would like clarified. Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+        "max_claims": 64
+      },
+      "payload_sha256": "c97e780ddd9dd6538bd85395e65e9d2ca93fcaf8fff8cbbbe3ab1ae69cf30c8c",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 2
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp015",
+      "identity_key": "18b9bb76c1aaebb33c446573b588f1f4510e1e28e5905c8291222d88baf97552",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you like the handover note to begin with an open question? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose your preferred order for the fields. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve one line for a comment and another for a signature, or try a free-text box instead. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Avoid guessing any missing entry.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "ae05748f86b1b40cab973262417166dc047e3080cb55a59ef5c04210eeb524a4",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 3
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp015",
+      "identity_key": "0f48a57c18088044b1a05b812af454b5c12175c062bbcbcd27633985b503b0df",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Would you like the handover note to begin with an open question? Please choose your preferred order for the fields. You could reserve one line for a comment and another for a signature, or try a free-text box instead. Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. Avoid guessing any missing entry.",
+        "max_claims": 64
+      },
+      "payload_sha256": "0a3608c6951072dd319e2c8693210565983b222d0c5637aa9fcb865349709d6e",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 3
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp015",
+      "identity_key": "1fde378a08f5789ee88e96e776bc2a0c90d53e4671858b722e784e478a9b54a2",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you like the handover note to begin with an open question? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose your preferred order for the fields. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve one line for a comment and another for a signature, or try a free-text box instead. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Avoid guessing any missing entry.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "ae05748f86b1b40cab973262417166dc047e3080cb55a59ef5c04210eeb524a4",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 3
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp016",
+      "identity_key": "a201739becc546debaf6cba069b41eecda403522311870f833989a6e2285499e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "B 柜的空闲格口为 7 个。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "值班日志把 A 柜标为“已巡检”；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "它的巡检时间记为 11:25。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请将两台柜的记录分开填写。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "20c612f42af7e9dd8f4c8c0ec125de6fa91f0385891dcabbeca36255b2586c46",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 4
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp016",
+      "identity_key": "ce54c362a7305e73a023d90e11c35fb5ef0006ad9fc5ad5690e99b25b963461b",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。B 柜的空闲格口为 7 个。值班日志把 A 柜标为“已巡检”；它的巡检时间记为 11:25。请将两台柜的记录分开填写。",
+        "max_claims": 64
+      },
+      "payload_sha256": "ad6c995cf6bf3bf474a06c867a4c0229a0e3c11c3a26757e47a0df2833e5cf96",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 4
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp016",
+      "identity_key": "2ee5b64a3006597f262daf82e8c7b5272cd0562ea99c30bbddbdfda420ab198d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "B 柜的空闲格口为 7 个。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "值班日志把 A 柜标为“已巡检”；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "它的巡检时间记为 11:25。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请将两台柜的记录分开填写。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "20c612f42af7e9dd8f4c8c0ec125de6fa91f0385891dcabbeca36255b2586c46",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 4
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp011",
+      "identity_key": "f1729a78c2b07b5d2df571c291febde2f524795d12b690dd6ee3ae6ed643e325",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "要不要把说明写成一张任务卡？请先选一种语气，再试着给每一步起一个短标题。你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。最后，请保留一块空白区域供读者提出问题。",
+        "max_claims": 64
+      },
+      "payload_sha256": "ce7f05978abf0f7543a84e696f195bef32fad9b5211b6734850bab6d407e1271",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 5
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp011",
+      "identity_key": "c835b10f82412879706a4aacc40ed859b762dd734a2473dab22ff7be35037e54",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "要不要把说明写成一张任务卡？",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先选一种语气，再试着给每一步起一个短标题。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "最后，请保留一块空白区域供读者提出问题。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "caa2d6c824c952453d78174b2612d62c78a930da1cafef8c9d3a451ab3d63546",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 5
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp011",
+      "identity_key": "78a295487e2a55310f9323630825c949f158f8ae2a67525b9961030cfe2dcb54",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "要不要把说明写成一张任务卡？",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先选一种语气，再试着给每一步起一个短标题。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "最后，请保留一块空白区域供读者提出问题。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "caa2d6c824c952453d78174b2612d62c78a930da1cafef8c9d3a451ab3d63546",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 5
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp011",
+      "identity_key": "3a5e4c0c248344e78c4eb3950864ae03e21ffe55ecf447dad24c333188570c74",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "要不要把说明写成一张任务卡？",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先选一种语气，再试着给每一步起一个短标题。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "最后，请保留一块空白区域供读者提出问题。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "caa2d6c824c952453d78174b2612d62c78a930da1cafef8c9d3a451ab3d63546",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 6
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp011",
+      "identity_key": "867923239380ac5c8a5db5d07cf1a3a2e4eae8a28d870bc1170d9015b0ff7686",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "要不要把说明写成一张任务卡？",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先选一种语气，再试着给每一步起一个短标题。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "最后，请保留一块空白区域供读者提出问题。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "caa2d6c824c952453d78174b2612d62c78a930da1cafef8c9d3a451ab3d63546",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 6
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp011",
+      "identity_key": "e4c1d81ec09007fff8b37b7aafef13d7b09e2b1fb2324a9ccad07f5ac9ff5c8e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "要不要把说明写成一张任务卡？请先选一种语气，再试着给每一步起一个短标题。你可以邀请试玩者说说喜欢哪种排版，但不要替他们填写反馈。对于不想公开的提示，考虑另放一页，并由负责人决定是否展示。最后，请保留一块空白区域供读者提出问题。",
+        "max_claims": 64
+      },
+      "payload_sha256": "ce7f05978abf0f7543a84e696f195bef32fad9b5211b6734850bab6d407e1271",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 6
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp006",
+      "identity_key": "4307dbc4c3faa2639e93c54072ed3de369fa93a4a477b6cc2d7f357e86541be6",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先按原记录抄写，再考虑是否需要缩短标题；",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "不要把你偏好的简称直接替换到正式记录里。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "关于称量，空匣钵的质量为 2.35 千克。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "对于外观评价，请另开区域，等负责观察的人填写。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "acbf2d9857ab3fe8563728c8ddb46e60c9912045153b6e34931373541cd46bac",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 7
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp006",
+      "identity_key": "2017e64062b0738a119a863119f618e787dc3fc1bec19c6c4d038e6eda9bb211",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+        "max_claims": 64
+      },
+      "payload_sha256": "b9b3a795e4c46e30387c19e8f3cc80f02c20cfd6beede0c7616dcdc8e7773c69",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 7
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp006",
+      "identity_key": "068ce4953c3c5a7d98de169c41e5194003f72d99c8830be0329144f99042b65c",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先按原记录抄写，再考虑是否需要缩短标题；",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "不要把你偏好的简称直接替换到正式记录里。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "关于称量，空匣钵的质量为 2.35 千克。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "对于外观评价，请另开区域，等负责观察的人填写。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "acbf2d9857ab3fe8563728c8ddb46e60c9912045153b6e34931373541cd46bac",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 7
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp014",
+      "identity_key": "b3f3f055d9f9b06c756c2ce5e7701de49c7a7ef046c401078ae46aab45cd3210",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请在包裹柜的登记表里把柜门编号单独列出。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "请不要把示例文字留在正式填写区。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "本次取件登记时间为 17:08。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "建议先把时间转录完整，再检查是否需要补填签名或日期；",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "尚待确认的项目，请以问题形式列在另一处。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "等对方给出反馈后，再决定哪些栏目保留。",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "最后，请逐项核对这份草稿里的人称、编号和引号；",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "334dea1aa7b6e4ad692e6aee66a522a00f4595c58947e60669277b21fe5eeb85",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 8
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp014",
+      "identity_key": "79fc20169315dd78df5065d7595cc81bb0d1b9362a5e49a2d161db8edf7a4426",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+        "max_claims": 64
+      },
+      "payload_sha256": "3c43349c12ee489aeb8672c89a877073b91b21698358b1e28d4b90d00e32dca8",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 8
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp014",
+      "identity_key": "58af5734c666563572caf9ec59c04ceba122be5f524ee81dec0b239f781cdf8f",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请在包裹柜的登记表里把柜门编号单独列出。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "请不要把示例文字留在正式填写区。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "本次取件登记时间为 17:08。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "建议先把时间转录完整，再检查是否需要补填签名或日期；",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "尚待确认的项目，请以问题形式列在另一处。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "等对方给出反馈后，再决定哪些栏目保留。",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "最后，请逐项核对这份草稿里的人称、编号和引号；",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "334dea1aa7b6e4ad692e6aee66a522a00f4595c58947e60669277b21fe5eeb85",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 8
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp018",
+      "identity_key": "0b3cbab05a2ba7d3e18a5735466ac1bde78e7699d3f3855975e03b036f42a7c7",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Keep the minus sign in the transcription.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "For storage, drawer Q is the listed location of N-8. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You could ask a colleague to compare the draft label with the catalogue entry before printing. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "Choose a font size you find comfortable, and keep recommendations apart from the copied entries. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Do not add an origin story or a material name just to make the label feel complete.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "aac369cc621e1d6762c2002f8f1d9406fc7b04554dfb653fce483f407cab8286",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 9
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp018",
+      "identity_key": "bd11eb33d78b75b63e5ab47d8bceafbefb7e5280685f57272ad0e06b01d05c34",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Keep the minus sign in the transcription.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "For storage, drawer Q is the listed location of N-8. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You could ask a colleague to compare the draft label with the catalogue entry before printing. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "Choose a font size you find comfortable, and keep recommendations apart from the copied entries. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Do not add an origin story or a material name just to make the label feel complete.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "aac369cc621e1d6762c2002f8f1d9406fc7b04554dfb653fce483f407cab8286",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 9
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp018",
+      "identity_key": "5468b42cec1fd9b2698953835f9e1931b5fd110c2cadf25fa1984ab4532c2b26",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+        "max_claims": 64
+      },
+      "payload_sha256": "235e2b03ee081140b8d2c7a57ae714d89ed8634bd45016c72ec1e1ada95b34bd",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 9
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp007",
+      "identity_key": "43373aa40888599885097ed0c125549d482507bd5c367c510c007e8b4518ee31",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+        "max_claims": 64
+      },
+      "payload_sha256": "c3a455be169d96e9a38d906d0f6bd75726b4792ad42bc1ec1e7932396cd0ac9b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 10
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp007",
+      "identity_key": "b5a28fca57674db45d4fa27dc91e6a13a724b07aa9480bd9cd3bb3d31159681c",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you prefer a one-page checklist or a free-form studio note? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose a format before adding headings. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve a blank section for observations and ask each reviewer to write their own comments. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For anything uncertain, leave a question instead of supplying a guessed answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Consider using numbered lines, but pick whichever layout you find easier to complete.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "18bd120eb560090c273bccd4dd4e7b2756a0732fd72e21c7e92cb0207b6dcd12",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 10
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp007",
+      "identity_key": "c185914a37d2dd35625424f1a6a3b0b03130404451f52cb4423612297275b4d1",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you prefer a one-page checklist or a free-form studio note? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose a format before adding headings. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve a blank section for observations and ask each reviewer to write their own comments. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For anything uncertain, leave a question instead of supplying a guessed answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Consider using numbered lines, but pick whichever layout you find easier to complete.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "18bd120eb560090c273bccd4dd4e7b2756a0732fd72e21c7e92cb0207b6dcd12",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 10
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp008",
+      "identity_key": "50a32b1f9b3ab3303384a629337fd412ea524fd7ef45e7a0e1959acd14fe768e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次红色试件标记为“薄片”，也就是它带有“薄片”标记。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "986902247dd190412dd8ad835df2f4bc3acb93cb66162ce3542cb1e8e91c3f5d",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 11
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp008",
+      "identity_key": "5de756ce95aeb505832d0c08e8f659475817b0408927498eab0795a0d818152f",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次红色试件标记为“薄片”，也就是它带有“薄片”标记。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "986902247dd190412dd8ad835df2f4bc3acb93cb66162ce3542cb1e8e91c3f5d",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 11
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp008",
+      "identity_key": "5bf139df54b4f9120c46183cb660d9de46c287059b15b279e4046f4a2fa53e6e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。本次红色试件标记为“薄片”，也就是它带有“薄片”标记。请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+        "max_claims": 64
+      },
+      "payload_sha256": "8a80a2cbfda20174f78bfbaf76c650b101fb54b8215a87540b90276a843bbe15",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 11
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp002",
+      "identity_key": "48613d662164d962bb8938a76fbf4594fc6b44b4de1bed155efc664e15dd8892",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+        "max_claims": 64
+      },
+      "payload_sha256": "77d68bcb493d7c6625a27b79ef37678e25ced280831b836fc066e911faa06877",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 12
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp002",
+      "identity_key": "3a33492f5d7f178671a39a0cb2aa1f58a424d928c7f1dd67491b0eacc37d5269",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "For the review sheet, keep the setup information beside the still image. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Do not round it while preparing the handover. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Keep the title plain and avoid adding a diagnosis to the filename.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "1b2cae2a348a9dd76c46f8192b9452ac2be39b6ff9526fc5624e0747b0baec6e",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 12
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp002",
+      "identity_key": "a9f8f1e9c92f05c2550fdad059d5913a2b2bb287ff9d9466854cabf8339f72f2",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "For the review sheet, keep the setup information beside the still image. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Do not round it while preparing the handover. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Keep the title plain and avoid adding a diagnosis to the filename.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "1b2cae2a348a9dd76c46f8192b9452ac2be39b6ff9526fc5624e0747b0baec6e",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 12
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp018",
+      "identity_key": "bfefd3bedd61b42765fd02815fff3efd6dc51ed9a5f0d64808ab274065abcf9e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. The catalogue lists its collection depth as -3.6 metres relative to the local datum. Keep the minus sign in the transcription.\nFor storage, drawer Q is the listed location of N-8. You could ask a colleague to compare the draft label with the catalogue entry before printing. Choose a font size you find comfortable, and keep recommendations apart from the copied entries. Do not add an origin story or a material name just to make the label feel complete.",
+        "max_claims": 64
+      },
+      "payload_sha256": "235e2b03ee081140b8d2c7a57ae714d89ed8634bd45016c72ec1e1ada95b34bd",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 13
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp018",
+      "identity_key": "fe531f93235e74068aa2972ea0d5b92066a567da1214d9be7c7a085be13d3376",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Keep the minus sign in the transcription.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "For storage, drawer Q is the listed location of N-8. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You could ask a colleague to compare the draft label with the catalogue entry before printing. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "Choose a font size you find comfortable, and keep recommendations apart from the copied entries. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Do not add an origin story or a material name just to make the label feel complete.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "aac369cc621e1d6762c2002f8f1d9406fc7b04554dfb653fce483f407cab8286",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 13
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp018",
+      "identity_key": "cef9e6e6777f94be33c45c2cc2293a3a55eebc75fdc8b163b156eb2e6455632e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "I suggest retaining the decimal place because specimen N-8 has a recorded mass of 84.2 grams. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please put any proposed identification in a separate comment field, and leave it blank until the reviewer supplies a view. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "The catalogue lists its collection depth as -3.6 metres relative to the local datum. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Keep the minus sign in the transcription.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "For storage, drawer Q is the listed location of N-8. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You could ask a colleague to compare the draft label with the catalogue entry before printing. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "Choose a font size you find comfortable, and keep recommendations apart from the copied entries. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Do not add an origin story or a material name just to make the label feel complete.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "aac369cc621e1d6762c2002f8f1d9406fc7b04554dfb653fce483f407cab8286",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 13
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp019",
+      "identity_key": "200b5824df9f5ac5489378991f036417a68f62e1030075442d1f06f63c36e2fb",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请先决定目录标签面向谁，再选择想呈现的栏目。是否愿意用一个问句作为开头？你可以给复核意见留空，也可以另附一张便笺。不要替复核人提前填写结论。若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+        "max_claims": 64
+      },
+      "payload_sha256": "2b1f963208f23804625d8157662b7c17f0c097063ba1856926204a97776a50aa",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 14
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp019",
+      "identity_key": "587df9f81556bd6046d0af3a4068c9f4215d4ffbfefb10d3acd11853a3f6b597",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先决定目录标签面向谁，再选择想呈现的栏目。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "是否愿意用一个问句作为开头？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以给复核意见留空，也可以另附一张便笺。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要替复核人提前填写结论。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "24d24a41d6e245ed5fe9fb23d163b3ba433c02fa1b119ac65c1830f22711a39b",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 14
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp019",
+      "identity_key": "8b93057abe97f1eb78e7ba393ab595d7bd8a66c13c7a64a3584a2b5794c15a4e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先决定目录标签面向谁，再选择想呈现的栏目。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "是否愿意用一个问句作为开头？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以给复核意见留空，也可以另附一张便笺。",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要替复核人提前填写结论。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "若需要更短的版面，请先写两个草稿，请使用者选择喜欢的版本，再决定如何安排字号和留白。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "24d24a41d6e245ed5fe9fb23d163b3ba433c02fa1b119ac65c1830f22711a39b",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 14
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp003",
+      "identity_key": "a8df4809e0d8cd6969eea37a5f30e22a8fbc3be537c1828e06226badc911ccf4",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。要不要把数值和操作建议分成两栏？是否需要给每一项留出签名位置？你可以先画草稿，再邀请接班人挑选喜欢的版本。对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+        "max_claims": 64
+      },
+      "payload_sha256": "f2f70b57d5230b70546c6dcbf38d746e3ce8c097f18931fd439104308c52156e",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 15
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp003",
+      "identity_key": "894b3ca0d774c9bee56b5a4d8a40321df77fc161a7ee53b0eacd384d7ffde205",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "要不要把数值和操作建议分成两栏？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "是否需要给每一项留出签名位置？",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "你可以先画草稿，再邀请接班人挑选喜欢的版本。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "c8ee7a3bb0e3f96f2a4204cd7800fd175fdd58842548de438fcf1d09a613a136",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 15
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp003",
+      "identity_key": "2857c87fde66e581346c2d2a411de8a617b820ea4439de391d03c8514b0a2c1c",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "要不要把数值和操作建议分成两栏？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "是否需要给每一项留出签名位置？",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "你可以先画草稿，再邀请接班人挑选喜欢的版本。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "c8ee7a3bb0e3f96f2a4204cd7800fd175fdd58842548de438fcf1d09a613a136",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 15
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp006",
+      "identity_key": "f3c6c015e11cf45421cc291416a85e74bafaa017c2e4b3a8ecb1a9b630ba9941",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。请先按原记录抄写，再考虑是否需要缩短标题；不要把你偏好的简称直接替换到正式记录里。\n关于称量，空匣钵的质量为 2.35 千克。请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。对于外观评价，请另开区域，等负责观察的人填写。你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+        "max_claims": 64
+      },
+      "payload_sha256": "b9b3a795e4c46e30387c19e8f3cc80f02c20cfd6beede0c7616dcdc8e7773c69",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 16
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp006",
+      "identity_key": "4b4b563f8e3e835cf55d40b7aaaa054ec0bc2a2398987c0f6d71c9533238e8a3",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先按原记录抄写，再考虑是否需要缩短标题；",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "不要把你偏好的简称直接替换到正式记录里。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "关于称量，空匣钵的质量为 2.35 千克。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "对于外观评价，请另开区域，等负责观察的人填写。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "acbf2d9857ab3fe8563728c8ddb46e60c9912045153b6e34931373541cd46bac",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 16
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp006",
+      "identity_key": "4ed38a215e9deb28604134ad4115b3afa068922d57f6df31fb46373ac3a94a93",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "建议给这份窑炉交接单保留一个醒目的批次栏，因为本次烧制的批次名是“鹭羽”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请先按原记录抄写，再考虑是否需要缩短标题；",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "不要把你偏好的简称直接替换到正式记录里。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "关于称量，空匣钵的质量为 2.35 千克。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请把这个数值与装载后的称量分开填写，尚未填写的地方先留白。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "若要请别人协助核对，可把需要确认的问题逐条列出来，并给每条问题留一行答复位置。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "不要先替对方选择答案，也不要把一条待确认意见写成最终结论。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "本次记录的保温时长是 42 分钟，因此建议把“保温时长”写成独立项目。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "接着请检查单位、标点和引号，想保留哪种编号方式就全篇统一使用那一种。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "对于外观评价，请另开区域，等负责观察的人填写。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "你也可以先制作一份空白样张，请同事试填后再决定栏目宽度；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需留下修改理由，请用简短文字说明修改目的，并给填写人留下签注空间。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "最后再通读一次，重点检查哪些话属于建议，哪些话是在转录原记录。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "acbf2d9857ab3fe8563728c8ddb46e60c9912045153b6e34931373541cd46bac",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 16
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp001",
+      "identity_key": "8243a2e8b593c65185fdd3348cfad5b05f281dbc2a0c2fe00035e7a738b935d1",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "天文馆试放记录可以这样整理：\n",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "试放持续了 14 分钟。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "建议在时间栏直接填写这个时长，再另留一格供值班人员签名；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "签名栏先保持空白，等待本人填写。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "最后，请检查引号、换行和编号是否统一。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "请把你的操作建议放在独立区域，用“建议”开头；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需解释栏目用途，可用简短问句提示填写者。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "bd47cafa544218185802d1a2d2c632fc9c25a5d81594d78b2820de03c170e5cf",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 17
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp001",
+      "identity_key": "024fc9708f0e91b96cd39edb4f8c3797ab8708abc6c017c4df67b10b1cbbfd39",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "天文馆试放记录可以这样整理：\n",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "试放持续了 14 分钟。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "建议在时间栏直接填写这个时长，再另留一格供值班人员签名；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "签名栏先保持空白，等待本人填写。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "最后，请检查引号、换行和编号是否统一。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "请把你的操作建议放在独立区域，用“建议”开头；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需解释栏目用途，可用简短问句提示填写者。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "bd47cafa544218185802d1a2d2c632fc9c25a5d81594d78b2820de03c170e5cf",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 17
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp001",
+      "identity_key": "b01dbe33d45fa055717d4f2e808939de5df6e441f9bfb0442f17f9925b2880c4",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "天文馆试放记录可以这样整理：\n本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n试放持续了 14 分钟。建议在时间栏直接填写这个时长，再另留一格供值班人员签名；签名栏先保持空白，等待本人填写。若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n最后，请检查引号、换行和编号是否统一。遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。请把你的操作建议放在独立区域，用“建议”开头；如需解释栏目用途，可用简短问句提示填写者。整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+        "max_claims": 64
+      },
+      "payload_sha256": "c7c271c8293066bcfd1873ea8322eeb6b31b7f5de1e2771a8b4e2caa4f08a747",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 17
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp007",
+      "identity_key": "64ad94de3b390643363e9af3de96f551d5a591d9f6817e78be5c082efcfa8769",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you prefer a one-page checklist or a free-form studio note? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose a format before adding headings. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve a blank section for observations and ask each reviewer to write their own comments. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For anything uncertain, leave a question instead of supplying a guessed answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Consider using numbered lines, but pick whichever layout you find easier to complete.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "18bd120eb560090c273bccd4dd4e7b2756a0732fd72e21c7e92cb0207b6dcd12",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 18
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp007",
+      "identity_key": "7514a2c9e6d48bf4ca233bbbd710028874d99a08b7a9279158ad17f3d00ae675",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you prefer a one-page checklist or a free-form studio note? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose a format before adding headings. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve a blank section for observations and ask each reviewer to write their own comments. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For anything uncertain, leave a question instead of supplying a guessed answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Consider using numbered lines, but pick whichever layout you find easier to complete.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "18bd120eb560090c273bccd4dd4e7b2756a0732fd72e21c7e92cb0207b6dcd12",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 18
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp007",
+      "identity_key": "45c4fa36891f1fe03dbb1f5808d20a90204f9acdcc1ac44902ee80a5c7bcb59d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Would you prefer a one-page checklist or a free-form studio note? Please choose a format before adding headings. You could reserve a blank section for observations and ask each reviewer to write their own comments. For anything uncertain, leave a question instead of supplying a guessed answer. Consider using numbered lines, but pick whichever layout you find easier to complete.",
+        "max_claims": 64
+      },
+      "payload_sha256": "c3a455be169d96e9a38d906d0f6bd75726b4792ad42bc1ec1e7932396cd0ac9b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 18
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp020",
+      "identity_key": "ae3424f5ec2719f4f21fafe7b7ea90601de083f7ff57ea89a4381b7cddbef8ca",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "72376ee3345221c9e27136fbcb63c3241ac7e6eef2e16966527fa692bc6b95aa",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 19
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp020",
+      "identity_key": "bd11ac83dc04ce37385cc6aa617312a2e3c091da41b29f7eabc8ec508da24557",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "72376ee3345221c9e27136fbcb63c3241ac7e6eef2e16966527fa692bc6b95aa",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 19
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp020",
+      "identity_key": "0699be1d3f91d01b16e45d934324dc6ba370458dc2cd38190c16e3663e103ff6",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+        "max_claims": 64
+      },
+      "payload_sha256": "43260fc048b029711d7f4026f9978991cd043f4dc98c94acbf425ccae1167ada",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 19
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp012",
+      "identity_key": "17afc6905bba1dd77f978b5ce394d14d48ce3b032626a96a08b0ca930c236560",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its lock code is “073”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "In the inventory, cabinet S is listed immediately after R. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please keep the leading zero when copying the code and retain the cabinet references.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3e6623b2cb3efed46fc95203dc657cde4bd15da62f0032c915be0ec35f52663e",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 20
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp012",
+      "identity_key": "3c4199cab1662a5287f3c10d278ceada630201867a5db03800f7c27423638454",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its lock code is “073”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "In the inventory, cabinet S is listed immediately after R. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please keep the leading zero when copying the code and retain the cabinet references.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3e6623b2cb3efed46fc95203dc657cde4bd15da62f0032c915be0ec35f52663e",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 20
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp012",
+      "identity_key": "2d14270a65ce2285c8d325a770aa4ebb00409f9c8b89695581b74992364f9751",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+        "max_claims": 64
+      },
+      "payload_sha256": "997a7b3b586a7fd77bd9b5644bf5ca15701a58c7753c69a4a4284dde5c804cbf",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 20
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp003",
+      "identity_key": "401cf7042a9b02244297609b69cb4dca1b09d666f87ee13d902edeca4657695d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "要不要把数值和操作建议分成两栏？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "是否需要给每一项留出签名位置？",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "你可以先画草稿，再邀请接班人挑选喜欢的版本。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "c8ee7a3bb0e3f96f2a4204cd7800fd175fdd58842548de438fcf1d09a613a136",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 21
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp003",
+      "identity_key": "20d5164be4227c9a8984908396bcd4a005016dc5ce2fb9fd1988de5317f1c0c6",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "要不要把数值和操作建议分成两栏？",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "是否需要给每一项留出签名位置？",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "你可以先画草稿，再邀请接班人挑选喜欢的版本。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "c8ee7a3bb0e3f96f2a4204cd7800fd175fdd58842548de438fcf1d09a613a136",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 21
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp003",
+      "identity_key": "edd60d01551ee76e77ea022f4157d621ac3ee80e40822034cc15665598f42abc",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请先选择一份你愿意交接给同事的记录，再决定版面顺序。要不要把数值和操作建议分成两栏？是否需要给每一项留出签名位置？你可以先画草稿，再邀请接班人挑选喜欢的版本。对于暂时拿不准的栏目，请留空并写下问题，不要替别人作答。",
+        "max_claims": 64
+      },
+      "payload_sha256": "f2f70b57d5230b70546c6dcbf38d746e3ce8c097f18931fd439104308c52156e",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 21
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp013",
+      "identity_key": "c7718b3a66beba7c86dad0390a0e125575894c50b123438077490d6349fcb5e1",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The locker bank at Alder Court has 28 compartments. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its service panel is on the east side. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You might ask the next shift to inspect the original record before adding a comment. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Avoid guessing the cause of a reset from the time alone. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "0ccfea8f940b8a02f9afda30276237b0b3c98e28d72b5f4b88f93f849bb7b682",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 22
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp013",
+      "identity_key": "ce65d90c982f0e2088606779ad66a421ae7a056510e39d66e9dd7402eef0079e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The locker bank at Alder Court has 28 compartments. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its service panel is on the east side. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You might ask the next shift to inspect the original record before adding a comment. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Avoid guessing the cause of a reset from the time alone. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "0ccfea8f940b8a02f9afda30276237b0b3c98e28d72b5f4b88f93f849bb7b682",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 22
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp013",
+      "identity_key": "21fc5d2270ef29b7980d942e036caf98921cba99abd80b8fa4b7f52e8c4618f7",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+        "max_claims": 64
+      },
+      "payload_sha256": "d679b33a5106642aacc6ddaf2cd6a366175630c4716011d6581ddce820660925",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 22
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp005",
+      "identity_key": "661d7cfac22c59d73dc488842ce9868c99cb5a0ef07532182bd6e7aabd6fe181",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Batch Kestrel used kiln 3. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please transcribe the decimal as written and keep the temperature and duration in separate fields.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the shelf map, begin with the placement note: the blue test tile occupied shelf B. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Leave any comments about appearance for a later inspection. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "avoid filling a blank field with a plausible value. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+            "unit_id": "u0009"
+          }
+        ]
+      },
+      "payload_sha256": "a7ab82e3cfa426b3121034f7e344188e445eee6c83b912785b68b0cb42bacbc3",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 23
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp005",
+      "identity_key": "d14625236b305635fb77bfe1e11ba7337b4a1cdf8c2543b490c58af5b4b01ff7",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Batch Kestrel used kiln 3. Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. Please transcribe the decimal as written and keep the temperature and duration in separate fields.\nFor the shelf map, begin with the placement note: the blue test tile occupied shelf B. You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. Leave any comments about appearance for a later inspection. If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; avoid filling a blank field with a plausible value. Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+        "max_claims": 64
+      },
+      "payload_sha256": "41eb17e550c10a2a87a80e7f45d28a85ce3ac76e5d47f273343c2768391a8c8c",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 23
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp005",
+      "identity_key": "18be6512be28b6d33f700aa871d12bcfae1e76648d46f4671fbc24f6cdafa3e0",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Batch Kestrel used kiln 3. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please transcribe the decimal as written and keep the temperature and duration in separate fields.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the shelf map, begin with the placement note: the blue test tile occupied shelf B. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Leave any comments about appearance for a later inspection. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "avoid filling a blank field with a plausible value. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+            "unit_id": "u0009"
+          }
+        ]
+      },
+      "payload_sha256": "a7ab82e3cfa426b3121034f7e344188e445eee6c83b912785b68b0cb42bacbc3",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 23
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp009",
+      "identity_key": "39b9634c7db7cab52ba7c16b5e34e113b30f07897d0bc1f0c791af0958422793",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+        "max_claims": 64
+      },
+      "payload_sha256": "8b94781313b4c066d7250ee5d619e03cfe574e4deb19f37fff5481e72ea9205a",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 24
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp009",
+      "identity_key": "4c8b01a3211d8cf4b836de3a28c4d2135918a83913520d120626d3f62ac46d56",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请把展项名称完整保留，站点是否需要分行展示则由你选择。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "若要配一张示意图，可以先画空白框，让负责布展的人填写位置；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要根据名称猜测路线。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "入口展示牌的编号为 P-17。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+            "unit_id": "u0012"
+          }
+        ]
+      },
+      "payload_sha256": "b6702bb6567a2a03357ba14de4618ed21b9ad3b9e039efdc4a9c67cc39cef6ea",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 24
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp009",
+      "identity_key": "3791023fe3ea48233df1021fe43e03685dac9754afd480e005c5aa58cad0bf8b",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请把展项名称完整保留，站点是否需要分行展示则由你选择。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "若要配一张示意图，可以先画空白框，让负责布展的人填写位置；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要根据名称猜测路线。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "入口展示牌的编号为 P-17。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+            "unit_id": "u0012"
+          }
+        ]
+      },
+      "payload_sha256": "b6702bb6567a2a03357ba14de4618ed21b9ad3b9e039efdc4a9c67cc39cef6ea",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 24
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp005",
+      "identity_key": "375e7df1d23647ff8ce1768aa92f776dc143a03c1bb99313d9d1614281bd19c9",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Batch Kestrel used kiln 3. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please transcribe the decimal as written and keep the temperature and duration in separate fields.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the shelf map, begin with the placement note: the blue test tile occupied shelf B. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Leave any comments about appearance for a later inspection. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "avoid filling a blank field with a plausible value. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+            "unit_id": "u0009"
+          }
+        ]
+      },
+      "payload_sha256": "a7ab82e3cfa426b3121034f7e344188e445eee6c83b912785b68b0cb42bacbc3",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 25
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp005",
+      "identity_key": "467e8b3450af00c9c94e11fd503d96961f50eb2c19932932cf2d4e37f4be212e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Batch Kestrel used kiln 3. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please transcribe the decimal as written and keep the temperature and duration in separate fields.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the shelf map, begin with the placement note: the blue test tile occupied shelf B. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Leave any comments about appearance for a later inspection. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "avoid filling a blank field with a plausible value. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+            "unit_id": "u0009"
+          }
+        ]
+      },
+      "payload_sha256": "a7ab82e3cfa426b3121034f7e344188e445eee6c83b912785b68b0cb42bacbc3",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 25
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp005",
+      "identity_key": "53db0a9bf274ef1931b3b11f317caedaf3842c4692a6fb4276c1829c95836a10",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Batch Kestrel used kiln 3. Batch Kestrel's recorded peak temperature was 968 °C, and the batch's cooling interval lasted 7.5 hours. Please transcribe the decimal as written and keep the temperature and duration in separate fields.\nFor the shelf map, begin with the placement note: the blue test tile occupied shelf B. You may sketch the arrangement before choosing a final form, but ask the studio coordinator which annotations to retain. Leave any comments about appearance for a later inspection. If you prepare a visitor-friendly copy, use a short title and invite readers to consult the full log for detail; avoid filling a blank field with a plausible value. Please also keep any recommendations under their own heading and ask a colleague to review the transcription before you distribute it.",
+        "max_claims": 64
+      },
+      "payload_sha256": "41eb17e550c10a2a87a80e7f45d28a85ce3ac76e5d47f273343c2768391a8c8c",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 25
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp013",
+      "identity_key": "bf2fb74290883b71de87850698cacdb02d6fe869b5257303b9b916026987ee18",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The locker bank at Alder Court has 28 compartments. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its service panel is on the east side. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You might ask the next shift to inspect the original record before adding a comment. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Avoid guessing the cause of a reset from the time alone. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "0ccfea8f940b8a02f9afda30276237b0b3c98e28d72b5f4b88f93f849bb7b682",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 26
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp013",
+      "identity_key": "41220f6b57ce71e3607b2353e22bb7d29df300018d068d5bbaf4ddc229a206b4",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "The locker bank at Alder Court has 28 compartments. Its service panel is on the east side. Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\nFor the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. You might ask the next shift to inspect the original record before adding a comment. Avoid guessing the cause of a reset from the time alone. If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+        "max_claims": 64
+      },
+      "payload_sha256": "d679b33a5106642aacc6ddaf2cd6a366175630c4716011d6581ddce820660925",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 26
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp013",
+      "identity_key": "b97acd22bf9714b99c91933924c6818e6a6291c37653da9059cfdbaa01d6899d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The locker bank at Alder Court has 28 compartments. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its service panel is on the east side. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please keep those entries together in the location note and leave any proposed changes to the layout in a separate section.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "For the incident card, copy this timestamp exactly: the last recorded reset occurred at 06:45. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "You might ask the next shift to inspect the original record before adding a comment. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "Avoid guessing the cause of a reset from the time alone. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If you want a shorter handover, try a three-line draft, then invite the duty coordinator to choose which instructions to retain. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Please leave the approval box blank until someone actually signs it, and place unresolved questions at the end without supplying a tentative diagnosis as an answer.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "0ccfea8f940b8a02f9afda30276237b0b3c98e28d72b5f4b88f93f849bb7b682",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 26
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp004",
+      "identity_key": "ae4ffa03d8292bc316c062a2d40174516a0831e2fe344bd654fb986c6794126b",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "The calibration entry was saved at 08:20. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "It was filed in folder “Night-6”. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please preserve that reference when rewriting the note.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3d8d3009b9f1bf18f69a7c001e5c10049e948ecfae1e955f4dbdbcdcad0dace9",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 27
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp004",
+      "identity_key": "60bd04c8f8912dba181d65cdce92e7d7b8a68b79533acca2e48ddc86d505c597",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "The calibration entry was saved at 08:20. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "It was filed in folder “Night-6”. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please preserve that reference when rewriting the note.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3d8d3009b9f1bf18f69a7c001e5c10049e948ecfae1e955f4dbdbcdcad0dace9",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 27
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp004",
+      "identity_key": "38f89493e3e80e885be62541710ad39eae33744f609a5eed02fcf862b3e4cb57",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. The calibration entry was saved at 08:20. It was filed in folder “Night-6”. Please preserve that reference when rewriting the note.",
+        "max_claims": 64
+      },
+      "payload_sha256": "b217865b04d77ab7d28da05ac52408018e19780a2b191e5c5f4c6d9bead9688b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 27
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp012",
+      "identity_key": "94a5722177e2ed6bb8b1d907b08295b75db5160060dcc498c2017b5603aec5bb",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its lock code is “073”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "In the inventory, cabinet S is listed immediately after R. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please keep the leading zero when copying the code and retain the cabinet references.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3e6623b2cb3efed46fc95203dc657cde4bd15da62f0032c915be0ec35f52663e",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 28
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp012",
+      "identity_key": "94580d61656c8c8b86126b084df82249bdfe59b3979ffef62f570e4d445646c4",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. Its lock code is “073”. In the inventory, cabinet S is listed immediately after R. Please keep the leading zero when copying the code and retain the cabinet references.",
+        "max_claims": 64
+      },
+      "payload_sha256": "997a7b3b586a7fd77bd9b5644bf5ca15701a58c7753c69a4a4284dde5c804cbf",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 28
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp012",
+      "identity_key": "aa899902fc18345003d35b11d6f74d40b9db338baea02f797e40f9650f61d2c3",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Cabinet R contains four wooden tokens, or equivalently, its wooden-token count is four. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Its lock code is “073”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "In the inventory, cabinet S is listed immediately after R. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please keep the leading zero when copying the code and retain the cabinet references.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3e6623b2cb3efed46fc95203dc657cde4bd15da62f0032c915be0ec35f52663e",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 28
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp015",
+      "identity_key": "d2dc7aced51ddca4afa7711a63e2ac7e176efcb599e31d828afc27d9308db539",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Would you like the handover note to begin with an open question? Please choose your preferred order for the fields. You could reserve one line for a comment and another for a signature, or try a free-text box instead. Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. Avoid guessing any missing entry.",
+        "max_claims": 64
+      },
+      "payload_sha256": "0a3608c6951072dd319e2c8693210565983b222d0c5637aa9fcb865349709d6e",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 29
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp015",
+      "identity_key": "82820bec3b4d4185a28762a5054dbe4bbae9cf580d18bec078f89824a39cd0ec",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you like the handover note to begin with an open question? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose your preferred order for the fields. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve one line for a comment and another for a signature, or try a free-text box instead. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Avoid guessing any missing entry.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "ae05748f86b1b40cab973262417166dc047e3080cb55a59ef5c04210eeb524a4",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 29
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp015",
+      "identity_key": "13f0e73e83070649cbe7ce0fa8403101b874974d6e35104b15c66e3d6414363e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Would you like the handover note to begin with an open question? ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Please choose your preferred order for the fields. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "You could reserve one line for a comment and another for a signature, or try a free-text box instead. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Ask the people who will use the note which version they prefer, and leave their responses blank until they answer. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Avoid guessing any missing entry.",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "ae05748f86b1b40cab973262417166dc047e3080cb55a59ef5c04210eeb524a4",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 29
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp004",
+      "identity_key": "54f2dc20114b563bbcfe977b78791544b998a9bdfad858c56009a9e71f383ed7",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "The calibration entry was saved at 08:20. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "It was filed in folder “Night-6”. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please preserve that reference when rewriting the note.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3d8d3009b9f1bf18f69a7c001e5c10049e948ecfae1e955f4dbdbcdcad0dace9",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 30
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp004",
+      "identity_key": "be6597209836d6021c720d917819496baa5ecd89f675b9153b8b580c117081cb",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. The calibration entry was saved at 08:20. It was filed in folder “Night-6”. Please preserve that reference when rewriting the note.",
+        "max_claims": 64
+      },
+      "payload_sha256": "b217865b04d77ab7d28da05ac52408018e19780a2b191e5c5f4c6d9bead9688b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 30
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp004",
+      "identity_key": "80ab61e4c8cd61cca1e9c9642043ae989342df76535896bd4cae4600155b24c1",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Projector L4's horizontal offset is -1.25 mm—that is, its horizontal offset is -1.25 mm. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "The calibration entry was saved at 08:20. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "It was filed in folder “Night-6”. ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Please preserve that reference when rewriting the note.",
+            "unit_id": "u0004"
+          }
+        ]
+      },
+      "payload_sha256": "3d8d3009b9f1bf18f69a7c001e5c10049e948ecfae1e955f4dbdbcdcad0dace9",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 30
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp002",
+      "identity_key": "e19bb208d4e1d34a874c49e26223b0520fb06967e5e7b838e427135d3f86a628",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "For the review sheet, keep the setup information beside the still image. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Do not round it while preparing the handover. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Keep the title plain and avoid adding a diagnosis to the filename.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "1b2cae2a348a9dd76c46f8192b9452ac2be39b6ff9526fc5624e0747b0baec6e",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 31
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp002",
+      "identity_key": "0897bc814fdb85c1251ddadc337a6edaa7f2d032698714bfebaaf1124edf4c23",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "For the review sheet, keep the setup information beside the still image. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "I recommend retaining the stated scale because the reference screen is 5 metres wide. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "Before signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. ",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Do not round it while preparing the handover. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "Keep the title plain and avoid adding a diagnosis to the filename.",
+            "unit_id": "u0008"
+          }
+        ]
+      },
+      "payload_sha256": "1b2cae2a348a9dd76c46f8192b9452ac2be39b6ff9526fc5624e0747b0baec6e",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 31
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp002",
+      "identity_key": "54c740dcffe69ec7a8993e5be7583a91168d4b5ddc2560264f8694a5d7e4cc68",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "For the review sheet, keep the setup information beside the still image. I recommend retaining the stated scale because the reference screen is 5 metres wide. Please leave room for a second reader to add a comment, and put any proposed changes in a separate box.\nBefore signing, copy the alignment entry carefully: the vertical correction is +0.40 degrees. Do not round it while preparing the handover. You might invite the next operator to inspect the source entry and initial the transcription, but leave that choice to the operator. If the wording feels crowded, shorten the instructions rather than abbreviating the numerical entry. Keep the title plain and avoid adding a diagnosis to the filename.",
+        "max_claims": 64
+      },
+      "payload_sha256": "77d68bcb493d7c6625a27b79ef37678e25ced280831b836fc066e911faa06877",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 31
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp014",
+      "identity_key": "0a9816fb5be496236da90e29522f2a5b9e98102f3519261f97d5ca4f07297a8a",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "请在包裹柜的登记表里把柜门编号单独列出。考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；请不要把示例文字留在正式填写区。\n本次取件登记时间为 17:08。建议先把时间转录完整，再检查是否需要补填签名或日期；尚待确认的项目，请以问题形式列在另一处。对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。等对方给出反馈后，再决定哪些栏目保留。最后，请逐项核对这份草稿里的人称、编号和引号；凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+        "max_claims": 64
+      },
+      "payload_sha256": "3c43349c12ee489aeb8672c89a877073b91b21698358b1e28d4b90d00e32dca8",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 32
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp014",
+      "identity_key": "999219beb5a6c625029ef8df36e91ef0fd0d257d12cd0bb252f522c853c5827e",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请在包裹柜的登记表里把柜门编号单独列出。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "请不要把示例文字留在正式填写区。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "本次取件登记时间为 17:08。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "建议先把时间转录完整，再检查是否需要补填签名或日期；",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "尚待确认的项目，请以问题形式列在另一处。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "等对方给出反馈后，再决定哪些栏目保留。",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "最后，请逐项核对这份草稿里的人称、编号和引号；",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "334dea1aa7b6e4ad692e6aee66a522a00f4595c58947e60669277b21fe5eeb85",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 32
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp014",
+      "identity_key": "13e1a9cdfdfcbdfef5ad1498b972745a49fe38632d1cf0efc274bfd69318db8a",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "请在包裹柜的登记表里把柜门编号单独列出。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "考虑到本次取件使用的是 12 号柜门，建议在交接单上照写这个编号，不要先改成你个人习惯的简称。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "你可以在旁边设置一个空白备注栏，让值班人自行决定是否补充说明；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "请不要把示例文字留在正式填写区。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "本次取件登记时间为 17:08。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "建议先把时间转录完整，再检查是否需要补填签名或日期；",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "尚待确认的项目，请以问题形式列在另一处。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "对于留言格式，你可以选短句，也可以选分点，只需在同一份草稿里保持一致。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "如果打算把登记表做成可重复使用的模板，请先另存空白副本，再请实际填写者试用。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "询问他们更偏好哪种字段顺序，允许他们提出自己的版本，不要把你的偏好写成必须遵守的规定。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "等对方给出反馈后，再决定哪些栏目保留。",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "最后，请逐项核对这份草稿里的人称、编号和引号；",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "凡是建议性文字，都尽量写成清楚的行动提示，让填写者自行判断是否采用，并给未解决的问题保留后续答复的位置。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "334dea1aa7b6e4ad692e6aee66a522a00f4595c58947e60669277b21fe5eeb85",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 32
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp001",
+      "identity_key": "e6fa50664dadde1b4b29b8c882d0b4939d6031d08be9fd2df03b87f48c137b49",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "天文馆试放记录可以这样整理：\n",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "试放持续了 14 分钟。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "建议在时间栏直接填写这个时长，再另留一格供值班人员签名；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "签名栏先保持空白，等待本人填写。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "最后，请检查引号、换行和编号是否统一。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "请把你的操作建议放在独立区域，用“建议”开头；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需解释栏目用途，可用简短问句提示填写者。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "bd47cafa544218185802d1a2d2c632fc9c25a5d81594d78b2820de03c170e5cf",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 33
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp001",
+      "identity_key": "2c98db2df42ac20e2dbb6a33a5674946e7d1ca94d716a7a4aa924a8820d247cc",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "天文馆试放记录可以这样整理：\n本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n试放持续了 14 分钟。建议在时间栏直接填写这个时长，再另留一格供值班人员签名；签名栏先保持空白，等待本人填写。若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n最后，请检查引号、换行和编号是否统一。遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。请把你的操作建议放在独立区域，用“建议”开头；如需解释栏目用途，可用简短问句提示填写者。整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+        "max_claims": 64
+      },
+      "payload_sha256": "c7c271c8293066bcfd1873ea8322eeb6b31b7f5de1e2771a8b4e2caa4f08a747",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 33
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp001",
+      "identity_key": "bc4cd2692f7075c9c326a9439bd680bd6d0d9cc6d9939f9b28a8133128d02b31",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "天文馆试放记录可以这样整理：\n",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次试放使用的文件名为“尘环”，投影仪的方位修正值为 -0.75°。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请把文件名称放在标题下，把带正负号的数值单列，抄录时保留小数点与单位，不要为了版面整齐而省略符号。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "试放持续了 14 分钟。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "建议在时间栏直接填写这个时长，再另留一格供值班人员签名；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "签名栏先保持空白，等待本人填写。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "若要做一页交接卡，可以先列出需要交接的项目，再按现场阅读顺序安排栏目。",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "请把“待复查”作为可选状态，让接班人自己选择，不要替接班人预填结论。\n",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "最后，请检查引号、换行和编号是否统一。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "遇到看不清的手写部分，先圈出原位置并请求确认，不要猜写内容。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "请把你的操作建议放在独立区域，用“建议”开头；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "如需解释栏目用途，可用简短问句提示填写者。",
+            "unit_id": "u0012"
+          },
+          {
+            "text": "整理完成后再逐项对照原记录，保留每一处更正的签注位置，并请负责交接的人决定是否需要附上原始记录副本。",
+            "unit_id": "u0013"
+          }
+        ]
+      },
+      "payload_sha256": "bd47cafa544218185802d1a2d2c632fc9c25a5d81594d78b2820de03c170e5cf",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 33
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp010",
+      "identity_key": "132df2d34f31f8dca5715da6c4837d396f2ecd83e811817294cd38acc0fcbb4a",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Please keep the original wording on the panel, since the final clue is printed in violet. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "For the margin note, use the recorded route order: the mirror room follows the knot table. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Avoid inventing a reason for that order; ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "you could ask the designer for a separate explanation if one is needed.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Two other entries belong on the handover card. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "The brass key weighs 31.6 grams. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "The demonstration session begins at 13:40. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "I would place those entries on separate lines and leave a blank space for comments. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Before sharing a draft, ask a reader to circle anything they would like clarified. ",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+            "unit_id": "u0010"
+          }
+        ]
+      },
+      "payload_sha256": "57debada97aaa00638734838e9e6662bdff52a5efbeac08299f2ba6635a5abe0",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 34
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp010",
+      "identity_key": "47009ab433a57d097956427c80fe2e0e03342f99541a4bbbc862394fcbc547af",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "Please keep the original wording on the panel, since the final clue is printed in violet. For the margin note, use the recorded route order: the mirror room follows the knot table. Avoid inventing a reason for that order; you could ask the designer for a separate explanation if one is needed.\nTwo other entries belong on the handover card. The brass key weighs 31.6 grams. The demonstration session begins at 13:40. I would place those entries on separate lines and leave a blank space for comments. Before sharing a draft, ask a reader to circle anything they would like clarified. Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+        "max_claims": 64
+      },
+      "payload_sha256": "c97e780ddd9dd6538bd85395e65e9d2ca93fcaf8fff8cbbbe3ab1ae69cf30c8c",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 34
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp010",
+      "identity_key": "2730e2305b29e4e82e04fbfde506b9d7c79ade007fa5a4339557cbc6c4f4973d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "Please keep the original wording on the panel, since the final clue is printed in violet. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "For the margin note, use the recorded route order: the mirror room follows the knot table. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Avoid inventing a reason for that order; ",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "you could ask the designer for a separate explanation if one is needed.\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "Two other entries belong on the handover card. ",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "The brass key weighs 31.6 grams. ",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "The demonstration session begins at 13:40. ",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "I would place those entries on separate lines and leave a blank space for comments. ",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "Before sharing a draft, ask a reader to circle anything they would like clarified. ",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "Do not prefill their response, and keep any suggested wording in a visibly separate column until you decide whether to adopt it.",
+            "unit_id": "u0010"
+          }
+        ]
+      },
+      "payload_sha256": "57debada97aaa00638734838e9e6662bdff52a5efbeac08299f2ba6635a5abe0",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 34
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 0,
+      "case_id": "cp009",
+      "identity_key": "c7eea5cf552f20b4d837040bf733ebcd8555a2b8f2a4e0aa90ee9a3dd4f81396",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请把展项名称完整保留，站点是否需要分行展示则由你选择。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "若要配一张示意图，可以先画空白框，让负责布展的人填写位置；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要根据名称猜测路线。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "入口展示牌的编号为 P-17。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+            "unit_id": "u0012"
+          }
+        ]
+      },
+      "payload_sha256": "b6702bb6567a2a03357ba14de4618ed21b9ad3b9e039efdc4a9c67cc39cef6ea",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 35
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 1,
+      "case_id": "cp009",
+      "identity_key": "b3c2789e8b1a3dbcfa5d073e142a295aad83b14a47f0a000295fd2e69d21d80f",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。请把展项名称完整保留，站点是否需要分行展示则由你选择。若要配一张示意图，可以先画空白框，让负责布展的人填写位置；不要根据名称猜测路线。\n入口展示牌的编号为 P-17。请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+        "max_claims": 64
+      },
+      "payload_sha256": "8b94781313b4c066d7250ee5d619e03cfe574e4deb19f37fff5481e72ea9205a",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 35
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 2,
+      "case_id": "cp009",
+      "identity_key": "43e9274fc6eaf6601fd72e8a40e48b3e7faa78c54352a411b814b3cf06495817",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "整理解谜展馆的值班说明时，可以先用一句话交代展项：展项“折返街”设置了 6 个解谜站。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "请把展项名称完整保留，站点是否需要分行展示则由你选择。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "若要配一张示意图，可以先画空白框，让负责布展的人填写位置；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "不要根据名称猜测路线。\n",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "入口展示牌的编号为 P-17。",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "请在说明的页眉或页脚选一个位置记录这个编号，并请审核人决定是否需要在复印件上重复显示。",
+            "unit_id": "u0006"
+          },
+          {
+            "text": "对于暂时没有答复的问题，请另列一个询问清单，逐条标出希望谁来回答。\n",
+            "unit_id": "u0007"
+          },
+          {
+            "text": "你也可以准备两个排版草稿，一份偏向逐条阅读，另一份偏向现场快速翻看，再请值班同事选择。",
+            "unit_id": "u0008"
+          },
+          {
+            "text": "注意区分操作建议与展项资料，想修改某句话时，先在旁边写出拟议版本，不要直接覆盖原句。",
+            "unit_id": "u0009"
+          },
+          {
+            "text": "至于纸张颜色、标题大小和留白宽度，请按使用者的偏好试排，不必先给它们贴上优劣标签。",
+            "unit_id": "u0010"
+          },
+          {
+            "text": "完成后，请再核对名称和编号，把仍需确认的内容留在问题栏，等待相应负责人处理；",
+            "unit_id": "u0011"
+          },
+          {
+            "text": "若准备增加一段欢迎词，请先作为备选文案附在末尾。",
+            "unit_id": "u0012"
+          }
+        ]
+      },
+      "payload_sha256": "b6702bb6567a2a03357ba14de4618ed21b9ad3b9e039efdc4a9c67cc39cef6ea",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 35
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 0,
+      "case_id": "cp016",
+      "identity_key": "9ab67fb76b8b497b8b9f93d57298e94aab2b4e747e6795304af50bd6663c209f",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "B 柜的空闲格口为 7 个。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "值班日志把 A 柜标为“已巡检”；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "它的巡检时间记为 11:25。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请将两台柜的记录分开填写。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "20c612f42af7e9dd8f4c8c0ec125de6fa91f0385891dcabbeca36255b2586c46",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 36
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 1,
+      "case_id": "cp016",
+      "identity_key": "89b30f1b9eb33ce17bb46ad613cc7c20523c1731ac4412c328c805930c6044cd",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "B 柜的空闲格口为 7 个。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "值班日志把 A 柜标为“已巡检”；",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "它的巡检时间记为 11:25。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "请将两台柜的记录分开填写。",
+            "unit_id": "u0005"
+          }
+        ]
+      },
+      "payload_sha256": "20c612f42af7e9dd8f4c8c0ec125de6fa91f0385891dcabbeca36255b2586c46",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 36
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 2,
+      "case_id": "cp016",
+      "identity_key": "284b980e81f030896dce08e3e10dd2496f129ff5bf58ae8b3ea5a54275d9b6bb",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "A 柜的空闲格口为 9 个，也就是说，A 柜的空闲格口为 9 个。B 柜的空闲格口为 7 个。值班日志把 A 柜标为“已巡检”；它的巡检时间记为 11:25。请将两台柜的记录分开填写。",
+        "max_claims": 64
+      },
+      "payload_sha256": "ad6c995cf6bf3bf474a06c867a4c0229a0e3c11c3a26757e47a0df2833e5cf96",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 36
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp020",
+      "identity_key": "5bdeb3298b70042e85f200e55b756b9bc69cc941b726ce8253cd74a9ffb3408d",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+        "max_claims": 64
+      },
+      "payload_sha256": "43260fc048b029711d7f4026f9978991cd043f4dc98c94acbf425ccae1167ada",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 37
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp020",
+      "identity_key": "7c4e6836921ffeb34896bdc52497a2c3de3d33dc5f1d0d68cae923e5db786203",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "72376ee3345221c9e27136fbcb63c3241ac7e6eef2e16966527fa692bc6b95aa",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 37
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp020",
+      "identity_key": "124bc1a024d4e09e9e7a8b1d7d622c093ad4427ef2f5498d2ab0fa19e6a3bdec",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "The catalogue rule assigns drawer M to specimens carrying the tag “layered”. ",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "Specimen V-2 carries that tag—in other words, V-2 carries the tag “layered”. ",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "Please preserve the condition when summarizing the rule, and do not write an unobserved movement as a completed event.",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "72376ee3345221c9e27136fbcb63c3241ac7e6eef2e16966527fa692bc6b95aa",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 37
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp008",
+      "identity_key": "98d9869c2d8641f616f149217325df4c4d1eedabf6176bb6bdaa9947135ca584",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。本次红色试件标记为“薄片”，也就是它带有“薄片”标记。请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+        "max_claims": 64
+      },
+      "payload_sha256": "8a80a2cbfda20174f78bfbaf76c650b101fb54b8215a87540b90276a843bbe15",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 0,
+      "task_index": 38
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp008",
+      "identity_key": "7fb9a38f25bff4216f28573ea343cdb839fcc2e134b0389be9b1e9d65274d336",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次红色试件标记为“薄片”，也就是它带有“薄片”标记。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "986902247dd190412dd8ad835df2f4bc3acb93cb66162ce3542cb1e8e91c3f5d",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 0,
+      "task_index": 38
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp008",
+      "identity_key": "5c915e0fb39f81883154d4d2a1137ae428e77cbbec0ad0c4f72f4722989a5604",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "烧制卡明确写着：标记为“薄片”的试件采用 18 分钟保温，这一条是卡上的适用规则。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "本次红色试件标记为“薄片”，也就是它带有“薄片”标记。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请在整理时保留规则的适用条件，并把试件标记抄在对应栏里。",
+            "unit_id": "u0003"
+          }
+        ]
+      },
+      "payload_sha256": "986902247dd190412dd8ad835df2f4bc3acb93cb66162ce3542cb1e8e91c3f5d",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 0,
+      "task_index": 38
+    },
+    {
+      "arm": "legacy",
+      "backend_order_index": 0,
+      "case_id": "cp017",
+      "identity_key": "2f767e9360d27ec16db0549e1c357b46732b95d0d8c22d4d8ecadc60f372f1c9",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "generated_answer": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。这块标本的质量为 126.8 克，保存盒为 5 号盒。请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n目录给它标注的采集日期是 2024 年 4 月 9 日。你可以在旁边留出复核栏，请整理人员决定何时签字；如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+        "max_claims": 64
+      },
+      "payload_sha256": "d133731c1dd2c59a57aebff7eca1d1eecb5a79f152cbd00db6359f0da8a6f79b",
+      "probe": "natural",
+      "prompt_sha256": "56fa50a51622cac0fce56f2ea3da6e5a1dbe82f046a8c7fb52c1f6b056c31167",
+      "repetition": 1,
+      "task_index": 39
+    },
+    {
+      "arm": "ledger_text",
+      "backend_order_index": 1,
+      "case_id": "cp017",
+      "identity_key": "3dd6232b2a0ec2c0748bb7af405939fdedadc22ffebdd911b188b810f790359c",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "这块标本的质量为 126.8 克，保存盒为 5 号盒。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "目录给它标注的采集日期是 2024 年 4 月 9 日。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "你可以在旁边留出复核栏，请整理人员决定何时签字；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+            "unit_id": "u0006"
+          }
+        ]
+      },
+      "payload_sha256": "f69be5ab07872f17c771fd3cbf9131f0f8da89a29c83c0429de5d43643050507",
+      "probe": "natural",
+      "prompt_sha256": "466911d73ca23652dc4da74a0de6db342f15eb504e27efaf93426d5554f08df0",
+      "repetition": 1,
+      "task_index": 39
+    },
+    {
+      "arm": "ledger_id",
+      "backend_order_index": 2,
+      "case_id": "cp017",
+      "identity_key": "1bb2a92723821fd5fd0f0cdc1824bf7651c1fd912a7cc250e175295a1c936e12",
+      "payload": {
+        "boundary_context": {
+          "after": "",
+          "before": ""
+        },
+        "max_claims": 64,
+        "source_units": [
+          {
+            "text": "标本目录中，编号 G-42 对应的采集点名称为“霜桥坡”。",
+            "unit_id": "u0001"
+          },
+          {
+            "text": "这块标本的质量为 126.8 克，保存盒为 5 号盒。",
+            "unit_id": "u0002"
+          },
+          {
+            "text": "请将采集点、质量和保存位置分列，抄写时保留小数位，不要自行补入岩性判断。\n",
+            "unit_id": "u0003"
+          },
+          {
+            "text": "目录给它标注的采集日期是 2024 年 4 月 9 日。",
+            "unit_id": "u0004"
+          },
+          {
+            "text": "你可以在旁边留出复核栏，请整理人员决定何时签字；",
+            "unit_id": "u0005"
+          },
+          {
+            "text": "如果想做展示标签，请先另写草稿，再决定哪些目录信息需要出现在标签上。",
+            "unit_id": "u0006"
+          }
+        ]
+      },
+      "payload_sha256": "f69be5ab07872f17c771fd3cbf9131f0f8da89a29c83c0429de5d43643050507",
+      "probe": "natural",
+      "prompt_sha256": "4003e48e7471d467a711db580dd5b1a33b7d0b608b5f5bb4e60a928c08af708a",
+      "repetition": 1,
+      "task_index": 39
+    }
+  ],
+  "schema_version": "coverage-protocol-initial-stage-pilot-v1"
+}

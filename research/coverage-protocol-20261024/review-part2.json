@@ -1,0 +1,1791 @@
+{
+  "reviewer_note": "Independent-role AI review of blind-part2 only under its frozen guidance and PLAN. Every displayed claim and source was read. No private arm map, original journal, cost, prompt or experiment summary was inspected. Fact labels are provisional AI targets, not author adjudication. Source-only antecedent omission is allowed under the original contract; content selection, standalone wording, provenance and technical completion remain separate. No external model calls were made.",
+  "reviews": [
+    {
+      "review_id": "r-98188e811506e2412be959dc",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-4f222fadb4044f3d42ba6bb7",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 keeps its rather than explicitly naming specimen N-8. The full answer uniquely resolves it, so content and source support remain intact; standalone wording fails."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 keeps its rather than explicitly naming specimen N-8. The full answer uniquely resolves it, so content and source support remain intact; standalone wording fails."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b43fbe760f6375231f931a54",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-30781f66fef991ff27dfe369",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 uses the definite anaphor the specimen without naming N-8. Its intended referent is clear from the full answer, but this individual claim does not identify the named specimen as required by the frozen standalone axis."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 uses the definite anaphor the specimen without naming N-8. Its intended referent is clear from the full answer, but this individual claim does not identify the named specimen as required by the frozen standalone axis."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-de1e4e419df2fc9d3eb85b87",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Raw-only diagnostic: the readable claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Technical invalidity prevents standalone, provenance, selection-pass or strict-pass credit."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Raw-only diagnostic: the readable claim preserves this target: 本次取件登记时间为 17:08。 Technical invalidity prevents standalone, provenance, selection-pass or strict-pass credit."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": null,
+      "strict_fidelity_pass": null,
+      "uncertainty": "Technical-invalid but readable raw claims; content-only diagnostic, never completed or strict-pass credit."
+    },
+    {
+      "review_id": "r-2857bb626fa843f4a3752833",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-10e9dba6d68ad885fde36015",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The locker bank at Alder Court has 28 compartments. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The Alder Court locker bank's service panel is on the east side. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The last recorded reset occurred at 06:45. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-bd6be292364180ae6b373054",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-be9f6da1008c050446a21b2a",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件登记时间为 17:08。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a8a455af2265690d6f5cd7cb",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The reference screen is 5 metres wide, a premise embedded in a recommendation. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The vertical correction is positive 0.40 degrees. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-95854e483f1b967afb0d5cec",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-48a88ac2099ab0b68501e568",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件登记时间为 17:08。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-3f52c31878b90df689ceb261",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件登记时间为 17:08。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-dd1f96ded0c629d44eb5ce4d",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-68761967c219c7aecaf4bec8",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 uses the definite anaphor the specimen without naming N-8. The original answer resolves the reference; the individual claim is not independently explicit about that named subject."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 uses the definite anaphor the specimen without naming N-8. The original answer resolves the reference; the individual claim is not independently explicit about that named subject."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-4be66c0c8985171731babad2",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [],
+          "content_retained": null,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Extraction is unreadable. No target content, standalone wording or source support is adjudicated; this is technical unknown, not an omission finding."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [],
+          "content_retained": null,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Extraction is unreadable. No target content, standalone wording or source support is adjudicated; this is technical unknown, not an omission finding."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [],
+          "content_retained": null,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Extraction is unreadable. No target content, standalone wording or source support is adjudicated; this is technical unknown, not an omission finding."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": null,
+      "strict_fidelity_pass": null,
+      "uncertainty": "Technical-invalid unreadable extraction: all target judgments remain null and empty claim_issues means unscored, not zero semantic errors."
+    },
+    {
+      "review_id": "r-58979b54af8d52caffff4808",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-7de6d86c791f90c1fa6b5262",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The reference screen is 5 metres wide, a premise embedded in a recommendation. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The vertical correction is positive 0.40 degrees. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 2,
+          "kind": "non_factual_as_claim",
+          "reason": "The source instructs the writer to shorten instructions rather than abbreviate an entry if wording feels crowded. The output recasts that editorial preference as a claim of comparative preferability; it contains no separately asserted factual premise."
+        }
+      ],
+      "selection_pass": false,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-da00c53a6f3626533961c6cf",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-7451d0eaf696567fe4136f8f",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-999b2c24df2303ae35134bf1",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件登记时间为 17:08。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a04f7e4573612530997b0059",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-c079f9bfcde0c7439cc97f1d",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-0ff407ef2dcc275c8d2ccd15",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0,
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "Claims 0 and 1 faithfully repeat one underlying fact: Cabinet R contains four wooden tokens. Each is supported and explicit. Count the target once; optional non-merging is redundancy, not an invented event or a false positive."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R's lock code is 073. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The inventory ordering of cabinet S immediately after R is preserved. R is the explicit original identifier for cabinet R, not an unresolved pronoun. No physical adjacency is asserted, and the attached source states the ordering."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": "Faithful same-sentence duplicate extraction is recorded as redundancy only, as fixed before inference."
+    },
+    {
+      "review_id": "r-0b4d440566429f27e51de91e",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-5b08ed346b1618cfe153f596",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b437b044b134f5bc3733afde",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 3,
+          "kind": "non_factual_as_claim",
+          "reason": "The source suggests asking a colleague to compare a draft label with a catalogue before printing. The output turns the suggested comparison into a claim that the label can be compared; this is advice, not an independently asserted factual premise."
+        }
+      ],
+      "selection_pass": false,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-9d00e9f232a14d7e6d56d49f",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R's lock code is 073. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: In the inventory, cabinet S is listed immediately after cabinet R. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-3e799eb6b784d7c432ef1df3",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-267bd237403a9e826e2e9238",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 says Its lock code without identifying Cabinet R. Context restores the content, but the individual claim lacks its explicit antecedent."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The inventory ordering of cabinet S immediately after R is preserved. R is the explicit original identifier for cabinet R, not an unresolved pronoun. No physical adjacency is asserted, and the attached source states the ordering."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 says Its lock code without identifying Cabinet R. Context restores the content, but the individual claim lacks its explicit antecedent."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-23812e6e05fd9d8c1c6e6d38",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-64e74924809c36c8c8488dd4",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Raw-only diagnostic: the readable claim preserves this target: The reference screen is 5 metres wide, a premise embedded in a recommendation. Technical invalidity prevents standalone, provenance, selection-pass or strict-pass credit."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Raw-only diagnostic: the readable claim preserves this target: The vertical correction is positive 0.40 degrees. Technical invalidity prevents standalone, provenance, selection-pass or strict-pass credit."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": null,
+      "strict_fidelity_pass": null,
+      "uncertainty": "Technical-invalid but readable raw claims; content-only diagnostic, never completed or strict-pass credit."
+    },
+    {
+      "review_id": "r-af0fc50bbebbd1f7d3d9861f",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-41ad1c2eaf09c920dd8a2ce4",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The reference screen is 5 metres wide, a premise embedded in a recommendation. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The vertical correction is positive 0.40 degrees. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f9511fd886753949a11dd196",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [],
+          "content_retained": null,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Extraction is unreadable. No target content, standalone wording or source support is adjudicated; this is technical unknown, not an omission finding."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [],
+          "content_retained": null,
+          "standalone_retained": null,
+          "source_supported": null,
+          "reason": "Extraction is unreadable. No target content, standalone wording or source support is adjudicated; this is technical unknown, not an omission finding."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": null,
+      "strict_fidelity_pass": null,
+      "uncertainty": "Technical-invalid unreadable extraction: all target judgments remain null and empty claim_issues means unscored, not zero semantic errors."
+    },
+    {
+      "review_id": "r-41f68dc42270e8755241e4f4",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-0ef9af66328f7e0b5e64bfdc",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-274ad00680c7b0f4a1f4ec95",
+      "targets": [],
+      "claim_issues": [
+        {
+          "claim_index": 0,
+          "kind": "non_factual_as_claim",
+          "reason": "Diagnostic raw output turns advice to reserve a blank observations section into a claim. No factual premise is separately asserted."
+        },
+        {
+          "claim_index": 1,
+          "kind": "non_factual_as_claim",
+          "reason": "Diagnostic raw output turns advice to ask reviewers for comments into a claim. The modal could preserves an option but does not make the recommendation a factual assertion."
+        }
+      ],
+      "selection_pass": null,
+      "strict_fidelity_pass": null,
+      "uncertainty": "Technical-invalid but readable raw claims; content-only diagnostic, never completed or strict-pass credit."
+    },
+    {
+      "review_id": "r-c0414bd82c323f83c084cd3b",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b494e43e6d3b822bb5ff3d0a",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-6dddcd39fc1ecedd30935d8b",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-4b7567dcc06703f594b45695",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0,
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "Claims 0 and 1 faithfully repeat one underlying fact: Cabinet R contains four wooden tokens. Each is supported and explicit. Count the target once; optional non-merging is redundancy, not an invented event or a false positive."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R's lock code is 073. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: In the inventory, cabinet S is listed immediately after cabinet R. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": "Faithful same-sentence duplicate extraction is recorded as redundancy only, as fixed before inference."
+    },
+    {
+      "review_id": "r-fc100f5598d6cb568f8db7e5",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-32f4437487e2a5d28b414e4c",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-4d863762d8746a36c86628c7",
+      "targets": [],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-e0df531d39ba4bac91422c61",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-6282a567294a27f65b98b462",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen N-8 has a recorded mass of 84.2 grams, embedded as a recommendation's premise. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue lists N-8's collection depth as negative 3.6 metres relative to the local datum. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Drawer Q is N-8's listed storage location. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b8cb6a18d2753caa1eca0cff",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": "The second claim has an additional advisory source fragment, but the other attached fragment directly supplies the full asserted identifier. This extra association adds no claim and does not remove support; no source-mismatch failure is assigned."
+    },
+    {
+      "review_id": "r-4efe7dff0f7536f55a803d33",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-9a845743680cb116ef8b975e",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R contains four wooden tokens; the equivalent count in the same sentence is redundant. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R's lock code is 073. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The inventory ordering of cabinet S immediately after R is preserved. R is the explicit original identifier for cabinet R, not an unresolved pronoun. No physical adjacency is asserted, and the attached source states the ordering."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-446dea3993ba71beca3f78c3",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件使用 12 号柜门，该事实嵌入建议理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次取件登记时间为 17:08。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 2,
+          "kind": "non_factual_as_claim",
+          "reason": "This claim is the original conditional instruction to save a blank template and ask users to try it. It is a procedure, not a factual conditional assertion about how a system behaves."
+        }
+      ],
+      "selection_pass": false,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-8738b64c7640e65ede20cdb0",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The locker bank at Alder Court has 28 compartments. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 says Its service panel without identifying the locker bank at Alder Court. The full answer supplies that antecedent; the individual claim does not."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The last recorded reset occurred at 06:45. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 says Its service panel without identifying the locker bank at Alder Court. The full answer supplies that antecedent; the individual claim does not."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b5898d1c378e7ea309ce295a",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The locker bank at Alder Court has 28 compartments. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": false,
+          "source_supported": true,
+          "reason": "Claim 1 says Its service panel without identifying the locker bank at Alder Court. The full answer supplies that antecedent; the individual claim does not."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The last recorded reset occurred at 06:45. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_reference",
+          "reason": "Claim 1 says Its service panel without identifying the locker bank at Alder Court. The full answer supplies that antecedent; the individual claim does not."
+        }
+      ],
+      "selection_pass": true,
+      "strict_fidelity_pass": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-6e5a80760a153c05a8912546",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 展项折返街设置了 6 个解谜站。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 入口展示牌编号为 P-17。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-44edb200466b1b893956a7b3",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The locker bank at Alder Court has 28 compartments. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The Alder Court locker bank's service panel is on the east side. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The last recorded reset occurred at 06:45. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-03c51b7eb8aac4a707c85528",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The locker bank at Alder Court has 28 compartments. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The Alder Court locker bank's service panel is on the east side. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The last recorded reset occurred at 06:45. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a84134c657b2c0cd2cf4c463",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The reference screen is 5 metres wide, a premise embedded in a recommendation. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The vertical correction is positive 0.40 degrees. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-66227c717937a3d2567c04a9",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次烧制的批次名为鹭羽，此事实嵌入建议的理由。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 空匣钵的质量为 2.35 千克。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: 本次记录的保温时长为 42 分钟，此事实与建议在同一句中。 Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-6f0057313c86528dff883b64",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: The catalogue rule assigns drawer M to specimens tagged layered; this is a conditional assignment rule. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Specimen V-2 carries the layered tag; same-sentence restatement resolves that tag and adds no fact. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-87fce451f172dbc36ee16754",
+      "targets": [
+        {
+          "fact_id": "f1",
+          "claim_indices": [
+            0,
+            1
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "Claims 0 and 1 faithfully repeat one underlying fact: Cabinet R contains four wooden tokens. Each is supported and explicit. Count the target once; optional non-merging is redundancy, not an invented event or a false positive."
+        },
+        {
+          "fact_id": "f2",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The mapped claim preserves this target: Cabinet R's lock code is 073. Its attached source contains the relevant predicate, quantities and scope; any explicit shared antecedent is uniquely available in the original answer under the frozen allowance."
+        },
+        {
+          "fact_id": "f3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone_retained": true,
+          "source_supported": true,
+          "reason": "The inventory ordering of cabinet S immediately after R is preserved. R is the explicit original identifier for cabinet R, not an unresolved pronoun. No physical adjacency is asserted, and the attached source states the ordering."
+        }
+      ],
+      "claim_issues": [],
+      "selection_pass": true,
+      "strict_fidelity_pass": true,
+      "uncertainty": "Faithful same-sentence duplicate extraction is recorded as redundancy only, as fixed before inference."
+    }
+  ]
+}

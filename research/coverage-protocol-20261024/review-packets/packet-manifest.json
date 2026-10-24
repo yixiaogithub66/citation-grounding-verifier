@@ -1,0 +1,65 @@
+{
+  "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+  "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+  "packets": {
+    "blind-all.json": {
+      "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+      "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+      "readable_diagnostic_records": 7,
+      "record_count": 120,
+      "records_sha256_canonical": "553bf17eb382dadd4078824044ac28cd6f2e6d88e333b82e47c46e50d45d4b55",
+      "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+      "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+      "sha256": "3913e81483a059bc1560ec163cac5f42a0004ee20528ccdcfd412609e0e5f9ae",
+      "target_mapping_slots": 264,
+      "technical_status_counts": {
+        "error": 10,
+        "valid": 110
+      },
+      "unique_answer_count": 20,
+      "unique_review_ids": 120,
+      "unreadable_records": 3
+    },
+    "blind-part1.json": {
+      "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+      "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+      "readable_diagnostic_records": 4,
+      "record_count": 60,
+      "records_sha256_canonical": "016f87a50d171b8722750f774c2d91e4469a928d5aa0c13a0c31365ee169ed4c",
+      "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+      "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+      "sha256": "ce656a55ce6e0e5cd878dd115982580ebf69357084d8ef15c8811bc9e955d2b0",
+      "target_mapping_slots": 144,
+      "technical_status_counts": {
+        "error": 5,
+        "valid": 55
+      },
+      "unique_answer_count": 10,
+      "unique_review_ids": 60,
+      "unreadable_records": 1
+    },
+    "blind-part2.json": {
+      "freeze_sha256": "75bbf3a2e4d20ec055a9ad9a098bd8f292f563c0db33e28ba28dc66c21e22fd8",
+      "frozen_cases_sha256": "6bb16beb5bd4db34bfef10a564d64aa51379bd34adb6f166f788d6b9580e5c2e",
+      "readable_diagnostic_records": 3,
+      "record_count": 60,
+      "records_sha256_canonical": "4246ecca5f4301d4dc3bd7a4a530be95a84ccd8aabab1bfe24de680aaa5fce0b",
+      "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+      "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+      "sha256": "613026fee45f50f4492b578ed18aa30a4a1a5abc3b3b1a251a6a27bded9f2520",
+      "target_mapping_slots": 120,
+      "technical_status_counts": {
+        "error": 5,
+        "valid": 55
+      },
+      "unique_answer_count": 10,
+      "unique_review_ids": 60,
+      "unreadable_records": 2
+    }
+  },
+  "private_key_sha256": "0b2b6834916f9c90a88e0133129d4e59b9b268f415ca004b8d6e8cb4e543e473",
+  "qualification": "AI review material only; technical-invalid content diagnostics are never completed semantic results.",
+  "responses_sha256": "3ecbd01f0816430205289a64ebcbd168ac65b19147a66bcb8a06e29238888c9e",
+  "run_complete_sha256": "e9ce32cf788cefb7beefa976688eb7e1962036d1f94931edca6b12b8006ecd33",
+  "schema_version": "coverage-protocol-blind-review-v1"
+}
