@@ -16,6 +16,7 @@
 | --- | --- |
 | Release checkout full suite | 433 passed |
 | Two separate full suites in a clean Git-index export | 433 passed each |
+| Final export outside any discoverable Git repository | 433 passed |
 | Corrected redirect test | 100/100 passed; see [fixture diagnosis](redirect.md) |
 | Three dataset validators | 46 / 3 / 12 cases valid |
 | Current and historical baseline smoke | 18/18 complete each, zero model calls |
@@ -25,6 +26,8 @@
 | v4 inference, prompt, configuration bytes | Unchanged from the published evaluation revision |
 
 The clean export contained no `.env`. HTTP startup used a synthetic credential and only requests that do not invoke a model. The tests use mocks and local servers; no paid inference or new benchmark experiment was run. The first pruning attempt exposed two test-file dependencies; their original bytes were restored before the three successful full-suite runs.
+
+The first remote shallow-checkout CI then exposed a separate test-only `git show` dependency. Earlier local exports were nested beneath the worktree and could still find its Git history. A single byte-preserved, SHA-bound historical test fixture replaces that dependency; the behavioral assertions remain. The final external export was explicitly checked to have no discoverable Git repository and all 433 tests passed. CI now lets all matrix jobs finish so one platform's failure cannot hide the others.
 
 [Machine-readable validation](validation.json) binds the checked source bytes. [Curation summary](curation.json) records the archive revision and retained evidence hash. Remote CI checks the final committed branch independently on Windows/Linux and Python 3.11/3.12.
 

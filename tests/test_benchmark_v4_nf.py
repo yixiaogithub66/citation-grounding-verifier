@@ -2,7 +2,6 @@
 import hashlib
 import json
 from pathlib import Path
-import subprocess
 import sys
 from tempfile import TemporaryDirectory
 import unittest
@@ -123,13 +122,25 @@ class NFOccurrenceRunnerTests(unittest.TestCase):
             factory.assert_not_called()
 
     def test_old_and_current_module_globals_are_isolated(self):
+        fixtures = Path(__file__).resolve().parent / "fixtures"
+        proof = json.loads((fixtures / "v4_nf_pre_fix.provenance.json").read_text(encoding="utf-8"))
+        old_source = (fixtures / "v4_nf_pre_fix.py").read_bytes()
+        expected_sha256 = "ea9354a600807f671097a6961c9a854103e41d1751950314279c792c0dcc45aa"
+        self.assertEqual(proof["source_commit"], "1106c2b536b19b311c57e006b7554a5d6d64c2af")
+        self.assertTrue(proof["source_commit"].startswith(runner.PRE_COMMIT))
+        self.assertEqual(proof["source_path"], "grounding/verifiers_v4.py")
+        self.assertEqual(proof["sha256"], expected_sha256)
+        self.assertEqual(hashlib.sha256(old_source).hexdigest(), expected_sha256)
+        self.assertEqual(len(old_source), proof["size_bytes"])
         old_path = self.root / "pre_fix/grounding/verifiers_v4.py"
         old_path.parent.mkdir(parents=True)
-        old_path.write_bytes(subprocess.check_output(
-            ["git", "show", runner.PRE_COMMIT + ":grounding/verifiers_v4.py"], cwd=runner.ROOT))
-        build = runner.frozen_factory(self.root)
-        old = build("pre_fix", self.settings, self.config)
-        new = build("post_fix", self.settings, self.config)
+        old_path.write_bytes(old_source)
+        # This regression must also run from an exported tree or shallow clone.
+        # Loading the exact historical fixture cannot depend on Git availability.
+        with patch.object(runner.subprocess, "check_output", side_effect=AssertionError("Git is not available to this test")):
+            build = runner.frozen_factory(self.root)
+            old = build("pre_fix", self.settings, self.config)
+            new = build("post_fix", self.settings, self.config)
         before = old._decompose.__func__.__globals__["extract_claims"]
         after = new._decompose.__func__.__globals__["extract_claims"]
         self.assertIsNot(before, after)
