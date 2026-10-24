@@ -1,0 +1,675 @@
+{
+  "schema_version": "bidirectional-selection-cases-v1",
+  "provenance": {
+    "author": "AI draft by isolated case-author subagent",
+    "author_final_review": false,
+    "created_local_date": "2026-10-24",
+    "source": "New fictional materials written from task contract, without reading benchmark texts, previous case bodies, candidate prompt or model outputs.",
+    "purpose": "Supplemental selection-fidelity experiment; not natural error prevalence or author-approved gold.",
+    "controlled_seeds": "Twelve deliberately injected drafts: four omission, four spurious, four clean. Expected fields are evaluation-only and must never enter inference."
+  },
+  "cases": [
+    {
+      "id": "sel-01",
+      "family": "nursery",
+      "language": "zh",
+      "generated_answer": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。育苗站的周报称，3号苗床每晚22:30停止加热。",
+      "expected_facts": [
+        {
+          "id": "sel-01-f1",
+          "description": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "source_quote": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "required_semantic_elements": [
+            "主体为榆湾育苗站的雾化泵",
+            "低于42%的棚内湿度是启动的必要条件；不是充要条件"
+          ]
+        },
+        {
+          "id": "sel-01-f2",
+          "description": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "source_quote": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "required_semantic_elements": [
+            "保留育苗站周报这一归属",
+            "3号苗床",
+            "每晚22:30停止加热"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "湿度低于42%就一定启动雾化泵",
+        "所有苗床都在22:30停止加热"
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-02",
+      "family": "nursery",
+      "language": "en",
+      "generated_answer": "Because the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened, let that interval finish before choosing your next inspection step. Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later. Also, since the cabinet's drain sensor is disabled throughout transport mode, remember to inspect the drain by hand before loading it for a move. Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+      "expected_facts": [
+        {
+          "id": "sel-02-f1",
+          "description": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+          "source_quote": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened",
+          "required_semantic_elements": [
+            "Larchmere germination cabinet",
+            "vent opens for 11 minutes",
+            "whenever the lid is reopened"
+          ]
+        },
+        {
+          "id": "sel-02-f2",
+          "description": "The Larchmere germination cabinet's drain sensor is disabled throughout transport mode.",
+          "source_quote": "the cabinet's drain sensor is disabled throughout transport mode",
+          "required_semantic_elements": [
+            "drain sensor of that same cabinet",
+            "disabled throughout transport mode"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "Paper notes are more accurate than application notes.",
+        "The drain sensor is disabled outside transport mode.",
+        "Manual inspection prevents drain failures."
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-03",
+      "family": "nursery",
+      "language": "zh",
+      "generated_answer": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。建议你把复查安排在方便的时候；要不要拍照、给照片取什么名字，都请自行决定。最后请把工具放回你选定的位置。你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "按顺序整理育苗记录能够提高发芽率。",
+        "拍照能够减少育苗错误。",
+        "复查被安排在方便的时候。"
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-04",
+      "family": "nursery",
+      "language": "en",
+      "generated_answer": "For a hypothetical nursery exercise, suppose that every seedling in an imaginary tray has exactly five leaves. Assume only for this exercise that the tray holds eight seedlings. How would you draw the tray, and what total would you write beside your drawing?",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "A real nursery tray holds eight seedlings.",
+        "Every seedling has five leaves.",
+        "A real tray contains forty leaves."
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-05",
+      "family": "sound_archive",
+      "language": "en",
+      "generated_answer": "The Bracken sound archive retains its calibration recordings for 47 days. Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+      "expected_facts": [
+        {
+          "id": "sel-05-f1",
+          "description": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "source_quote": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "required_semantic_elements": [
+            "Bracken sound archive",
+            "calibration recordings",
+            "retention of 47 days"
+          ]
+        },
+        {
+          "id": "sel-05-f2",
+          "description": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "source_quote": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "required_semantic_elements": [
+            "attribution to the Bracken archive technician log",
+            "recorder Morrow-6",
+            "no backup track in mono mode"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "Morrow-6 never writes a backup track.",
+        "All recordings are retained for 47 days."
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-06",
+      "family": "sound_archive",
+      "language": "zh",
+      "generated_answer": "既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔记的排列方式，请自行决定。",
+      "expected_facts": [
+        {
+          "id": "sel-06-f1",
+          "description": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+          "source_quote": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝",
+          "required_semantic_elements": [
+            "栎声采集器",
+            "启用远程监听时",
+            "本地回放音量降低6分贝"
+          ]
+        },
+        {
+          "id": "sel-06-f2",
+          "description": "它的固件说明明确写着，断电后临时标记不会保留。",
+          "source_quote": "它的固件说明明确写着，断电后临时标记不会保留",
+          "required_semantic_elements": [
+            "归属为该采集器的固件说明",
+            "断电后",
+            "临时标记不会保留"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "整理标记会延长设备寿命。",
+        "所有情况下本地回放音量都降低6分贝。",
+        "采集器的全部文件断电后都会消失。"
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-07",
+      "family": "sound_archive",
+      "language": "en",
+      "generated_answer": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read. You may use a short label or a longer description; pick one and keep it beside your draft. Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand. Before your next session, revisit the title and make any changes you prefer. If you want a different layout, try moving the headings around. Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "Leaving blank lines improves recording quality.",
+        "Writing notes by hand is more reliable.",
+        "Taking a pause prevents recording errors.",
+        "A blank line is left between listening notes."
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-08",
+      "family": "sound_archive",
+      "language": "zh",
+      "generated_answer": "这台采集器会不会在静音时继续保存环境声？远程监听打开以后，本地录音的采样率是否会变化？如果目前还不能确定，请先列出你希望核对的问题，不要替我作出设备性能方面的结论。",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "静音时采集器继续保存环境声。",
+        "远程监听会改变本地录音的采样率。"
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-09",
+      "family": "ferry_service",
+      "language": "zh",
+      "generated_answer": "澄岬渡运站的冬季接驳船仅在主航道结冰时改走东汊。该站周二的运行公告记载，末班接驳船于19:25离岸。",
+      "expected_facts": [
+        {
+          "id": "sel-09-f1",
+          "description": "澄岬渡运站的冬季接驳船仅在主航道结冰时改走东汊。",
+          "source_quote": "澄岬渡运站的冬季接驳船仅在主航道结冰时改走东汊。",
+          "required_semantic_elements": [
+            "澄岬渡运站的冬季接驳船",
+            "主航道结冰是改走东汊的必要条件",
+            "不声称结冰一定改道"
+          ]
+        },
+        {
+          "id": "sel-09-f2",
+          "description": "该站周二的运行公告记载，末班接驳船于19:25离岸。",
+          "source_quote": "该站周二的运行公告记载，末班接驳船于19:25离岸。",
+          "required_semantic_elements": [
+            "归属为该站周二的运行公告",
+            "末班接驳船",
+            "19:25离岸"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "主航道一结冰就一定改走东汊。",
+        "每天末班接驳船都在19:25离岸。"
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-10",
+      "family": "ferry_service",
+      "language": "en",
+      "generated_answer": "Since the Fenhaven ferry accepts bicycles only on its lower deck, plan where you would like to stand after boarding and choose a place for your travel notes. You may sketch your intended route or simply write down the stops you want to remember. Also, because its timetable lists a 26-minute crossing for the evening service, decide how you would prefer to use that interval. Consider bringing something to read, or leave the time unplanned. Please pick your own departure date and ask your companions which meeting place they would like.",
+      "expected_facts": [
+        {
+          "id": "sel-10-f1",
+          "description": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+          "source_quote": "the Fenhaven ferry accepts bicycles only on its lower deck",
+          "required_semantic_elements": [
+            "Fenhaven ferry",
+            "bicycles accepted only on lower deck"
+          ]
+        },
+        {
+          "id": "sel-10-f2",
+          "description": "The Fenhaven ferry timetable lists a 26-minute crossing for the evening service.",
+          "source_quote": "its timetable lists a 26-minute crossing for the evening service",
+          "required_semantic_elements": [
+            "attribution to its timetable",
+            "26-minute crossing",
+            "evening service only"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "All Fenhaven ferry crossings take 26 minutes.",
+        "Reading reduces travel fatigue.",
+        "The lower deck is the only place passengers may stand."
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-11",
+      "family": "ferry_service",
+      "language": "zh",
+      "generated_answer": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。建议你给行程起一个容易记住的名字，并自行选择是否把路线画成草图。要不要中途休息、休息多久，都请按自己的偏好安排。",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "给行程起名字能够缩短航程。",
+        "画路线草图能够防止渡船延误。",
+        "行程有一个容易记住的名字。"
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-12",
+      "family": "ferry_service",
+      "language": "en",
+      "generated_answer": "I decline to choose a vessel or a departure time for you. Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant. Would you like to draft those questions before deciding?",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "A particular vessel is safer than another.",
+        "A particular departure time is available.",
+        "The operator has confirmed a departure time."
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-13",
+      "family": "textile_lab",
+      "language": "en",
+      "generated_answer": "The Norvale textile laboratory dries its linen reference swatches at 58 degrees Celsius. Its inspection sheet records a shrinkage limit of 2.7 percent for batch Juniper-14 after the third wash.",
+      "expected_facts": [
+        {
+          "id": "sel-13-f1",
+          "description": "The Norvale textile laboratory dries its linen reference swatches at 58 degrees Celsius.",
+          "source_quote": "The Norvale textile laboratory dries its linen reference swatches at 58 degrees Celsius.",
+          "required_semantic_elements": [
+            "Norvale textile laboratory",
+            "linen reference swatches",
+            "drying at 58 degrees Celsius"
+          ]
+        },
+        {
+          "id": "sel-13-f2",
+          "description": "Its inspection sheet records a shrinkage limit of 2.7 percent for batch Juniper-14 after the third wash.",
+          "source_quote": "Its inspection sheet records a shrinkage limit of 2.7 percent for batch Juniper-14 after the third wash.",
+          "required_semantic_elements": [
+            "attribution to its inspection sheet",
+            "batch Juniper-14",
+            "shrinkage limit 2.7 percent",
+            "after the third wash"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "Every fabric is dried at 58 degrees Celsius.",
+        "Juniper-14 actually shrank by 2.7 percent.",
+        "The limit applies before any washing."
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-14",
+      "family": "textile_lab",
+      "language": "zh",
+      "generated_answer": "因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+      "expected_facts": [
+        {
+          "id": "sel-14-f1",
+          "description": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+          "source_quote": "若岚织物试验室的压辊在手动模式下不会自动回位",
+          "required_semantic_elements": [
+            "若岚织物试验室的压辊",
+            "手动模式下",
+            "不会自动回位"
+          ]
+        },
+        {
+          "id": "sel-14-f2",
+          "description": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+          "source_quote": "该室的操作记录写明，绒面试片每次夹持的上限是17秒",
+          "required_semantic_elements": [
+            "归属为该室操作记录",
+            "绒面试片",
+            "每次夹持上限17秒"
+          ]
+        }
+      ],
+      "forbidden_assertions": [
+        "压辊在全部模式下都不会回位。",
+        "绒面试片每次实际都夹持17秒。",
+        "使用某种字体可以提升测量精度。"
+      ],
+      "expected_pure_nf": false
+    },
+    {
+      "id": "sel-15",
+      "family": "textile_lab",
+      "language": "en",
+      "generated_answer": "Choose a name for your fabric notebook and write it wherever you prefer on the cover. Please decide whether to arrange your entries by date, by colour, or in some other order of your own. Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout. Before starting a new page, pick the headings you want to use. You may ask a colleague to suggest another arrangement, or keep the decision to yourself. Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "Sorting notebook entries by colour improves measurement precision.",
+        "Drawing a margin prevents damage to fabric.",
+        "A particular notebook arrangement is required.",
+        "An empty margin for later comments is drawn."
+      ],
+      "expected_pure_nf": true
+    },
+    {
+      "id": "sel-16",
+      "family": "textile_lab",
+      "language": "zh",
+      "generated_answer": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+      "expected_facts": [],
+      "forbidden_assertions": [
+        "夹具完全不施力。",
+        "某种夹持顺序能够避免织物变形。",
+        "任何夹具已经具备所设想的性能。"
+      ],
+      "expected_pure_nf": true
+    }
+  ],
+  "controlled_seeds": [
+    {
+      "seed_id": "inject-omission-01",
+      "case_id": "sel-02",
+      "kind": "omission",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "The Larchmere germination cabinet's drain sensor is disabled throughout transport mode.",
+            "source_span": "the cabinet's drain sensor is disabled throughout transport mode"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Because the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened, let that interval finish before choosing your next inspection step. Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later. Also, since ",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": ", remember to inspect the drain by hand before loading it for a move. Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-02-f1"
+      ],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-omission-02",
+      "case_id": "sel-06",
+      "kind": "omission",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+            "source_span": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "既然",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔记的排列方式，请自行决定。",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-06-f2"
+      ],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-omission-03",
+      "case_id": "sel-10",
+      "kind": "omission",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "The Fenhaven ferry timetable lists a 26-minute crossing for the evening service.",
+            "source_span": "its timetable lists a 26-minute crossing for the evening service"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Since the Fenhaven ferry accepts bicycles only on its lower deck, plan where you would like to stand after boarding and choose a place for your travel notes. You may sketch your intended route or simply write down the stops you want to remember. Also, because ",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": ", decide how you would prefer to use that interval. Consider bringing something to read, or leave the time unplanned. Please pick your own departure date and ask your companions which meeting place they would like.",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-10-f1"
+      ],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-omission-04",
+      "case_id": "sel-14",
+      "kind": "omission",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+            "source_span": "若岚织物试验室的压辊在手动模式下不会自动回位"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "因为",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-14-f2"
+      ],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-spurious-01",
+      "case_id": "sel-03",
+      "kind": "spurious",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "复查被安排在方便的时候。",
+            "source_span": "建议你把复查安排在方便的时候"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "；要不要拍照、给照片取什么名字，都请自行决定。最后请把工具放回你选定的位置。",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+            "reason": "Additional optional instructions and design questions; no reported outcome."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": "复查被安排在方便的时候。"
+    },
+    {
+      "seed_id": "inject-spurious-02",
+      "case_id": "sel-07",
+      "kind": "spurious",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "A blank line is left between listening notes.",
+            "source_span": "Consider leaving a blank line between listening notes"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read. You may use a short label or a longer description; pick one and keep it beside your draft. ",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": ", and decide for yourself whether to write those notes by hand. Before your next session, revisit the title and make any changes you prefer. If you want a different layout, try moving the headings around. Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": "A blank line is left between listening notes."
+    },
+    {
+      "seed_id": "inject-spurious-03",
+      "case_id": "sel-11",
+      "kind": "spurious",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "行程有一个容易记住的名字。",
+            "source_span": "建议你给行程起一个容易记住的名字"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "，并自行选择是否把路线画成草图。要不要中途休息、休息多久，都请按自己的偏好安排。",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": "行程有一个容易记住的名字。"
+    },
+    {
+      "seed_id": "inject-spurious-04",
+      "case_id": "sel-15",
+      "kind": "spurious",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "An empty margin for later comments is drawn.",
+            "source_span": "Consider drawing an empty margin for later comments"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Choose a name for your fabric notebook and write it wherever you prefer on the cover. Please decide whether to arrange your entries by date, by colour, or in some other order of your own. ",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": ", but feel free to omit it if you dislike that layout. Before starting a new page, pick the headings you want to use. You may ask a colleague to suggest another arrangement, or keep the decision to yourself. Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": "An empty margin for later comments is drawn."
+    },
+    {
+      "seed_id": "inject-clean-01",
+      "case_id": "sel-01",
+      "kind": "clean",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_span": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。"
+          },
+          {
+            "claim_text": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_span": "育苗站的周报称，3号苗床每晚22:30停止加热。"
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-clean-02",
+      "case_id": "sel-05",
+      "kind": "clean",
+      "draft": {
+        "claims": [
+          {
+            "claim_text": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_span": "The Bracken sound archive retains its calibration recordings for 47 days."
+          },
+          {
+            "claim_text": "The Bracken sound archive technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_span": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode."
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-clean-03",
+      "case_id": "sel-12",
+      "kind": "clean",
+      "draft": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "I decline to choose a vessel or a departure time for you. Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant. Would you like to draft those questions before deciding?",
+            "reason": "Procedural guidance or other non-factual material."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": null
+    },
+    {
+      "seed_id": "inject-clean-04",
+      "case_id": "sel-16",
+      "kind": "clean",
+      "draft": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。",
+            "reason": "Procedural guidance or other non-factual material."
+          },
+          {
+            "text": "你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+            "reason": "Additional optional instructions and design questions; no reported outcome."
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "expected_spurious_description": null
+    }
+  ]
+}
