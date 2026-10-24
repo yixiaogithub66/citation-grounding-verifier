@@ -1,0 +1,173 @@
+{
+  "schema_version": "ragtruth-fresh180-selection-audit-v1",
+  "created_at": "2026-10-24T05:13:22.296934+00:00",
+  "status": "PASS",
+  "checks": {
+    "preselection_hash_binding": true,
+    "sampling_hash_preselection_binding": true,
+    "exposure_audit_hash": true,
+    "frozen_sampling_identical": true,
+    "all_bound_dataset_hashes": true,
+    "all_preparation_dataset_hashes": true,
+    "upstream_pinned_raw_hashes": true,
+    "frozen_source_code_hashes": true,
+    "freeze_precedes_data_binding": true,
+    "registered_commit": true,
+    "exclusion_set_bound": true,
+    "official_sources_do_not_cross_splits": true,
+    "hash_ranking_selected_sources_exact": true,
+    "all_exclusion_reasons_exact": true,
+    "all_180_ids_and_order_match_hash_selection": true,
+    "180_response_ids_unique": true,
+    "180_requests_unique": true,
+    "30_source_groups_each_six": true,
+    "three_tasks_60_each": true,
+    "30_unique_contexts": true,
+    "source_overlap_zero": true,
+    "response_overlap_zero": true,
+    "request_overlap_zero": true,
+    "context_overlap_zero": true,
+    "input_fields_only_public_contract": true,
+    "answers_unchanged_no_truncation": true,
+    "contexts_unchanged_task_adapter_semantics": true,
+    "manifest_metadata_exact_official_test_good": true,
+    "request_sizes_valid_and_metadata_exact": true,
+    "manifest_source_rank_exact": true,
+    "native_gold_arrays_unchanged": true,
+    "native_offsets_exact_original_answer_slices": true,
+    "runner_matches_preselection_hash": true,
+    "runtime_request_only_case_input": true,
+    "runtime_function_no_gold_reads": true
+  },
+  "failures": [],
+  "evidence_sha256": {
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-fresh180-freeze-20261024\\preselection.json": "f7d79b1ddac04f1897f523b82f2e1877fb65cad2040b96cc3310aad7fc556275",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-fresh180-freeze-20261024\\sampling-preselection.json": "edeca8e894d70d146f65f469a3f30d5d5b755f2a46074c606382528ef8907cd4",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-fresh180-freeze-20261024\\binding.json": "1738b5060017e2115e965bec0874dddb17a6930dd38b07d012beb21548d43eeb",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\research\\ragtruth-fresh180-20261024\\exposure-audit.json": "bf107f05a065d41923cefa871a3f9fc50eecdd09ae2a1745ec61a466d7d37dd1",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-fresh180-freeze-20261024\\source\\research\\ragtruth-fresh180-20261024\\run.py": "fec423b4762d3b36ab533dca5d2d4998112ec3ea1f2204224fd9932ece88e041",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\ragtruth-fresh180-20261024\\inputs.jsonl": "401daf76c58fae8eccc9388bafb951703c7b4e1799287f534e4ecdf12a00990f",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\ragtruth-fresh180-20261024\\manifest.jsonl": "881a031fb76be049ce522be2840d170d70ad4240694d8ad078915b7b7bfb6f92",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\ragtruth-fresh180-20261024\\preparation.json": "2be559009c91ddc23a664066fecdf9197381a79cbe79d63691dd91a50c559ee6",
+    "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\dataset\\ragtruth-fresh180-20261024\\native_gold.jsonl": "74a4560cb31a9e6e1f5d0578f744053ce55840ad0159c388f7ee391670c08fb4"
+  },
+  "sampling_seed": "ragtruth-fresh180-v2-20261024",
+  "selected_source_ids_by_task_hash_order": {
+    "QA": [
+      "14334",
+      "15158",
+      "15332",
+      "15378",
+      "14418",
+      "15269",
+      "15539",
+      "12269",
+      "15130",
+      "14396"
+    ],
+    "Summary": [
+      "15638",
+      "11880",
+      "11817",
+      "13834",
+      "11355",
+      "13842",
+      "15789",
+      "13848",
+      "15732",
+      "15661"
+    ],
+    "Data2txt": [
+      "14726",
+      "14542",
+      "14546",
+      "14017",
+      "14223",
+      "14034",
+      "14030",
+      "14738",
+      "14219",
+      "14860"
+    ]
+  },
+  "candidate_pool_counts_by_task": {
+    "QA": {
+      "official_test_source_groups": 150,
+      "eligible_source_groups": 111,
+      "frozen_exclusion_list": 21,
+      "actually_exposed_sources": 20,
+      "input_duplicate_only_sources": 1,
+      "not_six_good_responses": 18,
+      "source_group_input_limit": 0,
+      "selected_source_groups": 10,
+      "selected_responses": 60
+    },
+    "Summary": {
+      "official_test_source_groups": 150,
+      "frozen_exclusion_list": 27,
+      "actually_exposed_sources": 27,
+      "eligible_source_groups": 123,
+      "input_duplicate_only_sources": 0,
+      "not_six_good_responses": 0,
+      "source_group_input_limit": 0,
+      "selected_source_groups": 10,
+      "selected_responses": 60
+    },
+    "Data2txt": {
+      "official_test_source_groups": 150,
+      "eligible_source_groups": 130,
+      "frozen_exclusion_list": 20,
+      "actually_exposed_sources": 20,
+      "input_duplicate_only_sources": 0,
+      "not_six_good_responses": 0,
+      "source_group_input_limit": 0,
+      "selected_source_groups": 10,
+      "selected_responses": 60
+    }
+  },
+  "frozen_exclusion_list_count": 71,
+  "frozen_exclusion_list_on_test_count": 68,
+  "frozen_exclusion_list_off_test_count": 3,
+  "exclusion_reason_totals": {
+    "previously_exposed_source": 68,
+    "not_six_good_responses": 18
+  },
+  "reason_naming_note": "The historical sampler calls all frozen exclusions previously_exposed_source. This includes one input-only duplicate group (12183); the audit separates it from actual exposure. Three prior smoke sources are train and do not enter test candidate counts.",
+  "selected_counts": {
+    "responses": 180,
+    "sources": 30,
+    "requests": 180,
+    "contexts": 30,
+    "per_task": {
+      "QA": 60,
+      "Summary": 60,
+      "Data2txt": 60
+    }
+  },
+  "gold_policy": "Selected native labels checked for exact equality and offset validity only. No prevalence, label counts, or model scores computed/reported.",
+  "runtime_boundary": {
+    "frozen_runner": "D:\\HuaweiMoveData\\Users\\yixiao\\Desktop\\TabbyML\\results\\ragtruth-fresh180-freeze-20261024\\source\\research\\ragtruth-fresh180-20261024\\run.py",
+    "infer_one_lines": [
+      255,
+      287
+    ],
+    "construction": "VerificationRequest.from_dict(case[\"input\"]) then instance.verify(request)",
+    "request_fields": [
+      "context_passages",
+      "generated_answer"
+    ],
+    "manifest_metadata": "Used for scheduling/logging and source grouping only, not passed to verify.",
+    "backend_configuration": "Backend-specific frozen policies only; no task/source/generator-based settings switch in infer_one.",
+    "inspection_scope": "Static invocation path and all 180 request objects; no network payload interception or new model calls."
+  },
+  "adapter_boundary": {
+    "QA": "Exact numbered slices concatenate to all original source_info.passages; original QA question remains omitted under existing public contract.",
+    "Summary": "Entire original source_info string unchanged.",
+    "Data2txt": "Entire source_info JSON object serialized deterministically with sorted keys, indent=2; value round-trip equality checked.",
+    "answer": "Full original response string unchanged."
+  },
+  "inference_results_read": false,
+  "inference_changes": false,
+  "sample_replacements": 0,
+  "model_calls": 0
+}
