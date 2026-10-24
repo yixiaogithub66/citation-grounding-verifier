@@ -1,0 +1,11 @@
+{
+  "frozen_files_valid": 65,
+  "archive_entries_verified": 866,
+  "report_local_links_valid": 13,
+  "production_unchanged": true,
+  "offline_tests_passed": 28,
+  "operational_checks_passed": 29,
+  "independent_metric_comparisons": 154,
+  "gemini_valid_consultations": 3,
+  "gemini_reported_tokens": 57491
+}

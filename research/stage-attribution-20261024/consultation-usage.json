@@ -1,0 +1,42 @@
+{
+  "consultations": [
+    {
+      "consultation": "gemini-design",
+      "model": "gemini-4-argon-high",
+      "usage": {
+        "input_tokens": 11118,
+        "output_tokens": 6572,
+        "thinking_tokens": 5466,
+        "cache_read_tokens": 0,
+        "total_tokens": 17690
+      },
+      "validation": "SUCCESS"
+    },
+    {
+      "consultation": "gemini-results",
+      "model": "gemini-4-argon-high",
+      "usage": {
+        "input_tokens": 14201,
+        "output_tokens": 5274,
+        "thinking_tokens": 3672,
+        "cache_read_tokens": 0,
+        "total_tokens": 19475
+      },
+      "validation": "SUCCESS"
+    },
+    {
+      "consultation": "gemini-correction",
+      "model": "gemini-4-argon-high",
+      "usage": {
+        "input_tokens": 9661,
+        "output_tokens": 10665,
+        "thinking_tokens": 10217,
+        "cache_read_tokens": 0,
+        "total_tokens": 20326
+      },
+      "validation": "SUCCESS"
+    }
+  ],
+  "total_reported_tokens": 57491,
+  "scope": "Gemini consultation usage is separate from DeepSeek experimental model usage; no Gemini dollar estimate."
+}

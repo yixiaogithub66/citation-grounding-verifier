@@ -1,0 +1,245 @@
+{
+  "artifact_hashes": {
+    "planned-requests.json": "1a23a586043f903553900a1282de68ea6ffef5c3da008f058b88c081e98ecc93",
+    "run-manifest.json": "7820e72ad7dc9d5d364dd6b544925280d8281436dd49c606c92e62d6bb912cd2",
+    "summary.json": "a5750c96aa448ac5598fd84813ac32ad19a015bbf7430e09313dabfa027dcc7d"
+  },
+  "audited_at": "2026-10-24T04:34:12.477491+00:00",
+  "checks": [
+    {
+      "check": "final_summary_complete",
+      "passed": true
+    },
+    {
+      "check": "frozen_manifest_sha_consistent",
+      "passed": true
+    },
+    {
+      "check": "all_frozen_files_still_match",
+      "detail": {
+        "bound_file_count": 65,
+        "changed": []
+      },
+      "passed": true
+    },
+    {
+      "check": "cases_file_sha_consistent",
+      "passed": true
+    },
+    {
+      "check": "planned_matrix_sha_consistent",
+      "passed": true
+    },
+    {
+      "check": "planned_matrix_reconstructed_from_frozen_request_only_inputs",
+      "passed": true
+    },
+    {
+      "check": "planned_140_initial_90_reviews",
+      "passed": true
+    },
+    {
+      "check": "all_230_stages_reserved_and_completed_once",
+      "passed": true
+    },
+    {
+      "check": "all_provider_calls_have_unique_reservation_and_result",
+      "detail": {
+        "reservations": 167,
+        "results": 167
+      },
+      "passed": true
+    },
+    {
+      "check": "no_unknown_or_missing_stage_or_provider_results",
+      "passed": true
+    },
+    {
+      "check": "no_operational_failures_or_warnings",
+      "passed": true
+    },
+    {
+      "check": "stage_reservations_equal_plan",
+      "passed": true
+    },
+    {
+      "check": "stage_result_identity_matches_plan",
+      "passed": true
+    },
+    {
+      "check": "initial_count_by_arm",
+      "passed": true
+    },
+    {
+      "check": "call_keys_are_unique_stage_ordinal_hashes",
+      "passed": true
+    },
+    {
+      "check": "provider_ordinals_contiguous_without_duplicates",
+      "passed": true
+    },
+    {
+      "check": "each_initial_issued_exactly_once",
+      "passed": true
+    },
+    {
+      "check": "every_complete_is_exactly_one_transport_attempt",
+      "passed": true
+    },
+    {
+      "check": "all_transport_retries_disabled",
+      "passed": true
+    },
+    {
+      "check": "initial_and_review_use_frozen_generation_budgets",
+      "detail": {
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "check": "stage_counts_match_actual_provider_reservations",
+      "passed": true
+    },
+    {
+      "check": "stage_telemetry_has_every_actual_call_exactly_once",
+      "detail": {
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "check": "initial_raw_outputs_equal_persisted_call_raw_outputs",
+      "passed": true
+    },
+    {
+      "check": "physical_call_ceiling_observed",
+      "passed": true
+    },
+    {
+      "check": "review_before_equals_exact_durable_current_initial",
+      "detail": {
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "check": "per_claim_C_U_targeted_and_physical_budgets",
+      "detail": {
+        "logical_C_reviews": 1,
+        "logical_U_reviews": 26,
+        "max_calls_per_claim": 1,
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "check": "review_order_is_C_then_U_without_second_C",
+      "detail": {
+        "mismatches": []
+      },
+      "passed": true
+    },
+    {
+      "check": "no_gold_metadata_or_scheduling_ids_entered_messages",
+      "detail": {
+        "violations": []
+      },
+      "passed": true
+    },
+    {
+      "check": "single_run_without_resume_or_restart",
+      "detail": {
+        "run_finished": 1,
+        "run_started": 1
+      },
+      "passed": true
+    }
+  ],
+  "freeze_sha256": "50238be1f77094a25ad96d20388d694c26d6e711c74242e0863e89d43a624325",
+  "limitations": [
+    "No evidence of client-side resampling or hidden retry in this recorded run; provider-internal execution is not observable.",
+    "A complete durable record does not establish semantic correctness.",
+    "The audit reads request-only cases and operational raw records, not reference annotations or score files."
+  ],
+  "models": {
+    "deepseek-flash": 167
+  },
+  "provider_phases": {
+    "contradiction_review": {
+      "calls": 1,
+      "client_errors": 0,
+      "completion_tokens": 1107,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 1287
+    },
+    "m1_concise": {
+      "calls": 40,
+      "client_errors": 0,
+      "completion_tokens": 11808,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 17118
+    },
+    "m1_current": {
+      "calls": 40,
+      "client_errors": 0,
+      "completion_tokens": 11833,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 23358
+    },
+    "m3_current": {
+      "calls": 30,
+      "client_errors": 1,
+      "completion_tokens": 13451,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 30114
+    },
+    "m3_simple": {
+      "calls": 30,
+      "client_errors": 0,
+      "completion_tokens": 8116,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 14274
+    },
+    "unsupported_review": {
+      "calls": 26,
+      "client_errors": 0,
+      "completion_tokens": 8046,
+      "missing_fingerprint": 0,
+      "missing_usage": 0,
+      "prompt_tokens": 31008
+    }
+  },
+  "result_directory": "results/stage-attribution-20261024",
+  "schema_version": "stage-attribution-operational-audit-v1",
+  "scope": "Operational durability, isolation, budgets and accounting only; no semantic scoring inspected.",
+  "status": "PASS",
+  "system_fingerprints": {
+    "e72d3c7f663d3e1383b00b3884cb4501": 167
+  },
+  "totals": {
+    "initial_stages": 140,
+    "logical_review_counts": {
+      "C": 1,
+      "U": 26
+    },
+    "max_review_calls_per_claim": 1,
+    "missing_usage": 0,
+    "physical_calls": 167,
+    "physical_results": 167,
+    "review_eligibility": {
+      "eligible": 85,
+      "ineligible": 5,
+      "not_triggered": 63,
+      "triggered": 27
+    },
+    "review_stages": 90,
+    "stage_reservations": 230,
+    "stage_results": 230
+  }
+}

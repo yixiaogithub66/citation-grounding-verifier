@@ -1,0 +1,22 @@
+{
+  "args": [
+    "C:\\Users\\yixiao\\.gemini\\bin\\agy.exe",
+    "--new-project",
+    "--mode",
+    "plan",
+    "--model",
+    "gemini-4-argon-high",
+    "--effort",
+    "high",
+    "--print-timeout",
+    "5m",
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json"
+  ],
+  "cwd": "C:\\Users\\yixiao\\AppData\\Local\\Temp\\tabby-methods-gemini-0pyn1v7o",
+  "prompt_sha256": "6ed996d3de68ddd741d163750fabeeaf73371ceb979aa3a045034d4ef755caf1",
+  "request_sha256": "83de472cd4b61a180753547a3628654b70ccd95c41426acec76b6c3c8d02faaf",
+  "started_at": "2026-10-24T04:44:30.984969+00:00"
+}

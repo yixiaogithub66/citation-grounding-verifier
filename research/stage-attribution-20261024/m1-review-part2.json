@@ -1,0 +1,2023 @@
+{
+  "reviews": [
+    {
+      "review_id": "m-95d7a0eee124f2faad2e",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留岩芽会员、三人、每次入场和自动团体折扣，原句与跨度相同。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1,
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "两条分别保存今天检查已完成、主管签字前不能开放；北侧训练区先行词已补回，联合覆盖目标，不因拆成两条扣分。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留未满十六岁、自动安排、比成年会员容易的比较；但单条只写“场馆”，未将全文明确的岩芽馆补回，独立主体仍欠明。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "unresolved_antecedent",
+          "reason": "“场馆”需要前文岩芽馆；单条未补全。"
+        }
+      ],
+      "note": "NF仅含介绍安排/偏好；事实目标均在claims，拆分检查和签字条件可接受。"
+    },
+    {
+      "review_id": "m-26cc05b3c63a95169ff7",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "K6、每次回收、先淡水冲洗再进柜作为一个有序流程完整保留；并非必须拆成两个无顺序动作。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "完整保留保护帽必须在完全干燥之前装的原断言，但“对于这个干燥流程”还依赖前一句给出流程，未使单条自足。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "红灯表示校准模式而非故障的对比定义完整保留；两边同属一个指示含义，按统一粒度可合为一条。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "“这个干燥流程”需要前一条有序回收流程。"
+        }
+      ],
+      "note": "有序流程和红灯含义对比允许各保留一条；NF均是版面请求与偏好。"
+    },
+    {
+      "review_id": "m-7e89fad30fe2265d954d",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "M3、密封纸套、一个月、任何色变的因果保证完整保留；source为完整原句，不自行改正。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留M3在linen procedure下具有阴架晾干资格；不要求M1从context补亚麻属性或末次冲洗已完成。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留Dara的过去推荐、布袋优于纸套、M3储存范围；没有把人物推荐当成作者当前建议排除。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "只有三条实质事实；两句展示建议全部排除，没有新事实。"
+    },
+    {
+      "review_id": "m-adae77d334fae78edc65",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "T9、岸供、外壳关闭、夜班规定及38摄氏度条件全部保留，属于带条件的一条阈值规则。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "二十分钟相对五分钟、减少测距误差及T9夜班两条件全部保留；没有把假设条件拆成已发生事实。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "林越、会议、认为、所有T9夜班及默认长记录归属完整；不以“应当”误排除人物意见的报道。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "对于/对的改写不改条件；末段均作为写作建议排除。"
+    },
+    {
+      "review_id": "m-467666d509965f18e51f",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "M3、密封纸套、一个月、任何色变的因果保证完整保留；source为完整原句，不自行改正。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留M3在linen procedure下具有阴架晾干资格；不要求M1从context补亚麻属性或末次冲洗已完成。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留Dara的过去推荐、布袋优于纸套、M3储存范围；没有把人物推荐当成作者当前建议排除。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "please keep被改成are to be kept，仍只是当前建议，不能算待核事实。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "I would welcome被改成display is requested，把当前偏好包装为事实。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "with final choice left open属于同一建议，改成独立实际状态。"
+        }
+      ],
+      "note": "三事实目标完整，但额外三条建议/安排误纳；NF中重复的是建议文字，不是事实。"
+    },
+    {
+      "review_id": "m-40610271884c43b33747",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "周楠、岸石馆、周三、十八点以后及可预约资格均保留，未变成已有预约。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "余安会议意见、线路封闭、黄卡会员、允许越绳四层完整，未把意见报道改成无归属规定。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "岸石馆场景、面积翻倍使等待焦虑减半的因果量化断言完整保留。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三事实正确保留；NF仅为建议、邀请及平实语气偏好。"
+    },
+    {
+      "review_id": "m-f004b67d632a4a26b1fc",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "预约者、区外居住、J4及从家访问许可全部保留，非仅笼统可访问。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "签署会议纪要、Marin、对J4加说话者索引提议归属完整，未改成索引已经存在。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "J4、release rule、允许发布及签署之前的时点完整；source为完整原句。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三条完整逐句保存，末段偏好、请求、问题均排除。"
+    },
+    {
+      "review_id": "m-c8d0aab352ccb4125d2a",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "D4第二阶段、边缘检查、要求湿润完整保留，跨度为相应事实前提。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "D4第二阶段配方禁止L缓冲液完整保留，未将后续放架建议当事实。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "盖盖义务与浸泡期间保留，但单条未补前文D4范围，写成泛指浸泡容器，独立性不足。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": false,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 2,
+          "kind": "unresolved_scope",
+          "reason": "盖盖单条缺少全文已明确的D4流程范围。"
+        },
+        {
+          "claim_index": null,
+          "kind": "factual_span_in_nf",
+          "reason": "前三个NF跨度各覆盖整个含事实前提的建议句；要求湿润、禁止L、浸泡盖盖均被同时列NF。"
+        }
+      ],
+      "note": "三个事实在claims中并未丢失，NF误排除另计，不能用重复覆盖抵消。"
+    },
+    {
+      "review_id": "m-185401bc5d0655d2205f",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "Flint Loft、预约时段、十四岁以下及一成人配四儿童的许可完整；source中的that ratio可用同句已明示先行词补全。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "蓝卡会员、头盔、免费及预约时段全部保留；one由同句前面的loan helmet合法消解。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "东侧横渡、周末、午间检查期间仍开放完整保留；it由同句东侧横渡合法消解。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "建议前半句虽在NF，其中仅给出动作和先行词；因果后半事实完整在claims，允许同句先行词恢复。"
+    },
+    {
+      "review_id": "m-e22ce98e7e86a0282dcf",
+      "targets": [],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：在这次染织体验中，说话者更喜欢自由配色的主题。"
+        },
+        {
+          "claim_index": 1,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者想把选色权交给参与者。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者允许有人只做单色布样。"
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者不希望要求每个人使用同一种图案。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者不希望把成品排出名次。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者认为讨论时可以从个人喜欢的颜色谈起。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者建议再邀请愿意分享的人描述自己的构想。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者想把展示区布置得朴素一些。"
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者认为是否使用背景音乐由大家共同决定。"
+        },
+        {
+          "claim_index": 9,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者要求为不愿公开展示作品的人保留选择。"
+        },
+        {
+          "claim_index": 10,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者要求允许参与者随时换一种表达方式。"
+        },
+        {
+          "claim_index": 11,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者建议最后留一张空白卡片。"
+        },
+        {
+          "claim_index": 12,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者建议让大家在空白卡片上写下下一次想尝试的主题。"
+        },
+        {
+          "claim_index": 13,
+          "kind": "advice_promoted",
+          "reason": "14条均由纯偏好、问题或建议改写为说话者想/认为/要求或许可；没有客观事实前提。 原输出：说话者认为若有人更愿意画图，也完全可以采用画图的方式。"
+        }
+      ],
+      "note": "纯NF参考成立；no_fact_in_nf为true，因为被排除原文本身无事实，错误是claims误纳。"
+    },
+    {
+      "review_id": "m-a89129ef0b95e8054729",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "岚台观测组、Q5模板、应划十通道的归属与数值完整保存。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "R8归类及该组定义的语义保留，但单条仍写“该组”，全文的岚台观测组未展开，独立性不足。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "两接收机相关分析、消除全部本地干扰及局部设备范围在全文中保留；单条“这套设备”未消解，不能独立确定主体。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "该组未展开为岚台观测组。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "unresolved_antecedent",
+          "reason": "这套设备仍依赖前文。"
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "“我希望先展示…再讨论…”是介绍偏好，误纳为事实。"
+        }
+      ],
+      "note": "全部三目标语义保留；额外讲解偏好和两条独立性问题分别记录。"
+    },
+    {
+      "review_id": "m-e7bde45d6c4e6737b7c7",
+      "targets": [],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：这次染织体验中，回答者更喜欢自由配色的主题。"
+        },
+        {
+          "claim_index": 1,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：可以把选色权交给参与者。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：可以允许有人只做单色布样。"
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：不要要求每个人使用同一种图案。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：不必把成品排出名次。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：讨论时可以从个人喜欢的颜色谈起。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：再邀请愿意分享的人描述自己的构想。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：回答者想把展示区布置得朴素一些。"
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：是否使用背景音乐由大家共同决定。"
+        },
+        {
+          "claim_index": 9,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：应为不愿公开展示作品的人保留选择。"
+        },
+        {
+          "claim_index": 10,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：应允许参与者随时换一种表达方式。"
+        },
+        {
+          "claim_index": 11,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：可以留一张空白卡片，让大家写下下一次想尝试的主题。"
+        },
+        {
+          "claim_index": 12,
+          "kind": "advice_promoted",
+          "reason": "13条把纯NF建议与偏好放入claims，包含可选色、应保留选择等；在NF再重复这些句子不消除误纳。 原输出：若有人更愿意画图，也完全可以采用画图的方式。"
+        }
+      ],
+      "note": "纯NF参考成立；no_fact_in_nf为true，因为被排除原文本身无事实，错误是claims误纳。"
+    },
+    {
+      "review_id": "m-7f10811d008d77249ed1",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "Flint Loft、预约时段、十四岁以下及一成人配四儿童的许可完整；source中的that ratio可用同句已明示先行词补全。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "蓝卡会员、头盔、免费及预约时段全部保留；one由同句前面的loan helmet合法消解。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "东侧横渡、周末、午间检查期间仍开放完整保留；it由同句东侧横渡合法消解。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三条均用答案明示先行词恢复ratio/one/it；NF限动作建议，语义无额外事实。"
+    },
+    {
+      "review_id": "m-e87826a95f8f82d41827",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "K6、每次回收、先淡水冲洗再进柜作为一个有序流程完整保留；并非必须拆成两个无顺序动作。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "完整保留保护帽必须在完全干燥之前装的原断言，但“对于这个干燥流程”还依赖前一句给出流程，未使单条自足。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "红灯表示校准模式而非故障的对比定义完整保留；两边同属一个指示含义，按统一粒度可合为一条。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "“这个干燥流程”没有在该条展开。"
+        }
+      ],
+      "note": "三目标内容保留；写作建议和偏好全部置NF。"
+    },
+    {
+      "review_id": "m-a65a72fc58d40f07d052",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "T9、岸供、外壳关闭、夜班规定及38摄氏度条件全部保留，属于带条件的一条阈值规则。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "二十分钟相对五分钟、减少测距误差及T9夜班两条件全部保留；没有把假设条件拆成已发生事实。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "林越、会议、认为、所有T9夜班及默认长记录归属完整；不以“应当”误排除人物意见的报道。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "scope_dropped_extra_claim",
+          "reason": "额外“夜班规定风扇38度启动”删去T9、岸供和壳闭条件，不能当作忠实重复。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "希望先听值班团队偏好属于作者偏好，不是待核事实。"
+        }
+      ],
+      "note": "目标t1由完整第1条覆盖；额外第0条条件损失不反过来抹去完整覆盖，但使输出总体失真。"
+    },
+    {
+      "review_id": "m-5193faae137272238ef0",
+      "targets": [],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "空claims正确；七段NF逐项覆盖偏好、请求、建议，无事实前提被排除。"
+    },
+    {
+      "review_id": "m-82be37b3543d17ec6583",
+      "targets": [],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The responder would enjoy a relaxed welcome for the members' evening."
+        },
+        {
+          "claim_index": 1,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The responder would enjoy an optional round of introductions for the members' evening."
+        },
+        {
+          "claim_index": 2,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：People should be allowed to choose whether to join a group."
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：People should be allowed to choose whether to spend some time on their own."
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Suggestions could be invited for a playful activity without turning the evening into a competition."
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The responder would prefer handwritten name cards."
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The group may choose a different style of name cards."
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Ending with an open conversation about what people would like to try next time should be considered."
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Participation should be left optional throughout."
+        }
+      ],
+      "note": "九条均属当前作者偏好和活动建议；改写The responder/speaker不会使其成为第三方意见报道。NF为空。"
+    },
+    {
+      "review_id": "m-828d9bc4fbb92b15c442",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "M3、密封纸套、一个月、任何色变的因果保证完整保留；source为完整原句，不自行改正。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留M3在linen procedure下具有阴架晾干资格；不要求M1从context补亚麻属性或末次冲洗已完成。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留Dara的过去推荐、布袋优于纸套、M3储存范围；没有把人物推荐当成作者当前建议排除。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "please keep转为are to be kept，仍是展示建议，误纳。"
+        }
+      ],
+      "note": "三事实完整，额外一条建议误纳；最终偏好句正确排除。"
+    },
+    {
+      "review_id": "m-5872b2a62fe2d55e1b5e",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "第1条Flint Loft permits that ratio in a booked session在全文可指向一成人四名十四岁以下儿童，许可内容保留；但that ratio未展开，单条不自足。第0条另把建议错误强化为required，作为额外误断言记账。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "蓝卡会员、头盔、免费及预约时段全部保留；one由同句前面的loan helmet合法消解。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "东侧横渡、周末、午间检查期间仍开放完整保留；it由同句东侧横渡合法消解。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_strengthened_to_fact",
+          "reason": "Please bring被改为One supervising adult is required，原文只有建议及Flint Loft允许比例，没有独立强制义务。"
+        },
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "that ratio需结合原答案/别条确定人数与年龄；不能单独核查。"
+        }
+      ],
+      "note": "不把required误纳等同于目标许可漏提；目标许可仍在第1条，独立性另计。"
+    },
+    {
+      "review_id": "m-5a6dbfddd4feabd4d18e",
+      "targets": [],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The speaker would enjoy a relaxed welcome for the members' evening."
+        },
+        {
+          "claim_index": 1,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The speaker would enjoy an optional round of introductions for the members' evening."
+        },
+        {
+          "claim_index": 2,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：People should be allowed to choose whether to join a group."
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：People should be allowed to choose whether to spend some time on their own."
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Suggestions for a playful activity could be invited without turning the evening into a competition."
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The speaker would prefer handwritten name cards."
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：The group may choose a different style of name cards."
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Ending with an open conversation about what people would like to try next time should be considered."
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "原文是活动偏好/请求/开放问题，非客观事实前提；输出：Participation should be left optional throughout."
+        }
+      ],
+      "note": "九条均属当前作者偏好和活动建议；改写The responder/speaker不会使其成为第三方意见报道。NF为空。"
+    },
+    {
+      "review_id": "m-eb50aba84693bc614015",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17 interview recording与2011制作年份完整保留，未纠正成其他日期。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17原始磁带的完整数字副本及云端存储均保留，complete范围没有削弱。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "Leah recalled与渡轮聚会地点的内容一同保留；仍为人物回忆，未升格为无归属客观史实。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "录音年份、完整云副本、人物回忆均完整；介绍安排正确排除。"
+    },
+    {
+      "review_id": "m-192d9a25960c4acbd823",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "P2、夜间记录、星汀小组当前规则和联合展示资格完整；没有要求补仅context提供的资格证明事实。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "完成校时且保存原始轨迹两前提、任何夜间记录、联合展示零误报保证均保留。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "会议纪要、桑宁主张、每个峰值、直接标天体信号的归属与全称量词完整。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：展示资格、分析结论和个人发言应分开介绍。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：每条意见的发言者姓名应保留。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：可以邀请成员各自选择一条记录来讲述处理过程。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：展示形式我更喜欢短讲配问答。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：不必统一要求所有人采用同一种展示方式。"
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：对于尚有分歧的讨论，不妨留出开放的结尾，下一次活动再继续交流。"
+        }
+      ],
+      "note": "原三事实完整且条件完整；说话者建议/偏好包装不改变其NF性质。NF只覆盖建议碎片，无事实内容。"
+    },
+    {
+      "review_id": "m-446a2867f61f4f7d7cc5",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "M3、密封纸套、一个月、任何色变的因果保证完整保留；source为完整原句，不自行改正。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留M3在linen procedure下具有阴架晾干资格；不要求M1从context补亚麻属性或末次冲洗已完成。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留Dara的过去推荐、布袋优于纸套、M3储存范围；没有把人物推荐当成作者当前建议排除。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三条原事实完整，无额外建议claim；两个展示建议句正确排除。"
+    },
+    {
+      "review_id": "m-57109f7a3e58c10dc0c4",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "T9、岸供、外壳关闭、夜班规定及38摄氏度条件全部保留，属于带条件的一条阈值规则。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "二十分钟相对五分钟、减少测距误差及T9夜班两条件全部保留；没有把假设条件拆成已发生事实。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "林越、会议、认为、所有T9夜班及默认长记录归属完整；不以“应当”误排除人物意见的报道。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "第一条语序调整保留全部条件；三事实与末段建议边界正确。"
+    },
+    {
+      "review_id": "m-10a4dd5ce3d486fb3b8f",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "双次扫描使本站判定可靠性翻倍的关系完整；答案未给具体站名，保留this observatory不算未消解已知名称。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "将同句then展开为after midnight，保留规则、N参考通道及许可模态；source虽短，答案先行词明确。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "把that value展开为recorded wind value of exactly twenty，完整保留定义关系；没有断言实际已测得20。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "source短片段允许使用答案同句显式先行词；When条件不作为实际风值事实，排入建议框架可接受。"
+    },
+    {
+      "review_id": "m-c10193fb9ba8f212708b",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "预约者、区外居住、J4及从家访问许可全部保留，非仅笼统可访问。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "签署会议纪要、Marin、对J4加说话者索引提议归属完整，未改成索引已经存在。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "J4、release rule、允许发布及签署之前的时点完整；source为完整原句。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三事实归属与条件均完整，末段偏好/指示/问题正确排除。"
+    },
+    {
+      "review_id": "m-081d2948e5ee31398b9c",
+      "targets": [],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "七条NF覆盖原回答开放问题、偏好和建议；无客观前提，空claims正确。"
+    },
+    {
+      "review_id": "m-89e30de75e048ec1a354",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "周楠、岸石馆、周三、十八点以后及可预约资格均保留，未变成已有预约。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "余安会议意见、线路封闭、黄卡会员、允许越绳四层完整，未把意见报道改成无归属规定。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "岸石馆场景、面积翻倍使等待焦虑减半的因果量化断言完整保留。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "预约资格、意见归属及数量因果完整保留；尾段为建议非事实。"
+    },
+    {
+      "review_id": "m-604fa0a634ddf9b03c97",
+      "targets": [],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 0,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：说话者希望这次口述史活动更像一次共同倾听，而不是答题比赛。"
+        },
+        {
+          "claim_index": 1,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：说话者提出可以请每位参与者自行选择先听哪一段，再决定是否分享感受。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：讨论时可以围成一个小圈。"
+        },
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：应允许有人只听不说。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：说话者更喜欢开放的提问方式。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：可以邀请大家写下想追问的事情。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：不要要求每个人交出同样数量的问题。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：最后一轮可以用一句话、一个词或一张简笔画来表达个人印象。"
+        },
+        {
+          "claim_index": 8,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：主持方式由小组商量即可。"
+        },
+        {
+          "claim_index": 9,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：背景音乐也请交给参与者选择。"
+        },
+        {
+          "claim_index": 10,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：请留一段安静的收尾时间。"
+        },
+        {
+          "claim_index": 11,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：如果大家不想做集体总结，就把集体总结这一项留空。"
+        },
+        {
+          "claim_index": 12,
+          "kind": "advice_promoted",
+          "reason": "纯NF口述史活动偏好/请求被误纳，改写说话者提出也不改变任务分类；输出：不必勉强凑成统一结论。"
+        }
+      ],
+      "note": "13条无客观事实前提；NF空，错误是把活动建议全部当claim。"
+    },
+    {
+      "review_id": "m-539300760e2c3ee052c6",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "岚台观测组、Q5模板、应划十通道的归属与数值完整保存。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "R8归类及该组定义的语义保留，但单条仍写“该组”，全文的岚台观测组未展开，独立性不足。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "两接收机相关分析、消除全部本地干扰及局部设备范围在全文中保留；单条“这套设备”未消解，不能独立确定主体。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "该组未展开为岚台观测组。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "unresolved_antecedent",
+          "reason": "这套设备未在单条中识别。"
+        }
+      ],
+      "note": "没有额外误纳；三个目标原文语义保留，主要问题是两条不独立。"
+    },
+    {
+      "review_id": "m-4184036b2a564aacd403",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "双次扫描使本站判定可靠性翻倍的关系完整；答案未给具体站名，保留this observatory不算未消解已知名称。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "N参考通道、许可规则保留，then可在全文解析为after midnight；但该条仍写then，独立时间条件未展开。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "第3条That value meets…在全文指恰为20的风值，定义关系仍保留；That value未展开，单条不自足。第2条另把When条件变成实际风值20，单独记额外失真。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 1,
+          "kind": "unresolved_antecedent",
+          "reason": "then没有在单条恢复为after midnight。"
+        },
+        {
+          "claim_index": 2,
+          "kind": "conditional_promoted_to_actual",
+          "reason": "原文When the recorded wind value is exactly twenty是条件，输出却断言The recorded wind value is exactly twenty。"
+        },
+        {
+          "claim_index": 3,
+          "kind": "unresolved_antecedent",
+          "reason": "That value未展开为恰为20的风值。"
+        }
+      ],
+      "note": "三个原目标在全文仍可定位；条件转实际属于额外错误，不把其算成目标遗漏。NF的When…please mark是条件建议框架，不独立断言实测20。"
+    },
+    {
+      "review_id": "m-1085d13b1b97a698b392",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留岩芽会员、三人、每次入场和自动团体折扣，原句与跨度相同。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1,
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "两条分别保存今天检查已完成、主管签字前不能开放；北侧训练区先行词已补回，联合覆盖目标，不因拆成两条扣分。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            3
+          ],
+          "content_retained": true,
+          "standalone": false,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "保留未满十六岁、自动安排、比成年会员容易的比较；但单条只写“场馆”，未将全文明确的岩芽馆补回，独立主体仍欠明。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "unresolved_antecedent",
+          "reason": "场馆未展开为岩芽馆。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "介绍顺序/讨论/展示形式的当前建议误纳；输出：给第一次来馆的人做介绍时，建议把价格、区域使用和路线选择分开讨论。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "介绍顺序/讨论/展示形式的当前建议误纳；输出：应请访客先说自己最想了解什么，再安排介绍顺序。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "介绍顺序/讨论/展示形式的当前建议误纳；输出：可以请同行者各自表达对当天安排的偏好，不要急着替每个人选路线。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "介绍顺序/讨论/展示形式的当前建议误纳；输出：展示形式用纸卡或口头说明都可以。"
+        }
+      ],
+      "note": "拆分检查和签字条件保持覆盖；另外四条建议误纳，不能因偏好一句放NF就算完整筛选。"
+    },
+    {
+      "review_id": "m-21ce392314b673005b3e",
+      "targets": [],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "维护工作坊的六段问题、偏好、建议均为NF；空claims完整正确。"
+    },
+    {
+      "review_id": "m-3adf4f360881b1461e0f",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17 interview recording与2011制作年份完整保留，未纠正成其他日期。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17原始磁带的完整数字副本及云端存储均保留，complete范围没有削弱。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "Leah recalled与渡轮聚会地点的内容一同保留；仍为人物回忆，未升格为无归属客观史实。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三条原事实完整，人物回忆归属保留；介绍偏好/请求正确排除。"
+    },
+    {
+      "review_id": "m-29fc7ea3fbee43689328",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "P2、夜间记录、星汀小组当前规则和联合展示资格完整；没有要求补仅context提供的资格证明事实。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "完成校时且保存原始轨迹两前提、任何夜间记录、联合展示零误报保证均保留。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "会议纪要、桑宁主张、每个峰值、直接标天体信号的归属与全称量词完整。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：说话者建议将展示资格、分析结论和个人发言分开介绍。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：说话者建议保留每条意见的发言者姓名。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：可以邀请成员各自选择一条记录来讲述处理过程。"
+        },
+        {
+          "claim_index": 6,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：展示形式说话者更喜欢短讲配问答，但不必统一要求所有人采用同一种方式。"
+        },
+        {
+          "claim_index": 7,
+          "kind": "advice_promoted",
+          "reason": "当前建议/请求/偏好没有新增事实前提；输出：对于尚有分歧的讨论，不妨留出开放的结尾，下一次活动再继续交流。"
+        }
+      ],
+      "note": "原三事实完整且条件完整；说话者建议/偏好包装不改变其NF性质。NF只覆盖建议碎片，无事实内容。"
+    },
+    {
+      "review_id": "m-265f134b8871a2c694dc",
+      "targets": [],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "六段活动建议与偏好全部置NF，无事实前提和误纳。"
+    },
+    {
+      "review_id": "m-a0c90b655b3a5fa4e53d",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17 interview recording与2011制作年份完整保留，未纠正成其他日期。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "O17原始磁带的完整数字副本及云端存储均保留，complete范围没有削弱。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "Leah recalled与渡轮聚会地点的内容一同保留；仍为人物回忆，未升格为无归属客观史实。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "三个事实及限定逐句保留；介绍方式的两句建议正确排除。"
+    },
+    {
+      "review_id": "m-8f5ba29a1779766cf336",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "B7被按工作室定义归为cool rinse完整；不要求补context中的温度证明。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "B7、原色保持及十二次洗涤全部保留，没有删去次数。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "B7标签、晾板放置期间及必须向上条件完整保留，不改正原错误。"
+        }
+      ],
+      "no_false_claims": false,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": false,
+      "issues": [
+        {
+          "claim_index": 3,
+          "kind": "advice_promoted",
+          "reason": "I would put是当前讲解偏好，不是批次事实。"
+        },
+        {
+          "claim_index": 4,
+          "kind": "advice_promoted",
+          "reason": "Please invite questions被改成speaker would invite，祈使不是已发生或确定发生动作。"
+        },
+        {
+          "claim_index": 5,
+          "kind": "advice_promoted",
+          "reason": "let visitors choose被改成speaker would let，仍是提议动作而非事实。"
+        }
+      ],
+      "note": "B7三目标完整保留；后面三条介绍建议误纳，只有Keep tone被排NF。"
+    },
+    {
+      "review_id": "m-9b29dc973a827269d0c3",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "T9、岸供、外壳关闭、夜班规定及38摄氏度条件全部保留，属于带条件的一条阈值规则。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "二十分钟相对五分钟、减少测距误差及T9夜班两条件全部保留；没有把假设条件拆成已发生事实。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "林越、会议、认为、所有T9夜班及默认长记录归属完整；不以“应当”误排除人物意见的报道。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "原三事实条件/数量/归属完整，所有写作安排均排NF。"
+    },
+    {
+      "review_id": "m-c51d326f4755cb02f372",
+      "targets": [
+        {
+          "id": "t1",
+          "claim_indices": [
+            0
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "双次扫描使本站判定可靠性翻倍的关系完整；答案未给具体站名，保留this observatory不算未消解已知名称。"
+        },
+        {
+          "id": "t2",
+          "claim_indices": [
+            1
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "将同句then展开为after midnight，保留规则、N参考通道及许可模态；source虽短，答案先行词明确。"
+        },
+        {
+          "id": "t3",
+          "claim_indices": [
+            2
+          ],
+          "content_retained": true,
+          "standalone": true,
+          "faithful": true,
+          "source_sufficient": true,
+          "atomic": true,
+          "reason": "把that value展开为recorded wind value of exactly twenty，完整保留定义关系；没有断言实际已测得20。"
+        }
+      ],
+      "no_false_claims": true,
+      "no_fact_in_nf": true,
+      "all_claims_well_formed": true,
+      "issues": [],
+      "note": "then和that value在claim中正确展开，同句先行词支持短source跨度；纯建议框架排NF合理。"
+    }
+  ]
+}
