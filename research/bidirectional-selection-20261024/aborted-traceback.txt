@@ -1,0 +1,28 @@
+Captured from exec session 5420, exit_code 1, on 2026-10-24.
+Path prefixes below shortened to <original-run> for readability; source line numbers retained.
+
+Traceback (most recent call last):
+  <original-run>/source/research/bidirectional-selection-20261024/pilot.py, line 467, in <module>
+    raise SystemExit(main())
+  line 458, in main
+    result = run(output, pilot_settings(env_file))
+  line 384, in run
+    list(pool.map(worker, jobs(cases, seeds)))
+  concurrent/futures/_base.py, lines 619, 317, 401
+    raise self._exception
+  concurrent/futures/thread.py, line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  pilot.py, line 380, in worker
+    call(probe, case["id"], arm, repetition, payload, prompts()[arm], validate, position)
+  pilot.py, line 363, in call
+    record_result(record)
+  pilot.py, line 354, in record_result
+    write_progress(output / "progress.json", progress)
+  pilot.py, line 119, in write_progress
+    os.replace(temp, path)
+PermissionError: [WinError 5] Access denied:
+  <original-run>/progress.json.tmp -> <original-run>/progress.json
+
+Important: this returned traceback is a post-journal progress failure, not proof
+that the single started-but-unjournaled reservation never reached the provider.
+The possible extra attempt and unknown usage are retained in accounting.
