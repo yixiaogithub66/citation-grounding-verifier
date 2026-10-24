@@ -1,0 +1,1176 @@
+{
+  "reviewer_note": "Root AI逐条检查64条盲审输出后整理；评分前未打开private-key或按臂结果。不属于作者裁定。有效事实保留是选择语义口径；可唯一解回的原文指代另注独立自足不足。sel04严格主口径与假设范围敏感性分开。",
+  "reviews": [
+    {
+      "review_id": "r-3142d8da529fa1d292c7c743",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b6d6a87b4e2eed0e8768f296",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留若岚压辊、手动模式、不自动回位。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留操作记录归属、绒面试片、每次夹持上限17秒；该室指向前述若岚试验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-128a030d0f812f3feb94927b",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔'"
+    },
+    {
+      "review_id": "r-b146ef80bcf4f071a7b5edb2",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-487f58ccbfae4b32acb7851e",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-d247f6bec62efd581334f19b",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-10462819755dd8d9ce5a513b",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-7e9b364f7fb15b43628e82a0",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留若岚压辊、手动模式、不自动回位。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留操作记录归属、绒面试片、每次夹持上限17秒；该室指向前述若岚试验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-d05907caf7922868f3a0df9e",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-fceb4f5ad6c164fce459e12a",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-5c904a79e7122c8c42559d26",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-3dcb2c4a5a4f4b79e69fc286",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-ee153d1e8c904b799343663b",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-b1c03c788b40847cf038bb75",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        },
+        {
+          "claim_index": 1,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-4a63edf67eaa0462bda0a0ce",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否'"
+    },
+    {
+      "review_id": "r-4e1384e51b5d47ad02884384",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-09bfee0e46f0f97037dbe486",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-037099894613280d11c4331e",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f6c7c76c9a224ff714016877",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留若岚压辊、手动模式、不自动回位。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留操作记录归属、绒面试片、每次夹持上限17秒；该室指向前述若岚试验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-d1e902fea055672af6e1ae93",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留若岚压辊、手动模式、不自动回位。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留操作记录归属、绒面试片、每次夹持上限17秒；该室指向前述若岚试验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-e878d81035cda2b85c2608b8",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b1800d66f74b9107c9035f2f",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        },
+        {
+          "claim_index": 1,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f56061f38e2ba0954cdd699f",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        },
+        {
+          "claim_index": 1,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a70dc2441b40759ac692e141",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-0f7f6dc647979023d84a6516",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a6cb57e182df5854e8d9ab9a",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否'"
+    },
+    {
+      "review_id": "r-1ca59880a3753c35406b9089",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留栎声采集器、启用远程监听条件、本地音量降低6分贝。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留固件说明归属、断电条件与临时标记不保留；它指向唯一前述采集器。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-dc1bc1e2c8be61ff2cb44c9b",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        },
+        {
+          "claim_index": 1,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-e34913c8d7babe57cba2ca26",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留栎声采集器、启用远程监听条件、本地音量降低6分贝。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留固件说明归属、断电条件与临时标记不保留；它指向唯一前述采集器。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-accdd61e113c4172f14c49e6",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-30f311e0b0461bfec83f0376",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-3a4bb4a38a3f135e3e9bee7c",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔'"
+    },
+    {
+      "review_id": "r-b2d73d1ff9ca962ad1811d27",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-c2dbd461a948ac040ceeeed4",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        },
+        {
+          "claim_index": 1,
+          "type": "question_as_fact",
+          "reason": "询问设备性能不构成性能事实；复写问句进入claims或把问题变成已断言的尚不确定均不是原文事实提取。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-b48842c2eeddf7bbbf564f9c",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-568fe25c13cb55c14d5bc5f7",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-78878b6c874d35863db48552",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-8cf597c752d18ae77914a22e",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-16cccac958caeff242e0489e",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-c87271dadf30a43135a8e6de",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": "仅第一条保留imaginary tray，第二条未显式保留练习/假设，但tray可回指该虚构托盘。宽松敏感性存在双解，报告下上界，不硬判现实虚构。"
+    },
+    {
+      "review_id": "r-1f3f3892e3dee104d1d7dd1d",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-144502c87f13df871644bff4",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留栎声采集器、启用远程监听条件、本地音量降低6分贝。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留固件说明归属、断电条件与临时标记不保留；它指向唯一前述采集器。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-7acbe131e4d144b4aef078cb",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-c598af5d12153dd45de24fc7",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留栎声采集器、启用远程监听条件、本地音量降低6分贝。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留固件说明归属、断电条件与临时标记不保留；它指向唯一前述采集器。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-097ddbc6a76e5e56e92c004f",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-484f43c0257183b94731d262",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-6ff9f1270df7df152442f657",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-2155040c7aa4c5647553030a",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-dab7b65d9de97430618ec70d",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-a2b064114bf3807beecf0ef5",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": true,
+      "uncertainty": "明确保留hypothetical/exercise/assumed范围；预登记的宽松假设范围敏感性可接受本输出。"
+    },
+    {
+      "review_id": "r-54cf9a8b78bcb1cc60553304",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否'"
+    },
+    {
+      "review_id": "r-d883a5c9e8f904a5476e0859",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-5b393691a88ebfb50a51e514",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留栎声采集器、启用远程监听条件、本地音量降低6分贝。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留固件说明归属、断电条件与临时标记不保留；它指向唯一前述采集器。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-f59067d573c757d2b01f8b1a",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-652edfcd726ee71e5cb7cd31",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-02d077912f6841fa524c2313",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否'"
+    },
+    {
+      "review_id": "r-fd0a48d8cf3b7025b1c4ea7c",
+      "target_mappings": [],
+      "spurious_claims": [
+        {
+          "claim_index": 0,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        },
+        {
+          "claim_index": 1,
+          "type": "other",
+          "reason": "原文要求在练习中假设，不是事实断言；按冻结主口径应放NF。保留想象范围的内容不可等同现实虚构。"
+        }
+      ],
+      "semantic_complete": false,
+      "scoped_assumption_only": false,
+      "uncertainty": "仅第一条保留imaginary tray，第二条未显式保留练习/假设，但tray可回指该虚构托盘。宽松敏感性存在双解，报告下上界，不硬判现实虚构。"
+    },
+    {
+      "review_id": "r-03c94ebaf9f5df93bd7ccdc9",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-e3a00b7a1b1990c35c06584b",
+      "target_mappings": [
+        {
+          "fact_id": "sel-13-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留Norvale实验室、linen reference swatches和58°C干燥条件。"
+        },
+        {
+          "fact_id": "sel-13-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留inspection sheet归属、Juniper-14、第三次洗涤后2.7%收缩上限而非实测值；Its指向前述实验室。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "指代诊断：第二条未完全独立命名前述实体，但在回答/声明列表中先行词唯一。选择保真记保留，不据此宣称独立自足契约已满足。"
+    },
+    {
+      "review_id": "r-742a48f8abfe93dcf189dea8",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-0576b8b742fd29cc40802866",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-fa8c4571703f5b0fb0bc04eb",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f57d1decc2318afee14d1d32",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [],
+          "retained": null,
+          "reason": "结构/覆盖校验未通过，无法作为完成的提取评分；不是已证实语义遗漏。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": null,
+      "scoped_assumption_only": false,
+      "uncertainty": "technical-unscorable: Extraction left answer text unaccounted for near: '既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔'"
+    },
+    {
+      "review_id": "r-382df9e5fef2729fd9ee5eae",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留雾化泵主体与低于42%为必要条件，未将其改为充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    }
+  ]
+}

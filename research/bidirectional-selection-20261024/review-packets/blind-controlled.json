@@ -1,0 +1,2387 @@
+{
+  "schema_version": "bidirectional-blind-review-v1",
+  "review_guidance": {
+    "scope": "AI semantic review of synthetic M1 selection only; not author final adjudication.",
+    "indices": "claim_indices and claim_index are zero-based indices into validated_output.claims.",
+    "technical_gate": "If status is not valid, set semantic_complete to null, all target retained values to null, and uncertainty to a technical-unscorable explanation. Leave spurious_claims empty as unscored, never count that empty list as zero false positives. Raw output is diagnostic only and must not silently replace a failed validated output.",
+    "target_mapping": "For each expected fact, map the claim indices that preserve its asserted meaning. Semantic paraphrases are allowed. Subject, relation, attribution, polarity, necessary versus sufficient conditions, numeric scope and modality must be retained. Explain missing or altered elements; do not use word overlap alone as proof.",
+    "spurious": "List every claim that asserts content the answer does not assert, including advice or a question promoted to a fact, unsupported strengthening, lost attribution/scope, or new invented content. A list of expected facts is not a whitelist that excuses other invented assertions. Do not automatically classify all conditional statements as non-factual; asserted conditional rules remain facts.",
+    "completeness": "For technically valid output, semantic_complete is true only if every expected fact is retained and no spurious asserted claim remains. Pure NF answers require no asserted fact. For technical failure semantic_complete is null, not false or true.",
+    "scoped_assumption_only": "Flag true if the apparent extra assertions are exclusively explicitly scoped fictional assumptions rather than statements about actual conditions. Explain the scope in uncertainty. Keep their status visible for coordinator adjudication; do not silently redefine the expected labels. Otherwise use false.",
+    "blindness": "Do not inspect private-key.json, original responses, prompts, draft inputs, usage or this generator while reviewing. The packet order and review IDs do not encode a meaningful rank. Repeated answers are expected; judge each output independently.",
+    "output": "Return one review object for every review_id, using the supplied scoring schema."
+  },
+  "scoring_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "review_id",
+      "target_mappings",
+      "spurious_claims",
+      "semantic_complete",
+      "scoped_assumption_only",
+      "uncertainty"
+    ],
+    "properties": {
+      "review_id": {
+        "type": "string"
+      },
+      "target_mappings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "fact_id",
+            "claim_indices",
+            "retained",
+            "reason"
+          ],
+          "properties": {
+            "fact_id": {
+              "type": "string"
+            },
+            "claim_indices": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "retained": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "spurious_claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "claim_index",
+            "type",
+            "reason"
+          ],
+          "properties": {
+            "claim_index": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "advice_as_fact",
+                "question_as_fact",
+                "hypothesis_scope_lost",
+                "attribution_lost",
+                "semantic_strengthening",
+                "invented_content",
+                "other"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "semantic_complete": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "scoped_assumption_only": {
+        "type": "boolean"
+      },
+      "uncertainty": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  },
+  "integrity": {
+    "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+    "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+    "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+    "record_count": 24,
+    "unique_review_ids": 24,
+    "unique_answer_count": 12,
+    "technical_status_counts": {
+      "valid": 24
+    },
+    "target_mapping_slots": 24,
+    "pure_nf_records": 12,
+    "records_sha256_canonical": "005530698227123c36e8ba5d72be4ad81217fea7109f9487f99e91f3ee03d6a0"
+  },
+  "records": [
+    {
+      "review_id": "r-5ee6edad78e7188551a8f68b",
+      "generated_answer": "既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔记的排列方式，请自行决定。",
+      "expected_facts": [
+        {
+          "id": "sel-06-f1",
+          "description": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+          "source_quote": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝",
+          "required_semantic_elements": [
+            "栎声采集器",
+            "启用远程监听时",
+            "本地回放音量降低6分贝"
+          ]
+        },
+        {
+          "id": "sel-06-f2",
+          "description": "它的固件说明明确写着，断电后临时标记不会保留。",
+          "source_quote": "它的固件说明明确写着，断电后临时标记不会保留",
+          "required_semantic_elements": [
+            "归属为该采集器的固件说明",
+            "断电后",
+            "临时标记不会保留"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "启用远程监听时，栎声采集器会将本地回放音量降低6分贝。",
+            "source_span": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝"
+          },
+          {
+            "claim_text": "栎声采集器的固件说明明确写着，断电后临时标记不会保留。",
+            "source_span": "它的固件说明明确写着，断电后临时标记不会保留"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "既然",
+            "reason": "连词，不构成事实性断言。"
+          },
+          {
+            "text": "，建议你先选好监听方式再调节回放音量。",
+            "reason": "向用户提出的建议，本身不是事实性断言。"
+          },
+          {
+            "text": "另外，",
+            "reason": "语篇连接词，不构成事实性断言。"
+          },
+          {
+            "text": "，所以关机前请按自己的需要整理标记。",
+            "reason": "向用户提出的建议，本身不是事实性断言。"
+          },
+          {
+            "text": "至于文件夹的名字和笔记的排列方式，请自行决定。",
+            "reason": "让用户自行决定的指示，本身不是事实性断言。"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "启用远程监听时，栎声采集器会将本地回放音量降低6分贝。",
+            "source_span": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝",
+            "source_start": 2,
+            "source_end": 28
+          },
+          {
+            "claim_text": "栎声采集器的固件说明明确写着，断电后临时标记不会保留。",
+            "source_span": "它的固件说明明确写着，断电后临时标记不会保留",
+            "source_start": 50,
+            "source_end": 72
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "既然",
+            "reason": "连词，不构成事实性断言。",
+            "source_start": 0,
+            "source_end": 2
+          },
+          {
+            "text": "，建议你先选好监听方式再调节回放音量。",
+            "reason": "向用户提出的建议，本身不是事实性断言。",
+            "source_start": 28,
+            "source_end": 47
+          },
+          {
+            "text": "另外，",
+            "reason": "语篇连接词，不构成事实性断言。",
+            "source_start": 47,
+            "source_end": 50
+          },
+          {
+            "text": "，所以关机前请按自己的需要整理标记。",
+            "reason": "向用户提出的建议，本身不是事实性断言。",
+            "source_start": 72,
+            "source_end": 90
+          },
+          {
+            "text": "至于文件夹的名字和笔记的排列方式，请自行决定。",
+            "reason": "让用户自行决定的指示，本身不是事实性断言。",
+            "source_start": 90,
+            "source_end": 113
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-06-f2"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-75d275ecb417d0ec25c13900",
+      "generated_answer": "Choose a name for your fabric notebook and write it wherever you prefer on the cover. Please decide whether to arrange your entries by date, by colour, or in some other order of your own. Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout. Before starting a new page, pick the headings you want to use. You may ask a colleague to suggest another arrangement, or keep the decision to yourself. Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Choose a name for your fabric notebook and write it wherever you prefer on the cover.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "Please decide whether to arrange your entries by date, by colour, or in some other order of your own.",
+            "reason": "Request to make a decision, not a factual assertion."
+          },
+          {
+            "text": "Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout.",
+            "reason": "Suggestion/advice, not an assertion that a margin was drawn."
+          },
+          {
+            "text": "Before starting a new page, pick the headings you want to use.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "You may ask a colleague to suggest another arrangement, or keep the decision to yourself.",
+            "reason": "Permission/option offered, not an assertion that an action occurred."
+          },
+          {
+            "text": "Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+            "reason": "Instruction/advice, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Choose a name for your fabric notebook and write it wherever you prefer on the cover.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 0,
+            "source_end": 85
+          },
+          {
+            "text": "Please decide whether to arrange your entries by date, by colour, or in some other order of your own.",
+            "reason": "Request to make a decision, not a factual assertion.",
+            "source_start": 86,
+            "source_end": 187
+          },
+          {
+            "text": "Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout.",
+            "reason": "Suggestion/advice, not an assertion that a margin was drawn.",
+            "source_start": 188,
+            "source_end": 293
+          },
+          {
+            "text": "Before starting a new page, pick the headings you want to use.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 294,
+            "source_end": 356
+          },
+          {
+            "text": "You may ask a colleague to suggest another arrangement, or keep the decision to yourself.",
+            "reason": "Permission/option offered, not an assertion that an action occurred.",
+            "source_start": 357,
+            "source_end": 446
+          },
+          {
+            "text": "Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 447,
+            "source_end": 541
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-9b21600d862b458d3dd36dbe",
+      "generated_answer": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read. You may use a short label or a longer description; pick one and keep it beside your draft. Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand. Before your next session, revisit the title and make any changes you prefer. If you want a different layout, try moving the headings around. Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "You may use a short label or a longer description; pick one and keep it beside your draft.",
+            "reason": "Permission and instruction, not a factual assertion."
+          },
+          {
+            "text": "Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand.",
+            "reason": "Suggestion and instruction; no asserted fact."
+          },
+          {
+            "text": "Before your next session, revisit the title and make any changes you prefer.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "If you want a different layout, try moving the headings around.",
+            "reason": "Conditional suggestion, not a factual assertion."
+          },
+          {
+            "text": "Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+            "reason": "Instruction and conditional suggestion, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 0,
+            "source_end": 118
+          },
+          {
+            "text": "You may use a short label or a longer description; pick one and keep it beside your draft.",
+            "reason": "Permission and instruction, not a factual assertion.",
+            "source_start": 119,
+            "source_end": 209
+          },
+          {
+            "text": "Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand.",
+            "reason": "Suggestion and instruction; no asserted fact.",
+            "source_start": 210,
+            "source_end": 326
+          },
+          {
+            "text": "Before your next session, revisit the title and make any changes you prefer.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 327,
+            "source_end": 403
+          },
+          {
+            "text": "If you want a different layout, try moving the headings around.",
+            "reason": "Conditional suggestion, not a factual assertion.",
+            "source_start": 404,
+            "source_end": 467
+          },
+          {
+            "text": "Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+            "reason": "Instruction and conditional suggestion, not a factual assertion.",
+            "source_start": 468,
+            "source_end": 557
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-561528164bb2d521b62c4e67",
+      "generated_answer": "Because the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened, let that interval finish before choosing your next inspection step. Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later. Also, since the cabinet's drain sensor is disabled throughout transport mode, remember to inspect the drain by hand before loading it for a move. Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+      "expected_facts": [
+        {
+          "id": "sel-02-f1",
+          "description": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+          "source_quote": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened",
+          "required_semantic_elements": [
+            "Larchmere germination cabinet",
+            "vent opens for 11 minutes",
+            "whenever the lid is reopened"
+          ]
+        },
+        {
+          "id": "sel-02-f2",
+          "description": "The Larchmere germination cabinet's drain sensor is disabled throughout transport mode.",
+          "source_quote": "the cabinet's drain sensor is disabled throughout transport mode",
+          "required_semantic_elements": [
+            "drain sensor of that same cabinet",
+            "disabled throughout transport mode"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+            "source_span": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened"
+          },
+          {
+            "claim_text": "The cabinet's drain sensor is disabled throughout transport mode.",
+            "source_span": "the cabinet's drain sensor is disabled throughout transport mode"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Because ",
+            "reason": "Causal connective framing procedural advice, not itself a factual assertion."
+          },
+          {
+            "text": ", let that interval finish before choosing your next inspection step.",
+            "reason": "Instruction or advice."
+          },
+          {
+            "text": "Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later.",
+            "reason": "Request or instruction."
+          },
+          {
+            "text": "Also, since ",
+            "reason": "Discourse connective framing procedural advice."
+          },
+          {
+            "text": ", remember to inspect the drain by hand before loading it for a move.",
+            "reason": "Instruction or advice."
+          },
+          {
+            "text": "Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+            "reason": "Instruction or subjective preference."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+            "source_span": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened",
+            "source_start": 8,
+            "source_end": 100
+          },
+          {
+            "claim_text": "The cabinet's drain sensor is disabled throughout transport mode.",
+            "source_span": "the cabinet's drain sensor is disabled throughout transport mode",
+            "source_start": 319,
+            "source_end": 383
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Because ",
+            "reason": "Causal connective framing procedural advice, not itself a factual assertion.",
+            "source_start": 0,
+            "source_end": 8
+          },
+          {
+            "text": ", let that interval finish before choosing your next inspection step.",
+            "reason": "Instruction or advice.",
+            "source_start": 100,
+            "source_end": 169
+          },
+          {
+            "text": "Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later.",
+            "reason": "Request or instruction.",
+            "source_start": 170,
+            "source_end": 306
+          },
+          {
+            "text": "Also, since ",
+            "reason": "Discourse connective framing procedural advice.",
+            "source_start": 307,
+            "source_end": 319
+          },
+          {
+            "text": ", remember to inspect the drain by hand before loading it for a move.",
+            "reason": "Instruction or advice.",
+            "source_start": 383,
+            "source_end": 452
+          },
+          {
+            "text": "Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+            "reason": "Instruction or subjective preference.",
+            "source_start": 453,
+            "source_end": 567
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-02-f1"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-ef8601551e203b0e0b1de420",
+      "generated_answer": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read. You may use a short label or a longer description; pick one and keep it beside your draft. Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand. Before your next session, revisit the title and make any changes you prefer. If you want a different layout, try moving the headings around. Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read.",
+            "reason": "Instruction/procedural guidance, not a factual assertion."
+          },
+          {
+            "text": "You may use a short label or a longer description; pick one and keep it beside your draft.",
+            "reason": "Permission and instruction, not a factual assertion."
+          },
+          {
+            "text": "Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand.",
+            "reason": "Suggestion and instruction, not a factual assertion."
+          },
+          {
+            "text": "Before your next session, revisit the title and make any changes you prefer.",
+            "reason": "Instruction, not a factual assertion."
+          },
+          {
+            "text": "If you want a different layout, try moving the headings around.",
+            "reason": "Conditional suggestion/instruction, not a factual assertion."
+          },
+          {
+            "text": "Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+            "reason": "Instruction, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Please choose a recording title before you begin, then arrange your notes in whichever order you find easiest to read.",
+            "reason": "Instruction/procedural guidance, not a factual assertion.",
+            "source_start": 0,
+            "source_end": 118
+          },
+          {
+            "text": "You may use a short label or a longer description; pick one and keep it beside your draft.",
+            "reason": "Permission and instruction, not a factual assertion.",
+            "source_start": 119,
+            "source_end": 209
+          },
+          {
+            "text": "Consider leaving a blank line between listening notes, and decide for yourself whether to write those notes by hand.",
+            "reason": "Suggestion and instruction, not a factual assertion.",
+            "source_start": 210,
+            "source_end": 326
+          },
+          {
+            "text": "Before your next session, revisit the title and make any changes you prefer.",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 327,
+            "source_end": 403
+          },
+          {
+            "text": "If you want a different layout, try moving the headings around.",
+            "reason": "Conditional suggestion/instruction, not a factual assertion.",
+            "source_start": 404,
+            "source_end": 467
+          },
+          {
+            "text": "Take a pause whenever you feel like one, and ask a colleague for suggestions if you wish.",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 468,
+            "source_end": 557
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-337318724cc19f0260d73ecf",
+      "generated_answer": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？",
+            "reason": "suggestion/question, not a factual assertion"
+          },
+          {
+            "text": "要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？",
+            "reason": "question proposing a topic, not a factual assertion"
+          },
+          {
+            "text": "请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。",
+            "reason": "instruction, not a factual assertion"
+          },
+          {
+            "text": "你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。",
+            "reason": "suggestion, not a factual assertion"
+          },
+          {
+            "text": "不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。",
+            "reason": "suggestion, not a factual assertion"
+          },
+          {
+            "text": "请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。",
+            "reason": "instruction/choice, not a factual assertion"
+          },
+          {
+            "text": "接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。",
+            "reason": "instruction, not a factual assertion"
+          },
+          {
+            "text": "不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。",
+            "reason": "instruction, not a factual assertion"
+          },
+          {
+            "text": "对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。",
+            "reason": "instruction/preference, not a factual assertion"
+          },
+          {
+            "text": "如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+            "reason": "conditional instruction, not a factual assertion"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？",
+            "reason": "suggestion/question, not a factual assertion",
+            "source_start": 0,
+            "source_end": 33
+          },
+          {
+            "text": "要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？",
+            "reason": "question proposing a topic, not a factual assertion",
+            "source_start": 33,
+            "source_end": 62
+          },
+          {
+            "text": "请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。",
+            "reason": "instruction, not a factual assertion",
+            "source_start": 62,
+            "source_end": 93
+          },
+          {
+            "text": "你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。",
+            "reason": "suggestion, not a factual assertion",
+            "source_start": 93,
+            "source_end": 126
+          },
+          {
+            "text": "不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。",
+            "reason": "suggestion, not a factual assertion",
+            "source_start": 126,
+            "source_end": 169
+          },
+          {
+            "text": "请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。",
+            "reason": "instruction/choice, not a factual assertion",
+            "source_start": 169,
+            "source_end": 214
+          },
+          {
+            "text": "接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。",
+            "reason": "instruction, not a factual assertion",
+            "source_start": 214,
+            "source_end": 244
+          },
+          {
+            "text": "不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。",
+            "reason": "instruction, not a factual assertion",
+            "source_start": 244,
+            "source_end": 277
+          },
+          {
+            "text": "对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。",
+            "reason": "instruction/preference, not a factual assertion",
+            "source_start": 277,
+            "source_end": 305
+          },
+          {
+            "text": "如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+            "reason": "conditional instruction, not a factual assertion",
+            "source_start": 305,
+            "source_end": 336
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-20f065d602ebc900d0e44e1e",
+      "generated_answer": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。建议你把复查安排在方便的时候；要不要拍照、给照片取什么名字，都请自行决定。最后请把工具放回你选定的位置。你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。",
+            "reason": "Instruction, not a factual assertion."
+          },
+          {
+            "text": "建议你把复查安排在方便的时候；",
+            "reason": "Advice, not an assertion that any scheduling occurred."
+          },
+          {
+            "text": "要不要拍照、给照片取什么名字，都请自行决定。",
+            "reason": "Instruction/decision request; no factual assertion."
+          },
+          {
+            "text": "最后请把工具放回你选定的位置。",
+            "reason": "Instruction, not a factual assertion."
+          },
+          {
+            "text": "你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。",
+            "reason": "Optional suggestion; no factual assertion."
+          },
+          {
+            "text": "请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。",
+            "reason": "Instruction/decision request, not a factual assertion."
+          },
+          {
+            "text": "愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。",
+            "reason": "Optional instruction; no factual assertion."
+          },
+          {
+            "text": "还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。",
+            "reason": "Request to consider options; no factual assertion."
+          },
+          {
+            "text": "关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。",
+            "reason": "Instruction/advice; no factual assertion."
+          },
+          {
+            "text": "最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。",
+            "reason": "Instruction, not a factual assertion."
+          },
+          {
+            "text": "若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+            "reason": "Conditional suggestion; no factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 0,
+            "source_end": 32
+          },
+          {
+            "text": "建议你把复查安排在方便的时候；",
+            "reason": "Advice, not an assertion that any scheduling occurred.",
+            "source_start": 32,
+            "source_end": 47
+          },
+          {
+            "text": "要不要拍照、给照片取什么名字，都请自行决定。",
+            "reason": "Instruction/decision request; no factual assertion.",
+            "source_start": 47,
+            "source_end": 69
+          },
+          {
+            "text": "最后请把工具放回你选定的位置。",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 69,
+            "source_end": 84
+          },
+          {
+            "text": "你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。",
+            "reason": "Optional suggestion; no factual assertion.",
+            "source_start": 84,
+            "source_end": 121
+          },
+          {
+            "text": "请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。",
+            "reason": "Instruction/decision request, not a factual assertion.",
+            "source_start": 121,
+            "source_end": 162
+          },
+          {
+            "text": "愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。",
+            "reason": "Optional instruction; no factual assertion.",
+            "source_start": 162,
+            "source_end": 197
+          },
+          {
+            "text": "还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。",
+            "reason": "Request to consider options; no factual assertion.",
+            "source_start": 197,
+            "source_end": 224
+          },
+          {
+            "text": "关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。",
+            "reason": "Instruction/advice; no factual assertion.",
+            "source_start": 224,
+            "source_end": 273
+          },
+          {
+            "text": "最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 273,
+            "source_end": 309
+          },
+          {
+            "text": "若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+            "reason": "Conditional suggestion; no factual assertion.",
+            "source_start": 309,
+            "source_end": 337
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-980a9cc8fe70309575869570",
+      "generated_answer": "Since the Fenhaven ferry accepts bicycles only on its lower deck, plan where you would like to stand after boarding and choose a place for your travel notes. You may sketch your intended route or simply write down the stops you want to remember. Also, because its timetable lists a 26-minute crossing for the evening service, decide how you would prefer to use that interval. Consider bringing something to read, or leave the time unplanned. Please pick your own departure date and ask your companions which meeting place they would like.",
+      "expected_facts": [
+        {
+          "id": "sel-10-f1",
+          "description": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+          "source_quote": "the Fenhaven ferry accepts bicycles only on its lower deck",
+          "required_semantic_elements": [
+            "Fenhaven ferry",
+            "bicycles accepted only on lower deck"
+          ]
+        },
+        {
+          "id": "sel-10-f2",
+          "description": "The Fenhaven ferry timetable lists a 26-minute crossing for the evening service.",
+          "source_quote": "its timetable lists a 26-minute crossing for the evening service",
+          "required_semantic_elements": [
+            "attribution to its timetable",
+            "26-minute crossing",
+            "evening service only"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+            "source_span": "the Fenhaven ferry accepts bicycles only on its lower deck"
+          },
+          {
+            "claim_text": "The Fenhaven ferry's timetable lists a 26-minute crossing for the evening service.",
+            "source_span": "its timetable lists a 26-minute crossing for the evening service"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Since ",
+            "reason": "Conjunction introducing a factual premise followed by advice."
+          },
+          {
+            "text": ", plan where you would like to stand after boarding and choose a place for your travel notes.",
+            "reason": "Advice/instruction."
+          },
+          {
+            "text": "You may sketch your intended route or simply write down the stops you want to remember.",
+            "reason": "Suggestion, not an assertion of fact."
+          },
+          {
+            "text": "Also, because ",
+            "reason": "Transitional wording introducing a factual premise followed by advice."
+          },
+          {
+            "text": ", decide how you would prefer to use that interval.",
+            "reason": "Advice/instruction."
+          },
+          {
+            "text": "Consider bringing something to read, or leave the time unplanned.",
+            "reason": "Suggestion, not an assertion of fact."
+          },
+          {
+            "text": "Please pick your own departure date and ask your companions which meeting place they would like.",
+            "reason": "Request/instruction."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+            "source_span": "the Fenhaven ferry accepts bicycles only on its lower deck",
+            "source_start": 6,
+            "source_end": 64
+          },
+          {
+            "claim_text": "The Fenhaven ferry's timetable lists a 26-minute crossing for the evening service.",
+            "source_span": "its timetable lists a 26-minute crossing for the evening service",
+            "source_start": 260,
+            "source_end": 324
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Since ",
+            "reason": "Conjunction introducing a factual premise followed by advice.",
+            "source_start": 0,
+            "source_end": 6
+          },
+          {
+            "text": ", plan where you would like to stand after boarding and choose a place for your travel notes.",
+            "reason": "Advice/instruction.",
+            "source_start": 64,
+            "source_end": 157
+          },
+          {
+            "text": "You may sketch your intended route or simply write down the stops you want to remember.",
+            "reason": "Suggestion, not an assertion of fact.",
+            "source_start": 158,
+            "source_end": 245
+          },
+          {
+            "text": "Also, because ",
+            "reason": "Transitional wording introducing a factual premise followed by advice.",
+            "source_start": 246,
+            "source_end": 260
+          },
+          {
+            "text": ", decide how you would prefer to use that interval.",
+            "reason": "Advice/instruction.",
+            "source_start": 324,
+            "source_end": 375
+          },
+          {
+            "text": "Consider bringing something to read, or leave the time unplanned.",
+            "reason": "Suggestion, not an assertion of fact.",
+            "source_start": 376,
+            "source_end": 441
+          },
+          {
+            "text": "Please pick your own departure date and ask your companions which meeting place they would like.",
+            "reason": "Request/instruction.",
+            "source_start": 442,
+            "source_end": 538
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-10-f1"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-00ddb2f056163352849c95f9",
+      "generated_answer": "Since the Fenhaven ferry accepts bicycles only on its lower deck, plan where you would like to stand after boarding and choose a place for your travel notes. You may sketch your intended route or simply write down the stops you want to remember. Also, because its timetable lists a 26-minute crossing for the evening service, decide how you would prefer to use that interval. Consider bringing something to read, or leave the time unplanned. Please pick your own departure date and ask your companions which meeting place they would like.",
+      "expected_facts": [
+        {
+          "id": "sel-10-f1",
+          "description": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+          "source_quote": "the Fenhaven ferry accepts bicycles only on its lower deck",
+          "required_semantic_elements": [
+            "Fenhaven ferry",
+            "bicycles accepted only on lower deck"
+          ]
+        },
+        {
+          "id": "sel-10-f2",
+          "description": "The Fenhaven ferry timetable lists a 26-minute crossing for the evening service.",
+          "source_quote": "its timetable lists a 26-minute crossing for the evening service",
+          "required_semantic_elements": [
+            "attribution to its timetable",
+            "26-minute crossing",
+            "evening service only"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+            "source_span": "the Fenhaven ferry accepts bicycles only on its lower deck"
+          },
+          {
+            "claim_text": "The Fenhaven ferry's timetable lists a 26-minute crossing for the evening service.",
+            "source_span": "its timetable lists a 26-minute crossing for the evening service"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Since ",
+            "reason": "Conjunction introducing a conditional framing; no factual assertion."
+          },
+          {
+            "text": ", plan where you would like to stand after boarding and choose a place for your travel notes.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "You may sketch your intended route or simply write down the stops you want to remember.",
+            "reason": "Suggestion/permission, not a factual assertion."
+          },
+          {
+            "text": "Also, because ",
+            "reason": "Discourse connective and conjunction; no factual assertion."
+          },
+          {
+            "text": ", decide how you would prefer to use that interval.",
+            "reason": "Instruction/advice, not a factual assertion."
+          },
+          {
+            "text": "Consider bringing something to read, or leave the time unplanned.",
+            "reason": "Suggestion, not a factual assertion."
+          },
+          {
+            "text": "Please pick your own departure date and ask your companions which meeting place they would like.",
+            "reason": "Request/instruction, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Fenhaven ferry accepts bicycles only on its lower deck.",
+            "source_span": "the Fenhaven ferry accepts bicycles only on its lower deck",
+            "source_start": 6,
+            "source_end": 64
+          },
+          {
+            "claim_text": "The Fenhaven ferry's timetable lists a 26-minute crossing for the evening service.",
+            "source_span": "its timetable lists a 26-minute crossing for the evening service",
+            "source_start": 260,
+            "source_end": 324
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Since ",
+            "reason": "Conjunction introducing a conditional framing; no factual assertion.",
+            "source_start": 0,
+            "source_end": 6
+          },
+          {
+            "text": ", plan where you would like to stand after boarding and choose a place for your travel notes.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 64,
+            "source_end": 157
+          },
+          {
+            "text": "You may sketch your intended route or simply write down the stops you want to remember.",
+            "reason": "Suggestion/permission, not a factual assertion.",
+            "source_start": 158,
+            "source_end": 245
+          },
+          {
+            "text": "Also, because ",
+            "reason": "Discourse connective and conjunction; no factual assertion.",
+            "source_start": 246,
+            "source_end": 260
+          },
+          {
+            "text": ", decide how you would prefer to use that interval.",
+            "reason": "Instruction/advice, not a factual assertion.",
+            "source_start": 324,
+            "source_end": 375
+          },
+          {
+            "text": "Consider bringing something to read, or leave the time unplanned.",
+            "reason": "Suggestion, not a factual assertion.",
+            "source_start": 376,
+            "source_end": 441
+          },
+          {
+            "text": "Please pick your own departure date and ask your companions which meeting place they would like.",
+            "reason": "Request/instruction, not a factual assertion.",
+            "source_start": 442,
+            "source_end": 538
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-10-f1"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-8e873b6d461d35fe1977c1d2",
+      "generated_answer": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。建议你给行程起一个容易记住的名字，并自行选择是否把路线画成草图。要不要中途休息、休息多久，都请按自己的偏好安排。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。",
+            "reason": "Instruction to decide and write, not an assertion that the action occurred."
+          },
+          {
+            "text": "建议你给行程起一个容易记住的名字",
+            "reason": "Advice or suggestion, not an assertion that the trip has such a name."
+          },
+          {
+            "text": "，并自行选择是否把路线画成草图。",
+            "reason": "Instruction to choose whether to draw a sketch, not an assertion that drawing occurred."
+          },
+          {
+            "text": "要不要中途休息、休息多久，都请按自己的偏好安排。",
+            "reason": "Advice to arrange rest according to preference, not an assertion of fact."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。",
+            "reason": "Instruction to decide and write, not an assertion that the action occurred.",
+            "source_start": 0,
+            "source_end": 30
+          },
+          {
+            "text": "建议你给行程起一个容易记住的名字",
+            "reason": "Advice or suggestion, not an assertion that the trip has such a name.",
+            "source_start": 30,
+            "source_end": 46
+          },
+          {
+            "text": "，并自行选择是否把路线画成草图。",
+            "reason": "Instruction to choose whether to draw a sketch, not an assertion that drawing occurred.",
+            "source_start": 46,
+            "source_end": 62
+          },
+          {
+            "text": "要不要中途休息、休息多久，都请按自己的偏好安排。",
+            "reason": "Advice to arrange rest according to preference, not an assertion of fact.",
+            "source_start": 62,
+            "source_end": 86
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-cfce0d0661964c8da321624c",
+      "generated_answer": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？",
+            "reason": "Suggestion/question about what to sketch; no factual assertion"
+          },
+          {
+            "text": "要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？",
+            "reason": "Question proposing a discussion topic; hypothetical not asserted"
+          },
+          {
+            "text": "请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。",
+            "reason": "Instruction and prohibition; no factual assertion"
+          },
+          {
+            "text": "你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。",
+            "reason": "Optional instruction; no factual assertion"
+          },
+          {
+            "text": "不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。",
+            "reason": "Suggestion offering alternatives; no factual assertion"
+          },
+          {
+            "text": "请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。",
+            "reason": "Instruction to choose options; no factual assertion"
+          },
+          {
+            "text": "接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。",
+            "reason": "Instruction; no factual assertion"
+          },
+          {
+            "text": "不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。",
+            "reason": "Prohibition; no factual assertion"
+          },
+          {
+            "text": "对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。",
+            "reason": "Instruction about preferences; no factual assertion"
+          },
+          {
+            "text": "如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+            "reason": "Conditional instruction; no factual assertion"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "不妨先在草稿上试着画出你想象的夹持顺序，再想想是否愿意换一种画法？",
+            "reason": "Suggestion/question about what to sketch; no factual assertion",
+            "source_start": 0,
+            "source_end": 33
+          },
+          {
+            "text": "要不要把“若夹具完全不施力，会怎样”当成一个待讨论的问题？",
+            "reason": "Question proposing a discussion topic; hypothetical not asserted",
+            "source_start": 33,
+            "source_end": 62
+          },
+          {
+            "text": "请只列出你想尝试的设计，不要据此断言任何夹具已经具备相应性能。",
+            "reason": "Instruction and prohibition; no factual assertion",
+            "source_start": 62,
+            "source_end": 93
+          },
+          {
+            "text": "你还可以把几种想法分别写在不同的草稿区域，再决定愿意先讨论哪一种。",
+            "reason": "Optional instruction; no factual assertion",
+            "source_start": 93,
+            "source_end": 126
+          },
+          {
+            "text": "不妨为每一种画法留出一处空白，准备记下之后想到的问题；也可以不留空白，另取一张纸记录。",
+            "reason": "Suggestion offering alternatives; no factual assertion",
+            "source_start": 126,
+            "source_end": 169
+          },
+          {
+            "text": "请自行选择要不要给草图编号，要不要把文字说明放在图旁边，以及要不要邀请同伴提出不同的设计。",
+            "reason": "Instruction to choose options; no factual assertion",
+            "source_start": 169,
+            "source_end": 214
+          },
+          {
+            "text": "接着，请挑出你愿意保留的设想，把暂时不想讨论的设想放在一边。",
+            "reason": "Instruction; no factual assertion",
+            "source_start": 214,
+            "source_end": 244
+          },
+          {
+            "text": "不要把这些设想写成已经做完的试验，也不要替尚未开展的操作填写结果。",
+            "reason": "Prohibition; no factual assertion",
+            "source_start": 244,
+            "source_end": 277
+          },
+          {
+            "text": "对于页边距、标题样式和讨论先后次序，请按自己的喜好安排。",
+            "reason": "Instruction about preferences; no factual assertion",
+            "source_start": 277,
+            "source_end": 305
+          },
+          {
+            "text": "如果现在不愿继续，就先停在这一步，等想重新画图时再选择下一步。",
+            "reason": "Conditional instruction; no factual assertion",
+            "source_start": 305,
+            "source_end": 336
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-6b4ccd378871cb8af6f44e4e",
+      "generated_answer": "因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+      "expected_facts": [
+        {
+          "id": "sel-14-f1",
+          "description": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+          "source_quote": "若岚织物试验室的压辊在手动模式下不会自动回位",
+          "required_semantic_elements": [
+            "若岚织物试验室的压辊",
+            "手动模式下",
+            "不会自动回位"
+          ]
+        },
+        {
+          "id": "sel-14-f2",
+          "description": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+          "source_quote": "该室的操作记录写明，绒面试片每次夹持的上限是17秒",
+          "required_semantic_elements": [
+            "归属为该室操作记录",
+            "绒面试片",
+            "每次夹持上限17秒"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+            "source_span": "若岚织物试验室的压辊在手动模式下不会自动回位"
+          },
+          {
+            "claim_text": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+            "source_span": "该室的操作记录写明，绒面试片每次夹持的上限是17秒"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "因为",
+            "reason": "连词，不构成独立事实断言"
+          },
+          {
+            "text": "，建议你结束操作后再自行安排检查步骤。另外，",
+            "reason": "建议性、程序性表述，非事实断言"
+          },
+          {
+            "text": "，所以请先决定用什么方式记时。",
+            "reason": "建议/请求性表述，非事实断言"
+          },
+          {
+            "text": "至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+            "reason": "给予选择/偏好自由，非事实断言"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+            "source_span": "若岚织物试验室的压辊在手动模式下不会自动回位",
+            "source_start": 2,
+            "source_end": 24
+          },
+          {
+            "claim_text": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+            "source_span": "该室的操作记录写明，绒面试片每次夹持的上限是17秒",
+            "source_start": 46,
+            "source_end": 71
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "因为",
+            "reason": "连词，不构成独立事实断言",
+            "source_start": 0,
+            "source_end": 2
+          },
+          {
+            "text": "，建议你结束操作后再自行安排检查步骤。另外，",
+            "reason": "建议性、程序性表述，非事实断言",
+            "source_start": 24,
+            "source_end": 46
+          },
+          {
+            "text": "，所以请先决定用什么方式记时。",
+            "reason": "建议/请求性表述，非事实断言",
+            "source_start": 71,
+            "source_end": 86
+          },
+          {
+            "text": "至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+            "reason": "给予选择/偏好自由，非事实断言",
+            "source_start": 86,
+            "source_end": 116
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-14-f2"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-2626cc18a20e13bed50fea3b",
+      "generated_answer": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。育苗站的周报称，3号苗床每晚22:30停止加热。",
+      "expected_facts": [
+        {
+          "id": "sel-01-f1",
+          "description": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "source_quote": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "required_semantic_elements": [
+            "主体为榆湾育苗站的雾化泵",
+            "低于42%的棚内湿度是启动的必要条件；不是充要条件"
+          ]
+        },
+        {
+          "id": "sel-01-f2",
+          "description": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "source_quote": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "required_semantic_elements": [
+            "保留育苗站周报这一归属",
+            "3号苗床",
+            "每晚22:30停止加热"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_span": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。"
+          },
+          {
+            "claim_text": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_span": "育苗站的周报称，3号苗床每晚22:30停止加热。"
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_span": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_start": 0,
+            "source_end": 24
+          },
+          {
+            "claim_text": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_span": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_start": 24,
+            "source_end": 48
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-57681caf1b4913014f887c98",
+      "generated_answer": "Because the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened, let that interval finish before choosing your next inspection step. Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later. Also, since the cabinet's drain sensor is disabled throughout transport mode, remember to inspect the drain by hand before loading it for a move. Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+      "expected_facts": [
+        {
+          "id": "sel-02-f1",
+          "description": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+          "source_quote": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened",
+          "required_semantic_elements": [
+            "Larchmere germination cabinet",
+            "vent opens for 11 minutes",
+            "whenever the lid is reopened"
+          ]
+        },
+        {
+          "id": "sel-02-f2",
+          "description": "The Larchmere germination cabinet's drain sensor is disabled throughout transport mode.",
+          "source_quote": "the cabinet's drain sensor is disabled throughout transport mode",
+          "required_semantic_elements": [
+            "drain sensor of that same cabinet",
+            "disabled throughout transport mode"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+            "source_span": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened"
+          },
+          {
+            "claim_text": "The cabinet's drain sensor is disabled throughout transport mode.",
+            "source_span": "the cabinet's drain sensor is disabled throughout transport mode"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Because ",
+            "reason": "Causal connective introducing advice, not itself a factual assertion."
+          },
+          {
+            "text": ", let that interval finish before choosing your next inspection step.",
+            "reason": "Instruction/advice."
+          },
+          {
+            "text": "Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later.",
+            "reason": "Request/instruction."
+          },
+          {
+            "text": "Also, since ",
+            "reason": "Discourse connective introducing advice."
+          },
+          {
+            "text": ", remember to inspect the drain by hand before loading it for a move.",
+            "reason": "Instruction/advice."
+          },
+          {
+            "text": "Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+            "reason": "Instruction/advice and subjective preference."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened.",
+            "source_span": "the Larchmere germination cabinet opens its vent for 11 minutes whenever its lid is reopened",
+            "source_start": 8,
+            "source_end": 100
+          },
+          {
+            "claim_text": "The cabinet's drain sensor is disabled throughout transport mode.",
+            "source_span": "the cabinet's drain sensor is disabled throughout transport mode",
+            "source_start": 319,
+            "source_end": 383
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "Because ",
+            "reason": "Causal connective introducing advice, not itself a factual assertion.",
+            "source_start": 0,
+            "source_end": 8
+          },
+          {
+            "text": ", let that interval finish before choosing your next inspection step.",
+            "reason": "Instruction/advice.",
+            "source_start": 100,
+            "source_end": 169
+          },
+          {
+            "text": "Please decide whether to take notes on paper or in a separate application, and leave yourself a reminder to check the tray labels later.",
+            "reason": "Request/instruction.",
+            "source_start": 170,
+            "source_end": 306
+          },
+          {
+            "text": "Also, since ",
+            "reason": "Discourse connective introducing advice.",
+            "source_start": 307,
+            "source_end": 319
+          },
+          {
+            "text": ", remember to inspect the drain by hand before loading it for a move.",
+            "reason": "Instruction/advice.",
+            "source_start": 383,
+            "source_end": 452
+          },
+          {
+            "text": "Choose whichever recording layout you prefer, and arrange the inspection steps in an order that feels comfortable.",
+            "reason": "Instruction/advice and subjective preference.",
+            "source_start": 453,
+            "source_end": 567
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-02-f1"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-b5d53b0aa6249ccb6412036b",
+      "generated_answer": "I decline to choose a vessel or a departure time for you. Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant. Would you like to draft those questions before deciding?",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "I decline to choose a vessel or a departure time for you.",
+            "reason": "Statement of refusal, not a factual assertion about the world."
+          },
+          {
+            "text": "Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant.",
+            "reason": "Instruction and permission/advice, not factual assertions."
+          },
+          {
+            "text": "Would you like to draft those questions before deciding?",
+            "reason": "Question, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "I decline to choose a vessel or a departure time for you.",
+            "reason": "Statement of refusal, not a factual assertion about the world.",
+            "source_start": 0,
+            "source_end": 57
+          },
+          {
+            "text": "Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant.",
+            "reason": "Instruction and permission/advice, not factual assertions.",
+            "source_start": 58,
+            "source_end": 168
+          },
+          {
+            "text": "Would you like to draft those questions before deciding?",
+            "reason": "Question, not a factual assertion.",
+            "source_start": 169,
+            "source_end": 225
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-f8713e82355b84515b1e778c",
+      "generated_answer": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。建议你把复查安排在方便的时候；要不要拍照、给照片取什么名字，都请自行决定。最后请把工具放回你选定的位置。你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。愿意的话，给各页选一个自己喜欢的编号方式；不想编号也可以先跳过这一步。还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。",
+            "reason": "Instruction/procedural guidance, not an assertion of fact."
+          },
+          {
+            "text": "建议你把复查安排在方便的时候；",
+            "reason": "Advice/suggestion, not an assertion that any review was scheduled."
+          },
+          {
+            "text": "要不要拍照、给照片取什么名字，都请自行决定。",
+            "reason": "Instruction leaving choices to the reader; not a factual assertion."
+          },
+          {
+            "text": "最后请把工具放回你选定的位置。",
+            "reason": "Instruction, not an assertion of fact."
+          },
+          {
+            "text": "你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。",
+            "reason": "Optional instruction/procedural guidance."
+          },
+          {
+            "text": "请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。",
+            "reason": "Instruction leaving layout choices to the reader."
+          },
+          {
+            "text": "愿意的话，给各页选一个自己喜欢的编号方式；",
+            "reason": "Conditional optional instruction, not an assertion."
+          },
+          {
+            "text": "不想编号也可以先跳过这一步。",
+            "reason": "Permission/instruction, not a factual assertion."
+          },
+          {
+            "text": "还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。",
+            "reason": "Instruction to consider options; no fact asserted."
+          },
+          {
+            "text": "关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。",
+            "reason": "Instruction to choose by personal habit; not factual."
+          },
+          {
+            "text": "最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。",
+            "reason": "Instruction, not an assertion of fact."
+          },
+          {
+            "text": "若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+            "reason": "Conditional optional instruction, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先把育苗记录按自己喜欢的顺序排好，再选一张空白表来写观察笔记。",
+            "reason": "Instruction/procedural guidance, not an assertion of fact.",
+            "source_start": 0,
+            "source_end": 32
+          },
+          {
+            "text": "建议你把复查安排在方便的时候；",
+            "reason": "Advice/suggestion, not an assertion that any review was scheduled.",
+            "source_start": 32,
+            "source_end": 47
+          },
+          {
+            "text": "要不要拍照、给照片取什么名字，都请自行决定。",
+            "reason": "Instruction leaving choices to the reader; not a factual assertion.",
+            "source_start": 47,
+            "source_end": 69
+          },
+          {
+            "text": "最后请把工具放回你选定的位置。",
+            "reason": "Instruction, not an assertion of fact.",
+            "source_start": 69,
+            "source_end": 84
+          },
+          {
+            "text": "你也可以先画几种记录版式，再挑一种愿意试用的版式；不喜欢的话就重新画一张。",
+            "reason": "Optional instruction/procedural guidance.",
+            "source_start": 84,
+            "source_end": 121
+          },
+          {
+            "text": "请自行决定标题放在页面上方还是侧边，是否留下空白边栏，以及是否为每次观察另开一页。",
+            "reason": "Instruction leaving layout choices to the reader.",
+            "source_start": 121,
+            "source_end": 162
+          },
+          {
+            "text": "愿意的话，给各页选一个自己喜欢的编号方式；",
+            "reason": "Conditional optional instruction, not an assertion.",
+            "source_start": 162,
+            "source_end": 183
+          },
+          {
+            "text": "不想编号也可以先跳过这一步。",
+            "reason": "Permission/instruction, not a factual assertion.",
+            "source_start": 183,
+            "source_end": 197
+          },
+          {
+            "text": "还请想一想要不要邀请同伴一起看笔记，或先独自整理一遍。",
+            "reason": "Instruction to consider options; no fact asserted.",
+            "source_start": 197,
+            "source_end": 224
+          },
+          {
+            "text": "关于书写颜色、纸张朝向、每行的间距和日期放置的位置，都请根据自己的习惯选择，不必在这里替别人决定。",
+            "reason": "Instruction to choose by personal habit; not factual.",
+            "source_start": 224,
+            "source_end": 273
+          },
+          {
+            "text": "最后，再看一遍你拟好的安排，保留你喜欢的步骤，把想重新考虑的地方圈出来。",
+            "reason": "Instruction, not an assertion of fact.",
+            "source_start": 273,
+            "source_end": 309
+          },
+          {
+            "text": "若还没有想好，也可以暂时放下草稿，等愿意继续时再回来选。",
+            "reason": "Conditional optional instruction, not a factual assertion.",
+            "source_start": 309,
+            "source_end": 337
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-9fa0c98aeb0d6ef22e0fd53d",
+      "generated_answer": "The Bracken sound archive retains its calibration recordings for 47 days. Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+      "expected_facts": [
+        {
+          "id": "sel-05-f1",
+          "description": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "source_quote": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "required_semantic_elements": [
+            "Bracken sound archive",
+            "calibration recordings",
+            "retention of 47 days"
+          ]
+        },
+        {
+          "id": "sel-05-f2",
+          "description": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "source_quote": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "required_semantic_elements": [
+            "attribution to the Bracken archive technician log",
+            "recorder Morrow-6",
+            "no backup track in mono mode"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_span": "The Bracken sound archive retains its calibration recordings for 47 days."
+          },
+          {
+            "claim_text": "The Bracken sound archive's technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_span": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode."
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_span": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_start": 0,
+            "source_end": 73
+          },
+          {
+            "claim_text": "The Bracken sound archive's technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_span": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_start": 74,
+            "source_end": 167
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-13a28bb556023902319b2218",
+      "generated_answer": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。建议你给行程起一个容易记住的名字，并自行选择是否把路线画成草图。要不要中途休息、休息多久，都请按自己的偏好安排。",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。",
+            "reason": "Instruction directing the reader to decide and write, not an assertion that any action was performed."
+          },
+          {
+            "text": "建议你给行程起一个容易记住的名字，并自行选择是否把路线画成草图。",
+            "reason": "Advice and suggestion rather than a factual assertion."
+          },
+          {
+            "text": "要不要中途休息、休息多久，都请按自己的偏好安排。",
+            "reason": "Instruction/preference guidance, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "请先决定你想在哪个渡口与同伴会合，再把喜欢的出行顺序写下来。",
+            "reason": "Instruction directing the reader to decide and write, not an assertion that any action was performed.",
+            "source_start": 0,
+            "source_end": 30
+          },
+          {
+            "text": "建议你给行程起一个容易记住的名字，并自行选择是否把路线画成草图。",
+            "reason": "Advice and suggestion rather than a factual assertion.",
+            "source_start": 30,
+            "source_end": 62
+          },
+          {
+            "text": "要不要中途休息、休息多久，都请按自己的偏好安排。",
+            "reason": "Instruction/preference guidance, not a factual assertion.",
+            "source_start": 62,
+            "source_end": 86
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-f8947fbc60fb641ccc9bec07",
+      "generated_answer": "既然栎声采集器在启用远程监听时会将本地回放音量降低6分贝，建议你先选好监听方式再调节回放音量。另外，它的固件说明明确写着，断电后临时标记不会保留，所以关机前请按自己的需要整理标记。至于文件夹的名字和笔记的排列方式，请自行决定。",
+      "expected_facts": [
+        {
+          "id": "sel-06-f1",
+          "description": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+          "source_quote": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝",
+          "required_semantic_elements": [
+            "栎声采集器",
+            "启用远程监听时",
+            "本地回放音量降低6分贝"
+          ]
+        },
+        {
+          "id": "sel-06-f2",
+          "description": "它的固件说明明确写着，断电后临时标记不会保留。",
+          "source_quote": "它的固件说明明确写着，断电后临时标记不会保留",
+          "required_semantic_elements": [
+            "归属为该采集器的固件说明",
+            "断电后",
+            "临时标记不会保留"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+            "source_span": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝"
+          },
+          {
+            "claim_text": "栎声采集器的固件说明明确写着，断电后临时标记不会保留。",
+            "source_span": "它的固件说明明确写着，断电后临时标记不会保留"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "既然",
+            "reason": "连词，不构成事实断言。"
+          },
+          {
+            "text": "，建议你先选好监听方式再调节回放音量。",
+            "reason": "建议性表述，不是事实断言。"
+          },
+          {
+            "text": "另外，",
+            "reason": "衔接性词语，不构成事实断言。"
+          },
+          {
+            "text": "，所以关机前请按自己的需要整理标记。",
+            "reason": "建议性表述，不是事实断言。"
+          },
+          {
+            "text": "至于文件夹的名字和笔记的排列方式，请自行决定。",
+            "reason": "让用户自行决定，属建议而非事实断言。"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝。",
+            "source_span": "栎声采集器在启用远程监听时会将本地回放音量降低6分贝",
+            "source_start": 2,
+            "source_end": 28
+          },
+          {
+            "claim_text": "栎声采集器的固件说明明确写着，断电后临时标记不会保留。",
+            "source_span": "它的固件说明明确写着，断电后临时标记不会保留",
+            "source_start": 50,
+            "source_end": 72
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "既然",
+            "reason": "连词，不构成事实断言。",
+            "source_start": 0,
+            "source_end": 2
+          },
+          {
+            "text": "，建议你先选好监听方式再调节回放音量。",
+            "reason": "建议性表述，不是事实断言。",
+            "source_start": 28,
+            "source_end": 47
+          },
+          {
+            "text": "另外，",
+            "reason": "衔接性词语，不构成事实断言。",
+            "source_start": 47,
+            "source_end": 50
+          },
+          {
+            "text": "，所以关机前请按自己的需要整理标记。",
+            "reason": "建议性表述，不是事实断言。",
+            "source_start": 72,
+            "source_end": 90
+          },
+          {
+            "text": "至于文件夹的名字和笔记的排列方式，请自行决定。",
+            "reason": "让用户自行决定，属建议而非事实断言。",
+            "source_start": 90,
+            "source_end": 113
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-06-f2"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-e5c51475b699a156f4196955",
+      "generated_answer": "Choose a name for your fabric notebook and write it wherever you prefer on the cover. Please decide whether to arrange your entries by date, by colour, or in some other order of your own. Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout. Before starting a new page, pick the headings you want to use. You may ask a colleague to suggest another arrangement, or keep the decision to yourself. Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Choose a name for your fabric notebook and write it wherever you prefer on the cover.",
+            "reason": "Instruction, not an assertion that any action was performed."
+          },
+          {
+            "text": "Please decide whether to arrange your entries by date, by colour, or in some other order of your own.",
+            "reason": "Request for a decision, not a factual assertion."
+          },
+          {
+            "text": "Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout.",
+            "reason": "Suggestion/permission, not an assertion that a margin was drawn."
+          },
+          {
+            "text": "Before starting a new page, pick the headings you want to use.",
+            "reason": "Instruction, not a factual assertion."
+          },
+          {
+            "text": "You may ask a colleague to suggest another arrangement, or keep the decision to yourself.",
+            "reason": "Permission/option, not an assertion that an action occurred."
+          },
+          {
+            "text": "Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+            "reason": "Instruction, not a factual assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "Choose a name for your fabric notebook and write it wherever you prefer on the cover.",
+            "reason": "Instruction, not an assertion that any action was performed.",
+            "source_start": 0,
+            "source_end": 85
+          },
+          {
+            "text": "Please decide whether to arrange your entries by date, by colour, or in some other order of your own.",
+            "reason": "Request for a decision, not a factual assertion.",
+            "source_start": 86,
+            "source_end": 187
+          },
+          {
+            "text": "Consider drawing an empty margin for later comments, but feel free to omit it if you dislike that layout.",
+            "reason": "Suggestion/permission, not an assertion that a margin was drawn.",
+            "source_start": 188,
+            "source_end": 293
+          },
+          {
+            "text": "Before starting a new page, pick the headings you want to use.",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 294,
+            "source_end": 356
+          },
+          {
+            "text": "You may ask a colleague to suggest another arrangement, or keep the decision to yourself.",
+            "reason": "Permission/option, not an assertion that an action occurred.",
+            "source_start": 357,
+            "source_end": 446
+          },
+          {
+            "text": "Put the notebook in a place you choose, and return to the plan whenever you want to revise it.",
+            "reason": "Instruction, not a factual assertion.",
+            "source_start": 447,
+            "source_end": 541
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "spurious"
+    },
+    {
+      "review_id": "r-cfa25f5284870814074ad3e0",
+      "generated_answer": "因为若岚织物试验室的压辊在手动模式下不会自动回位，建议你结束操作后再自行安排检查步骤。另外，该室的操作记录写明，绒面试片每次夹持的上限是17秒，所以请先决定用什么方式记时。至于记录表使用哪种字体、是否画示意图，你可以按个人偏好选择。",
+      "expected_facts": [
+        {
+          "id": "sel-14-f1",
+          "description": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+          "source_quote": "若岚织物试验室的压辊在手动模式下不会自动回位",
+          "required_semantic_elements": [
+            "若岚织物试验室的压辊",
+            "手动模式下",
+            "不会自动回位"
+          ]
+        },
+        {
+          "id": "sel-14-f2",
+          "description": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+          "source_quote": "该室的操作记录写明，绒面试片每次夹持的上限是17秒",
+          "required_semantic_elements": [
+            "归属为该室操作记录",
+            "绒面试片",
+            "每次夹持上限17秒"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+            "source_span": "若岚织物试验室的压辊在手动模式下不会自动回位"
+          },
+          {
+            "claim_text": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+            "source_span": "该室的操作记录写明，绒面试片每次夹持的上限是17秒"
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "因为",
+            "reason": "连接词，不表达事实断言。"
+          },
+          {
+            "text": "，建议你结束操作后再自行安排检查步骤。",
+            "reason": "提出建议，不构成事实断言。"
+          },
+          {
+            "text": "另外，",
+            "reason": "连接词，不表达事实断言。"
+          },
+          {
+            "text": "所以请先决定用什么方式记时。",
+            "reason": "请求或建议，不构成事实断言。"
+          },
+          {
+            "text": "至于记录表使用哪种字体、是否画示意图，",
+            "reason": "引出可选事项，本身不构成事实断言。"
+          },
+          {
+            "text": "你可以按个人偏好选择。",
+            "reason": "提出许可或建议，不构成事实断言。"
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "若岚织物试验室的压辊在手动模式下不会自动回位。",
+            "source_span": "若岚织物试验室的压辊在手动模式下不会自动回位",
+            "source_start": 2,
+            "source_end": 24
+          },
+          {
+            "claim_text": "该室的操作记录写明，绒面试片每次夹持的上限是17秒。",
+            "source_span": "该室的操作记录写明，绒面试片每次夹持的上限是17秒",
+            "source_start": 46,
+            "source_end": 71
+          }
+        ],
+        "non_factual_spans": [
+          {
+            "text": "因为",
+            "reason": "连接词，不表达事实断言。",
+            "source_start": 0,
+            "source_end": 2
+          },
+          {
+            "text": "，建议你结束操作后再自行安排检查步骤。",
+            "reason": "提出建议，不构成事实断言。",
+            "source_start": 24,
+            "source_end": 43
+          },
+          {
+            "text": "另外，",
+            "reason": "连接词，不表达事实断言。",
+            "source_start": 43,
+            "source_end": 46
+          },
+          {
+            "text": "所以请先决定用什么方式记时。",
+            "reason": "请求或建议，不构成事实断言。",
+            "source_start": 72,
+            "source_end": 86
+          },
+          {
+            "text": "至于记录表使用哪种字体、是否画示意图，",
+            "reason": "引出可选事项，本身不构成事实断言。",
+            "source_start": 86,
+            "source_end": 105
+          },
+          {
+            "text": "你可以按个人偏好选择。",
+            "reason": "提出许可或建议，不构成事实断言。",
+            "source_start": 105,
+            "source_end": 116
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [
+        "sel-14-f2"
+      ],
+      "injected_fault_kind": "omission"
+    },
+    {
+      "review_id": "r-7df1d88049af6ab85dd57ffb",
+      "generated_answer": "I decline to choose a vessel or a departure time for you. Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant. Would you like to draft those questions before deciding?",
+      "expected_facts": [],
+      "expected_pure_nf": true,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "I decline to choose a vessel or a departure time for you.",
+            "reason": "Refusal/declination, not a factual assertion about the world."
+          },
+          {
+            "text": "Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant.",
+            "reason": "Request and procedural guidance directed at the reader."
+          },
+          {
+            "text": "Would you like to draft those questions before deciding?",
+            "reason": "Question posed to the reader, not an assertion."
+          }
+        ]
+      },
+      "validated_output": {
+        "claims": [],
+        "non_factual_spans": [
+          {
+            "text": "I decline to choose a vessel or a departure time for you.",
+            "reason": "Refusal/declination, not a factual assertion about the world.",
+            "source_start": 0,
+            "source_end": 57
+          },
+          {
+            "text": "Please make that choice yourself, and feel free to ask the operator whichever questions you consider relevant.",
+            "reason": "Request and procedural guidance directed at the reader.",
+            "source_start": 58,
+            "source_end": 168
+          },
+          {
+            "text": "Would you like to draft those questions before deciding?",
+            "reason": "Question posed to the reader, not an assertion.",
+            "source_start": 169,
+            "source_end": 225
+          }
+        ]
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-ec1d863b8712705e7e91b904",
+      "generated_answer": "The Bracken sound archive retains its calibration recordings for 47 days. Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+      "expected_facts": [
+        {
+          "id": "sel-05-f1",
+          "description": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "source_quote": "The Bracken sound archive retains its calibration recordings for 47 days.",
+          "required_semantic_elements": [
+            "Bracken sound archive",
+            "calibration recordings",
+            "retention of 47 days"
+          ]
+        },
+        {
+          "id": "sel-05-f2",
+          "description": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "source_quote": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+          "required_semantic_elements": [
+            "attribution to the Bracken archive technician log",
+            "recorder Morrow-6",
+            "no backup track in mono mode"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_span": "The Bracken sound archive retains its calibration recordings for 47 days."
+          },
+          {
+            "claim_text": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_span": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode."
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_span": "The Bracken sound archive retains its calibration recordings for 47 days.",
+            "source_start": 0,
+            "source_end": 73
+          },
+          {
+            "claim_text": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_span": "Its technician log reports that recorder Morrow-6 does not write a backup track in mono mode.",
+            "source_start": 74,
+            "source_end": 167
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    },
+    {
+      "review_id": "r-09efc998bfa1185c6729d9b7",
+      "generated_answer": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。育苗站的周报称，3号苗床每晚22:30停止加热。",
+      "expected_facts": [
+        {
+          "id": "sel-01-f1",
+          "description": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "source_quote": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+          "required_semantic_elements": [
+            "主体为榆湾育苗站的雾化泵",
+            "低于42%的棚内湿度是启动的必要条件；不是充要条件"
+          ]
+        },
+        {
+          "id": "sel-01-f2",
+          "description": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "source_quote": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+          "required_semantic_elements": [
+            "保留育苗站周报这一归属",
+            "3号苗床",
+            "每晚22:30停止加热"
+          ]
+        }
+      ],
+      "expected_pure_nf": false,
+      "status": "valid",
+      "error": null,
+      "raw_output": {
+        "claims": [
+          {
+            "claim_text": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_span": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。"
+          },
+          {
+            "claim_text": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_span": "育苗站的周报称，3号苗床每晚22:30停止加热。"
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "validated_output": {
+        "claims": [
+          {
+            "claim_text": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_span": "榆湾育苗站的雾化泵只在棚内湿度低于42%时启动。",
+            "source_start": 0,
+            "source_end": 24
+          },
+          {
+            "claim_text": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_span": "育苗站的周报称，3号苗床每晚22:30停止加热。",
+            "source_start": 24,
+            "source_end": 48
+          }
+        ],
+        "non_factual_spans": []
+      },
+      "expected_missing_fact_ids": [],
+      "injected_fault_kind": "clean"
+    }
+  ]
+}

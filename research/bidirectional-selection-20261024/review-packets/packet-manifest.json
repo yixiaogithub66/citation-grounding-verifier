@@ -1,0 +1,71 @@
+{
+  "schema_version": "bidirectional-blind-review-v1",
+  "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+  "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+  "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+  "packets": {
+    "blind-natural.json": {
+      "sha256": "d39205afe7c9cc14c7ffd231aaf06dd6299a8052bc7a3fd77286ba6a301bf313",
+      "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+      "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+      "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+      "record_count": 128,
+      "unique_review_ids": 128,
+      "unique_answer_count": 16,
+      "technical_status_counts": {
+        "error": 20,
+        "valid": 108
+      },
+      "target_mapping_slots": 128,
+      "pure_nf_records": 64,
+      "records_sha256_canonical": "c622c0e4d70a5bfcdba10fdfa81a8c1de41790bacecf3abf8bf4f8a04d8abf72"
+    },
+    "blind-controlled.json": {
+      "sha256": "a178d27b78ea201f6a751d29e60c6827b6a325baf274fe77f1e1df2bc049e257",
+      "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+      "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+      "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+      "record_count": 24,
+      "unique_review_ids": 24,
+      "unique_answer_count": 12,
+      "technical_status_counts": {
+        "valid": 24
+      },
+      "target_mapping_slots": 24,
+      "pure_nf_records": 12,
+      "records_sha256_canonical": "005530698227123c36e8ba5d72be4ad81217fea7109f9487f99e91f3ee03d6a0"
+    },
+    "natural-part1.json": {
+      "sha256": "d62c1d4e5f547dd95f87b38cc75f1db3b87a9dab8960e27e624dcbded2053d26",
+      "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+      "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+      "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+      "record_count": 64,
+      "unique_review_ids": 64,
+      "unique_answer_count": 8,
+      "technical_status_counts": {
+        "error": 7,
+        "valid": 57
+      },
+      "target_mapping_slots": 64,
+      "pure_nf_records": 32,
+      "records_sha256_canonical": "9204099cfa44b225d3e64fc2a7170adc048f192d15acefa55ece3ae7e4220741"
+    },
+    "natural-part2.json": {
+      "sha256": "14152bd9fde6a08129fd7173c29c33a41a620158f85c6304c8e9f0dc59a62951",
+      "responses_sha256": "cc3108351dc7bc3c5fb7a1806e2c3bbb48ad86c0f642b997f8f5002fd0ea5478",
+      "freeze_sha256": "08b94eaa6ed2b52bc2d3d60bbc8483327e3b630660073f92f1330c4255045ebc",
+      "frozen_cases_sha256": "0188d3084786c4dc654fc311bd8a522aa2fe5e43e2a2bf85a8cad973a60244cc",
+      "record_count": 64,
+      "unique_review_ids": 64,
+      "unique_answer_count": 8,
+      "technical_status_counts": {
+        "error": 13,
+        "valid": 51
+      },
+      "target_mapping_slots": 64,
+      "pure_nf_records": 32,
+      "records_sha256_canonical": "2e71de98bca4d48de9a9bbf3c67e9d8d9245613afd91763c2d8009a6a86e6574"
+    }
+  }
+}

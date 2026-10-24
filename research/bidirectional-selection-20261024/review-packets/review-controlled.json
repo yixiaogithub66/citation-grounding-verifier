@@ -1,0 +1,423 @@
+{
+  "reviews": [
+    {
+      "review_id": "r-5ee6edad78e7188551a8f68b",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "语序改为先说启用远程监听，主体仍为栎声采集器；本地回放音量降低6分贝及其触发条件均保留。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "明确保留栎声采集器固件说明的归属，以及断电后临时标记不保留的否定和时间条件。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-75d275ecb417d0ec25c13900",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-9b21600d862b458d3dd36dbe",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-561528164bb2d521b62c4e67",
+      "target_mappings": [
+        {
+          "fact_id": "sel-02-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "Preserves the named Larchmere cabinet, opening the vent for 11 minutes, and the whenever-the-lid-is-reopened trigger."
+        },
+        {
+          "fact_id": "sel-02-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "Preserves the drain sensor, disabled state and the entire transport-mode interval. The definite cabinet refers uniquely to Larchmere in the answer and adjacent claim; standalone naming remains unresolved."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "The second claim says 'The cabinet' instead of naming Larchmere. Semantic retention is judged within the uniquely resolvable answer; strict standalone coreference compliance is not fully satisfied."
+    },
+    {
+      "review_id": "r-ef8601551e203b0e0b1de420",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-337318724cc19f0260d73ecf",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-20f065d602ebc900d0e44e1e",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-980a9cc8fe70309575869570",
+      "target_mappings": [
+        {
+          "fact_id": "sel-10-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "Preserves the Fenhaven ferry and restricts bicycle acceptance to its lower deck; it adds no rule about where passengers may stand."
+        },
+        {
+          "fact_id": "sel-10-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "Explicitly attributes the 26-minute crossing to the Fenhaven ferry timetable and retains its evening-service scope."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-00ddb2f056163352849c95f9",
+      "target_mappings": [
+        {
+          "fact_id": "sel-10-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "The lower-deck-only bicycle acceptance restriction and Fenhaven subject remain intact."
+        },
+        {
+          "fact_id": "sel-10-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "The timetable attribution, 26-minute duration and evening-service qualification are all explicit; the output does not generalize to every service."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-8e873b6d461d35fe1977c1d2",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-cfce0d0661964c8da321624c",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-6b4ccd378871cb8af6f44e4e",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "明确保留若岚织物试验室压辊这一主体、手动模式限定和不会自动回位的否定。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留操作记录归属、绒面试片、每次夹持上限17秒，没有把上限改成实际时长。“该室”在原answer和前一claim内唯一指向若岚；单条主体命名仍未完全展开。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "第二claim保留“该室”而未展开若岚名称。本主评分按answer内唯一回指判断语义保留；严格单claim独立自足需单列检查。"
+    },
+    {
+      "review_id": "r-2626cc18a20e13bed50fea3b",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "保留榆湾雾化泵、棚内湿度低于42%及“只在”的必要条件方向，没有强化为低于阈值即一定启动。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留育苗站周报归属、3号苗床、每晚22:30停止加热，未泛化到所有苗床。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-57681caf1b4913014f887c98",
+      "target_mappings": [
+        {
+          "fact_id": "sel-02-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "Retains the Larchmere germination cabinet, the 11-minute vent-opening duration and reopening-lid trigger."
+        },
+        {
+          "fact_id": "sel-02-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "The assertion still concerns the drain sensor being disabled throughout transport mode. The answer has only one cabinet, so the referent is recoverable, but the claim does not itself restate Larchmere."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "The second claim leaves 'The cabinet' unexpanded. The referent is unique in the answer, but a strict per-claim standalone requirement needs a separate sensitivity check."
+    },
+    {
+      "review_id": "r-b5d53b0aa6249ccb6412036b",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f8713e82355b84515b1e778c",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-9fa0c98aeb0d6ef22e0fd53d",
+      "target_mappings": [
+        {
+          "fact_id": "sel-05-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "Preserves Bracken sound archive, calibration recordings specifically and 47-day retention."
+        },
+        {
+          "fact_id": "sel-05-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "Explicitly retains the Bracken archive technician-log attribution, recorder Morrow-6, absence of a backup track and the mono-mode condition."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-13a28bb556023902319b2218",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-f8947fbc60fb641ccc9bec07",
+      "target_mappings": [
+        {
+          "fact_id": "sel-06-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "栎声采集器、远程监听开启时、本地回放降低6分贝均完整保留。"
+        },
+        {
+          "fact_id": "sel-06-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "把“它”展开为栎声采集器，保持固件说明归属、断电后及临时标记不会保留。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-e5c51475b699a156f4196955",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-cfa25f5284870814074ad3e0",
+      "target_mappings": [
+        {
+          "fact_id": "sel-14-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "完整保留若岚压辊、手动模式条件和不自动回位的行为。"
+        },
+        {
+          "fact_id": "sel-14-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "保留记录这一信息来源、绒面试片及每次17秒上限，没有断言每次实际17秒。该室可唯一回指若岚，但单claim仍依赖上下文解析主体。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "“该室”保留了原answer中的唯一指代，但单独取出claim时未完整命名主体；主评分不将可唯一还原的指代本身算作新事实。"
+    },
+    {
+      "review_id": "r-7df1d88049af6ab85dd57ffb",
+      "target_mappings": [],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    },
+    {
+      "review_id": "r-ec1d863b8712705e7e91b904",
+      "target_mappings": [
+        {
+          "fact_id": "sel-05-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "The calibration-recording object, named Bracken archive and 47-day retention remain unchanged."
+        },
+        {
+          "fact_id": "sel-05-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "The technician-log attribution, Morrow-6 recorder, absent backup track and mono-mode scope are all retained. “Its” uniquely refers to Bracken in the answer/preceding claim, but the claim is not independently self-contained."
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": "The second claim reintroduces 'Its technician log'. The full answer uniquely resolves the owner to Bracken, but the extracted claim is not independently self-contained; coordinator should cross-check strict-coreference sensitivity."
+    },
+    {
+      "review_id": "r-09efc998bfa1185c6729d9b7",
+      "target_mappings": [
+        {
+          "fact_id": "sel-01-f1",
+          "claim_indices": [
+            0
+          ],
+          "retained": true,
+          "reason": "“只在”保留必要条件；湿度对象为棚内、阈值42%、主体为榆湾雾化泵，未添充分条件。"
+        },
+        {
+          "fact_id": "sel-01-f2",
+          "claim_indices": [
+            1
+          ],
+          "retained": true,
+          "reason": "周报归属、3号苗床、每晚22:30和停止加热均保留。"
+        }
+      ],
+      "spurious_claims": [],
+      "semantic_complete": true,
+      "scoped_assumption_only": false,
+      "uncertainty": null
+    }
+  ],
+  "reviewer_note": {
+    "reviewer": "AI case-author subagent; also authored the packet generator. Not an independent human adjudicator or author final reviewer.",
+    "scope": "Read only blind-controlled.json for results; did not read private-key, original journal, analysis or infer arms. Each validated claim was semantically read against the original answer and expected elements.",
+    "packet_sha256": "a178d27b78ea201f6a751d29e60c6827b6a325baf274fe77f1e1df2bc049e257",
+    "technical_policy": "All 24 records happened to be valid; invalid records would receive null semantic scoring and would not be counted as zero false positives.",
+    "subject_policy": "Uniquely resolvable anaphora retained the proposition in answer context; five standalone-naming weaknesses are explicitly flagged in uncertainty for coordinator cross-review.",
+    "pure_nf_policy": "Any claim row in a pure-NF answer would count as selection error, even if it merely restated advice or instructions; all 12 actual pure-NF outputs were empty.",
+    "review_observations_by_id": {
+      "r-75d275ecb417d0ec25c13900": "Fabric-notebook layout suggestions contain no asserted external fact; claims is empty.",
+      "r-9b21600d862b458d3dd36dbe": "Recording-title and note-layout guidance remains non-factual; claims is empty.",
+      "r-ef8601551e203b0e0b1de420": "Permissions and optional note-taking instructions contain no factual premise; claims is empty.",
+      "r-337318724cc19f0260d73ecf": "试画、讨论和记录安排均为建议/问题，没有报告夹具性能或试验结果；claims为空。",
+      "r-20f065d602ebc900d0e44e1e": "长段育苗记录整理建议没有实际安排或效果断言；claims为空。",
+      "r-8e873b6d461d35fe1977c1d2": "渡口会合、行程命名和休息安排是建议，未断言已采取这些动作；claims为空。",
+      "r-cfce0d0661964c8da321624c": "夹持草图、待讨论假设和设计选项未被陈述为真实性能；claims为空。",
+      "r-b5d53b0aa6249ccb6412036b": "The performative refusal, user-directed suggestion and question assert no vessel property or schedule; claims is empty.",
+      "r-f8713e82355b84515b1e778c": "育苗记录版式与复查时间都是个人选择性建议，无已经执行的安排断言；claims为空。",
+      "r-13a28bb556023902319b2218": "行程命名、草图和休息偏好不构成事实前提；claims为空。",
+      "r-e5c51475b699a156f4196955": "Notebook naming and optional margins are directions rather than completed acts; claims is empty.",
+      "r-7df1d88049af6ab85dd57ffb": "Declining to select a vessel is a performative response, followed only by directions and a question; claims is empty."
+    },
+    "limitations": "Controlled drafts are injected errors, not estimates of natural prevalence. No arm comparison is made. Synthetic expected labels are AI drafts, not human gold."
+  }
+}

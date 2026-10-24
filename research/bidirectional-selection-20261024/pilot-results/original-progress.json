@@ -1,0 +1,12 @@
+{
+  "completed_at": "2026-10-24T02:05:19.381296+00:00",
+  "error": 9,
+  "expected_records": 152,
+  "gold_sent_to_model": false,
+  "model_calls_started": 51,
+  "record_count": 50,
+  "schema_version": "bidirectional-selection-initial-stage-pilot-v1",
+  "started_at": "2026-10-24T02:04:51.716240+00:00",
+  "status": "aborted",
+  "valid": 41
+}
